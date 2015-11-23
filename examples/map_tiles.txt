@@ -1,0 +1,19 @@
+workspace open --name shps --params /Users/jericks/Projects/NaturalEarth/SmallScale/110m_cultural
+
+layer open --workspace shps --layer 110m_admin_0_countries
+
+layer open --workspace shps --layer 110m_admin_1_states_provinces_shp
+
+tile open --name osm --params "type=osm url=http://a.tile.openstreetmap.org"
+
+map open --name mymap
+
+map add tile --name mymap --tile osm
+
+map add layer --name mymap --layer shps:110m_admin_0_countries
+
+map add layer --name mymap --layer shps:110m_admin_1_states_provinces_shp
+
+map draw --name mymap --file maptiles.png --projection EPSG:3857
+
+! open maptiles.png

@@ -1,0 +1,23 @@
+format open --name earth --input /Users/jericks/Projects/GeoScript/scripts/raster/NE2_50M_SR_W.tif
+
+format list
+
+format rasters --name earth
+
+raster open --format earth --raster NE2_50M_SR_W --name earth
+
+raster list
+
+raster info --name earth
+
+format open --name earth_cropped --input earth_cropped.tif
+
+raster crop --name earth --output-format earth_cropped --geometry "0 0 90 90"
+
+raster info --name earth_cropped
+
+raster close --name earth_cropped
+
+raster close --name earth
+
+format close --name earth

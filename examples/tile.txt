@@ -1,0 +1,17 @@
+workspace open --name shps --params /Users/jericks/Projects/NaturalEarth/SmallScale/110m_cultural
+
+layer open --workspace shps --layer 110m_admin_0_countries
+
+tile open --name countries --params countries.mbtiles
+
+tile list
+
+tile info --name countries
+
+map open --name countries
+
+map add layer --name countries --layer shps:countries
+
+tile generate --name countries --map countries --start 0 --end 3 --verbose true
+
+tile close --name countries
