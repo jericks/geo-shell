@@ -2,4 +2,4 @@ target/
 .idea/
 geo-shell.iml
 geo-shell.log
-
+dependency-reduced-pom.xml
