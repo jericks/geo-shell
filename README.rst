@@ -1,3 +1,6 @@
+.. image:: https://travis-ci.org/jericks/geo-shell.svg?branch=master
+    :target: https://travis-ci.org/jericks/geo-shell
+
 geo-shell
 ---------
 geo-shell is an interactive shell for geospatial analysis. 
