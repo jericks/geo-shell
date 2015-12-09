@@ -3,7 +3,6 @@ package org.geoshell.vector
 import geoscript.feature.Feature
 import geoscript.feature.Field
 import geoscript.feature.Schema
-import geoscript.geom.Bounds
 import geoscript.geom.Geometry
 import geoscript.geom.MultiPoint
 import geoscript.geom.Point
@@ -132,7 +131,7 @@ class LayerCommands implements CommandMarker {
     }
 
     @CliCommand(value = "layer style get", help = "Get the Layer's style.")
-    String count(
+    String getStyle(
             @CliOption(key = "name", mandatory = true, help = "The Layer name") LayerName name,
             @CliOption(key = "style", mandatory = false, help = "The SLD File") File styleFile
     ) throws Exception {
@@ -148,7 +147,6 @@ class LayerCommands implements CommandMarker {
             "Unable to find Layer ${name}"
         }
     }
-
 
     @CliCommand(value = "layer buffer", help = "Buffer the input Layer to the output Layer.")
     String buffer(

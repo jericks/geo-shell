@@ -6,11 +6,16 @@ import geoscript.workspace.Directory
 import geoscript.workspace.Memory
 import geoscript.workspace.Workspace
 import org.geoshell.Catalog
+import org.junit.Rule
 import org.junit.Test
+import org.junit.rules.TemporaryFolder
 import org.springframework.shell.support.util.OsUtils
 import static org.junit.Assert.*
 
 class LayerCommandsTest {
+
+    @Rule
+    public TemporaryFolder folder = new TemporaryFolder()
 
     @Test void open() {
         Catalog catalog = new Catalog()
@@ -133,5 +138,29 @@ class LayerCommandsTest {
         Layer layer = catalog.layers[new LayerName("points")]
         assertEquals 100, layer.count
         assertEquals "Point", layer.schema.geom.typ
+    }
+
+    @Test void getSetStyle() {
+        Catalog catalog = new Catalog()
+        Workspace workspace = new Memory()
+        workspace.add(new Layer("points"))
+        workspace.add(new Layer("lines"))
+        workspace.add(new Layer("polygons"))
+        catalog.workspaces[new WorkspaceName("shapes")] = workspace
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        cmds.open(new WorkspaceName("shapes"), new LayerName("points"), "points")
+
+        File sldFile = folder.newFile("points.sld")
+
+        String result = cmds.getStyle(new LayerName("points"), sldFile)
+        assertTrue result.startsWith("points style written to")
+        assertTrue result.endsWith("points.sld")
+
+        result = cmds.getStyle(new LayerName("points"), null)
+        assertTrue result.contains("<sld:StyledLayerDescriptor")
+
+        result = cmds.setStyle(new LayerName("points"), sldFile)
+        assertTrue result.startsWith("Style ")
+        assertTrue result.endsWith("points.sld set on points")
     }
 }
