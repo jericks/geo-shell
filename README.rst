@@ -99,6 +99,10 @@ raster crop --name earth --output-format cropped_earth --output-name cropped_ear
 
 raster reproject --name earth --output-format earth_reprojected --output-name earth-reprojected --projection EPSG:4326
 
+raster style set --name earth --style earth.sld
+
+raster style get --name earth --style earth.sld
+
 map
 ---
 map open --name state_map

@@ -116,4 +116,27 @@ class RasterCommandsTest {
         assertNotNull raster
         assertEquals "EPSG:3857", raster.proj.srs
     }
+
+    @Test void getSetStyle() {
+        Catalog catalog = new Catalog()
+        File file = new File(getClass().getClassLoader().getResource("raster.tif").toURI())
+        Format format = Format.getFormat(file)
+        catalog.formats[new FormatName("raster")] = format
+
+        RasterCommands cmds = new RasterCommands(catalog: catalog)
+        cmds.open(new FormatName("raster"), new RasterName("raster"), "raster")
+
+        File sldFile = temporaryFolder.newFile("raster.sld")
+
+        String result = cmds.getStyle(new RasterName("raster"), sldFile)
+        assertTrue result.startsWith("raster style written to")
+        assertTrue result.endsWith("raster.sld")
+
+        result = cmds.getStyle(new RasterName("raster"), null)
+        assertTrue result.contains("<sld:StyledLayerDescriptor")
+
+        result = cmds.setStyle(new RasterName("raster"), sldFile)
+        assertTrue result.startsWith("Style ")
+        assertTrue result.endsWith("raster.sld set on raster")
+    }
 }

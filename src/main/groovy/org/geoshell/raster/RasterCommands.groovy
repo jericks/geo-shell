@@ -5,6 +5,10 @@ import geoscript.layer.Band
 import geoscript.layer.Format
 import geoscript.layer.Raster
 import geoscript.proj.Projection
+import geoscript.style.Style
+import geoscript.style.io.CSSReader
+import geoscript.style.io.SLDReader
+import geoscript.style.io.SLDWriter
 import org.geoshell.Catalog
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.shell.core.CommandMarker
@@ -145,6 +149,48 @@ class RasterCommands implements CommandMarker {
                 "Raster ${name} reprojected to ${outputRasterName} as ${projection}!"
             } else {
                 "Unable to find Raster Format ${formatName}"
+            }
+        } else {
+            "Unable to find Raster ${name}"
+        }
+    }
+
+    @CliCommand(value = "raster style set", help = "Set a Raster's style")
+    String setStyle(
+            @CliOption(key = "name", mandatory = true, help = "The Raster name") RasterName name,
+            @CliOption(key = "style", mandatory = true, help = "The SLD or CSS File") File styleFile
+    ) throws Exception {
+        Raster raster = catalog.rasters[name]
+        if (raster) {
+            Style style = null
+            if (styleFile.name.endsWith(".sld")) {
+                style = new SLDReader().read(styleFile)
+            } else if (styleFile.name.endsWith(".css")) {
+                style = new CSSReader().read(styleFile)
+            }
+            if (style) {
+                raster.style = style
+                "Style ${styleFile.absolutePath} set on ${name}"
+            } else {
+                "Unable to read ${styleFile.absolutePath}"
+            }
+        } else {
+            "Unable to find Raster ${name}"
+        }
+    }
+
+    @CliCommand(value = "raster style get", help = "Get the Raster's style.")
+    String getStyle(
+            @CliOption(key = "name", mandatory = true, help = "The Raster name") RasterName name,
+            @CliOption(key = "style", mandatory = false, help = "The SLD File") File styleFile
+    ) throws Exception {
+        Raster raster = catalog.rasters[name]
+        if (raster) {
+            if (styleFile) {
+                new SLDWriter().write(raster.style, styleFile)
+                "${name} style written to ${styleFile}"
+            } else {
+                new SLDWriter().write(raster.style)
             }
         } else {
             "Unable to find Raster ${name}"
