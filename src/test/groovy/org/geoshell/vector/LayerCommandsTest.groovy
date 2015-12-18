@@ -140,6 +140,50 @@ class LayerCommandsTest {
         assertEquals "Point", layer.schema.geom.typ
     }
 
+    @Test void gridRowColumn() {
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+
+        String result = cmds.gridRowColumn(
+                new WorkspaceName("mem"),
+                "grid",
+                10, 10,
+                "-180,-90,180,90",
+                "polygon",
+                "EPSG:4326",
+                "geom"
+        )
+        assertEquals "Done!", result
+
+        assertNotNull catalog.layers[new LayerName("grid")]
+        Layer layer = catalog.layers[new LayerName("grid")]
+        assertEquals 100, layer.count
+        assertEquals "Polygon", layer.schema.geom.typ
+    }
+
+    @Test void gridWidthHeight() {
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+
+        String result = cmds.gridWidthHeight(
+                new WorkspaceName("mem"),
+                "grid",
+                20, 20,
+                "-180,-90,180,90",
+                "polygon",
+                "EPSG:4326",
+                "geom"
+        )
+        assertEquals "Done!", result
+
+        assertNotNull catalog.layers[new LayerName("grid")]
+        Layer layer = catalog.layers[new LayerName("grid")]
+        assertEquals 162, layer.count
+        assertEquals "Polygon", layer.schema.geom.typ
+    }
+
     @Test void getSetStyle() {
         Catalog catalog = new Catalog()
         Workspace workspace = new Memory()

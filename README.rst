@@ -63,6 +63,10 @@ layer centroid --input-name us_states --output-workspace postgis --output-name s
 
 layer random --output-workspace postgis --output-name points --number 100 --geometry 0,0,45,45
 
+layer grid rowcol --output-workspace layers --output-name grid --rows 10 --columns 10 --geometry -180,-90,180,90
+
+layer grid widthheight --output-workspace layers --output-name grid --width 20 --height 15 --geometry -180,-90,180,90
+
 tile
 ----
 tile open --name states --params states.mbtiles

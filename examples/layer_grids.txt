@@ -1,0 +1,15 @@
+workspace open --name layers --params layers.gpkg
+
+layer random --output-workspace layers --output-name points --number 100 --geometry -180,-90,180,90 --projection EPSG:4326
+
+layer grid rowcol --output-workspace layers --output-name grid1 --rows 10 --columns 10 --geometry -180,-90,180,90
+
+map open --name gridmap
+
+map add layer --name gridmap --layer grid1
+
+map add layer --name gridmap --layer points
+
+map draw --name gridmap
+
+! open image.png

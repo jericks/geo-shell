@@ -3,6 +3,7 @@ package org.geoshell.vector
 import geoscript.feature.Feature
 import geoscript.feature.Field
 import geoscript.feature.Schema
+import geoscript.geom.Bounds
 import geoscript.geom.Geometry
 import geoscript.geom.MultiPoint
 import geoscript.geom.Point
@@ -244,5 +245,85 @@ class LayerCommands implements CommandMarker {
           catalog.layers[new LayerName(outputLayerName)] = outputWorkspace.get(outputLayerName)
           "Done!"
       }
+    }
+
+    @CliCommand(value = "layer grid rowcol", help = "Create a grid Layer with rows and columns")
+    String gridRowColumn(
+            @CliOption(key = "output-workspace", mandatory = true, help = "The output Layer Workspace") WorkspaceName workspaceName,
+            @CliOption(key = "output-name", mandatory = true, help = "The output Layer name") String outputLayerName,
+            @CliOption(key = "rows", mandatory = true, help = "The number of rows") int rows,
+            @CliOption(key = "columns", mandatory = true, help = "The number of columns") int columns,
+            @CliOption(key = "geometry", mandatory = true, help = "The constraining geometry") String geometry,
+            @CliOption(key = "type", specifiedDefaultValue = "polygon", unspecifiedDefaultValue = "polygon", mandatory = false, help = "The geometry type (point or polygon") String type,
+            @CliOption(key = "projection", specifiedDefaultValue = "EPSG:4326", unspecifiedDefaultValue = "EPSG:4326", mandatory = false, help = "The projection") String projection,
+            @CliOption(key = "geometry-field", specifiedDefaultValue = "geom", unspecifiedDefaultValue = "geom", mandatory = false, help = "The geometry field name") String geometryFieldName
+    ) throws Exception {
+        Workspace outputWorkspace = catalog.workspaces[workspaceName]
+        if (outputWorkspace) {
+            Schema schema = new Schema(outputLayerName, [
+                    new Field(geometryFieldName, type.equalsIgnoreCase("point") ? "POINT" : "POLYGON", projection),
+                    new Field("id", "int"),
+                    new Field("row", "int"),
+                    new Field("col", "int"),
+                    new Field("col_row", "String")
+            ])
+            Bounds bounds = Geometry.fromString(geometry).bounds
+            Layer outputLayer = outputWorkspace.create(schema)
+            int id = 0
+            outputLayer.withWriter { geoscript.layer.Writer w ->
+                bounds.generateGrid(columns, rows, type, { cell, col, row ->
+                    w.add(outputLayer.schema.feature([
+                            "the_geom": cell,
+                            "id"      : id,
+                            "col"     : col,
+                            "row"     : row,
+                            "col_row" : "${col}_${row}"
+                    ]))
+                    id++
+                })
+            }
+            catalog.layers[new LayerName(outputLayerName)] = outputWorkspace.get(outputLayerName)
+            "Done!"
+        }
+    }
+
+    @CliCommand(value = "layer grid widthheight", help = "Create a grid Layer with cell width and height")
+    String gridWidthHeight(
+            @CliOption(key = "output-workspace", mandatory = true, help = "The output Layer Workspace") WorkspaceName workspaceName,
+            @CliOption(key = "output-name", mandatory = true, help = "The output Layer name") String outputLayerName,
+            @CliOption(key = "cell-width", mandatory = true, help = "The width of each cell") double cellWidth,
+            @CliOption(key = "cell-height", mandatory = true, help = "The height of each cell") double cellHeight,
+            @CliOption(key = "geometry", mandatory = true, help = "The constraining geometry") String geometry,
+            @CliOption(key = "type", specifiedDefaultValue = "polygon", unspecifiedDefaultValue = "polygon", mandatory = false, help = "The geometry type (point or polygon") String type,
+            @CliOption(key = "projection", specifiedDefaultValue = "EPSG:4326", unspecifiedDefaultValue = "EPSG:4326", mandatory = false, help = "The projection") String projection,
+            @CliOption(key = "geometry-field", specifiedDefaultValue = "geom", unspecifiedDefaultValue = "geom", mandatory = false, help = "The geometry field name") String geometryFieldName
+    ) throws Exception {
+        Workspace outputWorkspace = catalog.workspaces[workspaceName]
+        if (outputWorkspace) {
+            Schema schema = new Schema(outputLayerName, [
+                    new Field(geometryFieldName, type.equalsIgnoreCase("point") ? "POINT" : "POLYGON", projection),
+                    new Field("id", "int"),
+                    new Field("row", "int"),
+                    new Field("col", "int"),
+                    new Field("col_row", "String")
+            ])
+            Bounds bounds = Geometry.fromString(geometry).bounds
+            Layer outputLayer = outputWorkspace.create(schema)
+            int id = 0
+            outputLayer.withWriter { geoscript.layer.Writer w ->
+                bounds.generateGrid(cellWidth, cellHeight, type, { cell, col, row ->
+                    w.add(outputLayer.schema.feature([
+                            "the_geom": cell,
+                            "id"      : id,
+                            "col"     : col,
+                            "row"     : row,
+                            "col_row" : "${col}_${row}"
+                    ]))
+                    id++
+                })
+            }
+            catalog.layers[new LayerName(outputLayerName)] = outputWorkspace.get(outputLayerName)
+            "Done!"
+        }
     }
 }
