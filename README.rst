@@ -61,6 +61,8 @@ layer buffer --input-name us_states --output-workspace postgis --output-name sta
 
 layer centroid --input-name us_states --output-workspace postgis --output-name states_centroids
 
+layer interiorpoint --input-name us_states --output-workspace postgis --output-name states_interiorpoints
+
 layer random --output-workspace postgis --output-name points --number 100 --geometry 0,0,45,45
 
 layer grid rowcol --output-workspace layers --output-name grid --rows 10 --columns 10 --geometry -180,-90,180,90

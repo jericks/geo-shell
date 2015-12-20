@@ -126,6 +126,22 @@ class LayerCommandsTest {
         assertEquals "Point", centroidLayer.schema.geom.typ
     }
 
+    @Test void interiorPoint() {
+        Layer layer = new Shapefile(new File(getClass().getClassLoader().getResource("grid.shp").toURI()))
+        Catalog catalog = new Catalog()
+        catalog.layers[new LayerName("grid")] = layer
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+
+        String result = cmds.interiorPoints(new LayerName("grid"), new WorkspaceName("mem"), "interiorPoints")
+        assertEquals "Done!", result
+
+        assertNotNull catalog.layers[new LayerName("interiorPoints")]
+        Layer centroidLayer = catalog.layers[new LayerName("interiorPoints")]
+        assertEquals layer.count, centroidLayer.count
+        assertEquals "Point", centroidLayer.schema.geom.typ
+    }
+
     @Test void random() {
         Catalog catalog = new Catalog()
         catalog.workspaces[new WorkspaceName("mem")] = new Memory()

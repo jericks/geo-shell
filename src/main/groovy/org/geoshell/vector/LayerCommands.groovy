@@ -205,7 +205,42 @@ class LayerCommands implements CommandMarker {
             "Unable to find Layer ${inputLayerName}"
         }
     }
-    
+
+    @CliCommand(value = "layer interiorpoint", help = "Calculate the interior points of the input Layer to the output Layer.")
+    String interiorPoints(
+            @CliOption(key = "input-name", mandatory = true, help = "The Layer name") LayerName inputLayerName,
+            @CliOption(key = "output-workspace", mandatory = true, help = "The output Layer Workspace") WorkspaceName workspaceName,
+            @CliOption(key = "output-name", mandatory = true, help = "The output Layer name") String outputLayerName
+    ) throws Exception {
+        Layer inputLayer = catalog.layers[inputLayerName]
+        if (inputLayer) {
+            Workspace outputWorkspace = catalog.workspaces[workspaceName]
+            if (outputWorkspace) {
+                Schema schema = inputLayer.schema.changeGeometryType("Point", outputLayerName)
+                Layer outputLayer = outputWorkspace.create(schema)
+                outputLayer.withWriter { LayerWriter writer ->
+                    inputLayer.eachFeature { Feature f ->
+                        Map values = [:]
+                        f.attributes.each { k, v ->
+                            if (v instanceof geoscript.geom.Geometry) {
+                                values[k] = v.interiorPoint
+                            } else {
+                                values[k] = v
+                            }
+                        }
+                        writer.add(outputLayer.schema.feature(values, f.id))
+                    }
+                }
+                catalog.layers[new LayerName(outputLayerName)] = outputWorkspace.get(outputLayerName)
+                "Done!"
+            } else {
+                "Unable to find Workspace ${workspaceName}"
+            }
+        } else {
+            "Unable to find Layer ${inputLayerName}"
+        }
+    }
+
     @CliCommand(value = "layer random", help = "Create a Layer with a number of randomly located points")
     String random(
             @CliOption(key = "output-workspace", mandatory = true, help = "The output Layer Workspace") WorkspaceName workspaceName,
