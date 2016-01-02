@@ -68,6 +68,21 @@ class LayerCommandsTest {
         assertEquals "shapes:points = Memory" + OsUtils.LINE_SEPARATOR + "lines = Memory", result
     }
 
+    @Test void remove() {
+        Catalog catalog = new Catalog()
+        Workspace workspace = new Memory()
+        workspace.add(new Layer("points"))
+        workspace.add(new Layer("lines"))
+        workspace.add(new Layer("polygons"))
+        catalog.workspaces[new WorkspaceName("shapes")] = workspace
+
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        String result = cmds.remove(new WorkspaceName("shapes"), new LayerName("points"))
+        assertEquals "Layer points removed from Workspace shapes", result
+        assertFalse workspace.has("points")
+        assertTrue workspace.has("lines")
+        assertTrue workspace.has("polygons")
+    }
 
     @Test void count() {
         Layer layer = new Shapefile(new File(getClass().getClassLoader().getResource("points.shp").toURI()))

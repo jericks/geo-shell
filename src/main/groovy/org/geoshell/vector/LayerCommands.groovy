@@ -74,6 +74,25 @@ class LayerCommands implements CommandMarker {
         }.join(OsUtils.LINE_SEPARATOR)
     }
 
+    @CliCommand(value = "layer remove", help = "Remove a Layer from a Workspace.")
+    String remove(
+            @CliOption(key = "workspace", mandatory = true, help = "The Workspace name") WorkspaceName workspaceName,
+            @CliOption(key = "layer", mandatory = true, help = "The Layer name") LayerName layerName
+    ) throws Exception {
+        Workspace workspace = catalog.workspaces[workspaceName]
+        if (workspace) {
+            if (workspace.has(layerName.name)) {
+                close(layerName)
+                workspace.remove(layerName.name)
+                "Layer ${layerName.name} removed from Workspace ${workspaceName.name}"
+            } else {
+                "Unable to remove Layer ${layerName}"
+            }
+        } else {
+            "Unable to find Workspace ${workspaceName}"
+        }
+    }
+
     @CliCommand(value = "layer count", help = "Count the Feature in a Layer.")
     String count(
             @CliOption(key = "name", mandatory = true, help = "The Layer name") LayerName name
