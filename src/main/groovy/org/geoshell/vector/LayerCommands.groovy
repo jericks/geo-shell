@@ -268,7 +268,7 @@ class LayerCommands implements CommandMarker {
             @CliOption(key = "geometry", mandatory = true, help = "The geometry or bounds in which to create the points ") String geometry,
             @CliOption(key = "projection", mandatory = true, help = "The projection") String projection,
             @CliOption(key = "id-field", specifiedDefaultValue = "id", mandatory = false, help = "The id field name") String idFieldName,
-            @CliOption(key = "geometry-field", specifiedDefaultValue = "geom", unspecifiedDefaultValue = "geom", mandatory = false, help = "The geometry field name") String geometryFieldName,
+            @CliOption(key = "geometry-field", specifiedDefaultValue = "the_geom", unspecifiedDefaultValue = "the_geom", mandatory = false, help = "The geometry field name") String geometryFieldName,
             @CliOption(key = "grid", specifiedDefaultValue = "false", unspecifiedDefaultValue = "false", mandatory = false, help = "Whether to create points in a grid")boolean grid,
             @CliOption(key = "constrained-to-circle", specifiedDefaultValue = "false", unspecifiedDefaultValue = "false", mandatory = false, help = "Whether points should be constrained to a circle")boolean constrainedToCircle,
             @CliOption(key = "gutter-fraction", specifiedDefaultValue = "0", unspecifiedDefaultValue = "0", mandatory = false, help = "The size of gutter between cells") int gutterFraction
@@ -310,7 +310,7 @@ class LayerCommands implements CommandMarker {
             @CliOption(key = "geometry", mandatory = true, help = "The constraining geometry") String geometry,
             @CliOption(key = "type", specifiedDefaultValue = "polygon", unspecifiedDefaultValue = "polygon", mandatory = false, help = "The geometry type (point or polygon") String type,
             @CliOption(key = "projection", specifiedDefaultValue = "EPSG:4326", unspecifiedDefaultValue = "EPSG:4326", mandatory = false, help = "The projection") String projection,
-            @CliOption(key = "geometry-field", specifiedDefaultValue = "geom", unspecifiedDefaultValue = "geom", mandatory = false, help = "The geometry field name") String geometryFieldName
+            @CliOption(key = "geometry-field", specifiedDefaultValue = "the_geom", unspecifiedDefaultValue = "the_geom", mandatory = false, help = "The geometry field name") String geometryFieldName
     ) throws Exception {
         Workspace outputWorkspace = catalog.workspaces[workspaceName]
         if (outputWorkspace) {
@@ -350,7 +350,7 @@ class LayerCommands implements CommandMarker {
             @CliOption(key = "geometry", mandatory = true, help = "The constraining geometry") String geometry,
             @CliOption(key = "type", specifiedDefaultValue = "polygon", unspecifiedDefaultValue = "polygon", mandatory = false, help = "The geometry type (point or polygon") String type,
             @CliOption(key = "projection", specifiedDefaultValue = "EPSG:4326", unspecifiedDefaultValue = "EPSG:4326", mandatory = false, help = "The projection") String projection,
-            @CliOption(key = "geometry-field", specifiedDefaultValue = "geom", unspecifiedDefaultValue = "geom", mandatory = false, help = "The geometry field name") String geometryFieldName
+            @CliOption(key = "geometry-field", specifiedDefaultValue = "the_geom", unspecifiedDefaultValue = "the_geom", mandatory = false, help = "The geometry field name") String geometryFieldName
     ) throws Exception {
         Workspace outputWorkspace = catalog.workspaces[workspaceName]
         if (outputWorkspace) {
