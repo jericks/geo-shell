@@ -277,7 +277,7 @@ class LayerCommands implements CommandMarker {
       if (outputWorkspace) {
           Schema schema = new Schema(outputLayerName, [
             new Field(geometryFieldName, "Point", projection),
-            new Field("id","int")
+            new Field(idFieldName,"int")
           ])
           Layer outputLayer = outputWorkspace.create(schema)
           outputLayer.withWriter { LayerWriter writer ->
@@ -291,7 +291,7 @@ class LayerCommands implements CommandMarker {
                   Feature f = writer.newFeature
                   Map values = [:]
                   values[geometryFieldName] = pt
-                  values["id"] = i
+                  values[idFieldName] = i
                   f.set(values)
                   writer.add(f)
               }
@@ -380,4 +380,48 @@ class LayerCommands implements CommandMarker {
             "Done!"
         }
     }
+
+    @CliCommand(value = "layer copy", help = "Copy one Layer to another Workspace.")
+    String copy(
+            @CliOption(key = "input-name", mandatory = true, help = "The Layer name") LayerName inputLayerName,
+            @CliOption(key = "output-workspace", mandatory = true, help = "The output Layer Workspace") WorkspaceName workspaceName,
+            @CliOption(key = "output-name", mandatory = true, help = "The output Layer name") String outputLayerName,
+            @CliOption(key = "filter", mandatory = false, help = "The CQL Filter")String filter,
+            @CliOption(key = "sort", mandatory = false, help = "A Sort parameter (fld dir)")String sort,
+            @CliOption(key = "start", mandatory = false, unspecifiedDefaultValue = "-1", help = "The start index")int start,
+            @CliOption(key = "max", mandatory = false, unspecifiedDefaultValue = "-1", help = "The maximum number of records")int max,
+            @CliOption(key = "field", mandatory = false, help = "A subfield to include")String fields
+    ) throws Exception {
+        Layer inputLayer = catalog.layers[inputLayerName]
+        if (inputLayer) {
+            Workspace outputWorkspace = catalog.workspaces[workspaceName]
+            if (outputWorkspace) {
+                List outputFields = inputLayer.schema.fields
+                List fieldList = fields?.split(",")
+                if (fieldList) {
+                    outputFields = [inputLayer.schema.geom]
+                    fieldList.each { name ->
+                        if (inputLayer.schema.has(name) && !outputFields.find { Field fld -> fld.name.equalsIgnoreCase(name) }) {
+                            outputFields.add(inputLayer.schema.get(name))
+                        }
+                    }
+                }
+                Schema schema = new Schema(outputLayerName, outputFields)
+                Layer outputLayer = outputWorkspace.create(schema)
+                List sortList = sort ? sort.split(",") : []
+                outputLayer.withWriter { geoscript.layer.Writer w ->
+                    inputLayer.getCursor([filter: filter, sort: sortList, start: start, max: max, fields: fieldList]).each { f ->
+                        w.add(f)
+                    }
+                }
+                catalog.layers[new LayerName(outputLayerName)] = outputWorkspace.get(outputLayerName)
+                "Done!"
+            } else {
+                "Unable to find Workspace ${workspaceName}"
+            }
+        } else {
+            "Unable to find Layer ${inputLayerName}"
+        }
+    }
+
 }

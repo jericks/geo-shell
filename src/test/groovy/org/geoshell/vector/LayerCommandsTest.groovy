@@ -3,6 +3,7 @@ package org.geoshell.vector
 import geoscript.layer.Layer
 import geoscript.layer.Shapefile
 import geoscript.workspace.Directory
+import geoscript.workspace.GeoPackage
 import geoscript.workspace.Memory
 import geoscript.workspace.Workspace
 import org.geoshell.Catalog
@@ -237,5 +238,86 @@ class LayerCommandsTest {
         result = cmds.setStyle(new LayerName("points"), sldFile)
         assertTrue result.startsWith("Style ")
         assertTrue result.endsWith("points.sld set on points")
+    }
+
+    @Test void copy() {
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        catalog.workspaces[new WorkspaceName("gpkg")] = new GeoPackage(folder.newFile("layers.gpkg"))
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+
+        // Create 100 random points
+        String result = cmds.random(new WorkspaceName("mem"), "points", 100, "0,0,100,100", "EPSG:4326", "the_id", "geom", false, false, 0)
+        assertEquals "Done!", result
+
+        assertNotNull catalog.layers[new LayerName("points")]
+        Layer layer = catalog.layers[new LayerName("points")]
+        assertEquals 100, layer.count
+        assertEquals "Point", layer.schema.geom.typ
+
+        // Copy all points
+        result = cmds.copy(new LayerName("points"), new WorkspaceName("gpkg"), "geopoints1", null, null, -1, -1, null)
+        assertEquals "Done!", result
+
+        assertNotNull catalog.layers[new LayerName("geopoints1")]
+        layer = catalog.layers[new LayerName("geopoints1")]
+        assertEquals 100, layer.count
+        assertEquals "Point", layer.schema.geom.typ
+
+        // Copy all points sorted by id
+        result = cmds.copy(new LayerName("points"), new WorkspaceName("gpkg"), "geopoints2", null, "the_id desc", -1, -1, null)
+        assertEquals "Done!", result
+
+        assertNotNull catalog.layers[new LayerName("geopoints2")]
+        layer = catalog.layers[new LayerName("geopoints2")]
+        assertEquals 100, layer.count
+        assertEquals "Point", layer.schema.geom.typ
+
+        // Copy some points (filter)
+        result = cmds.copy(new LayerName("points"), new WorkspaceName("gpkg"), "geopoints3", "the_id > 49", null, -1, -1, null)
+        assertEquals "Done!", result
+
+        assertNotNull catalog.layers[new LayerName("geopoints3")]
+        layer = catalog.layers[new LayerName("geopoints3")]
+        assertEquals 50, layer.count
+        assertEquals "Point", layer.schema.geom.typ
+
+        // Copy some points (start)
+        result = cmds.copy(new LayerName("points"), new WorkspaceName("gpkg"), "geopoints4", null, null, 80, 100, null)
+        assertEquals "Done!", result
+
+        assertNotNull catalog.layers[new LayerName("geopoints4")]
+        layer = catalog.layers[new LayerName("geopoints4")]
+        assertEquals 20, layer.count
+        assertEquals "Point", layer.schema.geom.typ
+
+        // Copy some points (start and max)
+        result = cmds.copy(new LayerName("points"), new WorkspaceName("gpkg"), "geopoints5", null, null, 80, 10, null)
+        assertEquals "Done!", result
+
+        assertNotNull catalog.layers[new LayerName("geopoints5")]
+        layer = catalog.layers[new LayerName("geopoints5")]
+        assertEquals 10, layer.count
+        assertEquals "Point", layer.schema.geom.typ
+
+        // Copy some points (max)
+        result = cmds.copy(new LayerName("points"), new WorkspaceName("gpkg"), "geopoints6", null, null, 0, 10, null)
+        assertEquals "Done!", result
+
+        assertNotNull catalog.layers[new LayerName("geopoints6")]
+        layer = catalog.layers[new LayerName("geopoints6")]
+        assertEquals 10, layer.count
+        assertEquals "Point", layer.schema.geom.typ
+
+        // Copy all but only one field
+        result = cmds.copy(new LayerName("points"), new WorkspaceName("gpkg"), "geopoints7", null, null, -1, -1, "geom")
+        assertEquals "Done!", result
+
+        assertNotNull catalog.layers[new LayerName("geopoints7")]
+        layer = catalog.layers[new LayerName("geopoints7")]
+        assertEquals 100, layer.count
+        assertEquals "Point", layer.schema.geom.typ
+        assertTrue layer.schema.has("geom")
+        assertFalse layer.schema.has("the_id")
     }
 }

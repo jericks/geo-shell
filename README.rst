@@ -55,6 +55,8 @@ layer count --name us_states
 
 layer remove --workspace shps --layer states
 
+layer copy --input-name states --output-workspace layers.gpkg --output-name countries
+
 layer style set --name us_states --style states.sld
 
 layer style get --name us_states --style states.sld
