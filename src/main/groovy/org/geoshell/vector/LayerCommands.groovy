@@ -424,4 +424,61 @@ class LayerCommands implements CommandMarker {
         }
     }
 
+    @CliCommand(value = "layer extent", help = "Calculate the extent of the input Layer and save it to the output Layer.")
+    String extent(
+            @CliOption(key = "input-name", mandatory = true, help = "The Layer name") LayerName inputLayerName,
+            @CliOption(key = "output-workspace", mandatory = true, help = "The output Layer Workspace") WorkspaceName workspaceName,
+            @CliOption(key = "output-name", mandatory = true, help = "The output Layer name") String outputLayerName
+    ) throws Exception {
+        Layer inputLayer = catalog.layers[inputLayerName]
+        if (inputLayer) {
+            Workspace outputWorkspace = catalog.workspaces[workspaceName]
+            if (outputWorkspace) {
+                Schema schema = new Schema(outputLayerName, [new Field("the_geom", "Polygon", inputLayer.schema.proj)])
+                Layer outputLayer = outputWorkspace.create(schema)
+                outputLayer.add([inputLayer.bounds.geometry])
+                catalog.layers[new LayerName(outputLayerName)] = outputWorkspace.get(outputLayerName)
+                "Done!"
+            } else {
+                "Unable to find Workspace ${workspaceName}"
+            }
+        } else {
+            "Unable to find Layer ${inputLayerName}"
+        }
+    }
+
+    @CliCommand(value = "layer extents", help = "Calculate the extents of each Feature in the input Layer and save them to the output Layer.")
+    String extents(
+            @CliOption(key = "input-name", mandatory = true, help = "The Layer name") LayerName inputLayerName,
+            @CliOption(key = "output-workspace", mandatory = true, help = "The output Layer Workspace") WorkspaceName workspaceName,
+            @CliOption(key = "output-name", mandatory = true, help = "The output Layer name") String outputLayerName
+    ) throws Exception {
+        Layer inputLayer = catalog.layers[inputLayerName]
+        if (inputLayer) {
+            Workspace outputWorkspace = catalog.workspaces[workspaceName]
+            if (outputWorkspace) {
+                Schema schema = inputLayer.schema.changeGeometryType("Polygon", outputLayerName)
+                Layer outputLayer = outputWorkspace.create(schema)
+                outputLayer.withWriter { geoscript.layer.Writer w ->
+                    inputLayer.eachFeature { Feature f ->
+                        Map values = [:]
+                        f.attributes.each { k, v ->
+                            if (v instanceof geoscript.geom.Geometry) {
+                                values[k] = v.bounds.geometry
+                            } else {
+                                values[k] = v
+                            }
+                        }
+                        w.add(outputLayer.schema.feature(values, f.id))
+                    }
+                }
+                catalog.layers[new LayerName(outputLayerName)] = outputWorkspace.get(outputLayerName)
+                "Done!"
+            } else {
+                "Unable to find Workspace ${workspaceName}"
+            }
+        } else {
+            "Unable to find Layer ${inputLayerName}"
+        }
+    }
 }

@@ -73,6 +73,10 @@ layer grid rowcol --output-workspace layers --output-name grid --rows 10 --colum
 
 layer grid widthheight --output-workspace layers --output-name grid --width 20 --height 15 --geometry -180,-90,180,90
 
+layer extent --input-name polygons --output-workspace memory --output-name extent
+
+layer extents --input-name polygons --output-workspace memory --output-name extents
+
 tile
 ----
 tile open --name states --params states.mbtiles

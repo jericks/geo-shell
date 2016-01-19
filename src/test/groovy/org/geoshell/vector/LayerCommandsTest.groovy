@@ -320,4 +320,33 @@ class LayerCommandsTest {
         assertTrue layer.schema.has("geom")
         assertFalse layer.schema.has("the_id")
     }
+
+    @Test void extent() {
+        Layer layer = new Shapefile(new File(getClass().getClassLoader().getResource("points.shp").toURI()))
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        catalog.layers[new LayerName("points")] = layer
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        String result = cmds.extent(new LayerName("points"), new WorkspaceName("mem"), "extent")
+        assertEquals "Done!", result
+        assertNotNull catalog.layers[new LayerName("extent")]
+        layer = catalog.layers[new LayerName("extent")]
+        assertEquals 1, layer.count
+        assertEquals "Polygon", layer.schema.geom.typ
+    }
+
+    @Test void extents() {
+        Layer layer = new Shapefile(new File(getClass().getClassLoader().getResource("points.shp").toURI()))
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        catalog.layers[new LayerName("points")] = layer
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        cmds.buffer(new LayerName("points"), new WorkspaceName("mem"), "buffer", 10)
+        String result = cmds.extents(new LayerName("buffer"), new WorkspaceName("mem"), "extents")
+        assertEquals "Done!", result
+        assertNotNull catalog.layers[new LayerName("extents")]
+        Layer outLayer = catalog.layers[new LayerName("extents")]
+        assertEquals layer.count, outLayer.count
+        assertEquals "Polygon", outLayer.schema.geom.typ
+    }
 }
