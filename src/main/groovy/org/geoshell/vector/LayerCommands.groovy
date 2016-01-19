@@ -267,7 +267,7 @@ class LayerCommands implements CommandMarker {
             @CliOption(key = "number", mandatory = true, help = "The number of points") int numberOfPoints,
             @CliOption(key = "geometry", mandatory = true, help = "The geometry or bounds in which to create the points ") String geometry,
             @CliOption(key = "projection", mandatory = true, help = "The projection") String projection,
-            @CliOption(key = "id-field", specifiedDefaultValue = "id", mandatory = false, help = "The id field name") String idFieldName,
+            @CliOption(key = "id-field", specifiedDefaultValue = "id", unspecifiedDefaultValue = "id", mandatory = false, help = "The id field name") String idFieldName,
             @CliOption(key = "geometry-field", specifiedDefaultValue = "the_geom", unspecifiedDefaultValue = "the_geom", mandatory = false, help = "The geometry field name") String geometryFieldName,
             @CliOption(key = "grid", specifiedDefaultValue = "false", unspecifiedDefaultValue = "false", mandatory = false, help = "Whether to create points in a grid")boolean grid,
             @CliOption(key = "constrained-to-circle", specifiedDefaultValue = "false", unspecifiedDefaultValue = "false", mandatory = false, help = "Whether points should be constrained to a circle")boolean constrainedToCircle,
@@ -277,7 +277,7 @@ class LayerCommands implements CommandMarker {
       if (outputWorkspace) {
           Schema schema = new Schema(outputLayerName, [
             new Field(geometryFieldName, "Point", projection),
-            new Field(idFieldName,"int")
+            new Field(idFieldName, "int")
           ])
           Layer outputLayer = outputWorkspace.create(schema)
           outputLayer.withWriter { LayerWriter writer ->
