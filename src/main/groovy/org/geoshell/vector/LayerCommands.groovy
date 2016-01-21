@@ -5,6 +5,7 @@ import geoscript.feature.Field
 import geoscript.feature.Schema
 import geoscript.geom.Bounds
 import geoscript.geom.Geometry
+import geoscript.geom.GeometryCollection
 import geoscript.geom.MultiPoint
 import geoscript.geom.Point
 import geoscript.layer.Layer
@@ -465,6 +466,67 @@ class LayerCommands implements CommandMarker {
                         f.attributes.each { k, v ->
                             if (v instanceof geoscript.geom.Geometry) {
                                 values[k] = v.bounds.geometry
+                            } else {
+                                values[k] = v
+                            }
+                        }
+                        w.add(outputLayer.schema.feature(values, f.id))
+                    }
+                }
+                catalog.layers[new LayerName(outputLayerName)] = outputWorkspace.get(outputLayerName)
+                "Done!"
+            } else {
+                "Unable to find Workspace ${workspaceName}"
+            }
+        } else {
+            "Unable to find Layer ${inputLayerName}"
+        }
+    }
+
+    @CliCommand(value = "layer convexhull", help = "Calculate the convexhull of the input Layer and save it to the output Layer.")
+    String convexhull(
+            @CliOption(key = "input-name", mandatory = true, help = "The Layer name") LayerName inputLayerName,
+            @CliOption(key = "output-workspace", mandatory = true, help = "The output Layer Workspace") WorkspaceName workspaceName,
+            @CliOption(key = "output-name", mandatory = true, help = "The output Layer name") String outputLayerName
+    ) throws Exception {
+        Layer inputLayer = catalog.layers[inputLayerName]
+        if (inputLayer) {
+            Workspace outputWorkspace = catalog.workspaces[workspaceName]
+            if (outputWorkspace) {
+                Schema schema = new Schema(outputLayerName, [new Field("the_geom", "Polygon", inputLayer.schema.proj)])
+                Layer outputLayer = outputWorkspace.create(schema)
+                Geometry geom = new GeometryCollection(inputLayer.collectFromFeature {f ->
+                    f.geom
+                })
+                outputLayer.add([geom])
+                catalog.layers[new LayerName(outputLayerName)] = outputWorkspace.get(outputLayerName)
+                "Done!"
+            } else {
+                "Unable to find Workspace ${workspaceName}"
+            }
+        } else {
+            "Unable to find Layer ${inputLayerName}"
+        }
+    }
+
+    @CliCommand(value = "layer convexhulls", help = "Calculate the convexhull of each Feature in the input Layer and save them to the output Layer.")
+    String convexhulls(
+            @CliOption(key = "input-name", mandatory = true, help = "The Layer name") LayerName inputLayerName,
+            @CliOption(key = "output-workspace", mandatory = true, help = "The output Layer Workspace") WorkspaceName workspaceName,
+            @CliOption(key = "output-name", mandatory = true, help = "The output Layer name") String outputLayerName
+    ) throws Exception {
+        Layer inputLayer = catalog.layers[inputLayerName]
+        if (inputLayer) {
+            Workspace outputWorkspace = catalog.workspaces[workspaceName]
+            if (outputWorkspace) {
+                Schema schema = inputLayer.schema.changeGeometryType("Polygon", outputLayerName)
+                Layer outputLayer = outputWorkspace.create(schema)
+                outputLayer.withWriter { geoscript.layer.Writer w ->
+                    inputLayer.eachFeature { Feature f ->
+                        Map values = [:]
+                        f.attributes.each { k, v ->
+                            if (v instanceof geoscript.geom.Geometry) {
+                                values[k] = v.convexHull
                             } else {
                                 values[k] = v
                             }

@@ -1,0 +1,23 @@
+workspace open --name mem --params memory
+
+layer random --geometry "0,0,45,45" --projection EPSG:4326 --number 100 --output-workspace mem --output-name points
+
+layer buffer --input-name points --output-workspace mem --output-name buffer --distance 2
+
+layer convexhull --input-name buffer --output-workspace mem --output-name convexhull
+
+layer convexhulls --input-name buffer --output-workspace mem --output-name convexhulls
+
+map open --name map
+
+map add layer --name map --layer convexhull
+
+map add layer --name map --layer convexhulls
+
+map add layer --name map --layer buffer
+
+map add layer --name map --layer points
+
+map draw --name map --background-color wheat
+
+! open image.png

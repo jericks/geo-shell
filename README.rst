@@ -77,6 +77,10 @@ layer extent --input-name polygons --output-workspace memory --output-name exten
 
 layer extents --input-name polygons --output-workspace memory --output-name extents
 
+layer convexhull --input-name polygons --output-workspace memory --output-name convexhull
+
+layer convexhulls --input-name polygons --output-workspace memory --output-name convexhulls
+
 tile
 ----
 tile open --name states --params states.mbtiles
