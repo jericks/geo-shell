@@ -327,7 +327,7 @@ class LayerCommandsTest {
         catalog.workspaces[new WorkspaceName("mem")] = new Memory()
         catalog.layers[new LayerName("points")] = layer
         LayerCommands cmds = new LayerCommands(catalog: catalog)
-        String result = cmds.extent(new LayerName("points"), new WorkspaceName("mem"), "extent")
+        String result = cmds.extent(new LayerName("points"), new WorkspaceName("mem"), "extent", "geom")
         assertEquals "Done!", result
         assertNotNull catalog.layers[new LayerName("extent")]
         layer = catalog.layers[new LayerName("extent")]
@@ -356,7 +356,7 @@ class LayerCommandsTest {
         catalog.workspaces[new WorkspaceName("mem")] = new Memory()
         catalog.layers[new LayerName("points")] = layer
         LayerCommands cmds = new LayerCommands(catalog: catalog)
-        String result = cmds.convexhull(new LayerName("points"), new WorkspaceName("mem"), "convexhull")
+        String result = cmds.convexhull(new LayerName("points"), new WorkspaceName("mem"), "convexhull", "geom")
         assertEquals "Done!", result
         assertNotNull catalog.layers[new LayerName("convexhull")]
         layer = catalog.layers[new LayerName("convexhull")]
