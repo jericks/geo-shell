@@ -429,13 +429,14 @@ class LayerCommands implements CommandMarker {
     String extent(
             @CliOption(key = "input-name", mandatory = true, help = "The Layer name") LayerName inputLayerName,
             @CliOption(key = "output-workspace", mandatory = true, help = "The output Layer Workspace") WorkspaceName workspaceName,
-            @CliOption(key = "output-name", mandatory = true, help = "The output Layer name") String outputLayerName
+            @CliOption(key = "output-name", mandatory = true, help = "The output Layer name") String outputLayerName,
+            @CliOption(key = "geometry-field", specifiedDefaultValue = "the_geom", unspecifiedDefaultValue = "the_geom", mandatory = false, help = "The geometry field name") String geometryFieldName
     ) throws Exception {
         Layer inputLayer = catalog.layers[inputLayerName]
         if (inputLayer) {
             Workspace outputWorkspace = catalog.workspaces[workspaceName]
             if (outputWorkspace) {
-                Schema schema = new Schema(outputLayerName, [new Field("the_geom", "Polygon", inputLayer.schema.proj)])
+                Schema schema = new Schema(outputLayerName, [new Field(geometryFieldName, "Polygon", inputLayer.schema.proj)])
                 Layer outputLayer = outputWorkspace.create(schema)
                 outputLayer.add([inputLayer.bounds.geometry])
                 catalog.layers[new LayerName(outputLayerName)] = outputWorkspace.get(outputLayerName)
@@ -487,18 +488,19 @@ class LayerCommands implements CommandMarker {
     String convexhull(
             @CliOption(key = "input-name", mandatory = true, help = "The Layer name") LayerName inputLayerName,
             @CliOption(key = "output-workspace", mandatory = true, help = "The output Layer Workspace") WorkspaceName workspaceName,
-            @CliOption(key = "output-name", mandatory = true, help = "The output Layer name") String outputLayerName
+            @CliOption(key = "output-name", mandatory = true, help = "The output Layer name") String outputLayerName,
+            @CliOption(key = "geometry-field", specifiedDefaultValue = "the_geom", unspecifiedDefaultValue = "the_geom", mandatory = false, help = "The geometry field name") String geometryFieldName
     ) throws Exception {
         Layer inputLayer = catalog.layers[inputLayerName]
         if (inputLayer) {
             Workspace outputWorkspace = catalog.workspaces[workspaceName]
             if (outputWorkspace) {
-                Schema schema = new Schema(outputLayerName, [new Field("the_geom", "Polygon", inputLayer.schema.proj)])
+                Schema schema = new Schema(outputLayerName, [new Field(geometryFieldName, "Polygon", inputLayer.schema.proj)])
                 Layer outputLayer = outputWorkspace.create(schema)
                 Geometry geom = new GeometryCollection(inputLayer.collectFromFeature {f ->
                     f.geom
                 })
-                outputLayer.add([geom])
+                outputLayer.add([geom.convexHull])
                 catalog.layers[new LayerName(outputLayerName)] = outputWorkspace.get(outputLayerName)
                 "Done!"
             } else {
