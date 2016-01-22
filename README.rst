@@ -81,6 +81,8 @@ layer convexhull --input-name polygons --output-workspace memory --output-name c
 
 layer convexhulls --input-name polygons --output-workspace memory --output-name convexhulls
 
+layer voronoi --input-name points --output-workspace mem --output-name voronoi
+
 tile
 ----
 tile open --name states --params states.mbtiles

@@ -1,0 +1,15 @@
+workspace open --name mem --params memory
+
+layer random --geometry "0,0,45,45" --projection EPSG:4326 --number 100 --output-workspace mem --output-name points
+
+layer voronoi --input-name points --output-workspace mem --output-name voronoi
+
+map open --name map
+
+map add layer --name map --layer voronoi
+
+map add layer --name map --layer points
+
+map draw --name map --background-color white
+
+! open image.png

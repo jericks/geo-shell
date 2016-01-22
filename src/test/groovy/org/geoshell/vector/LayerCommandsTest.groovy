@@ -378,4 +378,18 @@ class LayerCommandsTest {
         assertEquals layer.count, outLayer.count
         assertEquals "Polygon", outLayer.schema.geom.typ
     }
+
+    @Test void voronoi() {
+        Layer layer = new Shapefile(new File(getClass().getClassLoader().getResource("points.shp").toURI()))
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        catalog.layers[new LayerName("points")] = layer
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        String result = cmds.voronoi(new LayerName("points"), new WorkspaceName("mem"), "voronoi", "geom")
+        assertEquals "Done!", result
+        assertNotNull catalog.layers[new LayerName("voronoi")]
+        layer = catalog.layers[new LayerName("voronoi")]
+        assertEquals 10, layer.count
+        assertEquals "Polygon", layer.schema.geom.typ
+    }
 }
