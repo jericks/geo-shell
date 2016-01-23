@@ -392,4 +392,19 @@ class LayerCommandsTest {
         assertEquals 10, layer.count
         assertEquals "Polygon", layer.schema.geom.typ
     }
+
+    @Test void coordinates() {
+        Layer layer = new Shapefile(new File(getClass().getClassLoader().getResource("points.shp").toURI()))
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        catalog.layers[new LayerName("points")] = layer
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        cmds.buffer(new LayerName("points"), new WorkspaceName("mem"), "buffer", 10)
+        String result = cmds.coordinates(new LayerName("buffer"), new WorkspaceName("mem"), "coordinates")
+        assertEquals "Done!", result
+        assertNotNull catalog.layers[new LayerName("coordinates")]
+        Layer outLayer = catalog.layers[new LayerName("coordinates")]
+        assertEquals 330, outLayer.count
+        assertEquals "Point", outLayer.schema.geom.typ
+    }
 }

@@ -8,6 +8,8 @@ layer extent --input-name buffer --output-workspace mem --output-name extent
 
 layer extents --input-name buffer --output-workspace mem --output-name extents
 
+layer coordinates --input-name extents --output-workspace mem --output-name coordinates
+
 map open --name map
 
 map add layer --name map --layer extent
@@ -17,6 +19,8 @@ map add layer --name map --layer extents
 map add layer --name map --layer buffer
 
 map add layer --name map --layer points
+
+map add layer --name map --layer coordinates
 
 map draw --name map
 
