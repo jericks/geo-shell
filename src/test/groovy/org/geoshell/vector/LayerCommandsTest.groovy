@@ -407,4 +407,33 @@ class LayerCommandsTest {
         assertEquals 330, outLayer.count
         assertEquals "Point", outLayer.schema.geom.typ
     }
+
+    @Test void mincircle() {
+        Layer layer = new Shapefile(new File(getClass().getClassLoader().getResource("points.shp").toURI()))
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        catalog.layers[new LayerName("points")] = layer
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        String result = cmds.mincircle(new LayerName("points"), new WorkspaceName("mem"), "mincircle", "geom")
+        assertEquals "Done!", result
+        assertNotNull catalog.layers[new LayerName("mincircle")]
+        layer = catalog.layers[new LayerName("mincircle")]
+        assertEquals 1, layer.count
+        assertEquals "Polygon", layer.schema.geom.typ
+    }
+
+    @Test void mincircles() {
+        Layer layer = new Shapefile(new File(getClass().getClassLoader().getResource("points.shp").toURI()))
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        catalog.layers[new LayerName("points")] = layer
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        cmds.buffer(new LayerName("points"), new WorkspaceName("mem"), "buffer", 10)
+        String result = cmds.mincircles(new LayerName("buffer"), new WorkspaceName("mem"), "mincircles")
+        assertEquals "Done!", result
+        assertNotNull catalog.layers[new LayerName("mincircles")]
+        Layer outLayer = catalog.layers[new LayerName("mincircles")]
+        assertEquals layer.count, outLayer.count
+        assertEquals "Polygon", outLayer.schema.geom.typ
+    }
 }

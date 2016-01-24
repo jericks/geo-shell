@@ -83,6 +83,10 @@ layer convexhulls --input-name polygons --output-workspace memory --output-name 
 
 layer voronoi --input-name points --output-workspace mem --output-name voronoi
 
+layer mincircle --input-name polygons --output-workspace memory --output-name mincircle
+
+layer mincircles --input-name polygons --output-workspace memory --output-name mincircles
+
 tile
 ----
 tile open --name states --params states.mbtiles

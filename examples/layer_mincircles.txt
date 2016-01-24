@@ -1,0 +1,19 @@
+workspace open --name mem --params memory
+
+workspace open --name shps --params src/test/resources
+
+layer open --workspace shps --layer states --name states
+
+layer mincircle --input-name states --output-workspace mem --output-name mincircle
+
+layer mincircles --input-name states --output-workspace mem --output-name mincircles
+
+map open --name map
+
+map add layer --name map --layer mincircle
+
+map add layer --name map --layer mincircles
+
+map draw --name map
+
+! open image.png
