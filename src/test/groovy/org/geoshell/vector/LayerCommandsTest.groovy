@@ -436,4 +436,18 @@ class LayerCommandsTest {
         assertEquals layer.count, outLayer.count
         assertEquals "Polygon", outLayer.schema.geom.typ
     }
+
+    @Test void create() {
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        String result = cmds.create(new WorkspaceName("mem"), "points", "geom=Point EPSG:4326,id=Int,name=String")
+        assertEquals "Created Layer points!", result
+        assertNotNull catalog.layers[new LayerName("points")]
+        Layer outLayer = catalog.layers[new LayerName("points")]
+        assertEquals "Point", outLayer.schema.geom.typ
+        ["geom","id","name"].each { String fld ->
+            assertTrue outLayer.schema.has(fld)
+        }
+    }
 }

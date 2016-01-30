@@ -55,6 +55,8 @@ layer count --name us_states
 
 layer remove --workspace shps --layer states
 
+layer create --workspace shps --name points --fields "the_geom=Point EPSG:4326,id=Int,name=String"
+
 layer copy --input-name states --output-workspace layers.gpkg --output-name countries
 
 layer style set --name us_states --style states.sld

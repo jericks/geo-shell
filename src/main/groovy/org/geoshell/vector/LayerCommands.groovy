@@ -169,6 +169,41 @@ class LayerCommands implements CommandMarker {
         }
     }
 
+    @CliCommand(value = "layer create", help = "Create a new Layer.")
+    String create(
+            @CliOption(key = "workspace", mandatory = true, help = "The Workspace name") WorkspaceName workspaceName,
+            @CliOption(key = "name", mandatory = true, help = "The new Layer name") String name,
+            @CliOption(key = "fields", mandatory = true, help = "The comma delimited list of fields (name=type)") String fieldStr
+    ) throws Exception {
+        Workspace workspace = catalog.workspaces[workspaceName]
+        if (workspace) {
+            // Get Fields
+            List<Field> fields = []
+            fieldStr.split(",").each { String f ->
+                Field field
+                List<String> nameType = f.split("=")
+                String fieldName = nameType[0]
+                String fieldType = nameType[1]
+                if (fieldType.contains("EPSG")) {
+                    List<String> parts = fieldType.split(" ")
+                    field = new Field(fieldName, parts[0], parts[1].startsWith("EPSG") ? parts[1] : "EPSG:${parts[1]}")
+                } else {
+                    field = new Field(fieldName, fieldType)
+                }
+                fields.add(field)
+            }
+            // Create Schema
+            Schema schema = new Schema(name, fields)
+            // Create Layer
+            Layer layer = workspace.create(schema)
+            // Add Layer to Catalog
+            catalog.layers[new LayerName(name)] = layer
+            "Created Layer ${name}!"
+        } else {
+            "Unable to find Workspace ${workspaceName}"
+        }
+    }
+
     @CliCommand(value = "layer buffer", help = "Buffer the input Layer to the output Layer.")
     String buffer(
             @CliOption(key = "input-name", mandatory = true, help = "The Layer name") LayerName inputLayerName,
