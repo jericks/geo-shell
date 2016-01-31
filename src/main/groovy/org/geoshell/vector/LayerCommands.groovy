@@ -127,6 +127,40 @@ class LayerCommands implements CommandMarker {
         }
     }
 
+    @CliCommand(value = "layer validity", help = "Check for invalid geometries in the Layer.")
+    String validity(
+            @CliOption(key = "name", mandatory = true, help = "The Layer name") LayerName name,
+            @CliOption(key = "fields", mandatory = false, help = "A comma delimited list of Fields to include") String fields
+    ) throws Exception {
+        Layer layer = catalog.layers[name]
+        if (layer) {
+            List invalidGeometries = []
+            layer.eachFeature { Feature f ->
+                if (!f.geom.valid) {
+                    String reason = f.geom.validReason
+                    String values = fields ? fields.split(",").collect { f.get(it) }.join(",") : f.id
+                    invalidGeometries.add([reason: reason, values: values])
+                }
+            }
+            if (invalidGeometries.size() > 0) {
+                Table table = new Table()
+                table.addHeader(0, new TableHeader("Values", 20))
+                table.addHeader(1, new TableHeader("Reason", 20))
+                invalidGeometries.each { Map invalid ->
+                    TableRow row = table.newRow()
+                    row.addValue(0, invalid.values)
+                    row.addValue(1, invalid.reason)
+                }
+                table.calculateColumnWidths()
+                table.toString()
+            } else {
+                "No invalid geometries!"
+            }
+        } else {
+            "Unable to find Layer ${name}"
+        }
+    }
+
     @CliCommand(value = "layer style set", help = "Set a Layer's style")
     String setStyle(
             @CliOption(key = "name", mandatory = true, help = "The Layer name") LayerName name,

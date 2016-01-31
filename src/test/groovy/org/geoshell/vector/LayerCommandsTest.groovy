@@ -1,6 +1,7 @@
 package org.geoshell.vector
 
 import geoscript.layer.Layer
+import geoscript.layer.Property
 import geoscript.layer.Shapefile
 import geoscript.workspace.Directory
 import geoscript.workspace.GeoPackage
@@ -449,5 +450,23 @@ class LayerCommandsTest {
         ["geom","id","name"].each { String fld ->
             assertTrue outLayer.schema.has(fld)
         }
+    }
+
+    @Test void validity() {
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        Layer layer = new Shapefile(new File(getClass().getClassLoader().getResource("points.shp").toURI()))
+        Layer invalidLayer = new Property(new File(getClass().getClassLoader().getResource("invalid.properties").toURI()))
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        catalog.layers[new LayerName("points")] = layer
+        catalog.layers[new LayerName("invalid")] = invalidLayer
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        String result = cmds.validity(new LayerName("points"),"id")
+        assertEquals "No invalid geometries!", result
+        result = cmds.validity(new LayerName("invalid"),"id,name")
+        assertEquals """  Values                Reason
+  --------------------  --------------------
+  1,Polygon 1           Self-intersection
+""", result
     }
 }
