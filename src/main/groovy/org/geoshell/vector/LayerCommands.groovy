@@ -644,6 +644,35 @@ class LayerCommands implements CommandMarker {
         }
     }
 
+    @CliCommand(value = "layer delaunay", help = "Calculate a delaunay diagram of the input Layer and save it to the output Layer.")
+    String delaunay(
+            @CliOption(key = "input-name", mandatory = true, help = "The Layer name") LayerName inputLayerName,
+            @CliOption(key = "output-workspace", mandatory = true, help = "The output Layer Workspace") WorkspaceName workspaceName,
+            @CliOption(key = "output-name", mandatory = true, help = "The output Layer name") String outputLayerName,
+            @CliOption(key = "geometry-field", specifiedDefaultValue = "the_geom", unspecifiedDefaultValue = "the_geom", mandatory = false, help = "The geometry field name") String geometryFieldName
+    ) throws Exception {
+        Layer inputLayer = catalog.layers[inputLayerName]
+        if (inputLayer) {
+            Workspace outputWorkspace = catalog.workspaces[workspaceName]
+            if (outputWorkspace) {
+                Schema schema = new Schema(outputLayerName, [new Field(geometryFieldName, "Polygon", inputLayer.schema.proj)])
+                Layer outputLayer = outputWorkspace.create(schema)
+                Geometry geom = new GeometryCollection(inputLayer.collectFromFeature {f ->
+                    f.geom
+                }).delaunayTriangleDiagram
+                geom.geometries.each { Geometry g ->
+                    outputLayer.add([g])
+                }
+                catalog.layers[new LayerName(outputLayerName)] = outputWorkspace.get(outputLayerName)
+                "Done!"
+            } else {
+                "Unable to find Workspace ${workspaceName}"
+            }
+        } else {
+            "Unable to find Layer ${inputLayerName}"
+        }
+    }
+
     @CliCommand(value = "layer coordinates", help = "Extract the coordinates each Feature in the input Layer and save them to the output Layer.")
     String coordinates(
             @CliOption(key = "input-name", mandatory = true, help = "The Layer name") LayerName inputLayerName,
