@@ -483,4 +483,33 @@ class LayerCommandsTest {
   1,Polygon 1           Self-intersection
 """, result
     }
+
+    @Test void octagonalenvelope() {
+        Layer layer = new Shapefile(new File(getClass().getClassLoader().getResource("points.shp").toURI()))
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        catalog.layers[new LayerName("points")] = layer
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        String result = cmds.octagonalenvelope(new LayerName("points"), new WorkspaceName("mem"), "octagonalenvelope", "geom")
+        assertEquals "Done!", result
+        assertNotNull catalog.layers[new LayerName("octagonalenvelope")]
+        layer = catalog.layers[new LayerName("octagonalenvelope")]
+        assertEquals 1, layer.count
+        assertEquals "Polygon", layer.schema.geom.typ
+    }
+
+    @Test void octagonalenvelopes() {
+        Layer layer = new Shapefile(new File(getClass().getClassLoader().getResource("points.shp").toURI()))
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        catalog.layers[new LayerName("points")] = layer
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        cmds.buffer(new LayerName("points"), new WorkspaceName("mem"), "buffer", 10)
+        String result = cmds.octagonalenvelopes(new LayerName("buffer"), new WorkspaceName("mem"), "octagonalenvelopes")
+        assertEquals "Done!", result
+        assertNotNull catalog.layers[new LayerName("octagonalenvelopes")]
+        Layer outLayer = catalog.layers[new LayerName("octagonalenvelopes")]
+        assertEquals layer.count, outLayer.count
+        assertEquals "Polygon", outLayer.schema.geom.typ
+    }
 }

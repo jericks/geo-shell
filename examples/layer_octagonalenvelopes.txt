@@ -1,0 +1,19 @@
+workspace open --name mem --params memory
+
+workspace open --name shps --params src/test/resources
+
+layer open --workspace shps --layer states --name states
+
+layer octagonalenvelope --input-name states --output-workspace mem --output-name octagonalenvelope
+
+layer octagonalenvelopes --input-name states --output-workspace mem --output-name octagonalenvelopes
+
+map open --name map
+
+map add layer --name map --layer octagonalenvelope
+
+map add layer --name map --layer octagonalenvelopes
+
+map draw --name map
+
+! open image.png

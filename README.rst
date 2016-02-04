@@ -91,6 +91,10 @@ layer mincircle --input-name polygons --output-workspace memory --output-name mi
 
 layer mincircles --input-name polygons --output-workspace memory --output-name mincircles
 
+layer octagonalenvelope --input-name polygons --output-workspace memory --output-name octagonalenvelope
+
+layer octagonalenvelopes --input-name polygons --output-workspace memory --output-name octagonalenvelopes
+
 tile
 ----
 tile open --name states --params states.mbtiles
