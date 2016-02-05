@@ -456,7 +456,7 @@ class LayerCommandsTest {
         Catalog catalog = new Catalog()
         catalog.workspaces[new WorkspaceName("mem")] = new Memory()
         LayerCommands cmds = new LayerCommands(catalog: catalog)
-        String result = cmds.create(new WorkspaceName("mem"), "points", "geom=Point EPSG:4326,id=Int,name=String")
+        String result = cmds.create(new WorkspaceName("mem"), "points", "geom=Point EPSG:4326|id=Int|name=String")
         assertEquals "Created Layer points!", result
         assertNotNull catalog.layers[new LayerName("points")]
         Layer outLayer = catalog.layers[new LayerName("points")]
@@ -511,5 +511,31 @@ class LayerCommandsTest {
         Layer outLayer = catalog.layers[new LayerName("octagonalenvelopes")]
         assertEquals layer.count, outLayer.count
         assertEquals "Polygon", outLayer.schema.geom.typ
+    }
+
+    @Test void add() {
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        cmds.create(new WorkspaceName("mem"), "points", "geom=Point EPSG:4326|id=Int|name=String")
+        String result = cmds.count(new LayerName("points"))
+        assertEquals "0", result
+        result = cmds.add(new LayerName("points"), "geom=POINT(1 1)|id=1|name=Home")
+        assertEquals "Added Feature to points", result
+        result = cmds.count(new LayerName("points"))
+        assertEquals "1", result
+        Layer layer = catalog.layers[new LayerName("points")]
+        assertEquals 1, layer.count
+        assertEquals "POINT (1 1)", layer.features[0].geom.wkt
+        assertEquals 1, layer.features[0].get("id")
+        assertEquals "Home", layer.features[0].get("name")
+        result = cmds.add(new LayerName("points"), "geom=POINT(2 2)|id=2|name=Work")
+        assertEquals "Added Feature to points", result
+        result = cmds.count(new LayerName("points"))
+        assertEquals "2", result
+        assertEquals 2, layer.count
+        assertEquals "POINT (2 2)", layer.features[1].geom.wkt
+        assertEquals 2, layer.features[1].get("id")
+        assertEquals "Work", layer.features[1].get("name")
     }
 }

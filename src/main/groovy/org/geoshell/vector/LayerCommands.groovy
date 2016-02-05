@@ -207,13 +207,13 @@ class LayerCommands implements CommandMarker {
     String create(
             @CliOption(key = "workspace", mandatory = true, help = "The Workspace name") WorkspaceName workspaceName,
             @CliOption(key = "name", mandatory = true, help = "The new Layer name") String name,
-            @CliOption(key = "fields", mandatory = true, help = "The comma delimited list of fields (name=type)") String fieldStr
+            @CliOption(key = "fields", mandatory = true, help = "The pipe delimited list of fields (name=type)") String fieldStr
     ) throws Exception {
         Workspace workspace = catalog.workspaces[workspaceName]
         if (workspace) {
             // Get Fields
             List<Field> fields = []
-            fieldStr.split(",").each { String f ->
+            fieldStr.split("\\|").each { String f ->
                 Field field
                 List<String> nameType = f.split("=")
                 String fieldName = nameType[0]
@@ -235,6 +235,26 @@ class LayerCommands implements CommandMarker {
             "Created Layer ${name}!"
         } else {
             "Unable to find Workspace ${workspaceName}"
+        }
+    }
+
+    @CliCommand(value = "layer add", help = "Add a new Feature to a Layer.")
+    String add(
+            @CliOption(key = "name", mandatory = true, help = "The Layer name") LayerName layerName,
+            @CliOption(key = "values", mandatory = true, help = "The pipe delimited list of values (field=value)") String valueStr
+    ) throws Exception {
+        Layer layer = catalog.layers[layerName]
+        if (layer) {
+            Map values = [:]
+            valueStr.split("\\|").each { String str ->
+                List parts = str.split("=")
+                values[parts[0]] = parts[1]
+            }
+            Feature feature = layer.schema.feature(values)
+            layer.add(feature)
+            "Added Feature to ${layerName}"
+        } else {
+            "Unable to find Layer ${layerName}"
         }
     }
 
