@@ -538,4 +538,33 @@ class LayerCommandsTest {
         assertEquals 2, layer.features[1].get("id")
         assertEquals "Work", layer.features[1].get("name")
     }
+
+    @Test void minrect() {
+        Layer layer = new Shapefile(new File(getClass().getClassLoader().getResource("points.shp").toURI()))
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        catalog.layers[new LayerName("points")] = layer
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        String result = cmds.minrect(new LayerName("points"), new WorkspaceName("mem"), "minrect", "geom")
+        assertEquals "Done!", result
+        assertNotNull catalog.layers[new LayerName("minrect")]
+        layer = catalog.layers[new LayerName("minrect")]
+        assertEquals 1, layer.count
+        assertEquals "Polygon", layer.schema.geom.typ
+    }
+
+    @Test void minrects() {
+        Layer layer = new Shapefile(new File(getClass().getClassLoader().getResource("points.shp").toURI()))
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        catalog.layers[new LayerName("points")] = layer
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        cmds.buffer(new LayerName("points"), new WorkspaceName("mem"), "buffer", 10)
+        String result = cmds.minrects(new LayerName("buffer"), new WorkspaceName("mem"), "minrects")
+        assertEquals "Done!", result
+        assertNotNull catalog.layers[new LayerName("minrects")]
+        Layer outLayer = catalog.layers[new LayerName("minrects")]
+        assertEquals layer.count, outLayer.count
+        assertEquals "Polygon", outLayer.schema.geom.typ
+    }
 }

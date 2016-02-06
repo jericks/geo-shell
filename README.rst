@@ -11,7 +11,9 @@ Behind the scenes it uses GeoScript Groovy, GeoTools, and JTS.
 
 Example
 -------
-geo-shell>workspace open --name shps --params /Users/jericks/Projects/NaturalEarth/LargeScale/10m_cultural
+$ geo-shell
+
+geo-shell>workspace open --name shps --params /Users/you/Projects/NaturalEarth/LargeScale/10m_cultural
 
    Workspace shps opened!
 
@@ -33,7 +35,7 @@ geo-shell>layer open --workspace shps --layer 10m_roads
 
 workspace
 ---------
-workspace open --name shps --params /Users/joe/shps
+workspace open --name shps --params /Users/you/shps
 
 workspce close --name shps
 
@@ -92,6 +94,10 @@ layer voronoi --input-name points --output-workspace mem --output-name voronoi
 layer mincircle --input-name polygons --output-workspace memory --output-name mincircle
 
 layer mincircles --input-name polygons --output-workspace memory --output-name mincircles
+
+layer minrect --input-name polygons --output-workspace memory --output-name minrect
+
+layer minrects --input-name polygons --output-workspace memory --output-name minrects
 
 layer octagonalenvelope --input-name polygons --output-workspace memory --output-name octagonalenvelope
 
