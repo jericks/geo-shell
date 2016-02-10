@@ -69,6 +69,8 @@ layer style get --name us_states --style states.sld
 
 layer addareafield --input-name us_states --output-workspace postgis --output-name states_area --area-fieldname area
 
+layer addidfield --input-name us_states --output-workspace postgis --output-name states_area --id-fieldname id --start-value 1
+
 layer buffer --input-name us_states --output-workspace postgis --output-name states_buffered --distance 10
 
 layer centroid --input-name us_states --output-workspace postgis --output-name states_centroids

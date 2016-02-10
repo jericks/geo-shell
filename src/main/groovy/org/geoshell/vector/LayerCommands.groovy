@@ -946,4 +946,37 @@ class LayerCommands implements CommandMarker {
         }
     }
 
+    @CliCommand(value = "layer addidfield", help = "Add area ID to the input Layer and save the result to the output Layer")
+    String addidfield(
+            @CliOption(key = "input-name", mandatory = true, help = "The Layer name") LayerName inputLayerName,
+            @CliOption(key = "output-workspace", mandatory = true, help = "The output Layer Workspace") WorkspaceName workspaceName,
+            @CliOption(key = "output-name", mandatory = true, help = "The output Layer name") String outputLayerName,
+            @CliOption(key = "id-fieldname", mandatory = true, specifiedDefaultValue = "id", unspecifiedDefaultValue = "id", help = "The id field name") String idFieldName,
+            @CliOption(key = "start-value", mandatory = true, specifiedDefaultValue = "1", unspecifiedDefaultValue = "1", help = "The value to start at") int start
+    ) throws Exception {
+        Layer inputLayer = catalog.layers[inputLayerName]
+        if (inputLayer) {
+            Workspace outputWorkspace = catalog.workspaces[workspaceName]
+            if (outputWorkspace) {
+                Schema schema = inputLayer.schema.addField(new Field(idFieldName,"int"), outputLayerName)
+                Layer outputLayer = outputWorkspace.create(schema)
+                int c = start
+                outputLayer.withWriter { geoscript.layer.Writer w ->
+                    inputLayer.eachFeature { Feature f ->
+                        Map attributes = f.attributes
+                        attributes[idFieldName] = c
+                        w.add(outputLayer.schema.feature(attributes, f.id))
+                        c++
+                    }
+                }
+                catalog.layers[new LayerName(outputLayerName)] = outputWorkspace.get(outputLayerName)
+                "Done!"
+            } else {
+                "Unable to find Workspace ${workspaceName}"
+            }
+        } else {
+            "Unable to find Layer ${inputLayerName}"
+        }
+    }
+
 }

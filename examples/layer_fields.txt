@@ -1,0 +1,17 @@
+workspace open --name mem --params memory
+
+layer random --geometry "0,0,45,45" --projection EPSG:4326 --number 10 --output-workspace mem --output-name points
+
+layer schema --name points
+
+layer addidfield --input-name points --output-workspace mem --output-name points_id --id-fieldname pid --start-value 1
+
+layer schema --name points_id
+
+layer buffer --input-name points_id --output-workspace mem --output-name polys --distance 2
+
+layer schema --name polys
+
+layer addareafield --input-name polys --output-workspace mem --output-name polys_area --area-fieldname area
+
+layer schema --name polys_area
