@@ -979,4 +979,40 @@ class LayerCommands implements CommandMarker {
         }
     }
 
+    @CliCommand(value = "layer addxyfields", help = "Add x and y coordinate Fields to the input Layer and save the result to the output Layer")
+    String addxyfields(
+            @CliOption(key = "input-name", mandatory = true, help = "The Layer name") LayerName inputLayerName,
+            @CliOption(key = "output-workspace", mandatory = true, help = "The output Layer Workspace") WorkspaceName workspaceName,
+            @CliOption(key = "output-name", mandatory = true, help = "The output Layer name") String outputLayerName,
+            @CliOption(key = "x-fieldname", mandatory = true, specifiedDefaultValue = "x", unspecifiedDefaultValue = "x", help = "The x field name") String xFieldName,
+            @CliOption(key = "y-fieldname", mandatory = true, specifiedDefaultValue = "y", unspecifiedDefaultValue = "y", help = "The y field name") String yFieldName
+    ) throws Exception {
+        Layer inputLayer = catalog.layers[inputLayerName]
+        if (inputLayer) {
+            Workspace outputWorkspace = catalog.workspaces[workspaceName]
+            if (outputWorkspace) {
+                Schema schema = inputLayer.schema.addFields([
+                    new Field(xFieldName, "double"),
+                    new Field(yFieldName, "double")
+                ], outputLayerName)
+                Layer outputLayer = outputWorkspace.create(schema)
+                outputLayer.withWriter { geoscript.layer.Writer w ->
+                    inputLayer.eachFeature { Feature f ->
+                        Map attributes = f.attributes
+                        Point pt = f.geom.centroid
+                        attributes[xFieldName] = pt.x
+                        attributes[yFieldName] = pt.y
+                        w.add(outputLayer.schema.feature(attributes, f.id))
+                    }
+                }
+                catalog.layers[new LayerName(outputLayerName)] = outputWorkspace.get(outputLayerName)
+                "Done!"
+            } else {
+                "Unable to find Workspace ${workspaceName}"
+            }
+        } else {
+            "Unable to find Layer ${inputLayerName}"
+        }
+    }
+
 }

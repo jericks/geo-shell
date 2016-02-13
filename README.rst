@@ -71,6 +71,8 @@ layer addareafield --input-name us_states --output-workspace postgis --output-na
 
 layer addidfield --input-name us_states --output-workspace postgis --output-name states_area --id-fieldname id --start-value 1
 
+layer addxyfields --input-name points --output-workspace postgis --output-name points_xy --x-fieldname xcoord --y-fieldname ycoord
+
 layer buffer --input-name us_states --output-workspace postgis --output-name states_buffered --distance 10
 
 layer centroid --input-name us_states --output-workspace postgis --output-name states_centroids

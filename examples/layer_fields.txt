@@ -8,6 +8,10 @@ layer addidfield --input-name points --output-workspace mem --output-name points
 
 layer schema --name points_id
 
+layer addxyfields --input-name points --output-workspace mem --output-name points_xy --x-fieldname xcoord --y-fieldname ycoord
+
+layer schema --name points_xy
+
 layer buffer --input-name points_id --output-workspace mem --output-name polys --distance 2
 
 layer schema --name polys

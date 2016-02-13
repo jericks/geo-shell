@@ -599,4 +599,22 @@ class LayerCommandsTest {
         assertFalse layer.schema.has("g_id")
         assertTrue outLayer.schema.has("g_id")
     }
+
+    @Test void addxyfields() {
+        Layer layer = new Shapefile(new File(getClass().getClassLoader().getResource("points.shp").toURI()))
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        catalog.layers[new LayerName("points")] = layer
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        String result = cmds.addxyfields(new LayerName("points"), new WorkspaceName("mem"), "points_xy", "x", "y")
+        assertEquals "Done!", result
+        assertNotNull catalog.layers[new LayerName("points_xy")]
+        Layer outLayer = catalog.layers[new LayerName("points_xy")]
+        assertEquals layer.count, outLayer.count
+        assertEquals layer.schema.geom.typ, outLayer.schema.geom.typ
+        assertFalse layer.schema.has("x")
+        assertTrue outLayer.schema.has("x")
+        assertFalse layer.schema.has("y")
+        assertTrue outLayer.schema.has("y")
+    }
 }
