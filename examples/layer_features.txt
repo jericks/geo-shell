@@ -1,0 +1,17 @@
+workspace open --name mem --params memory
+
+layer random --geometry "0,0,45,45" --projection EPSG:4326 --number 10 --id-field pt_id --output-workspace mem --output-name points
+
+layer features --name points
+
+layer features --name points --filter "pt_id>6"
+
+layer features --name points --start 5
+
+layer features --name points --max 5
+
+layer features --name points --start 2 --max 3
+
+layer addxyfields --input-name points --output-workspace mem --output-name points_xy --x-fieldname xcoord --y-fieldname ycoord
+
+layer features --name points_xy --field "pt_id,xcoord,ycoord"

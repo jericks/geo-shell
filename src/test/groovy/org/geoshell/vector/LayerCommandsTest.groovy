@@ -111,6 +111,139 @@ class LayerCommandsTest {
         assertEquals expected, actual
     }
 
+    @Test
+    void features() {
+        Catalog catalog = new Catalog()
+        File file = new File(getClass().getClassLoader().getResource("points.shp").toURI())
+        catalog.workspaces[new WorkspaceName("shps")] = new Directory(file.parentFile)
+        catalog.layers[new LayerName("points")] = catalog.workspaces[new WorkspaceName("shps")].get("points")
+
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        String actual = cmds.features(new LayerName("points"), null, null, -1, -1, null)
+        String expected =  OsUtils.LINE_SEPARATOR + "Feature (points.1)" + OsUtils.LINE_SEPARATOR +
+        "------------------" + OsUtils.LINE_SEPARATOR +
+        "the_geom = POINT (-168.82415307349638 3.2542458437219324)" + OsUtils.LINE_SEPARATOR +
+        "id = 0" + OsUtils.LINE_SEPARATOR +
+        "" + OsUtils.LINE_SEPARATOR +
+        "Feature (points.2)" + OsUtils.LINE_SEPARATOR +
+        "------------------" + OsUtils.LINE_SEPARATOR +
+        "the_geom = POINT (-29.05485512093759 -84.85394410965716)" + OsUtils.LINE_SEPARATOR +
+        "id = 1" + OsUtils.LINE_SEPARATOR +
+        "" + OsUtils.LINE_SEPARATOR +
+        "Feature (points.3)" + OsUtils.LINE_SEPARATOR +
+        "------------------" + OsUtils.LINE_SEPARATOR +
+        "the_geom = POINT (170.8801889092478 77.307673697752)" + OsUtils.LINE_SEPARATOR +
+        "id = 2" + OsUtils.LINE_SEPARATOR +
+        "" + OsUtils.LINE_SEPARATOR +
+        "Feature (points.4)" + OsUtils.LINE_SEPARATOR +
+        "------------------" + OsUtils.LINE_SEPARATOR +
+        "the_geom = POINT (-80.6003065416709 -27.232156337089762)" + OsUtils.LINE_SEPARATOR +
+        "id = 3" + OsUtils.LINE_SEPARATOR +
+        "" + OsUtils.LINE_SEPARATOR +
+        "Feature (points.5)" + OsUtils.LINE_SEPARATOR +
+        "------------------" + OsUtils.LINE_SEPARATOR +
+        "the_geom = POINT (140.16217123004554 20.773543456240972)" + OsUtils.LINE_SEPARATOR +
+        "id = 4" + OsUtils.LINE_SEPARATOR +
+        ""  + OsUtils.LINE_SEPARATOR +
+        "Feature (points.6)" + OsUtils.LINE_SEPARATOR +
+        "------------------" + OsUtils.LINE_SEPARATOR +
+        "the_geom = POINT (82.61838424737834 -62.32666922552009)" + OsUtils.LINE_SEPARATOR +
+        "id = 5" + OsUtils.LINE_SEPARATOR +
+        ""  + OsUtils.LINE_SEPARATOR +
+        "Feature (points.7)" + OsUtils.LINE_SEPARATOR +
+        "------------------" + OsUtils.LINE_SEPARATOR +
+        "the_geom = POINT (29.340616510718434 -40.07842578881176)" + OsUtils.LINE_SEPARATOR +
+        "id = 6" + OsUtils.LINE_SEPARATOR +
+        ""  + OsUtils.LINE_SEPARATOR +
+        "Feature (points.8)" + OsUtils.LINE_SEPARATOR +
+        "------------------" + OsUtils.LINE_SEPARATOR +
+        "the_geom = POINT (-88.77814145011972 80.51980466965685)" + OsUtils.LINE_SEPARATOR +
+        "id = 7" + OsUtils.LINE_SEPARATOR +
+        ""  + OsUtils.LINE_SEPARATOR +
+        "Feature (points.9)" + OsUtils.LINE_SEPARATOR +
+        "------------------" + OsUtils.LINE_SEPARATOR +
+        "the_geom = POINT (-33.553779479649506 37.54073095445483)" + OsUtils.LINE_SEPARATOR +
+        "id = 8" + OsUtils.LINE_SEPARATOR +
+        "" + OsUtils.LINE_SEPARATOR +
+        "Feature (points.10)" + OsUtils.LINE_SEPARATOR +
+        "-------------------" + OsUtils.LINE_SEPARATOR +
+        "the_geom = POINT (83.6500645884006 -76.41816736026094)" + OsUtils.LINE_SEPARATOR +
+        "id = 9" + OsUtils.LINE_SEPARATOR + OsUtils.LINE_SEPARATOR
+        assertEquals expected, actual
+
+        // Filter
+        actual = cmds.features(new LayerName("points"), "IN('points.4')", null, -1, -1, null)
+        expected = OsUtils.LINE_SEPARATOR + "Feature (points.4)" + OsUtils.LINE_SEPARATOR +
+        "------------------" + OsUtils.LINE_SEPARATOR +
+        "the_geom = POINT (-80.6003065416709 -27.232156337089762)" + OsUtils.LINE_SEPARATOR +
+        "id = 3" + OsUtils.LINE_SEPARATOR +
+        "" + OsUtils.LINE_SEPARATOR
+        assertEquals expected, actual
+
+        // Start
+        actual = cmds.features(new LayerName("points"), null, "id asc", 8, 10, null)
+        expected = OsUtils.LINE_SEPARATOR + "Feature (points.9)" + OsUtils.LINE_SEPARATOR +
+        "------------------" + OsUtils.LINE_SEPARATOR +
+        "the_geom = POINT (-33.553779479649506 37.54073095445483)" + OsUtils.LINE_SEPARATOR +
+        "id = 8" + OsUtils.LINE_SEPARATOR +
+        "" + OsUtils.LINE_SEPARATOR +
+        "Feature (points.10)" + OsUtils.LINE_SEPARATOR +
+        "-------------------" + OsUtils.LINE_SEPARATOR +
+        "the_geom = POINT (83.6500645884006 -76.41816736026094)" + OsUtils.LINE_SEPARATOR +
+        "id = 9" + OsUtils.LINE_SEPARATOR + OsUtils.LINE_SEPARATOR
+        assertEquals expected, actual
+
+        // Start Max
+        actual = cmds.features(new LayerName("points"), null, "id asc", 2, 4, null)
+        expected = OsUtils.LINE_SEPARATOR + "Feature (points.3)" + OsUtils.LINE_SEPARATOR +
+        "------------------" + OsUtils.LINE_SEPARATOR +
+        "the_geom = POINT (170.8801889092478 77.307673697752)" + OsUtils.LINE_SEPARATOR +
+        "id = 2" + OsUtils.LINE_SEPARATOR +
+        "" + OsUtils.LINE_SEPARATOR +
+        "Feature (points.4)" + OsUtils.LINE_SEPARATOR +
+        "------------------" + OsUtils.LINE_SEPARATOR +
+        "the_geom = POINT (-80.6003065416709 -27.232156337089762)" + OsUtils.LINE_SEPARATOR +
+        "id = 3" + OsUtils.LINE_SEPARATOR +
+        "" + OsUtils.LINE_SEPARATOR +
+        "Feature (points.5)" + OsUtils.LINE_SEPARATOR +
+        "------------------" + OsUtils.LINE_SEPARATOR +
+        "the_geom = POINT (140.16217123004554 20.773543456240972)" + OsUtils.LINE_SEPARATOR +
+        "id = 4" + OsUtils.LINE_SEPARATOR +
+        ""  + OsUtils.LINE_SEPARATOR +
+        "Feature (points.6)" + OsUtils.LINE_SEPARATOR +
+        "------------------" + OsUtils.LINE_SEPARATOR +
+        "the_geom = POINT (82.61838424737834 -62.32666922552009)" + OsUtils.LINE_SEPARATOR +
+        "id = 5" + OsUtils.LINE_SEPARATOR +
+        ""  + OsUtils.LINE_SEPARATOR
+        assertEquals expected, actual
+
+        // Max
+        actual = cmds.features(new LayerName("points"), null, "id asc", -1, 2, null)
+        expected = OsUtils.LINE_SEPARATOR + "Feature (points.1)" + OsUtils.LINE_SEPARATOR +
+        "------------------" + OsUtils.LINE_SEPARATOR +
+        "the_geom = POINT (-168.82415307349638 3.2542458437219324)" + OsUtils.LINE_SEPARATOR +
+        "id = 0" + OsUtils.LINE_SEPARATOR +
+        "" + OsUtils.LINE_SEPARATOR +
+        "Feature (points.2)" + OsUtils.LINE_SEPARATOR +
+        "------------------" + OsUtils.LINE_SEPARATOR +
+        "the_geom = POINT (-29.05485512093759 -84.85394410965716)" + OsUtils.LINE_SEPARATOR +
+        "id = 1" + OsUtils.LINE_SEPARATOR +
+        "" + OsUtils.LINE_SEPARATOR
+        assertEquals expected, actual
+
+        // Fields
+        actual = cmds.features(new LayerName("points"), null, "id asc", -1, 2, "id")
+        expected = OsUtils.LINE_SEPARATOR + "Feature (points.1)" + OsUtils.LINE_SEPARATOR +
+        "------------------" + OsUtils.LINE_SEPARATOR +
+        "id = 0" + OsUtils.LINE_SEPARATOR +
+        "" + OsUtils.LINE_SEPARATOR +
+        "Feature (points.2)" + OsUtils.LINE_SEPARATOR +
+        "------------------" + OsUtils.LINE_SEPARATOR +
+        "id = 1" + OsUtils.LINE_SEPARATOR +
+        "" + OsUtils.LINE_SEPARATOR
+        assertEquals expected, actual
+    }
+
     @Test void buffer() {
         Layer layer = new Shapefile(new File(getClass().getClassLoader().getResource("points.shp").toURI()))
         Catalog catalog = new Catalog()

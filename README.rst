@@ -53,6 +53,8 @@ layer list
 
 layer schema --name us_states
 
+layer features --name us_states --filter "NAME='Washington'"
+
 layer count --name us_states
 
 layer remove --workspace shps --layer states

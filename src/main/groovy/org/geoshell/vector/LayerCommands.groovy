@@ -127,6 +127,44 @@ class LayerCommands implements CommandMarker {
         }
     }
 
+    @CliCommand(value = "layer features", help = "Display the Features of a Layer.")
+    String features(
+            @CliOption(key = "name", mandatory = true, help = "The Layer name") LayerName layerName,
+            @CliOption(key = "filter", mandatory = false, help = "The CQL Filter")String filter,
+            @CliOption(key = "sort", mandatory = false, help = "A Sort parameter (fld dir)")String sort,
+            @CliOption(key = "start", mandatory = false, unspecifiedDefaultValue = "-1", help = "The start index")int start,
+            @CliOption(key = "max", mandatory = false, unspecifiedDefaultValue = "-1", help = "The maximum number of records")int max,
+            @CliOption(key = "field", mandatory = false, help = "A subfield to include") String fields
+    ) throws Exception {
+        Layer layer = catalog.layers[layerName]
+        if (layer) {
+            StringBuilder str = new StringBuilder()
+            List fieldList = fields ? fields.split(",") as List : layer.schema.fields.collect { it.name }
+            List sortList = sort ? sort.split(",") as List : []
+            // If max is set but start isn't start at 0
+            if (max > -1 && start == -1) {
+                start = 0
+            }
+            // If start is set but max isn't, set max
+            else if (start > -1 && max == -1) {
+                max = layer.count - start
+            }
+            str.append(OsUtils.LINE_SEPARATOR)
+            layer.getCursor([filter: filter, sort: sortList, start: start, max: max, fields: fieldList]).each { Feature f ->
+                String header = "Feature (${f.id})"
+                str.append(header).append(OsUtils.LINE_SEPARATOR)
+                str.append("-".multiply(header.length())).append(OsUtils.LINE_SEPARATOR)
+                fieldList.each { String fld ->
+                    str.append(fld).append(" = ").append(f[fld]).append(OsUtils.LINE_SEPARATOR)
+                }
+                str.append(OsUtils.LINE_SEPARATOR)
+            }
+            str
+        } else {
+            "Unable to find Layer ${layerName}"
+        }
+    }
+
     @CliCommand(value = "layer validity", help = "Check for invalid geometries in the Layer.")
     String validity(
             @CliOption(key = "name", mandatory = true, help = "The Layer name") LayerName name,
