@@ -1053,4 +1053,47 @@ class LayerCommands implements CommandMarker {
         }
     }
 
+
+    @CliCommand(value = "layer simplify", help = "Simplify the features of the input Layer and save them to the output Layer")
+    String simplify(
+            @CliOption(key = "input-name", mandatory = true, help = "The Layer name") LayerName inputLayerName,
+            @CliOption(key = "output-workspace", mandatory = true, help = "The output Layer Workspace") WorkspaceName workspaceName,
+            @CliOption(key = "output-name", mandatory = true, help = "The output Layer name") String outputLayerName,
+            @CliOption(key = "algorithm", mandatory = false, specifiedDefaultValue = "tp", unspecifiedDefaultValue = "tp", help = "The simplify algorithm (DouglasPeucker - dp or TopologyPreserving - tp)") String algorithm,
+            @CliOption(key = "distance", mandatory = true, help = "The distance tolerance") double distance
+    ) throws Exception {
+        Layer inputLayer = catalog.layers[inputLayerName]
+        if (inputLayer) {
+            Workspace outputWorkspace = catalog.workspaces[workspaceName]
+            if (outputWorkspace) {
+                Schema schema = new Schema(outputLayerName, inputLayer.schema.fields)
+                Layer outputLayer = outputWorkspace.create(schema)
+                outputLayer.withWriter { geoscript.layer.Writer w ->
+                    inputLayer.eachFeature { Feature f ->
+                        Map values = [:]
+                        f.attributes.each { k, v ->
+                            if (v instanceof geoscript.geom.Geometry) {
+                                Geometry geometry = f.geom
+                                if (algorithm.equalsIgnoreCase("douglaspeucker") || algorithm.equalsIgnoreCase("dp")) {
+                                    geometry = geometry.simplify(distance)
+                                } else /*if (algorithm.equalsIgnoreCase("topologypreserving") || algorithm.equalsIgnoreCase("tp"))*/ {
+                                    geometry = geometry.simplifyPreservingTopology(distance)
+                                }
+                                values[k] = geometry
+                            } else {
+                                values[k] = v
+                            }
+                        }
+                        w.add(outputLayer.schema.feature(values, f.id))
+                    }
+                }
+                catalog.layers[new LayerName(outputLayerName)] = outputWorkspace.get(outputLayerName)
+                "Done!"
+            } else {
+                "Unable to find Workspace ${workspaceName}"
+            }
+        } else {
+            "Unable to find Layer ${inputLayerName}"
+        }
+    }
 }

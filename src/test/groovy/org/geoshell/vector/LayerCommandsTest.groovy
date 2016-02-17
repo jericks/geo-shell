@@ -750,4 +750,19 @@ class LayerCommandsTest {
         assertFalse layer.schema.has("y")
         assertTrue outLayer.schema.has("y")
     }
+
+    @Test void simplify() {
+        Layer layer = new Shapefile(new File(getClass().getClassLoader().getResource("points.shp").toURI()))
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        catalog.layers[new LayerName("points")] = layer
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        cmds.buffer(new LayerName("points"), new WorkspaceName("mem"), "polys", 10)
+        String result = cmds.simplify(new LayerName("polys"), new WorkspaceName("mem"), "polys_simplified", "tp", 4)
+        assertEquals "Done!", result
+        assertNotNull catalog.layers[new LayerName("polys_simplified")]
+        Layer outLayer = catalog.layers[new LayerName("polys_simplified")]
+        assertEquals layer.count, outLayer.count
+        assertEquals "Polygon", outLayer.schema.geom.typ
+    }
 }
