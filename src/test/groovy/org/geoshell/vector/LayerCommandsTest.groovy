@@ -762,8 +762,12 @@ class LayerCommandsTest {
         assertEquals "Done!", result
         assertNotNull catalog.layers[new LayerName("polys_simplified")]
         Layer outLayer = catalog.layers[new LayerName("polys_simplified")]
+        Layer bufferLayer = catalog.layers[new LayerName("polys")]
         assertEquals layer.count, outLayer.count
         assertEquals "Polygon", outLayer.schema.geom.typ
+        (0..<layer.count).each { int i ->
+            assertTrue outLayer.features[i].geom.numPoints < bufferLayer.features[i].geom.numPoints
+        }
     }
 
     @Test void densify() {
@@ -778,5 +782,8 @@ class LayerCommandsTest {
         Layer outLayer = catalog.layers[new LayerName("grid_densified")]
         assertEquals layer.count, outLayer.count
         assertEquals "MultiPolygon", outLayer.schema.geom.typ
+        (0..<layer.count).each { int i ->
+            assertTrue outLayer.features[i].geom.numPoints > layer.features[i].geom.numPoints
+        }
     }
 }
