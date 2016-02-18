@@ -1,0 +1,23 @@
+workspace open --name mem --params memory
+
+layer random --geometry "0,0,45,45" --projection EPSG:4326 --number 100 --output-workspace mem --output-name points
+
+layer buffer --input-name points --output-workspace mem --output-name buffer --distance 2
+
+layer extents --input-name buffer --output-workspace mem --output-name extents
+
+layer densify --input-name extents --output-workspace mem --output-name densified --distance 1
+
+layer coordinates --input-name densified --output-workspace mem --output-name coordinates
+
+map open --name map
+
+map add layer --name map --layer densified
+
+map add layer --name map --layer points
+
+map add layer --name map --layer coordinates
+
+map draw --name map
+
+! open image.png

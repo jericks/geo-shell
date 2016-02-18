@@ -765,4 +765,18 @@ class LayerCommandsTest {
         assertEquals layer.count, outLayer.count
         assertEquals "Polygon", outLayer.schema.geom.typ
     }
+
+    @Test void densify() {
+        Layer layer = new Shapefile(new File(getClass().getClassLoader().getResource("grid.shp").toURI()))
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        catalog.layers[new LayerName("grid")] = layer
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        String result = cmds.densify(new LayerName("grid"), new WorkspaceName("mem"), "grid_densified", 10)
+        assertEquals "Done!", result
+        assertNotNull catalog.layers[new LayerName("grid_densified")]
+        Layer outLayer = catalog.layers[new LayerName("grid_densified")]
+        assertEquals layer.count, outLayer.count
+        assertEquals "MultiPolygon", outLayer.schema.geom.typ
+    }
 }

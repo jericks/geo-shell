@@ -1096,4 +1096,40 @@ class LayerCommands implements CommandMarker {
             "Unable to find Layer ${inputLayerName}"
         }
     }
+
+    @CliCommand(value = "layer densify", help = "Densify the features of the input Layer and save them to the output Layer")
+    String densify(
+            @CliOption(key = "input-name", mandatory = true, help = "The Layer name") LayerName inputLayerName,
+            @CliOption(key = "output-workspace", mandatory = true, help = "The output Layer Workspace") WorkspaceName workspaceName,
+            @CliOption(key = "output-name", mandatory = true, help = "The output Layer name") String outputLayerName,
+            @CliOption(key = "distance", mandatory = true, help = "The distance tolerance") double distance
+    ) throws Exception {
+        Layer inputLayer = catalog.layers[inputLayerName]
+        if (inputLayer) {
+            Workspace outputWorkspace = catalog.workspaces[workspaceName]
+            if (outputWorkspace) {
+                Schema schema = new Schema(outputLayerName, inputLayer.schema.fields)
+                Layer outputLayer = outputWorkspace.create(schema)
+                outputLayer.withWriter { geoscript.layer.Writer w ->
+                    inputLayer.eachFeature { Feature f ->
+                        Map values = [:]
+                        f.attributes.each { k, v ->
+                            if (v instanceof geoscript.geom.Geometry) {
+                                values[k] = f.geom.densify(distance)
+                            } else {
+                                values[k] = v
+                            }
+                        }
+                        w.add(outputLayer.schema.feature(values, f.id))
+                    }
+                }
+                catalog.layers[new LayerName(outputLayerName)] = outputWorkspace.get(outputLayerName)
+                "Done!"
+            } else {
+                "Unable to find Workspace ${workspaceName}"
+            }
+        } else {
+            "Unable to find Layer ${inputLayerName}"
+        }
+    }
 }

@@ -113,6 +113,8 @@ layer octagonalenvelopes --input-name polygons --output-workspace memory --outpu
 
 layer simplify --input-name polys --output-workspace directory --output-name simplified --algorithm tp --distance 120
 
+layer densify --input-name polys --output-workspace postgis --output-name polys_densified --distance 10
+
 tile
 ----
 tile open --name states --params states.mbtiles
