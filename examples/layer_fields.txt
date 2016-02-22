@@ -4,6 +4,10 @@ layer random --geometry "0,0,45,45" --projection EPSG:4326 --number 10 --output-
 
 layer schema --name points
 
+layer addfields --input-name points --output-workspace mem --output-name points_name --fields "name=String,description=String"
+
+layer schema --name points_name
+
 layer addidfield --input-name points --output-workspace mem --output-name points_id --id-fieldname pid --start-value 1
 
 layer schema --name points_id

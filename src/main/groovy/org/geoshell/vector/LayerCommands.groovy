@@ -1053,6 +1053,45 @@ class LayerCommands implements CommandMarker {
         }
     }
 
+    @CliCommand(value = "layer addfields", help = "Add Fields to the input Layer and save the result to the output Layer")
+    String addfields(
+            @CliOption(key = "input-name", mandatory = true, help = "The Layer name") LayerName inputLayerName,
+            @CliOption(key = "output-workspace", mandatory = true, help = "The output Layer Workspace") WorkspaceName workspaceName,
+            @CliOption(key = "output-name", mandatory = true, help = "The output Layer name") String outputLayerName,
+            @CliOption(key = "fields", mandatory = true, help = "The Fields (name=type proj)") String fields
+    ) throws Exception {
+        Layer inputLayer = catalog.layers[inputLayerName]
+        if (inputLayer) {
+            Workspace outputWorkspace = catalog.workspaces[workspaceName]
+            if (outputWorkspace) {
+                Schema schema = inputLayer.schema.addFields(fields.split(",").collect { String fld ->
+                    Field field
+                    List fldParts = fld.split("=")
+                    String key = fldParts[0]
+                    String value = fldParts[1]
+                    if (value.contains("EPSG")) {
+                        def parts = value.split(" ")
+                        field = new Field(key, parts[0], parts[1].startsWith("EPSG") ? parts[1] : "EPSG:${parts[1]}")
+                    } else {
+                        field = new Field(key, value)
+                    }
+                    field
+                }, outputLayerName)
+                Layer outputLayer = outputWorkspace.create(schema)
+                outputLayer.withWriter { geoscript.layer.Writer w ->
+                    inputLayer.eachFeature { Feature f ->
+                        w.add(f)
+                    }
+                }
+                catalog.layers[new LayerName(outputLayerName)] = outputWorkspace.get(outputLayerName)
+                "Done!"
+            } else {
+                "Unable to find Workspace ${workspaceName}"
+            }
+        } else {
+            "Unable to find Layer ${inputLayerName}"
+        }
+    }
 
     @CliCommand(value = "layer simplify", help = "Simplify the features of the input Layer and save them to the output Layer")
     String simplify(

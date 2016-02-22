@@ -751,6 +751,24 @@ class LayerCommandsTest {
         assertTrue outLayer.schema.has("y")
     }
 
+    @Test void addfields() {
+        Layer layer = new Shapefile(new File(getClass().getClassLoader().getResource("points.shp").toURI()))
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        catalog.layers[new LayerName("points")] = layer
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        String result = cmds.addfields(new LayerName("points"), new WorkspaceName("mem"), "points_xy", "xcol=Double,ycol=Double")
+        assertEquals "Done!", result
+        assertNotNull catalog.layers[new LayerName("points_xy")]
+        Layer outLayer = catalog.layers[new LayerName("points_xy")]
+        assertEquals layer.count, outLayer.count
+        assertEquals layer.schema.geom.typ, outLayer.schema.geom.typ
+        assertFalse layer.schema.has("xcol")
+        assertTrue outLayer.schema.has("xcol")
+        assertFalse layer.schema.has("ycol")
+        assertTrue outLayer.schema.has("ycol")
+    }
+
     @Test void simplify() {
         Layer layer = new Shapefile(new File(getClass().getClassLoader().getResource("points.shp").toURI()))
         Catalog catalog = new Catalog()
