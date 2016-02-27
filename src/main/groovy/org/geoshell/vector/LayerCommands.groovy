@@ -1093,6 +1093,36 @@ class LayerCommands implements CommandMarker {
         }
     }
 
+    @CliCommand(value = "layer removefields", help = "Remove Fields to the input Layer and save the result to the output Layer")
+    String removefields(
+            @CliOption(key = "input-name", mandatory = true, help = "The Layer name") LayerName inputLayerName,
+            @CliOption(key = "output-workspace", mandatory = true, help = "The output Layer Workspace") WorkspaceName workspaceName,
+            @CliOption(key = "output-name", mandatory = true, help = "The output Layer name") String outputLayerName,
+            @CliOption(key = "fields", mandatory = true, help = "The Fields (name=type proj)") String fields
+    ) throws Exception {
+        Layer inputLayer = catalog.layers[inputLayerName]
+        if (inputLayer) {
+            Workspace outputWorkspace = catalog.workspaces[workspaceName]
+            if (outputWorkspace) {
+                Schema schema = inputLayer.schema.removeFields(fields.split(",").collect { String fldName ->
+                    inputLayer.schema.get(fldName)
+                }, outputLayerName)
+                Layer outputLayer = outputWorkspace.create(schema)
+                outputLayer.withWriter { geoscript.layer.Writer w ->
+                    inputLayer.eachFeature { Feature f ->
+                        w.add(f)
+                    }
+                }
+                catalog.layers[new LayerName(outputLayerName)] = outputWorkspace.get(outputLayerName)
+                "Done!"
+            } else {
+                "Unable to find Workspace ${workspaceName}"
+            }
+        } else {
+            "Unable to find Layer ${inputLayerName}"
+        }
+    }
+
     @CliCommand(value = "layer simplify", help = "Simplify the features of the input Layer and save them to the output Layer")
     String simplify(
             @CliOption(key = "input-name", mandatory = true, help = "The Layer name") LayerName inputLayerName,

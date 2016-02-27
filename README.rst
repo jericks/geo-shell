@@ -71,6 +71,8 @@ layer style get --name us_states --style states.sld
 
 layer addfields --input-name points --output-workspace directory --output-name points_xy --fields "xcol=Double,ycol=Double"
 
+layer removefields --input-name points_xy --output-workspace mem --output-name points_no_xy --fields xcoord,ycoord
+
 layer addareafield --input-name us_states --output-workspace postgis --output-name states_area --area-fieldname area
 
 layer addidfield --input-name us_states --output-workspace postgis --output-name states_area --id-fieldname id --start-value 1
