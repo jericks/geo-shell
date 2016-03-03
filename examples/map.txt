@@ -1,18 +1,18 @@
-workspace open --name shps --params /Users/jericks/Projects/NaturalEarth/SmallScale/110m_cultural
+workspace open --name naturalearth --params naturalearth.gpkg
 
-layer open --workspace shps --layer 110m_admin_0_countries
+layer open --workspace naturalearth --layer countries
 
-layer open --workspace shps --layer 110m_admin_1_states_provinces_shp
+layer open --workspace naturalearth --layer states
 
-format open --name earth --input /Users/jericks/Projects/GeoScript/scripts/raster/NE2_50M_SR_W.tif
+format open --name earth --input earth.tif
 
-raster open --format earth --raster NE2_50M_SR_W --name earth
+raster open --format earth --raster earth --name earth
 
 map open --name mymap
 
-map add layer --name mymap --layer shps:110m_admin_0_countries
+map add layer --name mymap --layer naturalearth:countries
 
-map add layer --name mymap --layer shps:110m_admin_1_states_provinces_shp
+map add layer --name mymap --layer naturalearth:states
 
 map add raster --name mymap --raster earth
 
@@ -20,4 +20,4 @@ map reorder --name mymap --layer earth --order 0
 
 map draw --name mymap
 
-! open image.png
+open --file image.png

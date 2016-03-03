@@ -1,10 +1,10 @@
-format open --name earth --input /Users/jericks/Projects/GeoScript/scripts/raster/NE2_50M_SR_W.tif
+format open --name earth --input earth.tif
 
 format list
 
 format rasters --name earth
 
-raster open --format earth --raster NE2_50M_SR_W --name earth
+raster open --format earth --raster earth --name earth
 
 raster list
 

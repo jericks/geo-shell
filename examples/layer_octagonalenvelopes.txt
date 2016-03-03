@@ -1,8 +1,8 @@
 workspace open --name mem --params memory
 
-workspace open --name shps --params src/test/resources
+workspace open --name naturalearth --params naturalearth.gpkg
 
-layer open --workspace shps --layer states --name states
+layer open --workspace naturalearth --layer states --name states
 
 layer octagonalenvelope --input-name states --output-workspace mem --output-name octagonalenvelope
 
@@ -16,4 +16,4 @@ map add layer --name map --layer octagonalenvelopes
 
 map draw --name map
 
-! open image.png
+open --file image.png

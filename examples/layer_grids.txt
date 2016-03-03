@@ -1,4 +1,4 @@
-workspace open --name layers --params layers.gpkg
+workspace open --name layers --params memory
 
 layer random --output-workspace layers --output-name points --number 100 --geometry -180,-90,180,90 --projection EPSG:4326
 
@@ -12,4 +12,4 @@ map add layer --name gridmap --layer points
 
 map draw --name gridmap
 
-! open image.png
+open --file image.png

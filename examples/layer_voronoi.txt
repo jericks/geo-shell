@@ -12,4 +12,4 @@ map add layer --name map --layer points
 
 map draw --name map --background-color white
 
-! open image.png
+open --file image.png

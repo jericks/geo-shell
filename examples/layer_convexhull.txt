@@ -20,4 +20,4 @@ map add layer --name map --layer points
 
 map draw --name map --background-color wheat
 
-! open image.png
+open --file image.png

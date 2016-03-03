@@ -1,25 +1,25 @@
-workspace open --name shps --params /Users/jericks/Projects/NaturalEarth/SmallScale/110m_cultural
+workspace open --name naturalearth --params naturalearth.gpkg
 
 workspace list
 
-workspace layers --name shps
+workspace layers --name naturalearth
 
-layer open --workspace shps --layer 110m_admin_0_countries
+layer open --workspace naturalearth --layer countries
 
-layer open --workspace shps --layer 110m_admin_1_states_provinces_shp
+layer open --workspace naturalearth --layer states
 
 layer list
 
-layer count --name shps:110m_admin_0_countries
+layer count --name naturalearth:countries
 
-layer count --name shps:110m_admin_1_states_provinces_shp
+layer count --name naturalearth:states
 
-layer schema --name shps:110m_admin_0_countries
+layer schema --name naturalearth:countries
 
-layer schema --name shps:110m_admin_1_states_provinces_shp
+layer schema --name naturalearth:states
 
-layer close --name shps:110m_admin_0_countries
+layer close --name naturalearth:countries
 
-layer close --name shps:110m_admin_1_states_provinces_shp
+layer close --name naturalearth:states
 
-workspace close --name shps
+workspace close --name naturalearth

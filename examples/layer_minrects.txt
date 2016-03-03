@@ -1,8 +1,8 @@
 workspace open --name mem --params memory
 
-workspace open --name shps --params src/test/resources
+workspace open --name naturalearth --params naturalearth.gpkg
 
-layer open --workspace shps --layer states --name states
+layer open --workspace naturalearth --layer states --name states
 
 layer minrect --input-name states --output-workspace mem --output-name minrect
 
@@ -16,4 +16,4 @@ map add layer --name map --layer minrects
 
 map draw --name map
 
-! open image.png
+open --file image.png
