@@ -104,10 +104,11 @@ class LayerCommandsTest {
 
         LayerCommands cmds = new LayerCommands(catalog: catalog)
         String actual = cmds.schema(new LayerName("points"))
-        String expected = "  Name                  Type" + OsUtils.LINE_SEPARATOR +
-                "  --------------------  --------------------" + OsUtils.LINE_SEPARATOR +
-                "  the_geom              Point" + OsUtils.LINE_SEPARATOR +
-                "  id                    Integer" + OsUtils.LINE_SEPARATOR
+        String expected = '''  Name                  Type
+  --------------------  --------------------
+  the_geom              Point
+  id                    Integer
+'''
         assertEquals expected, actual
     }
 
