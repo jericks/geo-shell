@@ -63,6 +63,8 @@ layer create --workspace shps --name points --fields "the_geom=Point EPSG:4326|i
 
 layer add --name points --values "the_geom=POINT (1 1)|id=1|name=Seattle"
 
+layer delete --name states --filter "area > 500"
+
 layer copy --input-name states --output-workspace layers.gpkg --output-name countries
 
 layer style set --name us_states --style states.sld

@@ -1201,4 +1201,18 @@ class LayerCommands implements CommandMarker {
             "Unable to find Layer ${inputLayerName}"
         }
     }
+
+    @CliCommand(value = "layer delete", help = "Delete features from the Layer")
+    String delete(
+            @CliOption(key = "name", mandatory = true, help = "The Layer name") LayerName layerName,
+            @CliOption(key = "filter", mandatory = true, help = "The CQL Filter") String cql
+    ) throws Exception {
+        Layer layer = catalog.layers[layerName]
+        if (layer) {
+            layer.delete(cql)
+            "Deleted ${cql} Features from ${layerName}"
+        } else {
+            "Unable to find Layer ${layerName}"
+        }
+    }
 }

@@ -833,4 +833,20 @@ class LayerCommandsTest {
             assertTrue outLayer.features[i].geom.numPoints > layer.features[i].geom.numPoints
         }
     }
+
+    @Test void delete() {
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        cmds.create(new WorkspaceName("mem"), "points", "geom=Point EPSG:4326|fid=Int|name=String")
+        cmds.add(new LayerName("points"), "geom=POINT(1 1)|fid=1|name=Home")
+        cmds.add(new LayerName("points"), "geom=POINT(2 2)|fid=2|name=Work")
+        assertEquals "2", cmds.count(new LayerName("points"))
+        String result = cmds.delete(new LayerName("points"),"fid=2")
+        assertEquals "Deleted fid=2 Features from points", result
+        assertEquals "1", cmds.count(new LayerName("points"))
+        result = cmds.delete(new LayerName("points"),"fid=1")
+        assertEquals "Deleted fid=1 Features from points", result
+        assertEquals "0", cmds.count(new LayerName("points"))
+    }
 }
