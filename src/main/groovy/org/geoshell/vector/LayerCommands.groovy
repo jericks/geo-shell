@@ -1215,4 +1215,22 @@ class LayerCommands implements CommandMarker {
             "Unable to find Layer ${layerName}"
         }
     }
+
+    @CliCommand(value = "layer updatefield", help = "Delete features from the Layer")
+    String updatefield(
+            @CliOption(key = "name", mandatory = true, help = "The Layer name") LayerName layerName,
+            @CliOption(key = "field", mandatory = true, help = "The field name") String fieldName,
+            @CliOption(key = "value", mandatory = true, help = "The value") String value,
+            @CliOption(key = "filter", mandatory = false, unspecifiedDefaultValue = "INCLUDE", specifiedDefaultValue = "INCLUDE", help = "The CQL Filter") String filter,
+            @CliOption(key = "script", mandatory = false, unspecifiedDefaultValue = "false", specifiedDefaultValue = "false", help = "Whether the value is a script or not") Boolean script
+    ) throws Exception {
+        Layer layer = catalog.layers[layerName]
+        if (layer) {
+            Field field = layer.schema.get(fieldName)
+            layer.update(field, value, filter, script)
+            "Done updating ${fieldName} with ${value}!"
+        } else {
+            "Unable to find Layer ${layerName}"
+        }
+    }
 }

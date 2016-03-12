@@ -849,4 +849,28 @@ class LayerCommandsTest {
         assertEquals "Deleted fid=1 Features from points", result
         assertEquals "0", cmds.count(new LayerName("points"))
     }
+
+    @Test void updatefields() {
+        Layer layer = new Shapefile(new File(getClass().getClassLoader().getResource("points.shp").toURI()))
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        catalog.layers[new LayerName("points")] = layer
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        // Add Fields
+        String result = cmds.addfields(new LayerName("points"), new WorkspaceName("mem"), "points1", "xcol=Double,ycol=Double,label=String")
+        assertEquals "Done!", result
+        assertNotNull catalog.layers[new LayerName("points1")]
+        Layer outLayer = catalog.layers[new LayerName("points1")]
+        assertEquals layer.count, outLayer.count
+        assertEquals layer.schema.geom.typ, outLayer.schema.geom.typ
+        assertFalse layer.schema.has("xcol")
+        assertTrue outLayer.schema.has("xcol")
+        assertFalse layer.schema.has("ycol")
+        assertTrue outLayer.schema.has("ycol")
+        // Update new Fields with values
+        result = cmds.updatefield(new LayerName("points1"), "label", "value", "INCLUDE", false)
+        assertEquals "Done updating label with value!", result
+        result = cmds.updatefield(new LayerName("points1"), "xcol", "return f.geom.centroid.x", "INCLUDE", true)
+        assertEquals "Done updating xcol with return f.geom.centroid.x!", result
+    }
 }

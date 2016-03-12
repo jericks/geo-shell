@@ -27,3 +27,13 @@ layer schema --name polys
 layer addareafield --input-name polys --output-workspace mem --output-name polys_area --area-fieldname area
 
 layer schema --name polys_area
+
+layer addfields --input-name points --output-workspace mem --output-name points_fields --fields "wkt=String,label=String"
+
+layer updatefield --name points_fields --field label --value value
+
+layer updatefield --name points_fields --field wkt --value 'return f.geom.wkt' --script true
+
+layer schema --name points_fields
+
+layer features --name points_fields
