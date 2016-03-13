@@ -75,6 +75,8 @@ layer addfields --input-name points --output-workspace directory --output-name p
 
 layer removefields --input-name points_xy --output-workspace mem --output-name points_no_xy --fields xcoord,ycoord
 
+layer updatefield --name points_fields --field wkt --value 'return f.geom.wkt' --script true
+
 layer addareafield --input-name us_states --output-workspace postgis --output-name states_area --area-fieldname area
 
 layer addidfield --input-name us_states --output-workspace postgis --output-name states_area --id-fieldname id --start-value 1
