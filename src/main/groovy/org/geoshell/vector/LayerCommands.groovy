@@ -1233,4 +1233,32 @@ class LayerCommands implements CommandMarker {
             "Unable to find Layer ${layerName}"
         }
     }
+
+    @CliCommand(value = "layer transform", help = "Transform the features of the input Layer and save them to the output Layer")
+    String transform(
+            @CliOption(key = "input-name", mandatory = true, help = "The Layer name") LayerName inputLayerName,
+            @CliOption(key = "output-workspace", mandatory = true, help = "The output Layer Workspace") WorkspaceName workspaceName,
+            @CliOption(key = "output-name", mandatory = true, help = "The output Layer name") String outputLayerName,
+            @CliOption(key = "transforms", mandatory = true, help = "The pipe delimited list of transforms (field=expression or function)") String transforms
+    ) throws Exception {
+        Layer inputLayer = catalog.layers[inputLayerName]
+        if (inputLayer) {
+            Workspace outputWorkspace = catalog.workspaces[workspaceName]
+            if (outputWorkspace) {
+                Map transformMap = [:]
+                transforms.split("\\|").each { String transform ->
+                    List parts = transform.split("=")
+                    transformMap[parts[0]] = parts[1]
+                }
+                Layer layer = inputLayer.transform(outputLayerName, transformMap)
+                Layer outputLayer = outputWorkspace.add(layer)
+                catalog.layers[new LayerName(outputLayerName)] = outputWorkspace.get(outputLayerName)
+                "Done transforming ${inputLayerName} to ${outputLayerName} with ${transforms}!"
+            } else {
+                "Unable to find Workspace ${workspaceName}"
+            }
+        } else {
+            "Unable to find Layer ${inputLayerName}"
+        }
+    }
 }

@@ -1,5 +1,6 @@
 package org.geoshell.vector
 
+import geoscript.geom.Polygon
 import geoscript.layer.Layer
 import geoscript.layer.Property
 import geoscript.layer.Shapefile
@@ -872,5 +873,31 @@ class LayerCommandsTest {
         assertEquals "Done updating label with value!", result
         result = cmds.updatefield(new LayerName("points1"), "xcol", "return f.geom.centroid.x", "INCLUDE", true)
         assertEquals "Done updating xcol with return f.geom.centroid.x!", result
+    }
+
+    @Test void transform() {
+        Layer layer = new Property(new File(getClass().getClassLoader().getResource("points.properties").toURI()))
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        catalog.layers[new LayerName("points")] = layer
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        String result = cmds.transform(new LayerName("points"), new WorkspaceName("mem"), "points_transformed", "the_geom=buffer(the_geom, 10)|name=strToUpperCase(name)|distance=distance*10")
+        assertEquals "Done transforming points to points_transformed with the_geom=buffer(the_geom, 10)|name=strToUpperCase(name)|distance=distance*10!", result
+        Layer transformedLayer = catalog.layers[new LayerName("points_transformed")]
+        List features1 = layer.features
+        List features2 = transformedLayer.features
+        // 1
+        assertTrue(features2[0].geom instanceof Polygon)
+        assertEquals(features1[0].get("name").toString().toUpperCase(), features2[0].get("name"))
+        assertEquals((features1[0].get("distance") as double) * 10, features2[0].get("distance") as double, 0.1)
+        // 2
+        assertTrue(features2[1].geom instanceof Polygon)
+        assertEquals(features1[1].get("name").toString().toUpperCase(), features2[1].get("name"))
+        assertEquals((features1[1].get("distance") as double) * 10, features2[1].get("distance") as double, 0.1)
+        // 3
+        assertTrue(features2[2].geom instanceof Polygon)
+        assertEquals(features1[2].get("name").toString().toUpperCase(), features2[2].get("name"))
+        assertEquals((features1[2].get("distance") as double) * 10, features2[2].get("distance") as double, 0.1)
+
     }
 }

@@ -123,6 +123,8 @@ layer simplify --input-name polys --output-workspace directory --output-name sim
 
 layer densify --input-name polys --output-workspace postgis --output-name polys_densified --distance 10
 
+layer transform --input-name points --output-workspace mem --output-name polys --transforms "the_geom=buffer(the_geom, 2)|id=id*10"
+
 tile
 ----
 tile open --name states --params states.mbtiles
