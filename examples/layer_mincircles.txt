@@ -16,4 +16,6 @@ map add layer --name map --layer mincircles
 
 map draw --name map
 
+map close --name map
+
 open --file image.png

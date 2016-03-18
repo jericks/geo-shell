@@ -12,4 +12,6 @@ map add layer --name gridmap --layer points
 
 map draw --name gridmap
 
+map close --name gridmap
+
 open --file image.png

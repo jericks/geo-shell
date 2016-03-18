@@ -20,4 +20,6 @@ map add layer --name map --layer coordinates
 
 map draw --name map
 
+map close --name map
+
 open --file image.png

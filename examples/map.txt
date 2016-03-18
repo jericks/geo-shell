@@ -20,4 +20,6 @@ map reorder --name mymap --layer earth --order 0
 
 map draw --name mymap
 
+map close --name mymap
+
 open --file image.png

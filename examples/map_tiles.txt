@@ -16,4 +16,6 @@ map add layer --name mymap --layer naturalearth:states
 
 map draw --name mymap --file maptiles.png --projection EPSG:3857
 
+map close --name mymap
+
 open --file maptiles.png
