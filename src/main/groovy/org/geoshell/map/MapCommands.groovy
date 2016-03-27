@@ -2,6 +2,8 @@ package org.geoshell.map
 
 import geoscript.geom.Bounds
 import geoscript.proj.Projection
+import geoscript.render.MapWindow
+import geoscript.render.Window
 import org.geoshell.Catalog
 import org.geoshell.raster.RasterName
 import org.geoshell.tile.TileName
@@ -165,6 +167,32 @@ class MapCommands implements CommandMarker {
             file = file ? file : new File("${['pdf', 'svg'].contains(type) ? "document" : "image"}.${type}")
             mapRenderer.render(file)
             "Done drawing ${file.absolutePath}!"
+        } else {
+            "Unable to find Map ${name}"
+        }
+    }
+
+    @CliCommand(value = "map display", help = "Display a map in a GUI.")
+    String display(
+            @CliOption(key = "name", mandatory = true, help = "The map name") MapName name,
+            @CliOption(key = "bounds", mandatory = false, help = "The Bounds") String bounds,
+            @CliOption(key = "projection", mandatory = false, help = "The Projection") String projection,
+            @CliOption(key = "width", mandatory = false, unspecifiedDefaultValue = "600", specifiedDefaultValue = "600", help = "The width") int width,
+            @CliOption(key = "height", mandatory = false, unspecifiedDefaultValue = "400", specifiedDefaultValue = "400", help = "The height") int height,
+            @CliOption(key = "background-color", mandatory = false, help = "The background color") String backgroundColor
+    ) throws Exception {
+        org.geoshell.map.Map map = catalog.maps[name]
+        if (map) {
+            geoscript.render.Map mapRenderer = map.getMap(
+                    bounds: bounds ? Bounds.fromString(bounds) : null,
+                    projection: projection ? new Projection(projection) : null,
+                    width: width,
+                    height: height,
+                    backgroundColor: backgroundColor
+            )
+            MapWindow window = new MapWindow()
+            window.display(mapRenderer, close: 'dispose')
+            "Displaying..."
         } else {
             "Unable to find Map ${name}"
         }

@@ -187,6 +187,8 @@ map reorder --name state_map --layer states --order first | last | up | down | 1
 
 map draw --name state_map --bounds 0,0,100,100
 
+map display --name state_map --bounds 0,0,100,100
+
 License
 -------
 geo-shell is open source and licensed under the MIT License.

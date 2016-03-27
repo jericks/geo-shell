@@ -1,0 +1,23 @@
+workspace open --name naturalearth --params naturalearth.gpkg
+
+layer open --workspace naturalearth --layer ocean
+
+layer style set --name naturalearth:ocean --style ocean.sld
+
+layer open --workspace naturalearth --layer countries
+
+layer style set --name naturalearth:countries --style countries.sld
+
+layer open --workspace naturalearth --layer states
+
+layer style set --name naturalearth:states --style states.sld
+
+map open --name mymap
+
+map add layer --name mymap --layer naturalearth:ocean
+
+map add layer --name mymap --layer naturalearth:countries
+
+map add layer --name mymap --layer naturalearth:states
+
+map display --name mymap
