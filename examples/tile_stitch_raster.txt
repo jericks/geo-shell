@@ -1,0 +1,31 @@
+tile open --name osm --params "type=osm url=http://a.tile.openstreetmap.org"
+
+// Stitch by Zoom Level
+format open --name osm1 --input osm_1.tif
+
+tile stitch raster --name osm --format osm1 --raster osm1 --z 1
+
+open --file osm_1.tif
+
+// Stitch by Bounds
+format open --name osm_bounds --input osm_bounds.tif
+
+tile stitch raster --name osm --format osm_bounds --raster osm_bounds --bounds "-102.360992,47.126213,-100.390320,47.819610,EPSG:4326"
+
+open --file osm_bounds.tif
+
+// Stitch by Column and Row
+format open --name osm_xy --input osm_xy.tif
+
+tile stitch raster --name osm --format osm_xy --raster osm_xy --z 6 --minx 13 --maxx 14 --miny 21 --maxy 22
+
+open --file osm_xy.tif
+
+// Stitch by Bounds and Zoom Level
+format open --name osm_bz --input osm_bz.tif
+
+tile stitch raster --name osm --format osm_bz --raster osm_bz --z 6 --bounds "-128.803711,44.134913,-113.038330,49.731581,EPSG:4326"
+
+open --file osm_bz.tif
+
+

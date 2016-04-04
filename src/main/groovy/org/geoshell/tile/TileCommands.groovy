@@ -1,11 +1,16 @@
 package org.geoshell.tile
 
 import geoscript.geom.Bounds
+import geoscript.layer.Format
+import geoscript.layer.ImageTileLayer
+import geoscript.layer.Raster
 import geoscript.layer.TileGenerator
 import geoscript.layer.TileLayer
 import geoscript.layer.TileRenderer
 import org.geoshell.Catalog
 import org.geoshell.map.MapName
+import org.geoshell.raster.FormatName
+import org.geoshell.raster.RasterName
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.shell.core.CommandMarker
 import org.springframework.shell.core.annotation.CliCommand
@@ -96,4 +101,57 @@ class TileCommands implements CommandMarker {
         }
     }
 
+    @CliCommand(value = "tile stitch raster", help = "Create a Raster from a Tile Layer.")
+    String stitchRaster(
+            @CliOption(key = "name",   mandatory = true, help = "The tile name") TileName tileName,
+            @CliOption(key = "format", mandatory = true, help = "The raster format name") FormatName formatName,
+            @CliOption(key = "raster", mandatory = true, help = "The raster name") String rasterName,
+            @CliOption(key = "bounds", mandatory = false, help = "The bounds") String bounds,
+            @CliOption(key = "width",  mandatory = false, unspecifiedDefaultValue = "400", specifiedDefaultValue = "400", help = "The raster width") int width,
+            @CliOption(key = "height", mandatory = false, unspecifiedDefaultValue = "400", specifiedDefaultValue = "400", help = "The raster height") int height,
+            @CliOption(key = "z",      mandatory = false, unspecifiedDefaultValue = "-1", specifiedDefaultValue = "0", help = "The zoom level") long z,
+            @CliOption(key = "minx",   mandatory = false, unspecifiedDefaultValue = "-1", help = "The min x or column") long minX,
+            @CliOption(key = "miny",   mandatory = false, unspecifiedDefaultValue = "-1", help = "The min y or row") long minY,
+            @CliOption(key = "maxx",   mandatory = false, unspecifiedDefaultValue = "-1", help = "The max x or column") long maxX,
+            @CliOption(key = "maxy",   mandatory = false, unspecifiedDefaultValue = "-1", help = "The max y or row") long maxY
+    ) {
+        TileLayer tileLayer = catalog.tiles[tileName]
+        if (tileLayer) {
+            if (!tileLayer instanceof ImageTileLayer) {
+                return "Tile Layer must be an Image Tile Layer!"
+            }
+            Format format = catalog.formats[formatName]
+            if (format) {
+                ImageTileLayer imageTileLayer = tileLayer as ImageTileLayer
+                Raster raster
+                if (bounds && z == -1) {
+                    Bounds b = Bounds.fromString(bounds)
+                    if (b.proj && !b.proj.equals(tileLayer.pyramid.proj)) {
+                        b = b.reproject(tileLayer.pyramid.proj)
+                    }
+                    raster = imageTileLayer.getRaster(b, width, height)
+                } else if (bounds && z > -1) {
+                    Bounds b = Bounds.fromString(bounds)
+                    if (b.proj && !b.proj.equals(tileLayer.pyramid.proj)) {
+                        b = b.reproject(tileLayer.pyramid.proj)
+                    }
+                    raster = imageTileLayer.getRaster(imageTileLayer.tiles(b, z))
+                } else if (z > -1 && minX > -1 && minY > -1 && maxX > -1 && maxY > -1) {
+                    raster = imageTileLayer.getRaster(imageTileLayer.tiles(z, minX, minY, maxX, maxY))
+                } else if (z > -1) {
+                    raster = imageTileLayer.getRaster(imageTileLayer.tiles(z))
+                } else {
+                    return "Wrong combination of options for stitching together a raster from a tile layer!"
+                }
+                format.write(raster)
+                catalog.rasters[new RasterName(rasterName)] = raster
+                "Done stitching Raster ${rasterName} from ${tileName}!"
+            } else {
+                "Unable to find Raster Format ${formatName}"
+            }  
+        } else {
+            "Unable to find Tile Layer ${tileName}"
+        }
+    }
+    
 }

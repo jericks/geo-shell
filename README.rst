@@ -137,6 +137,8 @@ tile info --name states
 
 tile generate --name states --map states_map --start 0 --end 4
 
+tile stitch raster --name osm --format osm_bounds --raster osm_bounds --bounds "-102.360992,47.126213,-100.390320,47.819610,EPSG:4326"
+
 format
 ------
 format open --name earth --input earth.tif
