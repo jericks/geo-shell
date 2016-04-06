@@ -1,0 +1,68 @@
+tile open --name osm --params "type=osm url=http://a.tile.openstreetmap.org"
+
+workspace open --name gpkg --params grids.gpkg
+
+// Zoom Level
+layer remove --workspace gpkg --layer gridz
+
+tile vector grid --name osm --workspace gpkg --layer gridz --z 1
+
+layer style set --name gridz --style line.sld
+
+map open --name map
+
+map add tile --name map --tile osm
+
+map add layer --name map --layer gridz
+
+map draw --name map --file gridz.png
+
+open --file gridz.png
+
+// Bounds
+layer remove --workspace gpkg --layer gridb
+
+tile vector grid --name osm --workspace gpkg --layer gridb --bounds "-102.360992,47.126213,-100.390320,47.819610,EPSG:4326"
+
+layer style set --name gridb --style line.sld
+
+map remove layer --name map --layer gridz
+
+map add layer --name map --layer gridb
+
+map draw --name map --file gridb.png --bounds "-102.360992,47.126213,-100.390320,47.819610,EPSG:4326"
+
+open --file gridb.png
+
+// Stitch by Column and Row
+layer remove --workspace gpkg --layer gridrc
+
+tile vector grid --name osm --workspace gpkg --layer gridrc --z 6 --minx 13 --maxx 14 --miny 21 --maxy 22
+
+layer style set --name gridrc --style line.sld
+
+map remove layer --name map --layer gridb
+
+map add layer --name map --layer gridrc
+
+map draw --name map --file gridrc.png --bounds "-11896609.61905453, 5635538.776444795, -10644334.922311949, 6887880.72676586, EPSG:3857"
+
+open --file gridrc.png
+
+// Stitch by Bounds and Zoom Level
+layer remove --workspace gpkg --layer gridbz
+
+tile vector grid --name osm --workspace gpkg --layer gridbz --z 6 --bounds "-128.803711,44.134913,-113.038330,49.731581,EPSG:4326"
+
+layer style set --name gridbz --style line.sld
+
+map remove layer --name map --layer gridrc
+
+map add layer --name map --layer gridbz
+
+map draw --name map --file gridbz.png --bounds "-128.803711,44.134913,-113.038330,49.731581,EPSG:4326"
+
+open --file gridbz.png
+
+// Close the Map
+map close --name map

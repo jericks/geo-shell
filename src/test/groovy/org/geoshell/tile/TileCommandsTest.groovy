@@ -1,15 +1,18 @@
 package org.geoshell.tile
 
+import geoscript.feature.Feature
 import geoscript.layer.Format
 import geoscript.layer.GeoTIFF
 import geoscript.layer.Layer
 import geoscript.layer.Shapefile
 import geoscript.layer.TileLayer
+import geoscript.workspace.Memory
 import org.geoshell.Catalog
 import org.geoshell.map.MapCommands
 import org.geoshell.map.MapName
 import org.geoshell.raster.FormatName
 import org.geoshell.vector.LayerName
+import org.geoshell.vector.WorkspaceName
 import org.junit.Rule
 import org.junit.Test
 import org.junit.rules.TemporaryFolder
@@ -126,4 +129,49 @@ class TileCommandsTest {
 
     }
 
+    @Test void vectorGrid() {
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("workspace")] = new Memory()
+
+        TileCommands cmds = new TileCommands(catalog: catalog)
+        File file = new File(temporaryFolder.newFolder("world"), "world.mbtiles")
+        cmds.open(new TileName("world"), file.absolutePath)
+
+        // Generate zoom level 0 and 1
+        Layer layer = new Shapefile(new File(getClass().getClassLoader().getResource("grid.shp").toURI()))
+        catalog.layers[new LayerName("grid")] = layer
+        MapCommands mapCommands = new MapCommands(catalog: catalog)
+        mapCommands.open(new MapName("grid"))
+        mapCommands.addLayer(new MapName("grid"), new LayerName("grid"), null)
+        cmds.generate(new TileName("world"), new MapName("grid"),0,2,null,false,false)
+
+        // Zoom Level
+        String result = cmds.vectorGrid(new TileName("world"), new WorkspaceName("workspace"), "grid_z2", null, 400, 400, 2, -1, -1, -1, -1)
+        assertEquals "Done generating the vector grid grid_z2 from world!", result
+        Layer gridLayer = catalog.layers[new LayerName("grid_z2")]
+        assertNotNull gridLayer
+        assertEquals 16, gridLayer.count
+
+        // Bounds and Zoom Level
+        result = cmds.vectorGrid(new TileName("world"), new WorkspaceName("workspace"), "grid_b_z", "-128.803711,44.134913,-113.038330,49.731581,EPSG:4326", 400, 400, 1, -1, -1, -1, -1)
+        assertEquals "Done generating the vector grid grid_b_z from world!", result
+        gridLayer = catalog.layers[new LayerName("grid_b_z")]
+        assertNotNull gridLayer
+        assertEquals 1, gridLayer.count
+
+        // Bounds
+        result = cmds.vectorGrid(new TileName("world"), new WorkspaceName("workspace"), "grid_b", "-170,-80,170,80,EPSG:4326", 400, 400, -1, -1, -1, -1, -1)
+        assertEquals "Done generating the vector grid grid_b from world!", result
+        gridLayer = catalog.layers[new LayerName("grid_b")]
+        assertNotNull gridLayer
+        assertEquals 4, gridLayer.count
+
+        // Column and Row
+        result = cmds.vectorGrid(new TileName("world"), new WorkspaceName("workspace"), "grid_cr", null, 400, 400, 2, 0, 0, 2, 2)
+        assertEquals "Done generating the vector grid grid_cr from world!", result
+        gridLayer = catalog.layers[new LayerName("grid_cr")]
+        assertNotNull gridLayer
+        assertEquals 9, gridLayer.count
+
+    }
 }

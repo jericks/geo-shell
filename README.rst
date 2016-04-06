@@ -139,6 +139,8 @@ tile generate --name states --map states_map --start 0 --end 4
 
 tile stitch raster --name osm --format osm_bounds --raster osm_bounds --bounds "-102.360992,47.126213,-100.390320,47.819610,EPSG:4326"
 
+tile vector grid --name osm --workspace gpkg --layer gridz --z 1
+
 format
 ------
 format open --name earth --input earth.tif

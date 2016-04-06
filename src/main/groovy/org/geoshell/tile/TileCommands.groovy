@@ -3,14 +3,19 @@ package org.geoshell.tile
 import geoscript.geom.Bounds
 import geoscript.layer.Format
 import geoscript.layer.ImageTileLayer
+import geoscript.layer.Layer
 import geoscript.layer.Raster
+import geoscript.layer.TileCursor
 import geoscript.layer.TileGenerator
 import geoscript.layer.TileLayer
 import geoscript.layer.TileRenderer
+import geoscript.workspace.Workspace
 import org.geoshell.Catalog
 import org.geoshell.map.MapName
 import org.geoshell.raster.FormatName
 import org.geoshell.raster.RasterName
+import org.geoshell.vector.LayerName
+import org.geoshell.vector.WorkspaceName
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.shell.core.CommandMarker
 import org.springframework.shell.core.annotation.CliCommand
@@ -149,6 +154,58 @@ class TileCommands implements CommandMarker {
             } else {
                 "Unable to find Raster Format ${formatName}"
             }  
+        } else {
+            "Unable to find Tile Layer ${tileName}"
+        }
+    }
+
+    @CliCommand(value = "tile vector grid", help = "Create a Vector Grid Layer from the pyramid of a Tile Layer.")
+    String vectorGrid(
+            @CliOption(key = "name",   mandatory = true, help = "The tile name") TileName tileName,
+            @CliOption(key = "workspace", mandatory = true, help = "The workspace name") WorkspaceName workspaceName,
+            @CliOption(key = "layer", mandatory = true, help = "The layer name") String layerName,
+            @CliOption(key = "bounds", mandatory = false, help = "The bounds") String bounds,
+            @CliOption(key = "width",  mandatory = false, unspecifiedDefaultValue = "400", specifiedDefaultValue = "400", help = "The raster width") int width,
+            @CliOption(key = "height", mandatory = false, unspecifiedDefaultValue = "400", specifiedDefaultValue = "400", help = "The raster height") int height,
+            @CliOption(key = "z",      mandatory = false, unspecifiedDefaultValue = "-1", specifiedDefaultValue = "0", help = "The zoom level") long z,
+            @CliOption(key = "minx",   mandatory = false, unspecifiedDefaultValue = "-1", help = "The min x or column") long minX,
+            @CliOption(key = "miny",   mandatory = false, unspecifiedDefaultValue = "-1", help = "The min y or row") long minY,
+            @CliOption(key = "maxx",   mandatory = false, unspecifiedDefaultValue = "-1", help = "The max x or column") long maxX,
+            @CliOption(key = "maxy",   mandatory = false, unspecifiedDefaultValue = "-1", help = "The max y or row") long maxY
+    ) {
+        TileLayer tileLayer = catalog.tiles[tileName]
+        if (tileLayer) {
+            Workspace workspace = catalog.workspaces[workspaceName]
+            if (workspace) {
+                TileCursor tileCursor
+                if (bounds && z == -1) {
+                    Bounds b = Bounds.fromString(bounds)
+                    if (b.proj && !b.proj.equals(tileLayer.pyramid.proj)) {
+                        b = b.reproject(tileLayer.pyramid.proj)
+                    }
+                    tileCursor = tileLayer.tiles(b, width, height)
+                } else if (bounds && z > -1) {
+                    Bounds b = Bounds.fromString(bounds)
+                    if (b.proj && !b.proj.equals(tileLayer.pyramid.proj)) {
+                        b = b.reproject(tileLayer.pyramid.proj)
+                    }
+                    tileCursor = tileLayer.tiles(b, z)
+                } else if (z > -1 && minX > -1 && minY > -1 && maxX > -1 && maxY > -1) {
+                    tileCursor = tileLayer.tiles(z, minX, minY, maxX, maxY)
+                } else if (z > -1) {
+                    tileCursor = tileLayer.tiles(z)
+                } else {
+                    return "Wrong combination of options!"
+                }
+                Layer layer = tileLayer.getLayer(tileCursor,
+                        outWorkspace: workspace,
+                        outLayer: layerName
+                )
+                catalog.layers[new LayerName(layerName)] = layer
+                "Done generating the vector grid ${layerName} from ${tileName}!"
+            } else {
+                "Unable to find Workspace ${workspaceName}"
+            }
         } else {
             "Unable to find Tile Layer ${tileName}"
         }
