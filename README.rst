@@ -125,6 +125,8 @@ layer densify --input-name polys --output-workspace postgis --output-name polys_
 
 layer transform --input-name points --output-workspace mem --output-name polys --transforms "the_geom=buffer(the_geom, 2)|id=id*10"
 
+layer reproject --input-name states --output-workspace postgis --output-name states_merc --projection EPSG:3857
+
 tile
 ----
 tile open --name states --params states.mbtiles

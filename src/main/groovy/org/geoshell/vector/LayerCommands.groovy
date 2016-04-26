@@ -10,6 +10,7 @@ import geoscript.geom.MultiPoint
 import geoscript.geom.Point
 import geoscript.layer.Layer
 import geoscript.layer.Writer as LayerWriter
+import geoscript.proj.Projection
 import geoscript.style.Style
 import geoscript.style.io.CSSReader
 import geoscript.style.io.SLDReader
@@ -1254,6 +1255,28 @@ class LayerCommands implements CommandMarker {
                 Layer outputLayer = outputWorkspace.add(layer)
                 catalog.layers[new LayerName(outputLayerName)] = outputWorkspace.get(outputLayerName)
                 "Done transforming ${inputLayerName} to ${outputLayerName} with ${transforms}!"
+            } else {
+                "Unable to find Workspace ${workspaceName}"
+            }
+        } else {
+            "Unable to find Layer ${inputLayerName}"
+        }
+    }
+
+    @CliCommand(value = "layer reproject", help = "Transform the features of the input Layer and save them to the output Layer")
+    String reproject(
+            @CliOption(key = "input-name", mandatory = true, help = "The Layer name") LayerName inputLayerName,
+            @CliOption(key = "output-workspace", mandatory = true, help = "The output Layer Workspace") WorkspaceName workspaceName,
+            @CliOption(key = "output-name", mandatory = true, help = "The output Layer name") String outputLayerName,
+            @CliOption(key = "projection", mandatory = true, help = "The projection") String projection
+    ) throws Exception {
+        Layer inputLayer = catalog.layers[inputLayerName]
+        if (inputLayer) {
+            Workspace outputWorkspace = catalog.workspaces[workspaceName]
+            if (outputWorkspace) {
+                Layer outputLayer = inputLayer.reproject(new Projection(projection), outputWorkspace, outputLayerName)
+                catalog.layers[new LayerName(outputLayerName)] = outputWorkspace.get(outputLayerName)
+                "Done reprojecting ${inputLayerName} to ${outputLayerName} in ${projection}!"
             } else {
                 "Unable to find Workspace ${workspaceName}"
             }

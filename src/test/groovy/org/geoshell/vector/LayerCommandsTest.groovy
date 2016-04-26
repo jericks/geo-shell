@@ -898,6 +898,19 @@ class LayerCommandsTest {
         assertTrue(features2[2].geom instanceof Polygon)
         assertEquals(features1[2].get("name").toString().toUpperCase(), features2[2].get("name"))
         assertEquals((features1[2].get("distance") as double) * 10, features2[2].get("distance") as double, 0.1)
+    }
 
+    @Test void reproject() {
+        Layer layer = new Shapefile(new File(getClass().getClassLoader().getResource("states.shp").toURI()))
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        catalog.layers[new LayerName("points")] = layer
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        String result = cmds.reproject(new LayerName("points"), new WorkspaceName("mem"), "points_reprojected", "EPSG:3857")
+        assertEquals "Done reprojecting points to points_reprojected in EPSG:3857!", result
+        Layer reprojectedLayer = catalog.layers[new LayerName("points_reprojected")]
+        assertNotNull reprojectedLayer
+        assertEquals layer.count, reprojectedLayer.count
+        assertEquals "EPSG:3857", reprojectedLayer.proj.id
     }
 }
