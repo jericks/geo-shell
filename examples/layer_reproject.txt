@@ -2,6 +2,10 @@ workspace open --name mem --params memory
 
 layer random --geometry "0,0,45,45" --projection EPSG:4326 --number 100 --output-workspace mem --output-name points
 
+layer projection --name points
+
 layer reproject --input-name points --output-workspace mem --output-name points_merc --projection EPSG:3857
+
+layer projection --name points_merc
 
 layer schema --name points_merc

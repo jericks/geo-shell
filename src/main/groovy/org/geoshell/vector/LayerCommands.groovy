@@ -128,6 +128,18 @@ class LayerCommands implements CommandMarker {
         }
     }
 
+    @CliCommand(value = "layer projection", help = "Get the Projection of a Layer.")
+    String projection(
+            @CliOption(key = "name", mandatory = true, help = "The Layer name") LayerName name
+    ) throws Exception {
+        Layer layer = catalog.layers[name]
+        if (layer) {
+            "${layer.proj.id}"
+        } else {
+            "Unable to find Layer ${name}"
+        }
+    }
+
     @CliCommand(value = "layer features", help = "Display the Features of a Layer.")
     String features(
             @CliOption(key = "name", mandatory = true, help = "The Layer name") LayerName layerName,

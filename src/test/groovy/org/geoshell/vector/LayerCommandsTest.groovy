@@ -904,13 +904,25 @@ class LayerCommandsTest {
         Layer layer = new Shapefile(new File(getClass().getClassLoader().getResource("states.shp").toURI()))
         Catalog catalog = new Catalog()
         catalog.workspaces[new WorkspaceName("mem")] = new Memory()
-        catalog.layers[new LayerName("points")] = layer
+        catalog.layers[new LayerName("states")] = layer
         LayerCommands cmds = new LayerCommands(catalog: catalog)
-        String result = cmds.reproject(new LayerName("points"), new WorkspaceName("mem"), "points_reprojected", "EPSG:3857")
-        assertEquals "Done reprojecting points to points_reprojected in EPSG:3857!", result
-        Layer reprojectedLayer = catalog.layers[new LayerName("points_reprojected")]
+        assertEquals "EPSG:4326", cmds.projection(new LayerName("states"))
+        String result = cmds.reproject(new LayerName("states"), new WorkspaceName("mem"), "states_reprojected", "EPSG:3857")
+        assertEquals "Done reprojecting states to states_reprojected in EPSG:3857!", result
+        assertEquals "EPSG:3857", cmds.projection(new LayerName("states_reprojected"))
+        Layer reprojectedLayer = catalog.layers[new LayerName("states_reprojected")]
         assertNotNull reprojectedLayer
         assertEquals layer.count, reprojectedLayer.count
         assertEquals "EPSG:3857", reprojectedLayer.proj.id
+    }
+
+    @Test void projection() {
+        Layer layer = new Shapefile(new File(getClass().getClassLoader().getResource("states.shp").toURI()))
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        catalog.layers[new LayerName("states")] = layer
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        String result = cmds.projection(new LayerName("states"))
+        assertEquals "EPSG:4326", result
     }
 }
