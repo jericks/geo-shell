@@ -1,15 +1,23 @@
 package org.geoshell.raster
 
+import geoscript.feature.Feature
+import geoscript.feature.Field
+import geoscript.feature.Schema
+import geoscript.geom.Bounds
 import geoscript.geom.Geometry
 import geoscript.layer.Band
 import geoscript.layer.Format
+import geoscript.layer.Layer
 import geoscript.layer.Raster
 import geoscript.proj.Projection
 import geoscript.style.Style
 import geoscript.style.io.CSSReader
 import geoscript.style.io.SLDReader
 import geoscript.style.io.SLDWriter
+import geoscript.workspace.Workspace
 import org.geoshell.Catalog
+import org.geoshell.vector.LayerName
+import org.geoshell.vector.WorkspaceName
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.shell.core.CommandMarker
 import org.springframework.shell.core.annotation.CliCommand
@@ -191,6 +199,46 @@ class RasterCommands implements CommandMarker {
                 "${name} style written to ${styleFile}"
             } else {
                 new SLDWriter().write(raster.style)
+            }
+        } else {
+            "Unable to find Raster ${name}"
+        }
+    }
+
+    @CliCommand(value = "raster contours", help = "Create contours.")
+    String contours(
+            @CliOption(key = "name", mandatory = true, help = "The Raster name") RasterName name,
+            @CliOption(key = "output-workspace", mandatory = true, help = "The output Layer Workspace") WorkspaceName workspaceName,
+            @CliOption(key = "output-name", mandatory = true, help = "The output Layer name") String outputLayerName,
+            @CliOption(key = "band", mandatory = false, unspecifiedDefaultValue = "0", specifiedDefaultValue = "0", help = "The Raster band to contour") int band,
+            @CliOption(key = "levels", mandatory = true, help = "The contour level or interval") String levels,
+            @CliOption(key = "simplify", mandatory = false, unspecifiedDefaultValue = "false", specifiedDefaultValue = "false", help = "Whether to simplify") boolean simplify,
+            @CliOption(key = "smooth", mandatory = false, unspecifiedDefaultValue = "false", specifiedDefaultValue = "false", help = "Whether to smooth") boolean smooth,
+            @CliOption(key = "bounds", mandatory = false, help = "The Bounds") String bounds
+    ) throws Exception {
+        Raster raster = catalog.rasters[name]
+        if (raster) {
+            Workspace outputWorkspace = catalog.workspaces[workspaceName]
+            if (outputWorkspace) {
+                Layer contourLayer = raster.contours(
+                    band,
+                    levels.split(",").collect { Double.parseDouble(it) },
+                    simplify,
+                    smooth,
+                    bounds ? Bounds.fromString(bounds) : raster.bounds
+                )
+                Layer layer = outputWorkspace.create(new Schema(outputLayerName, [
+                    new Field("the_geom", "LineString"), new Field("value", "double")
+                ]))
+                layer.withWriter { geoscript.layer.Writer w ->
+                    contourLayer.cursor.each { Feature f ->
+                        w.add(f)
+                    }
+                }
+                catalog.layers[new LayerName(outputLayerName)] = outputWorkspace.get(outputLayerName)
+                "Done creating contours!"
+            } else {
+                "Unable to find Workspace ${workspaceName}"
             }
         } else {
             "Unable to find Raster ${name}"

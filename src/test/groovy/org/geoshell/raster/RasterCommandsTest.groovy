@@ -1,8 +1,12 @@
 package org.geoshell.raster
 
 import geoscript.layer.Format
+import geoscript.layer.Layer
 import geoscript.layer.Raster
+import geoscript.workspace.Memory
 import org.geoshell.Catalog
+import org.geoshell.vector.LayerName
+import org.geoshell.vector.WorkspaceName
 import org.junit.Rule
 import org.junit.Test
 import org.junit.rules.TemporaryFolder
@@ -139,4 +143,20 @@ class RasterCommandsTest {
         assertTrue result.startsWith("Style ")
         assertTrue result.endsWith("raster.sld set on raster")
     }
+
+    @Test void contours() {
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        File file = new File(getClass().getClassLoader().getResource("raster.tif").toURI())
+        Format format = Format.getFormat(file)
+        catalog.formats[new FormatName("raster")] = format
+
+        RasterCommands cmds = new RasterCommands(catalog: catalog)
+        cmds.open(new FormatName("raster"), new RasterName("raster"), "raster")
+        String result = cmds.contours(new RasterName("raster"), new WorkspaceName("mem"), "raster_contours", 0, "184,185,186,187", false, false, "")
+        assertEquals("Done creating contours!", result)
+        Layer layer = catalog.layers[new LayerName("raster_contours")]
+        assertNotNull layer
+    }
+
 }

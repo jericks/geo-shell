@@ -171,6 +171,8 @@ raster style set --name earth --style earth.sld
 
 raster style get --name earth --style earth.sld
 
+raster contour --name raster --output-workspace mem --output-name contours --band 0 --levels 74,100,120,140,160,180,200,220,240,252
+
 map
 ---
 map open --name state_map
