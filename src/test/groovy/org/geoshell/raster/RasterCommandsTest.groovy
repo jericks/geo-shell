@@ -159,4 +159,22 @@ class RasterCommandsTest {
         assertNotNull layer
     }
 
+    @Test void reclassify() {
+        Catalog catalog = new Catalog()
+        File file = new File(getClass().getClassLoader().getResource("raster.tif").toURI())
+        Format format = Format.getFormat(file)
+        catalog.formats[new FormatName("raster")] = format
+
+        File outFile = new File(temporaryFolder.newFolder("reclassified"), "reclassified.tif")
+        Format outFormat = Format.getFormat(outFile)
+        catalog.formats[new FormatName("reclassified")] = outFormat
+
+        RasterCommands cmds = new RasterCommands(catalog: catalog)
+        cmds.open(new FormatName("raster"), new RasterName("raster"), "raster")
+        String result = cmds.reclassify(new RasterName("raster"), new FormatName("reclassified"), "reclassified", "0-185=1,186-200=2,201-255=3", 0, 0)
+        assertEquals("Raster raster reclassified to reclassified!", result)
+        Raster raster = catalog.rasters[new RasterName("reclassified")]
+        assertNotNull raster
+    }
+
 }

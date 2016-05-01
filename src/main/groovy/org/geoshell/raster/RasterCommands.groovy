@@ -245,4 +245,38 @@ class RasterCommands implements CommandMarker {
         }
     }
 
+    @CliCommand(value = "raster reclassify", help = "Project a Raster.")
+    String reclassify(
+            @CliOption(key = "name", mandatory = true, help = "The Raster name") RasterName name,
+            @CliOption(key = "output-format", mandatory = true, help = "The output Format Workspace") FormatName formatName,
+            @CliOption(key = "output-name", mandatory = false, help = "The output Raster name") String outputRasterName,
+            @CliOption(key = "ranges", mandatory = true, help = "The comma delimited reclassification ranges (from-to=value)") String ranges,
+            @CliOption(key = "band", mandatory = false, unspecifiedDefaultValue = "0", specifiedDefaultValue = "0", help = "The Raster band to contour") int band,
+            @CliOption(key = "nodata", mandatory = false, unspecifiedDefaultValue = "0", specifiedDefaultValue = "0", help = "The NODATA value") double noData
+    ) throws Exception {
+        Raster raster = catalog.rasters[name]
+        if (raster) {
+            Format format = catalog.formats[formatName]
+            if (format) {
+                Raster reclassifiedRaster = raster.reclassify(ranges.split(",").collect { String range ->
+                    int dash = range.indexOf("-")
+                    int equal = range.indexOf("=")
+                    def from = range.substring(0, dash).trim() as int
+                    def to = range.substring(dash + 1, equal).trim() as int
+                    def value = range.substring(equal + 1).trim() as int
+                    [min: from, max: to, value: value]
+                }, band: band, noData: noData)
+                format.write(reclassifiedRaster)
+                if (!outputRasterName) {
+                    outputRasterName = formatName.name
+                }
+                catalog.rasters[new RasterName(outputRasterName)] = format.read(outputRasterName)
+                "Raster ${name} reclassified to ${outputRasterName}!"
+            } else {
+                "Unable to find Raster Format ${formatName}"
+            }
+        } else {
+            "Unable to find Raster ${name}"
+        }
+    }
 }

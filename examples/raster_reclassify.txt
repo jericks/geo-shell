@@ -1,0 +1,17 @@
+format open --name raster --input raster.tif
+
+raster open --format raster --raster raster --name raster
+
+format open --name reclassified --input reclassified.tif
+
+raster reclassify --name raster --output-format reclassified --output-name reclassified --band 0 --ranges "0-185=1,185-200=2,200-255=3"
+
+map open --name map
+
+map add raster --name map --raster reclassified
+
+map draw --name map
+
+map close --name map
+
+open --file image.png
