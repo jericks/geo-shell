@@ -5,6 +5,7 @@ import geoscript.feature.Field
 import geoscript.feature.Schema
 import geoscript.geom.Bounds
 import geoscript.geom.Geometry
+import geoscript.geom.Point
 import geoscript.layer.Band
 import geoscript.layer.Format
 import geoscript.layer.Layer
@@ -106,6 +107,28 @@ class RasterCommands implements CommandMarker {
                 builder.append("      Min Value: ${extrema.min[i]} Max Value: ${extrema.max[i]}")
             }
             builder.toString()
+        } else {
+            "Unable to find Raster ${name}"
+        }
+    }
+
+    @CliCommand(value = "raster value", help = "Get a value from the Raster.")
+    String value(
+            @CliOption(key = "name", mandatory = true, help = "The Raster name") RasterName name,
+            @CliOption(key = "band", mandatory = false, unspecifiedDefaultValue = "0", specifiedDefaultValue = "0", help = "The x coordinate") int band,
+            @CliOption(key = "x", mandatory = true, help = "The x coordinate") double x,
+            @CliOption(key = "y", mandatory = true, help = "The y coordinate") double y,
+            @CliOption(key = "type", mandatory = false, unspecifiedDefaultValue = "geometry", specifiedDefaultValue = "geometry", help = "The y coordinate") String type
+    ) throws Exception {
+        Raster raster = catalog.rasters[name]
+        if (raster) {
+            Object value
+            if (type.equalsIgnoreCase("geometry")) {
+                value = raster.getValue(new Point(x,y), band)
+            } else {
+                value = raster.getValue(x as int, y as int, band)
+            }
+            "${value}"
         } else {
             "Unable to find Raster ${name}"
         }

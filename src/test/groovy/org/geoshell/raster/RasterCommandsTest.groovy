@@ -74,6 +74,20 @@ class RasterCommandsTest {
         assertTrue result.contains("Size: 900, 450")
     }
 
+    @Test void value() {
+        Catalog catalog = new Catalog()
+        File file = new File(getClass().getClassLoader().getResource("raster.tif").toURI())
+        Format format = Format.getFormat(file)
+        catalog.formats[new FormatName("raster")] = format
+
+        RasterCommands cmds = new RasterCommands(catalog: catalog)
+        cmds.open(new FormatName("raster"), new RasterName("raster"), null)
+        String result = cmds.value(new RasterName("raster:raster"), 0, -179, 89, "geometry")
+        assertEquals "184.0", result
+        result = cmds.value(new RasterName("raster:raster"), 0, 10, 15, "pixel")
+        assertEquals "184.0", result
+    }
+
     @Test void crop() {
         Catalog catalog = new Catalog()
         File file = new File(getClass().getClassLoader().getResource("raster.tif").toURI())

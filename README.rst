@@ -163,6 +163,8 @@ raster list
 
 raster info --name earth
 
+raster value --name earth --x 10 --y 15 --type pixel
+
 raster crop --name earth --output-format cropped_earth --output-name cropped_earth --geometry 0,0,45,45
 
 raster reproject --name earth --output-format earth_reprojected --output-name earth-reprojected --projection EPSG:4326

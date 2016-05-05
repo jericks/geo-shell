@@ -10,6 +10,12 @@ raster list
 
 raster info --name earth
 
+raster value --name earth --x 0 --y 0
+
+raster value --name earth --x 90 --y 45
+
+raster value --name earth --x 10 --y 15 --type pixel
+
 format open --name earth_cropped --input earth_cropped.tif
 
 raster crop --name earth --output-format earth_cropped --geometry "0 0 90 90"
