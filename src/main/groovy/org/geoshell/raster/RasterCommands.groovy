@@ -268,7 +268,7 @@ class RasterCommands implements CommandMarker {
         }
     }
 
-    @CliCommand(value = "raster reclassify", help = "Project a Raster.")
+    @CliCommand(value = "raster reclassify", help = "Reclassify a Raster.")
     String reclassify(
             @CliOption(key = "name", mandatory = true, help = "The Raster name") RasterName name,
             @CliOption(key = "output-format", mandatory = true, help = "The output Format Workspace") FormatName formatName,
@@ -295,6 +295,36 @@ class RasterCommands implements CommandMarker {
                 }
                 catalog.rasters[new RasterName(outputRasterName)] = format.read(outputRasterName)
                 "Raster ${name} reclassified to ${outputRasterName}!"
+            } else {
+                "Unable to find Raster Format ${formatName}"
+            }
+        } else {
+            "Unable to find Raster ${name}"
+        }
+    }
+
+    @CliCommand(value = "raster scale", help = "Scale a Raster.")
+    String scale(
+            @CliOption(key = "name", mandatory = true, help = "The Raster name") RasterName name,
+            @CliOption(key = "output-format", mandatory = true, help = "The output Format Workspace") FormatName formatName,
+            @CliOption(key = "output-name", mandatory = false, help = "The output Raster name") String outputRasterName,
+            @CliOption(key = "x", mandatory = true, help = "The scale factor along the x axis") float x,
+            @CliOption(key = "y", mandatory = true, help = "The scale factor along the y axis") float y,
+            @CliOption(key = "x-trans", mandatory = false, unspecifiedDefaultValue = "0", specifiedDefaultValue = "0", help = "The x translation") float xTrans,
+            @CliOption(key = "y-trans", mandatory = false, unspecifiedDefaultValue = "0", specifiedDefaultValue = "0", help = "The y translation") float yTrans,
+            @CliOption(key = "interpolation", mandatory = false, unspecifiedDefaultValue = "nearest", specifiedDefaultValue = "nearest", help = "The interpolation method (bicubic, bicubic2, bilinear, nearest)") String interpolation
+    ) throws Exception {
+        Raster raster = catalog.rasters[name]
+        if (raster) {
+            Format format = catalog.formats[formatName]
+            if (format) {
+                Raster scaledRaster = raster.scale(x, y, xTrans, yTrans, interpolation)
+                format.write(scaledRaster)
+                if (!outputRasterName) {
+                    outputRasterName = formatName.name
+                }
+                catalog.rasters[new RasterName(outputRasterName)] = format.read(outputRasterName)
+                "Raster ${name} scaled to ${outputRasterName}!"
             } else {
                 "Unable to find Raster Format ${formatName}"
             }

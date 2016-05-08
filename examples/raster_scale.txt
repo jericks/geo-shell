@@ -1,0 +1,17 @@
+format open --name raster --input raster.tif
+
+raster open --format raster --raster raster --name raster
+
+format open --name scaled --input scaled.tif
+
+raster scale --name raster --output-format scaled --output-name scaled --x 2 --y 3 --interpolation bicubic
+
+map open --name map
+
+map add raster --name map --raster scaled
+
+map draw --name map
+
+map close --name map
+
+open --file image.png

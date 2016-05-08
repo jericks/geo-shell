@@ -191,4 +191,25 @@ class RasterCommandsTest {
         assertNotNull raster
     }
 
+    @Test void scale() {
+        Catalog catalog = new Catalog()
+        File file = new File(getClass().getClassLoader().getResource("raster.tif").toURI())
+        Format format = Format.getFormat(file)
+        catalog.formats[new FormatName("raster")] = format
+        Raster inRaster = format.read()
+
+        File outFile = new File(temporaryFolder.newFolder("scaled"), "scaled.tif")
+        Format outFormat = Format.getFormat(outFile)
+        catalog.formats[new FormatName("scaled")] = outFormat
+
+        RasterCommands cmds = new RasterCommands(catalog: catalog)
+        cmds.open(new FormatName("raster"), new RasterName("raster"), "raster")
+        String result = cmds.scale(new RasterName("raster"), new FormatName("scaled"), "scaled", 2, 3, 0, 0, "nearest")
+        assertEquals("Raster raster scaled to scaled!", result)
+        Raster outRaster = catalog.rasters[new RasterName("scaled")]
+        assertNotNull outRaster
+        assertTrue(inRaster.pixelSize[0] > outRaster.pixelSize[0])
+        assertTrue(inRaster.pixelSize[1] > outRaster.pixelSize[1])
+    }
+
 }

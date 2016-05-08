@@ -177,6 +177,8 @@ raster contour --name raster --output-workspace mem --output-name contours --ban
 
 raster reclassify --name raster --output-format reclassified --output-name reclassified --band 0 --ranges "0-185=1,185-200=2,200-255=3"
 
+raster scale --name raster --output-format scaled --output-name scaled --x 2 --y 3 --interpolation bicubic
+
 map
 ---
 map open --name state_map
