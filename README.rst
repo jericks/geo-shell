@@ -175,6 +175,8 @@ raster style get --name earth --style earth.sld
 
 raster contour --name raster --output-workspace mem --output-name contours --band 0 --levels 74,100,120,140,160,180,200,220,240,252
 
+raster envelope --name earth --output-workspace earth_outline --output-name earth_outline
+
 raster reclassify --name raster --output-format reclassified --output-name reclassified --band 0 --ranges "0-185=1,185-200=2,200-255=3"
 
 raster scale --name raster --output-format scaled --output-name scaled --x 2 --y 3 --interpolation bicubic

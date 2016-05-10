@@ -173,6 +173,22 @@ class RasterCommandsTest {
         assertNotNull layer
     }
 
+    @Test void envelope() {
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        File file = new File(getClass().getClassLoader().getResource("raster.tif").toURI())
+        Format format = Format.getFormat(file)
+        catalog.formats[new FormatName("raster")] = format
+
+        RasterCommands cmds = new RasterCommands(catalog: catalog)
+        cmds.open(new FormatName("raster"), new RasterName("raster"), "raster")
+        String result = cmds.envelope(new RasterName("raster"), new WorkspaceName("mem"), "envelope")
+        assertEquals("Done creating envelope in envelope from raster!", result)
+        Layer layer = catalog.layers[new LayerName("envelope")]
+        assertNotNull layer
+        assertEquals 1, layer.count
+    }
+
     @Test void reclassify() {
         Catalog catalog = new Catalog()
         File file = new File(getClass().getClassLoader().getResource("raster.tif").toURI())

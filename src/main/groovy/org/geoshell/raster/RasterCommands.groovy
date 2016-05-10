@@ -268,6 +268,30 @@ class RasterCommands implements CommandMarker {
         }
     }
 
+    @CliCommand(value = "raster envelope", help = "Create a Vector Layer from the envelope of a Raster.")
+    String envelope(
+            @CliOption(key = "name", mandatory = true, help = "The Raster name") RasterName name,
+            @CliOption(key = "output-workspace", mandatory = true, help = "The output Layer Workspace") WorkspaceName workspaceName,
+            @CliOption(key = "output-name", mandatory = true, help = "The output Layer name") String outputLayerName
+    ) throws Exception {
+        Raster raster = catalog.rasters[name]
+        if (raster) {
+            Workspace outputWorkspace = catalog.workspaces[workspaceName]
+            if (outputWorkspace) {
+                Layer layer = outputWorkspace.create(new Schema(outputLayerName, [
+                        new Field("the_geom", "Polygon")
+                ]))
+                layer.add([the_geom: raster.bounds.geometry])
+                catalog.layers[new LayerName(outputLayerName)] = outputWorkspace.get(outputLayerName)
+                "Done creating envelope in ${outputLayerName} from ${name}!"
+            } else {
+                "Unable to find Workspace ${workspaceName}"
+            }
+        } else {
+            "Unable to find Raster ${name}"
+        }
+    }
+
     @CliCommand(value = "raster reclassify", help = "Reclassify a Raster.")
     String reclassify(
             @CliOption(key = "name", mandatory = true, help = "The Raster name") RasterName name,

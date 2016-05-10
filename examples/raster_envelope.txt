@@ -1,0 +1,19 @@
+format open --name earth --input earth.tif
+
+raster open --format earth --raster earth --name earth
+
+workspace open --name earth_outline --params earth_outline.shp
+
+raster envelope --name earth --output-workspace earth_outline --output-name earth_outline
+
+map open --name earthmap
+
+map add raster --name earthmap --raster earth
+
+map add layer --name earthmap --layer earth_outline
+
+map draw --name earthmap
+
+map close --name earthmap
+
+open --file image.png
