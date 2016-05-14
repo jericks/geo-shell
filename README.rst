@@ -181,6 +181,10 @@ raster reclassify --name raster --output-format reclassified --output-name recla
 
 raster scale --name raster --output-format scaled --output-name scaled --x 2 --y 3 --interpolation bicubic
 
+style
+-----
+style create --params "stroke=navy stroke=width=5" --file earth_outline.sld
+
 map
 ---
 map open --name state_map

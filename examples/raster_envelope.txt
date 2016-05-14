@@ -6,6 +6,10 @@ workspace open --name earth_outline --params earth_outline.shp
 
 raster envelope --name earth --output-workspace earth_outline --output-name earth_outline
 
+style create --params "stroke=navy stroke=width=5" --file earth_outline.sld
+
+layer style set --name earth_outline --style earth_outline.sld
+
 map open --name earthmap
 
 map add raster --name earthmap --raster earth
