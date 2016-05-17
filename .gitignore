@@ -1,5 +1,7 @@
 target/
 .idea/
+.DS_Store
 geo-shell.iml
 geo-shell.log
 dependency-reduced-pom.xml
+examples/raster.tif.aux.xml
