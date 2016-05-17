@@ -1,0 +1,33 @@
+workspace open --name naturalearth --params naturalearth.gpkg
+
+layer open --workspace naturalearth --layer countries
+
+layer open --workspace naturalearth --layer states
+
+layer open --workspace naturalearth --layer ocean
+
+style default vector --layer naturalearth:countries --color #a5bfdd --file ocean_blue.sld
+
+style default vector --layer naturalearth:countries --color wheat --file countries_wheat.sld
+
+style default vector --layer naturalearth:states --color pink --file states_pink.sld
+
+layer style set --name naturalearth:ocean --style ocean_blue.sld
+
+layer style set --name naturalearth:countries --style countries_wheat.sld
+
+layer style set --name naturalearth:states --style states_pink.sld
+
+map open --name mymap
+
+map add layer --name mymap --layer naturalearth:ocean
+
+map add layer --name mymap --layer naturalearth:countries
+
+map add layer --name mymap --layer naturalearth:states
+
+map draw --name mymap
+
+map close --name mymap
+
+open --file image.png
