@@ -2,6 +2,8 @@ package org.geoshell.style
 
 import geoscript.filter.Color
 import geoscript.layer.Layer
+import geoscript.layer.Raster
+import geoscript.style.RasterSymbolizer
 import geoscript.style.Style
 import geoscript.style.Symbolizer
 import geoscript.style.io.SLDWriter
@@ -11,6 +13,7 @@ import geoscript.style.io.YSLDWriter
 import org.apache.commons.io.FileUtils
 import org.apache.commons.io.FilenameUtils
 import org.geoshell.Catalog
+import org.geoshell.raster.RasterName
 import org.geoshell.tile.TileName
 import org.geoshell.vector.LayerName
 import org.springframework.beans.factory.annotation.Autowired
@@ -38,7 +41,7 @@ class StyleCommands implements CommandMarker {
         "Style ${params} written to ${file}!"
     }
 
-    @CliCommand(value = "style default vector", help = "Create a simple style.")
+    @CliCommand(value = "style default vector", help = "Create a default vector style.")
     String createDefaultVector(
             @CliOption(key = "layer", mandatory = true, help = "The Layer") LayerName layerName,
             @CliOption(key = "color",   mandatory = false, help = "The color",   unspecifiedDefaultValue = "#f2f2f2", specifiedDefaultValue = "#f2f2f2") String color,
@@ -58,6 +61,25 @@ class StyleCommands implements CommandMarker {
             "Default Vector Style for ${layerName} written to ${file}!"
         } else {
             "Unable to find Layer ${layerName}"
+        }
+    }
+
+    @CliCommand(value = "style default raster", help = "Create a default raster style.")
+    String createDefaultRaster(
+            @CliOption(key = "raster", mandatory = true, help = "The Raster") RasterName rasterName,
+            @CliOption(key = "opacity", mandatory = false, help = "The opacity", unspecifiedDefaultValue = "1.0", specifiedDefaultValue = "1.0") double opacity,
+            @CliOption(key = "file", mandatory = true, help = "The output file") File file
+    ) throws Exception {
+        Raster raster = catalog.rasters[rasterName]
+        if (raster) {
+            Symbolizer symbol = new RasterSymbolizer(opacity)
+            String type = FilenameUtils.getExtension(file.name)
+            Writer styleWriter = type.equalsIgnoreCase("ysld") || type.equalsIgnoreCase("yml") ? new YSLDWriter() :new SLDWriter()
+            String styleStr = styleWriter.write(symbol)
+            file.write(styleStr)
+            "Default Raster Style for ${rasterName} written to ${file}!"
+        } else {
+            "Unable to find Raster ${rasterName}"
         }
     }
 

@@ -187,6 +187,8 @@ style create --params "stroke=navy stroke=width=5" --file earth_outline.sld
 
 style default vector --layer naturalearth:countries --color #a5bfdd --file ocean_blue.sld
 
+style default raster --raster raster --opacity 0.75 --file raster.sld
+
 map
 ---
 map open --name state_map

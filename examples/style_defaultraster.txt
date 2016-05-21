@@ -1,0 +1,17 @@
+format open --name raster --input raster.tif
+
+raster open --format raster --raster raster --name raster
+
+style default raster --raster raster --opacity 0.75 --file raster.sld
+
+raster style set --name raster --style raster.sld
+
+map open --name mymap
+
+map add raster --name mymap --raster raster
+
+map draw --name mymap
+
+map close --name mymap
+
+open --file image.png
