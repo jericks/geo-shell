@@ -5,13 +5,11 @@ import geoscript.workspace.Directory
 import org.geoshell.Catalog
 import org.geoshell.raster.FormatName
 import org.geoshell.raster.RasterName
-import org.geoshell.vector.LayerCommands
 import org.geoshell.vector.LayerName
 import org.geoshell.vector.WorkspaceName
 import org.junit.Rule
 import org.junit.Test
 import org.junit.rules.TemporaryFolder
-import org.springframework.shell.support.util.OsUtils
 
 import static org.junit.Assert.*
 
@@ -38,7 +36,7 @@ class StyleCommandsTest {
 
         StyleCommands cmds = new StyleCommands(catalog: catalog)
         File styleFile = folder.newFile("style.sld")
-        String result = cmds.createDefaultVector(new LayerName("points"), "blue", 0.5, styleFile)
+        String result = cmds.createDefaultVectorStyle(new LayerName("points"), "blue", 0.5, styleFile)
         assertTrue result.startsWith("Default Vector Style for points written to")
         assertTrue result.trim().endsWith("style.sld!")
         assertTrue styleFile.text.contains("<sld:UserLayer>")
@@ -66,7 +64,7 @@ class StyleCommandsTest {
 
         StyleCommands cmds = new StyleCommands(catalog: catalog)
         File styleFile = folder.newFile("style.sld")
-        String result = cmds.createDefaultRaster(new RasterName("raster"), 0.5, styleFile)
+        String result = cmds.createDefaultRasterStyle(new RasterName("raster"), 0.5, styleFile)
         assertTrue result.startsWith("Default Raster Style for raster written to")
         assertTrue result.trim().endsWith("style.sld!")
         String styleText = styleFile.text

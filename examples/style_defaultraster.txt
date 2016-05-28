@@ -2,7 +2,7 @@ format open --name raster --input raster.tif
 
 raster open --format raster --raster raster --name raster
 
-style default raster --raster raster --opacity 0.75 --file raster.sld
+style raster default --raster raster --opacity 0.75 --file raster.sld
 
 raster style set --name raster --style raster.sld
 

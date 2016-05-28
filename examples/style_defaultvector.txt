@@ -6,11 +6,11 @@ layer open --workspace naturalearth --layer states
 
 layer open --workspace naturalearth --layer ocean
 
-style default vector --layer naturalearth:countries --color #a5bfdd --file ocean_blue.sld
+style vector default --layer naturalearth:countries --color #a5bfdd --file ocean_blue.sld
 
-style default vector --layer naturalearth:countries --color wheat --file countries_wheat.sld
+style vector default --layer naturalearth:countries --color wheat --file countries_wheat.sld
 
-style default vector --layer naturalearth:states --color pink --file states_pink.sld
+style vector default --layer naturalearth:states --color pink --file states_pink.sld
 
 layer style set --name naturalearth:ocean --style ocean_blue.sld
 

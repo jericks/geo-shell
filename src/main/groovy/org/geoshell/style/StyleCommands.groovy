@@ -42,8 +42,8 @@ class StyleCommands implements CommandMarker {
         "Style ${params} written to ${file}!"
     }
 
-    @CliCommand(value = "style default vector", help = "Create a default vector style.")
-    String createDefaultVector(
+    @CliCommand(value = "style vector default", help = "Create a default vector style.")
+    String createDefaultVectorStyle(
             @CliOption(key = "layer", mandatory = true, help = "The Layer") LayerName layerName,
             @CliOption(key = "color",   mandatory = false, help = "The color",   unspecifiedDefaultValue = "#f2f2f2", specifiedDefaultValue = "#f2f2f2") String color,
             @CliOption(key = "opacity", mandatory = false, help = "The opacity", unspecifiedDefaultValue = "1.0",     specifiedDefaultValue = "1.0") double opacity,
@@ -99,8 +99,8 @@ class StyleCommands implements CommandMarker {
         }
     }
 
-    @CliCommand(value = "style default raster", help = "Create a default raster style.")
-    String createDefaultRaster(
+    @CliCommand(value = "style raster default", help = "Create a default raster style.")
+    String createDefaultRasterStyle(
             @CliOption(key = "raster", mandatory = true, help = "The Raster") RasterName rasterName,
             @CliOption(key = "opacity", mandatory = false, help = "The opacity", unspecifiedDefaultValue = "1.0", specifiedDefaultValue = "1.0") double opacity,
             @CliOption(key = "file", mandatory = true, help = "The output file") File file
