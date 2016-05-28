@@ -6,6 +6,7 @@ import geoscript.layer.Raster
 import geoscript.style.RasterSymbolizer
 import geoscript.style.Style
 import geoscript.style.Symbolizer
+import geoscript.style.UniqueValues
 import geoscript.style.io.SLDWriter
 import geoscript.style.io.SimpleStyleReader
 import geoscript.style.io.Writer
@@ -59,6 +60,40 @@ class StyleCommands implements CommandMarker {
             String styleStr = styleWriter.write(symbol)
             file.write(styleStr)
             "Default Vector Style for ${layerName} written to ${file}!"
+        } else {
+            "Unable to find Layer ${layerName}"
+        }
+    }
+
+    @CliCommand(value = "style vector uniquevalues", help = "Create a unique values vector style.")
+    String createUniqueValuesVectorStyle(
+            @CliOption(key = "layer", mandatory = true, help = "The Layer") LayerName layerName,
+            @CliOption(key = "field", mandatory = true, help = "The field") String field,
+            @CliOption(key = "colors",   mandatory = true, help = "The colors") String colorStr,
+            @CliOption(key = "file", mandatory = true, help = "The output file") File file
+    ) throws Exception {
+        Layer layer = catalog.layers[layerName]
+        if (layer) {
+            def colors
+            if (colorStr) {
+                def colorList = colorStr.split(" ")
+                if (colorList.length > 1) {
+                    colors = []
+                    colors.addAll(colorList)
+                }
+                else if (colorStr.equalsIgnoreCase("random")) {
+                    colors = { index, value -> Color.getRandomPastel() }
+                }
+                else {
+                    colors = colorStr as String
+                }
+            }
+            UniqueValues symbol = new UniqueValues(layer, field, colors)
+            String type = FilenameUtils.getExtension(file.name)
+            Writer styleWriter = type.equalsIgnoreCase("ysld") || type.equalsIgnoreCase("yml") ? new YSLDWriter() :new SLDWriter()
+            String styleStr = styleWriter.write(symbol)
+            file.write(styleStr)
+            "Unique Values Vector Style for ${layerName}'s ${field} Field written to ${file}!"
         } else {
             "Unable to find Layer ${layerName}"
         }

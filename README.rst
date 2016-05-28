@@ -189,6 +189,8 @@ style default vector --layer naturalearth:countries --color #a5bfdd --file ocean
 
 style default raster --raster raster --opacity 0.75 --file raster.sld
 
+style vector uniquevalues --layer naturalearth:states --field NAME_1  --colors random --file states_name.sld
+
 map
 ---
 map open --name state_map
