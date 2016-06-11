@@ -56,6 +56,20 @@ class StyleCommandsTest {
         assertTrue styleFile.text.contains("<sld:UserLayer>")
     }
 
+    @Test void createGradientVectorStyle() {
+        Catalog catalog = new Catalog()
+        File file = new File(getClass().getClassLoader().getResource("grid.shp").toURI())
+        catalog.workspaces[new WorkspaceName("shps")] = new Directory(file.parentFile)
+        catalog.layers[new LayerName("grid")] = catalog.workspaces[new WorkspaceName("shps")].get("grid")
+
+        StyleCommands cmds = new StyleCommands(catalog: catalog)
+        File styleFile = folder.newFile("style.sld")
+        String result = cmds.createGradientVectorStyle(new LayerName("grid"), "col", 8, "reds", "Quantile", "ignore", styleFile)
+        assertTrue result.startsWith("Gradient Vector Style for grid's col Field written to")
+        assertTrue result.trim().endsWith("style.sld!")
+        assertTrue styleFile.text.contains("<sld:UserLayer>")
+    }
+
     @Test void createDefaultRasterStyle() {
         Catalog catalog = new Catalog()
         File file = new File(getClass().getClassLoader().getResource("raster.tif").toURI())

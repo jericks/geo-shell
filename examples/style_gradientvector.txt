@@ -1,0 +1,33 @@
+workspace open --name naturalearth --params naturalearth.gpkg
+
+layer open --workspace naturalearth --layer countries
+
+layer open --workspace naturalearth --layer states
+
+layer open --workspace naturalearth --layer ocean
+
+style vector default --layer naturalearth:countries --color #a5bfdd --file ocean_blue.sld
+
+style vector default --layer naturalearth:countries --color wheat --file countries_wheat.sld
+
+style vector gradient --layer naturalearth:states --field VertexCou --number 8 --colors blues --file states_gradient.sld
+
+layer style set --name naturalearth:ocean --style ocean_blue.sld
+
+layer style set --name naturalearth:countries --style countries_wheat.sld
+
+layer style set --name naturalearth:states --style states_gradient.sld
+
+map open --name mymap
+
+map add layer --name mymap --layer naturalearth:ocean
+
+map add layer --name mymap --layer naturalearth:countries
+
+map add layer --name mymap --layer naturalearth:states
+
+map draw --name mymap
+
+map close --name mymap
+
+open --file image.png

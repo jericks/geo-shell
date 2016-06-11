@@ -3,6 +3,7 @@ package org.geoshell.style
 import geoscript.filter.Color
 import geoscript.layer.Layer
 import geoscript.layer.Raster
+import geoscript.style.Gradient
 import geoscript.style.RasterSymbolizer
 import geoscript.style.Style
 import geoscript.style.Symbolizer
@@ -94,6 +95,43 @@ class StyleCommands implements CommandMarker {
             String styleStr = styleWriter.write(symbol)
             file.write(styleStr)
             "Unique Values Vector Style for ${layerName}'s ${field} Field written to ${file}!"
+        } else {
+            "Unable to find Layer ${layerName}"
+        }
+    }
+
+    @CliCommand(value = "style vector gradient", help = "Create a gradient vector style.")
+    String createGradientVectorStyle(
+            @CliOption(key = "layer", mandatory = true, help = "The Layer") LayerName layerName,
+            @CliOption(key = "field", mandatory = true, help = "The field") String field,
+            @CliOption(key = "number", mandatory = true, help = "The number of categories") int number,
+            @CliOption(key = "colors", mandatory = true, help = "The colors") String colorStr,
+            @CliOption(key = "method", mandatory = false, unspecifiedDefaultValue = "Quantile", specifiedDefaultValue = "Quantile", help = "The classification method (Quantile or EqualInterval)") String method,
+            @CliOption(key = "elsemode", mandatory = false, unspecifiedDefaultValue = "ignore", specifiedDefaultValue = "ignore", help = "The else mode (ignore, min, max)") String elseMode,
+            @CliOption(key = "file", mandatory = true, help = "The output file") File file
+    ) throws Exception {
+        Layer layer = catalog.layers[layerName]
+        if (layer) {
+            def colors
+            if (colorStr) {
+                def colorList = colorStr.split(" ")
+                if (colorList.length > 1) {
+                    colors = []
+                    colors.addAll(colorList)
+                }
+                else if (colorStr.equalsIgnoreCase("random")) {
+                    colors = { index, value -> Color.getRandomPastel() }
+                }
+                else {
+                    colors = colorStr as String
+                }
+            }
+            Gradient symbol = new Gradient(layer, field, method, number, colors, elseMode)
+            String type = FilenameUtils.getExtension(file.name)
+            Writer styleWriter = type.equalsIgnoreCase("ysld") || type.equalsIgnoreCase("yml") ? new YSLDWriter() :new SLDWriter()
+            String styleStr = styleWriter.write(symbol)
+            file.write(styleStr)
+            "Gradient Vector Style for ${layerName}'s ${field} Field written to ${file}!"
         } else {
             "Unable to find Layer ${layerName}"
         }

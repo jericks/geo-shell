@@ -191,6 +191,8 @@ style raster default --raster raster --opacity 0.75 --file raster.sld
 
 style vector uniquevalues --layer naturalearth:states --field NAME_1  --colors random --file states_name.sld
 
+style vector gradient --layer naturalearth:states --field population --number 8 --colors blues --file states_pop.sld
+
 map
 ---
 map open --name state_map
