@@ -3,6 +3,7 @@ package org.geoshell.style
 import geoscript.filter.Color
 import geoscript.layer.Layer
 import geoscript.layer.Raster
+import geoscript.style.ColorMap
 import geoscript.style.Gradient
 import geoscript.style.RasterSymbolizer
 import geoscript.style.Style
@@ -151,6 +152,32 @@ class StyleCommands implements CommandMarker {
             String styleStr = styleWriter.write(symbol)
             file.write(styleStr)
             "Default Raster Style for ${rasterName} written to ${file}!"
+        } else {
+            "Unable to find Raster ${rasterName}"
+        }
+    }
+
+    @CliCommand(value = "style raster colormap", help = "Create a color map raster style.")
+    String createColorMapRasterStyle(
+            @CliOption(key = "raster", mandatory = true, help = "The Raster") RasterName rasterName,
+            @CliOption(key = "opacity", mandatory = false, help = "The opacity", unspecifiedDefaultValue = "1.0", specifiedDefaultValue = "1.0") double opacity,
+            @CliOption(key = "values", mandatory = true, help = "The comma delimited list of values (key=value)") String valueStr,
+            @CliOption(key = "type", unspecifiedDefaultValue = "ramp", specifiedDefaultValue = "ramp", mandatory = false, help = "The type (intervals, values, ramp)") String type,
+            @CliOption(key = "extended", unspecifiedDefaultValue = "false", specifiedDefaultValue = "false", mandatory = false, help = "Whether to use extended colors or not") boolean extended,
+            @CliOption(key = "file", mandatory = true, help = "The output file") File file
+    ) throws Exception {
+        Raster raster = catalog.rasters[rasterName]
+        if (raster) {
+            ColorMap symbol = new ColorMap(valueStr.split(",").collect { String v ->
+                List parts = v.split("=") as List
+                [quantity: parts[0], color: new Color(parts[1]).hex]
+            }, type, extended)
+            symbol.opacity = opacity
+            String fileType = FilenameUtils.getExtension(file.name)
+            Writer styleWriter = fileType.equalsIgnoreCase("ysld") || type.equalsIgnoreCase("yml") ? new YSLDWriter() :new SLDWriter()
+            String styleStr = styleWriter.write(symbol)
+            file.write(styleStr)
+            "Colormap Raster Style for ${rasterName} written to ${file}!"
         } else {
             "Unable to find Raster ${rasterName}"
         }

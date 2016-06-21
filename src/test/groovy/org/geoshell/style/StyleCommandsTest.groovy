@@ -84,4 +84,22 @@ class StyleCommandsTest {
         String styleText = styleFile.text
         assertTrue styleText.contains("<sld:UserLayer>") && styleText.contains("<sld:RasterSymbolizer>")
     }
+
+    @Test void createColorMapRasterStyle() {
+        Catalog catalog = new Catalog()
+        File file = new File(getClass().getClassLoader().getResource("raster.tif").toURI())
+        catalog.formats[new FormatName("raster")] = new GeoTIFF(file)
+        catalog.rasters[new RasterName("raster")] = catalog.formats[new FormatName("raster")].read()
+
+        StyleCommands cmds = new StyleCommands(catalog: catalog)
+        File styleFile = folder.newFile("style.sld")
+        String result = cmds.createColorMapRasterStyle(new RasterName("raster"), 0.5, "10=red,50=blue,100=wheat,250=white", "ramp", false, styleFile)
+        assertTrue result.startsWith("Colormap Raster Style for raster written to")
+        assertTrue result.trim().endsWith("style.sld!")
+        String styleText = styleFile.text
+        assertTrue styleText.contains("<sld:UserLayer>") &&
+                styleText.contains("<sld:RasterSymbolizer>") &&
+                styleText.contains("<sld:ColorMap>") &&
+                styleText.contains("<sld:ColorMapEntry")
+    }
 }

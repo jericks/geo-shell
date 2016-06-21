@@ -1,0 +1,17 @@
+format open --name raster --input raster.tif
+
+raster open --format raster --raster raster --name raster
+
+style raster colormap --raster raster --values "10=red,50=blue,100=wheat,250=white" --type ramp --opacity 0.75 --file raster_colormap.sld
+
+raster style set --name raster --style raster_colormap.sld
+
+map open --name mymap
+
+map add raster --name mymap --raster raster
+
+map draw --name mymap
+
+map close --name mymap
+
+open --file image.png

@@ -187,11 +187,13 @@ style create --params "stroke=navy stroke=width=5" --file earth_outline.sld
 
 style vector default --layer naturalearth:countries --color #a5bfdd --file ocean_blue.sld
 
-style raster default --raster raster --opacity 0.75 --file raster.sld
-
 style vector uniquevalues --layer naturalearth:states --field NAME_1  --colors random --file states_name.sld
 
 style vector gradient --layer naturalearth:states --field population --number 8 --colors blues --file states_pop.sld
+
+style raster default --raster raster --opacity 0.75 --file raster.sld
+
+style raster colormap --raster raster --values "10=red,50=blue,100=wheat,250=white" --type ramp --opacity 0.75 --file raster_colormap.sld
 
 map
 ---
