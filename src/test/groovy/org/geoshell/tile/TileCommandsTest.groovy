@@ -126,7 +126,6 @@ class TileCommandsTest {
         // Column and Row
         result = cmds.stitchRaster(new TileName("world"), new FormatName("osm4"), "osm4", null, 400, 400, 2, 0, 0, 2, 2)
         assertEquals "Done stitching Raster osm4 from world!", result
-
     }
 
     @Test void vectorGrid() {
@@ -172,6 +171,38 @@ class TileCommandsTest {
         gridLayer = catalog.layers[new LayerName("grid_cr")]
         assertNotNull gridLayer
         assertEquals 9, gridLayer.count
+    }
 
+    @Test void tiles() {
+        Catalog catalog = new Catalog()
+        TileCommands cmds = new TileCommands(catalog: catalog)
+        File file = new File(temporaryFolder.newFolder("world"), "world.mbtiles")
+        cmds.open(new TileName("world"), file.absolutePath)
+        String result = cmds.tiles(new TileName("world"), "2315277.538707974,4356146.199006655,2534193.2172859586,4470343.227121928", 10)
+        assertEquals """10/571/623
+10/572/623
+10/573/623
+10/574/623
+10/575/623
+10/576/623
+10/571/624
+10/572/624
+10/573/624
+10/574/624
+10/575/624
+10/576/624
+10/571/625
+10/572/625
+10/573/625
+10/574/625
+10/575/625
+10/576/625
+10/571/626
+10/572/626
+10/573/626
+10/574/626
+10/575/626
+10/576/626
+""".denormalize(), result
     }
 }

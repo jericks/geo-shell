@@ -4,6 +4,7 @@ import geoscript.geom.Bounds
 import geoscript.layer.Format
 import geoscript.layer.ImageTileLayer
 import geoscript.layer.Layer
+import geoscript.layer.Pyramid
 import geoscript.layer.Raster
 import geoscript.layer.TileCursor
 import geoscript.layer.TileGenerator
@@ -72,6 +73,38 @@ class TileCommands implements CommandMarker {
         if (tileLayer) {
             tileLayer.name + OsUtils.LINE_SEPARATOR +
                     tileLayer.pyramid.csv
+        } else {
+            "Unable to find Tile Layer ${name}"
+        }
+    }
+
+    @CliCommand(value = "tile tiles", help = "List tiles within a given bounds.")
+    String tiles(
+            @CliOption(key = "name", mandatory = true, help = "The tile name") TileName name,
+            @CliOption(key = "bounds", mandatory = true, help = "The bounds") String boundsStr,
+            @CliOption(key = "z", mandatory = true, help = "The zoom level") long z
+    ) throws Exception {
+        TileLayer tileLayer = catalog.tiles[name]
+        if (tileLayer) {
+            Pyramid pyramid = tileLayer.pyramid
+            Bounds bounds = Bounds.fromString(boundsStr)
+            if (!bounds.proj) {
+                bounds.proj = pyramid.proj
+            } else if (bounds.proj != pyramid.bounds) {
+                bounds = bounds.reproject(pyramid.proj)
+            }
+            Map tileCoords = pyramid.getTileCoordinates(bounds, z)
+            long minX = tileCoords.minX
+            long minY = tileCoords.minY
+            long maxX = tileCoords.maxX
+            long maxY = tileCoords.maxY
+            StringBuilder stringBuilder = new StringBuilder()
+            (minY..maxY).each { long y ->
+                (minX..maxX).each { long x ->
+                    stringBuilder.append("${z}/${x}/${y}" + OsUtils.LINE_SEPARATOR)
+                }
+            }
+            stringBuilder.toString()
         } else {
             "Unable to find Tile Layer ${name}"
         }
