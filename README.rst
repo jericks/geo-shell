@@ -9,6 +9,8 @@ geo-shell support vector, raster, and tile datasets and includes a map module.
 
 Behind the scenes it uses GeoScript Groovy, GeoTools, and JTS.
 
+.. image:: docs/geoshell.png
+
 Example
 -------
 $ geo-shell
