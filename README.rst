@@ -11,6 +11,12 @@ Behind the scenes it uses GeoScript Groovy, GeoTools, and JTS.
 
 .. image:: docs/geoshell.png
 
+You can use geo-shell interactively by typing **geo-shell** at the command line.
+
+Or you can write scripts and then execute them from the command line by typing **geo-shell --cmdfile script.txt**
+
+Or by using the **script --file script.txt** command within a geo-shell session.
+
 Example
 -------
 $ geo-shell
@@ -34,6 +40,28 @@ geo-shell>workspace layers --name shps
    10m_admin_0_boundary_breakaway_disputed_areas
 
 geo-shell>layer open --workspace shps --layer 10m_roads
+
+Commands
+--------
+geo-shell is based on spring-shell and inherits several useful built in commands:
+
+exit = exit the shell
+
+quit = exit the shell
+
+help = list all commands and their usages
+
+help workspace open = list help for a specific command
+
+! = run os command string
+
+date = displays local date and time
+
+script = run a script
+
+system properties = show shell's properties
+
+version = display current cli version
 
 workspace
 ---------
