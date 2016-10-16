@@ -228,4 +228,26 @@ class RasterCommandsTest {
         assertTrue(inRaster.pixelSize[1] > outRaster.pixelSize[1])
     }
 
+    @Test void addConstant() {
+        Catalog catalog = new Catalog()
+        File file = new File(getClass().getClassLoader().getResource("raster.tif").toURI())
+        Format format = Format.getFormat(file)
+        catalog.formats[new FormatName("raster")] = format
+        Raster inRaster = format.read()
+
+        File outFile = new File(temporaryFolder.newFolder("added"), "added.tif")
+        Format outFormat = Format.getFormat(outFile)
+        catalog.formats[new FormatName("added")] = outFormat
+
+        RasterCommands cmds = new RasterCommands(catalog: catalog)
+        cmds.open(new FormatName("raster"), new RasterName("raster"), "raster")
+        String result = cmds.addConstant(new RasterName("raster"), new FormatName("added"), "added", "10")
+        assertEquals("Added 10 to raster to create added!", result)
+        Raster outRaster = catalog.rasters[new RasterName("added")]
+        assertNotNull outRaster
+        assertEquals(inRaster.getValue(0,0,0)   + 10, outRaster.getValue(0,0,0),  0.1)
+        assertEquals(inRaster.getValue(10,10,0) + 10, outRaster.getValue(10,10,0), 0.1)
+        assertEquals(inRaster.getValue(30,20,0) + 10, outRaster.getValue(30,20,0), 0.1)
+    }
+
 }

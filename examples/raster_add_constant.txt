@@ -1,0 +1,17 @@
+format open --name raster --input raster.tif
+
+raster open --format raster --raster raster --name raster
+
+format open --name rasterPlus10 --input rasterPlus10.tif
+
+raster add constant --name raster --output-format rasterPlus10 --output-name rasterPlus10 --values 10
+
+map open --name map
+
+map add raster --name map --raster rasterPlus10
+
+map draw --name map
+
+map close --name map
+
+open --file image.png

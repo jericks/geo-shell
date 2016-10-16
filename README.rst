@@ -213,6 +213,8 @@ raster reclassify --name raster --output-format reclassified --output-name recla
 
 raster scale --name raster --output-format scaled --output-name scaled --x 2 --y 3 --interpolation bicubic
 
+raster add constant --name raster --output-format raster10 --output-name raster10 --values 10
+
 style
 -----
 style create --params "stroke=navy stroke=width=5" --file earth_outline.sld
