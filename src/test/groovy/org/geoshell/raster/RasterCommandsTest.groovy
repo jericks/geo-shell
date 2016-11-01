@@ -250,4 +250,47 @@ class RasterCommandsTest {
         assertEquals(inRaster.getValue(30,20,0) + 10, outRaster.getValue(30,20,0), 0.1)
     }
 
+    @Test void subtractConstant() {
+        Catalog catalog = new Catalog()
+        File file = new File(getClass().getClassLoader().getResource("raster.tif").toURI())
+        Format format = Format.getFormat(file)
+        catalog.formats[new FormatName("raster")] = format
+        Raster inRaster = format.read()
+
+        File outFile = new File(temporaryFolder.newFolder("subtracted"), "subtracted.tif")
+        Format outFormat = Format.getFormat(outFile)
+        catalog.formats[new FormatName("subtracted")] = outFormat
+
+        RasterCommands cmds = new RasterCommands(catalog: catalog)
+        cmds.open(new FormatName("raster"), new RasterName("raster"), "raster")
+        String result = cmds.subtractConst(new RasterName("raster"), new FormatName("subtracted"), "subtracted", "10", false)
+        assertEquals("Subtracted 10 from raster to create subtracted!", result)
+        Raster outRaster = catalog.rasters[new RasterName("subtracted")]
+        assertNotNull outRaster
+        assertEquals(inRaster.getValue(0,0,0)   - 10, outRaster.getValue(0,0,0),  0.1)
+        assertEquals(inRaster.getValue(10,10,0) - 10, outRaster.getValue(10,10,0), 0.1)
+        assertEquals(inRaster.getValue(30,20,0) - 10, outRaster.getValue(30,20,0), 0.1)
+    }
+
+    @Test void subtractFromConstant() {
+        Catalog catalog = new Catalog()
+        File file = new File(getClass().getClassLoader().getResource("raster.tif").toURI())
+        Format format = Format.getFormat(file)
+        catalog.formats[new FormatName("raster")] = format
+        Raster inRaster = format.read()
+
+        File outFile = new File(temporaryFolder.newFolder("subtracted"), "subtracted.tif")
+        Format outFormat = Format.getFormat(outFile)
+        catalog.formats[new FormatName("subtracted")] = outFormat
+
+        RasterCommands cmds = new RasterCommands(catalog: catalog)
+        cmds.open(new FormatName("raster"), new RasterName("raster"), "raster")
+        String result = cmds.subtractConst(new RasterName("raster"), new FormatName("subtracted"), "subtracted", "255", true)
+        assertEquals("Subtracted raster from 255 to create subtracted!", result)
+        Raster outRaster = catalog.rasters[new RasterName("subtracted")]
+        assertNotNull outRaster
+        assertEquals(255 - inRaster.getValue(0,0,0), outRaster.getValue(0,0,0),  0.1)
+        assertEquals(255 - inRaster.getValue(10,10,0), outRaster.getValue(10,10,0), 0.1)
+        assertEquals(255 - inRaster.getValue(30,20,0), outRaster.getValue(30,20,0), 0.1)
+    }
 }

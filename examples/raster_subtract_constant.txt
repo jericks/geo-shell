@@ -1,0 +1,17 @@
+format open --name raster --input raster.tif
+
+raster open --format raster --raster raster --name raster
+
+format open --name rasterMinus10 --input rasterMinus10.tif
+
+raster subtract constant --name raster --output-format rasterMinus10 --output-name rasterMinus10 --values 10
+
+map open --name map
+
+map add raster --name map --raster rasterMinus10
+
+map draw --name map
+
+map close --name map
+
+open --file image.png

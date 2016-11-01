@@ -215,6 +215,8 @@ raster scale --name raster --output-format scaled --output-name scaled --x 2 --y
 
 raster add constant --name raster --output-format raster10 --output-name raster10 --values 10
 
+raster subtract constant --name raster --output-format rasterMinus10 --output-name rasterMinus10 --values 10
+
 style
 -----
 style create --params "stroke=navy stroke=width=5" --file earth_outline.sld

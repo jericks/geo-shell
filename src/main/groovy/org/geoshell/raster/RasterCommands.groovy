@@ -382,4 +382,38 @@ class RasterCommands implements CommandMarker {
             "Unable to find Raster ${name}"
         }
     }
+
+    @CliCommand(value = "raster subtract constant", help = "Subtract constant values from a Raster")
+    String subtractConst(
+            @CliOption(key = "name", mandatory = true, help = "The Raster name") RasterName name,
+            @CliOption(key = "output-format", mandatory = true, help = "The output Format Workspace") FormatName formatName,
+            @CliOption(key = "output-name", mandatory = false, help = "The output Raster name") String outputRasterName,
+            @CliOption(key = "values", mandatory = true, help = "The values") String values,
+            @CliOption(key = "from", mandatory = false, specifiedDefaultValue = "false", unspecifiedDefaultValue = "false", help = "Whether to subtract the Raster from the constant or vice verse") boolean from
+    ) throws Exception {
+        Raster raster = catalog.rasters[name]
+        if (raster) {
+            Format format = catalog.formats[formatName]
+            if (format) {
+                Raster subtractRaster
+                List valueList = values.split(",").collect { String v -> Double.parseDouble(v)}
+                if (from) {
+                    subtractRaster = raster.minusFrom(valueList)
+                } else {
+                    subtractRaster = raster.minus(valueList)
+                }
+
+                format.write(subtractRaster)
+                if (!outputRasterName) {
+                    outputRasterName = formatName.name
+                }
+                catalog.rasters[new RasterName(outputRasterName)] = format.read(outputRasterName)
+                "Subtracted ${from ? name : values} from ${from ? values : name} to create ${outputRasterName}!"
+            } else {
+                "Unable to find Raster Format ${formatName}"
+            }
+        } else {
+            "Unable to find Raster ${name}"
+        }
+    }
 }
