@@ -1,0 +1,17 @@
+format open --name raster --input raster.tif
+
+raster open --format raster --raster raster --name raster
+
+format open --name rasterTimes --input rasterTimes.tif
+
+raster multiply constant --name raster --output-format rasterTimes --output-name rasterTimes --values 1.25
+
+map open --name map
+
+map add raster --name map --raster rasterTimes
+
+map draw --name map
+
+map close --name map
+
+open --file image.png

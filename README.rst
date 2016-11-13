@@ -217,6 +217,8 @@ raster add constant --name raster --output-format raster10 --output-name raster1
 
 raster subtract constant --name raster --output-format rasterMinus10 --output-name rasterMinus10 --values 10
 
+raster multiply constant --name raster --output-format rasterTimes10 --output-name rasterTimes10 --values 10
+
 style
 -----
 style create --params "stroke=navy stroke=width=5" --file earth_outline.sld

@@ -293,4 +293,26 @@ class RasterCommandsTest {
         assertEquals(255 - inRaster.getValue(10,10,0), outRaster.getValue(10,10,0), 0.1)
         assertEquals(255 - inRaster.getValue(30,20,0), outRaster.getValue(30,20,0), 0.1)
     }
+
+    @Test void multiplyConstant() {
+        Catalog catalog = new Catalog()
+        File file = new File(getClass().getClassLoader().getResource("raster.tif").toURI())
+        Format format = Format.getFormat(file)
+        catalog.formats[new FormatName("raster")] = format
+        Raster inRaster = format.read()
+
+        File outFile = new File(temporaryFolder.newFolder("multiply"), "multiply.tif")
+        Format outFormat = Format.getFormat(outFile)
+        catalog.formats[new FormatName("multiply")] = outFormat
+
+        RasterCommands cmds = new RasterCommands(catalog: catalog)
+        cmds.open(new FormatName("raster"), new RasterName("raster"), "raster")
+        String result = cmds.multiplyConstant(new RasterName("raster"), new FormatName("multiply"), "multiply", "1.25")
+        assertEquals("Multiplied raster by 1.25 to create multiply!", result)
+        Raster outRaster = catalog.rasters[new RasterName("multiply")]
+        assertNotNull outRaster
+        assertEquals(inRaster.getValue(0,0,0)   * 1.25, outRaster.getValue(0,0,0),  0.1)
+        assertEquals(inRaster.getValue(10,10,0) * 1.25, outRaster.getValue(10,10,0), 0.1)
+        assertEquals(inRaster.getValue(30,20,0) * 1.25, outRaster.getValue(30,20,0), 0.1)
+    }
 }
