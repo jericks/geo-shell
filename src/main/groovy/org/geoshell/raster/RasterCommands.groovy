@@ -442,4 +442,30 @@ class RasterCommands implements CommandMarker {
             "Unable to find Raster ${name}"
         }
     }
+
+    @CliCommand(value = "raster divide constant", help = "Divide constant values against a Raster")
+    String divideConstant(
+            @CliOption(key = "name", mandatory = true, help = "The Raster name") RasterName name,
+            @CliOption(key = "output-format", mandatory = true, help = "The output Format Workspace") FormatName formatName,
+            @CliOption(key = "output-name", mandatory = false, help = "The output Raster name") String outputRasterName,
+            @CliOption(key = "values", mandatory = true, help = "The values") String values
+    ) throws Exception {
+        Raster raster = catalog.rasters[name]
+        if (raster) {
+            Format format = catalog.formats[formatName]
+            if (format) {
+                Raster divideRaster = raster.divide(values.split(",").collect { String v -> Double.parseDouble(v)})
+                format.write(divideRaster)
+                if (!outputRasterName) {
+                    outputRasterName = formatName.name
+                }
+                catalog.rasters[new RasterName(outputRasterName)] = format.read(outputRasterName)
+                "Divided ${name} by ${values} to create ${outputRasterName}!"
+            } else {
+                "Unable to find Raster Format ${formatName}"
+            }
+        } else {
+            "Unable to find Raster ${name}"
+        }
+    }
 }

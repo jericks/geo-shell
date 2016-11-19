@@ -315,4 +315,26 @@ class RasterCommandsTest {
         assertEquals(inRaster.getValue(10,10,0) * 1.25, outRaster.getValue(10,10,0), 0.1)
         assertEquals(inRaster.getValue(30,20,0) * 1.25, outRaster.getValue(30,20,0), 0.1)
     }
+
+    @Test void divideConstant() {
+        Catalog catalog = new Catalog()
+        File file = new File(getClass().getClassLoader().getResource("raster.tif").toURI())
+        Format format = Format.getFormat(file)
+        catalog.formats[new FormatName("raster")] = format
+        Raster inRaster = format.read()
+
+        File outFile = new File(temporaryFolder.newFolder("divide"), "divide.tif")
+        Format outFormat = Format.getFormat(outFile)
+        catalog.formats[new FormatName("divide")] = outFormat
+
+        RasterCommands cmds = new RasterCommands(catalog: catalog)
+        cmds.open(new FormatName("raster"), new RasterName("raster"), "raster")
+        String result = cmds.divideConstant(new RasterName("raster"), new FormatName("divide"), "divide", "2")
+        assertEquals("Divided raster by 2 to create divide!", result)
+        Raster outRaster = catalog.rasters[new RasterName("divide")]
+        assertNotNull outRaster
+        assertEquals(inRaster.getValue(0,0,0)   / 2, outRaster.getValue(0,0,0),  0.1)
+        assertEquals(inRaster.getValue(10,10,0) / 2, outRaster.getValue(10,10,0), 0.1)
+        assertEquals(inRaster.getValue(30,20,0) / 2, outRaster.getValue(30,20,0), 0.1)
+    }
 }

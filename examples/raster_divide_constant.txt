@@ -1,0 +1,17 @@
+format open --name raster --input raster.tif
+
+raster open --format raster --raster raster --name raster
+
+format open --name rasterDivided --input rasterDivided.tif
+
+raster divide constant --name raster --output-format rasterDivided --output-name rasterDivided --values 2.0
+
+map open --name map
+
+map add raster --name map --raster rasterDivided
+
+map draw --name map
+
+map close --name map
+
+open --file image.png
