@@ -14,7 +14,7 @@
         <dependency>
             <groupId>org.geoscript</groupId>
             <artifactId>geoscript-groovy</artifactId>
-            <version>1.9-SNAPSHOT</version>
+            <version>1.9.0</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.shell</groupId>
