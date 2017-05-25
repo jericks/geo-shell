@@ -5,6 +5,7 @@ import geoscript.layer.Layer
 import geoscript.layer.Raster
 import geoscript.workspace.Memory
 import org.geoshell.Catalog
+import org.geoshell.style.StyleCommands
 import org.geoshell.vector.LayerName
 import org.geoshell.vector.WorkspaceName
 import org.junit.Rule
@@ -336,5 +337,33 @@ class RasterCommandsTest {
         assertEquals(inRaster.getValue(0,0,0)   / 2, outRaster.getValue(0,0,0),  0.1)
         assertEquals(inRaster.getValue(10,10,0) / 2, outRaster.getValue(10,10,0), 0.1)
         assertEquals(inRaster.getValue(30,20,0) / 2, outRaster.getValue(30,20,0), 0.1)
+    }
+
+    @Test void stylize() {
+        Catalog catalog = new Catalog()
+        File file = new File(getClass().getClassLoader().getResource("raster.tif").toURI())
+        Format format = Format.getFormat(file)
+        catalog.formats[new FormatName("raster")] = format
+        catalog.rasters[new RasterName("raster")] = catalog.formats[new FormatName("raster")].read()
+
+        File outFile = new File(temporaryFolder.newFolder("stylized"), "stylized.tif")
+        Format outFormat = Format.getFormat(outFile)
+        catalog.formats[new FormatName("stylized")] = outFormat
+
+        StyleCommands styleCommands = new StyleCommands(catalog: catalog)
+        File styleFile = temporaryFolder.newFile("style.sld")
+        styleCommands.createColorMapRasterStyle(new RasterName("raster"), 0.5, "10=red,50=blue,100=wheat,250=white", "ramp", false, styleFile)
+
+        RasterCommands cmds = new RasterCommands(catalog: catalog)
+        cmds.open(new FormatName("raster"), new RasterName("raster"), "raster")
+        cmds.setStyle(new RasterName("raster"), styleFile)
+
+        String result = cmds.stylize(new RasterName("raster"), new FormatName("stylized"), "stylized")
+        assertEquals("Stylized raster to create stylized!", result)
+        Raster outRaster = catalog.rasters[new RasterName("stylized")]
+        assertNotNull outRaster
+        assertEquals(214.0, outRaster.getValue(0,0,0),  0.1)
+        assertEquals(214.0, outRaster.getValue(10,10,0), 0.1)
+        assertEquals(212.0, outRaster.getValue(30,20,0), 0.1)
     }
 }

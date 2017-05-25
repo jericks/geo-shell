@@ -221,6 +221,8 @@ raster multiply constant --name raster --output-format rasterTimes10 --output-na
 
 raster divide constant --name raster --output-format rasterDividedBy2 --output-name rasterDividedBy2 --values 2
 
+raster stylize --name raster --output-format raster_stylized --output-name raster_stylized
+
 style
 -----
 style create --params "stroke=navy stroke=width=5" --file earth_outline.sld
