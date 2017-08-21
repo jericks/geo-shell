@@ -1,0 +1,19 @@
+workspace open --name naturalearth --params naturalearth.gpkg
+
+layer open --workspace naturalearth --layer countries
+
+tile open --name countries --params countries.mbtiles
+
+tile list
+
+tile info --name countries
+
+map open --name countries
+
+map add layer --name countries --layer naturalearth:countries
+
+tile generate --name countries --map countries --start 0 --end 3 --verbose true
+
+tile delete --name countries --z 1
+
+tile close --name countries

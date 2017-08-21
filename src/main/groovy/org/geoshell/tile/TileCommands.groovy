@@ -6,6 +6,7 @@ import geoscript.layer.ImageTileLayer
 import geoscript.layer.Layer
 import geoscript.layer.Pyramid
 import geoscript.layer.Raster
+import geoscript.layer.Tile
 import geoscript.layer.TileCursor
 import geoscript.layer.TileGenerator
 import geoscript.layer.TileLayer
@@ -134,6 +135,51 @@ class TileCommands implements CommandMarker {
             } else {
                 "Unable to find Map ${mapName}"
             }
+        } else {
+            "Unable to find Tile Layer ${name}"
+        }
+    }
+
+    @CliCommand(value = "tile delete", help = "Delete tiles from a Tile Layer.")
+    String delete(
+            @CliOption(key = "name",   mandatory = true, help = "The tile name") TileName name,
+            @CliOption(key = "tile",   mandatory = false, help = "The tile z/x/y") String tile,
+            @CliOption(key = "bounds", mandatory = false, help = "The bounds") String bounds,
+            @CliOption(key = "width",  mandatory = false, unspecifiedDefaultValue = "400", specifiedDefaultValue = "400", help = "The width") int width,
+            @CliOption(key = "height", mandatory = false, unspecifiedDefaultValue = "400", specifiedDefaultValue = "400", help = "The height") int height,
+            @CliOption(key = "z",      mandatory = false, unspecifiedDefaultValue = "-1", specifiedDefaultValue = "0", help = "The zoom level") long z,
+            @CliOption(key = "minx",   mandatory = false, unspecifiedDefaultValue = "-1", help = "The min x or column") long minX,
+            @CliOption(key = "miny",   mandatory = false, unspecifiedDefaultValue = "-1", help = "The min y or row") long minY,
+            @CliOption(key = "maxx",   mandatory = false, unspecifiedDefaultValue = "-1", help = "The max x or column") long maxX,
+            @CliOption(key = "maxy",   mandatory = false, unspecifiedDefaultValue = "-1", help = "The max y or row") long maxY
+    )  throws Exception {
+        TileLayer tileLayer = catalog.tiles[name]
+        if (tileLayer) {
+            String result = ""
+            if (tile) {
+                result = "Deleting tile ${tile}"
+                List parts = tile.split("/")
+                tileLayer.delete(tileLayer.get(parts[0] as long, parts[1] as long, parts[2] as long))
+            } else {
+                TileCursor tileCursor
+                if (bounds && !z) {
+                    result = "Deleting tiles in Bounds ${bounds} with width ${width} and height ${height}"
+                    tileCursor = tileLayer.tiles(Bounds.fromString(bounds), width, height)
+                } else if (bounds && z) {
+                    result = "Deleting tiles in Bounds ${bounds} at z level ${z}"
+                    tileCursor = tileLayer.tiles(Bounds.fromString(bounds), z)
+                } else if (z && minX > -1 && minY > -1 && maxX > -1 && maxY > -1) {
+                    result = "Deleting tiles at z level ${z} between ${minX}, ${minY}, ${maxX}, ${maxY}"
+                    tileCursor = tileLayer.tiles(z, minX, minY, maxX, maxY)
+                } else if (z) {
+                    result = "Deleting tiles at z level ${z}"
+                    tileCursor = tileLayer.tiles(z)
+                } else {
+                    result = "Wrong combination of options to delete tiles!"
+                }
+                tileLayer.delete(tileCursor)
+            }
+            result
         } else {
             "Unable to find Tile Layer ${name}"
         }

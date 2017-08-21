@@ -175,6 +175,8 @@ tile vector grid --name osm --workspace gpkg --layer gridz --z 1
 
 tile tiles --name osm --bounds "2315277.538707974,4356146.199006655,2534193.2172859586,4470343.227121928" --z 10
 
+tile delete --name osm --z 1
+
 format
 ------
 format open --name earth --input earth.tif
