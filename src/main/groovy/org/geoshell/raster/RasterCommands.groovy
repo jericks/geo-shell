@@ -382,6 +382,33 @@ class RasterCommands implements CommandMarker {
             "Unable to find Raster ${name}"
         }
     }
+    
+    @CliCommand(value = "raster add raster", help = "Add two Rasters together")
+    String addRaster(
+            @CliOption(key = "name1", mandatory = true, help = "The Raster name") RasterName name1,
+            @CliOption(key = "name2", mandatory = true, help = "The Raster name") RasterName name2,
+            @CliOption(key = "output-format", mandatory = true, help = "The output Format Workspace") FormatName formatName,
+            @CliOption(key = "output-name", mandatory = false, help = "The output Raster name") String outputRasterName
+    ) throws Exception {
+        Raster raster1 = catalog.rasters[name1]
+        Raster raster2 = catalog.rasters[name2]
+        if (raster1 && raster2) {
+            Format format = catalog.formats[formatName]
+            if (format) {
+                Raster addRaster = raster1.add(raster2)
+                format.write(addRaster)
+                if (!outputRasterName) {
+                    outputRasterName = formatName.name
+                }
+                catalog.rasters[new RasterName(outputRasterName)] = format.read(outputRasterName)
+                "Added ${name1} to ${name2} to create ${outputRasterName}!"
+            } else {
+                "Unable to find Raster Format ${formatName}"
+            }
+        } else {
+            "Unable to find Raster ${name1} or Raster ${name2}"
+        }
+    }
 
     @CliCommand(value = "raster subtract constant", help = "Subtract constant values from a Raster")
     String subtractConst(
