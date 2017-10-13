@@ -221,6 +221,8 @@ raster add raster --name1 topo --name2 deposits --output-format topo_new --outpu
 
 raster subtract constant --name raster --output-format rasterMinus10 --output-name rasterMinus10 --values 10
 
+raster subtract raster --name1 erosion --name2 topo --output-format topo_new --output-name topo_new
+
 raster multiply constant --name raster --output-format rasterTimes10 --output-name rasterTimes10 --values 10
 
 raster divide constant --name raster --output-format rasterDividedBy2 --output-name rasterDividedBy2 --values 2
