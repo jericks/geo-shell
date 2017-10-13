@@ -384,7 +384,7 @@ class RasterCommands implements CommandMarker {
     }
     
     @CliCommand(value = "raster add raster", help = "Add two Rasters together")
-    String addRaster(
+    String addRasters(
             @CliOption(key = "name1", mandatory = true, help = "The Raster name") RasterName name1,
             @CliOption(key = "name2", mandatory = true, help = "The Raster name") RasterName name2,
             @CliOption(key = "output-format", mandatory = true, help = "The output Format Workspace") FormatName formatName,
@@ -445,7 +445,7 @@ class RasterCommands implements CommandMarker {
     }
 
     @CliCommand(value = "raster subtract raster", help = "Subtract one Raster from another")
-    String subtractRaster(
+    String subtractRasters(
             @CliOption(key = "name1", mandatory = true, help = "The Raster name") RasterName name1,
             @CliOption(key = "name2", mandatory = true, help = "The Raster name") RasterName name2,
             @CliOption(key = "output-format", mandatory = true, help = "The output Format Workspace") FormatName formatName,
@@ -497,6 +497,34 @@ class RasterCommands implements CommandMarker {
         }
     }
 
+    @CliCommand(value = "raster multiply raster", help = "Multiply two Raster together")
+    String multiplyRasters(
+            @CliOption(key = "name1", mandatory = true, help = "The Raster name") RasterName name1,
+            @CliOption(key = "name2", mandatory = true, help = "The Raster name") RasterName name2,
+            @CliOption(key = "output-format", mandatory = true, help = "The output Format Workspace") FormatName formatName,
+            @CliOption(key = "output-name", mandatory = false, help = "The output Raster name") String outputRasterName
+    ) throws Exception {
+        Raster raster1 = catalog.rasters[name1]
+        Raster raster2 = catalog.rasters[name2]
+        if (raster1 && raster2) {
+            Format format = catalog.formats[formatName]
+            if (format) {
+                Raster multipliedRaster = raster1.multiply(raster2)
+                format.write(multipliedRaster)
+                if (!outputRasterName) {
+                    outputRasterName = formatName.name
+                }
+                catalog.rasters[new RasterName(outputRasterName)] = format.read(outputRasterName)
+                "Multiplied ${name1} and ${name2} to create ${outputRasterName}!"
+            } else {
+                "Unable to find Raster Format ${formatName}"
+            }
+        } else {
+            "Unable to find Raster ${name1} or Raster ${name2}"
+        }
+    }
+
+
     @CliCommand(value = "raster divide constant", help = "Divide constant values against a Raster")
     String divideConstant(
             @CliOption(key = "name", mandatory = true, help = "The Raster name") RasterName name,
@@ -520,6 +548,33 @@ class RasterCommands implements CommandMarker {
             }
         } else {
             "Unable to find Raster ${name}"
+        }
+    }
+
+    @CliCommand(value = "raster divide raster", help = "Divide one Raster by another Raster")
+    String divideRasters(
+            @CliOption(key = "name1", mandatory = true, help = "The Raster name") RasterName name1,
+            @CliOption(key = "name2", mandatory = true, help = "The Raster name") RasterName name2,
+            @CliOption(key = "output-format", mandatory = true, help = "The output Format Workspace") FormatName formatName,
+            @CliOption(key = "output-name", mandatory = false, help = "The output Raster name") String outputRasterName
+    ) throws Exception {
+        Raster raster1 = catalog.rasters[name1]
+        Raster raster2 = catalog.rasters[name2]
+        if (raster1 && raster2) {
+            Format format = catalog.formats[formatName]
+            if (format) {
+                Raster dividedRaster = raster1.divide(raster2)
+                format.write(dividedRaster)
+                if (!outputRasterName) {
+                    outputRasterName = formatName.name
+                }
+                catalog.rasters[new RasterName(outputRasterName)] = format.read(outputRasterName)
+                "Divided ${name1} by ${name2} to create ${outputRasterName}!"
+            } else {
+                "Unable to find Raster Format ${formatName}"
+            }
+        } else {
+            "Unable to find Raster ${name1} or Raster ${name2}"
         }
     }
 

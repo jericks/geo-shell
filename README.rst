@@ -225,7 +225,11 @@ raster subtract raster --name1 erosion --name2 topo --output-format topo_new --o
 
 raster multiply constant --name raster --output-format rasterTimes10 --output-name rasterTimes10 --values 10
 
+raster multiply raster --name1 topo --name2 height --output-format topo_new --output-name topo_new
+
 raster divide constant --name raster --output-format rasterDividedBy2 --output-name rasterDividedBy2 --values 2
+
+raster divide raster --name1 topo --name2 reduce --output-format topo_new --output-name topo_new
 
 raster stylize --name raster --output-format raster_stylized --output-name raster_stylized
 

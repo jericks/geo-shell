@@ -11,7 +11,6 @@ import org.geoshell.vector.WorkspaceName
 import org.junit.Rule
 import org.junit.Test
 import org.junit.rules.TemporaryFolder
-import org.springframework.shell.support.util.OsUtils
 
 import static org.junit.Assert.*
 
@@ -272,7 +271,7 @@ class RasterCommandsTest {
         RasterCommands cmds = new RasterCommands(catalog: catalog)
         cmds.open(new FormatName("raster1"), new RasterName("five"), "raster1")
         cmds.open(new FormatName("raster2"), new RasterName("ten"), "raster2")
-        String result = cmds.addRaster(new RasterName("raster1"), new RasterName("raster2"), new FormatName("added"), "added")
+        String result = cmds.addRasters(new RasterName("raster1"), new RasterName("raster2"), new FormatName("added"), "added")
         assertEquals("Added raster1 to raster2 to create added!", result)
         Raster outRaster = catalog.rasters[new RasterName("added")]
         assertNotNull outRaster
@@ -324,7 +323,7 @@ class RasterCommandsTest {
         RasterCommands cmds = new RasterCommands(catalog: catalog)
         cmds.open(new FormatName("raster1"), new RasterName("ten"), "raster1")
         cmds.open(new FormatName("raster2"), new RasterName("five"), "raster2")
-        String result = cmds.subtractRaster(new RasterName("raster1"), new RasterName("raster2"), new FormatName("subtracted"), "subtracted")
+        String result = cmds.subtractRasters(new RasterName("raster1"), new RasterName("raster2"), new FormatName("subtracted"), "subtracted")
         assertEquals("Subtracted raster1 from raster2 to create subtracted!", result)
         Raster outRaster = catalog.rasters[new RasterName("subtracted")]
         assertNotNull outRaster
@@ -377,6 +376,36 @@ class RasterCommandsTest {
         assertEquals(inRaster.getValue(30,20,0) * 1.25, outRaster.getValue(30,20,0), 0.1)
     }
 
+    @Test void multiplyRasters() {
+        Catalog catalog = new Catalog()
+
+        // Raster 1
+        Format format1 = Format.getFormat(new File(getClass().getClassLoader().getResource("ten.tif").toURI()))
+        catalog.formats[new FormatName("raster1")] = format1
+        Raster raster1 = format1.read()
+
+        // Raster 2
+        Format format2 = Format.getFormat(new File(getClass().getClassLoader().getResource("five.tif").toURI()))
+        catalog.formats[new FormatName("raster2")] = format2
+        Raster raster2 = format2.read()
+
+        // Output
+        File outFile = new File(temporaryFolder.newFolder("multiplied"), "multiplied.tif")
+        Format outFormat = Format.getFormat(outFile)
+        catalog.formats[new FormatName("multiplied")] = outFormat
+
+        RasterCommands cmds = new RasterCommands(catalog: catalog)
+        cmds.open(new FormatName("raster1"), new RasterName("ten"), "raster1")
+        cmds.open(new FormatName("raster2"), new RasterName("five"), "raster2")
+        String result = cmds.multiplyRasters(new RasterName("raster1"), new RasterName("raster2"), new FormatName("multiplied"), "multiplied")
+        assertEquals("Multiplied raster1 and raster2 to create multiplied!", result)
+        Raster outRaster = catalog.rasters[new RasterName("multiplied")]
+        assertNotNull outRaster
+        assertEquals(50, outRaster.getValue(0,0,0),  0.1)
+        assertEquals(50, outRaster.getValue(100,100,0),  0.1)
+        assertEquals(50, outRaster.getValue(200,200,0),  0.1)
+    }
+
     @Test void divideConstant() {
         Catalog catalog = new Catalog()
         File file = new File(getClass().getClassLoader().getResource("raster.tif").toURI())
@@ -397,6 +426,36 @@ class RasterCommandsTest {
         assertEquals(inRaster.getValue(0,0,0)   / 2, outRaster.getValue(0,0,0),  0.1)
         assertEquals(inRaster.getValue(10,10,0) / 2, outRaster.getValue(10,10,0), 0.1)
         assertEquals(inRaster.getValue(30,20,0) / 2, outRaster.getValue(30,20,0), 0.1)
+    }
+
+    @Test void divideRasters() {
+        Catalog catalog = new Catalog()
+
+        // Raster 1
+        Format format1 = Format.getFormat(new File(getClass().getClassLoader().getResource("ten.tif").toURI()))
+        catalog.formats[new FormatName("raster1")] = format1
+        Raster raster1 = format1.read()
+
+        // Raster 2
+        Format format2 = Format.getFormat(new File(getClass().getClassLoader().getResource("five.tif").toURI()))
+        catalog.formats[new FormatName("raster2")] = format2
+        Raster raster2 = format2.read()
+
+        // Output
+        File outFile = new File(temporaryFolder.newFolder("divided"), "divided.tif")
+        Format outFormat = Format.getFormat(outFile)
+        catalog.formats[new FormatName("divided")] = outFormat
+
+        RasterCommands cmds = new RasterCommands(catalog: catalog)
+        cmds.open(new FormatName("raster1"), new RasterName("ten"), "raster1")
+        cmds.open(new FormatName("raster2"), new RasterName("five"), "raster2")
+        String result = cmds.divideRasters(new RasterName("raster1"), new RasterName("raster2"), new FormatName("divided"), "divided")
+        assertEquals("Divided raster1 by raster2 to create divided!", result)
+        Raster outRaster = catalog.rasters[new RasterName("divided")]
+        assertNotNull outRaster
+        assertEquals(2, outRaster.getValue(0,0,0),  0.1)
+        assertEquals(2, outRaster.getValue(100,100,0),  0.1)
+        assertEquals(2, outRaster.getValue(200,200,0),  0.1)
     }
 
     @Test void stylize() {
