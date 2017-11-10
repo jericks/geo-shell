@@ -63,6 +63,10 @@ system properties = show shell's properties
 
 version = display current cli version
 
+download --url https://astropedia.astrogeology.usgs.gov/download/Mars/Geology/Mars15MGeologicGISRenovation.zip --file mars.zip
+
+unzip --file mars.zip --directory mars
+
 workspace
 ---------
 workspace open --name shps --params /Users/you/shps
