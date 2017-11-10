@@ -63,9 +63,11 @@ system properties = show shell's properties
 
 version = display current cli version
 
-download --url https://astropedia.astrogeology.usgs.gov/download/Mars/Geology/Mars15MGeologicGISRenovation.zip --file mars.zip
+download --url url --file file
 
-unzip --file mars.zip --directory mars
+unzip --file file.zip --directory dir
+
+open --file file
 
 workspace
 ---------
