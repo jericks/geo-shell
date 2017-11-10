@@ -56,6 +56,30 @@ class StyleCommandsTest {
         assertTrue styleFile.text.contains("<sld:UserLayer>")
     }
 
+    @Test void createUniqueValuesStyleFromText() {
+
+        String text = """AHa=#aa0c74
+AHat=#b83b1f
+AHcf=#964642
+AHh=#78092e
+AHpe=#78092e
+AHt=#5f025a
+AHt3=#e76161
+Aa1=#fcedcd
+Aa2=#94474b"""
+        File textFile = folder.newFile("unique.txt")
+        textFile.text = text
+
+        Catalog catalog = new Catalog()
+        StyleCommands cmds = new StyleCommands(catalog: catalog)
+        File styleFile = folder.newFile("style.sld")
+        String result = cmds.createUniqueValuesStyleFromText("units", "polygon", textFile, styleFile)
+        assertTrue result.startsWith("Create a unique values style from")
+        assertTrue result.contains("for units and polygon to")
+        assertTrue result.endsWith("style.sld")
+        assertTrue styleFile.text.contains("<sld:UserLayer>")
+    }
+
     @Test void createGradientVectorStyle() {
         Catalog catalog = new Catalog()
         File file = new File(getClass().getClassLoader().getResource("grid.shp").toURI())

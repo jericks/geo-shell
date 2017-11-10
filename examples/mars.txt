@@ -1,0 +1,22 @@
+download --url https://astropedia.astrogeology.usgs.gov/download/Mars/Geology/Mars15MGeologicGISRenovation.zip --file mars.zip --overwrite false
+
+unzip --file mars.zip --directory mars
+
+style vector uniquevaluesfromtext --field UnitSymbol --geometryType Polygon --styleFile mars/units.sld --textFile mars/I1802ABC_Mars_global_geology/I1802ABC_geo_units_RGBlut.txt
+
+workspace open --name mars --params mars/I1802ABC_Mars_global_geology/Shapefiles/I1802ABC_Mars2000_Sphere/geo_units_oc_dd.shp
+
+layer open --workspace mars --layer geo_units_oc_dd
+
+layer style set --name mars:geo_units_oc_dd --style mars/units.sld
+
+map open --name mars
+
+map add layer --name mars --layer mars:geo_units_oc_dd
+
+map draw --name mars
+
+map close --name mars
+
+open --file image.png
+

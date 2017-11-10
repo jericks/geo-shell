@@ -21,9 +21,12 @@ class Commands implements CommandMarker {
     @CliCommand(value = "download", help = "Download a URL to a file.")
     void download(
             @CliOption(key = "url", mandatory = true, help = "The url") String url,
-            @CliOption(key = "file", mandatory = true, help = "The file") File file
+            @CliOption(key = "file", mandatory = true, help = "The file") File file,
+            @CliOption(key = "overwrite", mandatory = false,
+                    specifiedDefaultValue = "true", unspecifiedDefaultValue = "true",
+                    help = "Whether to overwrite the file or not") boolean overwrite
     ) throws Exception {
-        GeoScript.download(new URL(url), file)
+        GeoScript.download(new URL(url), file, overwrite: overwrite)
     }
 
     @CliCommand(value = "unzip", help = "Unzip a file")

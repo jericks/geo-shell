@@ -14,7 +14,7 @@ class CommandsTest {
         URL url = getClass().getClassLoader().getResource("points.zip")
         File file = temporaryFolder.newFile("points.zip")
         Commands cmds = new Commands()
-        cmds.download(url.toString(), file)
+        cmds.download(url.toString(), file, true)
         assertTrue file.exists()
         assertTrue file.length() > 100
     }

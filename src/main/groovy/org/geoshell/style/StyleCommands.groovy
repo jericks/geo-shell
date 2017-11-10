@@ -11,13 +11,12 @@ import geoscript.style.Symbolizer
 import geoscript.style.UniqueValues
 import geoscript.style.io.SLDWriter
 import geoscript.style.io.SimpleStyleReader
+import geoscript.style.io.UniqueValuesReader
 import geoscript.style.io.Writer
 import geoscript.style.io.YSLDWriter
-import org.apache.commons.io.FileUtils
 import org.apache.commons.io.FilenameUtils
 import org.geoshell.Catalog
 import org.geoshell.raster.RasterName
-import org.geoshell.tile.TileName
 import org.geoshell.vector.LayerName
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.shell.core.CommandMarker
@@ -136,6 +135,22 @@ class StyleCommands implements CommandMarker {
         } else {
             "Unable to find Layer ${layerName}"
         }
+    }
+
+    @CliCommand(value = "style vector uniquevaluesfromtext", help = "Create a unique values vector style from a text file")
+    String createUniqueValuesStyleFromText(
+            @CliOption(key = "field", mandatory = true, help = "The field name") String field,
+            @CliOption(key = "geometryType", mandatory = true, help = "The geometry type") String geometryType,
+            @CliOption(key = "textFile", mandatory = true, help = "The input text file") File textFile,
+            @CliOption(key = "styleFile", mandatory = true, help = "The output sld or ysld file") File outputFile
+    ) throws Exception {
+        UniqueValuesReader uniqueValuesReader = new UniqueValuesReader(field, geometryType)
+        Style style = uniqueValuesReader.read(textFile)
+        String type = FilenameUtils.getExtension(outputFile.name)
+        Writer styleWriter = type.equalsIgnoreCase("ysld") || type.equalsIgnoreCase("yml") ? new YSLDWriter() :new SLDWriter()
+        String styleStr = styleWriter.write(style)
+        outputFile.write(styleStr)
+        "Create a unique values style from ${textFile} for ${field} and ${geometryType} to ${outputFile}"
     }
 
     @CliCommand(value = "style raster default", help = "Create a default raster style.")
