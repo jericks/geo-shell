@@ -1,0 +1,16 @@
+workspace open --name naturalearth --params naturalearth.gpkg
+
+layer open --workspace naturalearth --layer countries
+
+tile open --name countries --params "type=vectortiles file=countries format=pbf pyramid=GlobalMercatorTopLeft"
+
+map open --name countries
+
+map add layer --name countries --layer naturalearth:countries
+
+tile generate --name countries --map countries --start 0 --end 4 --verbose true
+
+tile close --name countries
+
+/* python -m SimpleHTTPServer */
+/* http://localhost:8000/tile_pbf.html */
