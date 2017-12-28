@@ -1,5 +1,8 @@
 package org.geoshell.vector
 
+import geoscript.feature.Field
+import geoscript.feature.Schema
+import geoscript.geom.Bounds
 import geoscript.geom.Polygon
 import geoscript.layer.Layer
 import geoscript.layer.Property
@@ -925,4 +928,50 @@ class LayerCommandsTest {
         String result = cmds.projection(new LayerName("states"))
         assertEquals "EPSG:4326", result
     }
+
+    /**
+     * Create two Layers for Layer Algebra testing based on the GDAL spec:
+     * http://trac.osgeo.org/gdal/wiki/LayerAlgebra
+     * @return A List of two Layers
+     */
+    private void createGdalLayerAlgebraTestLayers(Catalog catalog) {
+        Workspace workspace = new Memory()
+        catalog.workspaces[new WorkspaceName("mem")] = workspace
+
+        Layer layer1 = workspace.create(new Schema("a",[new Field("the_geom", "Polygon"), new Field("A","int")]))
+        Bounds b1 = new Bounds(90, 100, 100, 110)
+        Bounds b2 = new Bounds(120, 100, 130, 110)
+        layer1.add([the_geom: b1.geometry, A: 1])
+        layer1.add([the_geom: b2.geometry, A: 2])
+        catalog.layers[new LayerName("a")] = layer1
+
+        Layer layer2 = workspace.create(new Schema("b",[new Field("the_geom", "Polygon"), new Field("B","int")]))
+        Bounds b3 = new Bounds(85, 95, 95, 105)
+        Bounds b4 = new Bounds(97, 95, 125, 105)
+        layer2.add([the_geom: b3.geometry, B: 3])
+        layer2.add([the_geom: b4.geometry, B: 4])
+        catalog.layers[new LayerName("b")] = layer2
+    }
+
+    @Test void clip() {
+        Catalog catalog = new Catalog()
+        createGdalLayerAlgebraTestLayers(catalog)
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        String result = cmds.clip(new LayerName("a"), new LayerName("b"), new WorkspaceName("mem"), "clipped")
+        assertEquals "Done clipping a to b to create clipped!", result
+        Layer layer = catalog.layers[new LayerName("clipped")]
+        // Check schema
+        assertEquals "clipped", layer.name
+        assertTrue layer.schema.has("A")
+        assertFalse layer.schema.has("B")
+        assertEquals "Polygon", layer.schema.geom.typ
+        // Check features
+        assertEquals 3, layer.count
+        assertEquals 2, layer.count("A = 1")
+        assertEquals 1, layer.count("A = 2")
+        assertEquals "POLYGON ((90 100, 90 105, 95 105, 95 100, 90 100))", layer.getFeatures("A = 1")[0].geom.wkt
+        assertEquals "POLYGON ((100 105, 100 100, 97 100, 97 105, 100 105))", layer.getFeatures("A = 1")[1].geom.wkt
+        assertEquals "POLYGON ((120 100, 120 105, 125 105, 125 100, 120 100))", layer.getFeatures("A = 2")[0].geom.wkt
+    }
+
 }

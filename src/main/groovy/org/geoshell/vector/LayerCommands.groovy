@@ -1296,4 +1296,31 @@ class LayerCommands implements CommandMarker {
             "Unable to find Layer ${inputLayerName}"
         }
     }
+
+    @CliCommand(value = "layer clip", help = "Clip the input Layer by the other Layer to produce the output Layer")
+    String clip(
+            @CliOption(key = "input-name", mandatory = true, help = "The Layer name") LayerName inputLayerName,
+            @CliOption(key = "clip-name", mandatory = true, help = "The clip Layer name") LayerName clipLayerName,
+            @CliOption(key = "output-workspace", mandatory = true, help = "The output Layer Workspace") WorkspaceName workspaceName,
+            @CliOption(key = "output-name", mandatory = true, help = "The output Layer name") String outputLayerName
+    ) throws Exception {
+        Layer inputLayer = catalog.layers[inputLayerName]
+        if (inputLayer) {
+            Layer clipLayer = catalog.layers[clipLayerName]
+            if (clipLayer) {
+                Workspace outputWorkspace = catalog.workspaces[workspaceName]
+                if (outputWorkspace) {
+                    Layer outputLayer = inputLayer.clip(clipLayer, outLayer: outputLayerName, outWorkspace: outputWorkspace)
+                    catalog.layers[new LayerName(outputLayerName)] = outputWorkspace.get(outputLayerName)
+                    "Done clipping ${inputLayerName} to ${clipLayerName} to create ${outputLayerName}!"
+                } else {
+                    "Unable to find Workspace ${workspaceName}"
+                }
+            } else {
+                "Unable to find clip Layer ${clipLayerName}"
+            }
+        } else {
+            "Unable to find Layer ${inputLayerName}"
+        }
+    }
 }

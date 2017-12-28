@@ -1,0 +1,40 @@
+workspace open --name a --params a.properties
+
+workspace open --name b --params b.properties
+
+layer open --workspace a --layer a
+
+layer open --workspace b --layer b
+
+workspace open --name mem --params memory
+
+layer clip --input-name a:a --clip-name b:b --output-workspace mem --output-name a_b_clipped
+
+style vector default --layer a:a --color red --file a.sld
+
+style vector default --layer b:b --color green --file b.sld
+
+style vector default --layer a_b_clipped --color blue  --file a_b_clipped.sld
+
+layer style set --name a:a --style a.sld
+
+layer style set --name b:b --style b.sld
+
+layer style set --name a_b_clipped --style a_b_clipped.sld
+
+map open --name map
+
+
+
+map add layer --name map --layer a:a
+
+map add layer --name map --layer b:b
+
+map add layer --name map --layer a_b_clipped
+
+map draw --name map --projection EPSG:4326
+
+map close --name map
+
+open --file image.png
+

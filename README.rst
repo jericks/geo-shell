@@ -163,6 +163,8 @@ layer transform --input-name points --output-workspace mem --output-name polys -
 
 layer reproject --input-name states --output-workspace postgis --output-name states_merc --projection EPSG:3857
 
+layer clip --input-name cities --clip-name state --output-workspace dir --output-name cities_states
+
 tile
 ----
 tile open --name states --params states.mbtiles
