@@ -24,8 +24,6 @@ layer style set --name a_b_clipped --style a_b_clipped.sld
 
 map open --name map
 
-
-
 map add layer --name map --layer a:a
 
 map add layer --name map --layer b:b
