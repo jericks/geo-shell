@@ -165,6 +165,8 @@ layer reproject --input-name states --output-workspace postgis --output-name sta
 
 layer clip --input-name cities --clip-name state --output-workspace dir --output-name cities_states
 
+layer union --input-name wetlands --other-name floodplain --output-workspace dir --output-name waterlogged
+
 tile
 ----
 tile open --name states --params states.mbtiles

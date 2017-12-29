@@ -974,4 +974,34 @@ class LayerCommandsTest {
         assertEquals "POLYGON ((120 100, 120 105, 125 105, 125 100, 120 100))", layer.getFeatures("A = 2")[0].geom.wkt
     }
 
+    @Test void union() {
+        Catalog catalog = new Catalog()
+        createGdalLayerAlgebraTestLayers(catalog)
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        String result = cmds.union(new LayerName("a"), new LayerName("b"), new WorkspaceName("mem"), "a_b_union", false, true)
+        assertEquals "Done unioning a and b to create a_b_union!", result
+        Layer layer = catalog.layers[new LayerName("a_b_union")]
+        // Check schema
+        assertEquals "a_b_union", layer.name
+        assertTrue layer.schema.has("A")
+        assertTrue layer.schema.has("B")
+        assertEquals "Polygon", layer.schema.geom.typ
+        // Check features
+        assertEquals 7, layer.count
+        assertEquals 1, layer.count("A = 1 AND B = 3")
+        assertEquals 1, layer.count("A = 1 AND B = 4")
+        assertEquals 1, layer.count("A = 1 AND B IS NULL")
+        assertEquals 1, layer.count("A = 2 AND B = 4")
+        assertEquals 1, layer.count("A = 2 AND B IS NULL")
+        assertEquals 1, layer.count("A IS NULL AND B = 3")
+        assertEquals 1, layer.count("A IS NULL AND B = 4")
+        assertEquals "POLYGON ((90 100, 90 105, 95 105, 95 100, 90 100))", layer.getFeatures("A = 1 AND B = 3")[0].geom.wkt
+        assertEquals "POLYGON ((100 105, 100 100, 97 100, 97 105, 100 105))", layer.getFeatures("A = 1 AND B = 4")[0].geom.wkt
+        assertEquals "POLYGON ((90 105, 90 110, 100 110, 100 105, 97 105, 97 100, 95 100, 95 105, 90 105))", layer.getFeatures("A = 1 AND B IS NULL")[0].geom.wkt
+        assertEquals "POLYGON ((120 100, 120 105, 125 105, 125 100, 120 100))", layer.getFeatures("A = 2 AND B = 4")[0].geom.wkt
+        assertEquals "POLYGON ((120 105, 120 110, 130 110, 130 100, 125 100, 125 105, 120 105))", layer.getFeatures("A = 2 AND B IS NULL")[0].geom.wkt
+        assertEquals "POLYGON ((85 95, 85 105, 90 105, 90 100, 95 100, 95 95, 85 95))", layer.getFeatures("A IS NULL AND B = 3")[0].geom.wkt
+        assertEquals "POLYGON ((97 95, 97 100, 100 100, 100 105, 120 105, 120 100, 125 100, 125 95, 97 95))", layer.getFeatures("A IS NULL AND B = 4")[0].geom.wkt
+    }
+
 }
