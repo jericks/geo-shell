@@ -167,6 +167,8 @@ layer clip --input-name cities --clip-name state --output-workspace dir --output
 
 layer union --input-name wetlands --other-name floodplain --output-workspace dir --output-name waterlogged
 
+layer intersection --input-name parcels --other-name floodplain --output-workspace postgis --output-name parcels_floodplain
+
 tile
 ----
 tile open --name states --params states.mbtiles
