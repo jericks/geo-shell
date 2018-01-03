@@ -1025,4 +1025,24 @@ class LayerCommandsTest {
         assertEquals "POLYGON ((100 105, 100 100, 97 100, 97 105, 100 105))", layer.getFeatures("A = 1 AND B = 4")[0].geom.wkt
         assertEquals "POLYGON ((120 100, 120 105, 125 105, 125 100, 120 100))", layer.getFeatures("A = 2 AND B = 4")[0].geom.wkt
     }
+
+    @Test void erase() {
+        Catalog catalog = new Catalog()
+        createGdalLayerAlgebraTestLayers(catalog)
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        String result = cmds.erase(new LayerName("a"), new LayerName("b"), new WorkspaceName("mem"), "a_b_erase")
+        assertEquals "Done erasing a from b to create a_b_erase!", result
+        Layer layer = catalog.layers[new LayerName("a_b_erase")]
+        // Check schema
+        assertEquals "a_b_erase", layer.name
+        assertTrue layer.schema.has("A")
+        assertFalse layer.schema.has("B")
+        assertEquals "Polygon", layer.schema.geom.typ
+        // Check features
+        assertEquals 2, layer.count
+        assertEquals 1, layer.count("A = 1")
+        assertEquals 1, layer.count("A = 2")
+        assertEquals "POLYGON ((90 105, 90 110, 100 110, 100 105, 97 105, 97 100, 95 100, 95 105, 90 105))", layer.getFeatures("A = 1")[0].geom.wkt
+        assertEquals "POLYGON ((120 105, 120 110, 130 110, 130 100, 125 100, 125 105, 120 105))", layer.getFeatures("A = 2")[0].geom.wkt
+    }
 }

@@ -169,6 +169,8 @@ layer union --input-name wetlands --other-name floodplain --output-workspace dir
 
 layer intersection --input-name parcels --other-name floodplain --output-workspace postgis --output-name parcels_floodplain
 
+layer erase --input-name parcels --other-name zones --output-workspace shps --output-name parcel_zones
+
 tile
 ----
 tile open --name states --params states.mbtiles
