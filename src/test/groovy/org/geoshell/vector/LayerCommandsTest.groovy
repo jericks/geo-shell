@@ -1045,4 +1045,30 @@ class LayerCommandsTest {
         assertEquals "POLYGON ((90 105, 90 110, 100 110, 100 105, 97 105, 97 100, 95 100, 95 105, 90 105))", layer.getFeatures("A = 1")[0].geom.wkt
         assertEquals "POLYGON ((120 105, 120 110, 130 110, 130 100, 125 100, 125 105, 120 105))", layer.getFeatures("A = 2")[0].geom.wkt
     }
+
+    @Test void identity() {
+        Catalog catalog = new Catalog()
+        createGdalLayerAlgebraTestLayers(catalog)
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        String result = cmds.identity(new LayerName("a"), new LayerName("b"), new WorkspaceName("mem"), "a_b_identity", false, true)
+        assertEquals "Done calculating the identity between a and b to create a_b_identity!", result
+        Layer layer = catalog.layers[new LayerName("a_b_identity")]
+        // Check schema
+        assertEquals "a_b_identity", layer.name
+        assertTrue layer.schema.has("A")
+        assertTrue layer.schema.has("B")
+        assertEquals "Polygon", layer.schema.geom.typ
+        // Check features
+        assertEquals 5, layer.count
+        assertEquals 1, layer.count("A = 1 AND B = 3")
+        assertEquals 1, layer.count("A = 1 AND B = 4")
+        assertEquals 1, layer.count("A = 1 AND B IS NULL")
+        assertEquals 1, layer.count("A = 2 AND B = 4")
+        assertEquals 1, layer.count("A = 2 AND B IS NULL")
+        assertEquals "POLYGON ((90 100, 90 105, 95 105, 95 100, 90 100))", layer.getFeatures("A = 1 AND B = 3")[0].geom.wkt
+        assertEquals "POLYGON ((100 105, 100 100, 97 100, 97 105, 100 105))", layer.getFeatures("A = 1 AND B = 4")[0].geom.wkt
+        assertEquals "POLYGON ((90 105, 90 110, 100 110, 100 105, 97 105, 97 100, 95 100, 95 105, 90 105))", layer.getFeatures("A = 1 AND B IS NULL")[0].geom.wkt
+        assertEquals "POLYGON ((120 100, 120 105, 125 105, 125 100, 120 100))", layer.getFeatures("A = 2 AND B = 4")[0].geom.wkt
+        assertEquals "POLYGON ((120 105, 120 110, 130 110, 130 100, 125 100, 125 105, 120 105))", layer.getFeatures("A = 2 AND B IS NULL")[0].geom.wkt
+    }
 }

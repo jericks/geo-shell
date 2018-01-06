@@ -171,6 +171,8 @@ layer intersection --input-name parcels --other-name floodplain --output-workspa
 
 layer erase --input-name parcels --other-name zones --output-workspace shps --output-name parcel_zones
 
+layer identity --input-name parcels --other-name zones --output-workspace shps --output-name parcel_zones_identity
+
 tile
 ----
 tile open --name states --params states.mbtiles
