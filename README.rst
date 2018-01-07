@@ -175,6 +175,8 @@ layer identity --input-name parcels --other-name zones --output-workspace shps -
 
 layer update --input-name a:a --other-name b:b --output-workspace mem --output-name a_b_update
 
+layer symdifference --input-name a:a --other-name b:b --output-workspace mem --output-name a_b_symdifference
+
 tile
 ----
 tile open --name states --params states.mbtiles
