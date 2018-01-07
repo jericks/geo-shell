@@ -1437,4 +1437,31 @@ class LayerCommands implements CommandMarker {
             "Unable to find Layer ${inputLayerName}"
         }
     }
+
+    @CliCommand(value = "layer update", help = "Calculate the update between a Layer with another Layer")
+    String update(
+            @CliOption(key = "input-name", mandatory = true, help = "The Layer name") LayerName inputLayerName,
+            @CliOption(key = "other-name", mandatory = true, help = "The other Layer name") LayerName otherLayerName,
+            @CliOption(key = "output-workspace", mandatory = true, help = "The output Layer Workspace") WorkspaceName workspaceName,
+            @CliOption(key = "output-name", mandatory = true, help = "The output Layer name") String outputLayerName
+    ) throws Exception {
+        Layer inputLayer = catalog.layers[inputLayerName]
+        if (inputLayer) {
+            Layer otherLayer = catalog.layers[otherLayerName]
+            if (otherLayer) {
+                Workspace outputWorkspace = catalog.workspaces[workspaceName]
+                if (outputWorkspace) {
+                    Layer outputLayer = inputLayer.update(otherLayer, outLayer: outputLayerName, outWorkspace: outputWorkspace)
+                    catalog.layers[new LayerName(outputLayerName)] = outputWorkspace.get(outputLayerName)
+                    "Done calculating the update between ${inputLayerName} and ${otherLayerName} to create ${outputLayerName}!"
+                } else {
+                    "Unable to find Workspace ${workspaceName}"
+                }
+            } else {
+                "Unable to find other Layer ${otherLayerName}"
+            }
+        } else {
+            "Unable to find Layer ${inputLayerName}"
+        }
+    }
 }

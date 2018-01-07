@@ -1071,4 +1071,27 @@ class LayerCommandsTest {
         assertEquals "POLYGON ((120 100, 120 105, 125 105, 125 100, 120 100))", layer.getFeatures("A = 2 AND B = 4")[0].geom.wkt
         assertEquals "POLYGON ((120 105, 120 110, 130 110, 130 100, 125 100, 125 105, 120 105))", layer.getFeatures("A = 2 AND B IS NULL")[0].geom.wkt
     }
+
+    @Test void update() {
+        Catalog catalog = new Catalog()
+        createGdalLayerAlgebraTestLayers(catalog)
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        String result = cmds.update(new LayerName("a"), new LayerName("b"), new WorkspaceName("mem"), "a_b_update")
+        assertEquals "Done calculating the update between a and b to create a_b_update!", result
+        Layer layer = catalog.layers[new LayerName("a_b_update")]
+        // Check schema
+        assertEquals "a_b_update", layer.name
+        assertTrue layer.schema.has("A")
+        assertFalse layer.schema.has("B")
+        assertEquals "Polygon", layer.schema.geom.typ
+        // Check features
+        assertEquals 4, layer.count
+        assertEquals 1, layer.count("A = 1")
+        assertEquals 1, layer.count("A = 2")
+        assertEquals 2, layer.count("A IS NULL")
+        assertEquals "POLYGON ((90 105, 90 110, 100 110, 100 105, 97 105, 97 100, 95 100, 95 105, 90 105))", layer.getFeatures("A = 1")[0].geom.wkt
+        assertEquals "POLYGON ((120 105, 120 110, 130 110, 130 100, 125 100, 125 105, 120 105))", layer.getFeatures("A = 2")[0].geom.wkt
+        assertEquals "POLYGON ((85 95, 85 105, 95 105, 95 95, 85 95))", layer.getFeatures("A IS NULL")[0].geom.wkt
+        assertEquals "POLYGON ((97 95, 97 105, 125 105, 125 95, 97 95))", layer.getFeatures("A IS NULL")[1].geom.wkt
+    }
 }

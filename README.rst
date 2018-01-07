@@ -173,6 +173,8 @@ layer erase --input-name parcels --other-name zones --output-workspace shps --ou
 
 layer identity --input-name parcels --other-name zones --output-workspace shps --output-name parcel_zones_identity
 
+layer update --input-name a:a --other-name b:b --output-workspace mem --output-name a_b_update
+
 tile
 ----
 tile open --name states --params states.mbtiles
