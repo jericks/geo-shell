@@ -21,11 +21,13 @@
             <source>${project.basedir}/src/main/bin/geo-shell</source>
             <outputDirectory>/bin</outputDirectory>
             <filtered>true</filtered>
+            <fileMode>0755</fileMode>
         </file>
         <file>
             <source>${project.basedir}/src/main/bin/geo-shell.bat</source>
             <outputDirectory>/bin</outputDirectory>
             <filtered>true</filtered>
+            <fileMode>0755</fileMode>
         </file>
     </files>
     <fileSets>
