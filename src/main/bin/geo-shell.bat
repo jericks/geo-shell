@@ -29,7 +29,7 @@ set JAVA="%JAVA_HOME%\bin\java.exe"
 set CWD=%CD%
 cd %~dp0../lib
 
-%JAVA% -jar geo-shell-0.4-SNAPSHOT.jar %*
+%JAVA% -jar geo-shell-${project.version}.jar %*
 goto end
 
 :error

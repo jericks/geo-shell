@@ -16,14 +16,19 @@
             <useProjectArtifact>true</useProjectArtifact>
         </dependencySet>
     </dependencySets>
-    <fileSets>
-        <fileSet>
-            <directory>${project.basedir}/src/main/bin</directory>
+    <files>
+        <file>
+            <source>${project.basedir}/src/main/bin/geo-shell</source>
             <outputDirectory>/bin</outputDirectory>
-            <includes>
-                <include>geo-shell*</include>
-            </includes>
-        </fileSet>
+            <filtered>true</filtered>
+        </file>
+        <file>
+            <source>${project.basedir}/src/main/bin/geo-shell.bat</source>
+            <outputDirectory>/bin</outputDirectory>
+            <filtered>true</filtered>
+        </file>
+    </files>
+    <fileSets>
 		<fileSet>
             <directory>${project.basedir}/src/main/man</directory>
             <outputDirectory>/man/man1</outputDirectory>
