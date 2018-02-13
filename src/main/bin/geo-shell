@@ -20,4 +20,4 @@ if [ ! -e "$LIBDIR" ]; then
   exit
 fi
 
-"$JAVA" -jar $LIBDIR/geo-shell-${project.version}.jar "$@"
+"$JAVA" -jar `cygpath -wp $LIBDIR/geo-shell-${project.version}.jar` "$@"
