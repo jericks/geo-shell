@@ -20,4 +20,8 @@ if [ ! -e "$LIBDIR" ]; then
   exit
 fi
 
-"$JAVA" -jar `cygpath -wp $LIBDIR/geo-shell-${project.version}.jar` "$@"
+if [[ $OSTYPE == cygwin ]]; then
+  "$JAVA" -jar `cygpath -wp $LIBDIR/geo-shell-${project.version}.jar` "$@"
+else
+  "$JAVA" -jar $LIBDIR/geo-shell-${project.version}.jar "$@"
+fi
