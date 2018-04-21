@@ -1,0 +1,21 @@
+workspace open --name states --params states/states.shp
+
+layer open --workspace states --layer states
+
+workspace open --name memory --params memory
+
+layer dissolve --input-name states:states --output-workspace memory --output-name regions --field SUB_REGION
+
+style vector uniquevalues --layer regions --field SUB_REGION  --colors MutedTerrain --file regions.sld
+
+layer style set --name regions --style regions.sld
+
+map open --name map
+
+map add layer --name map --layer regions
+
+map draw --name map --background-color white
+
+map close --name map
+
+open --file image.png

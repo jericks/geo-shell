@@ -177,6 +177,8 @@ layer update --input-name a:a --other-name b:b --output-workspace mem --output-n
 
 layer symdifference --input-name a:a --other-name b:b --output-workspace mem --output-name a_b_symdifference
 
+layer dissolve --input-name states --output-workspace mem --output-name regions --field SUB_REGION
+
 tile
 ----
 tile open --name states --params states.mbtiles

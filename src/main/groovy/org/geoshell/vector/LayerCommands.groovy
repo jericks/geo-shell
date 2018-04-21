@@ -1493,4 +1493,35 @@ class LayerCommands implements CommandMarker {
             "Unable to find Layer ${inputLayerName}"
         }
     }
+
+    @CliCommand(value = "layer dissolve", help = "Dissolve the Features of a Layer by a Field.")
+    String dissolve(
+            @CliOption(key = "input-name", mandatory = true, help = "The Layer name") LayerName inputLayerName,
+            @CliOption(key = "output-workspace", mandatory = true, help = "The output Layer Workspace") WorkspaceName workspaceName,
+            @CliOption(key = "output-name", mandatory = true, help = "The output Layer name") String outputLayerName,
+            @CliOption(key = "field", mandatory = true, help = "The field to use to dissolve features") String fieldName,
+            @CliOption(key = "idField", mandatory = false, unspecifiedDefaultValue = "id", specifiedDefaultValue = "id", help = "The name of the id field") String idFieldName,
+            @CliOption(key = "countField", mandatory = false, unspecifiedDefaultValue = "count", specifiedDefaultValue = "count", help = "The name of the count field") String countFieldName
+    ) throws Exception {
+        Layer inputLayer = catalog.layers[inputLayerName]
+        Field field = inputLayer.schema.get(fieldName)
+        if (inputLayer) {
+            Workspace outputWorkspace = catalog.workspaces[workspaceName]
+            if (outputWorkspace) {
+                Layer outputLayer = inputLayer.dissolve(field,
+                    outWorkspace: outputWorkspace,
+                    outLayer: outputLayerName,
+                    idFieldName: idFieldName,
+                    countFieldName: countFieldName
+                )
+                catalog.layers[new LayerName(outputLayerName)] = outputWorkspace.get(outputLayerName)
+                "Done dissolving ${inputLayerName} to ${outputLayerName} by ${fieldName}!"
+            } else {
+                "Unable to find Workspace ${workspaceName}"
+            }
+        } else {
+            "Unable to find Layer ${inputLayerName}"
+        }
+    }
+
 }

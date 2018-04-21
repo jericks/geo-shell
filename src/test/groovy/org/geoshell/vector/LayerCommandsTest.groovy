@@ -1118,4 +1118,23 @@ class LayerCommandsTest {
         assertEquals "POLYGON ((85 95, 85 105, 90 105, 90 100, 95 100, 95 95, 85 95))", layer.getFeatures("A IS NULL AND B = 3")[0].geom.wkt
         assertEquals "POLYGON ((97 95, 97 100, 100 100, 100 105, 120 105, 120 100, 125 100, 125 95, 97 95))", layer.getFeatures("A IS NULL AND B = 4")[0].geom.wkt
     }
+
+    @Test void dissolve() {
+        Layer layer = new Shapefile(new File(getClass().getClassLoader().getResource("states.shp").toURI()))
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        catalog.layers[new LayerName("states")] = layer
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        String result = cmds.dissolve(
+            new LayerName("states"),
+            new WorkspaceName("mem"),
+            "regions",
+            "SUB_REGION",
+            "id",
+            "count"
+        )
+        assertEquals "Done dissolving states to regions by SUB_REGION!", result
+        Layer dissolvedLayer = catalog.layers[new LayerName("regions")]
+        assertEquals 9, dissolvedLayer.count
+    }
 }
