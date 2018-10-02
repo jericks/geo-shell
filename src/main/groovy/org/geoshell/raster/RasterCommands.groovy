@@ -603,4 +603,36 @@ class RasterCommands implements CommandMarker {
         }
     }
 
+    @CliCommand(value = "raster shadedrelief", help = "Create a shaded relief raster")
+    String shadedRelief(
+            @CliOption(key = "name", mandatory = true, help = "The Raster name") RasterName name,
+            @CliOption(key = "output-format", mandatory = true, help = "The output Format Workspace") FormatName formatName,
+            @CliOption(key = "output-name", mandatory = false, help = "The output Raster name") String outputRasterName,
+            @CliOption(key = "scale", mandatory = true, help = "The scale") double scale,
+            @CliOption(key = "altitude", mandatory = true, help = "The altitude") double altitude,
+            @CliOption(key = "azimuth", mandatory = true, help = "The azimuth") double azimuth,
+            @CliOption(key = "resx", mandatory = false, specifiedDefaultValue = "0.5", unspecifiedDefaultValue = "0.5", help = "The x resolution") double resX,
+            @CliOption(key = "resy", mandatory = false, specifiedDefaultValue = "0.5", unspecifiedDefaultValue = "0.5", help = "The y resolution") double resY,
+            @CliOption(key = "zetafactory", mandatory = false, specifiedDefaultValue = "1.0", unspecifiedDefaultValue = "1.0", help = "The zeta factory") double zetaFactory,
+            @CliOption(key = "algorithm", mandatory = false, specifiedDefaultValue = "DEFAULT", unspecifiedDefaultValue = "DEFAULT", help = "The x resolution") String algorithm
+    ) throws Exception {
+        Raster raster = catalog.rasters[name]
+        if (raster) {
+            Format format = catalog.formats[formatName]
+            if (format) {
+                Raster shadedReliefRaster = raster.createShadedRelief(scale, altitude, azimuth, resX: resX, resY: resY, zetaFactory: zetaFactory, algorithm: algorithm)
+                format.write(shadedReliefRaster)
+                if (!outputRasterName) {
+                    outputRasterName = formatName.name
+                }
+                catalog.rasters[new RasterName(outputRasterName)] = format.read(outputRasterName)
+                "Create shaded relief ${outputRasterName} from ${name}!"
+            } else {
+                "Unable to find Raster Format ${formatName}"
+            }
+        } else {
+            "Unable to find Raster ${name}"
+        }
+    }
+
 }

@@ -485,4 +485,28 @@ class RasterCommandsTest {
         assertEquals(214.0, outRaster.getValue(10,10,0), 0.1)
         assertEquals(212.0, outRaster.getValue(30,20,0), 0.1)
     }
+
+    @Test void shadedRelief() {
+        Catalog catalog = new Catalog()
+        File file = new File(getClass().getClassLoader().getResource("raster.tif").toURI())
+        Format format = Format.getFormat(file)
+        catalog.formats[new FormatName("raster")] = format
+        catalog.rasters[new RasterName("raster")] = catalog.formats[new FormatName("raster")].read()
+
+        File outFile = new File(temporaryFolder.newFolder("shaded"), "shaded.tif")
+        Format outFormat = Format.getFormat(outFile)
+        catalog.formats[new FormatName("shaded")] = outFormat
+
+        RasterCommands cmds = new RasterCommands(catalog: catalog)
+        cmds.open(new FormatName("raster"), new RasterName("raster"), "raster")
+
+        String result = cmds.shadedRelief(new RasterName("raster"), new FormatName("shaded"), "shaded", 1.0, 15.0, 15.0, 0.5, 0.5, 1.0, "DEFAULT")
+        assertEquals("Create shaded relief shaded from raster!", result)
+        Raster outRaster = catalog.rasters[new RasterName("shaded")]
+        assertNotNull outRaster
+        assertEquals(67.0, outRaster.getValue(0,0,0),  0.1)
+        assertEquals(67.0, outRaster.getValue(10,10,0), 0.1)
+        assertEquals(1.0, outRaster.getValue(30,20,0), 0.1)
+    }
+
 }

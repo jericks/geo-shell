@@ -1,0 +1,17 @@
+format open --name raster --input raster.tif
+
+raster open --format raster --raster raster --name raster
+
+format open --name shaded --input shaded.tif
+
+raster shadedrelief --name raster --output-format shaded --output-name shaded --scale 1.0 --altitude 25.0 --azimuth 35.0
+
+map open --name map
+
+map add raster --name map --raster shaded
+
+map draw --name map
+
+map close --name map
+
+open --file image.png

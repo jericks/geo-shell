@@ -255,6 +255,8 @@ raster divide raster --name1 topo --name2 reduce --output-format topo_new --outp
 
 raster stylize --name raster --output-format raster_stylized --output-name raster_stylized
 
+raster shadedrelief --name raster --output-format shaded --output-name shaded --scale 1.0 --altitude 25.0 --azimuth 35.0
+
 style
 -----
 style create --params "stroke=navy stroke=width=5" --file earth_outline.sld
