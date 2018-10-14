@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.geoshell</groupId>
     <artifactId>geo-shell</artifactId>
-    <version>0.5-SNAPSHOT</version>
+    <version>0.5.0</version>
     <packaging>jar</packaging>
     <name>geo-shell</name>
     <url>http://maven.apache.org</url>
@@ -14,7 +14,7 @@
         <dependency>
             <groupId>org.geoscript</groupId>
             <artifactId>geoscript-groovy</artifactId>
-            <version>1.12-SNAPSHOT</version>
+            <version>1.12.0</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.shell</groupId>
