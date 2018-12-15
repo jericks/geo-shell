@@ -118,6 +118,7 @@ class TileCommands implements CommandMarker {
             @CliOption(key = "start", mandatory = true, help = "The map name") int startZoom,
             @CliOption(key = "end", mandatory = true, help = "The map name") int endZoom,
             @CliOption(key = "bounds", mandatory = false, help = "The map name") String bounds,
+            @CliOption(key = "metatile", mandatory = false, help = "The metatile width,height") String metatileStr,
             @CliOption(key = "missingOnly", specifiedDefaultValue = "false", unspecifiedDefaultValue = "false", mandatory = false, help = "The map name") boolean missingOnly,
             @CliOption(key = "verbose", specifiedDefaultValue = "false", unspecifiedDefaultValue = "false", mandatory = false, help = "The map name") boolean verbose
     ) throws Exception {
@@ -127,8 +128,15 @@ class TileCommands implements CommandMarker {
            if (map) {
                 TileRenderer tileRenderer = TileLayer.getTileRenderer(tileLayer, map.getLayers())
                 TileGenerator generator = new TileGenerator(verbose: verbose)
+                Map metatile = [:]
+                if (metatileStr) {
+                    List parts = metatileStr.split(",")
+                    metatile.width = Long.parseLong(parts[0])
+                    metatile.height = Long.parseLong(parts[1])
+                }
                 generator.generate(tileLayer, tileRenderer, startZoom, endZoom,
                         bounds: bounds ? Bounds.fromString(bounds) : null,
+                        metatile: metatile,
                         missingOnly: missingOnly
                 )
                 "Tiles generated!"

@@ -14,4 +14,6 @@ map add layer --name countries --layer naturalearth:countries
 
 tile generate --name countries --map countries --start 0 --end 3 --verbose true
 
+tile generate --name countries --map countries --start 4 --end 4 --metatile "8,8" --verbose true
+
 tile close --name countries

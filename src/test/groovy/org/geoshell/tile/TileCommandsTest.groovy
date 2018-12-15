@@ -85,7 +85,26 @@ class TileCommandsTest {
         TileCommands cmds = new TileCommands(catalog: catalog)
         File file = new File(temporaryFolder.newFolder("world"), "world.mbtiles")
         cmds.open(new TileName("world"), file.absolutePath)
-        String result = cmds.generate(new TileName("world"), new MapName("grid"),0,1,null,false,false)
+        String result = cmds.generate(new TileName("world"), new MapName("grid"),0,1,null,null,false,false)
+        assertEquals "Tiles generated!", result
+        TileLayer tilelayer = catalog.tiles[new TileName("world")]
+        assertNotNull tilelayer.get(0,0,0).data
+        assertNotNull tilelayer.get(1,1,1).data
+    }
+
+    @Test void generateWithMetatiles() {
+        Catalog catalog = new Catalog()
+
+        Layer layer = new Shapefile(new File(getClass().getClassLoader().getResource("grid.shp").toURI()))
+        catalog.layers[new LayerName("grid")] = layer
+        MapCommands mapCommands = new MapCommands(catalog: catalog)
+        mapCommands.open(new MapName("grid"))
+        mapCommands.addLayer(new MapName("grid"), new LayerName("grid"), null)
+
+        TileCommands cmds = new TileCommands(catalog: catalog)
+        File file = new File(temporaryFolder.newFolder("world"), "world.mbtiles")
+        cmds.open(new TileName("world"), file.absolutePath)
+        String result = cmds.generate(new TileName("world"), new MapName("grid"),0,2,null,"4,4",false,false)
         assertEquals "Tiles generated!", result
         TileLayer tilelayer = catalog.tiles[new TileName("world")]
         assertNotNull tilelayer.get(0,0,0).data
@@ -104,7 +123,7 @@ class TileCommandsTest {
         TileCommands cmds = new TileCommands(catalog: catalog)
         File file = new File(temporaryFolder.newFolder("world"), "world.mbtiles")
         cmds.open(new TileName("world"), file.absolutePath)
-        String result = cmds.generate(new TileName("world"), new MapName("grid"),0,1,null,false,false)
+        String result = cmds.generate(new TileName("world"), new MapName("grid"),0,1,null,null,false,false)
         assertEquals "Tiles generated!", result
         TileLayer tilelayer = catalog.tiles[new TileName("world")]
         assertNotNull tilelayer.get(0,0,0).data
@@ -132,7 +151,7 @@ class TileCommandsTest {
         TileCommands cmds = new TileCommands(catalog: catalog)
         File file = new File(temporaryFolder.newFolder("world"), "world.mbtiles")
         cmds.open(new TileName("world"), file.absolutePath)
-        cmds.generate(new TileName("world"), new MapName("grid"),0,2,null,false,false)
+        cmds.generate(new TileName("world"), new MapName("grid"),0,2,null,null,false,false)
 
         catalog.formats[new FormatName("osm1")] = new GeoTIFF(temporaryFolder.newFile("osm1.tif"))
         catalog.formats[new FormatName("osm2")] = new GeoTIFF(temporaryFolder.newFile("osm2.tif"))
@@ -170,7 +189,7 @@ class TileCommandsTest {
         MapCommands mapCommands = new MapCommands(catalog: catalog)
         mapCommands.open(new MapName("grid"))
         mapCommands.addLayer(new MapName("grid"), new LayerName("grid"), null)
-        cmds.generate(new TileName("world"), new MapName("grid"),0,2,null,false,false)
+        cmds.generate(new TileName("world"), new MapName("grid"),0,2,null,null,false,false)
 
         // Zoom Level
         String result = cmds.vectorGrid(new TileName("world"), new WorkspaceName("workspace"), "grid_z2", null, 400, 400, 2, -1, -1, -1, -1)
