@@ -635,4 +635,28 @@ class RasterCommands implements CommandMarker {
         }
     }
 
+    @CliCommand(value = "raster mosaic", help = "Mosaic two Rasters together")
+    String mosaic(
+            @CliOption(key = "name1", mandatory = true, help = "The Raster name") RasterName name1,
+            @CliOption(key = "name2", mandatory = true, help = "The Raster name") RasterName name2,
+            @CliOption(key = "output-format", mandatory = true, help = "The output Format Workspace") FormatName formatName,
+            @CliOption(key = "output-name", mandatory = false, help = "The output Raster name") String outputRasterName
+    ) throws Exception {
+        Raster raster1 = catalog.rasters[name1]
+        Raster raster2 = catalog.rasters[name2]
+        Format format = catalog.formats[formatName]
+        if (format) {
+            Raster mosaicRaster = Raster.mosaic([raster1, raster2])
+            format.write(mosaicRaster)
+            if (!outputRasterName) {
+                outputRasterName = formatName.name
+            }
+            catalog.rasters[new RasterName(outputRasterName)] = format.read(outputRasterName)
+            "Mosaic ${name1} and ${name2} to create ${outputRasterName}!"
+        } else {
+            "Unable to find Raster Format ${formatName}"
+        }
+
+    }
+
 }

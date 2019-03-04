@@ -1,5 +1,6 @@
 package org.geoshell.raster
 
+import geoscript.geom.Bounds
 import geoscript.layer.Format
 import geoscript.layer.Layer
 import geoscript.layer.Raster
@@ -507,6 +508,33 @@ class RasterCommandsTest {
         assertEquals(67.0, outRaster.getValue(0,0,0),  0.1)
         assertEquals(67.0, outRaster.getValue(10,10,0), 0.1)
         assertEquals(1.0, outRaster.getValue(30,20,0), 0.1)
+    }
+
+    @Test void mosaic() {
+
+        Catalog catalog = new Catalog()
+        File file1 = new File(getClass().getClassLoader().getResource("mosaic/alki2.tif").toURI())
+        Format format1 = Format.getFormat(file1)
+        catalog.formats[new FormatName("raster1")] = format1
+        catalog.rasters[new RasterName("raster1")] = catalog.formats[new FormatName("raster1")].read()
+
+        File file2 = new File(getClass().getClassLoader().getResource("mosaic/alki3.tif").toURI())
+        Format format2 = Format.getFormat(file2)
+        catalog.formats[new FormatName("raster2")] = format2
+        catalog.rasters[new RasterName("raster2")] = catalog.formats[new FormatName("raster2")].read()
+
+        File outFile = new File(temporaryFolder.newFolder("mosaic"), "mosaic.tif")
+        Format outFormat = Format.getFormat(outFile)
+        catalog.formats[new FormatName("mosaic")] = outFormat
+
+        RasterCommands cmds = new RasterCommands(catalog: catalog)
+        cmds.open(new FormatName("raster1"), new RasterName("raster1"), "raster1")
+        cmds.open(new FormatName("raster2"), new RasterName("raster2"), "raster2")
+
+        String result = cmds.mosaic(new RasterName("raster1"), new RasterName("raster2"), new FormatName("mosaic"), "mosaic")
+        assertEquals("Mosaic raster1 and raster2 to create mosaic!", result)
+        Raster outRaster = catalog.rasters[new RasterName("mosaic")]
+        assertNotNull outRaster
     }
 
 }

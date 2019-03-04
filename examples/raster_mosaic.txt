@@ -1,0 +1,21 @@
+format open --input alki2.tif --name alki2
+
+raster open --format alki2 --raster alki2 --name alki2
+
+format open --input alki3.tif --name alki3
+
+raster open --format alki3 --raster alki3 --name alki3
+
+format open --input mosaic.tif --name mosaic
+
+raster mosaic --name1 alki2 --name2 alki3 --output-format mosaic --output-name mosaic
+
+map open --name map
+
+map add raster --name map --raster mosaic
+
+map draw --name map
+
+map close --name map
+
+open --file image.png

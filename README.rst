@@ -257,6 +257,8 @@ raster stylize --name raster --output-format raster_stylized --output-name raste
 
 raster shadedrelief --name raster --output-format shaded --output-name shaded --scale 1.0 --altitude 25.0 --azimuth 35.0
 
+raster mosaic --name1 raster1 --name2 raster2 --output-format mosaic --output-name mosaic
+
 style
 -----
 style create --params "stroke=navy stroke=width=5" --file earth_outline.sld
