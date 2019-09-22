@@ -1137,4 +1137,21 @@ class LayerCommandsTest {
         Layer dissolvedLayer = catalog.layers[new LayerName("regions")]
         assertEquals 9, dissolvedLayer.count
     }
+
+    @Test void pointsAlongLine() {
+        Layer layer = new Property(new File(getClass().getClassLoader().getResource("lines.properties").toURI()))
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        catalog.layers[new LayerName("lines")] = layer
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        String result = cmds.pointsAlongLine(
+                new LayerName("lines"),
+                new WorkspaceName("mem"),
+                "points",
+                1.0
+        )
+        assertEquals "Done placing points along lines every 1.0 to create points!", result
+        Layer pointsLayer = catalog.layers[new LayerName("points")]
+        assertEquals 20, pointsLayer.count
+    }
 }

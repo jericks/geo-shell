@@ -179,6 +179,8 @@ layer symdifference --input-name a:a --other-name b:b --output-workspace mem --o
 
 layer dissolve --input-name states --output-workspace mem --output-name regions --field SUB_REGION
 
+layer points along lines --input-name lines:lines --output-workspace mem --output-name points --distance 0.0001
+
 tile
 ----
 tile open --name states --params states.mbtiles

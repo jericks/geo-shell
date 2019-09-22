@@ -1,0 +1,28 @@
+workspace open --name lines --params lines.shp
+
+layer open --workspace lines --layer lines
+
+workspace open --name mem --params memory
+
+layer points along lines --input-name lines:lines --output-workspace mem --output-name points --distance 0.0001
+
+style vector default --layer lines:lines --color black --file lines.sld
+
+style vector default --layer points --color green --file points.sld
+
+layer style set --name lines:lines --style lines.sld
+
+layer style set --name points --style points.sld
+
+map open --name map
+
+map add layer --name map --layer lines:lines
+
+map add layer --name map --layer points
+
+map draw --name map --projection EPSG:4326
+
+map close --name map
+
+open --file image.png
+

@@ -6,6 +6,8 @@ import geoscript.feature.Schema
 import geoscript.geom.Bounds
 import geoscript.geom.Geometry
 import geoscript.geom.GeometryCollection
+import geoscript.geom.LineString
+import geoscript.geom.MultiLineString
 import geoscript.geom.MultiPoint
 import geoscript.geom.Point
 import geoscript.layer.Layer
@@ -1516,6 +1518,56 @@ class LayerCommands implements CommandMarker {
                 )
                 catalog.layers[new LayerName(outputLayerName)] = outputWorkspace.get(outputLayerName)
                 "Done dissolving ${inputLayerName} to ${outputLayerName} by ${fieldName}!"
+            } else {
+                "Unable to find Workspace ${workspaceName}"
+            }
+        } else {
+            "Unable to find Layer ${inputLayerName}"
+        }
+    }
+
+    @CliCommand(value = "layer points along lines", help = "Create points along lines")
+    String pointsAlongLine(
+            @CliOption(key = "input-name", mandatory = true, help = "The Layer name") LayerName inputLayerName,
+            @CliOption(key = "output-workspace", mandatory = true, help = "The output Layer Workspace") WorkspaceName workspaceName,
+            @CliOption(key = "output-name", mandatory = true, help = "The output Layer name") String outputLayerName,
+            @CliOption(key = "distance", mandatory = true, help = "The distance between points") double distance
+    ) throws Exception {
+        Layer inputLayer = catalog.layers[inputLayerName]
+        if (inputLayer) {
+            Workspace outputWorkspace = catalog.workspaces[workspaceName]
+            if (outputWorkspace) {
+                Layer outputLayer = outputWorkspace.create(inputLayer.schema.changeGeometryType("point", outputLayerName))
+
+                int id = 1
+                outputLayer.withWriter { geoscript.layer.Writer w ->
+                    inputLayer.eachFeature { Feature f ->
+                        Map values = [:]
+                        List<Point> points = []
+                        f.attributes.each { k, v ->
+                            if (v instanceof Geometry) {
+                                Geometry linearGeometry = v as Geometry
+                                if (linearGeometry instanceof LineString) {
+                                    points.addAll((linearGeometry as LineString).createPointsAlong(distance).points)
+                                } else if (linearGeometry instanceof MultiLineString) {
+                                    points.addAll((linearGeometry as MultiLineString).createPointsAlong(distance).points)
+                                }
+                            } else {
+                                values[k] = v
+                            }
+                        }
+                        points.each { Point point ->
+                            Map pointValues = [:]
+                            pointValues.putAll(values)
+                            pointValues.put(f.schema.geom.name, point)
+                            id++
+                            w.add(outputLayer.schema.feature(pointValues, "${id}"))
+                        }
+                    }
+                }
+
+                catalog.layers[new LayerName(outputLayerName)] = outputWorkspace.get(outputLayerName)
+                "Done placing points along ${inputLayerName} every ${distance} to create ${outputLayerName}!"
             } else {
                 "Unable to find Workspace ${workspaceName}"
             }
