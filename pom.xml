@@ -9,6 +9,10 @@
     <url>http://maven.apache.org</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <asciidoctor.maven.plugin.version>1.5.7.1</asciidoctor.maven.plugin.version>
+        <asciidoctorj.version>1.6.1</asciidoctorj.version>
+        <asciidoctorj.pdf.version>1.5.0-alpha.16</asciidoctorj.pdf.version>
+        <jruby.version>9.2.5.0</jruby.version>
     </properties>
     <dependencies>
         <dependency>
@@ -201,6 +205,77 @@
                                     </excludes>
                                 </filter>
                             </filters>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.asciidoctor</groupId>
+                <artifactId>asciidoctor-maven-plugin</artifactId>
+                <version>${asciidoctor.maven.plugin.version}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.asciidoctor</groupId>
+                        <artifactId>asciidoctorj-pdf</artifactId>
+                        <version>${asciidoctorj.pdf.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.jruby</groupId>
+                        <artifactId>jruby-complete</artifactId>
+                        <version>${jruby.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.asciidoctor</groupId>
+                        <artifactId>asciidoctorj</artifactId>
+                        <version>${asciidoctorj.version}</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <sourceDirectory>src/main/docs</sourceDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>output-html</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>process-asciidoc</goal>
+                        </goals>
+                        <configuration>
+                            <backend>html5</backend>
+                            <sourceHighlighter>coderay</sourceHighlighter>
+                            <relativeBaseDir>true</relativeBaseDir>
+                            <imagesDir>./images</imagesDir>
+                            <attributes>
+                                <sourcedir>${project.basedir}/src/main/groovy</sourcedir>
+                                <basedir>${project.basedir}/src/main/docs</basedir>
+                                <imagesdir>./images</imagesdir>
+                                <toc>left</toc>
+                                <toclevels>4</toclevels>
+                                <icons>font</icons>
+                                <sectanchors>true</sectanchors>
+                                <idprefix/>
+                                <idseparator>-</idseparator>
+                                <docinfo1>true</docinfo1>
+                            </attributes>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-pdf-doc</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>process-asciidoc</goal>
+                        </goals>
+                        <configuration>
+                            <backend>pdf</backend>
+                            <sourceHighlighter>rouge</sourceHighlighter>
+                            <attributes>
+                                <sourcedir>${project.basedir}/src/main/groovy</sourcedir>
+                                <icons>font</icons>
+                                <pagenums/>
+                                <toc/>
+                                <idprefix/>
+                                <idseparator>-</idseparator>
+                            </attributes>
                         </configuration>
                     </execution>
                 </executions>

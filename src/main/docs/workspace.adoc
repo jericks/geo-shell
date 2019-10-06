@@ -1,0 +1,46 @@
+ifndef::imagesdir[:imagesdir: images]
+
+== Workspace
+
+Workspaces hold vector layers.  A Workspace can be a GeoPackage database,
+a directory of Shapefiles, or a PostGIS database.
+
+=== Basics
+
+You can open, close, and list Workspaces.  The eariest Workspace to open
+is an in memory Workspace.
+
+.Open a Workspace
+include::output/workspace_basics_open_command.txt[]
+include::output/workspace_basics_open_result.txt[]
+
+You can open a Workspace with --params or connection parameters.
+You can give it a name with --name flag.
+
+.List open Workspaces
+include::output/workspace_basics_list_command.txt[]
+include::output/workspace_basics_list_result.txt[]
+
+Listing open Workspaces give you the name and the type Workspace.
+
+.Close a Workspace
+include::output/workspace_basics_close_command.txt[]
+include::output/workspace_basics_close_result.txt[]
+
+Once you close a Workspace by name it will no longer appear with the list command.
+
+=== Layers
+
+In this example, we will open a GeoPackage database filled with data from Natural Earth.
+
+.Open a Workspace
+include::output/workspace_layers_open_command.txt[]
+include::output/workspace_layers_open_result.txt[]
+
+.List open Workspaces
+include::output/workspace_layers_layers_command.txt[]
+include::output/workspace_layers_layers_result.txt[]
+
+.Close a Workspace
+include::output/workspace_layers_close_command.txt[]
+include::output/workspace_layers_close_result.txt[]

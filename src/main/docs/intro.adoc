@@ -1,0 +1,20 @@
+ifndef::imagesdir[:imagesdir: images]
+
+== Introduction
+
+geo-shell is an interactive shell for geospatial analysis.
+
+geo-shell has modules for dealing with *vectors*, *rasters*, *tiles*, *maps*, and *styles*.
+
+For *vector* layers, you can use *workspace* commands access layers of spatial data
+in datasets like shapefiles, geopackages, or postgis databases.  With *layer* commands
+you can perform geoprocessing functions like calculating centroids or buffer features.
+
+For *raster* layers, you can use *format* commands access individual rasters from geotifs or world images.
+With *raster* commands you can perform mosaic, raster algebra, or crop functions.
+
+The *tile* commands let you create tile layers, get tiles, and get rasters from tiles.
+
+The *style* commands let you create styles for vector layers and raster.
+
+The *map* commands allow you to visualize vector, raster, and tile layers.

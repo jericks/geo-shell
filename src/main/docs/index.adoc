@@ -1,0 +1,8 @@
+= geo-shell
+Jared Erickson
+v0.7-SNAPSHOT
+ifndef::imagesdir[:imagesdir: images]
+
+include::intro.adoc[]
+
+include::workspace.adoc[]
