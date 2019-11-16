@@ -1,0 +1,13 @@
+workspace open --name layers --params memory
+
+layer graticule oval --workspace layers --name ovals --bounds -180,-90,180,90 --size 10
+
+map open --name graticule
+
+map add layer --name graticule --layer ovals
+
+map draw --name graticule
+
+map close --name graticule
+
+open --file image.png

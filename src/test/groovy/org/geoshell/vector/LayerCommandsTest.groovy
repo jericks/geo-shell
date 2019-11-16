@@ -1154,4 +1154,19 @@ class LayerCommandsTest {
         Layer pointsLayer = catalog.layers[new LayerName("points")]
         assertEquals 20, pointsLayer.count
     }
+
+    @Test void createOvalGraticule() {
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        String result = cmds.createOvalGraticule(
+                new WorkspaceName("mem"),
+                "ovals",
+                "-180,-90,180,90",
+                10,
+        )
+        assertEquals "Created Graticule Layer ovals!", result
+        Layer layer = catalog.layers[new LayerName("ovals")]
+        assertEquals 648, layer.count
+    }
 }

@@ -10,6 +10,7 @@ import geoscript.geom.LineString
 import geoscript.geom.MultiLineString
 import geoscript.geom.MultiPoint
 import geoscript.geom.Point
+import geoscript.layer.Graticule
 import geoscript.layer.Layer
 import geoscript.layer.Writer as LayerWriter
 import geoscript.proj.Projection
@@ -1573,6 +1574,25 @@ class LayerCommands implements CommandMarker {
             }
         } else {
             "Unable to find Layer ${inputLayerName}"
+        }
+    }
+
+    @CliCommand(value = "layer graticule oval", help = "Create a oval graticule.")
+    String createOvalGraticule(
+            @CliOption(key = "workspace", mandatory = true, help = "The Workspace name") WorkspaceName workspaceName,
+            @CliOption(key = "name", mandatory = true, help = "The new Layer name") String name,
+            @CliOption(key = "bounds", mandatory = true, help = "The bounds") String boundsStr,
+            @CliOption(key = "size", mandatory = true, help = "The size") double size
+    ) throws Exception {
+        Workspace workspace = catalog.workspaces[workspaceName]
+        if (workspace) {
+            Bounds bounds = Bounds.fromString(boundsStr)
+            Layer layer = Graticule.createOvals(bounds, size)
+            // Add Layer to Catalog
+            catalog.layers[new LayerName(name)] = layer
+            "Created Graticule Layer ${name}!"
+        } else {
+            "Unable to find Workspace ${workspaceName}"
         }
     }
 

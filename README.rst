@@ -181,6 +181,8 @@ layer dissolve --input-name states --output-workspace mem --output-name regions 
 
 layer points along lines --input-name lines:lines --output-workspace mem --output-name points --distance 0.0001
 
+layer graticule oval --workspace mem --name ovals --bounds -180,-90,180,90 --size 10
+
 tile
 ----
 tile open --name states --params states.mbtiles
