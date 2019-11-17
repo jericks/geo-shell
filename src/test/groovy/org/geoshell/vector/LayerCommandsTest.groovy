@@ -1163,10 +1163,26 @@ class LayerCommandsTest {
                 new WorkspaceName("mem"),
                 "ovals",
                 "-180,-90,180,90",
-                10,
+                20,
         )
-        assertEquals "Created Graticule Layer ovals!", result
+        assertEquals "Created Oval Graticule Layer ovals!", result
         Layer layer = catalog.layers[new LayerName("ovals")]
-        assertEquals 648, layer.count
+        assertEquals 162, layer.count
+    }
+
+    @Test void createSqaureGraticule() {
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        String result = cmds.createSquareGraticule(
+                new WorkspaceName("mem"),
+                "squares",
+                "-180,-90,180,90",
+                20,
+                -1
+        )
+        assertEquals "Created Square Graticule Layer squares!", result
+        Layer layer = catalog.layers[new LayerName("squares")]
+        assertEquals 162, layer.count
     }
 }

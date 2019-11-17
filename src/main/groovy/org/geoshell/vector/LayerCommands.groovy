@@ -1590,7 +1590,27 @@ class LayerCommands implements CommandMarker {
             Layer layer = Graticule.createOvals(bounds, size)
             // Add Layer to Catalog
             catalog.layers[new LayerName(name)] = layer
-            "Created Graticule Layer ${name}!"
+            "Created Oval Graticule Layer ${name}!"
+        } else {
+            "Unable to find Workspace ${workspaceName}"
+        }
+    }
+
+    @CliCommand(value = "layer graticule square", help = "Create a square graticule.")
+    String createSquareGraticule(
+            @CliOption(key = "workspace", mandatory = true, help = "The Workspace name") WorkspaceName workspaceName,
+            @CliOption(key = "name", mandatory = true, help = "The new Layer name") String name,
+            @CliOption(key = "bounds", mandatory = true, help = "The bounds") String boundsStr,
+            @CliOption(key = "length", mandatory = true, help = "The length") double length,
+            @CliOption(key = "spacing", mandatory = false, help = "The spacing", unspecifiedDefaultValue = "-1", specifiedDefaultValue = "-1") double spacing
+    ) throws Exception {
+        Workspace workspace = catalog.workspaces[workspaceName]
+        if (workspace) {
+            Bounds bounds = Bounds.fromString(boundsStr)
+            Layer layer = Graticule.createSquares(bounds, length, spacing)
+            // Add Layer to Catalog
+            catalog.layers[new LayerName(name)] = layer
+            "Created Square Graticule Layer ${name}!"
         } else {
             "Unable to find Workspace ${workspaceName}"
         }

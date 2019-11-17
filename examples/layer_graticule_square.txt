@@ -1,0 +1,31 @@
+workspace open --name layers --params memory
+
+layer graticule square --workspace layers --name squares --bounds -180,-90,180,90 --length 20
+
+style vector default --layer squares --color #1E90FF --opacity 0.30 --file squares.sld
+
+layer style set --name squares --style squares.sld
+
+workspace open --name naturalearth --params naturalearth.gpkg
+
+layer open --workspace naturalearth --layer countries --name countries
+
+layer style set --name countries --style countries.sld
+
+layer open --workspace naturalearth --layer ocean --name ocean
+
+layer style set --name ocean --style ocean.sld
+
+map open --name graticule
+
+map add layer --name graticule --layer ocean
+
+map add layer --name graticule --layer countries
+
+map add layer --name graticule --layer squares
+
+map draw --name graticule
+
+map close --name graticule
+
+open --file image.png
