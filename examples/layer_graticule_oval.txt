@@ -1,8 +1,26 @@
 workspace open --name layers --params memory
 
-layer graticule oval --workspace layers --name ovals --bounds -180,-90,180,90 --size 10
+layer graticule oval --workspace layers --name ovals --bounds -180,-90,180,90 --size 20
+
+style vector default --layer ovals --color #1E90FF --opacity 0.30 --file ovals.sld
+
+layer style set --name ovals --style ovals.sld
+
+workspace open --name naturalearth --params naturalearth.gpkg
+
+layer open --workspace naturalearth --layer countries --name countries
+
+layer style set --name countries --style countries.sld
+
+layer open --workspace naturalearth --layer ocean --name ocean
+
+layer style set --name ocean --style ocean.sld
 
 map open --name graticule
+
+map add layer --name graticule --layer ocean
+
+map add layer --name graticule --layer countries
 
 map add layer --name graticule --layer ovals
 
