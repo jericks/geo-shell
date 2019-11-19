@@ -5,8 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.8">
-<meta name="author" content="Jared Erickson">
-<title>geo-shell</title>
+<title>Introduction</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -525,30 +524,10 @@ table.CodeRay td.code>pre{padding:0}
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>geo-shell</h1>
-<div class="details">
-<span id="author" class="author">Jared Erickson</span><br>
-<span id="revnumber">version 0.7-SNAPSHOT</span>
-</div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#introduction">Introduction</a></li>
-<li><a href="#workspace">Workspace</a>
-<ul class="sectlevel2">
-<li><a href="#basics">Basics</a></li>
-<li><a href="#layers">Layers</a></li>
-</ul>
-</li>
-<li><a href="#layer">Layer</a>
-<ul class="sectlevel2">
-<li><a href="#graticule">Graticule</a>
-<ul class="sectlevel3">
-<li><a href="#square">Square</a></li>
-</ul>
-</li>
-</ul>
-</li>
 </ul>
 </div>
 </div>
@@ -582,151 +561,9 @@ With <strong>raster</strong> commands you can perform mosaic, raster algebra, or
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="workspace"><a class="anchor" href="#workspace"></a>Workspace</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Workspaces hold vector layers.  A Workspace can be a GeoPackage database,
-a directory of Shapefiles, or a PostGIS database.</p>
-</div>
-<div class="sect2">
-<h3 id="basics"><a class="anchor" href="#basics"></a>Basics</h3>
-<div class="paragraph">
-<p>You can open, close, and list Workspaces.  The eariest Workspace to open
-is an in memory Workspace.</p>
-</div>
-<div class="paragraph">
-<div class="title">Open a Workspace</div>
-<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">mem</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
-<span class="green">Workspace mem opened!</span><br></p>
-</div>
-<div class="paragraph">
-<p>You can open a Workspace with --params or connection parameters.
-You can give it a name with --name flag.</p>
-</div>
-<div class="paragraph">
-<div class="title">List open Workspaces</div>
-<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace list</strong> <br>
-<span class="green">mem = Memory</span><br></p>
-</div>
-<div class="paragraph">
-<p>Listing open Workspaces give you the name and the type Workspace.</p>
-</div>
-<div class="paragraph">
-<div class="title">Close a Workspace</div>
-<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace close</strong> <span class="gray">--name</span> <span class="silver">mem</span><br>
-<span class="green">Workspace mem closed!</span><br></p>
-</div>
-<div class="paragraph">
-<p>Once you close a Workspace by name it will no longer appear with the list command.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="layers"><a class="anchor" href="#layers"></a>Layers</h3>
-<div class="paragraph">
-<p>In this example, we will open a GeoPackage database filled with data from Natural Earth.</p>
-</div>
-<div class="paragraph">
-<div class="title">Open a Workspace</div>
-<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">src/test/resources/naturalearth.gpkg</span><br>
-<span class="green">Workspace naturalearth opened!</span><br></p>
-</div>
-<div class="paragraph">
-<div class="title">List open Workspaces</div>
-<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace layers</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span><br>
-<span class="green">countries</span><br>
-<span class="green">ocean</span><br>
-<span class="green">places</span><br>
-<span class="green">states</span><br></p>
-</div>
-<div class="paragraph">
-<div class="title">Close a Workspace</div>
-<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace close</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span><br>
-<span class="green">Workspace naturalearth closed!</span><br></p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="layer"><a class="anchor" href="#layer"></a>Layer</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="graticule"><a class="anchor" href="#graticule"></a>Graticule</h3>
-<div class="sect3">
-<h4 id="square"><a class="anchor" href="#square"></a>Square</h4>
-<div class="paragraph">
-<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">layers</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
-<span class="green">Workspace layers opened!</span><br></p>
-</div>
-<div class="paragraph">
-<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer graticule square</strong> <span class="gray">--workspace</span> <span class="silver">layers</span> <span class="gray">--name</span> <span class="silver">squares</span> <span class="gray">--bounds</span> <span class="silver">-180,-90,180,90</span> <span class="gray">--length</span> <span class="silver">20</span><br>
-<span class="green">Created Square Graticule Layer squares!</span><br></p>
-</div>
-<div class="paragraph">
-<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">squares</span> <span class="gray">--color</span> <span class="silver">#1E90FF</span> <span class="gray">--opacity</span> <span class="silver">0.30</span> <span class="gray">--file</span> <span class="silver">examples/squares.sld</span><br>
-<span class="green">Default Vector Style for squares written to /home/travis/build/jericks/geo-shell/examples/squares.sld!</span><br></p>
-</div>
-<div class="paragraph">
-<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">squares</span> <span class="gray">--style</span> <span class="silver">examples/squares.sld</span><br>
-<span class="green">Style /home/travis/build/jericks/geo-shell/examples/squares.sld set on squares</span><br></p>
-</div>
-<div class="paragraph">
-<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">examples/naturalearth.gpkg</span><br>
-<span class="green">Workspace naturalearth opened!</span><br></p>
-</div>
-<div class="paragraph">
-<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">countries</span> <span class="gray">--name</span> <span class="silver">countries</span><br>
-<span class="green">Opened Workspace naturalearth Layer countries as countries</span><br></p>
-</div>
-<div class="paragraph">
-<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">countries</span> <span class="gray">--style</span> <span class="silver">examples/countries.sld</span><br>
-<span class="green">Style /home/travis/build/jericks/geo-shell/examples/countries.sld set on countries</span><br></p>
-</div>
-<div class="paragraph">
-<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">ocean</span> <span class="gray">--name</span> <span class="silver">ocean</span><br>
-<span class="green">Opened Workspace naturalearth Layer ocean as ocean</span><br></p>
-</div>
-<div class="paragraph">
-<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">ocean</span> <span class="gray">--style</span> <span class="silver">examples/ocean.sld</span><br>
-<span class="green">Style /home/travis/build/jericks/geo-shell/examples/ocean.sld set on ocean</span><br></p>
-</div>
-<div class="paragraph">
-<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">graticule</span><br>
-<span class="green">Map graticule opened!</span><br></p>
-</div>
-<div class="paragraph">
-<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">graticule</span> <span class="gray">--layer</span> <span class="silver">ocean</span><br>
-<span class="green">Added ocean layer to map graticule</span><br></p>
-</div>
-<div class="paragraph">
-<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">graticule</span> <span class="gray">--layer</span> <span class="silver">countries</span><br>
-<span class="green">Added countries layer to map graticule</span><br></p>
-</div>
-<div class="paragraph">
-<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">graticule</span> <span class="gray">--layer</span> <span class="silver">squares</span><br>
-<span class="green">Added squares layer to map graticule</span><br></p>
-</div>
-<div class="paragraph">
-<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">graticule</span> <span class="gray">--file</span> <span class="silver">examples/square_graticules.png</span><br>
-<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/square_graticules.png!</span><br></p>
-</div>
-<div class="paragraph">
-<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">graticule</span><br>
-<span class="green">Map graticule closed!</span><br></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="./images/square_graticules.png" alt="square graticules">
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 0.7-SNAPSHOT<br>
 Last updated 2019-11-19 03:46:03 UTC
 </div>
 </div>

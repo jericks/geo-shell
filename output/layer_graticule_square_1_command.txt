@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer graticule square* [gray]#--workspace# [silver]#layers# [gray]#--name# [silver]#squares# [gray]#--bounds# [silver]#-180,-90,180,90# [gray]#--length# [silver]#20# +

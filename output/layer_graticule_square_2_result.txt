@@ -1,0 +1,1 @@
+[green]#Default Vector Style for squares written to /home/travis/build/jericks/geo-shell/examples/squares.sld!# +

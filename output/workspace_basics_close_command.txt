@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*workspace close* [gray]#--name# [silver]#mem# +
