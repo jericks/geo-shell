@@ -7,7 +7,7 @@ script:
 deploy:
     provider: pages
     skip-cleanup: true
-    github-token: $GITHUB_OAUTH_TOKEN
+    github-token: $GEOSHELL_GITHUB_OAUTH_TOKEN
     keep-history: true
     local-dir: target/generated-docs
     on:
