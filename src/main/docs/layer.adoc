@@ -1,0 +1,54 @@
+ifndef::imagesdir[:imagesdir: images]
+
+== Layer
+
+=== Graticule
+
+==== Square
+
+include::output/layer_graticule_square_0_command.txt[]
+include::output/layer_graticule_square_0_result.txt[]
+
+include::output/layer_graticule_square_1_command.txt[]
+include::output/layer_graticule_square_1_result.txt[]
+
+include::output/layer_graticule_square_2_command.txt[]
+include::output/layer_graticule_square_2_result.txt[]
+
+include::output/layer_graticule_square_3_command.txt[]
+include::output/layer_graticule_square_3_result.txt[]
+
+include::output/layer_graticule_square_4_command.txt[]
+include::output/layer_graticule_square_4_result.txt[]
+
+include::output/layer_graticule_square_5_command.txt[]
+include::output/layer_graticule_square_5_result.txt[]
+
+include::output/layer_graticule_square_6_command.txt[]
+include::output/layer_graticule_square_6_result.txt[]
+
+include::output/layer_graticule_square_7_command.txt[]
+include::output/layer_graticule_square_7_result.txt[]
+
+include::output/layer_graticule_square_8_command.txt[]
+include::output/layer_graticule_square_8_result.txt[]
+
+include::output/layer_graticule_square_9_command.txt[]
+include::output/layer_graticule_square_9_result.txt[]
+
+include::output/layer_graticule_square_10_command.txt[]
+include::output/layer_graticule_square_10_result.txt[]
+
+include::output/layer_graticule_square_11_command.txt[]
+include::output/layer_graticule_square_11_result.txt[]
+
+include::output/layer_graticule_square_12_command.txt[]
+include::output/layer_graticule_square_12_result.txt[]
+
+include::output/layer_graticule_square_13_command.txt[]
+include::output/layer_graticule_square_13_result.txt[]
+
+include::output/layer_graticule_square_14_command.txt[]
+include::output/layer_graticule_square_14_result.txt[]
+
+image::square_graticules.png[]

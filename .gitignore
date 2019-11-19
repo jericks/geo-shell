@@ -5,4 +5,7 @@ geo-shell.iml
 geo-shell.log
 dependency-reduced-pom.xml
 examples/raster.tif.aux.xml
-src/main/docs/output
+examples/mars/
+src/main/docs/output/
+src/main/docs/images/
+
