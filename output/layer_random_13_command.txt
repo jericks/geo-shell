@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*map draw* [gray]#--name# [silver]#randomMap# [gray]#--file# [silver]#examples/random_points.png# +
