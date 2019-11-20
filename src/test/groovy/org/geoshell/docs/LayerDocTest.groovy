@@ -48,4 +48,26 @@ class LayerDocTest extends AbstractDocTest {
         copyFile(new File("examples/square_graticules.png"), new File("src/main/docs/images"))
     }
 
+    @Test
+    void createOvalGraticules() {
+        run("layer_graticule_oval", [
+                "workspace open --name layers --params memory",
+                "layer graticule oval --workspace layers --name ovals --bounds -180,-90,180,90 --size 20",
+                "style vector default --layer ovals --color #1E90FF --opacity 0.30 --file examples/ovals.sld",
+                "layer style set --name ovals --style examples/ovals.sld",
+                "workspace open --name naturalearth --params examples/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer style set --name countries --style examples/countries.sld",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "layer style set --name ocean --style examples/ocean.sld",
+                "map open --name graticule",
+                "map add layer --name graticule --layer ocean",
+                "map add layer --name graticule --layer countries",
+                "map add layer --name graticule --layer ovals",
+                "map draw --name graticule --file examples/oval_graticules.png",
+                "map close --name graticule"
+        ])
+        copyFile(new File("examples/oval_graticules.png"), new File("src/main/docs/images"))
+    }
+
 }
