@@ -550,6 +550,7 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#graticule">Graticule</a>
 <ul class="sectlevel3">
 <li><a href="#square">Square</a></li>
+<li><a href="#oval">Oval</a></li>
 </ul>
 </li>
 </ul>
@@ -796,6 +797,74 @@ You can give it a name with --name flag.</p>
 </div>
 </div>
 </div>
+<div class="sect3">
+<h4 id="oval"><a class="anchor" href="#oval"></a>Oval</h4>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">layers</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace layers opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer graticule oval</strong> <span class="gray">--workspace</span> <span class="silver">layers</span> <span class="gray">--name</span> <span class="silver">ovals</span> <span class="gray">--bounds</span> <span class="silver">-180,-90,180,90</span> <span class="gray">--size</span> <span class="silver">20</span><br>
+<span class="green">Created Oval Graticule Layer ovals!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">ovals</span> <span class="gray">--color</span> <span class="silver">#1E90FF</span> <span class="gray">--opacity</span> <span class="silver">0.30</span> <span class="gray">--file</span> <span class="silver">examples/ovals.sld</span><br>
+<span class="green">Default Vector Style for ovals written to /home/travis/build/jericks/geo-shell/examples/ovals.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">ovals</span> <span class="gray">--style</span> <span class="silver">examples/ovals.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/ovals.sld set on ovals</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">examples/naturalearth.gpkg</span><br>
+<span class="green">Workspace naturalearth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">countries</span> <span class="gray">--name</span> <span class="silver">countries</span><br>
+<span class="green">Opened Workspace naturalearth Layer countries as countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">countries</span> <span class="gray">--style</span> <span class="silver">examples/countries.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/countries.sld set on countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">ocean</span> <span class="gray">--name</span> <span class="silver">ocean</span><br>
+<span class="green">Opened Workspace naturalearth Layer ocean as ocean</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">ocean</span> <span class="gray">--style</span> <span class="silver">examples/ocean.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/ocean.sld set on ocean</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">graticule</span><br>
+<span class="green">Map graticule opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">graticule</span> <span class="gray">--layer</span> <span class="silver">ocean</span><br>
+<span class="green">Added ocean layer to map graticule</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">graticule</span> <span class="gray">--layer</span> <span class="silver">countries</span><br>
+<span class="green">Added countries layer to map graticule</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">graticule</span> <span class="gray">--layer</span> <span class="silver">ovals</span><br>
+<span class="green">Added ovals layer to map graticule</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">graticule</span> <span class="gray">--file</span> <span class="silver">examples/oval_graticules.png</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/oval_graticules.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">graticule</span><br>
+<span class="green">Map graticule closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/oval_graticules.png" alt="oval graticules">
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -803,7 +872,7 @@ You can give it a name with --name flag.</p>
 <div id="footer">
 <div id="footer-text">
 Version 0.7-SNAPSHOT<br>
-Last updated 2019-11-20 04:13:15 UTC
+Last updated 2019-11-20 04:28:22 UTC
 </div>
 </div>
 </body>

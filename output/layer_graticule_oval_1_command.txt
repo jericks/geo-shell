@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer graticule oval* [gray]#--workspace# [silver]#layers# [gray]#--name# [silver]#ovals# [gray]#--bounds# [silver]#-180,-90,180,90# [gray]#--size# [silver]#20# +
