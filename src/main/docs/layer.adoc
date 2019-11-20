@@ -2,6 +2,57 @@ ifndef::imagesdir[:imagesdir: images]
 
 == Layer
 
+=== Geoprocessing
+
+==== Random Points
+
+include::output/layer_random_0_command.txt[]
+include::output/layer_random_0_result.txt[]
+
+include::output/layer_random_1_command.txt[]
+include::output/layer_random_1_result.txt[]
+
+include::output/layer_random_2_command.txt[]
+include::output/layer_random_2_result.txt[]
+
+include::output/layer_random_3_command.txt[]
+include::output/layer_random_3_result.txt[]
+
+include::output/layer_random_4_command.txt[]
+include::output/layer_random_4_result.txt[]
+
+include::output/layer_random_5_command.txt[]
+include::output/layer_random_5_result.txt[]
+
+include::output/layer_random_6_command.txt[]
+include::output/layer_random_6_result.txt[]
+
+include::output/layer_random_7_command.txt[]
+include::output/layer_random_7_result.txt[]
+
+include::output/layer_random_8_command.txt[]
+include::output/layer_random_8_result.txt[]
+
+include::output/layer_random_9_command.txt[]
+include::output/layer_random_9_result.txt[]
+
+include::output/layer_random_10_command.txt[]
+include::output/layer_random_10_result.txt[]
+
+include::output/layer_random_11_command.txt[]
+include::output/layer_random_11_result.txt[]
+
+include::output/layer_random_12_command.txt[]
+include::output/layer_random_12_result.txt[]
+
+include::output/layer_random_13_command.txt[]
+include::output/layer_random_13_result.txt[]
+
+include::output/layer_random_14_command.txt[]
+include::output/layer_random_14_result.txt[]
+
+image::random_points.png[]
+
 === Graticule
 
 ==== Square
