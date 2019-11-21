@@ -27,6 +27,32 @@ class LayerDocTest extends AbstractDocTest {
     }
 
     @Test
+    void buffer() {
+        run("layer_buffer", [
+                "workspace open --name layers --params memory",
+                "layer random --output-workspace layers --output-name points --geometry -180,-90,180,90 --number 100 --projection EPSG:4326",
+                "layer buffer --input-name points --output-workspace layers --output-name buffers --distance 10",
+                "style vector default --layer points --color #1E90FF --file examples/points.sld",
+                "style vector default --layer buffers --color #1E90FF --opacity 0.25 --file examples/buffers.sld",
+                "layer style set --name points --style examples/points.sld",
+                "layer style set --name buffers --style examples/buffers.sld",
+                "workspace open --name naturalearth --params examples/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer style set --name countries --style examples/countries.sld",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "layer style set --name ocean --style examples/ocean.sld",
+                "map open --name map",
+                "map add layer --name map --layer ocean",
+                "map add layer --name map --layer countries",
+                "map add layer --name map --layer buffers",
+                "map add layer --name map --layer points",
+                "map draw --name map --file examples/layer_buffer.png",
+                "map close --name map"
+        ])
+        copyFile(new File("examples/layer_buffer.png"), new File("src/main/docs/images"))
+    }
+
+    @Test
     void createSquareGraticules() {
         run("layer_graticule_square", [
             "workspace open --name layers --params memory",
