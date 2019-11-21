@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer random* [gray]#--output-workspace# [silver]#layers# [gray]#--output-name# [silver]#points# [gray]#--geometry# [silver]#-180,-90,180,90# [gray]#--number# [silver]#100# [gray]#--projection# [silver]#EPSG:4326# +

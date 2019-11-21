@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer buffer* [gray]#--input-name# [silver]#points# [gray]#--output-workspace# [silver]#layers# [gray]#--output-name# [silver]#buffers# [gray]#--distance# [silver]#10# +
