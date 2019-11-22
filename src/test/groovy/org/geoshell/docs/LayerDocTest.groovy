@@ -63,6 +63,9 @@ class LayerDocTest extends AbstractDocTest {
                     }
 
                     File file = new File("src/main/docs/commands/${commandName.replaceAll(' ', '_')}.txt")
+                    if (!file.parentFile.exists()) {
+                        file.parentFile.mkdir()
+                    }
                     file.text = text
                 }
             }
