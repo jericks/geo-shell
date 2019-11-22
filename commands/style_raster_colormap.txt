@@ -1,0 +1,40 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|raster
+|The Raster
+|true
+|
+|
+
+|opacity
+|The opacity
+|false
+|1.0
+|1.0
+
+|values
+|The comma delimited list of values (key=value)
+|true
+|
+|
+
+|type
+|The type (intervals, values, ramp)
+|false
+|ramp
+|ramp
+
+|extended
+|Whether to use extended colors or not
+|false
+|false
+|false
+
+|file
+|The output file
+|true
+|
+|
+
+|===

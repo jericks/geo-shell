@@ -1,0 +1,52 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|name
+|The Raster name
+|true
+|
+|
+
+|output-workspace
+|The output Layer Workspace
+|true
+|
+|
+
+|output-name
+|The output Layer name
+|true
+|
+|
+
+|band
+|The Raster band to contour
+|false
+|0
+|0
+
+|levels
+|The contour level or interval
+|true
+|
+|
+
+|simplify
+|Whether to simplify
+|false
+|false
+|false
+
+|smooth
+|Whether to smooth
+|false
+|false
+|false
+
+|bounds
+|The Bounds
+|false
+|
+|
+
+|===

@@ -1,0 +1,40 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|name
+|The Raster name
+|true
+|
+|
+
+|output-format
+|The output Format Workspace
+|true
+|
+|
+
+|output-name
+|The output Raster name
+|false
+|
+|
+
+|ranges
+|The comma delimited reclassification ranges (from-to=value)
+|true
+|
+|
+
+|band
+|The Raster band to contour
+|false
+|0
+|0
+
+|nodata
+|The NODATA value
+|false
+|0
+|0
+
+|===

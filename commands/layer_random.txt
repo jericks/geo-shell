@@ -1,0 +1,64 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|output-workspace
+|The output Layer Workspace
+|true
+|
+|
+
+|output-name
+|The output Layer name
+|true
+|
+|
+
+|number
+|The number of points
+|true
+|
+|
+
+|geometry
+|The geometry or bounds in which to create the points 
+|true
+|
+|
+
+|projection
+|The projection
+|true
+|
+|
+
+|id-field
+|The id field name
+|false
+|id
+|id
+
+|geometry-field
+|The geometry field name
+|false
+|the_geom
+|the_geom
+
+|grid
+|Whether to create points in a grid
+|false
+|false
+|false
+
+|constrained-to-circle
+|Whether points should be constrained to a circle
+|false
+|false
+|false
+
+|gutter-fraction
+|The size of gutter between cells
+|false
+|0
+|0
+
+|===

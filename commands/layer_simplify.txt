@@ -1,0 +1,34 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|input-name
+|The Layer name
+|true
+|
+|
+
+|output-workspace
+|The output Layer Workspace
+|true
+|
+|
+
+|output-name
+|The output Layer name
+|true
+|
+|
+
+|algorithm
+|The simplify algorithm (DouglasPeucker - dp or TopologyPreserving - tp)
+|false
+|tp
+|tp
+
+|distance
+|The distance tolerance
+|true
+|
+|
+
+|===

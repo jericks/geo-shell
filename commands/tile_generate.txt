@@ -1,0 +1,52 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|name
+|The tile name
+|true
+|
+|
+
+|map
+|The map name
+|true
+|
+|
+
+|start
+|The map name
+|true
+|
+|
+
+|end
+|The map name
+|true
+|
+|
+
+|bounds
+|The map name
+|false
+|
+|
+
+|metatile
+|The metatile width,height
+|false
+|
+|
+
+|missingOnly
+|The map name
+|false
+|false
+|false
+
+|verbose
+|The map name
+|false
+|false
+|false
+
+|===

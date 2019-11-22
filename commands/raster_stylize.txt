@@ -1,0 +1,22 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|name
+|The Raster name
+|true
+|
+|
+
+|output-format
+|The output Format Workspace
+|true
+|
+|
+
+|output-name
+|The output Raster name
+|false
+|
+|
+
+|===

@@ -1,0 +1,46 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|layer
+|The Layer
+|true
+|
+|
+
+|field
+|The field
+|true
+|
+|
+
+|number
+|The number of categories
+|true
+|
+|
+
+|colors
+|The colors
+|true
+|
+|
+
+|method
+|The classification method (Quantile or EqualInterval)
+|false
+|Quantile
+|Quantile
+
+|elsemode
+|The else mode (ignore, min, max)
+|false
+|ignore
+|ignore
+
+|file
+|The output file
+|true
+|
+|
+
+|===

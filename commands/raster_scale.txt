@@ -1,0 +1,52 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|name
+|The Raster name
+|true
+|
+|
+
+|output-format
+|The output Format Workspace
+|true
+|
+|
+
+|output-name
+|The output Raster name
+|false
+|
+|
+
+|x
+|The scale factor along the x axis
+|true
+|
+|
+
+|y
+|The scale factor along the y axis
+|true
+|
+|
+
+|x-trans
+|The x translation
+|false
+|0
+|0
+
+|y-trans
+|The y translation
+|false
+|0
+|0
+
+|interpolation
+|The interpolation method (bicubic, bicubic2, bilinear, nearest)
+|false
+|nearest
+|nearest
+
+|===

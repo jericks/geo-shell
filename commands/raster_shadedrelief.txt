@@ -1,0 +1,64 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|name
+|The Raster name
+|true
+|
+|
+
+|output-format
+|The output Format Workspace
+|true
+|
+|
+
+|output-name
+|The output Raster name
+|false
+|
+|
+
+|scale
+|The scale
+|true
+|
+|
+
+|altitude
+|The altitude
+|true
+|
+|
+
+|azimuth
+|The azimuth
+|true
+|
+|
+
+|resx
+|The x resolution
+|false
+|0.5
+|0.5
+
+|resy
+|The y resolution
+|false
+|0.5
+|0.5
+
+|zetafactory
+|The zeta factory
+|false
+|1.0
+|1.0
+
+|algorithm
+|The x resolution
+|false
+|DEFAULT
+|DEFAULT
+
+|===

@@ -1,0 +1,34 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|name
+|The Raster name
+|true
+|
+|
+
+|band
+|The x coordinate
+|false
+|0
+|0
+
+|x
+|The x coordinate
+|true
+|
+|
+
+|y
+|The y coordinate
+|true
+|
+|
+
+|type
+|The y coordinate
+|false
+|geometry
+|geometry
+
+|===

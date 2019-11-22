@@ -1,0 +1,28 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|field
+|The field name
+|true
+|
+|
+
+|geometryType
+|The geometry type
+|true
+|
+|
+
+|textFile
+|The input text file
+|true
+|
+|
+
+|styleFile
+|The output sld or ysld file
+|true
+|
+|
+
+|===

@@ -1,0 +1,22 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|name
+|The tile name
+|true
+|
+|
+
+|bounds
+|The bounds
+|true
+|
+|
+
+|z
+|The zoom level
+|true
+|
+|
+
+|===

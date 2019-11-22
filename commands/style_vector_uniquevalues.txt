@@ -1,0 +1,28 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|layer
+|The Layer
+|true
+|
+|
+
+|field
+|The field
+|true
+|
+|
+
+|colors
+|The colors
+|true
+|
+|
+
+|file
+|The output file
+|true
+|
+|
+
+|===

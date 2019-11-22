@@ -1,0 +1,34 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|input-name
+|The Layer name
+|true
+|
+|
+
+|output-workspace
+|The output Layer Workspace
+|true
+|
+|
+
+|output-name
+|The output Layer name
+|true
+|
+|
+
+|x-fieldname
+|The x field name
+|true
+|x
+|x
+
+|y-fieldname
+|The y field name
+|true
+|y
+|y
+
+|===

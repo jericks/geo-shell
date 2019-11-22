@@ -1,0 +1,52 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|output-workspace
+|The output Layer Workspace
+|true
+|
+|
+
+|output-name
+|The output Layer name
+|true
+|
+|
+
+|rows
+|The number of rows
+|true
+|
+|
+
+|columns
+|The number of columns
+|true
+|
+|
+
+|geometry
+|The constraining geometry
+|true
+|
+|
+
+|type
+|The geometry type (point or polygon
+|false
+|polygon
+|polygon
+
+|projection
+|The projection
+|false
+|EPSG:4326
+|EPSG:4326
+
+|geometry-field
+|The geometry field name
+|false
+|the_geom
+|the_geom
+
+|===

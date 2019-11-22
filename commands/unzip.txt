@@ -1,0 +1,16 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|file
+|The zip file
+|true
+|
+|
+
+|directory
+|The directory
+|true
+|
+|
+
+|===

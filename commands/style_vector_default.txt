@@ -1,0 +1,28 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|layer
+|The Layer
+|true
+|
+|
+
+|color
+|The color
+|false
+|#f2f2f2
+|#f2f2f2
+
+|opacity
+|The opacity
+|false
+|1.0
+|1.0
+
+|file
+|The output file
+|true
+|
+|
+
+|===

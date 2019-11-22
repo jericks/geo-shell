@@ -1,0 +1,22 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|name
+|The map name
+|true
+|
+|
+
+|raster
+|The raster
+|true
+|
+|
+
+|mapLayerName
+|The map layer name
+|false
+|
+|
+
+|===

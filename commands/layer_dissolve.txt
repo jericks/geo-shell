@@ -1,0 +1,40 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|input-name
+|The Layer name
+|true
+|
+|
+
+|output-workspace
+|The output Layer Workspace
+|true
+|
+|
+
+|output-name
+|The output Layer name
+|true
+|
+|
+
+|field
+|The field to use to dissolve features
+|true
+|
+|
+
+|idField
+|The name of the id field
+|false
+|id
+|id
+
+|countField
+|The name of the count field
+|false
+|count
+|count
+
+|===

@@ -1,0 +1,22 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|workspace
+|The Workspace name
+|true
+|
+|
+
+|layer
+|The Layer name
+|true
+|
+|
+
+|name
+|The name
+|false
+|
+|
+
+|===

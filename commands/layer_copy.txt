@@ -1,0 +1,52 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|input-name
+|The Layer name
+|true
+|
+|
+
+|output-workspace
+|The output Layer Workspace
+|true
+|
+|
+
+|output-name
+|The output Layer name
+|true
+|
+|
+
+|filter
+|The CQL Filter
+|false
+|
+|
+
+|sort
+|A Sort parameter (fld dir)
+|false
+|
+|
+
+|start
+|The start index
+|false
+|
+|-1
+
+|max
+|The maximum number of records
+|false
+|
+|-1
+
+|field
+|A subfield to include
+|false
+|
+|
+
+|===

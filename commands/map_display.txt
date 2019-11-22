@@ -1,0 +1,40 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|name
+|The map name
+|true
+|
+|
+
+|bounds
+|The Bounds
+|false
+|
+|
+
+|projection
+|The Projection
+|false
+|
+|
+
+|width
+|The width
+|false
+|600
+|600
+
+|height
+|The height
+|false
+|400
+|400
+
+|background-color
+|The background color
+|false
+|
+|
+
+|===

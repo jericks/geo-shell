@@ -1,0 +1,34 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|name
+|The Raster name
+|true
+|
+|
+
+|output-format
+|The output Format Workspace
+|true
+|
+|
+
+|output-name
+|The output Raster name
+|false
+|
+|
+
+|values
+|The values
+|true
+|
+|
+
+|from
+|Whether to subtract the Raster from the constant or vice verse
+|false
+|false
+|false
+
+|===

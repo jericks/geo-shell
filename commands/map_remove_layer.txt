@@ -1,0 +1,16 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|name
+|The map name
+|true
+|
+|
+
+|layer
+|The layer name
+|true
+|
+|
+
+|===

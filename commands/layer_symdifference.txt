@@ -1,0 +1,40 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|input-name
+|The Layer name
+|true
+|
+|
+
+|other-name
+|The other Layer name
+|true
+|
+|
+
+|output-workspace
+|The output Layer Workspace
+|true
+|
+|
+
+|output-name
+|The output Layer name
+|true
+|
+|
+
+|postfix-all
+|Whether to postfix all field names when combining schemas
+|false
+|false
+|false
+
+|include-duplicates
+|Whether to include duplicate field names
+|false
+|true
+|true
+
+|===

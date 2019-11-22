@@ -1,0 +1,70 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|name
+|The tile name
+|true
+|
+|
+
+|format
+|The raster format name
+|true
+|
+|
+
+|raster
+|The raster name
+|true
+|
+|
+
+|bounds
+|The bounds
+|false
+|
+|
+
+|width
+|The raster width
+|false
+|400
+|400
+
+|height
+|The raster height
+|false
+|400
+|400
+
+|z
+|The zoom level
+|false
+|0
+|-1
+
+|minx
+|The min x or column
+|false
+|
+|-1
+
+|miny
+|The min y or row
+|false
+|
+|-1
+
+|maxx
+|The max x or column
+|false
+|
+|-1
+
+|maxy
+|The max y or row
+|false
+|
+|-1
+
+|===
