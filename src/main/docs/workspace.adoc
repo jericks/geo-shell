@@ -11,6 +11,9 @@ You can open, close, and list Workspaces.  The eariest Workspace to open
 is an in memory Workspace.
 
 .Open a Workspace
+
+include::commands/workspace open.txt[]
+
 include::output/workspace_basics_open_command.txt[]
 include::output/workspace_basics_open_result.txt[]
 
@@ -18,12 +21,18 @@ You can open a Workspace with --params or connection parameters.
 You can give it a name with --name flag.
 
 .List open Workspaces
+
+include::commands/workspace list.txt[]
+
 include::output/workspace_basics_list_command.txt[]
 include::output/workspace_basics_list_result.txt[]
 
 Listing open Workspaces give you the name and the type Workspace.
 
 .Close a Workspace
+
+include::commands/workspace close.txt[]
+
 include::output/workspace_basics_close_command.txt[]
 include::output/workspace_basics_close_result.txt[]
 
