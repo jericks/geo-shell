@@ -6,7 +6,7 @@ ifndef::imagesdir[:imagesdir: images]
 
 ==== Random Points
 
-include::commands/layer random.txt[]
+include::commands/layer_random.txt[]
 
 include::output/layer_random_0_command.txt[]
 include::output/layer_random_0_result.txt[]
@@ -57,7 +57,7 @@ image::random_points.png[]
 
 ==== Buffer
 
-include::commands/layer buffer.txt[]
+include::commands/layer_buffer.txt[]
 
 include::output/layer_buffer_0_command.txt[]
 include::output/layer_buffer_0_result.txt[]
@@ -122,7 +122,7 @@ image::layer_buffer.png[]
 
 ==== Square
 
-include::commands/layer graticule square.txt[]
+include::commands/layer_graticule_square.txt[]
 
 include::output/layer_graticule_square_0_command.txt[]
 include::output/layer_graticule_square_0_result.txt[]
@@ -173,7 +173,7 @@ image::square_graticules.png[]
 
 ==== Oval
 
-include::commands/layer graticule oval.txt[]
+include::commands/layer_graticule_oval.txt[]
 
 include::output/layer_graticule_oval_0_command.txt[]
 include::output/layer_graticule_oval_0_result.txt[]

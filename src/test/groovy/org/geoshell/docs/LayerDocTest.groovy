@@ -22,8 +22,7 @@ class LayerDocTest extends AbstractDocTest {
             Class clazz = Class.forName(beanDefinition.beanClassName)
             clazz.declaredMethods.each { Method method ->
                 method.getAnnotationsByType(CliCommand).each { CliCommand cmd ->
-                    println "   ${cmd}"
-                    File file = new File("src/main/docs/commands/${cmd.value()[0]}.txt")
+
 
                     String commandName = cmd.value()[0]
                     String commandHelp = cmd.help()
@@ -63,6 +62,7 @@ class LayerDocTest extends AbstractDocTest {
                         text += "|===\n"
                     }
 
+                    File file = new File("src/main/docs/commands/${commandName.replaceAll(' ', '_')}.txt")
                     file.text = text
                 }
             }
