@@ -121,6 +121,57 @@ class LayerDocTest extends AbstractDocTest {
     }
 
     @Test
+    void extent() {
+        run("layer_extent", [
+                "workspace open --name layers --params memory",
+                "workspace open --name naturalearth --params examples/naturalearth.gpkg",
+                "layer style set --name states --style examples/states.sld",
+                "layer open --workspace naturalearth --layer states --name states",
+                "layer extent --input-name states --output-workspace layers --output-name usa",
+                "style vector default --layer usa --color #1E90FF --opacity 0.25 --file examples/extent.sld",
+                "layer style set --name usa --style examples/extent.sld",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer style set --name countries --style examples/countries.sld",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "layer style set --name ocean --style examples/ocean.sld",
+                "map open --name map",
+                "map add layer --name map --layer ocean",
+                "map add layer --name map --layer countries",
+                "map add layer --name map --layer states",
+                "map add layer --name map --layer usa",
+                "map draw --name map --file examples/layer_extent.png",
+                "map close --name map"
+        ])
+        copyFile(new File("examples/layer_extent.png"), new File("src/main/docs/images"))
+    }
+
+    @Test
+    void extents() {
+        run("layer_extents", [
+                "workspace open --name layers --params memory",
+                "workspace open --name naturalearth --params examples/naturalearth.gpkg",
+                "layer style set --name states --style examples/states.sld",
+                "layer open --workspace naturalearth --layer states --name states",
+                "layer extents --input-name states --output-workspace layers --output-name state_extents",
+                "style vector default --layer state_extents --color #1E90FF --opacity 0.25 --file examples/extent.sld",
+                "layer style set --name state_extents --style examples/extent.sld",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer style set --name countries --style examples/countries.sld",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "layer style set --name ocean --style examples/ocean.sld",
+                "map open --name map",
+                "map add layer --name map --layer ocean",
+                "map add layer --name map --layer countries",
+                "map add layer --name map --layer states",
+                "map add layer --name map --layer state_extents",
+                "map draw --name map --file examples/layer_extents.png",
+                "map close --name map"
+        ])
+        copyFile(new File("examples/layer_extents.png"), new File("src/main/docs/images"))
+    }
+
+
+    @Test
     void createSquareGraticules() {
         run("layer_graticule_square", [
             "workspace open --name layers --params memory",
