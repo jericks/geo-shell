@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer style set* [gray]#--name# [silver]#usa# [gray]#--style# [silver]#examples/extent.sld# +

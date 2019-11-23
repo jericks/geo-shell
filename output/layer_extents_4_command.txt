@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer extents* [gray]#--input-name# [silver]#states# [gray]#--output-workspace# [silver]#layers# [gray]#--output-name# [silver]#state_extents# +
