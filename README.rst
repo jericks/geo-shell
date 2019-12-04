@@ -181,6 +181,8 @@ layer dissolve --input-name states --output-workspace mem --output-name regions 
 
 layer points along lines --input-name lines:lines --output-workspace mem --output-name points --distance 0.0001
 
+layer graticule rectangle --workspace mem --name rectangles --bounds -180,-90,180,90 --width 20 --height 10
+
 layer graticule square --workspace mem --name squares --bounds -180,-90,180,90 --length 10
 
 layer graticule oval --workspace mem --name ovals --bounds -180,-90,180,90 --size 10

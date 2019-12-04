@@ -1616,4 +1616,25 @@ class LayerCommands implements CommandMarker {
         }
     }
 
+    @CliCommand(value = "layer graticule rectangle", help = "Create a rectangle graticule.")
+    String createRectangleGraticule(
+            @CliOption(key = "workspace", mandatory = true, help = "The Workspace name") WorkspaceName workspaceName,
+            @CliOption(key = "name", mandatory = true, help = "The new Layer name") String name,
+            @CliOption(key = "bounds", mandatory = true, help = "The bounds") String boundsStr,
+            @CliOption(key = "width", mandatory = true, help = "The width") double width,
+            @CliOption(key = "height", mandatory = true, help = "The height") double height,
+            @CliOption(key = "spacing", mandatory = false, help = "The spacing", unspecifiedDefaultValue = "-1", specifiedDefaultValue = "-1") double spacing
+    ) throws Exception {
+        Workspace workspace = catalog.workspaces[workspaceName]
+        if (workspace) {
+            Bounds bounds = Bounds.fromString(boundsStr)
+            Layer layer = Graticule.createRectangles(bounds, width, height, spacing)
+            // Add Layer to Catalog
+            catalog.layers[new LayerName(name)] = layer
+            "Created Rectangle Graticule Layer ${name}!"
+        } else {
+            "Unable to find Workspace ${workspaceName}"
+        }
+    }
+
 }

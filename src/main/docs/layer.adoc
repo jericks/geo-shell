@@ -291,6 +291,57 @@ include::output/layer_graticule_square_14_result.txt[]
 
 image::square_graticules.png[]
 
+==== Recangle
+
+include::commands/layer_graticule_rectangle.txt[]
+
+include::output/layer_graticule_rectangle_0_command.txt[]
+include::output/layer_graticule_rectangle_0_result.txt[]
+
+include::output/layer_graticule_rectangle_1_command.txt[]
+include::output/layer_graticule_rectangle_1_result.txt[]
+
+include::output/layer_graticule_rectangle_2_command.txt[]
+include::output/layer_graticule_rectangle_2_result.txt[]
+
+include::output/layer_graticule_rectangle_3_command.txt[]
+include::output/layer_graticule_rectangle_3_result.txt[]
+
+include::output/layer_graticule_rectangle_4_command.txt[]
+include::output/layer_graticule_rectangle_4_result.txt[]
+
+include::output/layer_graticule_rectangle_5_command.txt[]
+include::output/layer_graticule_rectangle_5_result.txt[]
+
+include::output/layer_graticule_rectangle_6_command.txt[]
+include::output/layer_graticule_rectangle_6_result.txt[]
+
+include::output/layer_graticule_rectangle_7_command.txt[]
+include::output/layer_graticule_rectangle_7_result.txt[]
+
+include::output/layer_graticule_rectangle_8_command.txt[]
+include::output/layer_graticule_rectangle_8_result.txt[]
+
+include::output/layer_graticule_rectangle_9_command.txt[]
+include::output/layer_graticule_rectangle_9_result.txt[]
+
+include::output/layer_graticule_rectangle_10_command.txt[]
+include::output/layer_graticule_rectangle_10_result.txt[]
+
+include::output/layer_graticule_rectangle_11_command.txt[]
+include::output/layer_graticule_rectangle_11_result.txt[]
+
+include::output/layer_graticule_rectangle_12_command.txt[]
+include::output/layer_graticule_rectangle_12_result.txt[]
+
+include::output/layer_graticule_rectangle_13_command.txt[]
+include::output/layer_graticule_rectangle_13_result.txt[]
+
+include::output/layer_graticule_rectangle_14_command.txt[]
+include::output/layer_graticule_rectangle_14_result.txt[]
+
+image::rectangle_graticules.png[]
+
 ==== Oval
 
 include::commands/layer_graticule_oval.txt[]
