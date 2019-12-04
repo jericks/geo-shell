@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer graticule rectangle* [gray]#--workspace# [silver]#layers# [gray]#--name# [silver]#rectangles# [gray]#--bounds# [silver]#-180,-90,180,90# [gray]#--width# [silver]#20# [gray]#--height# [silver]#10# +
