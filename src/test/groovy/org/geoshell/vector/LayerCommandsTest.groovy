@@ -1202,4 +1202,21 @@ class LayerCommandsTest {
         Layer layer = catalog.layers[new LayerName("rectangles")]
         assertEquals 324, layer.count
     }
+
+    @Test void createHexagonGraticule() {
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        String result = cmds.createHexagonGraticule(
+                new WorkspaceName("mem"),
+                "hexagons",
+                "-180,-90,180,90",
+                10,
+                5,
+                "flat"
+        )
+        assertEquals "Created Hexagon Graticule Layer hexagons!", result
+        Layer layer = catalog.layers[new LayerName("hexagons")]
+        assertEquals 219, layer.count
+    }
 }

@@ -237,4 +237,26 @@ class LayerDocTest extends AbstractDocTest {
         copyFile(new File("examples/oval_graticules.png"), new File("src/main/docs/images"))
     }
 
+    @Test
+    void createHexagonGraticules() {
+        run("layer_graticule_hexagon", [
+                "workspace open --name layers --params memory",
+                "layer graticule hexagon --workspace layers --name hexagons --bounds -180,-90,180,90 --length 10",
+                "style vector default --layer hexagons --color #1E90FF --opacity 0.30 --file examples/hexagons.sld",
+                "layer style set --name hexagons --style examples/hexagons.sld",
+                "workspace open --name naturalearth --params examples/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer style set --name countries --style examples/countries.sld",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "layer style set --name ocean --style examples/ocean.sld",
+                "map open --name graticule",
+                "map add layer --name graticule --layer ocean",
+                "map add layer --name graticule --layer countries",
+                "map add layer --name graticule --layer hexagons",
+                "map draw --name graticule --file examples/hexagon_graticules.png",
+                "map close --name graticule"
+        ])
+        copyFile(new File("examples/hexagon_graticules.png"), new File("src/main/docs/images"))
+    }
+
 }

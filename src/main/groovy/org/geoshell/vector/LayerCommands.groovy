@@ -1637,4 +1637,25 @@ class LayerCommands implements CommandMarker {
         }
     }
 
+    @CliCommand(value = "layer graticule hexagon", help = "Create a hexagon graticule.")
+    String createHexagonGraticule(
+            @CliOption(key = "workspace", mandatory = true, help = "The Workspace name") WorkspaceName workspaceName,
+            @CliOption(key = "name", mandatory = true, help = "The new Layer name") String name,
+            @CliOption(key = "bounds", mandatory = true, help = "The bounds") String boundsStr,
+            @CliOption(key = "length", mandatory = true, help = "The length") double length,
+            @CliOption(key = "spacing", mandatory = false, help = "The spacing", unspecifiedDefaultValue = "5", specifiedDefaultValue = "5") double spacing,
+            @CliOption(key = "orientation", mandatory = false, help = "The orientation (flat or angled)", unspecifiedDefaultValue = "flat", specifiedDefaultValue = "flat") String orientation
+    ) throws Exception {
+        Workspace workspace = catalog.workspaces[workspaceName]
+        if (workspace) {
+            Bounds bounds = Bounds.fromString(boundsStr)
+            Layer layer = Graticule.createHexagons(bounds, length, spacing, orientation)
+            // Add Layer to Catalog
+            catalog.layers[new LayerName(name)] = layer
+            "Created Hexagon Graticule Layer ${name}!"
+        } else {
+            "Unable to find Workspace ${workspaceName}"
+        }
+    }
+
 }

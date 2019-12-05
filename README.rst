@@ -187,6 +187,8 @@ layer graticule square --workspace mem --name squares --bounds -180,-90,180,90 -
 
 layer graticule oval --workspace mem --name ovals --bounds -180,-90,180,90 --size 10
 
+layer graticule hexagon --workspace mem --name hexagons --bounds -180,-90,180,90 --length 10
+
 tile
 ----
 tile open --name states --params states.mbtiles

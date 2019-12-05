@@ -1,0 +1,31 @@
+workspace open --name layers --params memory
+
+layer graticule hexagon --workspace layers --name hexagons --bounds -180,-90,180,90 --length 10
+
+style vector default --layer hexagons --color #1E90FF --opacity 0.30 --file hexagons.sld
+
+layer style set --name hexagons --style hexagons.sld
+
+workspace open --name naturalearth --params naturalearth.gpkg
+
+layer open --workspace naturalearth --layer countries --name countries
+
+layer style set --name countries --style countries.sld
+
+layer open --workspace naturalearth --layer ocean --name ocean
+
+layer style set --name ocean --style ocean.sld
+
+map open --name graticule
+
+map add layer --name graticule --layer ocean
+
+map add layer --name graticule --layer countries
+
+map add layer --name graticule --layer hexagons
+
+map draw --name graticule
+
+map close --name graticule
+
+open --file image.png
