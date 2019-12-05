@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer graticule hexagon* [gray]#--workspace# [silver]#layers# [gray]#--name# [silver]#hexagons# [gray]#--bounds# [silver]#-180,-90,180,90# [gray]#--length# [silver]#10# +

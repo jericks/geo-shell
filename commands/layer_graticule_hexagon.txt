@@ -1,0 +1,40 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|workspace
+|The Workspace name
+|true
+|
+|
+
+|name
+|The new Layer name
+|true
+|
+|
+
+|bounds
+|The bounds
+|true
+|
+|
+
+|length
+|The length
+|true
+|
+|
+
+|spacing
+|The spacing
+|false
+|5
+|5
+
+|orientation
+|The orientation (flat or angled)
+|false
+|flat
+|flat
+
+|===
