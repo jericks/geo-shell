@@ -118,6 +118,57 @@ include::output/layer_buffer_18_result.txt[]
 
 image::layer_buffer.png[]
 
+==== Centroid
+
+include::commands/layer_centroid.txt[]
+
+include::output/layer_centroid_0_command.txt[]
+include::output/layer_centroid_0_result.txt[]
+
+include::output/layer_centroid_1_command.txt[]
+include::output/layer_centroid_1_result.txt[]
+
+include::output/layer_centroid_2_command.txt[]
+include::output/layer_centroid_2_result.txt[]
+
+include::output/layer_centroid_3_command.txt[]
+include::output/layer_centroid_3_result.txt[]
+
+include::output/layer_centroid_4_command.txt[]
+include::output/layer_centroid_4_result.txt[]
+
+include::output/layer_centroid_5_command.txt[]
+include::output/layer_centroid_5_result.txt[]
+
+include::output/layer_centroid_6_command.txt[]
+include::output/layer_centroid_6_result.txt[]
+
+include::output/layer_centroid_7_command.txt[]
+include::output/layer_centroid_7_result.txt[]
+
+include::output/layer_centroid_8_command.txt[]
+include::output/layer_centroid_8_result.txt[]
+
+include::output/layer_centroid_9_command.txt[]
+include::output/layer_centroid_9_result.txt[]
+
+include::output/layer_centroid_10_command.txt[]
+include::output/layer_centroid_10_result.txt[]
+
+include::output/layer_centroid_11_command.txt[]
+include::output/layer_centroid_11_result.txt[]
+
+include::output/layer_centroid_12_command.txt[]
+include::output/layer_centroid_12_result.txt[]
+
+include::output/layer_centroid_13_command.txt[]
+include::output/layer_centroid_13_result.txt[]
+
+include::output/layer_centroid_14_command.txt[]
+include::output/layer_centroid_14_result.txt[]
+
+image::layer_centroid.png[]
+
 ==== Extent
 
 include::commands/layer_extent.txt[]

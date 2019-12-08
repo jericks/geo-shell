@@ -121,6 +121,28 @@ class LayerDocTest extends AbstractDocTest {
     }
 
     @Test
+    void centroid() {
+        run("layer_centroid", [
+                "workspace open --name layers --params memory",
+                "workspace open --name naturalearth --params examples/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer style set --name countries --style examples/countries.sld",
+                "layer centroid --input-name countries --output-name centroids --output-workspace layers",
+                "style vector default --layer centroids --color #1E90FF --file examples/centroids.sld",
+                "layer style set --name centroids --style examples/centroids.sld",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "layer style set --name ocean --style examples/ocean.sld",
+                "map open --name map",
+                "map add layer --name map --layer ocean",
+                "map add layer --name map --layer countries",
+                "map add layer --name map --layer centroids",
+                "map draw --name map --file examples/layer_centroid.png",
+                "map close --name map"
+        ])
+        copyFile(new File("examples/layer_centroid.png"), new File("src/main/docs/images"))
+    }
+
+    @Test
     void extent() {
         run("layer_extent", [
                 "workspace open --name layers --params memory",
