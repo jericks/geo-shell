@@ -546,6 +546,7 @@ table.CodeRay td.code>pre{padding:0}
 <ul class="sectlevel3">
 <li><a href="#random-points">Random Points</a></li>
 <li><a href="#buffer">Buffer</a></li>
+<li><a href="#centroid">Centroid</a></li>
 <li><a href="#extent">Extent</a></li>
 <li><a href="#extents">Extents</a></li>
 </ul>
@@ -1003,6 +1004,113 @@ You can give it a name with --name flag.</p>
 <div class="imageblock">
 <div class="content">
 <img src="./images/layer_buffer.png" alt="layer buffer">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="centroid"><a class="anchor" href="#centroid"></a>Centroid</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">input-name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Layer name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">output-workspace</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The output Layer Workspace</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">output-name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The output Layer name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">layers</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace layers opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">examples/naturalearth.gpkg</span><br>
+<span class="green">Workspace naturalearth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">countries</span> <span class="gray">--name</span> <span class="silver">countries</span><br>
+<span class="green">Opened Workspace naturalearth Layer countries as countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">countries</span> <span class="gray">--style</span> <span class="silver">examples/countries.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/countries.sld set on countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer centroid</strong> <span class="gray">--input-name</span> <span class="silver">countries</span> <span class="gray">--output-name</span> <span class="silver">centroids</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span><br>
+<span class="green">Done!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">centroids</span> <span class="gray">--color</span> <span class="silver">#1E90FF</span> <span class="gray">--file</span> <span class="silver">examples/centroids.sld</span><br>
+<span class="green">Default Vector Style for centroids written to /home/travis/build/jericks/geo-shell/examples/centroids.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">centroids</span> <span class="gray">--style</span> <span class="silver">examples/centroids.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/centroids.sld set on centroids</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">ocean</span> <span class="gray">--name</span> <span class="silver">ocean</span><br>
+<span class="green">Opened Workspace naturalearth Layer ocean as ocean</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">ocean</span> <span class="gray">--style</span> <span class="silver">examples/ocean.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/ocean.sld set on ocean</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">ocean</span><br>
+<span class="green">Added ocean layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">countries</span><br>
+<span class="green">Added countries layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">centroids</span><br>
+<span class="green">Added centroids layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--file</span> <span class="silver">examples/layer_centroid.png</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/layer_centroid.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/layer_centroid.png" alt="layer centroid">
 </div>
 </div>
 </div>
@@ -1752,7 +1860,7 @@ You can give it a name with --name flag.</p>
 <div id="footer">
 <div id="footer-text">
 Version 0.7-SNAPSHOT<br>
-Last updated 2019-12-05 03:56:33 UTC
+Last updated 2019-12-08 19:56:47 UTC
 </div>
 </div>
 </body>

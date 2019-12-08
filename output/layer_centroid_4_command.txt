@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer centroid* [gray]#--input-name# [silver]#countries# [gray]#--output-name# [silver]#centroids# [gray]#--output-workspace# [silver]#layers# +
