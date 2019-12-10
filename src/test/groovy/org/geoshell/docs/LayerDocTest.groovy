@@ -143,6 +143,28 @@ class LayerDocTest extends AbstractDocTest {
     }
 
     @Test
+    void interiorpoint() {
+        run("layer_interiorpoint", [
+                "workspace open --name layers --params memory",
+                "workspace open --name naturalearth --params examples/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer style set --name countries --style examples/countries.sld",
+                "layer interiorpoint --input-name countries --output-name interiorpoints --output-workspace layers",
+                "style vector default --layer interiorpoints --color #1E90FF --file examples/interiorpoints.sld",
+                "layer style set --name interiorpoints --style examples/interiorpoints.sld",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "layer style set --name ocean --style examples/ocean.sld",
+                "map open --name map",
+                "map add layer --name map --layer ocean",
+                "map add layer --name map --layer countries",
+                "map add layer --name map --layer interiorpoints",
+                "map draw --name map --file examples/layer_interiorpoint.png",
+                "map close --name map"
+        ])
+        copyFile(new File("examples/layer_interiorpoint.png"), new File("src/main/docs/images"))
+    }
+
+    @Test
     void extent() {
         run("layer_extent", [
                 "workspace open --name layers --params memory",
