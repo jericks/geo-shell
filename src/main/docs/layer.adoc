@@ -393,7 +393,7 @@ include::output/layer_graticule_square_14_result.txt[]
 
 image::square_graticules.png[]
 
-==== Recangle
+==== Rectangle
 
 include::commands/layer_graticule_rectangle.txt[]
 
