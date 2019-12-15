@@ -8,3 +8,15 @@ include::intro.adoc[]
 include::workspace.adoc[]
 
 include::layer.adoc[]
+
+include::format.adoc[]
+
+include::raster.adoc[]
+
+include::tile.adoc[]
+
+include::style.adoc[]
+
+include::map.adoc[]
+
+include::other.adoc[]

@@ -1,0 +1,15 @@
+ifndef::imagesdir[:imagesdir: images]
+
+== Other
+
+=== Unzip
+
+Unzip a zip file
+
+include::commands/unzip.txt[]
+
+=== Open
+
+Open a File
+
+include::commands/open.txt[]

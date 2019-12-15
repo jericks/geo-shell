@@ -2,6 +2,26 @@ ifndef::imagesdir[:imagesdir: images]
 
 == Layer
 
+=== Basics
+
+==== Open
+
+Open a Layer from a Workspace
+
+include::commands/layer_open.txt[]
+
+==== Close
+
+Close an Open Layer
+
+include::commands/layer_close.txt[]
+
+==== List
+
+List open Layers
+
+include::commands/layer_list.txt[]
+
 === Geoprocessing
 
 ==== Random Points
