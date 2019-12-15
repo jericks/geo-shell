@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.8">
-<title>Introduction</title>
+<title>Other</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -527,37 +527,87 @@ table.CodeRay td.code>pre{padding:0}
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#introduction">Introduction</a></li>
+<li><a href="#other">Other</a>
+<ul class="sectlevel2">
+<li><a href="#unzip">Unzip</a></li>
+<li><a href="#open">Open</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="introduction"><a class="anchor" href="#introduction"></a>Introduction</h2>
+<h2 id="other"><a class="anchor" href="#other"></a>Other</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="unzip"><a class="anchor" href="#unzip"></a>Unzip</h3>
 <div class="paragraph">
-<p>geo-shell is an interactive shell for geospatial analysis.</p>
+<p>Unzip a zip file</p>
 </div>
-<div class="paragraph">
-<p>geo-shell has modules for dealing with <strong>vectors</strong>, <strong>rasters</strong>, <strong>tiles</strong>, <strong>maps</strong>, and <strong>styles</strong>.</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">file</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The zip file</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">directory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The directory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
 </div>
+<div class="sect2">
+<h3 id="open"><a class="anchor" href="#open"></a>Open</h3>
 <div class="paragraph">
-<p>For <strong>vector</strong> layers, you can use <strong>workspace</strong> commands access layers of spatial data
-in datasets like shapefiles, geopackages, or postgis databases.  With <strong>layer</strong> commands
-you can perform geoprocessing functions like calculating centroids or buffer features.</p>
+<p>Open a File</p>
 </div>
-<div class="paragraph">
-<p>For <strong>raster</strong> layers, you can use <strong>format</strong> commands access individual rasters from geotifs or world images.
-With <strong>raster</strong> commands you can perform mosaic, raster algebra, or crop functions.</p>
-</div>
-<div class="paragraph">
-<p>The <strong>tile</strong> commands let you create tile layers, get tiles, and get rasters from tiles.</p>
-</div>
-<div class="paragraph">
-<p>The <strong>style</strong> commands let you create styles for vector layers and raster.</p>
-</div>
-<div class="paragraph">
-<p>The <strong>map</strong> commands allow you to visualize vector, raster, and tile layers.</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">file</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The File</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
