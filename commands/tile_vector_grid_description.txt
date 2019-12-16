@@ -1,0 +1,1 @@
+Create a Vector Grid Layer from the pyramid of a Tile Layer.

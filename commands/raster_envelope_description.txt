@@ -1,0 +1,1 @@
+Create a Vector Layer from the envelope of a Raster.

@@ -1,0 +1,1 @@
+Delete tiles from a Tile Layer.

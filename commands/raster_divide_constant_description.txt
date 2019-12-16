@@ -1,0 +1,1 @@
+Divide constant values against a Raster

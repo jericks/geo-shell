@@ -1,0 +1,1 @@
+Remove Fields to the input Layer and save the result to the output Layer

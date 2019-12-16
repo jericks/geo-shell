@@ -590,11 +590,24 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#raster-color-map">Raster Color Map</a></li>
 </ul>
 </li>
-<li><a href="#map">Map</a></li>
+<li><a href="#map">Map</a>
+<ul class="sectlevel2">
+<li><a href="#open-3">Open</a></li>
+<li><a href="#close-3">Close</a></li>
+<li><a href="#list-3">List</a></li>
+<li><a href="#add-layer">Add Layer</a></li>
+<li><a href="#add-raster">Add Raster</a></li>
+<li><a href="#add-tle">Add Tle</a></li>
+<li><a href="#remove-layer">Remove Layer</a></li>
+<li><a href="#reorder">Reorder</a></li>
+<li><a href="#layers-2">Layers</a></li>
+<li><a href="#draw">Draw</a></li>
+</ul>
+</li>
 <li><a href="#other">Other</a>
 <ul class="sectlevel2">
 <li><a href="#unzip">Unzip</a></li>
-<li><a href="#open-3">Open</a></li>
+<li><a href="#open-4">Open</a></li>
 </ul>
 </li>
 </ul>
@@ -760,7 +773,7 @@ You can give it a name with --name flag.</p>
 <div class="sect3">
 <h4 id="open"><a class="anchor" href="#open"></a>Open</h4>
 <div class="paragraph">
-<p>Open a Layer from a Workspace</p>
+<p>Open a Layer.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -805,7 +818,7 @@ You can give it a name with --name flag.</p>
 <div class="sect3">
 <h4 id="close"><a class="anchor" href="#close"></a>Close</h4>
 <div class="paragraph">
-<p>Close an Open Layer</p>
+<p>Close a Layer.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -836,7 +849,7 @@ You can give it a name with --name flag.</p>
 <div class="sect3">
 <h4 id="list"><a class="anchor" href="#list"></a>List</h4>
 <div class="paragraph">
-<p>List open Layers</p>
+<p>List open Layers.</p>
 </div>
 </div>
 </div>
@@ -844,6 +857,12 @@ You can give it a name with --name flag.</p>
 <h3 id="geoprocessing"><a class="anchor" href="#geoprocessing"></a>Geoprocessing</h3>
 <div class="sect3">
 <h4 id="random-points"><a class="anchor" href="#random-points"></a>Random Points</h4>
+<div class="paragraph">
+<p>Create a Layer with a number of randomly located points</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer random</strong> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">points</span> <span class="gray">--geometry</span> <span class="silver">-180,-90,180,90</span> <span class="gray">--number</span> <span class="silver">100</span> <span class="gray">--projection</span> <span class="silver">EPSG:4326</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -1000,6 +1019,12 @@ You can give it a name with --name flag.</p>
 </div>
 <div class="sect3">
 <h4 id="buffer"><a class="anchor" href="#buffer"></a>Buffer</h4>
+<div class="paragraph">
+<p>Buffer the input Layer to the output Layer.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer buffer</strong> <span class="gray">--input-name</span> <span class="silver">points</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">buffers</span> <span class="gray">--distance</span> <span class="silver">10</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -1130,6 +1155,12 @@ You can give it a name with --name flag.</p>
 </div>
 <div class="sect3">
 <h4 id="centroid"><a class="anchor" href="#centroid"></a>Centroid</h4>
+<div class="paragraph">
+<p>Calculate the centroids of the input Layer to the output Layer.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer centroid</strong> <span class="gray">--input-name</span> <span class="silver">countries</span> <span class="gray">--output-name</span> <span class="silver">centroids</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -1237,6 +1268,12 @@ You can give it a name with --name flag.</p>
 </div>
 <div class="sect3">
 <h4 id="interior-point"><a class="anchor" href="#interior-point"></a>Interior Point</h4>
+<div class="paragraph">
+<p>Calculate the interior points of the input Layer to the output Layer.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer interiorpoint</strong> <span class="gray">--input-name</span> <span class="silver">countries</span> <span class="gray">--output-name</span> <span class="silver">interiorpoints</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -1344,6 +1381,12 @@ You can give it a name with --name flag.</p>
 </div>
 <div class="sect3">
 <h4 id="extent"><a class="anchor" href="#extent"></a>Extent</h4>
+<div class="paragraph">
+<p>Calculate the extent of the input Layer and save it to the output Layer.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer extent</strong> <span class="gray">--input-name</span> <span class="silver">states</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">usa</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -1470,6 +1513,12 @@ You can give it a name with --name flag.</p>
 </div>
 <div class="sect3">
 <h4 id="extents"><a class="anchor" href="#extents"></a>Extents</h4>
+<div class="paragraph">
+<p>Calculate the extents of each Feature in the input Layer and save them to the output Layer.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer extents</strong> <span class="gray">--input-name</span> <span class="silver">states</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">state_extents</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -1592,6 +1641,12 @@ You can give it a name with --name flag.</p>
 <h3 id="graticule"><a class="anchor" href="#graticule"></a>Graticule</h3>
 <div class="sect3">
 <h4 id="square"><a class="anchor" href="#square"></a>Square</h4>
+<div class="paragraph">
+<p>Create a square graticule.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer graticule square</strong> <span class="gray">--workspace</span> <span class="silver">layers</span> <span class="gray">--name</span> <span class="silver">squares</span> <span class="gray">--bounds</span> <span class="silver">-180,-90,180,90</span> <span class="gray">--length</span> <span class="silver">20</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -1713,6 +1768,12 @@ You can give it a name with --name flag.</p>
 </div>
 <div class="sect3">
 <h4 id="rectangle"><a class="anchor" href="#rectangle"></a>Rectangle</h4>
+<div class="paragraph">
+<p>Create a rectangle graticule.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer graticule rectangle</strong> <span class="gray">--workspace</span> <span class="silver">layers</span> <span class="gray">--name</span> <span class="silver">rectangles</span> <span class="gray">--bounds</span> <span class="silver">-180,-90,180,90</span> <span class="gray">--width</span> <span class="silver">20</span> <span class="gray">--height</span> <span class="silver">10</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -1841,6 +1902,12 @@ You can give it a name with --name flag.</p>
 </div>
 <div class="sect3">
 <h4 id="oval"><a class="anchor" href="#oval"></a>Oval</h4>
+<div class="paragraph">
+<p>Create a oval graticule.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer graticule oval</strong> <span class="gray">--workspace</span> <span class="silver">layers</span> <span class="gray">--name</span> <span class="silver">ovals</span> <span class="gray">--bounds</span> <span class="silver">-180,-90,180,90</span> <span class="gray">--size</span> <span class="silver">20</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -1955,6 +2022,12 @@ You can give it a name with --name flag.</p>
 </div>
 <div class="sect3">
 <h4 id="hexagon"><a class="anchor" href="#hexagon"></a>Hexagon</h4>
+<div class="paragraph">
+<p>Create a hexagon graticule.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer graticule hexagon</strong> <span class="gray">--workspace</span> <span class="silver">layers</span> <span class="gray">--name</span> <span class="silver">hexagons</span> <span class="gray">--bounds</span> <span class="silver">-180,-90,180,90</span> <span class="gray">--length</span> <span class="silver">10</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -2090,7 +2163,7 @@ You can give it a name with --name flag.</p>
 <div class="sect2">
 <h3 id="open-2"><a class="anchor" href="#open-2"></a>Open</h3>
 <div class="paragraph">
-<p>Open a Format</p>
+<p>Open a Raster Format.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2128,13 +2201,13 @@ You can give it a name with --name flag.</p>
 <div class="sect2">
 <h3 id="list-2"><a class="anchor" href="#list-2"></a>List</h3>
 <div class="paragraph">
-<p>List open Formats</p>
+<p>List open Raster Formats.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="close-2"><a class="anchor" href="#close-2"></a>Close</h3>
 <div class="paragraph">
-<p>Close a Format</p>
+<p>Close a Raster Format.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2165,7 +2238,7 @@ You can give it a name with --name flag.</p>
 <div class="sect2">
 <h3 id="rasters"><a class="anchor" href="#rasters"></a>Rasters</h3>
 <div class="paragraph">
-<p>List the Rasters in a Format</p>
+<p>List the Rasters in a Format.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2593,7 +2666,403 @@ You can give it a name with --name flag.</p>
 <div class="sect1">
 <h2 id="map"><a class="anchor" href="#map"></a>Map</h2>
 <div class="sectionbody">
-
+<div class="sect2">
+<h3 id="open-3"><a class="anchor" href="#open-3"></a>Open</h3>
+<div class="paragraph">
+<p>Open a new Map.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The map name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="close-3"><a class="anchor" href="#close-3"></a>Close</h3>
+<div class="paragraph">
+<p>Close a Tile Layer.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The map name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="list-3"><a class="anchor" href="#list-3"></a>List</h3>
+<div class="paragraph">
+<p>List open Maps.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="add-layer"><a class="anchor" href="#add-layer"></a>Add Layer</h3>
+<div class="paragraph">
+<p>Add a Layer.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The map name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">layer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The layer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mapLayerName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The map layer name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="add-raster"><a class="anchor" href="#add-raster"></a>Add Raster</h3>
+<div class="paragraph">
+<p>Add a Raster.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The map name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">raster</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The raster</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mapLayerName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The map layer name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="add-tle"><a class="anchor" href="#add-tle"></a>Add Tle</h3>
+<div class="paragraph">
+<p>Add a Tile.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The map name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tile</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The tile</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mapLayerName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The map layer name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="remove-layer"><a class="anchor" href="#remove-layer"></a>Remove Layer</h3>
+<div class="paragraph">
+<p>Remove a Layer.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The map name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">layer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The layer name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="reorder"><a class="anchor" href="#reorder"></a>Reorder</h3>
+<div class="paragraph">
+<p>Reorder a Layer in the Map.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The map name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">layer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The layer name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">order</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The order parameters</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="layers-2"><a class="anchor" href="#layers-2"></a>Layers</h3>
+<div class="paragraph">
+<p>List the Map&#8217;s Layers.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The map name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="draw"><a class="anchor" href="#draw"></a>Draw</h3>
+<div class="paragraph">
+<p>Draw a map.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The map name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bounds</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Bounds</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">projection</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Projection</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">width</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The width</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">600</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">600</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">height</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The height</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">png</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">png</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">file</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The file</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">background-color</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The background color</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -2602,7 +3071,7 @@ You can give it a name with --name flag.</p>
 <div class="sect2">
 <h3 id="unzip"><a class="anchor" href="#unzip"></a>Unzip</h3>
 <div class="paragraph">
-<p>Unzip a zip file</p>
+<p>Unzip a file</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2638,9 +3107,9 @@ You can give it a name with --name flag.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="open-3"><a class="anchor" href="#open-3"></a>Open</h3>
+<h3 id="open-4"><a class="anchor" href="#open-4"></a>Open</h3>
 <div class="paragraph">
-<p>Open a File</p>
+<p>Open a File.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2674,7 +3143,7 @@ You can give it a name with --name flag.</p>
 <div id="footer">
 <div id="footer-text">
 Version 0.7-SNAPSHOT<br>
-Last updated 2019-12-15 03:48:55 UTC
+Last updated 2019-12-16 00:03:53 UTC
 </div>
 </div>
 </body>

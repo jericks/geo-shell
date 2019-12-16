@@ -1,0 +1,1 @@
+Get the Layer's style.

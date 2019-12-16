@@ -1,0 +1,1 @@
+Calculate the octagonal envelope of each Feature in the input Layer and save them to the output Layer.

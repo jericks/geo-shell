@@ -1,0 +1,1 @@
+Clip the input Layer by the other Layer to produce the output Layer

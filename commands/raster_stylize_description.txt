@@ -1,0 +1,1 @@
+Create a new Raster by baking the style into an existing Raster

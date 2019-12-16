@@ -1,0 +1,1 @@
+Calculate the mininmum bounding circle of the input Layer and save it to the output Layer.

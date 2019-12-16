@@ -1,0 +1,1 @@
+Calculate the extent of the input Layer and save it to the output Layer.

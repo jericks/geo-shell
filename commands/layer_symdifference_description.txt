@@ -1,0 +1,1 @@
+Calculate the symmetric difference between a Layer and another Layer.
