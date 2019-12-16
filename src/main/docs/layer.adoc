@@ -6,25 +6,29 @@ ifndef::imagesdir[:imagesdir: images]
 
 ==== Open
 
-Open a Layer from a Workspace
+include::commands/layer_open_description.txt[]
 
 include::commands/layer_open.txt[]
 
 ==== Close
 
-Close an Open Layer
+include::commands/layer_close_description.txt[]
 
 include::commands/layer_close.txt[]
 
 ==== List
 
-List open Layers
+include::commands/layer_list_description.txt[]
 
 include::commands/layer_list.txt[]
 
 === Geoprocessing
 
 ==== Random Points
+
+include::commands/layer_random_description.txt[]
+
+include::output/layer_random_1_command.txt[]
 
 include::commands/layer_random.txt[]
 
@@ -76,6 +80,10 @@ include::output/layer_random_14_result.txt[]
 image::random_points.png[]
 
 ==== Buffer
+
+include::commands/layer_buffer_description.txt[]
+
+include::output/layer_buffer_2_command.txt[]
 
 include::commands/layer_buffer.txt[]
 
@@ -140,6 +148,10 @@ image::layer_buffer.png[]
 
 ==== Centroid
 
+include::commands/layer_centroid_description.txt[]
+
+include::output/layer_centroid_4_command.txt[]
+
 include::commands/layer_centroid.txt[]
 
 include::output/layer_centroid_0_command.txt[]
@@ -191,6 +203,10 @@ image::layer_centroid.png[]
 
 ==== Interior Point
 
+include::commands/layer_interiorpoint_description.txt[]
+
+include::output/layer_interiorpoint_4_command.txt[]
+
 include::commands/layer_interiorpoint.txt[]
 
 include::output/layer_interiorpoint_0_command.txt[]
@@ -241,6 +257,10 @@ include::output/layer_interiorpoint_14_result.txt[]
 image::layer_interiorpoint.png[]
 
 ==== Extent
+
+include::commands/layer_extent_description.txt[]
+
+include::output/layer_extent_4_command.txt[]
 
 include::commands/layer_extent.txt[]
 
@@ -301,6 +321,10 @@ include::output/layer_extent_17_result.txt[]
 image::layer_extent.png[]
 
 ==== Extents
+
+include::commands/layer_extents_description.txt[]
+
+include::output/layer_extents_4_command.txt[]
 
 include::commands/layer_extents.txt[]
 
@@ -364,6 +388,10 @@ image::layer_extents.png[]
 
 ==== Square
 
+include::commands/layer_graticule_square_description.txt[]
+
+include::output/layer_graticule_square_1_command.txt[]
+
 include::commands/layer_graticule_square.txt[]
 
 include::output/layer_graticule_square_0_command.txt[]
@@ -414,6 +442,10 @@ include::output/layer_graticule_square_14_result.txt[]
 image::square_graticules.png[]
 
 ==== Rectangle
+
+include::commands/layer_graticule_rectangle_description.txt[]
+
+include::output/layer_graticule_rectangle_1_command.txt[]
 
 include::commands/layer_graticule_rectangle.txt[]
 
@@ -466,6 +498,10 @@ image::rectangle_graticules.png[]
 
 ==== Oval
 
+include::commands/layer_graticule_oval_description.txt[]
+
+include::output/layer_graticule_oval_1_command.txt[]
+
 include::commands/layer_graticule_oval.txt[]
 
 include::output/layer_graticule_oval_0_command.txt[]
@@ -516,6 +552,10 @@ include::output/layer_graticule_oval_14_result.txt[]
 image::oval_graticules.png[]
 
 ==== Hexagon
+
+include::commands/layer_graticule_hexagon_description.txt[]
+
+include::output/layer_graticule_hexagon_1_command.txt[]
 
 include::commands/layer_graticule_hexagon.txt[]
 

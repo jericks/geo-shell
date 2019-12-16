@@ -1,3 +1,54 @@
 ifndef::imagesdir[:imagesdir: images]
 
 == Map
+
+=== Open
+
+include::commands/map_open_description.txt[]
+include::commands/map_open.txt[]
+
+=== Close
+
+include::commands/map_close_description.txt[]
+include::commands/map_close.txt[]
+
+=== List
+
+include::commands/map_list_description.txt[]
+include::commands/map_list.txt[]
+
+=== Add Layer
+
+include::commands/map_add_layer_description.txt[]
+include::commands/map_add_layer.txt[]
+
+=== Add Raster
+
+include::commands/map_add_raster_description.txt[]
+include::commands/map_add_raster.txt[]
+
+=== Add Tle
+
+include::commands/map_add_tile_description.txt[]
+include::commands/map_add_tile.txt[]
+
+=== Remove Layer
+
+include::commands/map_remove_layer_description.txt[]
+include::commands/map_remove_layer.txt[]
+
+=== Reorder
+
+include::commands/map_reorder_description.txt[]
+include::commands/map_reorder.txt[]
+
+=== Layers
+
+include::commands/map_layers_description.txt[]
+include::commands/map_layers.txt[]
+
+=== Draw
+
+include::commands/map_draw_description.txt[]
+include::commands/map_draw.txt[]
+

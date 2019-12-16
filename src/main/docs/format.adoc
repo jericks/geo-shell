@@ -4,24 +4,24 @@ ifndef::imagesdir[:imagesdir: images]
 
 === Open
 
-Open a Format
+include::commands/format_open_description.txt[]
 
 include::commands/format_open.txt[]
 
 === List
 
-List open Formats
+include::commands/format_list_description.txt[]
 
 include::commands/format_list.txt[]
 
 === Close
 
-Close a Format
+include::commands/format_close_description.txt[]
 
 include::commands/format_close.txt[]
 
 === Rasters
 
-List the Rasters in a Format
+include::commands/format_rasters_description.txt[]
 
 include::commands/format_rasters.txt[]

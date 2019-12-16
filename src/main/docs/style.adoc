@@ -10,36 +10,36 @@ include::commands/style_create.txt[]
 
 === Vector Default
 
-Create a default vector style.
+include::commands/style_vector_default_description.txt[]
 
 include::commands/style_vector_default.txt[]
 
 === Vector Gradient
 
-Create a gradient vector style.
+include::commands/style_vector_gradient_description.txt[]
 
 include::commands/style_vector_gradient.txt[]
 
 === Vector Unique Values
 
-Create a unique values vector style.
+include::commands/style_vector_uniquevalues_description.txt[]
 
 include::commands/style_vector_uniquevalues.txt[]
 
 === Vector Unique Values From Text File
 
-Create a unique values vector style from a text file
+include::commands/style_vector_uniquevaluesfromtext_description.txt[]
 
 include::commands/style_vector_uniquevaluesfromtext.txt[]
 
 === Raster Default
 
-Create a default raster style.
+include::commands/style_raster_default_description.txt[]
 
 include::commands/style_raster_default.txt[]
 
 === Raster Color Map
 
-Create a color map raster style.
+include::commands/style_raster_colormap_description.txt[]
 
 include::commands/style_raster_colormap.txt[]
