@@ -1,3 +1,48 @@
 ifndef::imagesdir[:imagesdir: images]
 
 == Tile
+
+=== Open
+
+include::commands/tile_open_description.txt[]
+include::commands/tile_open.txt[]
+
+=== Close
+
+include::commands/tile_close_description.txt[]
+include::commands/tile_close.txt[]
+
+=== List
+
+include::commands/tile_list_description.txt[]
+include::commands/tile_list.txt[]
+
+=== Info
+
+include::commands/tile_info_description.txt[]
+include::commands/tile_info.txt[]
+
+=== Delete
+
+include::commands/tile_delete_description.txt[]
+include::commands/tile_delete.txt[]
+
+=== Generate
+
+include::commands/tile_generate_description.txt[]
+include::commands/tile_generate.txt[]
+
+=== Stitch Raster
+
+include::commands/tile_stitch_raster_description.txt[]
+include::commands/tile_stitch_raster.txt[]
+
+=== Tiles
+
+include::commands/tile_tiles_description.txt[]
+include::commands/tile_tiles.txt[]
+
+=== Vector Grid
+
+include::commands/tile_vector_grid_description.txt[]
+include::commands/tile_vector_grid.txt[]

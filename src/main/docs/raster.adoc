@@ -1,3 +1,126 @@
 ifndef::imagesdir[:imagesdir: images]
 
 == Raster
+
+=== Open
+
+include::commands/raster_open_description.txt[]
+include::commands/raster_open.txt[]
+
+=== Close
+
+include::commands/raster_close_description.txt[]
+include::commands/raster_close.txt[]
+
+=== List
+
+include::commands/raster_list_description.txt[]
+include::commands/raster_list.txt[]
+
+=== Info
+
+include::commands/raster_info_description.txt[]
+include::commands/raster_info.txt[]
+
+=== Value
+
+include::commands/raster_value_description.txt[]
+include::commands/raster_value.txt[]
+
+=== Envelope
+
+include::commands/raster_envelope_description.txt[]
+include::commands/raster_envelope.txt[]
+
+=== Get Style
+
+include::commands/raster_style_get_description.txt[]
+include::commands/raster_style_get.txt[]
+
+=== Set Style
+
+include::commands/raster_style_set_description.txt[]
+include::commands/raster_style_set.txt[]
+
+=== Add Raster
+
+include::commands/raster_add_raster_description.txt[]
+include::commands/raster_add_raster.txt[]
+
+=== Add Constant
+
+include::commands/raster_add_constant_description.txt[]
+include::commands/raster_add_constant.txt[]
+
+=== Subtract Raster
+
+include::commands/raster_subtract_raster_description.txt[]
+include::commands/raster_subtract_raster.txt[]
+
+=== Subtract Constant
+
+include::commands/raster_subtract_constant_description.txt[]
+include::commands/raster_subtract_constant.txt[]
+
+=== Multiply Raster
+
+include::commands/raster_multiply_raster_description.txt[]
+include::commands/raster_multiply_raster.txt[]
+
+=== Multiply Constant
+
+include::commands/raster_multiply_constant_description.txt[]
+include::commands/raster_multiply_constant.txt[]
+
+=== Divide Raster
+
+include::commands/raster_divide_raster_description.txt[]
+include::commands/raster_divide_raster.txt[]
+
+=== Divide Constant
+
+include::commands/raster_divide_constant_description.txt[]
+include::commands/raster_divide_constant.txt[]
+
+=== Contours
+
+include::commands/raster_contours_description.txt[]
+include::commands/raster_contours.txt[]
+
+=== Crop
+
+include::commands/raster_crop_description.txt[]
+include::commands/raster_crop.txt[]
+
+=== Mosaic
+
+include::commands/raster_mosaic_description.txt[]
+include::commands/raster_mosaic.txt[]
+
+=== Reclassify
+
+include::commands/raster_reclassify_description.txt[]
+include::commands/raster_reclassify.txt[]
+
+=== Reproject
+
+include::commands/raster_reproject_description.txt[]
+include::commands/raster_reproject.txt[]
+
+=== Scale
+
+include::commands/raster_scale_description.txt[]
+include::commands/raster_scale.txt[]
+
+=== Shaded Relief
+
+include::commands/raster_shadedrelief_description.txt[]
+include::commands/raster_shadedrelief.txt[]
+
+=== Stylize
+
+include::commands/raster_stylize_description.txt[]
+include::commands/raster_stylize.txt[]
+
+
+
