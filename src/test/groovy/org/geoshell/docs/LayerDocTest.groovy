@@ -307,4 +307,136 @@ class LayerDocTest extends AbstractDocTest {
         copyFile(new File("examples/hexagon_graticules.png"), new File("src/main/docs/images"))
     }
 
+    @Test
+    void minRect() {
+        run("layer_minrect", [
+                "workspace open --name layers --params memory",
+                "workspace open --name naturalearth --params examples/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer style set --name countries --style examples/countries.sld",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "layer style set --name ocean --style examples/ocean.sld",
+                "layer minrect --input-name countries --output-workspace layers --output-name minrect",
+                "style vector default --layer minrect --color #1E90FF --opacity 0.25 --file examples/minrect.sld",
+                "layer style set --name minrect --style examples/minrect.sld",
+                "map open --name map",
+                "map add layer --name map --layer ocean",
+                "map add layer --name map --layer countries",
+                "map add layer --name map --layer minrect",
+                "map draw --name map --file examples/layer_minrect.png",
+                "map close --name map"
+        ])
+        copyFile(new File("examples/layer_minrect.png"), new File("src/main/docs/images"))
+    }
+
+    @Test
+    void minRects() {
+        run("layer_minrects", [
+                "workspace open --name layers --params memory",
+                "workspace open --name naturalearth --params examples/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer style set --name countries --style examples/countries.sld",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "layer style set --name ocean --style examples/ocean.sld",
+                "layer minrects --input-name countries --output-workspace layers --output-name minrects",
+                "style vector default --layer minrects --color #1E90FF --opacity 0.25 --file examples/minrects.sld",
+                "layer style set --name minrects --style examples/minrects.sld",
+                "map open --name map",
+                "map add layer --name map --layer ocean",
+                "map add layer --name map --layer countries",
+                "map add layer --name map --layer minrects",
+                "map draw --name map --file examples/layer_minrects.png",
+                "map close --name map"
+        ])
+        copyFile(new File("examples/layer_minrects.png"), new File("src/main/docs/images"))
+    }
+
+    @Test
+    void minCircle() {
+        run("layer_mincircle", [
+                "workspace open --name layers --params memory",
+                "workspace open --name naturalearth --params examples/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer style set --name countries --style examples/countries.sld",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "layer style set --name ocean --style examples/ocean.sld",
+                "layer mincircle --input-name countries --output-workspace layers --output-name mincircle",
+                "style vector default --layer mincircle --color #1E90FF --opacity 0.25 --file examples/mincircle.sld",
+                "layer style set --name mincircle --style examples/mincircle.sld",
+                "map open --name map",
+                "map add layer --name map --layer ocean",
+                "map add layer --name map --layer countries",
+                "map add layer --name map --layer mincircle",
+                "map draw --name map --file examples/layer_mincircle.png",
+                "map close --name map"
+        ])
+        copyFile(new File("examples/layer_mincircle.png"), new File("src/main/docs/images"))
+    }
+
+    @Test
+    void minCircles() {
+        run("layer_mincircles", [
+                "workspace open --name layers --params memory",
+                "workspace open --name naturalearth --params examples/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer style set --name countries --style examples/countries.sld",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "layer style set --name ocean --style examples/ocean.sld",
+                "layer mincircles --input-name countries --output-workspace layers --output-name mincircles",
+                "style vector default --layer mincircles --color #1E90FF --opacity 0.25 --file examples/mincircles.sld",
+                "layer style set --name mincircles --style examples/mincircles.sld",
+                "map open --name map",
+                "map add layer --name map --layer ocean",
+                "map add layer --name map --layer countries",
+                "map add layer --name map --layer mincircles",
+                "map draw --name map --file examples/layer_mincircles.png",
+                "map close --name map"
+        ])
+        copyFile(new File("examples/layer_mincircles.png"), new File("src/main/docs/images"))
+    }
+
+    @Test
+    void octagonalEnvelope() {
+        run("layer_octagonalenvelope", [
+                "workspace open --name layers --params memory",
+                "workspace open --name naturalearth --params examples/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer style set --name countries --style examples/countries.sld",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "layer style set --name ocean --style examples/ocean.sld",
+                "layer octagonalenvelope --input-name countries --output-workspace layers --output-name octagonalenvelope",
+                "style vector default --layer octagonalenvelope --color #1E90FF --opacity 0.25 --file examples/octagonalenvelope.sld",
+                "layer style set --name octagonalenvelope --style examples/octagonalenvelope.sld",
+                "map open --name map",
+                "map add layer --name map --layer ocean",
+                "map add layer --name map --layer countries",
+                "map add layer --name map --layer octagonalenvelope",
+                "map draw --name map --file examples/layer_octagonalenvelope.png",
+                "map close --name map"
+        ])
+        copyFile(new File("examples/layer_octagonalenvelope.png"), new File("src/main/docs/images"))
+    }
+
+    @Test
+    void octagonalEnvelopes() {
+        run("layer_octagonalenvelopes", [
+                "workspace open --name layers --params memory",
+                "workspace open --name naturalearth --params examples/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer style set --name countries --style examples/countries.sld",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "layer style set --name ocean --style examples/ocean.sld",
+                "layer octagonalenvelopes --input-name countries --output-workspace layers --output-name octagonalenvelopes",
+                "style vector default --layer octagonalenvelopes --color #1E90FF --opacity 0.25 --file examples/octagonalenvelopes.sld",
+                "layer style set --name octagonalenvelopes --style examples/octagonalenvelopes.sld",
+                "map open --name map",
+                "map add layer --name map --layer ocean",
+                "map add layer --name map --layer countries",
+                "map add layer --name map --layer octagonalenvelopes",
+                "map draw --name map --file examples/layer_octagonalenvelopes.png",
+                "map close --name map"
+        ])
+        copyFile(new File("examples/layer_octagonalenvelopes.png"), new File("src/main/docs/images"))
+    }
+
 }
