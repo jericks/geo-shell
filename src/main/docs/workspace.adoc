@@ -10,8 +10,9 @@ a directory of Shapefiles, or a PostGIS database.
 You can open, close, and list Workspaces.  The eariest Workspace to open
 is an in memory Workspace.
 
-.Open a Workspace
+==== Open
 
+include::commands/workspace_open_description.txt[]
 include::commands/workspace_open.txt[]
 
 include::output/workspace_basics_open_command.txt[]
@@ -20,8 +21,9 @@ include::output/workspace_basics_open_result.txt[]
 You can open a Workspace with --params or connection parameters.
 You can give it a name with --name flag.
 
-.List open Workspaces
+==== List
 
+include::commands/workspace_list_description.txt[]
 include::commands/workspace_list.txt[]
 
 include::output/workspace_basics_list_command.txt[]
@@ -29,8 +31,9 @@ include::output/workspace_basics_list_result.txt[]
 
 Listing open Workspaces give you the name and the type Workspace.
 
-.Close a Workspace
+==== Close
 
+include::commands/workspace_close_description.txt[]
 include::commands/workspace_close.txt[]
 
 include::output/workspace_basics_close_command.txt[]
@@ -39,6 +42,9 @@ include::output/workspace_basics_close_result.txt[]
 Once you close a Workspace by name it will no longer appear with the list command.
 
 === Layers
+
+include::commands/workspace_layers_description.txt[]
+include::commands/workspace_layers.txt[]
 
 In this example, we will open a GeoPackage database filled with data from Natural Earth.
 

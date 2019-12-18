@@ -7,22 +7,229 @@ ifndef::imagesdir[:imagesdir: images]
 ==== Open
 
 include::commands/layer_open_description.txt[]
-
 include::commands/layer_open.txt[]
 
 ==== Close
 
 include::commands/layer_close_description.txt[]
-
 include::commands/layer_close.txt[]
 
 ==== List
 
 include::commands/layer_list_description.txt[]
-
 include::commands/layer_list.txt[]
 
+==== Schema
+
+include::commands/layer_schema_description.txt[]
+include::commands/layer_schema.txt[]
+
+==== Features
+
+include::commands/layer_features_description.txt[]
+include::commands/layer_features.txt[]
+
+==== Count
+
+include::commands/layer_count_description.txt[]
+include::commands/layer_count.txt[]
+
+==== Copy
+
+include::commands/layer_copy_description.txt[]
+include::commands/layer_copy.txt[]
+
+==== Projection
+
+include::commands/layer_projection_description.txt[]
+include::commands/layer_projection.txt[]
+
+==== Get Style
+
+include::commands/layer_style_get_description.txt[]
+include::commands/layer_style_get.txt[]
+
+==== Set Style
+
+include::commands/layer_style_set_description.txt[]
+include::commands/layer_style_set.txt[]
+
+==== Add
+
+include::commands/layer_add_description.txt[]
+include::commands/layer_add.txt[]
+
+==== Remove
+
+include::commands/layer_remove_description.txt[]
+include::commands/layer_remove.txt[]
+
+==== Create
+
+include::commands/layer_create_description.txt[]
+include::commands/layer_create.txt[]
+
+==== Delete
+
+include::commands/layer_delete_description.txt[]
+include::commands/layer_delete.txt[]
+
+==== Update
+
+include::commands/layer_update_description.txt[]
+include::commands/layer_update.txt[]
+
+==== Update Field
+
+include::commands/layer_updatefield_description.txt[]
+include::commands/layer_updatefield.txt[]
+
+==== Add Fields
+
+include::commands/layer_addfields_description.txt[]
+include::commands/layer_addfields.txt[]
+
+==== Add Area Field
+
+include::commands/layer_addareafield_description.txt[]
+include::commands/layer_addareafield.txt[]
+
+==== Add ID Field
+
+include::commands/layer_addidfield_description.txt[]
+include::commands/layer_addidfield.txt[]
+
+==== Add XY Fields
+
+include::commands/layer_addxyfields_description.txt[]
+include::commands/layer_addxyfields.txt[]
+
+==== Validity
+
+include::commands/layer_validity_description.txt[]
+include::commands/layer_validity.txt[]
+
 === Geoprocessing
+
+==== Clip
+
+include::commands/layer_clip_description.txt[]
+include::commands/layer_clip.txt[]
+
+==== Convex Hull
+
+include::commands/layer_convexhull_description.txt[]
+include::commands/layer_convexhull.txt[]
+
+==== Convex Hulls
+
+include::commands/layer_convexhulls_description.txt[]
+include::commands/layer_convexhulls.txt[]
+
+==== Coordinates
+
+include::commands/layer_coordinates_description.txt[]
+include::commands/layer_coordinates.txt[]
+
+==== Delaunay
+
+include::commands/layer_delaunay_description.txt[]
+include::commands/layer_delaunay.txt[]
+
+==== Densify
+
+include::commands/layer_densify_description.txt[]
+include::commands/layer_densify.txt[]
+
+==== Dissolve
+
+include::commands/layer_dissolve_description.txt[]
+include::commands/layer_dissolve.txt[]
+
+==== Erase
+
+include::commands/layer_erase_description.txt[]
+include::commands/layer_erase.txt[]
+
+==== Grid Row / Column
+
+include::commands/layer_grid_rowcol_description.txt[]
+include::commands/layer_grid_rowcol.txt[]
+
+==== Grid Width / Height
+
+include::commands/layer_grid_widthheight_description.txt[]
+include::commands/layer_grid_widthheight.txt[]
+
+==== Identity
+
+include::commands/layer_identity_description.txt[]
+include::commands/layer_identity.txt[]
+
+==== Intersection
+
+include::commands/layer_intersection_description.txt[]
+include::commands/layer_intersection.txt[]
+
+==== Minimum Circle
+
+include::commands/layer_mincircle_description.txt[]
+include::commands/layer_mincircle.txt[]
+
+==== Minimum Circles
+
+include::commands/layer_mincircles_description.txt[]
+include::commands/layer_mincircles.txt[]
+
+==== Minimum Rectangle
+
+include::commands/layer_minrect_description.txt[]
+include::commands/layer_minrect.txt[]
+
+==== Minimum Rectangles
+
+include::commands/layer_minrects_description.txt[]
+include::commands/layer_minrects.txt[]
+
+==== Octangle Envelope
+
+include::commands/layer_octagonalenvelope_description.txt[]
+include::commands/layer_octagonalenvelope.txt[]
+
+==== Octangle Envelopes
+
+include::commands/layer_octagonalenvelopes_description.txt[]
+include::commands/layer_octagonalenvelopes.txt[]
+
+==== Points Along Lines
+
+include::commands/layer_points_along_lines_description.txt[]
+include::commands/layer_points_along_lines.txt[]
+
+==== Simplify
+
+include::commands/layer_simplify_description.txt[]
+include::commands/layer_simplify.txt[]
+
+==== Symmetric Difference
+
+include::commands/layer_symdifference_description.txt[]
+include::commands/layer_symdifference.txt[]
+
+==== Transform
+
+include::commands/layer_transform_description.txt[]
+include::commands/layer_transform.txt[]
+
+==== Union
+
+include::commands/layer_union_description.txt[]
+include::commands/layer_union.txt[]
+
+==== Voronoi
+
+include::commands/layer_voronoi_description.txt[]
+include::commands/layer_voronoi.txt[]
 
 ==== Random Points
 
