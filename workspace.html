@@ -529,7 +529,13 @@ table.CodeRay td.code>pre{padding:0}
 <ul class="sectlevel1">
 <li><a href="#workspace">Workspace</a>
 <ul class="sectlevel2">
-<li><a href="#basics">Basics</a></li>
+<li><a href="#basics">Basics</a>
+<ul class="sectlevel3">
+<li><a href="#open">Open</a></li>
+<li><a href="#list">List</a></li>
+<li><a href="#close">Close</a></li>
+</ul>
+</li>
 <li><a href="#layers">Layers</a></li>
 </ul>
 </li>
@@ -550,8 +556,12 @@ a directory of Shapefiles, or a PostGIS database.</p>
 <p>You can open, close, and list Workspaces.  The eariest Workspace to open
 is an in memory Workspace.</p>
 </div>
+<div class="sect3">
+<h4 id="open"><a class="anchor" href="#open"></a>Open</h4>
+<div class="paragraph">
+<p>Open a Workspace.</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Open a Workspace</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -591,16 +601,26 @@ is an in memory Workspace.</p>
 <p>You can open a Workspace with --params or connection parameters.
 You can give it a name with --name flag.</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="list"><a class="anchor" href="#list"></a>List</h4>
 <div class="paragraph">
-<div class="title">List open Workspaces</div>
+<p>List open Workspaces.</p>
+</div>
+<div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace list</strong> <br>
 <span class="green">mem = Memory</span><br></p>
 </div>
 <div class="paragraph">
 <p>Listing open Workspaces give you the name and the type Workspace.</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="close"><a class="anchor" href="#close"></a>Close</h4>
+<div class="paragraph">
+<p>Close a Workspace.</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 2. Close a Workspace</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -633,8 +653,37 @@ You can give it a name with --name flag.</p>
 <p>Once you close a Workspace by name it will no longer appear with the list command.</p>
 </div>
 </div>
+</div>
 <div class="sect2">
 <h3 id="layers"><a class="anchor" href="#layers"></a>Layers</h3>
+<div class="paragraph">
+<p>List the Layer in a Workspaces.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Workspace name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>In this example, we will open a GeoPackage database filled with data from Natural Earth.</p>
 </div>
@@ -662,7 +711,7 @@ You can give it a name with --name flag.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-12-17 00:39:08 UTC
+Last updated 2019-12-18 00:53:03 UTC
 </div>
 </div>
 </body>
