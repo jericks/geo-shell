@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer mincircle* [gray]#--input-name# [silver]#countries# [gray]#--output-workspace# [silver]#layers# [gray]#--output-name# [silver]#mincircle# +

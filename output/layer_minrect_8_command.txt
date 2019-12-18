@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer style set* [gray]#--name# [silver]#minrect# [gray]#--style# [silver]#examples/minrect.sld# +

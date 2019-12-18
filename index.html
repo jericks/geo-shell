@@ -2543,6 +2543,9 @@ You can give it a name with --name flag.</p>
 <div class="paragraph">
 <p>Calculate the mininmum bounding circle of the input Layer and save it to the output Layer.</p>
 </div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer mincircle</strong> <span class="gray">--input-name</span> <span class="silver">countries</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">mincircle</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -2589,12 +2592,80 @@ You can give it a name with --name flag.</p>
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">layers</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace layers opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">examples/naturalearth.gpkg</span><br>
+<span class="green">Workspace naturalearth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">countries</span> <span class="gray">--name</span> <span class="silver">countries</span><br>
+<span class="green">Opened Workspace naturalearth Layer countries as countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">countries</span> <span class="gray">--style</span> <span class="silver">examples/countries.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/countries.sld set on countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">ocean</span> <span class="gray">--name</span> <span class="silver">ocean</span><br>
+<span class="green">Opened Workspace naturalearth Layer ocean as ocean</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">ocean</span> <span class="gray">--style</span> <span class="silver">examples/ocean.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/ocean.sld set on ocean</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer mincircle</strong> <span class="gray">--input-name</span> <span class="silver">countries</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">mincircle</span><br>
+<span class="green">Done!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">mincircle</span> <span class="gray">--color</span> <span class="silver">#1E90FF</span> <span class="gray">--opacity</span> <span class="silver">0.25</span> <span class="gray">--file</span> <span class="silver">examples/mincircle.sld</span><br>
+<span class="green">Default Vector Style for mincircle written to /home/travis/build/jericks/geo-shell/examples/mincircle.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">mincircle</span> <span class="gray">--style</span> <span class="silver">examples/mincircle.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/mincircle.sld set on mincircle</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">ocean</span><br>
+<span class="green">Added ocean layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">countries</span><br>
+<span class="green">Added countries layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">mincircle</span><br>
+<span class="green">Added mincircle layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--file</span> <span class="silver">examples/layer_mincircle.png</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/layer_mincircle.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/layer_mincircle.png" alt="layer mincircle">
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="minimum-circles"><a class="anchor" href="#minimum-circles"></a>Minimum Circles</h4>
 <div class="paragraph">
 <p>Calculate the minimum bounding circle of each Feature in the input Layer and save them to the output Layer.</p>
 </div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer mincircles</strong> <span class="gray">--input-name</span> <span class="silver">countries</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">mincircles</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -2634,12 +2705,80 @@ You can give it a name with --name flag.</p>
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">layers</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace layers opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">examples/naturalearth.gpkg</span><br>
+<span class="green">Workspace naturalearth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">countries</span> <span class="gray">--name</span> <span class="silver">countries</span><br>
+<span class="green">Opened Workspace naturalearth Layer countries as countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">countries</span> <span class="gray">--style</span> <span class="silver">examples/countries.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/countries.sld set on countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">ocean</span> <span class="gray">--name</span> <span class="silver">ocean</span><br>
+<span class="green">Opened Workspace naturalearth Layer ocean as ocean</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">ocean</span> <span class="gray">--style</span> <span class="silver">examples/ocean.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/ocean.sld set on ocean</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer mincircles</strong> <span class="gray">--input-name</span> <span class="silver">countries</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">mincircles</span><br>
+<span class="green">Done!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">mincircles</span> <span class="gray">--color</span> <span class="silver">#1E90FF</span> <span class="gray">--opacity</span> <span class="silver">0.25</span> <span class="gray">--file</span> <span class="silver">examples/mincircles.sld</span><br>
+<span class="green">Default Vector Style for mincircles written to /home/travis/build/jericks/geo-shell/examples/mincircles.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">mincircles</span> <span class="gray">--style</span> <span class="silver">examples/mincircles.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/mincircles.sld set on mincircles</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">ocean</span><br>
+<span class="green">Added ocean layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">countries</span><br>
+<span class="green">Added countries layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">mincircles</span><br>
+<span class="green">Added mincircles layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--file</span> <span class="silver">examples/layer_mincircles.png</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/layer_mincircles.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/layer_mincircles.png" alt="layer mincircles">
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="minimum-rectangle"><a class="anchor" href="#minimum-rectangle"></a>Minimum Rectangle</h4>
 <div class="paragraph">
 <p>Calculate the mininmum rectangle of the input Layer and save it to the output Layer.</p>
 </div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer minrect</strong> <span class="gray">--input-name</span> <span class="silver">countries</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">minrect</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -2686,12 +2825,80 @@ You can give it a name with --name flag.</p>
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">layers</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace layers opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">examples/naturalearth.gpkg</span><br>
+<span class="green">Workspace naturalearth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">countries</span> <span class="gray">--name</span> <span class="silver">countries</span><br>
+<span class="green">Opened Workspace naturalearth Layer countries as countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">countries</span> <span class="gray">--style</span> <span class="silver">examples/countries.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/countries.sld set on countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">ocean</span> <span class="gray">--name</span> <span class="silver">ocean</span><br>
+<span class="green">Opened Workspace naturalearth Layer ocean as ocean</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">ocean</span> <span class="gray">--style</span> <span class="silver">examples/ocean.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/ocean.sld set on ocean</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer minrect</strong> <span class="gray">--input-name</span> <span class="silver">countries</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">minrect</span><br>
+<span class="green">Done!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">minrect</span> <span class="gray">--color</span> <span class="silver">#1E90FF</span> <span class="gray">--opacity</span> <span class="silver">0.25</span> <span class="gray">--file</span> <span class="silver">examples/minrect.sld</span><br>
+<span class="green">Default Vector Style for minrect written to /home/travis/build/jericks/geo-shell/examples/minrect.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">minrect</span> <span class="gray">--style</span> <span class="silver">examples/minrect.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/minrect.sld set on minrect</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">ocean</span><br>
+<span class="green">Added ocean layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">countries</span><br>
+<span class="green">Added countries layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">minrect</span><br>
+<span class="green">Added minrect layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--file</span> <span class="silver">examples/layer_minrect.png</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/layer_minrect.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/layer_minrect.png" alt="layer minrect">
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="minimum-rectangles"><a class="anchor" href="#minimum-rectangles"></a>Minimum Rectangles</h4>
 <div class="paragraph">
 <p>Calculate the minimum rectangle of each Feature in the input Layer and save them to the output Layer.</p>
 </div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer minrects</strong> <span class="gray">--input-name</span> <span class="silver">countries</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">minrects</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -2731,11 +2938,79 @@ You can give it a name with --name flag.</p>
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">layers</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace layers opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">examples/naturalearth.gpkg</span><br>
+<span class="green">Workspace naturalearth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">countries</span> <span class="gray">--name</span> <span class="silver">countries</span><br>
+<span class="green">Opened Workspace naturalearth Layer countries as countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">countries</span> <span class="gray">--style</span> <span class="silver">examples/countries.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/countries.sld set on countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">ocean</span> <span class="gray">--name</span> <span class="silver">ocean</span><br>
+<span class="green">Opened Workspace naturalearth Layer ocean as ocean</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">ocean</span> <span class="gray">--style</span> <span class="silver">examples/ocean.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/ocean.sld set on ocean</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer minrects</strong> <span class="gray">--input-name</span> <span class="silver">countries</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">minrects</span><br>
+<span class="green">Done!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">minrects</span> <span class="gray">--color</span> <span class="silver">#1E90FF</span> <span class="gray">--opacity</span> <span class="silver">0.25</span> <span class="gray">--file</span> <span class="silver">examples/minrects.sld</span><br>
+<span class="green">Default Vector Style for minrects written to /home/travis/build/jericks/geo-shell/examples/minrects.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">minrects</span> <span class="gray">--style</span> <span class="silver">examples/minrects.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/minrects.sld set on minrects</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">ocean</span><br>
+<span class="green">Added ocean layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">countries</span><br>
+<span class="green">Added countries layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">minrects</span><br>
+<span class="green">Added minrects layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--file</span> <span class="silver">examples/layer_minrects.png</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/layer_minrects.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/layer_minrects.png" alt="layer minrects">
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="octangle-envelope"><a class="anchor" href="#octangle-envelope"></a>Octangle Envelope</h4>
 <div class="paragraph">
 <p>Calculate the octagonal envelope of the input Layer and save it to the output Layer.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer octagonalenvelope</strong> <span class="gray">--input-name</span> <span class="silver">countries</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">octagonalenvelope</span><br></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2783,11 +3058,79 @@ You can give it a name with --name flag.</p>
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">layers</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace layers opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">examples/naturalearth.gpkg</span><br>
+<span class="green">Workspace naturalearth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">countries</span> <span class="gray">--name</span> <span class="silver">countries</span><br>
+<span class="green">Opened Workspace naturalearth Layer countries as countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">countries</span> <span class="gray">--style</span> <span class="silver">examples/countries.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/countries.sld set on countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">ocean</span> <span class="gray">--name</span> <span class="silver">ocean</span><br>
+<span class="green">Opened Workspace naturalearth Layer ocean as ocean</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">ocean</span> <span class="gray">--style</span> <span class="silver">examples/ocean.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/ocean.sld set on ocean</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer octagonalenvelope</strong> <span class="gray">--input-name</span> <span class="silver">countries</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">octagonalenvelope</span><br>
+<span class="green">Done!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">octagonalenvelope</span> <span class="gray">--color</span> <span class="silver">#1E90FF</span> <span class="gray">--opacity</span> <span class="silver">0.25</span> <span class="gray">--file</span> <span class="silver">examples/octagonalenvelope.sld</span><br>
+<span class="green">Default Vector Style for octagonalenvelope written to /home/travis/build/jericks/geo-shell/examples/octagonalenvelope.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">octagonalenvelope</span> <span class="gray">--style</span> <span class="silver">examples/octagonalenvelope.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/octagonalenvelope.sld set on octagonalenvelope</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">ocean</span><br>
+<span class="green">Added ocean layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">countries</span><br>
+<span class="green">Added countries layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">octagonalenvelope</span><br>
+<span class="green">Added octagonalenvelope layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--file</span> <span class="silver">examples/layer_octagonalenvelope.png</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/layer_octagonalenvelope.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/layer_octagonalenvelope.png" alt="layer octagonalenvelope">
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="octangle-envelopes"><a class="anchor" href="#octangle-envelopes"></a>Octangle Envelopes</h4>
 <div class="paragraph">
 <p>Calculate the octagonal envelope of each Feature in the input Layer and save them to the output Layer.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer octagonalenvelopes</strong> <span class="gray">--input-name</span> <span class="silver">countries</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">octagonalenvelopes</span><br></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2828,6 +3171,71 @@ You can give it a name with --name flag.</p>
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">layers</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace layers opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">examples/naturalearth.gpkg</span><br>
+<span class="green">Workspace naturalearth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">countries</span> <span class="gray">--name</span> <span class="silver">countries</span><br>
+<span class="green">Opened Workspace naturalearth Layer countries as countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">countries</span> <span class="gray">--style</span> <span class="silver">examples/countries.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/countries.sld set on countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">ocean</span> <span class="gray">--name</span> <span class="silver">ocean</span><br>
+<span class="green">Opened Workspace naturalearth Layer ocean as ocean</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">ocean</span> <span class="gray">--style</span> <span class="silver">examples/ocean.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/ocean.sld set on ocean</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer octagonalenvelopes</strong> <span class="gray">--input-name</span> <span class="silver">countries</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">octagonalenvelopes</span><br>
+<span class="green">Done!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">octagonalenvelopes</span> <span class="gray">--color</span> <span class="silver">#1E90FF</span> <span class="gray">--opacity</span> <span class="silver">0.25</span> <span class="gray">--file</span> <span class="silver">examples/octagonalenvelopes.sld</span><br>
+<span class="green">Default Vector Style for octagonalenvelopes written to /home/travis/build/jericks/geo-shell/examples/octagonalenvelopes.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">octagonalenvelopes</span> <span class="gray">--style</span> <span class="silver">examples/octagonalenvelopes.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/octagonalenvelopes.sld set on octagonalenvelopes</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">ocean</span><br>
+<span class="green">Added ocean layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">countries</span><br>
+<span class="green">Added countries layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">octagonalenvelopes</span><br>
+<span class="green">Added octagonalenvelopes layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--file</span> <span class="silver">examples/layer_octagonalenvelopes.png</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/layer_octagonalenvelopes.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/layer_octagonalenvelopes.png" alt="layer octagonalenvelopes">
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="points-along-lines"><a class="anchor" href="#points-along-lines"></a>Points Along Lines</h4>
@@ -7226,7 +7634,7 @@ You can give it a name with --name flag.</p>
 <div id="footer">
 <div id="footer-text">
 Version 0.7-SNAPSHOT<br>
-Last updated 2019-12-18 01:23:08 UTC
+Last updated 2019-12-18 22:03:14 UTC
 </div>
 </div>
 </body>
