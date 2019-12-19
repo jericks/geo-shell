@@ -439,4 +439,48 @@ class LayerDocTest extends AbstractDocTest {
         copyFile(new File("examples/layer_octagonalenvelopes.png"), new File("src/main/docs/images"))
     }
 
+    @Test
+    void convexHull() {
+        run("layer_convexhull", [
+                "workspace open --name layers --params memory",
+                "workspace open --name naturalearth --params examples/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer style set --name countries --style examples/countries.sld",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "layer style set --name ocean --style examples/ocean.sld",
+                "layer convexhull --input-name countries --output-workspace layers --output-name convexhull",
+                "style vector default --layer convexhull --color #1E90FF --opacity 0.25 --file examples/convexhull.sld",
+                "layer style set --name convexhull --style examples/convexhull.sld",
+                "map open --name map",
+                "map add layer --name map --layer ocean",
+                "map add layer --name map --layer countries",
+                "map add layer --name map --layer convexhull",
+                "map draw --name map --file examples/layer_convexhull.png",
+                "map close --name map"
+        ])
+        copyFile(new File("examples/layer_convexhull.png"), new File("src/main/docs/images"))
+    }
+
+    @Test
+    void convexHulls() {
+        run("layer_convexhulls", [
+                "workspace open --name layers --params memory",
+                "workspace open --name naturalearth --params examples/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer style set --name countries --style examples/countries.sld",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "layer style set --name ocean --style examples/ocean.sld",
+                "layer convexhulls --input-name countries --output-workspace layers --output-name convexhulls",
+                "style vector default --layer convexhulls --color #1E90FF --opacity 0.25 --file examples/convexhulls.sld",
+                "layer style set --name convexhulls --style examples/convexhulls.sld",
+                "map open --name map",
+                "map add layer --name map --layer ocean",
+                "map add layer --name map --layer countries",
+                "map add layer --name map --layer convexhulls",
+                "map draw --name map --file examples/layer_convexhulls.png",
+                "map close --name map"
+        ])
+        copyFile(new File("examples/layer_convexhulls.png"), new File("src/main/docs/images"))
+    }
+
 }
