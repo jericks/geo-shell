@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer style set* [gray]#--name# [silver]#convexhull# [gray]#--style# [silver]#examples/convexhull.sld# +

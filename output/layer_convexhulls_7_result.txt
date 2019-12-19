@@ -1,0 +1,1 @@
+[green]#Default Vector Style for convexhulls written to /home/travis/build/jericks/geo-shell/examples/convexhulls.sld!# +
