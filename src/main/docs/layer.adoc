@@ -7,17 +7,66 @@ ifndef::imagesdir[:imagesdir: images]
 ==== Open
 
 include::commands/layer_open_description.txt[]
+
+include::output/layer_open_1_command.txt[]
+
 include::commands/layer_open.txt[]
+
+include::output/layer_open_0_command.txt[]
+include::output/layer_open_0_result.txt[]
+
+include::output/layer_open_1_command.txt[]
+include::output/layer_open_1_result.txt[]
+
+include::output/layer_open_2_command.txt[]
+include::output/layer_open_2_result.txt[]
+
 
 ==== Close
 
 include::commands/layer_close_description.txt[]
+
+include::output/layer_close_2_command.txt[]
+
 include::commands/layer_close.txt[]
+
+include::output/layer_close_0_command.txt[]
+include::output/layer_close_0_result.txt[]
+
+include::output/layer_close_1_command.txt[]
+include::output/layer_close_1_result.txt[]
+
+include::output/layer_close_2_command.txt[]
+include::output/layer_close_2_result.txt[]
+
+include::output/layer_close_3_command.txt[]
+include::output/layer_close_3_result.txt[]
 
 ==== List
 
 include::commands/layer_list_description.txt[]
+
+include::output/layer_list_4_command.txt[]
+
 include::commands/layer_list.txt[]
+
+include::output/layer_list_0_command.txt[]
+include::output/layer_list_0_result.txt[]
+
+include::output/layer_list_1_command.txt[]
+include::output/layer_list_1_result.txt[]
+
+include::output/layer_list_2_command.txt[]
+include::output/layer_list_2_result.txt[]
+
+include::output/layer_list_3_command.txt[]
+include::output/layer_list_3_result.txt[]
+
+include::output/layer_list_4_command.txt[]
+include::output/layer_list_4_result.txt[]
+
+include::output/layer_list_5_command.txt[]
+include::output/layer_list_5_result.txt[]
 
 ==== Schema
 

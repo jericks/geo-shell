@@ -60,6 +60,8 @@ class LayerDocTest extends AbstractDocTest {
                             text += "\n"
                         }
                         text += "|===\n"
+                    } else {
+                        text += "NOTE: No parameters"
                     }
 
                     File file = new File("src/main/docs/commands/${commandName.replaceAll(' ', '_')}.txt")
@@ -74,6 +76,37 @@ class LayerDocTest extends AbstractDocTest {
                 }
             }
         }
+    }
+
+    @Test
+    void open() {
+        run("layer_open", [
+                "workspace open --name naturalearth --params src/test/resources/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "workspace close --name naturalearth"
+        ])
+    }
+
+    @Test
+    void close() {
+        run("layer_close", [
+                "workspace open --name naturalearth --params src/test/resources/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer close --name countries",
+                "workspace close --name naturalearth"
+        ])
+    }
+
+    @Test
+    void list() {
+        run("layer_list", [
+                "workspace open --name naturalearth --params src/test/resources/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "layer open --workspace naturalearth --layer states --name states",
+                "layer list",
+                "workspace close --name naturalearth"
+        ])
     }
 
     @Test
