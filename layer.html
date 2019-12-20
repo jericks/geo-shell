@@ -535,12 +535,12 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#close">Close</a></li>
 <li><a href="#list">List</a></li>
 <li><a href="#schema">Schema</a></li>
-<li><a href="#features">Features</a></li>
 <li><a href="#count">Count</a></li>
-<li><a href="#copy">Copy</a></li>
 <li><a href="#projection">Projection</a></li>
+<li><a href="#features">Features</a></li>
 <li><a href="#get-style">Get Style</a></li>
 <li><a href="#set-style">Set Style</a></li>
+<li><a href="#copy">Copy</a></li>
 <li><a href="#add">Add</a></li>
 <li><a href="#remove">Remove</a></li>
 <li><a href="#create">Create</a></li>
@@ -769,6 +769,9 @@ No parameters
 <div class="paragraph">
 <p>Inspect a Layer&#8217;s Schema.</p>
 </div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer schema</strong> <span class="gray">--name</span> <span class="silver">countries</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -794,6 +797,170 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">src/test/resources/naturalearth.gpkg</span><br>
+<span class="green">Workspace naturalearth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">countries</span> <span class="gray">--name</span> <span class="silver">countries</span><br>
+<span class="green">Opened Workspace naturalearth Layer countries as countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer schema</strong> <span class="gray">--name</span> <span class="silver">countries</span><br>
+<span class="green">Name                  Type</span><br>
+<span class="green">--------------------  --------------------</span><br>
+<span class="green">the_geom              MultiPolygon</span><br>
+<span class="green">ScaleRank             Integer</span><br>
+<span class="green">FeatureCla            String</span><br>
+<span class="green">SOVEREIGNT            String</span><br>
+<span class="green">SOVISO                String</span><br>
+<span class="green">SOV_A3                String</span><br>
+<span class="green">LEVEL                 Double</span><br>
+<span class="green">TYPE                  String</span><br>
+<span class="green">NAME                  String</span><br>
+<span class="green">SORTNAME              String</span><br>
+<span class="green">ADM0_A3               String</span><br>
+<span class="green">NAME_SM               String</span><br>
+<span class="green">NAME_LNG              String</span><br>
+<span class="green">TERR_                 String</span><br>
+<span class="green">PARENTHETI            String</span><br>
+<span class="green">NAME_ALT              String</span><br>
+<span class="green">LOCAL_LNG             String</span><br>
+<span class="green">LOCAL_SM              String</span><br>
+<span class="green">FORMER                String</span><br>
+<span class="green">ABBREV_               String</span><br>
+<span class="green">MAP_COLOR             Double</span><br>
+<span class="green">PEOPLE                Double</span><br>
+<span class="green">GDP_USDM              Double</span><br>
+<span class="green">FIPS_10               String</span><br>
+<span class="green">ISO_A2                String</span><br>
+<span class="green">ISO_A3                String</span><br>
+<span class="green">ISO_N3                Double</span><br>
+<span class="green">ITU                   String</span><br>
+<span class="green">IOC                   String</span><br>
+<span class="green">FIFA                  String</span><br>
+<span class="green">DS                    String</span><br>
+<span class="green">WMO                   String</span><br>
+<span class="green">GAUL                  Double</span><br>
+<span class="green">MARC                  String</span><br>
+<span class="green">STANAG1059            String</span><br>
+<span class="green">GW_ID                 Double</span><br>
+<span class="green">DIAL                  Double</span><br>
+<span class="green">INTERNET_             String</span><br>
+<span class="green">COG                   String</span><br>
+<span class="green">ACTUAL                String</span><br>
+<span class="green">CAPAY                 String</span><br>
+<span class="green">CRPAY                 String</span><br>
+<span class="green">ANI                   String</span><br>
+<span class="green">LIBENR                String</span><br>
+<span class="green">ANCNOM                String</span><br>
+<span class="green">PAYS_R_GIO            String</span><br>
+<span class="green">COMMENT               String</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace close</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span><br>
+<span class="green">Workspace naturalearth closed!</span><br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="count"><a class="anchor" href="#count"></a>Count</h4>
+<div class="paragraph">
+<p>Count the Feature in a Layer.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer count</strong> <span class="gray">--name</span> <span class="silver">countries</span><br></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Layer name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">src/test/resources/naturalearth.gpkg</span><br>
+<span class="green">Workspace naturalearth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">countries</span> <span class="gray">--name</span> <span class="silver">countries</span><br>
+<span class="green">Opened Workspace naturalearth Layer countries as countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer count</strong> <span class="gray">--name</span> <span class="silver">countries</span><br>
+<span class="green">177</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace close</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span><br>
+<span class="green">Workspace naturalearth closed!</span><br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="projection"><a class="anchor" href="#projection"></a>Projection</h4>
+<div class="paragraph">
+<p>Get the Projection of a Layer.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer projection</strong> <span class="gray">--name</span> <span class="silver">countries</span><br></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Layer name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">src/test/resources/naturalearth.gpkg</span><br>
+<span class="green">Workspace naturalearth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">countries</span> <span class="gray">--name</span> <span class="silver">countries</span><br>
+<span class="green">Opened Workspace naturalearth Layer countries as countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer projection</strong> <span class="gray">--name</span> <span class="silver">countries</span><br>
+<span class="green">EPSG:4326</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace close</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span><br>
+<span class="green">Workspace naturalearth closed!</span><br></p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="features"><a class="anchor" href="#features"></a>Features</h4>
@@ -862,9 +1029,9 @@ No parameters
 </table>
 </div>
 <div class="sect3">
-<h4 id="count"><a class="anchor" href="#count"></a>Count</h4>
+<h4 id="get-style"><a class="anchor" href="#get-style"></a>Get Style</h4>
 <div class="paragraph">
-<p>Count the Feature in a Layer.</p>
+<p>Get the Layer&#8217;s style.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -885,6 +1052,51 @@ No parameters
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The Layer name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">style</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The SLD File</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="set-style"><a class="anchor" href="#set-style"></a>Set Style</h4>
+<div class="paragraph">
+<p>Set a Layer&#8217;s style</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Layer name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">style</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The SLD or CSS File</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"></td>
@@ -966,113 +1178,6 @@ No parameters
 <td class="tableblock halign-left valign-top"><p class="tableblock">field</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A subfield to include</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="projection"><a class="anchor" href="#projection"></a>Projection</h4>
-<div class="paragraph">
-<p>Get the Projection of a Layer.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The Layer name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="get-style"><a class="anchor" href="#get-style"></a>Get Style</h4>
-<div class="paragraph">
-<p>Get the Layer&#8217;s style.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The Layer name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">style</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The SLD File</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="set-style"><a class="anchor" href="#set-style"></a>Set Style</h4>
-<div class="paragraph">
-<p>Set a Layer&#8217;s style</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The Layer name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">style</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The SLD or CSS File</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
@@ -4807,7 +4912,7 @@ No parameters
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-12-19 19:53:06 UTC
+Last updated 2019-12-20 17:24:51 UTC
 </div>
 </div>
 </body>
