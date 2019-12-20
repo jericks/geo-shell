@@ -71,27 +71,67 @@ include::output/layer_list_5_result.txt[]
 ==== Schema
 
 include::commands/layer_schema_description.txt[]
+
+include::output/layer_schema_2_command.txt[]
+
 include::commands/layer_schema.txt[]
+
+include::output/layer_schema_0_command.txt[]
+include::output/layer_schema_0_result.txt[]
+
+include::output/layer_schema_1_command.txt[]
+include::output/layer_schema_1_result.txt[]
+
+include::output/layer_schema_2_command.txt[]
+include::output/layer_schema_2_result.txt[]
+
+include::output/layer_schema_3_command.txt[]
+include::output/layer_schema_3_result.txt[]
+
+==== Count
+
+include::commands/layer_count_description.txt[]
+
+include::output/layer_count_2_command.txt[]
+
+include::commands/layer_count.txt[]
+
+include::output/layer_count_0_command.txt[]
+include::output/layer_count_0_result.txt[]
+
+include::output/layer_count_1_command.txt[]
+include::output/layer_count_1_result.txt[]
+
+include::output/layer_count_2_command.txt[]
+include::output/layer_count_2_result.txt[]
+
+include::output/layer_count_3_command.txt[]
+include::output/layer_count_3_result.txt[]
+
+==== Projection
+
+include::commands/layer_projection_description.txt[]
+
+include::output/layer_projection_2_command.txt[]
+
+include::commands/layer_projection.txt[]
+
+include::output/layer_projection_0_command.txt[]
+include::output/layer_projection_0_result.txt[]
+
+include::output/layer_projection_1_command.txt[]
+include::output/layer_projection_1_result.txt[]
+
+include::output/layer_projection_2_command.txt[]
+include::output/layer_projection_2_result.txt[]
+
+include::output/layer_projection_3_command.txt[]
+include::output/layer_projection_3_result.txt[]
 
 ==== Features
 
 include::commands/layer_features_description.txt[]
 include::commands/layer_features.txt[]
-
-==== Count
-
-include::commands/layer_count_description.txt[]
-include::commands/layer_count.txt[]
-
-==== Copy
-
-include::commands/layer_copy_description.txt[]
-include::commands/layer_copy.txt[]
-
-==== Projection
-
-include::commands/layer_projection_description.txt[]
-include::commands/layer_projection.txt[]
 
 ==== Get Style
 
@@ -102,6 +142,11 @@ include::commands/layer_style_get.txt[]
 
 include::commands/layer_style_set_description.txt[]
 include::commands/layer_style_set.txt[]
+
+==== Copy
+
+include::commands/layer_copy_description.txt[]
+include::commands/layer_copy.txt[]
 
 ==== Add
 

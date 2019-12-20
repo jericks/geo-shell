@@ -21,22 +21,22 @@ abstract class AbstractDocTest {
         shell.stop()
     }
 
-    void run(String name, List<String> commands) {
+    void run(String name, List<String> commands, Map options = [:]) {
         commands.eachWithIndex { String command, int i ->
-            run("${name}_${i}", command)
+            run("${name}_${i}", command, options)
         }
     }
 
-    void run(Map<String,String> commands) {
+    void run(Map<String,String> commands, Map options = [:]) {
         commands.each { String name, String command ->
-            run(name, command)
+            run(name, command, options)
         }
     }
 
-    String run(String name, String cmd) {
+    String run(String name, String cmd, Map options = [:]) {
         CommandResult result = shell.executeCommand(cmd)
-        writeFile("${name}_command", processCommand(cmd))
-        writeFile("${name}_result", processOutput(result.result.toString()))
+        writeFile("${name}_command", processCommand(cmd, options))
+        writeFile("${name}_result", processOutput(result.result.toString(), options))
     }
 
     void writeFile(String name, String text) {
@@ -61,7 +61,7 @@ abstract class AbstractDocTest {
         toFile
     }
 
-    String processCommand(String cmd) {
+    String processCommand(String cmd, Map options = [:]) {
 
         String name
         String params
@@ -87,8 +87,12 @@ abstract class AbstractDocTest {
         "[blue]#geo-shell># ${styledName} ${styleParams} +"
     }
 
-    String processOutput(String output) {
-        output.split("\n").collect { "[green]#${it}# +" }.join("\n")
+    String processOutput(String output, Map options = [:]) {
+        if (options.rawOutput) {
+            "----\n" + output + "\n----\n"
+        } else {
+            output.split("\n").collect { "[green]#${it.trim()}# +" }.join("\n")
+        }
     }
 
 }

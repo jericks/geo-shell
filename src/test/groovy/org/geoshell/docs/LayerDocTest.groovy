@@ -110,6 +110,36 @@ class LayerDocTest extends AbstractDocTest {
     }
 
     @Test
+    void schema() {
+        run("layer_schema", [
+                "workspace open --name naturalearth --params src/test/resources/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer schema --name countries",
+                "workspace close --name naturalearth"
+        ])
+    }
+
+    @Test
+    void count() {
+        run("layer_count", [
+                "workspace open --name naturalearth --params src/test/resources/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer count --name countries",
+                "workspace close --name naturalearth"
+        ])
+    }
+
+    @Test
+    void projection() {
+        run("layer_projection", [
+                "workspace open --name naturalearth --params src/test/resources/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer projection --name countries",
+                "workspace close --name naturalearth"
+        ])
+    }
+
+    @Test
     void createRandomPoints() {
         run("layer_random", [
                 "workspace open --name layers --params memory",
