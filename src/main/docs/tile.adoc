@@ -5,22 +5,65 @@ ifndef::imagesdir[:imagesdir: images]
 === Open
 
 include::commands/tile_open_description.txt[]
+
+include::output/tile_open_0_command.txt[]
+
 include::commands/tile_open.txt[]
+
+include::output/tile_open_0_command.txt[]
+include::output/tile_open_0_result.txt[]
+
+include::output/tile_open_1_command.txt[]
+include::output/tile_open_1_result.txt[]
 
 === Close
 
 include::commands/tile_close_description.txt[]
+
+include::output/tile_close_1_command.txt[]
+
 include::commands/tile_close.txt[]
+
+include::output/tile_close_0_command.txt[]
+include::output/tile_close_0_result.txt[]
+
+include::output/tile_close_1_command.txt[]
+include::output/tile_close_1_result.txt[]
+
 
 === List
 
 include::commands/tile_list_description.txt[]
+
+include::output/tile_list_1_command.txt[]
+
 include::commands/tile_list.txt[]
+
+include::output/tile_list_0_command.txt[]
+include::output/tile_list_0_result.txt[]
+
+include::output/tile_list_1_command.txt[]
+include::output/tile_list_1_result.txt[]
+
+include::output/tile_list_2_command.txt[]
+include::output/tile_list_2_result.txt[]
 
 === Info
 
 include::commands/tile_info_description.txt[]
+
+include::output/tile_info_1_command.txt[]
+
 include::commands/tile_info.txt[]
+
+include::output/tile_info_0_command.txt[]
+include::output/tile_info_0_result.txt[]
+
+include::output/tile_info_1_command.txt[]
+include::output/tile_info_1_result.txt[]
+
+include::output/tile_info_2_command.txt[]
+include::output/tile_info_2_result.txt[]
 
 === Delete
 
