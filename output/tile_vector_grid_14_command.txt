@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*map draw* [gray]#--name# [silver]#vectorGridMap# [gray]#--file# [silver]#examples/tile_vector_grid.png# [gray]#--projection# [silver]#EPSG:3857# [gray]#--width# [silver]#400# [gray]#--height# [silver]#400# [gray]#--bounds# [silver]#-20026376.39,-20048966.10,20026376.39,20048966.10# +

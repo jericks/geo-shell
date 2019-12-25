@@ -1,0 +1,1 @@
+[green]#Default Vector Style for level3 written to /home/travis/build/jericks/geo-shell/examples/level3.sld!# +

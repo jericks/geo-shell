@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*tile open* [gray]#--name# [silver]#countries# [gray]#--params# [silver]#src/test/resources/countries.mbtiles# +

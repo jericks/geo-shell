@@ -1066,6 +1066,9 @@ No parameters
 <div class="paragraph">
 <p>Create a Vector Grid Layer from the pyramid of a Tile Layer.</p>
 </div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">tile vector grid</strong> <span class="gray">--name</span> <span class="silver">countries</span> <span class="gray">--workspace</span> <span class="silver">layers</span> <span class="gray">--layer</span> <span class="silver">level3</span> <span class="gray">--z</span> <span class="silver">3</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -1161,13 +1164,82 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">tile open</strong> <span class="gray">--name</span> <span class="silver">countries</span> <span class="gray">--params</span> <span class="silver">src/test/resources/countries.mbtiles</span><br>
+<span class="green">Tile Layer countries opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">layers</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace layers opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">tile vector grid</strong> <span class="gray">--name</span> <span class="silver">countries</span> <span class="gray">--workspace</span> <span class="silver">layers</span> <span class="gray">--layer</span> <span class="silver">level3</span> <span class="gray">--z</span> <span class="silver">3</span><br>
+<span class="green">Done generating the vector grid level3 from countries!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">level3</span> <span class="gray">--color</span> <span class="silver">#ffffff</span> <span class="gray">--opacity</span> <span class="silver">0.25</span> <span class="gray">--file</span> <span class="silver">examples/level3.sld</span><br>
+<span class="green">Default Vector Style for level3 written to /home/travis/build/jericks/geo-shell/examples/level3.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">level3</span> <span class="gray">--style</span> <span class="silver">examples/level3.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/level3.sld set on level3</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">examples/naturalearth.gpkg</span><br>
+<span class="green">Workspace naturalearth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">countries</span> <span class="gray">--name</span> <span class="silver">countries</span><br>
+<span class="green">Opened Workspace naturalearth Layer countries as countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">countries</span> <span class="gray">--style</span> <span class="silver">examples/countries.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/countries.sld set on countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">ocean</span> <span class="gray">--name</span> <span class="silver">ocean</span><br>
+<span class="green">Opened Workspace naturalearth Layer ocean as ocean</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">ocean</span> <span class="gray">--style</span> <span class="silver">examples/ocean.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/ocean.sld set on ocean</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">vectorGridMap</span><br>
+<span class="green">Map vectorGridMap opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">vectorGridMap</span> <span class="gray">--layer</span> <span class="silver">ocean</span><br>
+<span class="green">Added ocean layer to map vectorGridMap</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">vectorGridMap</span> <span class="gray">--layer</span> <span class="silver">countries</span><br>
+<span class="green">Added countries layer to map vectorGridMap</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">vectorGridMap</span> <span class="gray">--layer</span> <span class="silver">level3</span><br>
+<span class="green">Added level3 layer to map vectorGridMap</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">vectorGridMap</span> <span class="gray">--file</span> <span class="silver">examples/tile_vector_grid.png</span> <span class="gray">--projection</span> <span class="silver">EPSG:3857</span> <span class="gray">--width</span> <span class="silver">400</span> <span class="gray">--height</span> <span class="silver">400</span> <span class="gray">--bounds</span> <span class="silver">-20026376.39,-20048966.10,20026376.39,20048966.10</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/tile_vector_grid.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">vectorGridMap</span><br>
+<span class="green">Map vectorGridMap closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/tile_vector_grid.png" alt="tile vector grid">
+</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-12-24 18:43:03 UTC
+Last updated 2019-12-25 22:14:55 UTC
 </div>
 </div>
 </body>
