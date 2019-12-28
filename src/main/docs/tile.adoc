@@ -127,7 +127,19 @@ include::commands/tile_stitch_raster.txt[]
 === Tiles
 
 include::commands/tile_tiles_description.txt[]
+
+include::output/tile_tiles_1_command.txt[]
+
 include::commands/tile_tiles.txt[]
+
+include::output/tile_tiles_0_command.txt[]
+include::output/tile_tiles_0_result.txt[]
+
+include::output/tile_tiles_1_command.txt[]
+include::output/tile_tiles_1_result.txt[]
+
+include::output/tile_tiles_2_command.txt[]
+include::output/tile_tiles_2_result.txt[]
 
 === Vector Grid
 

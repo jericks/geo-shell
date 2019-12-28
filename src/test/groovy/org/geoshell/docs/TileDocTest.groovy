@@ -81,5 +81,13 @@ class TileDocTest extends AbstractDocTest {
         copyFile(new File("examples/tile_generate.png"), new File("src/main/docs/images"))
     }
 
+    @Test
+    void tiles() {
+        run("tile_tiles", [
+                "tile open --name countries --params src/test/resources/countries.mbtiles",
+                "tile tiles --name countries --z 8 --bounds -13787405.4140,5872198.2610,-13349574.1159,6081635.7185",
+                "tile close --name countries"
+        ])
+    }
 
 }
