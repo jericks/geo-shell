@@ -90,4 +90,14 @@ class TileDocTest extends AbstractDocTest {
         ])
     }
 
+    @Test
+    void stitch() {
+        run("tile_stitch_bounds", [
+                "tile open --name countries --params src/test/resources/countries.mbtiles",
+                "format open --name states --input examples/tile_stitch_bounds.png",
+                "tile stitch raster --name countries --format states --raster states --bounds -18217695.5734,1222992.4526,-4207094.0368,7924991.0926"
+        ])
+        copyFile(new File("examples/tile_stitch_bounds.png"), new File("src/main/docs/images"))
+    }
+
 }

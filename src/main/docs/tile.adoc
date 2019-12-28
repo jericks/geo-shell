@@ -122,7 +122,23 @@ image::tile_generate.png[]
 === Stitch Raster
 
 include::commands/tile_stitch_raster_description.txt[]
+
+include::output/tile_stitch_bounds_2_command.txt[]
+
 include::commands/tile_stitch_raster.txt[]
+
+Create a Raster from a Tile Layer with a geographic bounds.
+
+include::output/tile_stitch_bounds_0_command.txt[]
+include::output/tile_stitch_bounds_0_result.txt[]
+
+include::output/tile_stitch_bounds_1_command.txt[]
+include::output/tile_stitch_bounds_1_result.txt[]
+
+include::output/tile_stitch_bounds_2_command.txt[]
+include::output/tile_stitch_bounds_2_result.txt[]
+
+image::tile_stitch_bounds.png[]
 
 === Tiles
 
