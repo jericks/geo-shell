@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*tile stitch raster* [gray]#--name# [silver]#tiles# [gray]#--format# [silver]#world_level2# [gray]#--raster# [silver]#world_level2# [gray]#--z# [silver]#2# +

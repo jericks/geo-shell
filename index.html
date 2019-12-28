@@ -6865,6 +6865,9 @@ No parameters
 <div class="paragraph">
 <p>Generate tiles for a Tile Layer.</p>
 </div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">tile generate</strong> <span class="gray">--name</span> <span class="silver">tiles</span> <span class="gray">--map</span> <span class="silver">world</span> <span class="gray">--start</span> <span class="silver">0</span> <span class="gray">--end</span> <span class="silver">3</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -6939,6 +6942,63 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">tile open</strong> <span class="gray">--name</span> <span class="silver">tiles</span> <span class="gray">--params</span> <span class="silver">target/tiles.mbtiles</span><br>
+<span class="green">Tile Layer tiles opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">examples/naturalearth.gpkg</span><br>
+<span class="green">Workspace naturalearth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">countries</span> <span class="gray">--name</span> <span class="silver">countries</span><br>
+<span class="green">Opened Workspace naturalearth Layer countries as countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">countries</span> <span class="gray">--style</span> <span class="silver">examples/countries.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/countries.sld set on countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">ocean</span> <span class="gray">--name</span> <span class="silver">ocean</span><br>
+<span class="green">Opened Workspace naturalearth Layer ocean as ocean</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">ocean</span> <span class="gray">--style</span> <span class="silver">examples/ocean.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/ocean.sld set on ocean</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">world</span><br>
+<span class="green">Map world opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">world</span> <span class="gray">--layer</span> <span class="silver">ocean</span><br>
+<span class="green">Added ocean layer to map world</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">world</span> <span class="gray">--layer</span> <span class="silver">countries</span><br>
+<span class="green">Added countries layer to map world</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">tile generate</strong> <span class="gray">--name</span> <span class="silver">tiles</span> <span class="gray">--map</span> <span class="silver">world</span> <span class="gray">--start</span> <span class="silver">0</span> <span class="gray">--end</span> <span class="silver">3</span><br>
+<span class="green">Tiles generated!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--name</span> <span class="silver">world_level2</span> <span class="gray">--input</span> <span class="silver">examples/tile_generate.png</span><br>
+<span class="green">Format world_level2 opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">tile stitch raster</strong> <span class="gray">--name</span> <span class="silver">tiles</span> <span class="gray">--format</span> <span class="silver">world_level2</span> <span class="gray">--raster</span> <span class="silver">world_level2</span> <span class="gray">--z</span> <span class="silver">2</span><br>
+<span class="green">Done stitching Raster world_level2 from tiles!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">world</span><br>
+<span class="green">Map world closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/tile_generate.png" alt="tile generate">
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="stitch-raster"><a class="anchor" href="#stitch-raster"></a>Stitch Raster</h3>
@@ -8125,7 +8185,7 @@ NOTE: No parameters</p>
 <div id="footer">
 <div id="footer-text">
 Version 0.7-SNAPSHOT<br>
-Last updated 2019-12-25 22:14:55 UTC
+Last updated 2019-12-28 02:49:21 UTC
 </div>
 </div>
 </body>
