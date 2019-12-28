@@ -61,5 +61,25 @@ class TileDocTest extends AbstractDocTest {
         copyFile(new File("examples/tile_vector_grid.png"), new File("src/main/docs/images"))
     }
 
+    @Test
+    void generate() {
+        run("tile_generate", [
+                "tile open --name tiles --params target/tiles.mbtiles",
+                "workspace open --name naturalearth --params examples/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer style set --name countries --style examples/countries.sld",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "layer style set --name ocean --style examples/ocean.sld",
+                "map open --name world",
+                "map add layer --name world --layer ocean",
+                "map add layer --name world --layer countries",
+                "tile generate --name tiles --map world --start 0 --end 3",
+                "format open --name world_level2 --input examples/tile_generate.png",
+                "tile stitch raster --name tiles --format world_level2 --raster world_level2 --z 2",
+                "map close --name world"
+        ])
+        copyFile(new File("examples/tile_generate.png"), new File("src/main/docs/images"))
+    }
+
 
 }

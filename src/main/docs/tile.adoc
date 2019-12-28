@@ -73,7 +73,51 @@ include::commands/tile_delete.txt[]
 === Generate
 
 include::commands/tile_generate_description.txt[]
+
+include::output/tile_generate_9_command.txt[]
+
 include::commands/tile_generate.txt[]
+
+include::output/tile_generate_0_command.txt[]
+include::output/tile_generate_0_result.txt[]
+
+include::output/tile_generate_1_command.txt[]
+include::output/tile_generate_1_result.txt[]
+
+include::output/tile_generate_2_command.txt[]
+include::output/tile_generate_2_result.txt[]
+
+include::output/tile_generate_3_command.txt[]
+include::output/tile_generate_3_result.txt[]
+
+include::output/tile_generate_4_command.txt[]
+include::output/tile_generate_4_result.txt[]
+
+include::output/tile_generate_5_command.txt[]
+include::output/tile_generate_5_result.txt[]
+
+include::output/tile_generate_6_command.txt[]
+include::output/tile_generate_6_result.txt[]
+
+include::output/tile_generate_7_command.txt[]
+include::output/tile_generate_7_result.txt[]
+
+include::output/tile_generate_8_command.txt[]
+include::output/tile_generate_8_result.txt[]
+
+include::output/tile_generate_9_command.txt[]
+include::output/tile_generate_9_result.txt[]
+
+include::output/tile_generate_10_command.txt[]
+include::output/tile_generate_10_result.txt[]
+
+include::output/tile_generate_11_command.txt[]
+include::output/tile_generate_11_result.txt[]
+
+include::output/tile_generate_12_command.txt[]
+include::output/tile_generate_12_result.txt[]
+
+image::tile_generate.png[]
 
 === Stitch Raster
 
