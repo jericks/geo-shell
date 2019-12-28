@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*tile stitch raster* [gray]#--name# [silver]#countries# [gray]#--format# [silver]#states# [gray]#--raster# [silver]#states# [gray]#--bounds# [silver]#-18217695.5734,1222992.4526,-4207094.0368,7924991.0926# +

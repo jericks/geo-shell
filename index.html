@@ -7005,6 +7005,9 @@ No parameters
 <div class="paragraph">
 <p>Create a Raster from a Tile Layer.</p>
 </div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">tile stitch raster</strong> <span class="gray">--name</span> <span class="silver">countries</span> <span class="gray">--format</span> <span class="silver">states</span> <span class="gray">--raster</span> <span class="silver">states</span> <span class="gray">--bounds</span> <span class="silver">-18217695.5734,1222992.4526,-4207094.0368,7924991.0926</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -7100,6 +7103,26 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>Create a Raster from a Tile Layer with a geographic bounds.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">tile open</strong> <span class="gray">--name</span> <span class="silver">countries</span> <span class="gray">--params</span> <span class="silver">src/test/resources/countries.mbtiles</span><br>
+<span class="green">Tile Layer countries opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--name</span> <span class="silver">states</span> <span class="gray">--input</span> <span class="silver">examples/tile_stitch_bounds.png</span><br>
+<span class="green">Format states opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">tile stitch raster</strong> <span class="gray">--name</span> <span class="silver">countries</span> <span class="gray">--format</span> <span class="silver">states</span> <span class="gray">--raster</span> <span class="silver">states</span> <span class="gray">--bounds</span> <span class="silver">-18217695.5734,1222992.4526,-4207094.0368,7924991.0926</span><br>
+<span class="green">Done stitching Raster states from countries!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/tile_stitch_bounds.png" alt="tile stitch bounds">
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="tiles"><a class="anchor" href="#tiles"></a>Tiles</h3>
@@ -8207,7 +8230,7 @@ NOTE: No parameters</p>
 <div id="footer">
 <div id="footer-text">
 Version 0.7-SNAPSHOT<br>
-Last updated 2019-12-28 23:36:42 UTC
+Last updated 2019-12-28 23:44:09 UTC
 </div>
 </div>
 </body>
