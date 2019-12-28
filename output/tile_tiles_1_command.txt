@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*tile tiles* [gray]#--name# [silver]#countries# [gray]#--z# [silver]#8# [gray]#--bounds# [silver]#-13787405.4140,5872198.2610,-13349574.1159,6081635.7185# +

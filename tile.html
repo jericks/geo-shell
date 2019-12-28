@@ -1081,6 +1081,9 @@ No parameters
 <div class="paragraph">
 <p>List tiles within a given bounds.</p>
 </div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">tile tiles</strong> <span class="gray">--name</span> <span class="silver">countries</span> <span class="gray">--z</span> <span class="silver">8</span> <span class="gray">--bounds</span> <span class="silver">-13787405.4140,5872198.2610,-13349574.1159,6081635.7185</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -1120,6 +1123,25 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">tile open</strong> <span class="gray">--name</span> <span class="silver">countries</span> <span class="gray">--params</span> <span class="silver">src/test/resources/countries.mbtiles</span><br>
+<span class="green">Tile Layer countries opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">tile tiles</strong> <span class="gray">--name</span> <span class="silver">countries</span> <span class="gray">--z</span> <span class="silver">8</span> <span class="gray">--bounds</span> <span class="silver">-13787405.4140,5872198.2610,-13349574.1159,6081635.7185</span><br>
+<span class="green">8/39/165</span><br>
+<span class="green">8/40/165</span><br>
+<span class="green">8/41/165</span><br>
+<span class="green">8/42/165</span><br>
+<span class="green">8/39/166</span><br>
+<span class="green">8/40/166</span><br>
+<span class="green">8/41/166</span><br>
+<span class="green">8/42/166</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">tile close</strong> <span class="gray">--name</span> <span class="silver">countries</span><br>
+<span class="green">Tile Layer countries closed!</span><br></p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="vector-grid"><a class="anchor" href="#vector-grid"></a>Vector Grid</h3>
@@ -1299,7 +1321,7 @@ No parameters
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-12-28 02:49:21 UTC
+Last updated 2019-12-28 23:36:42 UTC
 </div>
 </div>
 </body>
