@@ -6,22 +6,66 @@ ifndef::imagesdir[:imagesdir: images]
 
 include::commands/format_open_description.txt[]
 
+include::output/format_open_0_command.txt[]
+
 include::commands/format_open.txt[]
+
+include::output/format_open_0_command.txt[]
+include::output/format_open_0_result.txt[]
+
+include::output/format_open_1_command.txt[]
+include::output/format_open_1_result.txt[]
 
 === List
 
 include::commands/format_list_description.txt[]
 
+include::output/format_list_2_command.txt[]
+
 include::commands/format_list.txt[]
+
+include::output/format_list_0_command.txt[]
+include::output/format_list_0_result.txt[]
+
+include::output/format_list_1_command.txt[]
+include::output/format_list_1_result.txt[]
+
+include::output/format_list_2_command.txt[]
+include::output/format_list_2_result.txt[]
+
+include::output/format_list_3_command.txt[]
+include::output/format_list_3_result.txt[]
+
+include::output/format_list_4_command.txt[]
+include::output/format_list_4_result.txt[]
 
 === Close
 
 include::commands/format_close_description.txt[]
 
+include::output/format_close_1_command.txt[]
+
 include::commands/format_close.txt[]
+
+include::output/format_close_0_command.txt[]
+include::output/format_close_0_result.txt[]
+
+include::output/format_close_1_command.txt[]
+include::output/format_close_1_result.txt[]
 
 === Rasters
 
 include::commands/format_rasters_description.txt[]
 
+include::output/format_rasters_1_command.txt[]
+
 include::commands/format_rasters.txt[]
+
+include::output/format_rasters_0_command.txt[]
+include::output/format_rasters_0_result.txt[]
+
+include::output/format_rasters_1_command.txt[]
+include::output/format_rasters_1_result.txt[]
+
+include::output/format_rasters_2_command.txt[]
+include::output/format_rasters_2_result.txt[]
