@@ -1,0 +1,2 @@
+[green]#earth = GeoTIFF# +
+[green]#raster = GeoTIFF# +

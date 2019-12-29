@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*format open* [gray]#--name# [silver]#earth# [gray]#--input# [silver]#src/test/resources/earth.tif# +
