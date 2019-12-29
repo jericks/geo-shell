@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*tile generate* [gray]#--name# [silver]#tiles# [gray]#--map# [silver]#world# [gray]#--start# [silver]#0# [gray]#--end# [silver]#3# +
