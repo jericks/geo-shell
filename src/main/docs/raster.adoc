@@ -5,17 +5,65 @@ ifndef::imagesdir[:imagesdir: images]
 === Open
 
 include::commands/raster_open_description.txt[]
+
+include::output/raster_open_1_command.txt[]
+
 include::commands/raster_open.txt[]
+
+include::output/raster_open_0_command.txt[]
+include::output/raster_open_0_result.txt[]
+
+include::output/raster_open_1_command.txt[]
+include::output/raster_open_1_result.txt[]
+
+include::output/raster_open_2_command.txt[]
+include::output/raster_open_2_result.txt[]
+
+include::output/raster_open_3_command.txt[]
+include::output/raster_open_3_result.txt[]
 
 === Close
 
 include::commands/raster_close_description.txt[]
+
+include::output/raster_close_2_command.txt[]
+
 include::commands/raster_close.txt[]
+
+include::output/raster_close_0_command.txt[]
+include::output/raster_close_0_result.txt[]
+
+include::output/raster_close_1_command.txt[]
+include::output/raster_close_1_result.txt[]
+
+include::output/raster_close_2_command.txt[]
+include::output/raster_close_2_result.txt[]
+
+include::output/raster_close_3_command.txt[]
+include::output/raster_close_3_result.txt[]
 
 === List
 
 include::commands/raster_list_description.txt[]
+
+include::output/raster_list_2_command.txt[]
+
 include::commands/raster_list.txt[]
+
+include::output/raster_list_0_command.txt[]
+include::output/raster_list_0_result.txt[]
+
+include::output/raster_list_1_command.txt[]
+include::output/raster_list_1_result.txt[]
+
+include::output/raster_list_2_command.txt[]
+include::output/raster_list_2_result.txt[]
+
+include::output/raster_list_3_command.txt[]
+include::output/raster_list_3_result.txt[]
+
+include::output/raster_list_4_command.txt[]
+include::output/raster_list_4_result.txt[]
 
 === Info
 
