@@ -5395,6 +5395,9 @@ No parameters
 <div class="paragraph">
 <p>Open a Raster.</p>
 </div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster open</strong> <span class="gray">--format</span> <span class="silver">earth</span> <span class="gray">--raster</span> <span class="silver">earth</span> <span class="gray">--name</span> <span class="silver">earth</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -5434,11 +5437,30 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--name</span> <span class="silver">earth</span> <span class="gray">--input</span> <span class="silver">src/test/resources/earth.tif</span><br>
+<span class="green">Format earth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster open</strong> <span class="gray">--format</span> <span class="silver">earth</span> <span class="gray">--raster</span> <span class="silver">earth</span> <span class="gray">--name</span> <span class="silver">earth</span><br>
+<span class="green">Opened Format earth Raster earth as earth</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster close</strong> <span class="gray">--name</span> <span class="silver">earth</span><br>
+<span class="green">Raster earth closed!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format close</strong> <span class="gray">--name</span> <span class="silver">earth</span><br>
+<span class="green">Format earth closed!</span><br></p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="close-4"><a class="anchor" href="#close-4"></a>Close</h3>
 <div class="paragraph">
 <p>Close a Raster.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster close</strong> <span class="gray">--name</span> <span class="silver">earth</span><br></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -5465,12 +5487,62 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--name</span> <span class="silver">earth</span> <span class="gray">--input</span> <span class="silver">src/test/resources/earth.tif</span><br>
+<span class="green">Format earth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster open</strong> <span class="gray">--format</span> <span class="silver">earth</span> <span class="gray">--raster</span> <span class="silver">earth</span> <span class="gray">--name</span> <span class="silver">earth</span><br>
+<span class="green">Opened Format earth Raster earth as earth</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster close</strong> <span class="gray">--name</span> <span class="silver">earth</span><br>
+<span class="green">Raster earth closed!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format close</strong> <span class="gray">--name</span> <span class="silver">earth</span><br>
+<span class="green">Format earth closed!</span><br></p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="list-4"><a class="anchor" href="#list-4"></a>List</h3>
 <div class="paragraph">
-<p>List open Rasters.
-NOTE: No parameters</p>
+<p>List open Rasters.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster list</strong> <br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+No parameters
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--name</span> <span class="silver">earth</span> <span class="gray">--input</span> <span class="silver">src/test/resources/earth.tif</span><br>
+<span class="green">Format earth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster open</strong> <span class="gray">--format</span> <span class="silver">earth</span> <span class="gray">--raster</span> <span class="silver">earth</span> <span class="gray">--name</span> <span class="silver">earth</span><br>
+<span class="green">Opened Format earth Raster earth as earth</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster list</strong> <br>
+<span class="green">earth = GeoTIFF</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster close</strong> <span class="gray">--name</span> <span class="silver">earth</span><br>
+<span class="green">Raster earth closed!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format close</strong> <span class="gray">--name</span> <span class="silver">earth</span><br>
+<span class="green">Format earth closed!</span><br></p>
 </div>
 </div>
 <div class="sect2">
@@ -8342,7 +8414,7 @@ NOTE: No parameters</p>
 <div id="footer">
 <div id="footer-text">
 Version 0.7-SNAPSHOT<br>
-Last updated 2019-12-29 21:54:34 UTC
+Last updated 2019-12-29 23:04:13 UTC
 </div>
 </div>
 </body>
