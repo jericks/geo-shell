@@ -82,6 +82,24 @@ class TileDocTest extends AbstractDocTest {
     }
 
     @Test
+    void delete() {
+        run("tile_delete", [
+                "tile open --name tiles --params target/tiles.mbtiles",
+                "workspace open --name naturalearth --params examples/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer style set --name countries --style examples/countries.sld",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "layer style set --name ocean --style examples/ocean.sld",
+                "map open --name world",
+                "map add layer --name world --layer ocean",
+                "map add layer --name world --layer countries",
+                "tile generate --name tiles --map world --start 0 --end 3",
+                "tile delete --name tiles --z 3",
+                "map close --name world"
+        ])
+    }
+
+    @Test
     void tiles() {
         run("tile_tiles", [
                 "tile open --name countries --params src/test/resources/countries.mbtiles",

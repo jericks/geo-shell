@@ -68,7 +68,46 @@ include::output/tile_info_2_result.txt[]
 === Delete
 
 include::commands/tile_delete_description.txt[]
+
+include::output/tile_delete_10_command.txt[]
+
 include::commands/tile_delete.txt[]
+
+include::output/tile_delete_0_command.txt[]
+include::output/tile_delete_0_result.txt[]
+
+include::output/tile_delete_1_command.txt[]
+include::output/tile_delete_1_result.txt[]
+
+include::output/tile_delete_2_command.txt[]
+include::output/tile_delete_2_result.txt[]
+
+include::output/tile_delete_3_command.txt[]
+include::output/tile_delete_3_result.txt[]
+
+include::output/tile_delete_4_command.txt[]
+include::output/tile_delete_4_result.txt[]
+
+include::output/tile_delete_5_command.txt[]
+include::output/tile_delete_5_result.txt[]
+
+include::output/tile_delete_6_command.txt[]
+include::output/tile_delete_6_result.txt[]
+
+include::output/tile_delete_7_command.txt[]
+include::output/tile_delete_7_result.txt[]
+
+include::output/tile_delete_8_command.txt[]
+include::output/tile_delete_8_result.txt[]
+
+include::output/tile_delete_9_command.txt[]
+include::output/tile_delete_9_result.txt[]
+
+include::output/tile_delete_10_command.txt[]
+include::output/tile_delete_10_result.txt[]
+
+include::output/tile_delete_11_command.txt[]
+include::output/tile_delete_11_result.txt[]
 
 === Generate
 
