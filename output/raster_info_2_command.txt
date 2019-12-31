@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*raster info* [gray]#--name# [silver]#earth# +
