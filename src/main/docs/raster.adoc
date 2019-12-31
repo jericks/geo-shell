@@ -68,12 +68,53 @@ include::output/raster_list_4_result.txt[]
 === Info
 
 include::commands/raster_info_description.txt[]
+
+include::output/raster_info_2_command.txt[]
+
 include::commands/raster_info.txt[]
+
+include::output/raster_info_0_command.txt[]
+include::output/raster_info_0_result.txt[]
+
+include::output/raster_info_1_command.txt[]
+include::output/raster_info_1_result.txt[]
+
+include::output/raster_info_2_command.txt[]
+include::output/raster_info_2_result.txt[]
+
+include::output/raster_info_3_command.txt[]
+include::output/raster_info_3_result.txt[]
+
+include::output/raster_info_4_command.txt[]
+include::output/raster_info_4_result.txt[]
 
 === Value
 
 include::commands/raster_value_description.txt[]
+
+include::output/raster_value_2_command.txt[]
+
+include::output/raster_value_3_command.txt[]
+
 include::commands/raster_value.txt[]
+
+include::output/raster_value_0_command.txt[]
+include::output/raster_value_0_result.txt[]
+
+include::output/raster_value_1_command.txt[]
+include::output/raster_value_1_result.txt[]
+
+include::output/raster_value_2_command.txt[]
+include::output/raster_value_2_result.txt[]
+
+include::output/raster_value_3_command.txt[]
+include::output/raster_value_3_result.txt[]
+
+include::output/raster_value_4_command.txt[]
+include::output/raster_value_4_result.txt[]
+
+include::output/raster_value_5_command.txt[]
+include::output/raster_value_5_result.txt[]
 
 === Envelope
 
