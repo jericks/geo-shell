@@ -691,8 +691,16 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#draw">Draw</a></li>
 </ul>
 </li>
-<li><a href="#other">Other</a>
+<li><a href="#built-in">Built in</a>
 <ul class="sectlevel2">
+<li><a href="#exit-quit">Exit / Quit</a></li>
+<li><a href="#help">Help</a></li>
+<li><a href="#run-os-command">Run OS Command</a></li>
+<li><a href="#date">Date</a></li>
+<li><a href="#script">Script</a></li>
+<li><a href="#system-properties">System Properties</a></li>
+<li><a href="#version">Version</a></li>
+<li><a href="#download">Download</a></li>
 <li><a href="#unzip">Unzip</a></li>
 <li><a href="#open-7">Open</a></li>
 </ul>
@@ -8141,6 +8149,9 @@ No parameters
 <div class="paragraph">
 <p>Add a Layer.</p>
 </div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">world</span> <span class="gray">--layer</span> <span class="silver">countries</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -8180,11 +8191,59 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">world</span><br>
+<span class="green">Map world opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">examples/naturalearth.gpkg</span><br>
+<span class="green">Workspace naturalearth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">countries</span> <span class="gray">--name</span> <span class="silver">countries</span><br>
+<span class="green">Opened Workspace naturalearth Layer countries as countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">countries</span> <span class="gray">--style</span> <span class="silver">examples/countries.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/countries.sld set on countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">ocean</span> <span class="gray">--name</span> <span class="silver">ocean</span><br>
+<span class="green">Opened Workspace naturalearth Layer ocean as ocean</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">ocean</span> <span class="gray">--style</span> <span class="silver">examples/ocean.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/ocean.sld set on ocean</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">world</span> <span class="gray">--layer</span> <span class="silver">ocean</span><br>
+<span class="green">Added ocean layer to map world</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">world</span> <span class="gray">--layer</span> <span class="silver">countries</span><br>
+<span class="green">Added countries layer to map world</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">world</span> <span class="gray">--file</span> <span class="silver">examples/map_add_layer.png</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/map_add_layer.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">world</span><br>
+<span class="green">Map world closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/map_add_layer.png" alt="map add layer">
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="add-raster-2"><a class="anchor" href="#add-raster-2"></a>Add Raster</h3>
 <div class="paragraph">
 <p>Add a Raster.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add raster</strong> <span class="gray">--name</span> <span class="silver">world</span> <span class="gray">--raster</span> <span class="silver">earth</span><br></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -8225,6 +8284,55 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">world</span><br>
+<span class="green">Map world opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--name</span> <span class="silver">earth</span> <span class="gray">--input</span> <span class="silver">src/test/resources/earth.tif</span><br>
+<span class="green">Format earth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster open</strong> <span class="gray">--format</span> <span class="silver">earth</span> <span class="gray">--raster</span> <span class="silver">earth</span> <span class="gray">--name</span> <span class="silver">earth</span><br>
+<span class="green">Opened Format earth Raster earth as earth</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add raster</strong> <span class="gray">--name</span> <span class="silver">world</span> <span class="gray">--raster</span> <span class="silver">earth</span><br>
+<span class="green">Added earth layer to map world</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">examples/naturalearth.gpkg</span><br>
+<span class="green">Workspace naturalearth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">countries</span> <span class="gray">--name</span> <span class="silver">countries</span><br>
+<span class="green">Opened Workspace naturalearth Layer countries as countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style create</strong> <span class="gray">--params</span> <span class="silver">"stroke=black</span> <span class="silver">stroke-width=0.1"</span> <span class="gray">--file</span> <span class="silver">examples/outline.sld</span><br>
+<span class="green">Style stroke=black stroke-width=0.1 written to /home/travis/build/jericks/geo-shell/examples/outline.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">countries</span> <span class="gray">--style</span> <span class="silver">examples/outline.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/outline.sld set on countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">world</span> <span class="gray">--layer</span> <span class="silver">countries</span><br>
+<span class="green">Added countries layer to map world</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">world</span> <span class="gray">--file</span> <span class="silver">examples/map_add_raster.png</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/map_add_raster.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">world</span><br>
+<span class="green">Map world closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/map_add_raster.png" alt="map add raster">
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="add-tle"><a class="anchor" href="#add-tle"></a>Add Tle</h3>
@@ -8468,8 +8576,59 @@ No parameters
 </div>
 </div>
 <div class="sect1">
-<h2 id="other"><a class="anchor" href="#other"></a>Other</h2>
+<h2 id="built-in"><a class="anchor" href="#built-in"></a>Built in</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="exit-quit"><a class="anchor" href="#exit-quit"></a>Exit / Quit</h3>
+<div class="paragraph">
+<p>Exit the shell with <strong>exit</strong> or <strong>quit</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="help"><a class="anchor" href="#help"></a>Help</h3>
+<div class="paragraph">
+<p>List all commands and their usage with <strong>help</strong>.</p>
+</div>
+<div class="paragraph">
+<p>List help for a specific command with <strong>help workspace open</strong>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="run-os-command"><a class="anchor" href="#run-os-command"></a>Run OS Command</h3>
+<div class="paragraph">
+<p><strong>!</strong> runs an os command string.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="date"><a class="anchor" href="#date"></a>Date</h3>
+<div class="paragraph">
+<p>Display local date and time.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="script"><a class="anchor" href="#script"></a>Script</h3>
+<div class="paragraph">
+<p>Run a script file.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="system-properties"><a class="anchor" href="#system-properties"></a>System Properties</h3>
+<div class="paragraph">
+<p>Show system properties.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="version"><a class="anchor" href="#version"></a>Version</h3>
+<div class="paragraph">
+<p>Display current cli version.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="download"><a class="anchor" href="#download"></a>Download</h3>
+<div class="paragraph">
+<p>Download a URL to a File.</p>
+</div>
+</div>
 <div class="sect2">
 <h3 id="unzip"><a class="anchor" href="#unzip"></a>Unzip</h3>
 <div class="paragraph">
@@ -8545,7 +8704,7 @@ No parameters
 <div id="footer">
 <div id="footer-text">
 Version 0.7-SNAPSHOT<br>
-Last updated 2020-01-01 17:32:53 UTC
+Last updated 2020-01-01 18:24:12 UTC
 </div>
 </div>
 </body>
