@@ -5,17 +5,53 @@ ifndef::imagesdir[:imagesdir: images]
 === Open
 
 include::commands/map_open_description.txt[]
+
+include::output/map_open_0_command.txt[]
+
 include::commands/map_open.txt[]
+
+include::output/map_open_0_command.txt[]
+include::output/map_open_0_result.txt[]
+
+include::output/map_open_1_command.txt[]
+include::output/map_open_1_result.txt[]
 
 === Close
 
 include::commands/map_close_description.txt[]
+
+include::output/map_close_1_command.txt[]
+
 include::commands/map_close.txt[]
+
+include::output/map_close_0_command.txt[]
+include::output/map_close_0_result.txt[]
+
+include::output/map_close_1_command.txt[]
+include::output/map_close_1_result.txt[]
 
 === List
 
 include::commands/map_list_description.txt[]
+
+include::output/map_list_2_command.txt[]
+
 include::commands/map_list.txt[]
+
+include::output/map_list_0_command.txt[]
+include::output/map_list_0_result.txt[]
+
+include::output/map_list_1_command.txt[]
+include::output/map_list_1_result.txt[]
+
+include::output/map_list_2_command.txt[]
+include::output/map_list_2_result.txt[]
+
+include::output/map_list_3_command.txt[]
+include::output/map_list_3_result.txt[]
+
+include::output/map_list_4_command.txt[]
+include::output/map_list_4_result.txt[]
 
 === Add Layer
 
