@@ -1,0 +1,49 @@
+ifndef::imagesdir[:imagesdir: images]
+
+== Built in
+
+=== Exit / Quit
+
+Exit the shell with *exit* or *quit*
+
+=== Help
+
+List all commands and their usage with *help*.
+
+List help for a specific command with *help workspace open*.
+
+=== Run OS Command
+
+*!* runs an os command string.
+
+=== Date
+
+Display local date and time.
+
+=== Script
+
+Run a script file.
+
+=== System Properties
+
+Show system properties.
+
+=== Version
+
+Display current cli version.
+
+=== Download
+
+Download a URL to a File.
+
+=== Unzip
+
+include::commands/unzip_description.txt[]
+
+include::commands/unzip.txt[]
+
+=== Open
+
+include::commands/open_description.txt[]
+
+include::commands/open.txt[]

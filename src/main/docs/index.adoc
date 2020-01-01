@@ -19,4 +19,4 @@ include::style.adoc[]
 
 include::map.adoc[]
 
-include::other.adoc[]
+include::builtin.adoc[]
