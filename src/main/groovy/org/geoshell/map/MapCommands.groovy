@@ -30,7 +30,7 @@ class MapCommands implements CommandMarker {
         "Map ${name} opened!"
     }
 
-    @CliCommand(value = "map close", help = "Close a Tile Layer.")
+    @CliCommand(value = "map close", help = "Close a Map.")
     String close(
             @CliOption(key = "name", mandatory = true, help = "The map name") MapName name
     ) throws Exception {
@@ -66,7 +66,7 @@ class MapCommands implements CommandMarker {
         }
     }
 
-    @CliCommand(value = "map add layer", help = "Add a Layer.")
+    @CliCommand(value = "map add layer", help = "Add a Vector Layer.")
     String addLayer(
             @CliOption(key = "name", mandatory = true, help = "The map name") MapName name,
             @CliOption(key = "layer", mandatory = true, help = "The layer") LayerName layerName,
@@ -82,7 +82,7 @@ class MapCommands implements CommandMarker {
         }
     }
 
-    @CliCommand(value = "map add raster", help = "Add a Raster.")
+    @CliCommand(value = "map add raster", help = "Add a Raster Layer.")
     String addRaster(
             @CliOption(key = "name", mandatory = true, help = "The map name") MapName name,
             @CliOption(key = "raster", mandatory = true, help = "The raster") RasterName rasterName,
@@ -98,7 +98,7 @@ class MapCommands implements CommandMarker {
         }
     }
 
-    @CliCommand(value = "map add tile", help = "Add a Tile.")
+    @CliCommand(value = "map add tile", help = "Add a Tile Layer.")
     String addTile(
             @CliOption(key = "name", mandatory = true, help = "The map name") MapName name,
             @CliOption(key = "tile", mandatory = true, help = "The tile") TileName tileName,
