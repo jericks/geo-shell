@@ -1,1 +1,1 @@
-Add a Layer.
+Add a Vector Layer.

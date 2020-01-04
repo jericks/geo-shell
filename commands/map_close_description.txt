@@ -1,1 +1,1 @@
-Close a Tile Layer.
+Close a Map.

@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*style create* [gray]#--params# [silver]#"stroke=black# [silver]#stroke-width=0.25# [silver]#fill=wheat"# [gray]#--file# [silver]#examples/style_create.sld# +

@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*map draw* [gray]#--name# [silver]#world# [gray]#--width# [silver]#400# [gray]#--height# [silver]#400# [gray]#--file# [silver]#examples/map_add_tile.png# +

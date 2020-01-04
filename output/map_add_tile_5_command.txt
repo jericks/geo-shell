@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*style vector default* [gray]#--layer# [silver]#places# [gray]#--color# [silver]##1E90FF# [gray]#--file# [silver]#examples/places.sld# +

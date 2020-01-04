@@ -1,0 +1,1 @@
+Parses the specified resource file and executes its commands

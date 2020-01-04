@@ -1,1 +1,1 @@
-Add a Raster.
+Add a Raster Layer.
