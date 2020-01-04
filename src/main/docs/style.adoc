@@ -4,9 +4,49 @@ ifndef::imagesdir[:imagesdir: images]
 
 === Create
 
-Create a simple style.
+include::commands/style_create_description.txt[]
+
+include::output/style_create_0_command.txt[]
 
 include::commands/style_create.txt[]
+
+include::output/style_create_0_command.txt[]
+include::output/style_create_0_result.txt[]
+
+include::output/style_create_1_command.txt[]
+include::output/style_create_1_result.txt[]
+
+include::output/style_create_2_command.txt[]
+include::output/style_create_2_result.txt[]
+
+include::output/style_create_3_command.txt[]
+include::output/style_create_3_result.txt[]
+
+include::output/style_create_4_command.txt[]
+include::output/style_create_4_result.txt[]
+
+include::output/style_create_5_command.txt[]
+include::output/style_create_5_result.txt[]
+
+include::output/style_create_6_command.txt[]
+include::output/style_create_6_result.txt[]
+
+include::output/style_create_7_command.txt[]
+include::output/style_create_7_result.txt[]
+
+include::output/style_create_8_command.txt[]
+include::output/style_create_8_result.txt[]
+
+include::output/style_create_9_command.txt[]
+include::output/style_create_9_result.txt[]
+
+include::output/style_create_10_command.txt[]
+include::output/style_create_10_result.txt[]
+
+[source,xml]
+include::output/style_create.sld[]
+
+image::style_create.png[]
 
 === Vector Default
 
