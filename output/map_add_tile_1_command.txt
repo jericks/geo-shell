@@ -1,1 +1,1 @@
-[blue]#geo-shell># [navy]*tile open* [gray]#--name# [silver]#tiles# [gray]#--params# [silver]#target/tiles.mbtiles# +
+[blue]#geo-shell># [navy]*tile open* [gray]#--name# [silver]#tiles# [gray]#--params# [silver]#src/test/resources/countries.mbtiles# +
