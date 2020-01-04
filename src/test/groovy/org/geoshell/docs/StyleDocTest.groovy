@@ -25,6 +25,23 @@ class StyleDocTest extends AbstractDocTest {
 
     @Test
     void vectorDefault() {
+        run("style_vector_default", [
+                "workspace open --name naturalearth --params src/test/resources/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "style vector default --layer countries --color #F5F5DC --file examples/countries_default.sld",
+                "layer style set --name countries --style examples/countries_default.sld",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "style vector default --layer ocean --color DeepSkyBlue --file examples/ocean_default.sld",
+                "layer style set --name ocean --style examples/ocean_default.sld",
+                "map open --name map",
+                "map add layer --name map --layer ocean",
+                "map add layer --name map --layer countries",
+                "map draw --name map --file examples/style_vector_default.png",
+                "map close --name map"
+        ])
+        copyFile(new File("examples/style_vector_default.png"), new File("src/main/docs/images"))
+        copyFile(new File("examples/countries_default.sld"), new File("src/main/docs/output"))
+        copyFile(new File("examples/ocean_default.sld"), new File("src/main/docs/output"))
 
     }
 

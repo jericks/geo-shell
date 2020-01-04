@@ -52,7 +52,57 @@ image::style_create.png[]
 
 include::commands/style_vector_default_description.txt[]
 
+include::output/style_vector_default_2_command.txt[]
+
 include::commands/style_vector_default.txt[]
+
+include::output/style_vector_default_0_command.txt[]
+include::output/style_vector_default_0_result.txt[]
+
+include::output/style_vector_default_1_command.txt[]
+include::output/style_vector_default_1_result.txt[]
+
+include::output/style_vector_default_2_command.txt[]
+include::output/style_vector_default_2_result.txt[]
+
+include::output/style_vector_default_3_command.txt[]
+include::output/style_vector_default_3_result.txt[]
+
+include::output/style_vector_default_4_command.txt[]
+include::output/style_vector_default_4_result.txt[]
+
+include::output/style_vector_default_5_command.txt[]
+include::output/style_vector_default_5_result.txt[]
+
+include::output/style_vector_default_6_command.txt[]
+include::output/style_vector_default_6_result.txt[]
+
+include::output/style_vector_default_7_command.txt[]
+include::output/style_vector_default_7_result.txt[]
+
+include::output/style_vector_default_8_command.txt[]
+include::output/style_vector_default_8_result.txt[]
+
+include::output/style_vector_default_9_command.txt[]
+include::output/style_vector_default_9_result.txt[]
+
+include::output/style_vector_default_10_command.txt[]
+include::output/style_vector_default_10_result.txt[]
+
+include::output/style_vector_default_11_command.txt[]
+include::output/style_vector_default_11_result.txt[]
+
+Country Style
+
+[source,xml]
+include::output/countries_default.sld[]
+
+Ocean Style
+
+[source,xml]
+include::output/ocean_default.sld[]
+
+image::style_vector_default.png[]
 
 === Vector Gradient
 
