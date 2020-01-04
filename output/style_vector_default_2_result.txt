@@ -1,0 +1,1 @@
+[green]#Default Vector Style for countries written to /home/travis/build/jericks/geo-shell/examples/countries_default.sld!# +

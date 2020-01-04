@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*style vector default* [gray]#--layer# [silver]#countries# [gray]#--color# [silver]##F5F5DC# [gray]#--file# [silver]#examples/countries_default.sld# +
