@@ -111,7 +111,7 @@ class MapDocTest extends AbstractDocTest {
     void addTileLayer() {
         run("map_add_tile", [
                 "map open --name world",
-                "tile open --name tiles --params target/tiles.mbtiles",
+                "tile open --name tiles --params src/test/resources/countries.mbtiles",
                 "map add tile --name world --tile tiles",
                 "workspace open --name naturalearth --params examples/naturalearth.gpkg",
                 "layer open --workspace naturalearth --layer places --name places",
