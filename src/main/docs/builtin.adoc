@@ -4,37 +4,51 @@ ifndef::imagesdir[:imagesdir: images]
 
 === Exit / Quit
 
-Exit the shell with *exit* or *quit*
+include::commands/exit_description.txt[]
+
+include::commands/exit.txt[]
 
 === Help
 
-List all commands and their usage with *help*.
+include::commands/help_description.txt[]
 
-List help for a specific command with *help workspace open*.
+include::commands/help.txt[]
 
 === Run OS Command
 
-*!* runs an os command string.
+include::commands/!_description.txt[]
+
+include::commands/!.txt[]
 
 === Date
 
-Display local date and time.
+include::commands/date_description.txt[]
+
+include::commands/date.txt[]
 
 === Script
 
-Run a script file.
+include::commands/script_description.txt[]
+
+include::commands/script.txt[]
 
 === System Properties
 
-Show system properties.
+include::commands/system_properties_description.txt[]
+
+include::commands/system_properties.txt[]
 
 === Version
 
-Display current cli version.
+include::commands/version_description.txt[]
+
+include::commands/version.txt[]
 
 === Download
 
-Download a URL to a File.
+include::commands/download_description.txt[]
+
+include::commands/download.txt[]
 
 === Unzip
 

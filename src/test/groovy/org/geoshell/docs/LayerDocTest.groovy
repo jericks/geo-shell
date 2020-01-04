@@ -17,62 +17,64 @@ class LayerDocTest extends AbstractDocTest {
     void document() {
         ClassPathScanningCandidateComponentProvider provider = new ClassPathScanningCandidateComponentProvider(true)
         provider.addIncludeFilter(new AnnotationTypeFilter(Component))
-        provider.findCandidateComponents("org.geoshell").each { BeanDefinition beanDefinition ->
-            println beanDefinition.getBeanClassName()
-            Class clazz = Class.forName(beanDefinition.beanClassName)
-            clazz.declaredMethods.each { Method method ->
-                method.getAnnotationsByType(CliCommand).each { CliCommand cmd ->
+        ["org.geoshell", "org.springframework.shell.commands"].each { String packageName ->
+            provider.findCandidateComponents(packageName).each { BeanDefinition beanDefinition ->
+                println beanDefinition.getBeanClassName()
+                Class clazz = Class.forName(beanDefinition.beanClassName)
+                clazz.declaredMethods.each { Method method ->
+                    method.getAnnotationsByType(CliCommand).each { CliCommand cmd ->
 
 
-                    String commandName = cmd.value()[0]
-                    String commandHelp = cmd.help()
-                    List<Map> parameters = []
+                        String commandName = cmd.value()[0]
+                        String commandHelp = cmd.help()
+                        List<Map> parameters = []
 
-                    method.parameters.each { Parameter parameter ->
-                        parameter.getAnnotationsByType(CliOption).each { CliOption cliOption ->
-                            parameters.add([
-                                key: cliOption.key()[0],
-                                help: cliOption.help(),
-                                mandatory: cliOption.mandatory(),
-                                specifiedDefaultValue: cliOption.specifiedDefaultValue() != "__NULL__" ? cliOption.specifiedDefaultValue() : "",
-                                unspecifiedDefaultValue: cliOption.unspecifiedDefaultValue() != "__NULL__" ? cliOption.unspecifiedDefaultValue() : "",
+                        method.parameters.each { Parameter parameter ->
+                            parameter.getAnnotationsByType(CliOption).each { CliOption cliOption ->
+                                parameters.add([
+                                        key                    : cliOption.key()[0],
+                                        help                   : cliOption.help(),
+                                        mandatory              : cliOption.mandatory(),
+                                        specifiedDefaultValue  : cliOption.specifiedDefaultValue() != "__NULL__" ? cliOption.specifiedDefaultValue() : "",
+                                        unspecifiedDefaultValue: cliOption.unspecifiedDefaultValue() != "__NULL__" ? cliOption.unspecifiedDefaultValue() : "",
 
-                            ])
+                                ])
+                            }
                         }
-                    }
 
-                    String text = ""
-                    if (!parameters.isEmpty()) {
-                        text += "\n"
-                        text += "|===\n"
-                        text += "|Name "
-                        text += "|Description "
-                        text += "|Mandatory "
-                        text += "|Specified Default "
-                        text += "|Unspecified Default "
-                        text += "\n"
-                        parameters.each { Map parameter ->
-                            text += "|${parameter.key}\n"
-                            text += "|${parameter.help}\n"
-                            text += "|${parameter.mandatory}\n"
-                            text += "|${parameter.specifiedDefaultValue}\n"
-                            text += "|${parameter.unspecifiedDefaultValue}\n"
+                        String text = ""
+                        if (!parameters.isEmpty()) {
                             text += "\n"
+                            text += "|===\n"
+                            text += "|Name "
+                            text += "|Description "
+                            text += "|Mandatory "
+                            text += "|Specified Default "
+                            text += "|Unspecified Default "
+                            text += "\n"
+                            parameters.each { Map parameter ->
+                                text += "|${parameter.key}\n"
+                                text += "|${parameter.help}\n"
+                                text += "|${parameter.mandatory}\n"
+                                text += "|${parameter.specifiedDefaultValue}\n"
+                                text += "|${parameter.unspecifiedDefaultValue}\n"
+                                text += "\n"
+                            }
+                            text += "|===\n"
+                        } else {
+                            text += "NOTE: No parameters"
                         }
-                        text += "|===\n"
-                    } else {
-                        text += "NOTE: No parameters"
+
+                        File file = new File("src/main/docs/commands/${commandName.replaceAll(' ', '_')}.txt")
+                        if (!file.parentFile.exists()) {
+                            file.parentFile.mkdir()
+                        }
+                        file.text = text
+
+
+                        file = new File("src/main/docs/commands/${commandName.replaceAll(' ', '_')}_description.txt")
+                        file.text = "${commandHelp}"
                     }
-
-                    File file = new File("src/main/docs/commands/${commandName.replaceAll(' ', '_')}.txt")
-                    if (!file.parentFile.exists()) {
-                        file.parentFile.mkdir()
-                    }
-                    file.text = text
-
-
-                    file = new File("src/main/docs/commands/${commandName.replaceAll(' ', '_')}_description.txt")
-                    file.text = "${commandHelp}"
                 }
             }
         }
