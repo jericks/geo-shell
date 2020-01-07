@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*style vector uniquevalues* [gray]#--layer# [silver]#countries# [gray]#--field# [silver]#NAME# [gray]#--colors# [silver]#random# [gray]#--file# [silver]#examples/style_vector_uniquevalues.sld# +

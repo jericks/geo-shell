@@ -1,0 +1,1 @@
+[green]#Unique Values Vector Style for countries's NAME Field written to /home/travis/build/jericks/geo-shell/examples/style_vector_uniquevalues.sld!# +

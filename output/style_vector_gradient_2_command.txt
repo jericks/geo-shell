@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*style vector gradient* [gray]#--layer# [silver]#countries# [gray]#--field# [silver]#PEOPLE# [gray]#--colors# [silver]#greens# [gray]#--number# [silver]#8# [gray]#--method# [silver]#quantile# [gray]#--file# [silver]#examples/style_vector_gradient.sld# +

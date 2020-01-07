@@ -1,0 +1,1 @@
+[green]#Gradient Vector Style for countries's PEOPLE Field written to /home/travis/build/jericks/geo-shell/examples/style_vector_gradient.sld!# +
