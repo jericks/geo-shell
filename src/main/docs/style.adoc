@@ -108,13 +108,87 @@ image::style_vector_default.png[]
 
 include::commands/style_vector_gradient_description.txt[]
 
+include::output/style_vector_gradient_2_command.txt[]
+
 include::commands/style_vector_gradient.txt[]
+
+include::output/style_vector_gradient_0_command.txt[]
+include::output/style_vector_gradient_0_result.txt[]
+
+include::output/style_vector_gradient_1_command.txt[]
+include::output/style_vector_gradient_1_result.txt[]
+
+include::output/style_vector_gradient_2_command.txt[]
+include::output/style_vector_gradient_2_result.txt[]
+
+include::output/style_vector_gradient_3_command.txt[]
+include::output/style_vector_gradient_3_result.txt[]
+
+include::output/style_vector_gradient_4_command.txt[]
+include::output/style_vector_gradient_4_result.txt[]
+
+include::output/style_vector_gradient_5_command.txt[]
+include::output/style_vector_gradient_5_result.txt[]
+
+include::output/style_vector_gradient_6_command.txt[]
+include::output/style_vector_gradient_6_result.txt[]
+
+include::output/style_vector_gradient_7_command.txt[]
+include::output/style_vector_gradient_7_result.txt[]
+
+include::output/style_vector_gradient_8_command.txt[]
+include::output/style_vector_gradient_8_result.txt[]
+
+include::output/style_vector_gradient_9_command.txt[]
+include::output/style_vector_gradient_9_result.txt[]
+
+include::output/style_vector_gradient_10_command.txt[]
+include::output/style_vector_gradient_10_result.txt[]
+
+image::style_vector_gradient.png[]
 
 === Vector Unique Values
 
 include::commands/style_vector_uniquevalues_description.txt[]
 
+include::output/style_vector_uniquevalues_2_command.txt[]
+
 include::commands/style_vector_uniquevalues.txt[]
+
+include::output/style_vector_uniquevalues_0_command.txt[]
+include::output/style_vector_uniquevalues_0_result.txt[]
+
+include::output/style_vector_uniquevalues_1_command.txt[]
+include::output/style_vector_uniquevalues_1_result.txt[]
+
+include::output/style_vector_uniquevalues_2_command.txt[]
+include::output/style_vector_uniquevalues_2_result.txt[]
+
+include::output/style_vector_uniquevalues_3_command.txt[]
+include::output/style_vector_uniquevalues_3_result.txt[]
+
+include::output/style_vector_uniquevalues_4_command.txt[]
+include::output/style_vector_uniquevalues_4_result.txt[]
+
+include::output/style_vector_uniquevalues_5_command.txt[]
+include::output/style_vector_uniquevalues_5_result.txt[]
+
+include::output/style_vector_uniquevalues_6_command.txt[]
+include::output/style_vector_uniquevalues_6_result.txt[]
+
+include::output/style_vector_uniquevalues_7_command.txt[]
+include::output/style_vector_uniquevalues_7_result.txt[]
+
+include::output/style_vector_uniquevalues_8_command.txt[]
+include::output/style_vector_uniquevalues_8_result.txt[]
+
+include::output/style_vector_uniquevalues_9_command.txt[]
+include::output/style_vector_uniquevalues_9_result.txt[]
+
+include::output/style_vector_uniquevalues_10_command.txt[]
+include::output/style_vector_uniquevalues_10_result.txt[]
+
+image::style_vector_uniquevalues.png[]
 
 === Vector Unique Values From Text File
 

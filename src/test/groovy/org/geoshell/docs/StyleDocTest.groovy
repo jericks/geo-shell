@@ -48,12 +48,40 @@ class StyleDocTest extends AbstractDocTest {
 
     @Test
     void vectorGradient() {
-
+        run("style_vector_gradient", [
+                "workspace open --name naturalearth --params src/test/resources/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "style vector gradient --layer countries --field PEOPLE --colors greens --number 8 --method quantile --file examples/style_vector_gradient.sld",
+                "layer style set --name countries --style examples/style_vector_gradient.sld",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "layer style set --name ocean --style examples/ocean.sld",
+                "map open --name map",
+                "map add layer --name map --layer ocean",
+                "map add layer --name map --layer countries",
+                "map draw --name map --file examples/style_vector_gradient.png",
+                "map close --name map"
+        ])
+        copyFile(new File("examples/style_vector_gradient.png"), new File("src/main/docs/images"))
+        copyFile(new File("examples/style_vector_gradient.sld"), new File("src/main/docs/output"))
     }
 
     @Test
     void vectorUniqueValues() {
-
+        run("style_vector_uniquevalues", [
+                "workspace open --name naturalearth --params src/test/resources/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "style vector uniquevalues --layer countries --field NAME --colors random --file examples/style_vector_uniquevalues.sld",
+                "layer style set --name countries --style examples/style_vector_uniquevalues.sld",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "layer style set --name ocean --style examples/ocean.sld",
+                "map open --name map",
+                "map add layer --name map --layer ocean",
+                "map add layer --name map --layer countries",
+                "map draw --name map --file examples/style_vector_uniquevalues.png",
+                "map close --name map"
+        ])
+        copyFile(new File("examples/style_vector_uniquevalues.png"), new File("src/main/docs/images"))
+        copyFile(new File("examples/style_vector_uniquevalues.sld"), new File("src/main/docs/output"))
     }
 
     @Test
