@@ -1,0 +1,1229 @@
+<?xml version="1.0"?>
+<!--<!DOCTYPE metadata SYSTEM "http://www.esri.com/metadata/esriprof80.dtd">-->
+<metadata xml:lang="en">
+  <Esri>
+    <CreaDate>20060309</CreaDate>
+    <CreaTime>08454500</CreaTime>
+    <SyncOnce>FALSE</SyncOnce>
+    <DataProperties>
+      <lineage>
+        <Process Name="Create Feature Class" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CreateFeatureclass" Date="20060302" Time="135325">CreateFeatureclass E:\Mars\arc_projects\global_scan\I1802ABC.mdb\1802-simp_sphere2000 geo_units_simp_sphere2000 # geo_units_simp_Layer SAME_AS_TEMPLATE SAME_AS_TEMPLATE "PROJCS['Simple Cylindrical Mars 2000 sphere',GEOGCS['GCS_Mars_2000_spere',DATUM['D_Mars_2000_sphere',SPHEROID['Mars_2000_IAU_IAG',3396190.0,0.0]],PRIMEM['Reference_Meridian',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Equidistant_Cylindrical'],PARAMETER['False_Easting',0.0],PARAMETER['False_Northing',0.0],PARAMETER['Central_Meridian',0.0],PARAMETER['Standard_Parallel_1',0.0],UNIT['Meter',1.0]];-35184371.5562731 -35184372.105216 30.5175780965783;0 100000;0 100000" # 0 0 0 E:\Mars\arc_projects\global_scan\I1802ABC.mdb\1802-simp_sphere2000\geo_units_simp_sphere2000</Process>
+        <Process Name="Append" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" Date="20060302" Time="135334">Append geo_units_simp_Layer E:\Mars\arc_projects\global_scan\I1802ABC.mdb\1802-simp_sphere2000\geo_units_simp_sphere2000 TEST E:\Mars\arc_projects\global_scan\I1802ABC.mdb\1802-simp_sphere2000\geo_units_simp_sphere2000</Process>
+        <Process Name="FeatureClassToFeatureClass_6" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Conversion Tools.tbx\FeatureClassToFeatureClass" Date="20060302" Time="135335">FeatureClassToFeatureClass E:\Mars\arc_projects\global_scan\1802-shapefiles\geo_units_simp.shp E:\Mars\arc_projects\global_scan\I1802ABC.mdb\1802-simp_sphere2000 geo_units_simp_sphere2000 # "AUNIT AUNIT VISIBLE;GeoArea GeoArea VISIBLE;GeoPerim GeoPerim VISIBLE" SAME_AS_TEMPLATE SAME_AS_TEMPLATE # 0 E:\Mars\arc_projects\global_scan\I1802ABC.mdb\1802-simp_sphere2000\geo_units_simp_sphere2000</Process>
+        <Process Name="AddField_2" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddField" Date="20060302" Time="141848">AddField E:\Mars\arc_projects\global_scan\I1802ABC.mdb\1802-simp_sphere2000\geo_units_simp_sphere2000 UnitName TEXT # # # # NULLABLE NON_REQUIRED # E:\Mars\arc_projects\global_scan\I1802ABC.mdb\1802-simp_sphere2000\geo_units_simp_sphere2000</Process>
+        <Process Name="AddField_3" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddField" Date="20060302" Time="141905">AddField E:\Mars\arc_projects\global_scan\I1802ABC.mdb\1802-simp_sphere2000\geo_units_simp_sphere2000 UnitSymbol TEXT # # # # NULLABLE NON_REQUIRED # E:\Mars\arc_projects\global_scan\I1802ABC.mdb\1802-simp_sphere2000\geo_units_simp_sphere2000</Process>
+        <Process Name="CalculateField_4" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20060302" Time="141935">CalculateField E:\Mars\arc_projects\global_scan\I1802ABC.mdb\1802-simp_sphere2000\geo_units_simp_sphere2000 UnitSymbol [AUNIT] E:\Mars\arc_projects\global_scan\I1802ABC.mdb\1802-simp_sphere2000\geo_units_simp_sphere2000</Process>
+        <Process Name="DeleteField_1" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteField" Date="20060305" Time="125558">DeleteField E:\Mars\arc_projects\global_scan\I1802ABC.mdb\1802-simp_sphere2000\geo_units_simp_sphere2000 AUNIT E:\Mars\arc_projects\global_scan\I1802ABC.mdb\1802-simp_sphere2000\geo_units_simp_sphere2000</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20060309" Time="084844">CopyFeatures E:\GIS\Mars\place\jskinner\I1802ABC_EquidistCyl.mdb\I1802ABC_EquidistCylindrical_Clon0\geo_units_EquidistCyl E:\GIS\Mars\place\jskinner\I1802ABC_Mars2000_Sphere.mdb\I1802ABC_Mars2000_Sphere_Ocentric\geo_units_EquidistCyl # 0 0 0</Process>
+        <Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CopyFeatures" Date="20060309" Time="140054">CopyFeatures E:\GIS\Mars\place\I1802ABC_Mars_global_geology\ArcMap_GeoDatabases\I1802ABC_Mars2000_Sphere.mdb\I1802ABC_Mars2000_Sphere_Ocentric\geo_units_oc_dd E:\GIS\Mars\place\I1802ABC_Mars_global_geology\Shapefiles\I1802ABC_Mars2000_Sphere\geo_units_oc_dd.shp # 0 0 0</Process>
+      </lineage>
+    </DataProperties>
+    <SyncDate>20060309</SyncDate>
+    <SyncTime>14005100</SyncTime>
+    <ModDate>20060309</ModDate>
+    <ModTime>14005100</ModTime>
+    <MetaID>{887A3CE2-205D-4D05-A639-82EA9E39CC27}</MetaID>
+  </Esri>
+  <idinfo>
+    <native Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 2; ESRI ArcCatalog 9.1.0.722</native>
+    <descript>
+      <langdata Sync="TRUE">en</langdata>
+      <abstract>A digital adaptation of the hard-copy Viking Orbiter-based geologic maps of Mars. The western equatorial region was originally mapped by David H. Scott and K. L. Tanaka (USGS I-1802-A, 1986, 1:15M scale). The eastern equatorial region was originally mapped by Ronald Greeley and J. E. Guest (USGS I-1802-B, 1987, 1:15M scale). The north and south polar regions were originally mapped by K. L. Tanaka and D. H. Scott (USGS I-1802-C, 1987, 1:15M scale). A conference abstract submitted to the 37th Lunar and Planetary Science Conference outlines and discusses the rationale and methodology for the digitized version presented herein. The rabstract eference is: Skinner, J. A., Jr, T. M. Hare, and K. L. Tanaka 2006, LPSC XXXVII, abstract #2331.</abstract>
+      <purpose>The digital product presented herein is an adaptation. In support of ongoing scientific analysis and in advance of renewed global geologic mapping efforts, we have digitized the Viking-based Atlas of Mars, 1:15,000,000 Geologic Series (AMG) maps (USGS I-1802A-C) originally published in 1986 and 1987.</purpose>
+    </descript>
+    <citation>
+      <citeinfo>
+        <origin>REQUIRED: The name of an organization or individual that developed the data set.</origin>
+        <pubdate>REQUIRED: The date when the data set is published or otherwise made available for release.</pubdate>
+        <title Sync="TRUE">geo_units_oc_dd</title>
+        <ftname Sync="TRUE">geo_units_oc_dd</ftname>
+        <geoform Sync="TRUE">vector digital data</geoform>
+        <onlink Sync="TRUE">\\T42\E$\GIS\Mars\place\I1802ABC_Mars_global_geology\Shapefiles\I1802ABC_Mars2000_Sphere\geo_units_oc_dd.shp</onlink>
+      </citeinfo>
+    </citation>
+    <timeperd>
+      <current>LPSC conference date - March 13, 2006</current>
+      <timeinfo>
+        <sngdate>
+          <caldate>March 2006</caldate>
+        </sngdate>
+      </timeinfo>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>As needed</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc Sync="TRUE">-179.999864</westbc>
+        <eastbc Sync="TRUE">179.999847</eastbc>
+        <northbc Sync="TRUE">89.900000</northbc>
+        <southbc Sync="TRUE">-89.900000</southbc>
+      </bounding>
+      <lboundng>
+        <leftbc Sync="TRUE">-10669437.475000</leftbc>
+        <rightbc Sync="TRUE">10669436.505000</rightbc>
+        <bottombc Sync="TRUE">-5328795.315000</bottombc>
+        <topbc Sync="TRUE">5328795.335000</topbc>
+      </lboundng>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekey>Geology</themekey>
+        <themekey>Structure</themekey>
+        <themekey>Planetary</themekey>
+        <themekey>Mars</themekey>
+        <themekey>Viking Orbiter</themekey>
+        <themekey>Mars Global Surveyor</themekey>
+        <themekey>MOLA</themekey>
+        <themekey>Graben</themekey>
+        <themekey>Volcano</themekey>
+        <themekey>Contacts</themekey>
+        <themekey>Crater</themekey>
+      </theme>
+    </keywords>
+    <accconst>none</accconst>
+    <useconst>none</useconst>
+    <natvform Sync="TRUE">Shapefile</natvform>
+    <ptcontac>
+      <cntinfo>
+        <cntperp>
+          <cntper>Jim Skinner</cntper>
+          <cntorg>U. S. Geological Survey, Astrogeology Team</cntorg>
+        </cntperp>
+        <cntpos>Geologist</cntpos>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>2255 North Gemini Drive</address>
+          <city>Flagstaff</city>
+          <state>AZ</state>
+          <postal>86001</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntemail>jskinner@usgs.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <datacred>U. S. Geological Survey. Originally prepared for the National Aeronautics and Space Administration</datacred>
+  </idinfo>
+  <dataIdInfo>
+    <envirDesc Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 2; ESRI ArcCatalog 9.1.0.722</envirDesc>
+    <dataLang>
+      <languageCode Sync="TRUE" value="en"></languageCode>
+    </dataLang>
+    <idCitation>
+      <resTitle Sync="TRUE">geo_units_oc_dd</resTitle>
+      <presForm>
+        <PresFormCd Sync="TRUE" value="005"></PresFormCd>
+      </presForm>
+    </idCitation>
+    <spatRpType>
+      <SpatRepTypCd Sync="TRUE" value="001"></SpatRepTypCd>
+    </spatRpType>
+    <dataExt>
+      <geoEle>
+        <GeoBndBox esriExtentType="native">
+          <westBL Sync="TRUE">-10669437.475</westBL>
+          <eastBL Sync="TRUE">10669436.505</eastBL>
+          <northBL Sync="TRUE">5328795.335</northBL>
+          <southBL Sync="TRUE">-5328795.315</southBL>
+          <exTypeCode Sync="TRUE">1</exTypeCode>
+        </GeoBndBox>
+      </geoEle>
+    </dataExt>
+    <geoBox esriExtentType="decdegrees">
+      <westBL Sync="TRUE">-179.999864</westBL>
+      <eastBL Sync="TRUE">179.999847</eastBL>
+      <northBL Sync="TRUE">89.9</northBL>
+      <southBL Sync="TRUE">-89.9</southBL>
+      <exTypeCode Sync="TRUE">1</exTypeCode>
+    </geoBox>
+  </dataIdInfo>
+  <metainfo>
+    <langmeta Sync="TRUE">en</langmeta>
+    <metstdn Sync="TRUE">FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+    <metstdv Sync="TRUE">FGDC-STD-001-1998</metstdv>
+    <mettc Sync="TRUE">local time</mettc>
+    <metc>
+      <cntinfo>
+        <cntorgp>
+          <cntper>REQUIRED: The person responsible for the metadata information.</cntper>
+          <cntorg>REQUIRED: The organization responsible for the metadata information.</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>REQUIRED: The mailing and/or physical address for the organization or individual.</addrtype>
+          <city>REQUIRED: The city of the address.</city>
+          <state>REQUIRED: The state or province of the address.</state>
+          <postal>REQUIRED: The ZIP or other postal code of the address.</postal>
+        </cntaddr>
+        <cntvoice>REQUIRED: The telephone number by which individuals can speak to the organization or individual.</cntvoice>
+      </cntinfo>
+    </metc>
+    <metd Sync="TRUE">20060309</metd>
+    <metextns>
+      <onlink Sync="TRUE">http://www.esri.com/metadata/esriprof80.html</onlink>
+      <metprof Sync="TRUE">ESRI Metadata Profile</metprof>
+    </metextns>
+  </metainfo>
+  <mdLang>
+    <languageCode Sync="TRUE" value="en"></languageCode>
+  </mdLang>
+  <mdStanName Sync="TRUE">ISO 19115 Geographic Information - Metadata</mdStanName>
+  <mdStanVer Sync="TRUE">DIS_ESRI1.0</mdStanVer>
+  <mdChar>
+    <CharSetCd Sync="TRUE" value="004"></CharSetCd>
+  </mdChar>
+  <mdHrLv>
+    <ScopeCd Sync="TRUE" value="005"></ScopeCd>
+  </mdHrLv>
+  <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+  <distinfo>
+    <resdesc Sync="TRUE">Downloadable Data</resdesc>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <transize Sync="TRUE">0.000</transize>
+          <dssize Sync="TRUE">0.000</dssize>
+        </digtinfo>
+      </digform>
+    </stdorder>
+  </distinfo>
+  <distInfo>
+    <distributor>
+      <distorTran>
+        <onLineSrc>
+          <orDesc Sync="TRUE">002</orDesc>
+          <linkage Sync="TRUE">file://\\T42\E$\GIS\Mars\place\I1802ABC_Mars_global_geology\Shapefiles\I1802ABC_Mars2000_Sphere\geo_units_oc_dd.shp</linkage>
+          <protocol Sync="TRUE">Local Area Network</protocol>
+        </onLineSrc>
+        <transSize Sync="TRUE">0.000</transSize>
+      </distorTran>
+      <distorFormat>
+        <formatName Sync="TRUE">Shapefile</formatName>
+      </distorFormat>
+    </distributor>
+  </distInfo>
+  <spdoinfo>
+    <direct Sync="TRUE">Vector</direct>
+    <ptvctinf>
+      <esriterm Name="geo_units_oc_dd">
+        <efeatyp Sync="TRUE">Simple</efeatyp>
+        <efeageom Sync="TRUE">Polygon</efeageom>
+        <esritopo Sync="TRUE">FALSE</esritopo>
+        <efeacnt Sync="TRUE">0</efeacnt>
+        <spindex Sync="TRUE">FALSE</spindex>
+        <linrefer Sync="TRUE">FALSE</linrefer>
+      </esriterm>
+      <sdtsterm Name="geo_units_oc_dd">
+        <sdtstype Sync="TRUE">G-polygon</sdtstype>
+        <ptvctcnt Sync="TRUE">0</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <cordsysn>
+        <geogcsn Sync="TRUE">GCS_Mars_2000_Sphere</geogcsn>
+      </cordsysn>
+      <geodetic>
+        <horizdn Sync="TRUE">D_Mars_2000_Sphere</horizdn>
+        <ellips Sync="TRUE">Mars_2000_Sphere_IAU_IAG</ellips>
+        <semiaxis Sync="TRUE">3396190.000000</semiaxis>
+        <denflat Sync="TRUE">infinity</denflat>
+      </geodetic>
+      <geograph>
+        <geogunit Sync="TRUE">Decimal degrees</geogunit>
+        <latres Sync="TRUE">0.000000</latres>
+        <longres Sync="TRUE">0.000000</longres>
+      </geograph>
+    </horizsys>
+    <vertdef>
+      <altsys>
+        <altenc Sync="TRUE">Explicit elevation coordinate included with horizontal coordinates</altenc>
+        <altres Sync="TRUE">0.000010</altres>
+      </altsys>
+    </vertdef>
+  </spref>
+  <refSysInfo>
+    <RefSystem>
+      <refSysID>
+        <identCode Sync="TRUE">GCS_Mars_2000_Sphere</identCode>
+      </refSysID>
+    </RefSystem>
+  </refSysInfo>
+  <spatRepInfo>
+    <VectSpatRep>
+      <topLvl>
+        <TopoLevCd Sync="TRUE" value="001"></TopoLevCd>
+      </topLvl>
+      <geometObjs Name="geo_units_oc_dd">
+        <geoObjTyp>
+          <GeoObjTypCd Sync="TRUE" value="001"></GeoObjTypCd>
+        </geoObjTyp>
+        <geoObjCnt Sync="TRUE">0</geoObjCnt>
+      </geometObjs>
+    </VectSpatRep>
+  </spatRepInfo>
+  <eainfo>
+    <detailed Name="geo_units_oc_dd">
+      <enttyp>
+        <enttypl Sync="TRUE">geo_units_oc_dd</enttypl>
+        <enttypt Sync="TRUE">Feature Class</enttypt>
+        <enttypc Sync="TRUE">0</enttypc>
+        <enttypds>USGS</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl Sync="TRUE">Shape</attrlabl>
+        <attalias Sync="TRUE">Shape</attalias>
+        <attrtype Sync="TRUE">Geometry</attrtype>
+        <attwidth Sync="TRUE">0</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Feature geometry.</attrdef>
+        <attrdefs Sync="TRUE">ESRI</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Area</attrlabl>
+        <attalias Sync="TRUE">Shape_Area</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">8</attwidth>
+        <atprecis Sync="TRUE">0</atprecis>
+        <attscale Sync="TRUE">0</attscale>
+        <attrdef Sync="TRUE">Area of feature in internal units squared.</attrdef>
+        <attrdefs Sync="TRUE">ESRI</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>55262839.5742544</rdommin>
+            <rdommax>12404839021029.6</rdommax>
+            <rdommean>79019724389.8631</rdommean>
+            <rdomstdv>492864349493.643</rdomstdv>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">UnitName</attrlabl>
+        <attalias Sync="TRUE">UnitName</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">254</attwidth>
+        <attrdomv>
+          <edom>
+            <edomv>Alba Patera Formation, lower member</edomv>
+            <edomvds>I-1802-A</edomvds>
+            <edomvd>Covers broad area around north and west flanks of Alba Patera. Flow fronts less distinct than those of younger members. Extends into plains regions; appears to be overlapped in places by lowermost member (unit Aa1) of Arcadia Formation but most of boundary indistinct. Type area: lat 35&#194;&#176; N., long 125&#194;&#176;.</edomvd>
+          </edom>
+          <edom>
+            <edomv>Alba Patera Formation, middle member</edomv>
+            <edomvds>I-1802-A</edomvds>
+            <edomvd>Encircles crestal region and upper member; occurs as low radial ridges with summit channels and as long narrow tongues with leveed channels. Highly faulted but buries many grabens in older fractured material (unit Nf). Type area: lat 40&#194;&#176; N., long 118&#194;&#176;.</edomvd>
+          </edom>
+          <edom>
+            <edomv>Alba Patera Formation, upper member</edomv>
+            <edomvds>I-1802-A</edomvds>
+            <edomvd>Covers large area within and around central calderas; lava flows completely or partly bury most ring and radial structures; channels with levees common along crests of flows. Type area: lat 40&#194;&#176; N., long 110&#194;&#176;.</edomvd>
+          </edom>
+          <edom>
+            <edomv>Albor Tholus Formation</edomv>
+            <edomvds>I-1802-B</edomvds>
+            <edomvd>Material forming Albor Tholus; hummocky texture, more subdued near vent. Type area: lat 18&#194;&#176; N., long 210&#194;&#176;. Interpretation: Volcanic flows.</edomvd>
+          </edom>
+          <edom>
+            <edomv>Amphitrites Formation, dissected member</edomv>
+            <edomvds>I-1802-B; I-1802-C</edomvds>
+            <edomvd>Multiple definitions. I-1802-B: Forms shieldlike deposit along north edges of Malea Planum (near south map border). Consists of deeply etched, ridges, lobate deposits and superposed crater material; sinuous furrows, ridges, and scarps trend toward Hellas Planitia. Type area: north Malea Planum. Interpretation: Ridged plain material (unit Hr) modified by fluvial channeling. I-1802-C (south pole): Ridged plains material deeply furrowed by sinuous channels and gullies that trend downslope toward Hellas Planitia (centered at lat 45&#194;&#176; S., long 290&#194;&#176;); many superposed and embayed impact craters. Forms plains of northern Malea Planum; gradational with ridged plains material; embays rim material of Hellas Basin. Type area: northern Malea Planum. Interpretation: Relatively soft ridged plains material or mantle modified by channeling.</edomvd>
+          </edom>
+          <edom>
+            <edomv>Amphitrites Formation, patera member</edomv>
+            <edomvds>I-1802-C (south pole)</edomvds>
+            <edomvd>On Malea Planum forms Amphitrites and Peneus Paterae, which are characterized by circular patterns of both wrinkle rides and faults. Type area: Amphitrites Patera. Interpretation: Material of volcanic conters and associated ring faults from which ridged plains material was extruded</edomvd>
+          </edom>
+          <edom>
+            <edomv>Apollinaris Patera Formation</edomv>
+            <edomvds>I-1802-B</edomvds>
+            <edomvd>Material composing Apollinaris Patera. Consist of several members including deposits dissected by channels, some of which flowed over a basal scarp; forms a large fanlike feature on southeast flank. Type area: lat 9&#194;&#176; S., long 186&#194;&#176;. Interpretation: Material of multiple-stage eruptions forming shield volcano.</edomvd>
+          </edom>
+          <edom>
+            <edomv>Arcadia Formation, member 1</edomv>
+            <edomvd>Multiple definitions. I-1802-A: Widespread in Chryse and Amazonis Planitia. Mare-type (winkle) ridges common. Type area: lat 30&#194;&#176; N., long 40&#194;&#176;. I-1802-B: Lobate, plains forming deposits that radiate from Elysium Mons and overlie and embay Albor Tholus and Hecates Tholus Formations. Type area: lat 32.5&#194;&#176; N., long 214&#194;&#176;. Interpretation: Volcanic flows and related materials. I-1802-C (north pole): Forms low-lying plains surrounding Alba and Tantalus Fossae.</edomvd>
+            <edomvds>I-1802-A; I-1802-B; I-1802-C</edomvds>
+          </edom>
+          <edom>
+            <edomv>Arcadia Formation, member 2</edomv>
+            <edomvd>Underlies members 3, 4, and 5 in Arcadia Planitia. Includes many small (&lt;10-km-diameter) structures resembling volcanoes and cinder cones. Curved concentric ridges visible on surfaces of flows. Type area: lat 45&#194;&#176; N., long 155&#194;&#176;.</edomvd>
+            <edomvds>I-1802-A</edomvds>
+          </edom>
+          <edom>
+            <edomv>Arcadia Formation, member 3</edomv>
+            <edomvd>Multiple definitions. I-1802-A: Forms smooth plains west of Olympus Mons aureoles; embays both the aureoles and fractured terra of Acheron Fossae. Flow fronts visible in places. Type area: lat 15&#194;&#176; N., long 155&#194;&#176;. I-1802-B: In and north of Arcadia Planitia along east margin of map area. Flow fronts visible in places. Type area: lat 15&#194;&#176; N., long 155&#194;&#176; (Scott and Tanaka 1986). I-1802-C (north pole): Forms isolated patches along edge of map area between long 170&#194;&#176; and 180&#194;&#176;.</edomvd>
+            <edomvds>I-1802-A; I-1802-B; I-1802-C</edomvds>
+          </edom>
+          <edom>
+            <edomv>Arcadia Formation, member 4</edomv>
+            <edomvd>Multiple defintions. I-1802-A: In Arcadia Planitia; underlies member 5 and has similar appearance; one other occurrence in channel system of Chryse Planitia. Type area: lat 45&#194;&#176; N., long 175&#194;&#176;. I-1802-B: In Arcadia Planitia; overlies member 3. Type area: lat 45&#194;&#176; N., long 175&#194;&#176; (Scott and Tanaka, 1986).</edomvd>
+            <edomvds>I-1802-A; I-1802-B</edomvds>
+          </edom>
+          <edom>
+            <edomv>Arcadia Formation, member 5</edomv>
+            <edomvd>Relatively small areal extent. Dark, fresh-appearing flows; few superposed impact craters. Type area: lat 47&#194;&#176; N., long 30&#194;&#176;.</edomvd>
+            <edomvds>I-1802-A</edomvds>
+          </edom>
+          <edom>
+            <edomv>censcentic dune material</edomv>
+            <edomvd>Forms individual and linked crescentic dunes; individual dunes as large as several kilometers across. Occurs along most of edge of Planum Boreum. Interpretation: Active barchan dunes made up of sand-size particles consisting of mineral grains or dust and ice aggregates. Occurrence indicates areas of moderate sand accumulation or erosion.</edomvd>
+            <edomvds>I-1802-C (north pole)</edomvds>
+          </edom>
+          <edom>
+            <edomv>Ceraunius Fossae Formation</edomv>
+            <edomvd>A series of overlapping flows whose surfaces are relatively smooth and even toned to mottled and streaked; trends northeast across older fractured material (unit Nf) in Ceraunius Fossae; channels with levees occur in places. Type area: lat 23&#194;&#176; N., long 115&#194;&#176;. Interpretation: Lava flows, most of which originated from fissures.</edomvd>
+            <edomvds>I-1802-A</edomvds>
+          </edom>
+          <edom>
+            <edomv>Dora Argentea Formation, lower member</edomv>
+            <edomvd>Similar to upper member but more degraded; forms mostly smooth pitted plains around cavi. Type area: plains surrounding Angusti and Sisyphi cavi. Interpretation: Eolian mantle or lava flows originating from local fratures and possible volcano at Sisyphi Cavi. Highly degraded by cavi formation, perhaps facilitated by removal of underlying ground ice.</edomvd>
+            <edomvds>I-1802-C (south pole)</edomvds>
+          </edom>
+          <edom>
+            <edomv>Dorsa Argentea Formation, upper member</edomv>
+            <edomvd>Deposits generally broad and smooth, lightly pitted in places, except at Dorsa Argentea, where deposits have sinuous, braided, kilometer-wide ridges as long as 150 km. Type area: Dorsa Argentea. Interpretation: Lava flows originating from unrecognized fissure vents in vicinity of crater Schmidt, Sisyphi Montes, and other local sources; ridges may be unusual lava-flow features or eskers.</edomvd>
+            <edomvds>I-1802-C (south pole)</edomvds>
+          </edom>
+          <edom>
+            <edomv>dune material</edomv>
+            <edomvd>Multiple definitions. I-1802-B: Patches of barchan and other types of dunes on crater floors. Makes up part of dunes and dune-capped material (unit Ad) of south polar region (Tanaka and Scott, 1987). Type area: lat 48&#194;&#176;S, long 329&#194;&#176;. Interpretation: Sand deposited in areas of low wind strength. I-1802-C (south pole): Thick, circular, steep-sided deposits covered by complex linear dunes and dune chains; dune ridges concentric to edges of deposits. Unit commonly occurs on north sides of crater floors and in low areas near edge of polar layered deposits on Terrae Sirenum and Commeria. Interpretation: Locations and complex shapes suggest dunes composed of ice and fine material derived from polar layered deposits; underlying deposits may consist of polar layered material; deposited in areas of low wind strength</edomvd>
+            <edomvds>I-1802-B; I-1802-C</edomvds>
+          </edom>
+          <edom>
+            <edomv>Elysium Formation, member 1</edomv>
+            <edomvd>Lobate, plains forming deposits that radiate from Elysium Mons and overlie and embay Albor Tholus and Hecates Tholus Formations. Type area: lat 32.5&#194;&#176; N., long 214&#194;&#176;. Interpretation: Volcanic flows and related materials.</edomvd>
+            <edomvds>I-1802-B</edomvds>
+          </edom>
+          <edom>
+            <edomv>Elysium Formation, member 2</edomv>
+            <edomvd>Lobate deposits, with rilles, composing Elysium Mons edifice. Gradational with member 1. Type area: lat 25&#194;&#176; N., long 215&#194;&#176;. Interpretation: Lava flows displaying channels and partly collapsed lava tubes.</edomvd>
+            <edomvds>I-1802-B</edomvds>
+          </edom>
+          <edom>
+            <edomv>Elysium Formation, member 3</edomv>
+            <edomvd>Forms plains having rugged relief, hummocky surfaces, lobate deposits seen at high resolution. Type area: lat 43&#194;&#176; N., long 230&#194;&#176;. Interpretation: Of volcanic origin; flows possibly derived from Elysium Mons, possibly interfingered with member 1. Extensively modified by fluvial, eolian, and periglacial processes.</edomvd>
+            <edomvds>I-1802-B</edomvds>
+          </edom>
+          <edom>
+            <edomv>Elysium Formation, member 4</edomv>
+            <edomvd>Channel material. Type area: lat 36.9&#194;&#176; N., long 220&#194;&#176;. Interpretation: May be derived from lahars of members 1 and 3.</edomvd>
+            <edomvds>I-1802-B</edomvds>
+          </edom>
+          <edom>
+            <edomv>eolian deposits</edomv>
+            <edomvd>Form broad level plains chiefly on aureole deposit of Olympus Mons. Surfaces locally appear rough, deeply etched, and striated in directions of prevailing winds. Type area: lat 15&#194;&#176; N., long 145&#194;&#176;.</edomvd>
+            <edomvds>I-1802-A</edomvds>
+          </edom>
+          <edom>
+            <edomv>etched plains material</edomv>
+            <edomvd>Occurs as patches in Elysium Planitia. Surface characterized by irregular mesas and pits. Type area: lat 15&#194;&#176;N., long 238&#194;&#176;. Interpretation: Plains deposits mantled by eolian material that has subsequently been eroded, possibly by wind.</edomvd>
+            <edomvds>I-1802-B</edomvds>
+          </edom>
+          <edom>
+            <edomv>Hadriaca Patera Formation</edomv>
+            <edomvd>Material of Hadriaca Patera. Consists of smooth floor material in central depression, locally ridged along margin, surrounded by material dissected radially to depression. Type area: lat 31&#194;&#176; S., long 268&#194;&#176;. Interpretation: Material of central-vent volcano formed by multiple eruptions; possible pyroclastic deposits indicate explosive activity.</edomvd>
+            <edomvds>I-1802-B</edomvds>
+          </edom>
+          <edom>
+            <edomv>Hecates Tholus Formation</edomv>
+            <edomvd>Forms Hecates Tholus; hummocky surface cut by many narrow, sinuous channels. Type area: lat 33&#194;&#176; N., long 209&#194;&#176;. Interpretation: Volcanic flows, some emplaced through lava channels.</edomvd>
+            <edomvds>I-1802-B</edomvds>
+          </edom>
+          <edom>
+            <edomv>Hellas Assemblage, basin-rim unit</edomv>
+            <edomvd>Multiple definitions. I-1802-B: Material of the Hellas basin rim. Rugged, mountainous, heavily cratered, and modified by surficial processes, but intermontane patches have little relief. Type locality: lat 52&#194;&#176; S., long 261&#194;&#176;. Interpretation: Impact-generated unit of ancient Martian crust; consists of breccias and interbedded volcanic materials. Features normally associated with basins, such as radial troughs, not seen, probably covered by younger surficial deposits. I-1802-C (south pole): Rugged to mountainous, heavily cratered and resurfaced material of Hellas Basin rim east of Malea Planum. Interpretation: Impact breccia and Interbedded volcanic material of ancient crust; impact structure such as radial troughs not seen, probably degraded and buried by surficial deposits.</edomvd>
+            <edomvds>I-1802-B; I-1802-C</edomvds>
+          </edom>
+          <edom>
+            <edomv>Hellas Assemblage, channeled plains rim unit</edomv>
+            <edomvd>Plains material on east rim of Hellas basin characterized by narrow, sinuous channels and slight to moderate relief; includes widespread mesas having irregular margins and a few small knobs. Appear to fill some craters. Type area: lat 43&#194;&#176; S., long 264&#194;&#176;. Interpretation: Mantle of volcanic or eolian deposits eroded possibly by a combination of fluvial and eolian processes. Channels may be fluvial or volcanic.</edomvd>
+            <edomvds>I-1802-B</edomvds>
+          </edom>
+          <edom>
+            <edomv>Hellas Assemblage, dissected floor unit</edomv>
+            <edomvd>Smooth, rolling-plains material that has been deeply dissected to produce local rugged relief. Occurs in central part of Hellas Planitia. Type area: lat 40&#194;&#176; S., long 289&#194;&#176;. Interpretation: Sedimentary deposits modified by wind and minor fluvial activity..</edomvd>
+            <edomvds>I-1802-B</edomvds>
+          </edom>
+          <edom>
+            <edomv>Hellas Assemblage, knobby plains floor unit</edomv>
+            <edomvd>Floor material characterized by low knobs a few kilometers across. Type locality: lat 35&#194;&#176;S., long 295&#194;&#176;. Interpretation: Possibly remnants of mantle that has been differentially eroded; knobs may be small cinder cones.</edomvd>
+            <edomvds>I-1802-B</edomvds>
+          </edom>
+          <edom>
+            <edomv>Hellas Assemblage, lineated floor unit</edomv>
+            <edomvd>Smooth plains material characterized by straight and curvilinear lineaments; one occurrence mapped. Type area: 34&#194;&#176; S., long 295&#194;&#176;. Interpretation: Possible mantle modified by local tectonic processes.</edomvd>
+            <edomvds>I-1802-B</edomvds>
+          </edom>
+          <edom>
+            <edomv>Hellas Assemblage, reticulate floor unit</edomv>
+            <edomvd>Plains material characterized by reticulate pattern of ridges; one occurrence mapped. Type area: lat 36&#194;&#176; S., long 301.5&#194;&#176;. Interpretation: Plains material whose high-standing remnants results from differential erosion.</edomvd>
+            <edomvds>I-1802-B</edomvds>
+          </edom>
+          <edom>
+            <edomv>Hellas Assemblage, ridged plains floor unit</edomv>
+            <edomvd>Forms rolling smooth plains having sinuous to linear mare-type (wrinkle) ridges; occupies outermost Hellas Planitia as discontinuous concentric band. Type locality: lat 50&#194;&#176; S., long 280&#194;&#176;..</edomvd>
+            <edomvds>I-1802-B</edomvds>
+          </edom>
+          <edom>
+            <edomv>Hellas Assemblage, rugged floor unit</edomv>
+            <edomvd>Forms undulating terrain of rugged relief on a kilometer scale in western Hellas Planitia; one occurrence mapped. Type area: lat 42&#194;&#176; S., long 310&#194;&#176;. Interpretation: Eroded mantle of possible eolian origin overlying ridged plains material (unti Hr).</edomvd>
+            <edomvds>I-1802-B</edomvds>
+          </edom>
+          <edom>
+            <edomv>highly-deformed terrain materials, basement complex</edomv>
+            <edomvd>Undifferentiated material characterized by highly complicated structure and prominent relief. Most common in Claritas and Mareotis Fossae areas. Type area: lat 28&#194;&#176; S., long 100&#194;&#176;.</edomvd>
+            <edomvds>I-1802-A</edomvds>
+          </edom>
+          <edom>
+            <edomv>highly-deformed terrain materials, older fractured material</edomv>
+            <edomvd>Similar to younger fractured material but widespread, has greater relief, is more highly deformed, and faults are more complexly oriented; impact-crater outlines largely destroyed. Type area: lat 20&#194;&#176; S., long 109&#194;&#176;.</edomvd>
+            <edomvds>I-1802-A</edomvds>
+          </edom>
+          <edom>
+            <edomv>highly-deformed terrain materials, younger fractured material</edomv>
+            <edomvd>Occurs mostly around Valles Marineris and Syria and Sinai Plana and northwest of Pavonis Mons. Forms relatively smooth, raised surfaces of moderate relief with fractures, grabens, and collapse depressions. Overlies other highly deformed terrain materials but is embayed and partly covered by Syria Planum Formation and other younger rock units. Type area: lat 5&#194;&#176; S., long 103&#194;&#176;.</edomvd>
+            <edomvds>I-1802-A</edomvds>
+          </edom>
+          <edom>
+            <edomv>impact crater material, partly buried</edomv>
+            <edomvd>Multiple definitions. I-1802-A: Symbol "c" denotes crater-rim and ejecta material; yellow if superposed, brown if partly buried. May include rim crest (hatchured), central ring (inner circular features, also hatchured), and central peak. May also include secondary craters outside crater aprons. Symbol "s" and orange color denote smooth floor; floor material of diverse origins, may be eolian or volcanic fill. Not mapped are materials of superposed craters less than about 100 km across, rims of partly buried craters less than about 150 km across, and smooth crater floors less than about 30 km across. I-1802-B: Yellow indicates materials of superposed crater greater than about 100 km across; brown indicates materials of partly buried craters greater than about 150 km across. May include rim crest (hatchured), central ring (inner circular feature, also hatchured), and central peak. Hatchures also denote impact-basin rims. Symbol "c" denotes crater-rim and ejecta material. Symbol "s" and orange color denote smooth floor material; within mapped crater material, only patches large than 30 km across are shown; elsewhere, only patches large than about 80 km cross are shown. Linear dot pattern denotes secondary craters out crater aprons. Interpretation: Units resulting from impact cratering, but smooth-floor material may be of volcanic, eolian, or fluvial origin. I-1802-C: Yellow if superposed, brown if partly buried. May include rim crest (hatchured), central peak, smooth floor (symbol s). Symbol c denotes crater-rim and ejecta material. Material of impact crates less than about 100 km across not mapped.</edomvd>
+            <edomvds>I-1802-A; I-1802-B; I-1802-C</edomvds>
+          </edom>
+          <edom>
+            <edomv>impact crater material, smooth floor</edomv>
+            <edomvd>Multiple definitions. I-1802-A: Symbol "c" denotes crater-rim and ejecta material; yellow if superposed, brown if partly buried. May include rim crest (hatchured), central ring (inner circular features, also hatchured), and central peak. May also include secondary craters outside crater aprons. Symbol "s" and orange color denote smooth floor; floor material of diverse origins, may be eolian or volcanic fill. Not mapped are materials of superposed craters less than about 100 km across, rims of partly buried craters less than about 150 km across, and smooth crater floors less than about 30 km across. I-1802-B: Yellow indicates materials of superposed crater greater than about 100 km across; brown indicates materials of partly buried craters greater than about 150 km across. May include rim crest (hatchured), central ring (inner circular feature, also hatchured), and central peak. Hatchures also denote impact-basin rims. Symbol "c" denotes crater-rim and ejecta material. Symbol "s" and orange color denote smooth floor material; within mapped crater material, only patches large than 30 km across are shown; elsewhere, only patches large than about 80 km cross are shown. Linear dot pattern denotes secondary craters out crater aprons. Interpretation: Units resulting from impact cratering, but smooth-floor material may be of volcanic, eolian, or fluvial origin. I-1802-C: Yellow if superposed, brown if partly buried. May include rim crest (hatchured), central peak, smooth floor (symbol s). Symbol c denotes crater-rim and ejecta material. Material of impact crates less than about 100 km across not mapped.</edomvd>
+            <edomvds>I-1802-A; I-1802-B; I-1802-C</edomvds>
+          </edom>
+          <edom>
+            <edomv>impact crater material, superposed</edomv>
+            <edomvd>Multiple definitions. I-1802-A: Symbol "c" denotes crater-rim and ejecta material; yellow if superposed, brown if partly buried. May include rim crest (hatchured), central ring (inner circular features, also hatchured), and central peak. May also include secondary craters outside crater aprons. Symbol "s" and orange color denote smooth floor; floor material of diverse origins, may be eolian or volcanic fill. Not mapped are materials of superposed craters less than about 100 km across, rims of partly buried craters less than about 150 km across, and smooth crater floors less than about 30 km across. I-1802-B: Yellow indicates materials of superposed crater greater than about 100 km across; brown indicates materials of partly buried craters greater than about 150 km across. May include rim crest (hatchured), central ring (inner circular feature, also hatchured), and central peak. Hatchures also denote impact-basin rims. Symbol "c" denotes crater-rim and ejecta material. Symbol "s" and orange color denote smooth floor material; within mapped crater material, only patches large than 30 km across are shown; elsewhere, only patches large than about 80 km cross are shown. Linear dot pattern denotes secondary craters out crater aprons. Interpretation: Units resulting from impact cratering, but smooth-floor material may be of volcanic, eolian, or fluvial origin. I-1802-C: Yellow if superposed, brown if partly buried. May include rim crest (hatchured), central peak, smooth floor (symbol s). Symbol c denotes crater-rim and ejecta material. Material of impact crates less than about 100 km across not mapped.</edomvd>
+            <edomvds>I-1802-A; I-1802-B; I-1802-C</edomvds>
+          </edom>
+          <edom>
+            <edomv>knobby plains material</edomv>
+            <edomvd>Extensive in northern lowlands where it forms moderately to lightly cratered, generally smooth plains; several isolated occurrences in cratered highlands. Conical hills or knobs occur at irregular intervals; mare-type (wrinkle) ridges locally present. Where adjacent to undivided material (unit HNu), units are gradational, but knobs in knobby plains unit are smaller and psaced farther apart. Type area: lat 22&#194;&#176;N, long 263&#194;&#176;. Interpretation: Probably of diverse origins but appears to have formed mainly by erosion of older uits. Knobs are probably erosional remnants but some may be volcanic. Intervening plains m ay be erosional surfaces or may consist of eolian, mass-wasted, or volcanic materials.</edomvd>
+            <edomvds>I-1802-B</edomvds>
+          </edom>
+          <edom>
+            <edomv>linear dune material</edomv>
+            <edomvd>Forms linear, ripplelike patterns of dunes in north polar erg in Arion Planitia and near mouth of Chasma Boreum; wavelength of ripples about 1 to 2 km. Interpretation: Forms relatively stable, mature dune field; dune orientations controlled by oscillating wind directions. Presence indicates regime of large sand accumulations in topographic lows.</edomvd>
+            <edomvds>I-1802-C (north pole)</edomvds>
+          </edom>
+          <edom>
+            <edomv>mantle material</edomv>
+            <edomvd>Multiple definitions. I-1802-A (north pole): Smooth to hummocky deposit, as much as several hundred meters thick; surrounds most of Planum Boreale; extent of unit may vary seasonally. Mapped only north of lat 66&#194;&#176; N., where thick enough to obscure features characteristic of Vastitas Borealis Formation. Interpretation: Eolian deposits derived from seasonal frost and dust accumulation and perhaps erosion of polar layered deposits, polar dunes, and subpolar plains materials. I-1802-C (south pole): Thin, smooth, sparsely cratered material in pits of Angusti and Sisyphi Cavi. Interpretation: Cover of dust deposited by seasonal dust storms and perhaps material eroded from pit walls by mass wasting.</edomvd>
+            <edomvds>I-1802-C (north and south pole)</edomvds>
+          </edom>
+          <edom>
+            <edomv>Medusae Fossae Formation, lower member</edomv>
+            <edomvd>Multiple definitions. I-1802-A: Two small occurrences in western map area. Surfaces smooth to rough and highly eroded, darker than those of other members. Type area: lat 0&#194;&#176;N., long 174&#194;&#176;. Interpretation: Lava flows interbedded with pyroclastic rocks or eolian deposits. I-1802-B: Surfaces smooth to rough and highly eroded, darker than those of other members. One area centered at lat 1&#194;&#176; S., long 182&#194;&#176; contains long, broad troughs. Type area: lat 0&#194;&#176;N., long 174&#194;&#176; (Scott and Tanaka, 1986). Interpretation: Lava flows interbedded with eolian or pyroclastic deposits, in places heavily eroded.</edomvd>
+            <edomvds>I-1802-A; I-1802-B</edomvds>
+          </edom>
+          <edom>
+            <edomv>Medusae Fossae Formation, middle member</edomv>
+            <edomvd>Multiple definitions. I-1802-A: Similar to upper member but in places (as in Memnonia Sulci) surface appears rougher, more deeply eroded; cut by scarps of Gordii Dorsum and transected in type area by intersecting joint sets. Type area lat 10&#194;&#176; N., long 160&#194;&#176;. Interpretation: Welded to nonwelded pyroclastic rocks or layers of relatively soft to indurated eolian deposits. I-1802-B: Similar to upper member but in places surface is more rugged and eroded. Type area: 10&#194;&#176; N., long 160&#194;&#176; (Scott and Tanaka, 1986). Interpretation: Poorly to moderately indurated eolian or pyroclastic deposits; wind eroded particularly along margins.</edomvd>
+            <edomvds>I-1802-A; I-1802-B</edomvds>
+          </edom>
+          <edom>
+            <edomv>Medusae Fossae Formation, upper member</edomv>
+            <edomvd>Multiple definitions. I-1802-A: Discontinuous but widespread deposits extend from south of Olympus Mons westward across Amazonis Sulci to map boundary. Smooth, flat to rolling, light-colored surfaces; sculpted into ridges and grooves in places (as in Medusae Fossae); broadly curved margins, locally serrated. Type area: lat 0&#194;&#176; N., long 160&#194;&#176;. Interpretation: Nonwelded ash-flow or ash-fall tuff or thick accumulation of eolian debris; wind eroded, particularly along margins. I-1802-B: Surface smooth, flat to rolling, light in color; sculpted into ridges and grooves in places; broadly curved margins, locally erodied into serrated scarps. Type area: lat 0&#194;&#176; N., long 160&#194;&#176; (Scott and Tanaka, 1986). Interpretation: Thick deposits of eolian sediments or volcanic pyroclastic deposits; wind eroded, particularly along margins, to form yardangs.</edomvd>
+            <edomvds>I-1802-A; I-1802-B</edomvds>
+          </edom>
+          <edom>
+            <edomv>mountain, relative age unknown</edomv>
+            <edomvd>mountain, relative age unknown</edomvd>
+            <edomvds>I-1802-A; I-1802-C</edomvds>
+          </edom>
+          <edom>
+            <edomv>mountainous material</edomv>
+            <edomvd>Forms large, very rugged, isolated blocks. Scattered occurrences mostly around Hellas and Isidis basins. Equivalent in part to mountain material (mapped as "m") in south polar regions (Tanaka and Scott, 1987). Interpretation: Most ancient crustal material uplifted during formation of impact basins.</edomvd>
+            <edomvds>I-1802-B</edomvds>
+          </edom>
+          <edom>
+            <edomv>older channel material</edomv>
+            <edomvd>Multiple definitions. I-1802-A: Mainly between Valles Marineris and Chryse Planitia, also in other highland locations. Channel deposits longitudinally striated; teardrop-shaped channel bars large and well developed. Type area: lat 25&#194;&#176; N., long 60&#194;&#176;. I-1802-B: Occurs mainly along boundary of northern highlands of Deuteronilus Mensae but also in other highland locations, inclusing margin of Hellas basin. Channels generally steep sided, smooth floored, and abruptly terminated on up-slope end. Interpretation: May be mixture of channels deposits and mass-wasted materials; channels may have formed by sapping.</edomvd>
+            <edomvds>I-1802-A; I-1802-B</edomvds>
+          </edom>
+          <edom>
+            <edomv>older chaotic material</edomv>
+            <edomvd>Multiple definitions. I-1802-A: Mainly between Valles Marineris and Chryse Planitia, also in other highland locations. Chaotic material occurs at source areas and along margins of channels and within some chasmata and craters; generally a mosaic of highland blocks in depressions. Type areas: lat 5&#194;&#176; S., long 27&#194;&#176;. I-1802-B: Forms semicircular patches of closely spaced knobs of similar heights; mapped near west map border just south of lat 40&#194;&#176; N., and near east border. Type area: lat 5&#194;&#176; S., long 27&#194;&#176; (Scott and Tanaka, 1986). Interpretation: Erosional remnants; not associated with channels within map area.</edomvd>
+            <edomvds>I-1802-A; I-1802-B</edomvds>
+          </edom>
+          <edom>
+            <edomv>older flood-plain material</edomv>
+            <edomvd>Multiple definitions. I-1802-A: Mainly between Valles Marineris and Chryse Planitia, also in other highland locations. Flood-plain material occurs adjacent to channels and in lowland plains below channel mouths; smooth and featureless. I-1802-C: Smooth, longitudinally grooved deposits within two long sinuous channels: one channel winds through Charitum Montes and is overlain by ridged plains material in Argyre Planitia; other channel runs along border of Malea Planum and Promethei Terra. Interpretation: Channels cut by flowing water or ground-ice sapping; deposits may include alluvial material, glacial till, or debris flows.</edomvd>
+            <edomvds>I-1802-A; I-1802-B</edomvds>
+          </edom>
+          <edom>
+            <edomv>Olympus Mons Formation, aureole member 1</edomv>
+            <edomvd>Forms widespread basal aureole; overlaps younger and older fractured materials (units Hf and Nf). Resembles younger aureole members but smoother and more degraded by wind. Type area: lat 15&#194;&#176; N., long 147&#194;&#176;.</edomvd>
+            <edomvds>I-1802-A</edomvds>
+          </edom>
+          <edom>
+            <edomv>Olympus Mons Formation, aureole member 2</edomv>
+            <edomvd>Forms three lobes; similar to members 3 and 4; underlies member 3 in relatively small area on southwest side of Olympus Mons; on east side occurs as islands surrounded by plains member. Type area: lat 14&#194;&#176; N., long 143&#194;&#176;.</edomvd>
+            <edomvds>I-1802-A</edomvds>
+          </edom>
+          <edom>
+            <edomv>Olympus Mons Formation, aureole member 3</edomv>
+            <edomvd>Forms two lobes; similar to but underlying member 4. Type are: lat 28&#194;&#176; N., long 134&#194;&#176;.</edomvd>
+            <edomvds>I-1802-A</edomvds>
+          </edom>
+          <edom>
+            <edomv>Olympus Mons Formation, aureole member 4</edomv>
+            <edomvd>Uppermost of a series of aureole units around Olympus Mons that formed prior to or contemporaneously with the volcano's basal scarp. Forms broad, semicircular, flat lobes; corrugated, cut by numerous faults that forms scarps and deep troughs and grabens. Type area: lat 25&#194;&#176; N., long 145&#194;&#176;.</edomvd>
+            <edomvds>I-1802-A</edomvds>
+          </edom>
+          <edom>
+            <edomv>Olympus Mons Formation, plains member</edomv>
+            <edomvd>Embays basal scarp of Olympus Mons and overlaps shield member. Consists of many overlapping smooth lava flows ranging in shape from narrow tongues to broad lobes; flows appear to be extruded from faults and fissures below scarp on southeast side of Olympus Mons. Type area: lat 20&#194;&#176; M., long 125&#194;&#176;.</edomvd>
+            <edomvds>I-1802-A</edomvds>
+          </edom>
+          <edom>
+            <edomv>Olympus Mons Formation, shield member</edomv>
+            <edomvd>Lava flows form complex, finely textured, interfingering tongues and lobes. Channels and levees extend down flanks of Olympus Mons and across prominent basal scarp on north, east, and south sides; collapse pits common. Type area: lat 15&#194;&#176; N., long 135&#194;&#176;.</edomvd>
+            <edomvds>I-1802-A</edomvds>
+          </edom>
+          <edom>
+            <edomv>plateau sequence, cratered unit</edomv>
+            <edomvd>Multiple definitions. I-1802-A: Most widespread unit in southern highlands; locally extensive in northern plains. Highly cratered, uneven surface of moderate relief, fractures, faults, and small channels common. Type area: lat 45&#194;&#176; S., long 148&#194;&#176;. Interpretation: Materials formed during a period of high impact flux; probably a mixture of lava flows, pyroclastic material, and impact breccia. I-1802-B: Widespread in southern highlands; highly cratered, uneven surfaces of generally moderate, locally high relief; fractures and channels common. Type area: lat 45&#194;&#176; S., long 148&#194;&#176; (Scott and Tanaka, 1986). Interpretation: Materials formed during a period of high impact flux; probably a mixture of volcanic materials, erosional products, and impact breccia. I-1802-C: Most widespread highland rock unit; high density of craters &gt;10 km in diameter, rugged surface, moderate relief; sparse distribution of channels, fractures, and small ridges. Interpretation: Materials formed during period of high impact flux; probably a mixture of lava flows, pyroclastic material, and impact breccia.</edomvd>
+            <edomvds>I-1802-A; I-1802-B; I-1802-C</edomvds>
+          </edom>
+          <edom>
+            <edomv>plateau sequence, dissected unit</edomv>
+            <edomvd>Multiple definitions. I-1802-A: Similar in occurrence and appearance to cratered unit but more highly dissected by small channels and troughs. Type area: lat 45&#194;&#176;S., long 70&#194;&#176;. Interpretation: Origin same as that of cratered unit but material more eroded by fluvial processes. I-1802-B: Forms highland plains characterized by subdued and partly buried crater rims; fills some crater floors; flow fronts rare. Type area: 28&#194;&#176; S., long 162&#194;&#176; (Scott and Tanaka, 1986). Interpretation: Thin lava flows and sedimentary deposits that partly bury underlying rocks. I-1802-C: Most widespread highland rock unit; high density of craters &gt;10 km in diameter, rugged surface, moderate relief; sparse distribution of channels, fractures, and small ridges. Interpretation: Materials formed during period of high impact flux; probably a mixture of lava flows, pyroclastic material, and impact breccia.</edomvd>
+            <edomvds>I-1802-A; I-1802-B; I-1802-C</edomvds>
+          </edom>
+          <edom>
+            <edomv>plateau sequence, etched unit</edomv>
+            <edomvd>Multiple definitions. I-1802-A: Similar to cratered unit but deeply furrowed by sinuous, intersecting, curved to flat-bottomed grooves that produce an etched or sculpted surface. Type area: lat 45&#194;&#176; N., long 55&#194;&#176; (Scott and Tanaka, 1986). Interpretation: Cratered unit that has been degraded by wind erosion, decay and collapse of ground ice, and minor fluvial processes. I-1802-B: Similar to cratered unit but deeply furrowed by sinuous, intersecting, curved to flat-bottomed grooves, producing an etched or sculpted surface; commonly forms small mesas having irregular margins; craters and other depressions filled with smooth deposits. Occurs in several places on cratered plateaus, but is most extensive and well developed northwest of Syrtis Major Planum. Type area: lat 45&#194;&#176; N., long 55&#194;&#176; (Scott and Tanaka, 1986). Interpretation: Cratered unit that has been partly mantled by deposits of possible eolian origin and dissected by eolian erosion, decay and collapse of ground ice, and minor fluvial activity. I-1802-C: Similar to cratered unit, but marked by flat-bottomed troughs and knobs several kilometers in size or larger; occurs in patches in Noachis Terra and Malea Planum. Interpretation: Cratered unit degraded by wind erosion and removal of ground ice, perhaps induced by local volcanic heating.</edomvd>
+            <edomvds>I-1802-A; I-1802-B; I-1802-C</edomvds>
+          </edom>
+          <edom>
+            <edomv>plateau sequence, hilly unit</edomv>
+            <edomvd>Multiple definitions. I-1802-A: Rough, hilly, fractured material that resembles in part basement complex (unit Nb) and older fractured material (Nf), but relief is gentler and faulting less intense. Type area: lat 12&#194;&#176; S., long 174&#194;&#176; and Nereidum and Charitum Montes surrounding Argye Planitia. Interpretation: Ancient highland volcanic rocks and impact breccia uplifted by tectonism and impact-basin formation during period of heavy bombardment. I-1802-B: Rough, hilly, fractured material of moderately high relief. Type area: lat 12&#194;&#176; S., long 174&#194;&#176; (Scott and Tanaka, 1986). Forms complete or partial rims of Isidis and some other ancient basins. Interpretation: Ancient highland rocks and impact breccia generated during period of heavy bombardment. I-1802-C: Hilly facies of cratered unit, but has higher relief due to pronounced crater rims, massifs, and fault scarps; forms rim or Argyre impact basin (Charitum Montes) and other hilly terrain; underlies cratered unit. Interpretation: Mostly rim material of Argyre impact basin, probably uplifted crustal material and impact breccia; other occurrences may be volcanic, tectonic, or impact related mountains.</edomvd>
+            <edomvds>I-1802-A; I-1802-B; I-1802-C</edomvds>
+          </edom>
+          <edom>
+            <edomv>plateau sequence, mottled smooth plains unit</edomv>
+            <edomvd>Same as smooth unit but has mottled albedo patterns. Global occurrences only in southwestern part of map area. Type area: lat 38&#194;&#176; S., long 358&#194;&#176;. Interpretation: Same as smooth unit except that wind-sorted sediments have produced mottled appearance.</edomvd>
+            <edomvds>I-1802-B</edomvds>
+          </edom>
+          <edom>
+            <edomv>plateau sequence, ridged unit</edomv>
+            <edomvd>Multiple definitions. I-1802-A: Resembles ridged plains material (unit Hr) where units adjoin, but ridges generally larger and farther apart, intervening areas rougher and more densely cratered. Type area: lat 15&#194;&#176; S., long 163&#194;&#176;. Interpretation: Most ridges due to normal faulting but others may be volcanic constructs or compressional features. I-1802-B: Resembles and is locally gradational with ridged plains material (unit Hr) where units adjoin, but ridges generally larger and farther apart, intervening areas rougher and more densely cratered. Type area: lat 15&#194;&#176; S., long 163&#194;&#176; (Scott and Tanaka, 1986). Interpretation: Flood-lava flows; ridges due to faulting, folding, or volcanic processes. I-1802-C: Forms rough, moderately to heavily cratered terrain containing wide, long ridges and scarps; most occurrences form wide swath along south edge of Malea Planum and Promethei Terra. Interpretation: Probably Interbedded volcanic rocks and impact breccia; ridges formed by volcanism or folding and normal faulting, perhaps along pre-existing structures related to Hellas impact basin and other ancient crustal structures.</edomvd>
+            <edomvds>I-1802-A; I-1802-B; I-1802-C</edomvds>
+          </edom>
+          <edom>
+            <edomv>plateau sequence, smooth unit</edomv>
+            <edomvd>Multiple definitions. I-1802-A: Forms large areas of flat, relatively featureless plains in southern highlands; locally embays other units of plateau sequence. Faults and flow fronts rare. Type area: lat 43&#194;&#176; S., long 105&#194;&#176;. Interpretation: Thick interbedded lava flows and eolian deposits that bury most of underlying rocks. I-1802-B: Forms flat, relatively featureless plains in southern highlands; locally embays other units of plateau sequence. Faults and flow fronts rare. Type area: lat 43&#194;&#176; S., long 105&#194;&#176; (Scott and Tanaka, 1986). Interpretation: Interbedded lava flows and sedimentary deposits of eolian or fluvial origin that bury most of underlying rocks. I-1802-C: On Argyre Planitia and within intercrater areas of plateau sequence material, forms flat, moderately cratered, smooth plains; embays all adjacent units; flow fronts and wrinkle ridges are rare. On Malea Planum, forms irregular surfaces superposed on ridged plains material; eroded into knobs along edges; preserved in broad low areas or below superposed crater ejecta (as at lat 58&#194;&#176; S., long 327&#194;&#176;). Interpretation: Lava flows from local sources or eolian deposits, except perhaps on Malea Planum, where may be remnants of ice-rich mantle material.</edomvd>
+            <edomvds>I-1802-A; I-1802-B; I-1802-C</edomvds>
+          </edom>
+          <edom>
+            <edomv>plateau sequence, subdued cratered unit</edomv>
+            <edomvd>Mutliple definitions. I-1802-A: Forms plains (mostly in highlands) marked by subdued and partly buried old crater rims. Flow fronts rare. Type area: 28&#194;&#176; S., long 162&#194;&#176;. Interpretation: Thin interbedded lava flows and eolian deposits that partly bury underlying rocks. I-1802-B: Forms highland plains characterized by subdued and partly buried crater rims; fills some crater floors; flow fronts rare. Type area: 28&#194;&#176; S., long 162&#194;&#176; (Scott and Tanaka, 1986). Interpretation: Thin lava flows and sedimentary deposits that partly bury underlying rocks. I-1802-C: Forms moderately rough, uneven plains in broad, low-lying intercrater and intracrater regions; high density of craters 1 to 10 km across; large subdued crater rims common; small wrinkle ridges in places; flow fronts rare. Interpretation: Thin mantle of Interbedded lava flows and eolian deposits.</edomvd>
+            <edomvds>I-1802-A; I-1802-B; I-1802-C</edomvds>
+          </edom>
+          <edom>
+            <edomv>polar ice deposits</edomv>
+            <edomvd>Multiple definitions. I-1802-C (north pole): Residual polar cap of high-albedo material images in late spring and summer (Ls = 92 to 154), 1977; occurs on high surfaces of Planum Boreum, in irregular patches north of lat 70&#194;&#176; N., between longs 10&#194;&#176; and 270&#194;&#176;, and on crater floors. Interpretation: Photometry and infrared thermal mapping indicate water-ice and dust composition (Kieffer and others, 1976). Covered by CO2 frost that extends continuously as far south as lat 65&#194;&#176; N. during winter. Some outlier deposits may be wind-streaked material composed of ice or frost. I-1802-C (south pole): Form residual high-albedo features on Martian southern summers (Ls = 348), offset from axial-pole position about 200 km south at long 45&#194;&#176; surface striated. Interpretation: Water-ice cap, usually covered by CO2 because of colder temperature relative to north pole; striations due to relatively strong .</edomvd>
+            <edomvds>I-1802-C (north and south pole)</edomvds>
+          </edom>
+          <edom>
+            <edomv>polar layered deposits</edomv>
+            <edomvd>I-1802-C (north pole): Form Planum Boreum and nearby mesas south of Chasma Boreale; smooth, uncratered; moderate albedo; Planum Boreum cut by troughs in swirl pattern; troughs expose alternating light and dark layers tens of meters thick, some unconformable; total thickness estimated at 4 to 6 km (Dzurisin and Blasius, 1975) or 1 to 2 km (Wu and others, in press). Composite age of deposits uncertain. Interpretation: deposits of mixed ice and dust. Lihgt and dark layering caused by variation in dust-to-ice ratio; reflects long-term climate changes. Unconformities attributed to alternating periods of erosion and deposition that vary from place to place or to glacial stages. I-1802-C (south pole): Smooth, sparsely cratered, moderate-albedo material that forms Planum Australe; in paces characterized by alternating light and dark layers tens of meters thick; complete sequence as much as 3 km thick. Cut by curvilinear to irregular scarps and troughs, which include Chasma Australe; underlying terrain at base of troughs unscarred. Interpretation: Ice and dust deposits; albedo layering related to ice content that, in turn, depends on climate. Some scarps and troughs carved by prevailing wind patterns; others possibly formed by glacial surge. Lack of etching in underlying terrain indicates relative softness of layered material.</edomvd>
+            <edomvds>I-1802-C (north and south pole)</edomvds>
+          </edom>
+          <edom>
+            <edomv>ridged plains material</edomv>
+            <edomvd>Multiple definitions. I-1802-A: Major occurrences cover an area of about 4,000,000 km2 extending from Solis Planum to Tempe Fossae. Characterized by broad planar surfaces with flow lobes visible in places and long, parallel, linear to sinuous mare-type (wrinkle) ridges; ridges about 30 to 70 km apart. Type area: Lunae Planum, lat 10&#194;&#176; N., long 65&#194;&#176;. Interpretation: Extensive flows of low viscosity lava erupted from many sources at high rates; ridges either volcanic constructs or compressional features.. I-1802-B: Characterized by broad planar surfaces, rare lobate deposits, and long, parallel, linear to sinuous mare-type (wrinkle) ridges about 30 to 70 km apart. Forms plains within and outside craters throughout plateau area and lowland plains north of Orcus Patera (near eat map border). Locally gradational with ride plateau material (unit Nplr) where units adjoin. Type area: Lunae Planum, lat 10&#194;&#176; N., long 65&#194;&#176; (Scott and Tanaka, 1986). Interpretation: extensive lava flows erupted with low effective viscosity from many sources at high rates; ridges either volcanic constructs or compressional features. I-1802-C: Forms broad, planar, moderately cratered surfaces marked by long, linear to sinuous ridges resembling those on lunar maria; ridges commonly several kilometers wide and tens of kilometers long. Covers most of Malea Planum and many intercrater regions, particularly in Terrae Sirenum and Cimmeria; embays all adjacent units except for some young smooth material. Interpretation: Extensive flows of low-viscosity lava erupted at high rates from local sources, including fissures and Amphitrites, and Peneus Paterae.</edomvd>
+            <edomvds>I-1802-A; I-1802-B; I-1802-C</edomvds>
+          </edom>
+          <edom>
+            <edomv>slide material</edomv>
+            <edomvd>Multiple definitions. I-1802-A: Three types- (1) (1) In Valles Mariners and other chasmata as rotational slide deposits from canyon walls; surfaces hummocky near crown scarp; distal parts commonly lobate, longitudinally striated, with long runout. Type area: lat 9&#194;&#176; S., long 72&#194;&#176;. Interpretation: Gas- or water-lubricated slides and debris flows. (2) (2) Mostly on northwest flanks of Olympus Mons and largest volcanoes of Tharsis Montes as fanlike corrugated sheets as wide as 600 km that appear to override topographic obstacles without deflection of internal structure; source areas hummocky, contain small hills and circular depressions. Type area: lat 5&#194;&#176; S., long 125&#194;&#176;. Interpretation: Volcanic-debris avalanches resulting from either slope failure of explosive volcanism; alternatively, may be recessional moraines of former local ice caps. (3) (3) Along scarps of Charitum Montes and Mareotis Fossae as smooth, sloping aprons with steep, high edges. No specific type area. Interpretation: Debris aprons produced by mass-wasting and slow, glacierlike flow of ice-rich plateau material. I-1802-B: Smooth to lobate flow material associated with some scarps and crater rims; especially well developed along channel walls in Deuteronilus Mensae region. Forms aprons along scarps and around knobs and mesas; may completely cover channel floors. Primarily equivalent to third type of slide material mapped by Scott and Tanaka (1986). No specific type area. Interpretation: Unconsolidated material, such as debris flows, resulting from mass wasting. I-1802-C: Lobate, high-albedo, striated, and uncratered slope deposits extending 5 to 10 km from massifs in southern Argyre Planitia. Interpretation: Aprons of ice and debris eroded from highland terrain; emplaced by gelifluction, creep, or glacial flow.</edomvd>
+            <edomvds>I-1802-A; I-1802-B; I-1802-C</edomvds>
+          </edom>
+          <edom>
+            <edomv>smooth plains material</edomv>
+            <edomvd>Multiple definitions. I-1802-B: Forms patches and regions of flat, featureless plains; lightly cratered. Type area: lat 9&#194;&#176;N, long 222&#194;&#176;. Interpretation: Probably of diverse origin; many exposures probably consist of eolian deposits. I-1802-C: Forms tow areas of smooth, sparsely cratered plains north of crater Lyot near edge of map area (long 315&#194;&#176; to 340&#194;&#176;) and near knobby, undivided material at long 193&#194;&#176;. Interpretation: Probably of diverse origin, but may primarily consist of eolian deposits.</edomvd>
+            <edomvds>I-1802-B; I-1802-C</edomvds>
+          </edom>
+          <edom>
+            <edomv>Syria Planum Formation, lower member</edomv>
+            <edomvd>Partly encircles crest of topographic high. Consists of both long narrow lava flows and sheet flows that have prominent lobes mottled light and dark; pit craters common. Relatively smooth around Valles Marineris. Covers some fault systems of Claritas Fossae but cut by few others on Noctis Labyrinthus. Flows probably extruded from calderas near summit of Syria Planum and from fissures; gradational with lower member. Boundary with ridges plains material (unit Hr) not clearly defined, placed where member appears to overlap ridges. Type area: lat 15&#194;&#176; S., long 100&#194;&#176;.</edomvd>
+            <edomvds>I-1802-A</edomvds>
+          </edom>
+          <edom>
+            <edomv>Syria Planum Formation, upper member</edomv>
+            <edomvd>Similar to upper member but more highly cratered and faulted. Type area: lat 25&#194;&#176; S., long 90&#194;&#176;.</edomvd>
+            <edomvds>I-1802-A</edomvds>
+          </edom>
+          <edom>
+            <edomv>Syrtis Major Formation</edomv>
+            <edomvd>Plains-forming unit constituting Syrtis Major Planum. Charcterized by many lobate deposits radiating generally from two irregular depressions (Nili Patera, centered at lat 9&#194;&#176; N., long 293&#194;&#176;, and Meroe Patera, centerd at lat 7&#194;&#176; N., 291.5&#194;&#176;); flow fronts and margins clearly recognizable; mare-type ridges trend north-northwest; many light and dark "wind" streaks on plains deposits. Type area: lat 11&#194;&#176; N., 295&#194;&#176;. Interpretation: Lava flows erupted with low effective viscosity from central vents; rheological properties similar to those of basaltic magmas.</edomvd>
+            <edomvds>I-1802-B</edomvds>
+          </edom>
+          <edom>
+            <edomv>tear-drop shaped bar or island</edomv>
+            <edomvd>tear-drop shaped bar or island, age undifferentiated</edomvd>
+            <edomvds>I-1802-A</edomvds>
+          </edom>
+          <edom>
+            <edomv>Tempe Terra Formation, lower member</edomv>
+            <edomvd>Smooth to rough, uneven surfaces; small faults and collapse depressions common. Overlaps hilly and cratered units (units Nplh, Npl1) of plateau sequence but is embayed by upper and middle members of Tempe Terra Formation. Type area: lat 39&#194;&#176; N., long 84&#194;&#176;</edomvd>
+            <edomvds>I-1802-A</edomvds>
+          </edom>
+          <edom>
+            <edomv>Tempe Terra Formation, middle member</edomv>
+            <edomvd>Similar to upper member but faults, fractures, and collapse depressions common. Type area: lat 42&#194;&#176; N., long 80&#194;&#176;.</edomvd>
+            <edomvds>I-1802-A</edomvds>
+          </edom>
+          <edom>
+            <edomv>Tempe Terra Formation, upper member</edomv>
+            <edomvd>Smooth, light-colored, partly mottled material that embays hilly, mountainous, and fractured terrain of highlands; small (&lt;10-km-diameter) shield volcanoes visible in high-resolution pictures; few faults and fractures; embayed by a lower member (unit Ht2) of Tharsis Montes formation and by lower member (unit Hal) of Alba Patera Formation. Type area: lat 36&#194;&#176; N., long 86&#194;&#176;.</edomvd>
+            <edomvds>I-1802-A</edomvds>
+          </edom>
+          <edom>
+            <edomv>Tharsis Montes Formation, member 1</edomv>
+            <edomvd>Scattered outcrops in southern Tharsis regions. Generally forms rough, hummocky surface; mare-type (wrinkle) ridges in places; faults and fractures common locally. Type area: lat 30&#194;&#176; S., long 120&#194;&#176;.</edomvd>
+            <edomvds>I-1802-A</edomvds>
+          </edom>
+          <edom>
+            <edomv>Tharsis Montes Formation, member 2</edomv>
+            <edomvd>Occurs in southern and northeastern parts of Tharsis regions embays highland terrain of Tempe Fossae. Composed of relatively smooth flows having broad frontal lobes; fractures and faults common in places. Type area: lat 33&#194;&#176; S., long 135&#194;&#176;.</edomvd>
+            <edomvds>I-1802-A</edomvds>
+          </edom>
+          <edom>
+            <edomv>Tharsis Montes Formation, member 4</edomv>
+            <edomvd>Exposed mostly northeast and southwest of member 5. Consists of overlapping light flows with dark wind streaks similar to those of member 5; flows elongate on steep upper slopes, broad on gentler lower slopes. High-resolution images show pressure ridges concentric with lobate flow fronts; minor faulting. Type area: lat 15&#194;&#176; S., 135&#194;&#176;</edomvd>
+            <edomvds>I-1802-A</edomvds>
+          </edom>
+          <edom>
+            <edomv>Tharsis Montes Formation, member 6</edomv>
+            <edomvd>Fresh-appearing lava flows form smooth, fan-shaped arrays on flanks of Arsia, Pavonis, and Ascraeus Montes; flows probably originate from fissures along major structural trends. Flanks of these volcanoes exhibit grabens, some concentric. Member also includes most recent fill within central calderas of Tharsis Montes. Type area: lat 5&#194;&#176; S., long 117&#194;&#176;</edomvd>
+            <edomvds>I-1802-A</edomvds>
+          </edom>
+          <edom>
+            <edomv>Tharsis Montes Formation, member 5</edomv>
+            <edomvd>Widespread around Tharsis Montes volcanoes. Overlies parts of channel and flood-plain deposits (units Hch, Hchp) of Kasei Valles; contact with upper member (unit Hsu) of Syria Planum formation northwest of Echus Chasma poorly resolved. At places forms elongate, light-colored flow lobes with abundant dark wind streaks. Cut by few faults. Type area: lat 20&#194;&#176;S., long 120&#194;&#176;</edomvd>
+            <edomvds>I-1802-A</edomvds>
+          </edom>
+          <edom>
+            <edomv>Tyhrrhena Patera Formation</edomv>
+            <edomvd>Material forming Tyrrhena Patera; seen on high-resolution images to consist of several members (Greeley and Spudis, 1981), including a highly dissected basal member. Type locality: lat 22&#194;&#176;S., long 254&#194;&#176;. Interpretation: Volcanic materials erupted serially, including early-stage pyroclastic material and later lava flows</edomvd>
+            <edomvds>I-1802-B</edomvds>
+          </edom>
+          <edom>
+            <edomv>undivided material</edomv>
+            <edomvd>Multiple definitions. I-1802-A: Forms hills and small knobs adjacent to highland lowland boundary scarp that extend almost to north map border. Also forms walls and interior mountains in Valles Marineris and associated canyons and channels, as well as hummocky terrain and scarps along edges of Chryse and Acidalia Planitiae. No specific type area. Interpretation: Erosional remnants and exposures of plateau sequence, highly deformed terrains materials, ancient crater rims, and some other materials that are older than surrounding rock units. I-1802-B: Forms closely spaced, conical hills a few kilometers across whose distribution indicates that they are remnants of nuerous craters. Unit also forms rugged terrain on margins of cratered plateaus and isolated remnants (as west of Orcus Patera near east map border). Gradational with knobby plains material (unit Apk) where units adjoin, but hills are more densely spaced, larger, and occupy more than about 30 percent of area. No specific type area. Interpretation: Most hills are eroded remnants of ancient cratered terrain produced by mass-wasting processes, possible as result of removal of ground ice; some hills may be erosional remnants of intrusive bodies (Greeley and Guest, 1978). Material may include some units of plateau sequence. I-1802-C (north pole): Forms high-standing hills and irregular mesas several to more than 10 km across; largest exposures make up Scandia Colles and rims of large craters nearby. Resembles knobby member of Vastitas Borealis Formation but hills generally larger and more closely spaced. Interpretation: Remnants of ancient highland material projecting above plains; heavily eroded by mass wasting. I-1802-C (south pole): Rough, massive deposits exposed in walls and floors of large, irregular pits as much as a kilometer deep at Angusti and Sisyphi Cavi; forms closely spaced, rounded hills a few kilometers across; graded into etched unit of plateau sequence. Most of unit underlies Dorsa Argentea Formation. Interpretation: Plateau sequence and basement rocks; pitting and degradation caused by removal of ground ice, mass-wasting, and eolian exhumation of poorly consolidated material.</edomvd>
+            <edomvds>I-1802-A; I-1802-B; I-1802-C</edomvds>
+          </edom>
+          <edom>
+            <edomv>Valles Marineris Interior Deposits, floor material</edomv>
+            <edomvd>Occurs along canyon floors as smooth to hummocky material of low relief. No specific type area. Interpretation: Mixture of landslides and debris flows from canyon walls, eolian material, volcanic deposits, and channel and possibly lacustrine deposits</edomvd>
+            <edomvds>I-1802-A</edomvds>
+          </edom>
+          <edom>
+            <edomv>Valles Marineris Interior Deposits, layered material</edomv>
+            <edomvd>Thinly bedded dark and light materials visible in high-resolution pictures on floors of several canyons. Forms platforms and hills of moderate to high relief. Type area: lat 7&#194;&#176; S., long 48&#194;&#176;. Interpretation: Volcanic or lacustrine material or both, deposited during intermediate to late stages of canyon development.</edomvd>
+            <edomvds>I-1802-B</edomvds>
+          </edom>
+          <edom>
+            <edomv>Vasitas Borealis Formation, mottled member</edomv>
+            <edomvd>Multiple definitions. I-1802-A: Major occurrence north of map boundary (Tanaka and Scott, unpub. data, 1985); extends as far south as topographic reentrants between Acidalia and Chryse Planitia where appears windswept. Crater-ejecta blankets have higher albedo than adjacent terrain; lobate flow fronts visible; some small hills present. Type area: lat 55&#194;&#176; N.., long 40&#194;&#176; (Scott and Tanaka, 1986). Interpretation: Possibly consists of lava flows erupted from fissures and small volcanoes or of alluvial or eolian deposits. Mottled appearance due to contast between generally low albedo of plains and brightness of small hills and impact-crater aprons. I-1802-B: Major occurrence north of map boundary (Tanaka and Scott, 1986); extends as far south as about lat 43&#194;&#176; N. Crater-ejecta blnakets have higher albedo than adjacent terrain, giving mottled appearance. In places, gently rolling, closely spaced hills averaging 5 km in diameter can be distinguished. Type area: lat 55&#194;&#176; N.., long 40&#194;&#176; (Scott and Tanaka, 1986). Interpretation: Possibly lava flows erupted from fissures, or of alluvial or eolian origin. I-1802-C (north pole): Characterized by high-albedo crater deposits superposed on low-albedo, smooth-plains deposits; occurs along more than half of edge of map area; gradational with other members, particularly knobby member. Interpretation: Lava flows, possibly erupted from fissures and small volcanoes, or alluvial or eolian deposits. Mottled appearance due to either fresh, light-colored material exposed during impact-crater excavation or to high-albedo eolian deposits trapped within crater ejecta.</edomvd>
+            <edomvds>I-1802-A; I-1802-B; I-1802-C</edomvds>
+          </edom>
+          <edom>
+            <edomv>Vastitas Borealis Formation, grooved member</edomv>
+            <edomvds>I-1802-A; I-1802-B; I-1802-C</edomvds>
+            <edomvd>Multiple definitions. I-1802-A: Similar to mottled members in Acidalia Planitia but marked by curvilinear and polygonal patterns of grooves and troughs; closed polygons as wide as 20 km. Type area: lat 45&#194;&#176; N., long 15&#194;&#176;. Interpretation: Material same as mottled member; patterns may be due to compaction or tectonic or ground-ice phenomena. I-1802-B: Occurs as isolated patches in several areas of lowland plains; similar to mottled member but marked by curvilinear and polygonal grooves, as at lat 53&#194;&#176; N., long 295&#194;&#176;. Type area: lat 45&#194;&#176; N., long 15&#194;&#176; (Scott and Tanaka, 1986). Interpretation: Material same as mottled member; patterns may be due to compaction, tectonism, or periglacial processes. I-1802-C (north pole): Marked by groovbes forming polygonal pattern; polygons commonly 5 to 20 km across; small patch at lat 80&#194;&#176; N., long 60&#194;&#176; in mouth of Chasma Boreale; eroded on south side. Interpretation: Degraded lava flows or sediments; grooves may be lava-cooling, periglacial, tectonic, desiccation, or compaction phenomena.</edomvd>
+          </edom>
+          <edom>
+            <edomv>Vastitas Borealis Formation, knobby member</edomv>
+            <edomvds>I-1802-A; I-1802-B; I-1802-C</edomvds>
+            <edomvd>Multiple definitions. I-1802-A: Similar in appearance to mottled member but generally has higher albedo and abundant small, dark, knoblike hills, some with summit craters. Type area: lat 55&#194;&#176;N., long 5&#194;&#176; (Scott and Tanaka, 1986). Interpretation: Material same as mottled member; hills may be small volcanoes or remnants of highland terrain or crater. I-1802-B: Similar in appearance to mottled member but generally has higher albedo and abundant small, dark, knoblike hills, some with summit craters. Crater ejecta have albedo similar to that of surrounding terrain. Type area: lat 55&#194;&#176;N., long 5&#194;&#176; (Scott and Tanaka, 1986). Interpretation: Plains of diverse origins (volcanic flows, eolian mantles); hills may be small volcanoes, remnants of highland terrain or of crater rims, or pingos. I-1802-C: Characterized by abundant, kilometer-size, dark, knoblike hills spaced generally a few kilometers apart and commonly grouped into linear chains. Occurs in broad circumpolar help; interknob areas gradational with mottled and ridged members. Interpretation: Knobs probably small volcanoes and highly degraded remnants of highland material (unit HNu), crater rims, and older plains material. Interknob plains probably degraded lava flows or sediments.</edomvd>
+          </edom>
+          <edom>
+            <edomv>Vastitas Borealis Formation, ridged member</edomv>
+            <edomvds>I-1802-A; I-1802-B; I-1802-C</edomvds>
+            <edomvd>Multiple definitions. I-1802-A: Three small occurrences of mottled plains characterized by concentric pattern of low, narrow ridges about 1 to 2 kn wide. Type area: lat 38&#194;&#176; N., long 33&#194;&#176;; other two outcrops near lat 54&#194;&#176; N., long 176&#194;&#176;. Interpretation: Material same as mottled member; origin of ridges unknown but they may be periglacial structures or channel-meander features accentuated by differential erosion. I-1802-B: In isolated patches in northern plains. Characterized by concentric, low ridges about 1 to 2 km wide; northwest of Deuteronilus Mensae, many ridges are within depressions. In Isidis basin, member displays low mounds, many of which are aligned. Type area: lat 38&#194;&#176; N., long 33&#194;&#176; (Scott and Tanaka, 1986). Interpretation: Material same as mottled member; unit appears to develop from erosion of surrounding units. Origin of ridges unknown but they may result from periglacial or erosional processes. Low mounds in Isidis basin may represent spatter cones along lines of vents. I-1802-C (north pole): Scattered occurrences mostly in western longitudes; gradational with knobby, mottled, and smooth members; in places embayed by Arcadia Formation. Ridges about 1 to 2 km wide and several to tens of kilometers long commonly form polygons 5 to 20 km across; ridges patters in some southern outcrops are arcuate or concentric, as at lat 56&#194;&#176; N., long 173&#194;&#176;. Interpretation: degraded lava flows or sediments; ridge pattern may be formed by intrusion of viscous lava in grooves of grooved member or by remnants of dikes on a stripped surface; concentric ridges may result from scarp retreat caused by periglacial or erosional processes.</edomvd>
+          </edom>
+          <edom>
+            <edomv>volcano, relative age unknown</edomv>
+            <edomvd>volcano; not a stratigraphic unit; relative age undetermined</edomvd>
+            <edomvds>I-1802-A; I-1802-B; I-1802-C</edomvds>
+          </edom>
+          <edom>
+            <edomv>younger channel material</edomv>
+            <edomvd>Multiple definitions. I-1802-A (defined with unit Achp): Along western margin of map area, form plain as wide as 200 km marked by dark, sinuous, intertwining channels with bars and islands; fills small channels in Arcadia Planitia, along north edge of Tempe Fossae, and in Ophir and Candor Chasmata. Crater counts and superposition relations indicate Amazonian age. Type areas: lat 15&#194;&#176; N., long 177&#194;&#176; (unit Ach) and lat 22 N., long 171&#194;&#176; (unit Achp). I-1802-C (north pole): Smooth, sparsely-cratered material within part of channel along edge of map area at long 58&#194;&#176;; channel originated from Tempe Fossae region to south (Scott and Tanaka, 1986). Superposed on flood-plain material and mottled and knobby members of Vastitas Borealis Formation. Interpretation: Recent fluvial material.</edomvd>
+            <edomvds>I-1802-A; I-1802-C</edomvds>
+          </edom>
+          <edom>
+            <edomv>younger channel system material, undivided</edomv>
+            <edomvd>In eastern equatorial part of map area; forms plain as wide as 600 km marked by dark, sinuous, intertwining albedo patterns; appears more mottled westward. Type areas (Scott and Tanaka, 1986): lat 15&#194;&#176;N., long 177&#194;&#176; (younger channel material) and lat 22&#194;&#176;n., LONG 171&#194;&#176; (flood-plain material). Interpretation: Fluvial deposits; distinct albedo patterns probably represent channels with bars and islands; mottled zones in western part may represent deposition from ponded terminus of fluvial system.</edomvd>
+            <edomvds>I-1802-B</edomvds>
+          </edom>
+          <edom>
+            <edomv>younger flood-plain material</edomv>
+            <edomvd>Defined with unit Ach: Along western margin of map area, form plain as wide as 200 km marked by dark, sinuous, intertwining channels with bars and islands; fills small channels in Arcadia Planitia, along north edge of Tempe Fossae, and in Ophir and Candor Chasmata. Crater counts and superposition relations indicate Amazonian age. Type areas: lat 15&#194;&#176; N., long 177&#194;&#176; (unit Ach) and lat 22 N., long 171&#194;&#176; (unit Achp).</edomvd>
+            <edomvds>I-1802-A</edomvds>
+          </edom>
+          <edom>
+            <edomv>Tharsis Montes Formation, member 3</edomv>
+            <edomvd>Makes up central shields of Arsia, Pavonis, and Ascraeus Montes and embays highland terrain west of Arsia Mons and along northwest side of Claritas Fossae, where light and dark flows common. Fewer lobate fronts, pressure ridges, and dark streaks but more faults than in members 4 and 5. Type area: lat 27&#194;&#176; S., long 127&#194;&#176;.</edomvd>
+            <edomvds>I-1802-A</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdefs>USGS I-1802 A-B-C</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">AreaSinKm2</attrlabl>
+        <attalias Sync="TRUE">AreaSinKm2</attalias>
+        <attrtype Sync="TRUE">String</attrtype>
+        <attwidth Sync="TRUE">254</attwidth>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">AreaSinkm2</attrlabl>
+        <attalias Sync="TRUE">AreaSinusodalKm2</attalias>
+        <attrtype Sync="TRUE">Float</attrtype>
+        <attwidth Sync="TRUE">13</attwidth>
+        <atnumdec Sync="TRUE">11</atnumdec>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">UnitSymbol</attrlabl>
+        <attalias Sync="TRUE">UnitSymbol</attalias>
+        <attrtype Sync="TRUE">Float</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdomv>
+          <edom>
+            <edomv>Aa1</edomv>
+            <edomvd>Arcadia Formation, member 1</edomvd>
+          </edom>
+          <edom>
+            <edomv>Aa2</edomv>
+            <edomvd>Arcadia Formation, member 2</edomvd>
+          </edom>
+          <edom>
+            <edomv>Aa3</edomv>
+            <edomvd>Arcadia Formation, member 3</edomvd>
+          </edom>
+          <edom>
+            <edomv>Aa4</edomv>
+            <edomvd>Arcadia Formation, member 4</edomvd>
+          </edom>
+          <edom>
+            <edomv>Aa5</edomv>
+            <edomvd>Arcadia Formation, member 5</edomvd>
+          </edom>
+          <edom>
+            <edomv>Aam</edomv>
+            <edomvd>Alba Patera Formation, middle member</edomvd>
+          </edom>
+          <edom>
+            <edomv>Aau</edomv>
+            <edomvd>Alba Patera Formation, upper member</edomvd>
+          </edom>
+          <edom>
+            <edomv>Ach</edomv>
+            <edomvd>younger channel material</edomvd>
+          </edom>
+          <edom>
+            <edomv>Achp</edomv>
+            <edomvd>younger flood-plain material</edomvd>
+          </edom>
+          <edom>
+            <edomv>Achu</edomv>
+            <edomvd>younger channel system material, undivided</edomvd>
+          </edom>
+          <edom>
+            <edomv>Ad</edomv>
+            <edomvd>dune material</edomvd>
+          </edom>
+          <edom>
+            <edomv>Adc</edomv>
+            <edomvd>censcentic dune material</edomvd>
+          </edom>
+          <edom>
+            <edomv>Adl</edomv>
+            <edomvd>linear dune material</edomvd>
+          </edom>
+          <edom>
+            <edomv>Ae</edomv>
+            <edomvd>eolian deposits</edomvd>
+          </edom>
+          <edom>
+            <edomv>Ael1</edomv>
+            <edomvd>Elysium Formation, member 1</edomvd>
+          </edom>
+          <edom>
+            <edomv>Ael2</edomv>
+            <edomvd>Elysium Formation, member 2</edomvd>
+          </edom>
+          <edom>
+            <edomv>Ael3</edomv>
+            <edomvd>Elysium Formation, member 3</edomvd>
+          </edom>
+          <edom>
+            <edomv>Ael4</edomv>
+            <edomvd>Elysium Formation, member 4</edomvd>
+          </edom>
+          <edom>
+            <edomv>Ah4</edomv>
+            <edomvd>Hellas Assemblage, lineated floor unit</edomvd>
+          </edom>
+          <edom>
+            <edomv>Ah5</edomv>
+            <edomvd>Hellas Assemblage, channeled plains rim unit</edomvd>
+          </edom>
+          <edom>
+            <edomv>Ah6</edomv>
+            <edomvd>Hellas Assemblage, reticulate floor unit</edomvd>
+          </edom>
+          <edom>
+            <edomv>Ah7</edomv>
+            <edomvd>Hellas Assemblage, rugged floor unit</edomvd>
+          </edom>
+          <edom>
+            <edomv>Ah8</edomv>
+            <edomvd>Hellas Assemblage, knobby plains floor unit</edomvd>
+          </edom>
+          <edom>
+            <edomv>AHa</edomv>
+            <edomvd>Apollinaris Patera Formation</edomvd>
+          </edom>
+          <edom>
+            <edomv>AHat</edomv>
+            <edomvd>Albor Tholus Formation</edomvd>
+          </edom>
+          <edom>
+            <edomv>AHcf</edomv>
+            <edomvd>Ceraunius Fossae Formation</edomvd>
+          </edom>
+          <edom>
+            <edomv>AHh</edomv>
+            <edomvd>Hadriaca Patera Formation</edomvd>
+          </edom>
+          <edom>
+            <edomv>AHpe</edomv>
+            <edomvd>etched plains material</edomvd>
+          </edom>
+          <edom>
+            <edomv>AHt</edomv>
+            <edomvd>Tyhrrhena Patera Formation</edomvd>
+          </edom>
+          <edom>
+            <edomv>AHt3</edomv>
+            <edomvd>Tharsis Montes Formation, member 3</edomvd>
+          </edom>
+          <edom>
+            <edomv>Am</edomv>
+            <edomvd>mantle material</edomvd>
+          </edom>
+          <edom>
+            <edomv>Aml</edomv>
+            <edomvd>Medusae Fossae Formation, lower member</edomvd>
+          </edom>
+          <edom>
+            <edomv>Amm</edomv>
+            <edomvd>Medusae Fossae Formation, middle member</edomvd>
+          </edom>
+          <edom>
+            <edomv>Amu</edomv>
+            <edomvd>Medusae Fossae Formation, upper member</edomvd>
+          </edom>
+          <edom>
+            <edomv>Aoa1</edomv>
+            <edomvd>Olympus Mons Formation, aureole member 1</edomvd>
+          </edom>
+          <edom>
+            <edomv>Aoa2</edomv>
+            <edomvd>Olympus Mons Formation, aureole member 2</edomvd>
+          </edom>
+          <edom>
+            <edomv>Aoa3</edomv>
+            <edomvd>Olympus Mons Formation, aureole member 3</edomvd>
+          </edom>
+          <edom>
+            <edomv>Aoa4</edomv>
+            <edomvd>Olympus Mons Formation, aureole member 4</edomvd>
+          </edom>
+          <edom>
+            <edomv>Aop</edomv>
+            <edomvd>Olympus Mons Formation, plains member</edomvd>
+          </edom>
+          <edom>
+            <edomv>Aos</edomv>
+            <edomvd>Olympus Mons Formation, shield member</edomvd>
+          </edom>
+          <edom>
+            <edomv>Api</edomv>
+            <edomvd>polar ice deposits</edomvd>
+          </edom>
+          <edom>
+            <edomv>Apk</edomv>
+            <edomvd>knobby plains material</edomvd>
+          </edom>
+          <edom>
+            <edomv>Apl</edomv>
+            <edomvd>polar layered deposits</edomvd>
+          </edom>
+          <edom>
+            <edomv>Aps</edomv>
+            <edomvd>smooth plains material</edomvd>
+          </edom>
+          <edom>
+            <edomv>As</edomv>
+            <edomvd>slide material</edomvd>
+          </edom>
+          <edom>
+            <edomv>At4</edomv>
+            <edomvd>Tharsis Montes Formation, member 4</edomvd>
+          </edom>
+          <edom>
+            <edomv>At5</edomv>
+            <edomvd>Tharsis Montes Formation, member 5</edomvd>
+          </edom>
+          <edom>
+            <edomv>At6</edomv>
+            <edomvd>Tharsis Montes Formation, member 6</edomvd>
+          </edom>
+          <edom>
+            <edomv>Avf</edomv>
+            <edomvd>Valles Marineris interior deposits, floor material</edomvd>
+          </edom>
+          <edom>
+            <edomv>b</edomv>
+            <edomvd>tear-drop shaped bar or island</edomvd>
+          </edom>
+          <edom>
+            <edomv>cb</edomv>
+            <edomvd>impact crater material, partly buried</edomvd>
+          </edom>
+          <edom>
+            <edomv>cs</edomv>
+            <edomvd>impact crater material, superposed</edomvd>
+          </edom>
+          <edom>
+            <edomv>d</edomv>
+            <edomvd>dome</edomvd>
+          </edom>
+          <edom>
+            <edomv>Had</edomv>
+            <edomvd>Amphitrites Formation, dissected member</edomvd>
+          </edom>
+          <edom>
+            <edomv>Hal</edomv>
+            <edomvd>Alba Patera Formation, lower member</edomvd>
+          </edom>
+          <edom>
+            <edomv>Hap</edomv>
+            <edomvd>Amphitrites Formation, patera member</edomvd>
+          </edom>
+          <edom>
+            <edomv>Hch</edomv>
+            <edomvd>older channel material</edomvd>
+          </edom>
+          <edom>
+            <edomv>Hchp</edomv>
+            <edomvd>older flood-plain material</edomvd>
+          </edom>
+          <edom>
+            <edomv>Hcht</edomv>
+            <edomvd>older chaotic material</edomvd>
+          </edom>
+          <edom>
+            <edomv>Hdl</edomv>
+            <edomvd>Dora Argentea Formation, lower member</edomvd>
+          </edom>
+          <edom>
+            <edomv>Hdu</edomv>
+            <edomvd>Dorsa Argentea Formation, upper member</edomvd>
+          </edom>
+          <edom>
+            <edomv>Hf</edomv>
+            <edomvd>highly-deformed terrain materials, younger fractured material</edomvd>
+          </edom>
+          <edom>
+            <edomv>Hh2</edomv>
+            <edomvd>Hellas Assemblage, ridged plains floor unit</edomvd>
+          </edom>
+          <edom>
+            <edomv>Hh3</edomv>
+            <edomvd>Hellas Assemblage, dissected floor unit</edomvd>
+          </edom>
+          <edom>
+            <edomv>Hhet</edomv>
+            <edomvd>Hecates Tholus Formation</edomvd>
+          </edom>
+          <edom>
+            <edomv>HNu</edomv>
+            <edomvd>undivided material</edomvd>
+          </edom>
+          <edom>
+            <edomv>Hpl3</edomv>
+            <edomvd>plateau sequence, smooth unit</edomvd>
+          </edom>
+          <edom>
+            <edomv>Hplm</edomv>
+            <edomvd>plateau sequence, mottled smooth plains unit</edomvd>
+          </edom>
+          <edom>
+            <edomv>Hr</edomv>
+            <edomvd>ridged plains material</edomvd>
+          </edom>
+          <edom>
+            <edomv>Hs</edomv>
+            <edomvd>Syrtis Major Formation</edomvd>
+          </edom>
+          <edom>
+            <edomv>Hsl</edomv>
+            <edomvd>Syria Planum Formation, lower member</edomvd>
+          </edom>
+          <edom>
+            <edomv>Hsu</edomv>
+            <edomvd>Syria Planum Formation, upper member</edomvd>
+          </edom>
+          <edom>
+            <edomv>Ht1</edomv>
+            <edomvd>Tharsis Montes Formation, member 1</edomvd>
+          </edom>
+          <edom>
+            <edomv>Ht2</edomv>
+            <edomvd>Tharsis Montes Formation, member 2</edomvd>
+          </edom>
+          <edom>
+            <edomv>Htl</edomv>
+            <edomvd>Tempe Terra Formation, lower member</edomvd>
+          </edom>
+          <edom>
+            <edomv>Htm</edomv>
+            <edomvd>Tempe Terra Formation, middle member</edomvd>
+          </edom>
+          <edom>
+            <edomv>Htu</edomv>
+            <edomvd>Tempe Terra Formation, upper member</edomvd>
+          </edom>
+          <edom>
+            <edomv>Hvg</edomv>
+            <edomvd>Vastitas Borealis Formation, grooved member</edomvd>
+          </edom>
+          <edom>
+            <edomv>Hvk</edomv>
+            <edomvd>Vastitas Borealis Formation, knobby member</edomvd>
+          </edom>
+          <edom>
+            <edomv>Hvl</edomv>
+            <edomvd>Valles Marineris interior deposits, layered material</edomvd>
+          </edom>
+          <edom>
+            <edomv>Hvm</edomv>
+            <edomvd>Vasitas Borealis Formation, mottled member</edomvd>
+          </edom>
+          <edom>
+            <edomv>Hvr</edomv>
+            <edomvd>Vastitas Borealis Formation, ridged member</edomvd>
+          </edom>
+          <edom>
+            <edomv>m</edomv>
+            <edomvd>mountain, relative age unknown</edomvd>
+          </edom>
+          <edom>
+            <edomv>Nb</edomv>
+            <edomvd>highly-deformed terrain materials, basement complex</edomvd>
+          </edom>
+          <edom>
+            <edomv>Nf</edomv>
+            <edomvd>highly-deformed terrain materials, older fractured material</edomvd>
+          </edom>
+          <edom>
+            <edomv>Nh1</edomv>
+            <edomvd>Hellas Assemblage, basin-rim unit</edomvd>
+          </edom>
+          <edom>
+            <edomv>Nm</edomv>
+            <edomvd>mountainous material</edomvd>
+          </edom>
+          <edom>
+            <edomv>Npl1</edomv>
+            <edomvd>plateau sequence, cratered unit</edomvd>
+          </edom>
+          <edom>
+            <edomv>Npl2</edomv>
+            <edomvd>plateau sequence, subdued cratered unit</edomvd>
+          </edom>
+          <edom>
+            <edomv>Npld</edomv>
+            <edomvd>plateau sequence, dissected unit</edomvd>
+          </edom>
+          <edom>
+            <edomv>Nple</edomv>
+            <edomvd>plateau sequence, etched unit</edomvd>
+          </edom>
+          <edom>
+            <edomv>Nplh</edomv>
+            <edomvd>plateau sequence, hilly unit</edomvd>
+          </edom>
+          <edom>
+            <edomv>Nplr</edomv>
+            <edomvd>plateau sequence, ridged unit</edomvd>
+          </edom>
+          <edom>
+            <edomv>s</edomv>
+            <edomvd>impact crater material, smooth floor</edomvd>
+          </edom>
+          <edom>
+            <edomv>v</edomv>
+            <edomvd>volcano, relative age unknown</edomvd>
+          </edom>
+        </attrdomv>
+        <attrdefs>USGS I-1802 A-B-C</attrdefs>
+        <atnumdec Sync="TRUE">11</atnumdec>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">FID</attrlabl>
+        <attalias Sync="TRUE">FID</attalias>
+        <attrtype Sync="TRUE">Float</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <attrdef Sync="TRUE">Internal feature number.</attrdef>
+        <attrdefs Sync="TRUE">ESRI</attrdefs>
+        <attrdomv>
+          <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <atnumdec Sync="TRUE">11</atnumdec>
+      </attr>
+      <attr>
+        <attrlabl Sync="TRUE">Shape_Leng</attrlabl>
+        <attalias Sync="TRUE">Shape_Leng</attalias>
+        <attrtype Sync="TRUE">Double</attrtype>
+        <attwidth Sync="TRUE">19</attwidth>
+        <atprecis Sync="TRUE">18</atprecis>
+        <attscale Sync="TRUE">11</attscale>
+      </attr>
+    </detailed>
+  </eainfo>
+  <mdDateSt Sync="TRUE">20060309</mdDateSt>
+  <dataqual>
+    <attracc>
+      <attraccr>All attributes cratered during the creation process were verified by displaying the lines in both the database and the spatial coverage and they are beleived to be logically consistent.</attraccr>
+    </attracc>
+    <logic>These data are believed to be logically consistent. Line geometry is topologically clean.</logic>
+    <posacc>
+      <horizpa>
+        <horizpar>The final digital product presented herein was adapted from the scanned linework of the original I-1802 maps. These original scans used outdated Martian geodesy, resulting in inaccurately placed contacts and structures. For the digital product presented herein, we used Viking Orbiter digital image mosaics and the Mars Orbiter Laser Altimeter (MOLA) dataset [Smith et al. 2001] as basemaps to correctly align geologic contacts and structural symbols by hand in ArcGIS. The digital lines were drawn at approximately 1:2M scale with a node spacing of approximately 1 km. This digitized linework was intersected and cleaned by hand, using both smoothing algorithms (tolerance = 20 km) and generalizing algorithms (tolerance = 0.250 km). These efforts attempted to balance digital information, accuracy, and map aesthetics.</horizpar>
+      </horizpa>
+    </posacc>
+    <lineage>
+      <procstep>
+        <procdesc Sync="TRUE">Metadata imported.</procdesc>
+        <srcused Sync="TRUE">C:\Temp\geo_units_simp_sphere2000.xml</srcused>
+        <date Sync="TRUE">20060309</date>
+        <time Sync="TRUE">08454500</time>
+      </procstep>
+    </lineage>
+  </dataqual>
+</metadata>

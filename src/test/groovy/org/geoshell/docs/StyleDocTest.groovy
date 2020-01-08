@@ -85,8 +85,19 @@ class StyleDocTest extends AbstractDocTest {
     }
 
     @Test
-    void vectorUniqueValuesFromTestFile() {
-
+    void vectorUniqueValuesFromTextFile() {
+        run("style_vector_uniquevaluesfromtext", [
+                "workspace open --name mars --params src/test/resources/mars",
+                "layer open --workspace mars --layer geo_units_oc_dd --name mars",
+                "style vector uniquevaluesfromtext --field UnitSymbol --textFile src/test/resources/mars/I1802ABC_geo_units_RGBlut.txt --geometryType polygon --styleFile examples/style_vector_uniquevaluesfromtext.sld",
+                "layer style set --name mars --style examples/style_vector_uniquevaluesfromtext.sld",
+                "map open --name map",
+                "map add layer --name map --layer mars",
+                "map draw --name map --file examples/style_vector_uniquevaluesfromtext.png",
+                "map close --name map"
+        ])
+        copyFile(new File("examples/style_vector_uniquevaluesfromtext.png"), new File("src/main/docs/images"))
+        copyFile(new File("examples/style_vector_uniquevaluesfromtext.sld"), new File("src/main/docs/output"))
     }
 
     @Test

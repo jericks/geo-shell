@@ -194,7 +194,35 @@ image::style_vector_uniquevalues.png[]
 
 include::commands/style_vector_uniquevaluesfromtext_description.txt[]
 
+include::output/style_vector_uniquevaluesfromtext_2_command.txt[]
+
 include::commands/style_vector_uniquevaluesfromtext.txt[]
+
+include::output/style_vector_uniquevaluesfromtext_0_command.txt[]
+include::output/style_vector_uniquevaluesfromtext_0_result.txt[]
+
+include::output/style_vector_uniquevaluesfromtext_1_command.txt[]
+include::output/style_vector_uniquevaluesfromtext_1_result.txt[]
+
+include::output/style_vector_uniquevaluesfromtext_2_command.txt[]
+include::output/style_vector_uniquevaluesfromtext_2_result.txt[]
+
+include::output/style_vector_uniquevaluesfromtext_3_command.txt[]
+include::output/style_vector_uniquevaluesfromtext_3_result.txt[]
+
+include::output/style_vector_uniquevaluesfromtext_4_command.txt[]
+include::output/style_vector_uniquevaluesfromtext_4_result.txt[]
+
+include::output/style_vector_uniquevaluesfromtext_5_command.txt[]
+include::output/style_vector_uniquevaluesfromtext_5_result.txt[]
+
+include::output/style_vector_uniquevaluesfromtext_6_command.txt[]
+include::output/style_vector_uniquevaluesfromtext_6_result.txt[]
+
+include::output/style_vector_uniquevaluesfromtext_7_command.txt[]
+include::output/style_vector_uniquevaluesfromtext_7_result.txt[]
+
+image::style_vector_uniquevaluesfromtext.png[]
 
 === Raster Default
 
