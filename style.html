@@ -1073,6 +1073,9 @@ table.CodeRay td.code>pre{padding:0}
 <div class="paragraph">
 <p>Create a unique values vector style from a text file</p>
 </div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector uniquevaluesfromtext</strong> <span class="gray">--field</span> <span class="silver">UnitSymbol</span> <span class="gray">--textFile</span> <span class="silver">src/test/resources/mars/I1802ABC_geo_units_RGBlut.txt</span> <span class="gray">--geometryType</span> <span class="silver">polygon</span> <span class="gray">--styleFile</span> <span class="silver">examples/style_vector_uniquevaluesfromtext.sld</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -1119,6 +1122,43 @@ table.CodeRay td.code>pre{padding:0}
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">mars</span> <span class="gray">--params</span> <span class="silver">src/test/resources/mars</span><br>
+<span class="green">Workspace mars opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">mars</span> <span class="gray">--layer</span> <span class="silver">geo_units_oc_dd</span> <span class="gray">--name</span> <span class="silver">mars</span><br>
+<span class="green">Opened Workspace mars Layer geo_units_oc_dd as mars</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector uniquevaluesfromtext</strong> <span class="gray">--field</span> <span class="silver">UnitSymbol</span> <span class="gray">--textFile</span> <span class="silver">src/test/resources/mars/I1802ABC_geo_units_RGBlut.txt</span> <span class="gray">--geometryType</span> <span class="silver">polygon</span> <span class="gray">--styleFile</span> <span class="silver">examples/style_vector_uniquevaluesfromtext.sld</span><br>
+<span class="green">Create a unique values style from /home/travis/build/jericks/geo-shell/src/test/resources/mars/I1802ABC_geo_units_RGBlut.txt for UnitSymbol and polygon to /home/travis/build/jericks/geo-shell/examples/style_vector_uniquevaluesfromtext.sld</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">mars</span> <span class="gray">--style</span> <span class="silver">examples/style_vector_uniquevaluesfromtext.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/style_vector_uniquevaluesfromtext.sld set on mars</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">mars</span><br>
+<span class="green">Added mars layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--file</span> <span class="silver">examples/style_vector_uniquevaluesfromtext.png</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/style_vector_uniquevaluesfromtext.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/style_vector_uniquevaluesfromtext.png" alt="style vector uniquevaluesfromtext">
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="raster-default"><a class="anchor" href="#raster-default"></a>Raster Default</h3>
@@ -1236,7 +1276,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-01-07 00:28:14 UTC
+Last updated 2020-01-08 00:45:50 UTC
 </div>
 </div>
 </body>

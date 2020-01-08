@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer style set* [gray]#--name# [silver]#mars# [gray]#--style# [silver]#examples/style_vector_uniquevaluesfromtext.sld# +

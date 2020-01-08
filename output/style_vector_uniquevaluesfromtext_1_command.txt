@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer open* [gray]#--workspace# [silver]#mars# [gray]#--layer# [silver]#geo_units_oc_dd# [gray]#--name# [silver]#mars# +

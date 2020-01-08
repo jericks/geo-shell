@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*style vector uniquevaluesfromtext* [gray]#--field# [silver]#UnitSymbol# [gray]#--textFile# [silver]#src/test/resources/mars/I1802ABC_geo_units_RGBlut.txt# [gray]#--geometryType# [silver]#polygon# [gray]#--styleFile# [silver]#examples/style_vector_uniquevaluesfromtext.sld# +
