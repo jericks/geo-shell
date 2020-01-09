@@ -102,12 +102,34 @@ class StyleDocTest extends AbstractDocTest {
 
     @Test
     void rasterDefault() {
-
+        run("style_raster_default", [
+                "format open --name pierce_county --input src/test/resources/pc.tif",
+                "raster open --format pierce_county --raster pc --name pc",
+                "style raster default --raster pc --opacity 0.75 --file examples/style_raster_default.sld",
+                "raster style set --name pc --style examples/style_raster_default.sld",
+                "map open --name map",
+                "map add raster --name map --raster pc",
+                "map draw --name map --file examples/style_raster_default.png",
+                "map close --name map"
+        ])
+        copyFile(new File("examples/style_raster_default.png"), new File("src/main/docs/images"))
+        copyFile(new File("examples/style_raster_default.sld"), new File("src/main/docs/output"))
     }
 
     @Test
     void rasterColorMap() {
-
+        run("style_raster_colormap", [
+                "format open --name pierce_county --input src/test/resources/pc.tif",
+                "raster open --format pierce_county --raster pc --name pc",
+                "style raster colormap --raster pc --values \"25=#9fd182,470=#3e7f3c,920=#133912,1370=#08306b,1820=#fffff5\" --file examples/style_raster_colormap.sld",
+                "raster style set --name pc --style examples/style_raster_colormap.sld",
+                "map open --name map",
+                "map add raster --name map --raster pc",
+                "map draw --name map --file examples/style_raster_colormap.png",
+                "map close --name map"
+        ])
+        copyFile(new File("examples/style_raster_colormap.png"), new File("src/main/docs/images"))
+        copyFile(new File("examples/style_raster_colormap.sld"), new File("src/main/docs/output"))
     }
 
 }

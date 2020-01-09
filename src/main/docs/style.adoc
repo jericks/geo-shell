@@ -145,6 +145,9 @@ include::output/style_vector_gradient_9_result.txt[]
 include::output/style_vector_gradient_10_command.txt[]
 include::output/style_vector_gradient_10_result.txt[]
 
+[source,xml]
+include::output/style_vector_gradient.sld[]
+
 image::style_vector_gradient.png[]
 
 === Vector Unique Values
@@ -188,6 +191,9 @@ include::output/style_vector_uniquevalues_9_result.txt[]
 include::output/style_vector_uniquevalues_10_command.txt[]
 include::output/style_vector_uniquevalues_10_result.txt[]
 
+[source,xml]
+include::output/style_vector_uniquevalues.sld[]
+
 image::style_vector_uniquevalues.png[]
 
 === Vector Unique Values From Text File
@@ -222,16 +228,81 @@ include::output/style_vector_uniquevaluesfromtext_6_result.txt[]
 include::output/style_vector_uniquevaluesfromtext_7_command.txt[]
 include::output/style_vector_uniquevaluesfromtext_7_result.txt[]
 
+[source,xml]
+include::output/style_vector_uniquevaluesfromtext.sld[]
+
 image::style_vector_uniquevaluesfromtext.png[]
 
 === Raster Default
 
 include::commands/style_raster_default_description.txt[]
 
+include::output/style_raster_default_2_command.txt[]
+
 include::commands/style_raster_default.txt[]
+
+include::output/style_raster_default_0_command.txt[]
+include::output/style_raster_default_0_result.txt[]
+
+include::output/style_raster_default_1_command.txt[]
+include::output/style_raster_default_1_result.txt[]
+
+include::output/style_raster_default_2_command.txt[]
+include::output/style_raster_default_2_result.txt[]
+
+include::output/style_raster_default_3_command.txt[]
+include::output/style_raster_default_3_result.txt[]
+
+include::output/style_raster_default_4_command.txt[]
+include::output/style_raster_default_4_result.txt[]
+
+include::output/style_raster_default_5_command.txt[]
+include::output/style_raster_default_5_result.txt[]
+
+include::output/style_raster_default_6_command.txt[]
+include::output/style_raster_default_6_result.txt[]
+
+include::output/style_raster_default_7_command.txt[]
+include::output/style_raster_default_7_result.txt[]
+
+[source,xml]
+include::output/style_raster_default.sld[]
+
+image::style_raster_default.png[]
 
 === Raster Color Map
 
 include::commands/style_raster_colormap_description.txt[]
 
+include::output/style_raster_colormap_2_command.txt[]
+
 include::commands/style_raster_colormap.txt[]
+
+include::output/style_raster_colormap_0_command.txt[]
+include::output/style_raster_colormap_0_result.txt[]
+
+include::output/style_raster_colormap_1_command.txt[]
+include::output/style_raster_colormap_1_result.txt[]
+
+include::output/style_raster_colormap_2_command.txt[]
+include::output/style_raster_colormap_2_result.txt[]
+
+include::output/style_raster_colormap_3_command.txt[]
+include::output/style_raster_colormap_3_result.txt[]
+
+include::output/style_raster_colormap_4_command.txt[]
+include::output/style_raster_colormap_4_result.txt[]
+
+include::output/style_raster_colormap_5_command.txt[]
+include::output/style_raster_colormap_5_result.txt[]
+
+include::output/style_raster_colormap_6_command.txt[]
+include::output/style_raster_colormap_6_result.txt[]
+
+include::output/style_raster_colormap_7_command.txt[]
+include::output/style_raster_colormap_7_result.txt[]
+
+[source,xml]
+include::output/style_raster_colormap.sld[]
+
+image::style_raster_colormap.png[]
