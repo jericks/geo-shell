@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*style raster default* [gray]#--raster# [silver]#pc# [gray]#--opacity# [silver]#0.75# [gray]#--file# [silver]#examples/style_raster_default.sld# +

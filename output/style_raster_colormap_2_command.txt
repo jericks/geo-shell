@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*style raster colormap* [gray]#--raster# [silver]#pc# [gray]#--values# [silver]#"25=#9fd182,470=#3e7f3c,920=#133912,1370=#08306b,1820=#fffff5"# [gray]#--file# [silver]#examples/style_raster_colormap.sld# +
