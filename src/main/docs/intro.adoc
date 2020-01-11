@@ -4,6 +4,10 @@ ifndef::imagesdir[:imagesdir: images]
 
 geo-shell is an interactive shell for geospatial analysis.
 
+image::geoshell.png[]
+
+=== Modules
+
 geo-shell has modules for dealing with *vectors*, *rasters*, *tiles*, *maps*, and *styles*.
 
 For *vector* layers, you can use *workspace* commands access layers of spatial data
@@ -18,3 +22,11 @@ The *tile* commands let you create tile layers, get tiles, and get rasters from 
 The *style* commands let you create styles for vector layers and raster.
 
 The *map* commands allow you to visualize vector, raster, and tile layers.
+
+=== Use
+
+You can use geo-shell interactively by typing *geo-shell* at the command line.
+
+Or you can write scripts and then execute them from the command line by typing *geo-shell --cmdfile script.txt*
+
+Or by using the *script --file script.txt* command within a geo-shell session.
