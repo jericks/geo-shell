@@ -146,7 +146,7 @@ include::output/style_vector_gradient_10_command.txt[]
 include::output/style_vector_gradient_10_result.txt[]
 
 [source,xml]
-include::output/style_vector_gradient.sld[]
+include::output/style_vector_gradient.sld[lines=1..50]
 
 image::style_vector_gradient.png[]
 
@@ -192,7 +192,7 @@ include::output/style_vector_uniquevalues_10_command.txt[]
 include::output/style_vector_uniquevalues_10_result.txt[]
 
 [source,xml]
-include::output/style_vector_uniquevalues.sld[]
+include::output/style_vector_uniquevalues.sld[lines=1..50]
 
 image::style_vector_uniquevalues.png[]
 
@@ -229,7 +229,7 @@ include::output/style_vector_uniquevaluesfromtext_7_command.txt[]
 include::output/style_vector_uniquevaluesfromtext_7_result.txt[]
 
 [source,xml]
-include::output/style_vector_uniquevaluesfromtext.sld[]
+include::output/style_vector_uniquevaluesfromtext.sld[lines=1..50]
 
 image::style_vector_uniquevaluesfromtext.png[]
 
