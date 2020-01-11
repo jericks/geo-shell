@@ -2,13 +2,13 @@ ifndef::imagesdir[:imagesdir: images]
 
 == Introduction
 
-geo-shell is an interactive shell for geospatial analysis.
+Geo Shell is an interactive shell for geospatial analysis.
 
 image::geoshell.png[]
 
 === Modules
 
-geo-shell has modules for dealing with *vectors*, *rasters*, *tiles*, *maps*, and *styles*.
+Geo Shell has modules for dealing with *vectors*, *rasters*, *tiles*, *maps*, and *styles*.
 
 For *vector* layers, you can use *workspace* commands access layers of spatial data
 in datasets like shapefiles, geopackages, or postgis databases.  With *layer* commands
