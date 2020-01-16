@@ -6,6 +6,8 @@ ifndef::imagesdir[:imagesdir: images]
 
 include::commands/exit_description.txt[]
 
+include::output/exit_0_command.txt[]
+
 include::commands/exit.txt[]
 
 === Help
@@ -14,29 +16,71 @@ include::commands/help_description.txt[]
 
 include::commands/help.txt[]
 
+View all commands
+
+include::output/help_0_command.txt[]
+
+include::output/help_0_result.txt[lines=1..10]
+
+Get help for a command
+
+include::output/help_command_0_command.txt[]
+
+include::output/help_command_0_result.txt[]
+
 === Run OS Command
 
 include::commands/!_description.txt[]
 
+include::output/run_0_command.txt[]
+
 include::commands/!.txt[]
+
+include::output/run_0_command.txt[]
+
+include::output/run_0_result.txt[]
 
 === Date
 
 include::commands/date_description.txt[]
 
+include::output/date_0_command.txt[]
+
 include::commands/date.txt[]
+
+include::output/date_0_command.txt[]
+
+include::output/date_0_result.txt[]
+
 
 === Script
 
 include::commands/script_description.txt[]
 
+include::output/script_0_command.txt[]
+
 include::commands/script.txt[]
+
+----
+include::output/layer_count.txt[]
+----
+
+include::output/script_0_command.txt[]
+
+include::output/script_0_result.txt[]
+
 
 === System Properties
 
 include::commands/system_properties_description.txt[]
 
+include::output/system_properties_0_command.txt[]
+
 include::commands/system_properties.txt[]
+
+include::output/system_properties_0_command.txt[]
+
+include::output/system_properties_0_result.txt[lines=1..10]
 
 === Version
 
@@ -44,20 +88,71 @@ include::commands/version_description.txt[]
 
 include::commands/version.txt[]
 
+include::output/version_0_command.txt[]
+
+include::output/version_0_result.txt[]
+
 === Download
 
 include::commands/download_description.txt[]
 
+include::output/download_0_command.txt[]
+
 include::commands/download.txt[]
+
+include::output/download_0_command.txt[]
+include::output/download_0_result.txt[]
+
+include::output/download_1_command.txt[]
+include::output/download_1_result.txt[]
+
+include::output/download_2_command.txt[]
+include::output/download_2_result.txt[]
+
+include::output/download_3_command.txt[]
+include::output/download_3_result.txt[]
+
+include::output/download_4_command.txt[]
+include::output/download_4_result.txt[]
+
+include::output/download_5_command.txt[]
+include::output/download_5_result.txt[]
+
+include::output/download_6_command.txt[]
+include::output/download_6_result.txt[]
+
+include::output/download_7_command.txt[]
+include::output/download_7_result.txt[]
+
+include::output/download_8_command.txt[]
+include::output/download_8_result.txt[]
+
+include::output/download_9_command.txt[]
+include::output/download_9_result.txt[]
+
+include::output/download_10_command.txt[]
+include::output/download_10_result.txt[]
+
+image::mars.png[]
 
 === Unzip
 
 include::commands/unzip_description.txt[]
 
+include::output/download_1_command.txt[]
+
 include::commands/unzip.txt[]
+
+include::output/download_1_command.txt[]
+include::output/download_1_result.txt[]
 
 === Open
 
 include::commands/open_description.txt[]
 
+include::output/download_10_command.txt[]
+
 include::commands/open.txt[]
+
+include::output/download_10_command.txt[]
+include::output/download_10_result.txt[]

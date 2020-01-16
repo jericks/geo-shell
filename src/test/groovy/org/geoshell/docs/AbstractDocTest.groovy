@@ -6,9 +6,15 @@ import org.springframework.shell.Bootstrap
 import org.springframework.shell.core.CommandResult
 import org.springframework.shell.core.JLineShellComponent
 
+import java.util.logging.Handler
+import java.util.logging.Level
+import java.util.logging.Logger
+import java.util.logging.StreamHandler
+
 abstract class AbstractDocTest {
 
     protected JLineShellComponent shell
+
 
     @Before
     void before() throws InterruptedException {
@@ -34,9 +40,25 @@ abstract class AbstractDocTest {
     }
 
     String run(String name, String cmd, Map options = [:]) {
-        CommandResult result = shell.executeCommand(cmd)
+        boolean captureOutput = options.get("captureOutput", false)
+        String output
+        if (captureOutput) {
+            ByteArrayOutputStream outContent = new ByteArrayOutputStream()
+            Logger log = Logger.getLogger("")
+            Handler[] handlers = log.getHandlers();
+            StreamHandler customLogHandler = new StreamHandler(outContent, handlers[0].getFormatter())
+            log.addHandler(customLogHandler)
+            log.setLevel(Level.INFO)
+            CommandResult result = shell.executeCommand(cmd)
+            customLogHandler.flush()
+            output = outContent.toString()
+            log.removeHandler(customLogHandler)
+        } else {
+            CommandResult result = shell.executeCommand(cmd)
+            output = result.result.toString()
+        }
         writeFile("${name}_command", processCommand(cmd, options))
-        writeFile("${name}_result", processOutput(result.result.toString(), options))
+        writeFile("${name}_result", processOutput(output, options))
     }
 
     void writeFile(String name, String text) {
@@ -91,7 +113,21 @@ abstract class AbstractDocTest {
         if (options.rawOutput) {
             "----\n" + output + "\n----\n"
         } else {
-            output.split("\n").collect { "[green]#${it.trim()}# +" }.join("\n")
+            output.split("\n").findAll {
+                !it.contains("org.springframework.shell")
+            }.collect { String line ->
+                line = scrubOutput(line)
+                line.isEmpty() ? "" : "[green]#${line}# +"
+            }.join("\n")
+        }
+    }
+
+    String scrubOutput(String str) {
+        str = str.trim()
+        if (str.contains("INFO: ")) {
+            str.substring(str.indexOf("INFO: ") + 6)
+        } else {
+            str
         }
     }
 

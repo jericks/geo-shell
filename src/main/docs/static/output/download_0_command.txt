@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*download* [gray]#--url# [silver]#https://astropedia.astrogeology.usgs.gov/download/Mars/Geology/Mars15MGeologicGISRenovation.zip# [gray]#--file# [silver]#mars.zip# [gray]#--overwrite# [silver]#false# +

@@ -1,0 +1,1 @@
+[green]#Downloading https://astropedia.astrogeology.usgs.gov/download/Mars/Geology/Mars15MGeologicGISRenovation.zip to /Users/jericks/Projects/geo-shell/mars.zip...# +

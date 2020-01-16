@@ -1,10 +1,13 @@
 package org.geoshell;
 
+import org.geotools.data.ogr.OGRDataStoreFactory;
+import org.geotools.util.logging.Logging;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import java.util.logging.Level;
 
 @Component
 public class Lifecycle {
@@ -14,6 +17,7 @@ public class Lifecycle {
 
     @PostConstruct
     public void setup() {
+        Logging.getLogger(OGRDataStoreFactory.class).setLevel(Level.OFF);
         System.setProperty("org.geotools.referencing.forceXY", "true");
     }
 
