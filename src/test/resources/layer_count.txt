@@ -1,0 +1,7 @@
+workspace open --name naturalearth --params src/test/resources/naturalearth.gpkg
+
+layer open --workspace naturalearth --layer countries --name countries
+
+layer count --name countries
+
+workspace close --name naturalearth
