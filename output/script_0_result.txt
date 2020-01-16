@@ -1,0 +1,4 @@
+[green]#Workspace naturalearth opened!# +
+[green]#Opened Workspace naturalearth Layer countries as countries# +
+[green]#177# +
+[green]#Workspace naturalearth closed!# +

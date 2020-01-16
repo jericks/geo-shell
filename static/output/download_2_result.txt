@@ -1,0 +1,1 @@
+[green]#Create a unique values style from /Users/jericks/Projects/geo-shell/mars/I1802ABC_Mars_global_geology/I1802ABC_geo_units_RGBlut.txt for UnitSymbol and Polygon to /Users/jericks/Projects/geo-shell/mars/units.sld# +

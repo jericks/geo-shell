@@ -1,0 +1,21 @@
+[green]#Keyword:                   layer open# +
+[green]#Description:               Open a Layer.# +
+[green]#Keyword:                  workspace# +
+[green]#Help:                   The Workspace name# +
+[green]#Mandatory:              true# +
+[green]#Default if specified:   '__NULL__'# +
+[green]#Default if unspecified: '__NULL__'# +
+
+[green]#Keyword:                  layer# +
+[green]#Help:                   The Layer name# +
+[green]#Mandatory:              true# +
+[green]#Default if specified:   '__NULL__'# +
+[green]#Default if unspecified: '__NULL__'# +
+
+[green]#Keyword:                  name# +
+[green]#Help:                   The name# +
+[green]#Mandatory:              false# +
+[green]#Default if specified:   '__NULL__'# +
+[green]#Default if unspecified: '__NULL__'# +
+
+[green]#* layer open - Open a Layer.# +

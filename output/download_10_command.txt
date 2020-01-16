@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*open* [gray]#--file# [silver]#image.png# +

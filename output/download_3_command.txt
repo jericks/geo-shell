@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*workspace open* [gray]#--name# [silver]#mars# [gray]#--params# [silver]#mars/I1802ABC_Mars_global_geology/Shapefiles/I1802ABC_Mars2000_Sphere/geo_units_oc_dd.shp# +

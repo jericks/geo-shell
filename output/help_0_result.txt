@@ -1,0 +1,131 @@
+[green]#* ! - Allows execution of operating system (OS) commands# +
+[green]#* // - Inline comment markers (start of line only)# +
+[green]#* ; - Inline comment markers (start of line only)# +
+[green]#* clear - Clears the console# +
+[green]#* cls - Clears the console# +
+[green]#* date - Displays the local date and time# +
+[green]#* download - Download a URL to a file.# +
+[green]#* exit - Exits the shell# +
+[green]#* format close - Close a Raster Format.# +
+[green]#* format list - List open Raster Formats.# +
+[green]#* format open - Open a Raster Format.# +
+[green]#* format rasters - List the Rasters in a Format.# +
+[green]#* help - List all commands usage# +
+[green]#* layer add - Add a new Feature to a Layer.# +
+[green]#* layer addareafield - Add area Field to the input Layer and save the result to the output Layer# +
+[green]#* layer addfields - Add Fields to the input Layer and save the result to the output Layer# +
+[green]#* layer addidfield - Add area ID to the input Layer and save the result to the output Layer# +
+[green]#* layer addxyfields - Add x and y coordinate Fields to the input Layer and save the result to the output Layer# +
+[green]#* layer buffer - Buffer the input Layer to the output Layer.# +
+[green]#* layer centroid - Calculate the centroids of the input Layer to the output Layer.# +
+[green]#* layer clip - Clip the input Layer by the other Layer to produce the output Layer# +
+[green]#* layer close - Close a Layer.# +
+[green]#* layer convexhull - Calculate the convexhull of the input Layer and save it to the output Layer.# +
+[green]#* layer convexhulls - Calculate the convexhull of each Feature in the input Layer and save them to the output Layer.# +
+[green]#* layer coordinates - Extract the coordinates each Feature in the input Layer and save them to the output Layer.# +
+[green]#* layer copy - Copy one Layer to another Workspace.# +
+[green]#* layer count - Count the Feature in a Layer.# +
+[green]#* layer create - Create a new Layer.# +
+[green]#* layer delaunay - Calculate a delaunay diagram of the input Layer and save it to the output Layer.# +
+[green]#* layer delete - Delete features from the Layer# +
+[green]#* layer densify - Densify the features of the input Layer and save them to the output Layer# +
+[green]#* layer dissolve - Dissolve the Features of a Layer by a Field.# +
+[green]#* layer erase - Erase one Layer from another Layer# +
+[green]#* layer extent - Calculate the extent of the input Layer and save it to the output Layer.# +
+[green]#* layer extents - Calculate the extents of each Feature in the input Layer and save them to the output Layer.# +
+[green]#* layer features - Display the Features of a Layer.# +
+[green]#* layer graticule hexagon - Create a hexagon graticule.# +
+[green]#* layer graticule oval - Create a oval graticule.# +
+[green]#* layer graticule rectangle - Create a rectangle graticule.# +
+[green]#* layer graticule square - Create a square graticule.# +
+[green]#* layer grid rowcol - Create a grid Layer with rows and columns# +
+[green]#* layer grid widthheight - Create a grid Layer with cell width and height# +
+[green]#* layer identity - Calculate the intersection between a Layer with another Layer# +
+[green]#* layer interiorpoint - Calculate the interior points of the input Layer to the output Layer.# +
+[green]#* layer intersection - Calculate the intersection between a Layer with another Layer# +
+[green]#* layer list - List open Layers.# +
+[green]#* layer mincircle - Calculate the mininmum bounding circle of the input Layer and save it to the output Layer.# +
+[green]#* layer mincircles - Calculate the minimum bounding circle of each Feature in the input Layer and save them to the output Layer.# +
+[green]#* layer minrect - Calculate the mininmum rectangle of the input Layer and save it to the output Layer.# +
+[green]#* layer minrects - Calculate the minimum rectangle of each Feature in the input Layer and save them to the output Layer.# +
+[green]#* layer octagonalenvelope - Calculate the octagonal envelope of the input Layer and save it to the output Layer.# +
+[green]#* layer octagonalenvelopes - Calculate the octagonal envelope of each Feature in the input Layer and save them to the output Layer.# +
+[green]#* layer open - Open a Layer.# +
+[green]#* layer points along lines - Create points along lines# +
+[green]#* layer projection - Get the Projection of a Layer.# +
+[green]#* layer random - Create a Layer with a number of randomly located points# +
+[green]#* layer remove - Remove a Layer from a Workspace.# +
+[green]#* layer removefields - Remove Fields to the input Layer and save the result to the output Layer# +
+[green]#* layer reproject - Transform the features of the input Layer and save them to the output Layer# +
+[green]#* layer schema - Inspect a Layer's Schema.# +
+[green]#* layer simplify - Simplify the features of the input Layer and save them to the output Layer# +
+[green]#* layer style get - Get the Layer's style.# +
+[green]#* layer style set - Set a Layer's style# +
+[green]#* layer symdifference - Calculate the symmetric difference between a Layer and another Layer.# +
+[green]#* layer transform - Transform the features of the input Layer and save them to the output Layer# +
+[green]#* layer union - Union a Layer with another Layer# +
+[green]#* layer update - Calculate the update between a Layer with another Layer# +
+[green]#* layer updatefield - Delete features from the Layer# +
+[green]#* layer validity - Check for invalid geometries in the Layer.# +
+[green]#* layer voronoi - Calculate a voronoi diagram of the input Layer and save it to the output Layer.# +
+[green]#* map add layer - Add a Vector Layer.# +
+[green]#* map add raster - Add a Raster Layer.# +
+[green]#* map add tile - Add a Tile Layer.# +
+[green]#* map close - Close a Map.# +
+[green]#* map display - Display a map in a GUI.# +
+[green]#* map draw - Draw a map.# +
+[green]#* map layers - List the Map's Layers.# +
+[green]#* map list - List open Maps.# +
+[green]#* map open - Open a new Map.# +
+[green]#* map remove layer - Remove a Layer.# +
+[green]#* map reorder - Reorder a Layer in the Map.# +
+[green]#* open - Open a File.# +
+[green]#* quit - Exits the shell# +
+[green]#* raster add constant - Add constant values to a Raster# +
+[green]#* raster add raster - Add two Rasters together# +
+[green]#* raster close - Close a Raster.# +
+[green]#* raster contours - Create contours.# +
+[green]#* raster crop - Crop a Raster.# +
+[green]#* raster divide constant - Divide constant values against a Raster# +
+[green]#* raster divide raster - Divide one Raster by another Raster# +
+[green]#* raster envelope - Create a Vector Layer from the envelope of a Raster.# +
+[green]#* raster info - Get information about a Raster.# +
+[green]#* raster list - List open Rasters.# +
+[green]#* raster mosaic - Mosaic two Rasters together# +
+[green]#* raster multiply constant - Multiply constant values to a Raster# +
+[green]#* raster multiply raster - Multiply two Raster together# +
+[green]#* raster open - Open a Raster.# +
+[green]#* raster reclassify - Reclassify a Raster.# +
+[green]#* raster reproject - Project a Raster.# +
+[green]#* raster scale - Scale a Raster.# +
+[green]#* raster shadedrelief - Create a shaded relief raster# +
+[green]#* raster style get - Get the Raster's style.# +
+[green]#* raster style set - Set a Raster's style# +
+[green]#* raster stylize - Create a new Raster by baking the style into an existing Raster# +
+[green]#* raster subtract constant - Subtract constant values from a Raster# +
+[green]#* raster subtract raster - Subtract one Raster from another# +
+[green]#* raster value - Get a value from the Raster.# +
+[green]#* script - Parses the specified resource file and executes its commands# +
+[green]#* style create - Create a simple style.# +
+[green]#* style raster colormap - Create a color map raster style.# +
+[green]#* style raster default - Create a default raster style.# +
+[green]#* style vector default - Create a default vector style.# +
+[green]#* style vector gradient - Create a gradient vector style.# +
+[green]#* style vector uniquevalues - Create a unique values vector style.# +
+[green]#* style vector uniquevaluesfromtext - Create a unique values vector style from a text file# +
+[green]#* system properties - Shows the shell's properties# +
+[green]#* tile close - Close a Tile Layer.# +
+[green]#* tile delete - Delete tiles from a Tile Layer.# +
+[green]#* tile generate - Generate tiles for a Tile Layer.# +
+[green]#* tile info - Get information about a Tile Layer.# +
+[green]#* tile list - List open Tile Layers.# +
+[green]#* tile open - Open a Tile Layer.# +
+[green]#* tile stitch raster - Create a Raster from a Tile Layer.# +
+[green]#* tile tiles - List tiles within a given bounds.# +
+[green]#* tile vector grid - Create a Vector Grid Layer from the pyramid of a Tile Layer.# +
+[green]#* unzip - Unzip a file# +
+[green]#* version - Displays shell version# +
+[green]#* workspace close - Close a Workspace.# +
+[green]#* workspace layers - List the Layer in a Workspaces.# +
+[green]#* workspace list - List open Workspaces.# +
+[green]#* workspace open - Open a Workspace.# +
