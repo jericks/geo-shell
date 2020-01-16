@@ -12,14 +12,15 @@ import java.awt.Desktop
 class Commands implements CommandMarker {
 
     @CliCommand(value = "open", help = "Open a File.")
-    void open(
+    String open(
             @CliOption(key = "file", mandatory = true, help = "The File") File file
     ) throws Exception {
         Desktop.desktop.open(file)
+        "Opening ${file.absolutePath}..."
     }
 
     @CliCommand(value = "download", help = "Download a URL to a file.")
-    void download(
+    String download(
             @CliOption(key = "url", mandatory = true, help = "The url") String url,
             @CliOption(key = "file", mandatory = true, help = "The file") File file,
             @CliOption(key = "overwrite", mandatory = false,
@@ -27,14 +28,16 @@ class Commands implements CommandMarker {
                     help = "Whether to overwrite the file or not") boolean overwrite
     ) throws Exception {
         GeoScript.download(new URL(url), file, overwrite: overwrite)
+        "Downloading ${url} to ${file.absolutePath}..."
     }
 
     @CliCommand(value = "unzip", help = "Unzip a file")
-    void unzip(
+    String unzip(
             @CliOption(key = "file", mandatory = true, help = "The zip file") File file,
             @CliOption(key = "directory", mandatory = true, help = "The directory") File directory
     ) throws Exception {
         GeoScript.unzip(file, directory)
+        "Unzipping ${file.absolutePath} to ${directory.absolutePath}"
     }
 
 }
