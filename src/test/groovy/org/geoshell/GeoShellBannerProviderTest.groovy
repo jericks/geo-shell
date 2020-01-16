@@ -4,10 +4,12 @@ import org.junit.Test
 import static org.junit.Assert.assertEquals
 import org.springframework.shell.support.util.OsUtils
 
+import static org.junit.Assert.assertNotEquals
+
 class GeoShellBannerProviderTest {
 
     @Test
-    public void getBanner() {
+    void getBanner() {
         GeoShellBannerProvider provider = new GeoShellBannerProvider()
         StringBuilder builder = new StringBuilder()
         builder.append("   ______              _____ __         ____" + OsUtils.LINE_SEPARATOR)
@@ -19,19 +21,30 @@ class GeoShellBannerProviderTest {
     }
 
     @Test
-    public void getVersion() {
+    void getVersion() {
         GeoShellBannerProvider provider = new GeoShellBannerProvider()
-        assertEquals "0.0.1", provider.getVersion()
+        assertNotEquals "", provider.getVersion()
+        assertEquals getExpectedVersion(), provider.getVersion()
+    }
+
+    String getExpectedVersion() {
+        String version = ""
+        GeoShellBannerProvider.class.getClassLoader().getResource("application.properties").withInputStream { InputStream inputStream ->
+            Properties properties = new Properties()
+            properties.load(inputStream)
+            version = properties.getProperty("version")
+        }
+        version
     }
 
     @Test
-    public void getWelcomeMessage() {
+    void getWelcomeMessage() {
         GeoShellBannerProvider provider = new GeoShellBannerProvider()
         assertEquals "Welcome to the Geo Shell!", provider.getWelcomeMessage()
     }
 
     @Test
-    public void getProviderName() {
+    void getProviderName() {
         GeoShellBannerProvider provider = new GeoShellBannerProvider()
         assertEquals "geo shell", provider.getProviderName()
     }

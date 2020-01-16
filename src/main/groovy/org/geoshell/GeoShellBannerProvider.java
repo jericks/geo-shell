@@ -7,6 +7,10 @@ import org.springframework.shell.plugin.support.DefaultBannerProvider;
 import org.springframework.shell.support.util.OsUtils;
 import org.springframework.stereotype.Component;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
 @Component
 @Order(Ordered.HIGHEST_PRECEDENCE)
 public class GeoShellBannerProvider extends DefaultBannerProvider implements CommandMarker {
@@ -24,7 +28,16 @@ public class GeoShellBannerProvider extends DefaultBannerProvider implements Com
 
     @Override
     public String getVersion() {
-        return "0.0.1";
+        String version = "";
+        try {
+            try(InputStream inputStream = GeoShellBannerProvider.class.getClassLoader().getResource("application.properties").openStream()) {
+                Properties properties = new Properties();
+                properties.load(inputStream);
+                version = properties.getProperty("version");
+            }
+        } catch (IOException ex) {
+        }
+        return version;
     }
 
     @Override
