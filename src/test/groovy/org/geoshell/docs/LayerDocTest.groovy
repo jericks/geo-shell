@@ -142,6 +142,28 @@ class LayerDocTest extends AbstractDocTest {
     }
 
     @Test
+    void features_filter() {
+        run("layer_features_filter", [
+                "workspace open --name naturalearth --params src/test/resources/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer states --name states",
+                "layer features --name states --filter \"NAME_1='North Dakota'\"",
+                "workspace close --name naturalearth"
+        ])
+    }
+
+    @Test
+    void getStyle() {
+        run("layer_style_get", [
+                "workspace open --name naturalearth --params src/test/resources/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer states --name states",
+                "style vector default --layer states --color #1E90FF --file examples/states_simple.sld",
+                "layer style get --name states --style target/states.sld",
+                "workspace close --name naturalearth"
+        ])
+        copyFile(new File("target/states.sld"), new File("src/main/docs/output"))
+    }
+
+    @Test
     void createRandomPoints() {
         run("layer_random", [
                 "workspace open --name layers --params memory",

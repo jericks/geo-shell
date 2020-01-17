@@ -131,12 +131,48 @@ include::output/layer_projection_3_result.txt[]
 ==== Features
 
 include::commands/layer_features_description.txt[]
+
+include::output/layer_features_filter_2_command.txt[]
+
 include::commands/layer_features.txt[]
+
+include::output/layer_features_filter_0_command.txt[]
+include::output/layer_features_filter_0_result.txt[]
+
+include::output/layer_features_filter_1_command.txt[]
+include::output/layer_features_filter_1_result.txt[]
+
+include::output/layer_features_filter_2_command.txt[]
+include::output/layer_features_filter_2_result.txt[]
+
+include::output/layer_features_filter_3_command.txt[]
+include::output/layer_features_filter_3_result.txt[]
 
 ==== Get Style
 
 include::commands/layer_style_get_description.txt[]
+
+include::output/layer_style_get_3_command.txt[]
+
 include::commands/layer_style_get.txt[]
+
+include::output/layer_style_get_0_command.txt[]
+include::output/layer_style_get_0_result.txt[]
+
+include::output/layer_style_get_1_command.txt[]
+include::output/layer_style_get_1_result.txt[]
+
+include::output/layer_style_get_2_command.txt[]
+include::output/layer_style_get_2_result.txt[]
+
+include::output/layer_style_get_3_command.txt[]
+include::output/layer_style_get_3_result.txt[]
+
+include::output/layer_style_get_4_command.txt[]
+include::output/layer_style_get_4_result.txt[]
+
+[source,xml]
+include::output/states.sld[]
 
 ==== Set Style
 
