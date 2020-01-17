@@ -1,0 +1,1 @@
+[green]#Default Vector Style for states written to /home/travis/build/jericks/geo-shell/examples/states_simple.sld!# +
