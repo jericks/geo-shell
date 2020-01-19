@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer delete* [gray]#--name# [silver]#points# [gray]#--filter# [silver]#"fid=2"# +

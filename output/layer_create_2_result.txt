@@ -1,0 +1,5 @@
+[green]#Name                  Type# +
+[green]#--------------------  --------------------# +
+[green]#the_geom              Point# +
+[green]#fid                   Integer# +
+[green]#name                  String# +

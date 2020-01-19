@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer add* [gray]#--name# [silver]#points# [gray]#--values# [silver]#"the_geom=POINT# [silver]#(-122.459444# [silver]#47.241389)|fid=2|name=Tacoma"# +
