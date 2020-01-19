@@ -177,12 +177,68 @@ include::output/states.sld[]
 ==== Set Style
 
 include::commands/layer_style_set_description.txt[]
+
+include::output/layer_style_set_3_command.txt[]
+
 include::commands/layer_style_set.txt[]
+
+include::output/layer_style_set_0_command.txt[]
+include::output/layer_style_set_0_result.txt[]
+
+include::output/layer_style_set_1_command.txt[]
+include::output/layer_style_set_1_result.txt[]
+
+include::output/layer_style_set_2_command.txt[]
+include::output/layer_style_set_2_result.txt[]
+
+include::output/layer_style_set_3_command.txt[]
+include::output/layer_style_set_3_result.txt[]
+
+include::output/layer_style_set_4_command.txt[]
+include::output/layer_style_set_4_result.txt[]
+
+include::output/layer_style_set_5_command.txt[]
+include::output/layer_style_set_5_result.txt[]
+
+include::output/layer_style_set_6_command.txt[]
+include::output/layer_style_set_6_result.txt[]
+
+include::output/layer_style_set_7_command.txt[]
+include::output/layer_style_set_7_result.txt[]
+
+include::output/layer_style_set_8_command.txt[]
+include::output/layer_style_set_8_result.txt[]
+
+image::layer_set_style.png[]
 
 ==== Copy
 
 include::commands/layer_copy_description.txt[]
+
+include::output/layer_copy_3_command.txt[]
+
 include::commands/layer_copy.txt[]
+
+include::output/layer_copy_0_command.txt[]
+include::output/layer_copy_0_result.txt[]
+
+include::output/layer_copy_1_command.txt[]
+include::output/layer_copy_1_result.txt[]
+
+include::output/layer_copy_2_command.txt[]
+include::output/layer_copy_2_result.txt[]
+
+include::output/layer_copy_3_command.txt[]
+include::output/layer_copy_3_result.txt[]
+
+include::output/layer_copy_4_command.txt[]
+include::output/layer_copy_4_result.txt[]
+
+include::output/layer_copy_5_command.txt[]
+include::output/layer_copy_5_result.txt[]
+
+include::output/layer_copy_6_command.txt[]
+include::output/layer_copy_6_result.txt[]
 
 ==== Add
 

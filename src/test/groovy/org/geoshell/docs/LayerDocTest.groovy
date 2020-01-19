@@ -164,6 +164,35 @@ class LayerDocTest extends AbstractDocTest {
     }
 
     @Test
+    void setStyle() {
+        run("layer_style_set", [
+                "workspace open --name naturalearth --params src/test/resources/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer states --name states",
+                "style vector default --layer states --color #1E90FF --file examples/states_simple.sld",
+                "layer style get --name states --style target/states_simple.sld",
+                "map open --name map",
+                "map add layer --name map --layer states",
+                "map draw --name map --file examples/layer_set_style.png",
+                "map close --name map",
+                "workspace close --name naturalearth"
+        ])
+        copyFile(new File("examples/layer_set_style.png"), new File("src/main/docs/images"))
+    }
+
+    @Test
+    void copy() {
+        run("layer_copy", [
+                "workspace open --name naturalearth --params src/test/resources/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer states --name states_gpkg",
+                "workspace open --name shapefiles --params target/",
+                "layer copy --input-name states_gpkg --output-workspace shapefiles --output-name states",
+                "layer count --name states",
+                "workspace close --name shapefiles",
+                "workspace close --name naturalearth"
+        ])
+    }
+
+    @Test
     void createRandomPoints() {
         run("layer_random", [
                 "workspace open --name layers --params memory",
