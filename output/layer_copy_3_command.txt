@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer copy* [gray]#--input-name# [silver]#states_gpkg# [gray]#--output-workspace# [silver]#shapefiles# [gray]#--output-name# [silver]#states# +

@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer style get* [gray]#--name# [silver]#states# [gray]#--style# [silver]#target/states_simple.sld# +

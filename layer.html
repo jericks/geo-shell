@@ -1178,6 +1178,9 @@ No parameters
 <div class="paragraph">
 <p>Set a Layer&#8217;s style</p>
 </div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style get</strong> <span class="gray">--name</span> <span class="silver">states</span> <span class="gray">--style</span> <span class="silver">target/states_simple.sld</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -1210,11 +1213,55 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">src/test/resources/naturalearth.gpkg</span><br>
+<span class="green">Workspace naturalearth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">states</span> <span class="gray">--name</span> <span class="silver">states</span><br>
+<span class="green">Opened Workspace naturalearth Layer states as states</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">states</span> <span class="gray">--color</span> <span class="silver">#1E90FF</span> <span class="gray">--file</span> <span class="silver">examples/states_simple.sld</span><br>
+<span class="green">Default Vector Style for states written to /home/travis/build/jericks/geo-shell/examples/states_simple.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style get</strong> <span class="gray">--name</span> <span class="silver">states</span> <span class="gray">--style</span> <span class="silver">target/states_simple.sld</span><br>
+<span class="green">states style written to /home/travis/build/jericks/geo-shell/target/states_simple.sld</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">states</span><br>
+<span class="green">Added states layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--file</span> <span class="silver">examples/layer_set_style.png</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/layer_set_style.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map closed!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace close</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span><br>
+<span class="green">Workspace naturalearth closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/layer_set_style.png" alt="layer set style">
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="copy"><a class="anchor" href="#copy"></a>Copy</h4>
 <div class="paragraph">
 <p>Copy one Layer to another Workspace.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer copy</strong> <span class="gray">--input-name</span> <span class="silver">states_gpkg</span> <span class="gray">--output-workspace</span> <span class="silver">shapefiles</span> <span class="gray">--output-name</span> <span class="silver">states</span><br></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1290,6 +1337,34 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">src/test/resources/naturalearth.gpkg</span><br>
+<span class="green">Workspace naturalearth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">states</span> <span class="gray">--name</span> <span class="silver">states_gpkg</span><br>
+<span class="green">Opened Workspace naturalearth Layer states as states_gpkg</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">shapefiles</span> <span class="gray">--params</span> <span class="silver">target/</span><br>
+<span class="green">Workspace shapefiles opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer copy</strong> <span class="gray">--input-name</span> <span class="silver">states_gpkg</span> <span class="gray">--output-workspace</span> <span class="silver">shapefiles</span> <span class="gray">--output-name</span> <span class="silver">states</span><br>
+<span class="green">Done!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer count</strong> <span class="gray">--name</span> <span class="silver">states</span><br>
+<span class="green">52</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace close</strong> <span class="gray">--name</span> <span class="silver">shapefiles</span><br>
+<span class="green">Workspace shapefiles closed!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace close</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span><br>
+<span class="green">Workspace naturalearth closed!</span><br></p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="add"><a class="anchor" href="#add"></a>Add</h4>
@@ -5019,7 +5094,7 @@ No parameters
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-01-17 01:20:41 UTC
+Last updated 2020-01-19 01:36:38 UTC
 </div>
 </div>
 </body>

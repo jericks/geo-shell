@@ -1,3 +1,124 @@
+[green]#Jan 19, 2020 1:49:58 AM org.geotools.data.DataAccessFinder getDataStore# +
+[green]#WARNING: MBTiles with vector tiles should be used, but could not connect# +
+[green]#java.io.IOException: org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no such table: metadata)# +
+[green]#at org.geotools.mbtiles.MBTilesFile.loadMetaData(MBTilesFile.java:433)# +
+[green]#at org.geotools.mbtiles.MBTilesFile.loadMetaData(MBTilesFile.java:412)# +
+[green]#at org.geotools.mbtiles.MBTilesDataStore.<init>(MBTilesDataStore.java:75)# +
+[green]#at org.geotools.mbtiles.MBTilesDataStoreFactory.createDataStore(MBTilesDataStoreFactory.java:121)# +
+[green]#at org.geotools.mbtiles.MBTilesDataStoreFactory.createDataStore(MBTilesDataStoreFactory.java:39)# +
+[green]#at org.geotools.data.DataAccessFinder.getDataStore(DataAccessFinder.java:119)# +
+[green]#at org.geotools.data.DataStoreFinder.getDataStore(DataStoreFinder.java:69)# +
+[green]#at org.geotools.data.DataStoreFinder$getDataStore.call(Unknown Source)# +
+[green]#at geoscript.workspace.WorkspaceFactory.create(WorkspaceFactory.groovy:32)# +
+[green]#at geoscript.workspace.WorkspaceFactory$create$0.callCurrent(Unknown Source)# +
+[green]#at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)# +
+[green]#at geoscript.workspace.WorkspaceFactory$create$0.callCurrent(Unknown Source)# +
+[green]#at geoscript.workspace.WorkspaceFactory.create(WorkspaceFactory.groovy:22)# +
+[green]#at geoscript.workspace.WorkspaceFactory$create.call(Unknown Source)# +
+[green]#at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)# +
+[green]#at geoscript.workspace.WorkspaceFactory$create.call(Unknown Source)# +
+[green]#at geoscript.workspace.Workspace.getWorkspace(Workspace.groovy:283)# +
+[green]#at geoscript.workspace.Workspace$getWorkspace.call(Unknown Source)# +
+[green]#at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)# +
+[green]#at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115)# +
+[green]#at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:127)# +
+[green]#at org.geoshell.vector.WorkspaceCommands.open(WorkspaceCommands.groovy:24)# +
+[green]#at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)# +
+[green]#at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)# +
+[green]#at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)# +
+[green]#at java.lang.reflect.Method.invoke(Method.java:498)# +
+[green]#at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:216)# +
+[green]#at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)# +
+[green]#at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)# +
+[green]#at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)# +
+[green]#at java.lang.reflect.Method.invoke(Method.java:498)# +
+[green]#at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:216)# +
+[green]#at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)# +
+[green]#at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115)# +
+[green]#at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:127)# +
+[green]#at org.geoshell.docs.AbstractDocTest.run(AbstractDocTest.groovy:52)# +
+[green]#at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)# +
+[green]#at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)# +
+[green]#at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)# +
+[green]#at java.lang.reflect.Method.invoke(Method.java:498)# +
+[green]#at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)# +
+[green]#at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)# +
+[green]#at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:351)# +
+[green]#at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:64)# +
+[green]#at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)# +
+[green]#at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:156)# +
+[green]#at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:184)# +
+[green]#at org.geoshell.docs.AbstractDocTest$_run_closure1.doCall(AbstractDocTest.groovy:32)# +
+[green]#at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)# +
+[green]#at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)# +
+[green]#at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)# +
+[green]#at java.lang.reflect.Method.invoke(Method.java:498)# +
+[green]#at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)# +
+[green]#at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)# +
+[green]#at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:263)# +
+[green]#at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)# +
+[green]#at groovy.lang.Closure.call(Closure.java:405)# +
+[green]#at org.codehaus.groovy.runtime.DefaultGroovyMethods.eachWithIndex(DefaultGroovyMethods.java:2246)# +
+[green]#at org.codehaus.groovy.runtime.DefaultGroovyMethods.eachWithIndex(DefaultGroovyMethods.java:2226)# +
+[green]#at org.codehaus.groovy.runtime.DefaultGroovyMethods.eachWithIndex(DefaultGroovyMethods.java:2276)# +
+[green]#at org.codehaus.groovy.runtime.dgm$199.invoke(Unknown Source)# +
+[green]#at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoMetaMethodSiteNoUnwrapNoCoerce.invoke(PojoMetaMethodSite.java:244)# +
+[green]#at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:53)# +
+[green]#at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)# +
+[green]#at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115)# +
+[green]#at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:127)# +
+[green]#at org.geoshell.docs.AbstractDocTest.run(AbstractDocTest.groovy:31)# +
+[green]#at org.geoshell.docs.AbstractDocTest$run.callCurrent(Unknown Source)# +
+[green]#at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)# +
+[green]#at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:156)# +
+[green]#at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:184)# +
+[green]#at org.geoshell.docs.BuiltinDocTest.script(BuiltinDocTest.groovy:66)# +
+[green]#at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)# +
+[green]#at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)# +
+[green]#at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)# +
+[green]#at java.lang.reflect.Method.invoke(Method.java:498)# +
+[green]#at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)# +
+[green]#at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)# +
+[green]#at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)# +
+[green]#at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)# +
+[green]#at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)# +
+[green]#at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)# +
+[green]#at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)# +
+[green]#at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)# +
+[green]#at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)# +
+[green]#at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)# +
+[green]#at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)# +
+[green]#at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)# +
+[green]#at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)# +
+[green]#at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)# +
+[green]#at org.junit.runners.ParentRunner.run(ParentRunner.java:363)# +
+[green]#at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)# +
+[green]#at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)# +
+[green]#at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)# +
+[green]#at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)# +
+[green]#at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:383)# +
+[green]#at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:344)# +
+[green]#at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)# +
+[green]#at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)# +
+[green]#Caused by: org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no such table: metadata)# +
+[green]#at org.sqlite.core.DB.newSQLException(DB.java:941)# +
+[green]#at org.sqlite.core.DB.newSQLException(DB.java:953)# +
+[green]#at org.sqlite.core.DB.throwex(DB.java:918)# +
+[green]#at org.sqlite.core.NativeDB.prepare_utf8(Native Method)# +
+[green]#at org.sqlite.core.NativeDB.prepare(NativeDB.java:134)# +
+[green]#at org.sqlite.core.DB.prepare(DB.java:257)# +
+[green]#at org.sqlite.core.CorePreparedStatement.<init>(CorePreparedStatement.java:47)# +
+[green]#at org.sqlite.jdbc3.JDBC3PreparedStatement.<init>(JDBC3PreparedStatement.java:30)# +
+[green]#at org.sqlite.jdbc4.JDBC4PreparedStatement.<init>(JDBC4PreparedStatement.java:19)# +
+[green]#at org.sqlite.jdbc4.JDBC4Connection.prepareStatement(JDBC4Connection.java:35)# +
+[green]#at org.sqlite.jdbc3.JDBC3Connection.prepareStatement(JDBC3Connection.java:241)# +
+[green]#at org.sqlite.jdbc3.JDBC3Connection.prepareStatement(JDBC3Connection.java:205)# +
+[green]#at org.geotools.jdbc.util.SqlUtil$PreparedStatementBuilder.<init>(SqlUtil.java:57)# +
+[green]#at org.geotools.jdbc.util.SqlUtil.prepare(SqlUtil.java:240)# +
+[green]#at org.geotools.mbtiles.MBTilesFile.loadMetaDataEntry(MBTilesFile.java:831)# +
+[green]#at org.geotools.mbtiles.MBTilesFile.loadMetaData(MBTilesFile.java:419)# +
+[green]#... 107 more# +
+
 [green]#Workspace naturalearth opened!# +
 [green]#Opened Workspace naturalearth Layer countries as countries# +
 [green]#177# +

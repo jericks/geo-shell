@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*workspace open* [gray]#--name# [silver]#shapefiles# [gray]#--params# [silver]#target/# +
