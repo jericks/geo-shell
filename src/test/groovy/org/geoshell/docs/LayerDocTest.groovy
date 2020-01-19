@@ -193,6 +193,40 @@ class LayerDocTest extends AbstractDocTest {
     }
 
     @Test
+    void create() {
+        run("layer_create", [
+                'workspace open --name mem --params memory',
+                'layer create --workspace mem --name points --fields "the_geom=Point EPSG:4326|fid=Int|name=String"',
+                'layer schema --name points'
+        ])
+    }
+
+    @Test
+    void add() {
+        run("layer_add", [
+                'workspace open --name mem --params memory',
+                'layer create --workspace mem --name points --fields "the_geom=Point EPSG:4326|fid=Int|name=String"',
+                'layer add --name points --values "the_geom=POINT (-122.333056 47.609722)|fid=1|name=Seattle"',
+                'layer add --name points --values "the_geom=POINT (-122.459444 47.241389)|fid=2|name=Tacoma"',
+                'layer count --name points'
+        ])
+    }
+
+    @Test
+    void delete() {
+        run("layer_delete", [
+                'workspace open --name mem --params memory',
+                'layer create --workspace mem --name points --fields "the_geom=Point EPSG:4326|fid=Int|name=String"',
+                'layer add --name points --values "the_geom=POINT (-122.333056 47.609722)|fid=1|name=Seattle"',
+                'layer add --name points --values "the_geom=POINT (-122.459444 47.241389)|fid=2|name=Tacoma"',
+                'layer count --name points',
+                'layer delete --name points --filter "fid=2"',
+                'layer count --name points'
+        ])
+    }
+
+
+    @Test
     void createRandomPoints() {
         run("layer_random", [
                 "workspace open --name layers --params memory",

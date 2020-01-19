@@ -240,25 +240,79 @@ include::output/layer_copy_5_result.txt[]
 include::output/layer_copy_6_command.txt[]
 include::output/layer_copy_6_result.txt[]
 
+==== Create
+
+include::commands/layer_create_description.txt[]
+
+include::output/layer_create_1_command.txt[]
+
+include::commands/layer_create.txt[]
+
+include::output/layer_create_0_command.txt[]
+include::output/layer_create_0_result.txt[]
+
+include::output/layer_create_1_command.txt[]
+include::output/layer_create_1_result.txt[]
+
+include::output/layer_create_2_command.txt[]
+include::output/layer_create_2_result.txt[]
+
 ==== Add
 
 include::commands/layer_add_description.txt[]
+
+include::output/layer_add_2_command.txt[]
+
 include::commands/layer_add.txt[]
+
+include::output/layer_add_0_command.txt[]
+include::output/layer_add_0_result.txt[]
+
+include::output/layer_add_1_command.txt[]
+include::output/layer_add_1_result.txt[]
+
+include::output/layer_add_2_command.txt[]
+include::output/layer_add_2_result.txt[]
+
+include::output/layer_add_3_command.txt[]
+include::output/layer_add_3_result.txt[]
+
+include::output/layer_add_4_command.txt[]
+include::output/layer_add_4_result.txt[]
+
+==== Delete
+
+include::commands/layer_delete_description.txt[]
+
+include::output/layer_delete_5_command.txt[]
+
+include::commands/layer_delete.txt[]
+
+include::output/layer_delete_0_command.txt[]
+include::output/layer_delete_0_result.txt[]
+
+include::output/layer_delete_1_command.txt[]
+include::output/layer_delete_1_result.txt[]
+
+include::output/layer_delete_2_command.txt[]
+include::output/layer_delete_2_result.txt[]
+
+include::output/layer_delete_3_command.txt[]
+include::output/layer_delete_3_result.txt[]
+
+include::output/layer_delete_4_command.txt[]
+include::output/layer_delete_4_result.txt[]
+
+include::output/layer_delete_5_command.txt[]
+include::output/layer_delete_5_result.txt[]
+
+include::output/layer_delete_6_command.txt[]
+include::output/layer_delete_6_result.txt[]
 
 ==== Remove
 
 include::commands/layer_remove_description.txt[]
 include::commands/layer_remove.txt[]
-
-==== Create
-
-include::commands/layer_create_description.txt[]
-include::commands/layer_create.txt[]
-
-==== Delete
-
-include::commands/layer_delete_description.txt[]
-include::commands/layer_delete.txt[]
 
 ==== Update
 
