@@ -312,17 +312,57 @@ include::output/layer_delete_6_result.txt[]
 ==== Remove
 
 include::commands/layer_remove_description.txt[]
+
+include::output/layer_remove_5_command.txt[]
+
 include::commands/layer_remove.txt[]
 
-==== Update
+include::output/layer_remove_0_command.txt[]
+include::output/layer_remove_0_result.txt[]
 
-include::commands/layer_update_description.txt[]
-include::commands/layer_update.txt[]
+include::output/layer_remove_1_command.txt[]
+include::output/layer_remove_1_result.txt[]
+
+include::output/layer_remove_2_command.txt[]
+include::output/layer_remove_2_result.txt[]
+
+include::output/layer_remove_3_command.txt[]
+include::output/layer_remove_3_result.txt[]
+
+include::output/layer_remove_4_command.txt[]
+include::output/layer_remove_4_result.txt[]
+
+include::output/layer_remove_5_command.txt[]
+include::output/layer_remove_5_result.txt[]
+
+include::output/layer_remove_6_command.txt[]
+include::output/layer_remove_6_result.txt[]
 
 ==== Update Field
 
 include::commands/layer_updatefield_description.txt[]
+
+include::output/layer_updatefield_4_command.txt[]
+
 include::commands/layer_updatefield.txt[]
+
+include::output/layer_updatefield_0_command.txt[]
+include::output/layer_updatefield_0_result.txt[]
+
+include::output/layer_updatefield_1_command.txt[]
+include::output/layer_updatefield_1_result.txt[]
+
+include::output/layer_updatefield_2_command.txt[]
+include::output/layer_updatefield_2_result.txt[]
+
+include::output/layer_updatefield_3_command.txt[]
+include::output/layer_updatefield_3_result.txt[]
+
+include::output/layer_updatefield_4_command.txt[]
+include::output/layer_updatefield_4_result.txt[]
+
+include::output/layer_updatefield_5_command.txt[]
+include::output/layer_updatefield_5_result.txt[]
 
 ==== Add Fields
 
@@ -865,6 +905,11 @@ include::commands/layer_transform.txt[]
 
 include::commands/layer_union_description.txt[]
 include::commands/layer_union.txt[]
+
+==== Update
+
+include::commands/layer_update_description.txt[]
+include::commands/layer_update.txt[]
 
 ==== Voronoi
 

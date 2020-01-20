@@ -1232,7 +1232,7 @@ class LayerCommands implements CommandMarker {
         }
     }
 
-    @CliCommand(value = "layer updatefield", help = "Delete features from the Layer")
+    @CliCommand(value = "layer updatefield", help = "Update the values of a field")
     String updatefield(
             @CliOption(key = "name", mandatory = true, help = "The Layer name") LayerName layerName,
             @CliOption(key = "field", mandatory = true, help = "The field name") String fieldName,

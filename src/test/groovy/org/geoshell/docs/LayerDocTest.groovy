@@ -225,6 +225,30 @@ class LayerDocTest extends AbstractDocTest {
         ])
     }
 
+    @Test
+    void remove() {
+        run("layer_remove", [
+                'workspace open --name mem --params memory',
+                'layer create --workspace mem --name points --fields "the_geom=Point EPSG:4326|fid=Int|name=String"',
+                'layer create --workspace mem --name lines --fields "the_geom=LineString EPSG:4326|fid=Int|name=String"',
+                'layer create --workspace mem --name polygons --fields "the_geom=Polygon EPSG:4326|fid=Int|name=String"',
+                'workspace layers --name mem',
+                'layer remove --layer polygons --workspace mem',
+                'workspace layers --name mem'
+        ])
+    }
+
+    @Test
+    void updateField() {
+        run("layer_updatefield", [
+                'workspace open --name mem --params memory',
+                'layer create --workspace mem --name points --fields "the_geom=Point EPSG:4326|fid=Int|name=String|state=String"',
+                'layer add --name points --values "the_geom=POINT (-122.333056 47.609722)|fid=1|name=Seattle"',
+                'layer add --name points --values "the_geom=POINT (-122.459444 47.241389)|fid=2|name=Tacoma"',
+                'layer updatefield --name points --field state --value WA',
+                'layer features --name points'
+        ])
+    }
 
     @Test
     void createRandomPoints() {
