@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer remove* [gray]#--layer# [silver]#polygons# [gray]#--workspace# [silver]#mem# +

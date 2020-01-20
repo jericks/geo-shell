@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer updatefield* [gray]#--name# [silver]#points# [gray]#--field# [silver]#state# [gray]#--value# [silver]#WA# +

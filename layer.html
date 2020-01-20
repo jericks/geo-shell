@@ -545,7 +545,6 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#add">Add</a></li>
 <li><a href="#delete">Delete</a></li>
 <li><a href="#remove">Remove</a></li>
-<li><a href="#update">Update</a></li>
 <li><a href="#update-field">Update Field</a></li>
 <li><a href="#add-fields">Add Fields</a></li>
 <li><a href="#add-area-field">Add Area Field</a></li>
@@ -579,6 +578,7 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#symmetric-difference">Symmetric Difference</a></li>
 <li><a href="#transform">Transform</a></li>
 <li><a href="#union">Union</a></li>
+<li><a href="#update">Update</a></li>
 <li><a href="#voronoi">Voronoi</a></li>
 <li><a href="#random-points">Random Points</a></li>
 <li><a href="#buffer">Buffer</a></li>
@@ -1565,6 +1565,9 @@ No parameters
 <div class="paragraph">
 <p>Remove a Layer from a Workspace.</p>
 </div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer remove</strong> <span class="gray">--layer</span> <span class="silver">polygons</span> <span class="gray">--workspace</span> <span class="silver">mem</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -1597,63 +1600,45 @@ No parameters
 </tr>
 </tbody>
 </table>
-</div>
-<div class="sect3">
-<h4 id="update"><a class="anchor" href="#update"></a>Update</h4>
 <div class="paragraph">
-<p>Calculate the update between a Layer with another Layer</p>
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">mem</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace mem opened!</span><br></p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">input-name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The Layer name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">other-name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The other Layer name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">output-workspace</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The output Layer Workspace</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">output-name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The output Layer name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer create</strong> <span class="gray">--workspace</span> <span class="silver">mem</span> <span class="gray">--name</span> <span class="silver">points</span> <span class="gray">--fields</span> <span class="silver">"the_geom=Point</span> <span class="silver">EPSG:4326|fid=Int|name=String"</span><br>
+<span class="green">Created Layer points!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer create</strong> <span class="gray">--workspace</span> <span class="silver">mem</span> <span class="gray">--name</span> <span class="silver">lines</span> <span class="gray">--fields</span> <span class="silver">"the_geom=LineString</span> <span class="silver">EPSG:4326|fid=Int|name=String"</span><br>
+<span class="green">Created Layer lines!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer create</strong> <span class="gray">--workspace</span> <span class="silver">mem</span> <span class="gray">--name</span> <span class="silver">polygons</span> <span class="gray">--fields</span> <span class="silver">"the_geom=Polygon</span> <span class="silver">EPSG:4326|fid=Int|name=String"</span><br>
+<span class="green">Created Layer polygons!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace layers</strong> <span class="gray">--name</span> <span class="silver">mem</span><br>
+<span class="green">lines</span><br>
+<span class="green">points</span><br>
+<span class="green">polygons</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer remove</strong> <span class="gray">--layer</span> <span class="silver">polygons</span> <span class="gray">--workspace</span> <span class="silver">mem</span><br>
+<span class="green">Layer polygons removed from Workspace mem</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace layers</strong> <span class="gray">--name</span> <span class="silver">mem</span><br>
+<span class="green">lines</span><br>
+<span class="green">points</span><br></p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="update-field"><a class="anchor" href="#update-field"></a>Update Field</h4>
 <div class="paragraph">
-<p>Delete features from the Layer</p>
+<p>Update the values of a field</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer updatefield</strong> <span class="gray">--name</span> <span class="silver">points</span> <span class="gray">--field</span> <span class="silver">state</span> <span class="gray">--value</span> <span class="silver">WA</span><br></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1708,6 +1693,45 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">mem</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace mem opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer create</strong> <span class="gray">--workspace</span> <span class="silver">mem</span> <span class="gray">--name</span> <span class="silver">points</span> <span class="gray">--fields</span> <span class="silver">"the_geom=Point</span> <span class="silver">EPSG:4326|fid=Int|name=String|state=String"</span><br>
+<span class="green">Created Layer points!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer add</strong> <span class="gray">--name</span> <span class="silver">points</span> <span class="gray">--values</span> <span class="silver">"the_geom=POINT</span> <span class="silver">(-122.333056</span> <span class="silver">47.609722)|fid=1|name=Seattle"</span><br>
+<span class="green">Added Feature to points</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer add</strong> <span class="gray">--name</span> <span class="silver">points</span> <span class="gray">--values</span> <span class="silver">"the_geom=POINT</span> <span class="silver">(-122.459444</span> <span class="silver">47.241389)|fid=2|name=Tacoma"</span><br>
+<span class="green">Added Feature to points</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer updatefield</strong> <span class="gray">--name</span> <span class="silver">points</span> <span class="gray">--field</span> <span class="silver">state</span> <span class="gray">--value</span> <span class="silver">WA</span><br>
+<span class="green">Done updating state with WA!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">points</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="green">Feature (fid-479ce5ac_16fc42704d0_-79e6)</span><br>
+<span class="green">----------------------------------------</span><br>
+<span class="green">the_geom = POINT (-122.333056 47.609722)</span><br>
+<span class="green">fid = 1</span><br>
+<span class="green">name = Seattle</span><br>
+<span class="green">state = WA</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="green">Feature (fid-479ce5ac_16fc42704d0_-79e4)</span><br>
+<span class="green">----------------------------------------</span><br>
+<span class="green">the_geom = POINT (-122.459444 47.241389)</span><br>
+<span class="green">fid = 2</span><br>
+<span class="green">name = Tacoma</span><br>
+<span class="green">state = WA</span><br></p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="add-fields"><a class="anchor" href="#add-fields"></a>Add Fields</h4>
@@ -3811,6 +3835,58 @@ No parameters
 </table>
 </div>
 <div class="sect3">
+<h4 id="update"><a class="anchor" href="#update"></a>Update</h4>
+<div class="paragraph">
+<p>Calculate the update between a Layer with another Layer</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">input-name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Layer name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">other-name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The other Layer name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">output-workspace</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The output Layer Workspace</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">output-name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The output Layer name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
 <h4 id="voronoi"><a class="anchor" href="#voronoi"></a>Voronoi</h4>
 <div class="paragraph">
 <p>Calculate a voronoi diagram of the input Layer and save it to the output Layer.</p>
@@ -5167,7 +5243,7 @@ No parameters
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-01-19 19:58:16 UTC
+Last updated 2020-01-20 18:00:13 UTC
 </div>
 </div>
 </body>

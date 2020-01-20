@@ -65,7 +65,7 @@
 [green]#* layer transform - Transform the features of the input Layer and save them to the output Layer# +
 [green]#* layer union - Union a Layer with another Layer# +
 [green]#* layer update - Calculate the update between a Layer with another Layer# +
-[green]#* layer updatefield - Delete features from the Layer# +
+[green]#* layer updatefield - Update the values of a field# +
 [green]#* layer validity - Check for invalid geometries in the Layer.# +
 [green]#* layer voronoi - Calculate a voronoi diagram of the input Layer and save it to the output Layer.# +
 [green]#* map add layer - Add a Vector Layer.# +
