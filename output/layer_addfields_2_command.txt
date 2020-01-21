@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer addfields* [gray]#--input-name# [silver]#points# [gray]#--output-workspace# [silver]#mem# [gray]#--output-name# [silver]#points2# [gray]#--fields# [silver]#"name=String,state=String"# +

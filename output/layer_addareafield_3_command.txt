@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer addareafield* [gray]#--input-name# [silver]#states# [gray]#--output-workspace# [silver]#mem# [gray]#--output-name# [silver]#states_area# [gray]#--area-fieldname# [silver]#AREA# +

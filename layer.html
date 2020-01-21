@@ -1717,16 +1717,16 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">points</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid-479ce5ac_16fc42704d0_-79e6)</span><br>
-<span class="green">----------------------------------------</span><br>
+<p><span class="green">Feature (fid&#8212;&#8203;7be85bd1_16fc5c446bc_-79e6)</span><br>
+<span class="green">-----------------------------------------</span><br>
 <span class="green">the_geom = POINT (-122.333056 47.609722)</span><br>
 <span class="green">fid = 1</span><br>
 <span class="green">name = Seattle</span><br>
 <span class="green">state = WA</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid-479ce5ac_16fc42704d0_-79e4)</span><br>
-<span class="green">----------------------------------------</span><br>
+<p><span class="green">Feature (fid&#8212;&#8203;7be85bd1_16fc5c446bc_-79e4)</span><br>
+<span class="green">-----------------------------------------</span><br>
 <span class="green">the_geom = POINT (-122.459444 47.241389)</span><br>
 <span class="green">fid = 2</span><br>
 <span class="green">name = Tacoma</span><br>
@@ -1737,6 +1737,9 @@ No parameters
 <h4 id="add-fields"><a class="anchor" href="#add-fields"></a>Add Fields</h4>
 <div class="paragraph">
 <p>Add Fields to the input Layer and save the result to the output Layer</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer addfields</strong> <span class="gray">--input-name</span> <span class="silver">points</span> <span class="gray">--output-workspace</span> <span class="silver">mem</span> <span class="gray">--output-name</span> <span class="silver">points2</span> <span class="gray">--fields</span> <span class="silver">"name=String,state=String"</span><br></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1784,11 +1787,34 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">mem</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace mem opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer create</strong> <span class="gray">--workspace</span> <span class="silver">mem</span> <span class="gray">--name</span> <span class="silver">points</span> <span class="gray">--fields</span> <span class="silver">"the_geom=Point</span> <span class="silver">EPSG:4326"</span><br>
+<span class="green">Created Layer points!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer addfields</strong> <span class="gray">--input-name</span> <span class="silver">points</span> <span class="gray">--output-workspace</span> <span class="silver">mem</span> <span class="gray">--output-name</span> <span class="silver">points2</span> <span class="gray">--fields</span> <span class="silver">"name=String,state=String"</span><br>
+<span class="green">Done!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer schema</strong> <span class="gray">--name</span> <span class="silver">points2</span><br>
+<span class="green">Name                  Type</span><br>
+<span class="green">--------------------  --------------------</span><br>
+<span class="green">the_geom              Point</span><br>
+<span class="green">name                  String</span><br>
+<span class="green">state                 String</span><br></p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="add-area-field"><a class="anchor" href="#add-area-field"></a>Add Area Field</h4>
 <div class="paragraph">
 <p>Add area Field to the input Layer and save the result to the output Layer</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer addareafield</strong> <span class="gray">--input-name</span> <span class="silver">states</span> <span class="gray">--output-workspace</span> <span class="silver">mem</span> <span class="gray">--output-name</span> <span class="silver">states_area</span> <span class="gray">--area-fieldname</span> <span class="silver">AREA</span><br></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1836,6 +1862,69 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">mem</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace mem opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">examples/naturalearth.gpkg</span><br>
+<span class="green">Workspace naturalearth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">states</span> <span class="gray">--name</span> <span class="silver">states</span><br>
+<span class="green">Opened Workspace naturalearth Layer states as states</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer addareafield</strong> <span class="gray">--input-name</span> <span class="silver">states</span> <span class="gray">--output-workspace</span> <span class="silver">mem</span> <span class="gray">--output-name</span> <span class="silver">states_area</span> <span class="gray">--area-fieldname</span> <span class="silver">AREA</span><br>
+<span class="green">Done!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer schema</strong> <span class="gray">--name</span> <span class="silver">states_area</span><br>
+<span class="green">Name                  Type</span><br>
+<span class="green">--------------------  --------------------</span><br>
+<span class="green">the_geom              MultiPolygon</span><br>
+<span class="green">FID_1                 Integer</span><br>
+<span class="green">ScaleRank             Integer</span><br>
+<span class="green">FeatureCla            String</span><br>
+<span class="green">OBJECTID              Integer</span><br>
+<span class="green">VertexCou             Double</span><br>
+<span class="green">ISO                   String</span><br>
+<span class="green">NAME_0                String</span><br>
+<span class="green">NAME_1                String</span><br>
+<span class="green">VARNAME_1             String</span><br>
+<span class="green">NL_NAME_1             String</span><br>
+<span class="green">HASC_1                String</span><br>
+<span class="green">TYPE_1                String</span><br>
+<span class="green">ENGTYPE_1             String</span><br>
+<span class="green">VALIDFR_1             String</span><br>
+<span class="green">VALIDTO_1             String</span><br>
+<span class="green">REMARKS_1             String</span><br>
+<span class="green">Region                String</span><br>
+<span class="green">RegionVar             String</span><br>
+<span class="green">ProvNumber            Integer</span><br>
+<span class="green">NEV_Countr            String</span><br>
+<span class="green">FIRST_FIPS            String</span><br>
+<span class="green">FIRST_HASC            String</span><br>
+<span class="green">FIPS_1                String</span><br>
+<span class="green">gadm_level            Double</span><br>
+<span class="green">CheckMe               Integer</span><br>
+<span class="green">Region_Cod            String</span><br>
+<span class="green">Region_C_1            String</span><br>
+<span class="green">ScaleRan_1            Integer</span><br>
+<span class="green">Region_C_2            String</span><br>
+<span class="green">Region_C_3            String</span><br>
+<span class="green">Country_Pr            String</span><br>
+<span class="green">AREA                  Double</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">states_area</span> <span class="gray">--filter</span> <span class="silver">"NAME_1='North</span> <span class="silver">Dakota'"</span> <span class="gray">--field</span> <span class="silver">"NAME_0,AREA"</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="green">Feature (fid&#8212;&#8203;7be85bd1_16fc5c446bc_-792a)</span><br>
+<span class="green">-----------------------------------------</span><br>
+<span class="green">NAME_0 = United States</span><br>
+<span class="green">AREA = 21.804544852979944</span><br></p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="add-id-field"><a class="anchor" href="#add-id-field"></a>Add ID Field</h4>
@@ -5243,7 +5332,7 @@ No parameters
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-01-20 18:00:13 UTC
+Last updated 2020-01-21 01:32:01 UTC
 </div>
 </div>
 </body>

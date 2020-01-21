@@ -2045,16 +2045,16 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">points</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid-479ce5ac_16fc42704d0_-79e6)</span><br>
-<span class="green">----------------------------------------</span><br>
+<p><span class="green">Feature (fid&#8212;&#8203;7be85bd1_16fc5c446bc_-79e6)</span><br>
+<span class="green">-----------------------------------------</span><br>
 <span class="green">the_geom = POINT (-122.333056 47.609722)</span><br>
 <span class="green">fid = 1</span><br>
 <span class="green">name = Seattle</span><br>
 <span class="green">state = WA</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid-479ce5ac_16fc42704d0_-79e4)</span><br>
-<span class="green">----------------------------------------</span><br>
+<p><span class="green">Feature (fid&#8212;&#8203;7be85bd1_16fc5c446bc_-79e4)</span><br>
+<span class="green">-----------------------------------------</span><br>
 <span class="green">the_geom = POINT (-122.459444 47.241389)</span><br>
 <span class="green">fid = 2</span><br>
 <span class="green">name = Tacoma</span><br>
@@ -2065,6 +2065,9 @@ No parameters
 <h4 id="add-fields"><a class="anchor" href="#add-fields"></a>Add Fields</h4>
 <div class="paragraph">
 <p>Add Fields to the input Layer and save the result to the output Layer</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer addfields</strong> <span class="gray">--input-name</span> <span class="silver">points</span> <span class="gray">--output-workspace</span> <span class="silver">mem</span> <span class="gray">--output-name</span> <span class="silver">points2</span> <span class="gray">--fields</span> <span class="silver">"name=String,state=String"</span><br></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2112,11 +2115,34 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">mem</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace mem opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer create</strong> <span class="gray">--workspace</span> <span class="silver">mem</span> <span class="gray">--name</span> <span class="silver">points</span> <span class="gray">--fields</span> <span class="silver">"the_geom=Point</span> <span class="silver">EPSG:4326"</span><br>
+<span class="green">Created Layer points!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer addfields</strong> <span class="gray">--input-name</span> <span class="silver">points</span> <span class="gray">--output-workspace</span> <span class="silver">mem</span> <span class="gray">--output-name</span> <span class="silver">points2</span> <span class="gray">--fields</span> <span class="silver">"name=String,state=String"</span><br>
+<span class="green">Done!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer schema</strong> <span class="gray">--name</span> <span class="silver">points2</span><br>
+<span class="green">Name                  Type</span><br>
+<span class="green">--------------------  --------------------</span><br>
+<span class="green">the_geom              Point</span><br>
+<span class="green">name                  String</span><br>
+<span class="green">state                 String</span><br></p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="add-area-field"><a class="anchor" href="#add-area-field"></a>Add Area Field</h4>
 <div class="paragraph">
 <p>Add area Field to the input Layer and save the result to the output Layer</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer addareafield</strong> <span class="gray">--input-name</span> <span class="silver">states</span> <span class="gray">--output-workspace</span> <span class="silver">mem</span> <span class="gray">--output-name</span> <span class="silver">states_area</span> <span class="gray">--area-fieldname</span> <span class="silver">AREA</span><br></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2164,6 +2190,69 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">mem</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace mem opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">examples/naturalearth.gpkg</span><br>
+<span class="green">Workspace naturalearth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">states</span> <span class="gray">--name</span> <span class="silver">states</span><br>
+<span class="green">Opened Workspace naturalearth Layer states as states</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer addareafield</strong> <span class="gray">--input-name</span> <span class="silver">states</span> <span class="gray">--output-workspace</span> <span class="silver">mem</span> <span class="gray">--output-name</span> <span class="silver">states_area</span> <span class="gray">--area-fieldname</span> <span class="silver">AREA</span><br>
+<span class="green">Done!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer schema</strong> <span class="gray">--name</span> <span class="silver">states_area</span><br>
+<span class="green">Name                  Type</span><br>
+<span class="green">--------------------  --------------------</span><br>
+<span class="green">the_geom              MultiPolygon</span><br>
+<span class="green">FID_1                 Integer</span><br>
+<span class="green">ScaleRank             Integer</span><br>
+<span class="green">FeatureCla            String</span><br>
+<span class="green">OBJECTID              Integer</span><br>
+<span class="green">VertexCou             Double</span><br>
+<span class="green">ISO                   String</span><br>
+<span class="green">NAME_0                String</span><br>
+<span class="green">NAME_1                String</span><br>
+<span class="green">VARNAME_1             String</span><br>
+<span class="green">NL_NAME_1             String</span><br>
+<span class="green">HASC_1                String</span><br>
+<span class="green">TYPE_1                String</span><br>
+<span class="green">ENGTYPE_1             String</span><br>
+<span class="green">VALIDFR_1             String</span><br>
+<span class="green">VALIDTO_1             String</span><br>
+<span class="green">REMARKS_1             String</span><br>
+<span class="green">Region                String</span><br>
+<span class="green">RegionVar             String</span><br>
+<span class="green">ProvNumber            Integer</span><br>
+<span class="green">NEV_Countr            String</span><br>
+<span class="green">FIRST_FIPS            String</span><br>
+<span class="green">FIRST_HASC            String</span><br>
+<span class="green">FIPS_1                String</span><br>
+<span class="green">gadm_level            Double</span><br>
+<span class="green">CheckMe               Integer</span><br>
+<span class="green">Region_Cod            String</span><br>
+<span class="green">Region_C_1            String</span><br>
+<span class="green">ScaleRan_1            Integer</span><br>
+<span class="green">Region_C_2            String</span><br>
+<span class="green">Region_C_3            String</span><br>
+<span class="green">Country_Pr            String</span><br>
+<span class="green">AREA                  Double</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">states_area</span> <span class="gray">--filter</span> <span class="silver">"NAME_1='North</span> <span class="silver">Dakota'"</span> <span class="gray">--field</span> <span class="silver">"NAME_0,AREA"</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="green">Feature (fid&#8212;&#8203;7be85bd1_16fc5c446bc_-792a)</span><br>
+<span class="green">-----------------------------------------</span><br>
+<span class="green">NAME_0 = United States</span><br>
+<span class="green">AREA = 21.804544852979944</span><br></p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="add-id-field"><a class="anchor" href="#add-id-field"></a>Add ID Field</h4>
@@ -8583,12 +8672,12 @@ No parameters
           <span class="tag">&lt;/ogc:Filter&gt;</span>
           <span class="tag">&lt;sld:PolygonSymbolizer&gt;</span>
             <span class="tag">&lt;sld:Fill&gt;</span>
-              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fill</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#14525c<span class="tag">&lt;/sld:CssParameter&gt;</span>
+              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fill</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#4b0f30<span class="tag">&lt;/sld:CssParameter&gt;</span>
             <span class="tag">&lt;/sld:Fill&gt;</span>
           <span class="tag">&lt;/sld:PolygonSymbolizer&gt;</span>
           <span class="tag">&lt;sld:LineSymbolizer&gt;</span>
             <span class="tag">&lt;sld:Stroke&gt;</span>
-              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#0e3940<span class="tag">&lt;/sld:CssParameter&gt;</span>
+              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#340a21<span class="tag">&lt;/sld:CssParameter&gt;</span>
               <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke-width</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>0.5<span class="tag">&lt;/sld:CssParameter&gt;</span>
             <span class="tag">&lt;/sld:Stroke&gt;</span>
           <span class="tag">&lt;/sld:LineSymbolizer&gt;</span>
@@ -8602,12 +8691,12 @@ No parameters
           <span class="tag">&lt;/ogc:Filter&gt;</span>
           <span class="tag">&lt;sld:PolygonSymbolizer&gt;</span>
             <span class="tag">&lt;sld:Fill&gt;</span>
-              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fill</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#5a4822<span class="tag">&lt;/sld:CssParameter&gt;</span>
+              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fill</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#19572f<span class="tag">&lt;/sld:CssParameter&gt;</span>
             <span class="tag">&lt;/sld:Fill&gt;</span>
           <span class="tag">&lt;/sld:PolygonSymbolizer&gt;</span>
           <span class="tag">&lt;sld:LineSymbolizer&gt;</span>
             <span class="tag">&lt;sld:Stroke&gt;</span>
-              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#3e3217<span class="tag">&lt;/sld:CssParameter&gt;</span>
+              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#113c20<span class="tag">&lt;/sld:CssParameter&gt;</span>
               <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke-width</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>0.5<span class="tag">&lt;/sld:CssParameter&gt;</span>
             <span class="tag">&lt;/sld:Stroke&gt;</span>
           <span class="tag">&lt;/sld:LineSymbolizer&gt;</span>
@@ -10130,7 +10219,7 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">date</strong> <br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Monday, January 20, 2020 6:11:23 PM UTC</span><br></p>
+<p><span class="green">Tuesday, January 21, 2020 1:42:46 AM UTC</span><br></p>
 </div>
 </div>
 <div class="sect2">
@@ -10186,6 +10275,128 @@ workspace close --name naturalearth</pre>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">script src/test/resources/layer_count.txt</strong> <br></p>
+</div>
+<div class="paragraph">
+<p><span class="green">Jan 21, 2020 1:42:45 AM org.geotools.data.DataAccessFinder getDataStore</span><br>
+<span class="green">WARNING: MBTiles with vector tiles should be used, but could not connect</span><br>
+<span class="green">java.io.IOException: org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no such table: metadata)</span><br>
+<span class="green">at org.geotools.mbtiles.MBTilesFile.loadMetaData(MBTilesFile.java:433)</span><br>
+<span class="green">at org.geotools.mbtiles.MBTilesFile.loadMetaData(MBTilesFile.java:412)</span><br>
+<span class="green">at org.geotools.mbtiles.MBTilesDataStore.&lt;init&gt;(MBTilesDataStore.java:75)</span><br>
+<span class="green">at org.geotools.mbtiles.MBTilesDataStoreFactory.createDataStore(MBTilesDataStoreFactory.java:121)</span><br>
+<span class="green">at org.geotools.mbtiles.MBTilesDataStoreFactory.createDataStore(MBTilesDataStoreFactory.java:39)</span><br>
+<span class="green">at org.geotools.data.DataAccessFinder.getDataStore(DataAccessFinder.java:119)</span><br>
+<span class="green">at org.geotools.data.DataStoreFinder.getDataStore(DataStoreFinder.java:69)</span><br>
+<span class="green">at org.geotools.data.DataStoreFinder$getDataStore.call(Unknown Source)</span><br>
+<span class="green">at geoscript.workspace.WorkspaceFactory.create(WorkspaceFactory.groovy:32)</span><br>
+<span class="green">at geoscript.workspace.WorkspaceFactory$create$0.callCurrent(Unknown Source)</span><br>
+<span class="green">at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)</span><br>
+<span class="green">at geoscript.workspace.WorkspaceFactory$create$0.callCurrent(Unknown Source)</span><br>
+<span class="green">at geoscript.workspace.WorkspaceFactory.create(WorkspaceFactory.groovy:22)</span><br>
+<span class="green">at geoscript.workspace.WorkspaceFactory$create.call(Unknown Source)</span><br>
+<span class="green">at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)</span><br>
+<span class="green">at geoscript.workspace.WorkspaceFactory$create.call(Unknown Source)</span><br>
+<span class="green">at geoscript.workspace.Workspace.getWorkspace(Workspace.groovy:283)</span><br>
+<span class="green">at geoscript.workspace.Workspace$getWorkspace.call(Unknown Source)</span><br>
+<span class="green">at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)</span><br>
+<span class="green">at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115)</span><br>
+<span class="green">at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:127)</span><br>
+<span class="green">at org.geoshell.vector.WorkspaceCommands.open(WorkspaceCommands.groovy:24)</span><br>
+<span class="green">at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</span><br>
+<span class="green">at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)</span><br>
+<span class="green">at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</span><br>
+<span class="green">at java.lang.reflect.Method.invoke(Method.java:498)</span><br>
+<span class="green">at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:216)</span><br>
+<span class="green">at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</span><br>
+<span class="green">at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)</span><br>
+<span class="green">at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</span><br>
+<span class="green">at java.lang.reflect.Method.invoke(Method.java:498)</span><br>
+<span class="green">at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:216)</span><br>
+<span class="green">at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)</span><br>
+<span class="green">at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115)</span><br>
+<span class="green">at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:127)</span><br>
+<span class="green">at org.geoshell.docs.AbstractDocTest.run(AbstractDocTest.groovy:52)</span><br>
+<span class="green">at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</span><br>
+<span class="green">at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)</span><br>
+<span class="green">at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</span><br>
+<span class="green">at java.lang.reflect.Method.invoke(Method.java:498)</span><br>
+<span class="green">at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)</span><br>
+<span class="green">at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)</span><br>
+<span class="green">at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:351)</span><br>
+<span class="green">at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:64)</span><br>
+<span class="green">at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)</span><br>
+<span class="green">at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:156)</span><br>
+<span class="green">at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:184)</span><br>
+<span class="green">at org.geoshell.docs.AbstractDocTest$_run_closure1.doCall(AbstractDocTest.groovy:32)</span><br>
+<span class="green">at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</span><br>
+<span class="green">at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)</span><br>
+<span class="green">at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</span><br>
+<span class="green">at java.lang.reflect.Method.invoke(Method.java:498)</span><br>
+<span class="green">at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)</span><br>
+<span class="green">at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)</span><br>
+<span class="green">at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:263)</span><br>
+<span class="green">at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)</span><br>
+<span class="green">at groovy.lang.Closure.call(Closure.java:405)</span><br>
+<span class="green">at org.codehaus.groovy.runtime.DefaultGroovyMethods.eachWithIndex(DefaultGroovyMethods.java:2246)</span><br>
+<span class="green">at org.codehaus.groovy.runtime.DefaultGroovyMethods.eachWithIndex(DefaultGroovyMethods.java:2226)</span><br>
+<span class="green">at org.codehaus.groovy.runtime.DefaultGroovyMethods.eachWithIndex(DefaultGroovyMethods.java:2276)</span><br>
+<span class="green">at org.codehaus.groovy.runtime.dgm$199.invoke(Unknown Source)</span><br>
+<span class="green">at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoMetaMethodSiteNoUnwrapNoCoerce.invoke(PojoMetaMethodSite.java:244)</span><br>
+<span class="green">at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:53)</span><br>
+<span class="green">at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)</span><br>
+<span class="green">at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115)</span><br>
+<span class="green">at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:127)</span><br>
+<span class="green">at org.geoshell.docs.AbstractDocTest.run(AbstractDocTest.groovy:31)</span><br>
+<span class="green">at org.geoshell.docs.AbstractDocTest$run.callCurrent(Unknown Source)</span><br>
+<span class="green">at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)</span><br>
+<span class="green">at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:156)</span><br>
+<span class="green">at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:184)</span><br>
+<span class="green">at org.geoshell.docs.BuiltinDocTest.script(BuiltinDocTest.groovy:66)</span><br>
+<span class="green">at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</span><br>
+<span class="green">at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)</span><br>
+<span class="green">at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</span><br>
+<span class="green">at java.lang.reflect.Method.invoke(Method.java:498)</span><br>
+<span class="green">at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)</span><br>
+<span class="green">at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)</span><br>
+<span class="green">at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)</span><br>
+<span class="green">at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)</span><br>
+<span class="green">at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)</span><br>
+<span class="green">at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)</span><br>
+<span class="green">at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)</span><br>
+<span class="green">at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)</span><br>
+<span class="green">at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)</span><br>
+<span class="green">at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)</span><br>
+<span class="green">at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)</span><br>
+<span class="green">at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)</span><br>
+<span class="green">at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)</span><br>
+<span class="green">at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)</span><br>
+<span class="green">at org.junit.runners.ParentRunner.run(ParentRunner.java:363)</span><br>
+<span class="green">at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)</span><br>
+<span class="green">at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)</span><br>
+<span class="green">at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)</span><br>
+<span class="green">at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)</span><br>
+<span class="green">at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:383)</span><br>
+<span class="green">at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:344)</span><br>
+<span class="green">at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)</span><br>
+<span class="green">at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)</span><br>
+<span class="green">Caused by: org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no such table: metadata)</span><br>
+<span class="green">at org.sqlite.core.DB.newSQLException(DB.java:941)</span><br>
+<span class="green">at org.sqlite.core.DB.newSQLException(DB.java:953)</span><br>
+<span class="green">at org.sqlite.core.DB.throwex(DB.java:918)</span><br>
+<span class="green">at org.sqlite.core.NativeDB.prepare_utf8(Native Method)</span><br>
+<span class="green">at org.sqlite.core.NativeDB.prepare(NativeDB.java:134)</span><br>
+<span class="green">at org.sqlite.core.DB.prepare(DB.java:257)</span><br>
+<span class="green">at org.sqlite.core.CorePreparedStatement.&lt;init&gt;(CorePreparedStatement.java:47)</span><br>
+<span class="green">at org.sqlite.jdbc3.JDBC3PreparedStatement.&lt;init&gt;(JDBC3PreparedStatement.java:30)</span><br>
+<span class="green">at org.sqlite.jdbc4.JDBC4PreparedStatement.&lt;init&gt;(JDBC4PreparedStatement.java:19)</span><br>
+<span class="green">at org.sqlite.jdbc4.JDBC4Connection.prepareStatement(JDBC4Connection.java:35)</span><br>
+<span class="green">at org.sqlite.jdbc3.JDBC3Connection.prepareStatement(JDBC3Connection.java:241)</span><br>
+<span class="green">at org.sqlite.jdbc3.JDBC3Connection.prepareStatement(JDBC3Connection.java:205)</span><br>
+<span class="green">at org.geotools.jdbc.util.SqlUtil$PreparedStatementBuilder.&lt;init&gt;(SqlUtil.java:57)</span><br>
+<span class="green">at org.geotools.jdbc.util.SqlUtil.prepare(SqlUtil.java:240)</span><br>
+<span class="green">at org.geotools.mbtiles.MBTilesFile.loadMetaDataEntry(MBTilesFile.java:831)</span><br>
+<span class="green">at org.geotools.mbtiles.MBTilesFile.loadMetaData(MBTilesFile.java:419)</span><br>
+<span class="green">&#8230;&#8203; 107 more</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="green">Workspace naturalearth opened!</span><br>
@@ -10440,7 +10651,7 @@ No parameters
 <div id="footer">
 <div id="footer-text">
 Version 0.7-SNAPSHOT<br>
-Last updated 2020-01-20 18:00:13 UTC
+Last updated 2020-01-21 01:32:01 UTC
 </div>
 </div>
 </body>

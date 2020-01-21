@@ -1,0 +1,5 @@
+[green]#Name                  Type# +
+[green]#--------------------  --------------------# +
+[green]#the_geom              Point# +
+[green]#name                  String# +
+[green]#state                 String# +

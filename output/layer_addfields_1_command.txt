@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer create* [gray]#--workspace# [silver]#mem# [gray]#--name# [silver]#points# [gray]#--fields# [silver]#"the_geom=Point# [silver]#EPSG:4326"# +

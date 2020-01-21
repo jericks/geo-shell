@@ -1,0 +1,5 @@
+
+[green]#Feature (fid--7be85bd1_16fc5c446bc_-792a)# +
+[green]#-----------------------------------------# +
+[green]#NAME_0 = United States# +
+[green]#AREA = 21.804544852979944# +
