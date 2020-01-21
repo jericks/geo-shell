@@ -251,6 +251,28 @@ class LayerDocTest extends AbstractDocTest {
     }
 
     @Test
+    void addFields() {
+        run("layer_addfields", [
+                'workspace open --name mem --params memory',
+                'layer create --workspace mem --name points --fields "the_geom=Point EPSG:4326"',
+                'layer addfields --input-name points --output-workspace mem --output-name points2 --fields "name=String,state=String"',
+                'layer schema --name points2'
+        ])
+    }
+
+    @Test
+    void addAreaFields() {
+        run("layer_addareafield", [
+                'workspace open --name mem --params memory',
+                'workspace open --name naturalearth --params examples/naturalearth.gpkg',
+                'layer open --workspace naturalearth --layer states --name states',
+                'layer addareafield --input-name states --output-workspace mem --output-name states_area --area-fieldname AREA',
+                'layer schema --name states_area',
+                'layer features --name states_area --filter "NAME_1=\'North Dakota\'" --field "NAME_0,AREA"',
+        ])
+    }
+
+    @Test
     void createRandomPoints() {
         run("layer_random", [
                 "workspace open --name layers --params memory",

@@ -367,12 +367,48 @@ include::output/layer_updatefield_5_result.txt[]
 ==== Add Fields
 
 include::commands/layer_addfields_description.txt[]
+
+include::output/layer_addfields_2_command.txt[]
+
 include::commands/layer_addfields.txt[]
+
+include::output/layer_addfields_0_command.txt[]
+include::output/layer_addfields_0_result.txt[]
+
+include::output/layer_addfields_1_command.txt[]
+include::output/layer_addfields_1_result.txt[]
+
+include::output/layer_addfields_2_command.txt[]
+include::output/layer_addfields_2_result.txt[]
+
+include::output/layer_addfields_3_command.txt[]
+include::output/layer_addfields_3_result.txt[]
 
 ==== Add Area Field
 
 include::commands/layer_addareafield_description.txt[]
+
+include::output/layer_addareafield_3_command.txt[]
+
 include::commands/layer_addareafield.txt[]
+
+include::output/layer_addareafield_0_command.txt[]
+include::output/layer_addareafield_0_result.txt[]
+
+include::output/layer_addareafield_1_command.txt[]
+include::output/layer_addareafield_1_result.txt[]
+
+include::output/layer_addareafield_2_command.txt[]
+include::output/layer_addareafield_2_result.txt[]
+
+include::output/layer_addareafield_3_command.txt[]
+include::output/layer_addareafield_3_result.txt[]
+
+include::output/layer_addareafield_4_command.txt[]
+include::output/layer_addareafield_4_result.txt[]
+
+include::output/layer_addareafield_5_command.txt[]
+include::output/layer_addareafield_5_result.txt[]
 
 ==== Add ID Field
 
