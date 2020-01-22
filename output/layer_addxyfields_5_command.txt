@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer features* [gray]#--name# [silver]#places_xy# [gray]#--filter# [silver]#"NAME='Seattle'"# [gray]#--field# [silver]#"NAME,X,Y"# +

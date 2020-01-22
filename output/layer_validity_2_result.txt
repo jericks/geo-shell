@@ -1,0 +1,3 @@
+[green]#Values                 Reason# +
+[green]#---------------------  --------------------# +
+[green]#invalid.1360815594529  Self-intersection# +

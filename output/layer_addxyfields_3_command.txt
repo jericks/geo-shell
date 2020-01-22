@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer addxyfields* [gray]#--input-name# [silver]#places# [gray]#--output-workspace# [silver]#mem# [gray]#--output-name# [silver]#places_xy# [gray]#--x-fieldname# [silver]#X# [gray]#--y-fieldname# [silver]#Y# +

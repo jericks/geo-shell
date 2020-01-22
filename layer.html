@@ -1717,16 +1717,16 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">points</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;7be85bd1_16fc5c446bc_-79e6)</span><br>
-<span class="green">-----------------------------------------</span><br>
+<p><span class="green">Feature (fid-6c61a13a_16fcb771f89_-78a0)</span><br>
+<span class="green">----------------------------------------</span><br>
 <span class="green">the_geom = POINT (-122.333056 47.609722)</span><br>
 <span class="green">fid = 1</span><br>
 <span class="green">name = Seattle</span><br>
 <span class="green">state = WA</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;7be85bd1_16fc5c446bc_-79e4)</span><br>
-<span class="green">-----------------------------------------</span><br>
+<p><span class="green">Feature (fid-6c61a13a_16fcb771f89_-789e)</span><br>
+<span class="green">----------------------------------------</span><br>
 <span class="green">the_geom = POINT (-122.459444 47.241389)</span><br>
 <span class="green">fid = 2</span><br>
 <span class="green">name = Tacoma</span><br>
@@ -1920,8 +1920,8 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">states_area</span> <span class="gray">--filter</span> <span class="silver">"NAME_1='North</span> <span class="silver">Dakota'"</span> <span class="gray">--field</span> <span class="silver">"NAME_0,AREA"</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;7be85bd1_16fc5c446bc_-792a)</span><br>
-<span class="green">-----------------------------------------</span><br>
+<p><span class="green">Feature (fid-6c61a13a_16fcb771f89_-7899)</span><br>
+<span class="green">----------------------------------------</span><br>
 <span class="green">NAME_0 = United States</span><br>
 <span class="green">AREA = 21.804544852979944</span><br></p>
 </div>
@@ -1930,6 +1930,9 @@ No parameters
 <h4 id="add-id-field"><a class="anchor" href="#add-id-field"></a>Add ID Field</h4>
 <div class="paragraph">
 <p>Add area ID to the input Layer and save the result to the output Layer</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer addidfield</strong> <span class="gray">--input-name</span> <span class="silver">places</span> <span class="gray">--output-workspace</span> <span class="silver">mem</span> <span class="gray">--output-name</span> <span class="silver">places_id</span> <span class="gray">--id-fieldname</span> <span class="silver">ID</span> <span class="gray">--start-value</span> <span class="silver">1</span><br></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1984,11 +1987,139 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">mem</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace mem opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">examples/naturalearth.gpkg</span><br>
+<span class="green">Workspace naturalearth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">places</span> <span class="gray">--name</span> <span class="silver">places</span><br>
+<span class="green">Opened Workspace naturalearth Layer places as places</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer addidfield</strong> <span class="gray">--input-name</span> <span class="silver">places</span> <span class="gray">--output-workspace</span> <span class="silver">mem</span> <span class="gray">--output-name</span> <span class="silver">places_id</span> <span class="gray">--id-fieldname</span> <span class="silver">ID</span> <span class="gray">--start-value</span> <span class="silver">1</span><br>
+<span class="green">Done!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer schema</strong> <span class="gray">--name</span> <span class="silver">places_id</span><br>
+<span class="green">Name                  Type</span><br>
+<span class="green">--------------------  --------------------</span><br>
+<span class="green">the_geom              Point</span><br>
+<span class="green">SCALERANK             Integer</span><br>
+<span class="green">NATSCALE              Integer</span><br>
+<span class="green">LABELRANK             Integer</span><br>
+<span class="green">FEATURECLA            String</span><br>
+<span class="green">NAME                  String</span><br>
+<span class="green">NAMEPAR               String</span><br>
+<span class="green">NAMEALT               String</span><br>
+<span class="green">DIFFASCII             Integer</span><br>
+<span class="green">NAMEASCII             String</span><br>
+<span class="green">ADM0CAP               Double</span><br>
+<span class="green">CAPALT                Double</span><br>
+<span class="green">CAPIN                 String</span><br>
+<span class="green">WORLDCITY             Double</span><br>
+<span class="green">MEGACITY              Integer</span><br>
+<span class="green">SOV0NAME              String</span><br>
+<span class="green">SOV_A3                String</span><br>
+<span class="green">ADM0NAME              String</span><br>
+<span class="green">ADM0_A3               String</span><br>
+<span class="green">ADM1NAME              String</span><br>
+<span class="green">ISO_A2                String</span><br>
+<span class="green">NOTE                  String</span><br>
+<span class="green">LATITUDE              Double</span><br>
+<span class="green">LONGITUDE             Double</span><br>
+<span class="green">CHANGED               Double</span><br>
+<span class="green">NAMEDIFF              Integer</span><br>
+<span class="green">DIFFNOTE              String</span><br>
+<span class="green">POP_MAX               Integer</span><br>
+<span class="green">POP_MIN               Integer</span><br>
+<span class="green">POP_OTHER             Integer</span><br>
+<span class="green">GEONAMEID             Double</span><br>
+<span class="green">MEGANAME              String</span><br>
+<span class="green">LS_NAME               String</span><br>
+<span class="green">LS_MATCH              Integer</span><br>
+<span class="green">CHECKME               Integer</span><br>
+<span class="green">MAX_POP10             Integer</span><br>
+<span class="green">MAX_POP20             Integer</span><br>
+<span class="green">MAX_POP50             Integer</span><br>
+<span class="green">MAX_POP300            Integer</span><br>
+<span class="green">MAX_POP310            Integer</span><br>
+<span class="green">MAX_NATSCA            Integer</span><br>
+<span class="green">MIN_AREAKM            Integer</span><br>
+<span class="green">MAX_AREAKM            Double</span><br>
+<span class="green">MIN_AREAMI            Double</span><br>
+<span class="green">MAX_AREAMI            Double</span><br>
+<span class="green">MIN_PERKM             Double</span><br>
+<span class="green">MAX_PERKM             Double</span><br>
+<span class="green">MIN_PERMI             Double</span><br>
+<span class="green">MAX_PERMI             Double</span><br>
+<span class="green">MIN_BBXMIN            Double</span><br>
+<span class="green">MAX_BBXMIN            Double</span><br>
+<span class="green">MIN_BBXMAX            Double</span><br>
+<span class="green">MAX_BBXMAX            Double</span><br>
+<span class="green">MIN_BBYMIN            Double</span><br>
+<span class="green">MAX_BBYMIN            Double</span><br>
+<span class="green">MIN_BBYMAX            Double</span><br>
+<span class="green">MAX_BBYMAX            Double</span><br>
+<span class="green">MEAN_BBXC             Double</span><br>
+<span class="green">MEAN_BBYC             Double</span><br>
+<span class="green">COMPARE               Integer</span><br>
+<span class="green">GN_ASCII              String</span><br>
+<span class="green">FEATURE_CL            String</span><br>
+<span class="green">FEATURE_CO            String</span><br>
+<span class="green">ADMIN1_COD            Double</span><br>
+<span class="green">GN_POP                Integer</span><br>
+<span class="green">ELEVATION             Double</span><br>
+<span class="green">GTOPO30               Double</span><br>
+<span class="green">TIMEZONE              String</span><br>
+<span class="green">GEONAMESNO            String</span><br>
+<span class="green">UN_FID                Integer</span><br>
+<span class="green">UN_ADM0               String</span><br>
+<span class="green">UN_LAT                Double</span><br>
+<span class="green">UN_LONG               Double</span><br>
+<span class="green">POP1950               Double</span><br>
+<span class="green">POP1955               Double</span><br>
+<span class="green">POP1960               Double</span><br>
+<span class="green">POP1965               Double</span><br>
+<span class="green">POP1970               Double</span><br>
+<span class="green">POP1975               Double</span><br>
+<span class="green">POP1980               Double</span><br>
+<span class="green">POP1985               Double</span><br>
+<span class="green">POP1990               Double</span><br>
+<span class="green">POP1995               Double</span><br>
+<span class="green">POP2000               Double</span><br>
+<span class="green">POP2005               Double</span><br>
+<span class="green">POP2010               Double</span><br>
+<span class="green">POP2015               Double</span><br>
+<span class="green">POP2020               Double</span><br>
+<span class="green">POP2025               Double</span><br>
+<span class="green">POP2050               Double</span><br>
+<span class="green">CITYALT               String</span><br>
+<span class="green">popDiff               Integer</span><br>
+<span class="green">popPerc               Double</span><br>
+<span class="green">ls_gross              Integer</span><br>
+<span class="green">ID                    Integer</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">places_id</span> <span class="gray">--filter</span> <span class="silver">"NAME='Seattle'"</span> <span class="gray">--field</span> <span class="silver">"NAME,ID"</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="green">Feature (fid-6c61a13a_16fcb771f89_-79de)</span><br>
+<span class="green">----------------------------------------</span><br>
+<span class="green">NAME = Seattle</span><br>
+<span class="green">ID = 10</span><br></p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="add-xy-fields"><a class="anchor" href="#add-xy-fields"></a>Add XY Fields</h4>
 <div class="paragraph">
 <p>Add x and y coordinate Fields to the input Layer and save the result to the output Layer</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer addxyfields</strong> <span class="gray">--input-name</span> <span class="silver">places</span> <span class="gray">--output-workspace</span> <span class="silver">mem</span> <span class="gray">--output-name</span> <span class="silver">places_xy</span> <span class="gray">--x-fieldname</span> <span class="silver">X</span> <span class="gray">--y-fieldname</span> <span class="silver">Y</span><br></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2043,11 +2174,141 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">mem</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace mem opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">examples/naturalearth.gpkg</span><br>
+<span class="green">Workspace naturalearth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">places</span> <span class="gray">--name</span> <span class="silver">places</span><br>
+<span class="green">Opened Workspace naturalearth Layer places as places</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer addxyfields</strong> <span class="gray">--input-name</span> <span class="silver">places</span> <span class="gray">--output-workspace</span> <span class="silver">mem</span> <span class="gray">--output-name</span> <span class="silver">places_xy</span> <span class="gray">--x-fieldname</span> <span class="silver">X</span> <span class="gray">--y-fieldname</span> <span class="silver">Y</span><br>
+<span class="green">Done!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer schema</strong> <span class="gray">--name</span> <span class="silver">places_xy</span><br>
+<span class="green">Name                  Type</span><br>
+<span class="green">--------------------  --------------------</span><br>
+<span class="green">the_geom              Point</span><br>
+<span class="green">SCALERANK             Integer</span><br>
+<span class="green">NATSCALE              Integer</span><br>
+<span class="green">LABELRANK             Integer</span><br>
+<span class="green">FEATURECLA            String</span><br>
+<span class="green">NAME                  String</span><br>
+<span class="green">NAMEPAR               String</span><br>
+<span class="green">NAMEALT               String</span><br>
+<span class="green">DIFFASCII             Integer</span><br>
+<span class="green">NAMEASCII             String</span><br>
+<span class="green">ADM0CAP               Double</span><br>
+<span class="green">CAPALT                Double</span><br>
+<span class="green">CAPIN                 String</span><br>
+<span class="green">WORLDCITY             Double</span><br>
+<span class="green">MEGACITY              Integer</span><br>
+<span class="green">SOV0NAME              String</span><br>
+<span class="green">SOV_A3                String</span><br>
+<span class="green">ADM0NAME              String</span><br>
+<span class="green">ADM0_A3               String</span><br>
+<span class="green">ADM1NAME              String</span><br>
+<span class="green">ISO_A2                String</span><br>
+<span class="green">NOTE                  String</span><br>
+<span class="green">LATITUDE              Double</span><br>
+<span class="green">LONGITUDE             Double</span><br>
+<span class="green">CHANGED               Double</span><br>
+<span class="green">NAMEDIFF              Integer</span><br>
+<span class="green">DIFFNOTE              String</span><br>
+<span class="green">POP_MAX               Integer</span><br>
+<span class="green">POP_MIN               Integer</span><br>
+<span class="green">POP_OTHER             Integer</span><br>
+<span class="green">GEONAMEID             Double</span><br>
+<span class="green">MEGANAME              String</span><br>
+<span class="green">LS_NAME               String</span><br>
+<span class="green">LS_MATCH              Integer</span><br>
+<span class="green">CHECKME               Integer</span><br>
+<span class="green">MAX_POP10             Integer</span><br>
+<span class="green">MAX_POP20             Integer</span><br>
+<span class="green">MAX_POP50             Integer</span><br>
+<span class="green">MAX_POP300            Integer</span><br>
+<span class="green">MAX_POP310            Integer</span><br>
+<span class="green">MAX_NATSCA            Integer</span><br>
+<span class="green">MIN_AREAKM            Integer</span><br>
+<span class="green">MAX_AREAKM            Double</span><br>
+<span class="green">MIN_AREAMI            Double</span><br>
+<span class="green">MAX_AREAMI            Double</span><br>
+<span class="green">MIN_PERKM             Double</span><br>
+<span class="green">MAX_PERKM             Double</span><br>
+<span class="green">MIN_PERMI             Double</span><br>
+<span class="green">MAX_PERMI             Double</span><br>
+<span class="green">MIN_BBXMIN            Double</span><br>
+<span class="green">MAX_BBXMIN            Double</span><br>
+<span class="green">MIN_BBXMAX            Double</span><br>
+<span class="green">MAX_BBXMAX            Double</span><br>
+<span class="green">MIN_BBYMIN            Double</span><br>
+<span class="green">MAX_BBYMIN            Double</span><br>
+<span class="green">MIN_BBYMAX            Double</span><br>
+<span class="green">MAX_BBYMAX            Double</span><br>
+<span class="green">MEAN_BBXC             Double</span><br>
+<span class="green">MEAN_BBYC             Double</span><br>
+<span class="green">COMPARE               Integer</span><br>
+<span class="green">GN_ASCII              String</span><br>
+<span class="green">FEATURE_CL            String</span><br>
+<span class="green">FEATURE_CO            String</span><br>
+<span class="green">ADMIN1_COD            Double</span><br>
+<span class="green">GN_POP                Integer</span><br>
+<span class="green">ELEVATION             Double</span><br>
+<span class="green">GTOPO30               Double</span><br>
+<span class="green">TIMEZONE              String</span><br>
+<span class="green">GEONAMESNO            String</span><br>
+<span class="green">UN_FID                Integer</span><br>
+<span class="green">UN_ADM0               String</span><br>
+<span class="green">UN_LAT                Double</span><br>
+<span class="green">UN_LONG               Double</span><br>
+<span class="green">POP1950               Double</span><br>
+<span class="green">POP1955               Double</span><br>
+<span class="green">POP1960               Double</span><br>
+<span class="green">POP1965               Double</span><br>
+<span class="green">POP1970               Double</span><br>
+<span class="green">POP1975               Double</span><br>
+<span class="green">POP1980               Double</span><br>
+<span class="green">POP1985               Double</span><br>
+<span class="green">POP1990               Double</span><br>
+<span class="green">POP1995               Double</span><br>
+<span class="green">POP2000               Double</span><br>
+<span class="green">POP2005               Double</span><br>
+<span class="green">POP2010               Double</span><br>
+<span class="green">POP2015               Double</span><br>
+<span class="green">POP2020               Double</span><br>
+<span class="green">POP2025               Double</span><br>
+<span class="green">POP2050               Double</span><br>
+<span class="green">CITYALT               String</span><br>
+<span class="green">popDiff               Integer</span><br>
+<span class="green">popPerc               Double</span><br>
+<span class="green">ls_gross              Integer</span><br>
+<span class="green">X                     Double</span><br>
+<span class="green">Y                     Double</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">places_xy</span> <span class="gray">--filter</span> <span class="silver">"NAME='Seattle'"</span> <span class="gray">--field</span> <span class="silver">"NAME,X,Y"</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="green">Feature (fid-6c61a13a_16fcb771f89_-73a6)</span><br>
+<span class="green">----------------------------------------</span><br>
+<span class="green">NAME = Seattle</span><br>
+<span class="green">X = -122.34193084586849</span><br>
+<span class="green">Y = 47.57194791253073</span><br></p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="validity"><a class="anchor" href="#validity"></a>Validity</h4>
 <div class="paragraph">
 <p>Check for invalid geometries in the Layer.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer validity</strong> <span class="gray">--name</span> <span class="silver">areas</span><br></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2081,6 +2342,20 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">areas</span> <span class="gray">--params</span> <span class="silver">src/test/resources/invalid.properties</span><br>
+<span class="green">Workspace areas opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">areas</span> <span class="gray">--layer</span> <span class="silver">invalid</span> <span class="gray">--name</span> <span class="silver">areas</span><br>
+<span class="green">Opened Workspace areas Layer invalid as areas</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer validity</strong> <span class="gray">--name</span> <span class="silver">areas</span><br>
+<span class="green">Values                 Reason</span><br>
+<span class="green">---------------------  --------------------</span><br>
+<span class="green">invalid.1360815594529  Self-intersection</span><br></p>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -5332,7 +5607,7 @@ No parameters
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-01-21 01:32:01 UTC
+Last updated 2020-01-22 04:04:51 UTC
 </div>
 </div>
 </body>

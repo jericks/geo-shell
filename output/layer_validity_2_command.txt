@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer validity* [gray]#--name# [silver]#areas# +

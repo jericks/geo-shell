@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer addidfield* [gray]#--input-name# [silver]#places# [gray]#--output-workspace# [silver]#mem# [gray]#--output-name# [silver]#places_id# [gray]#--id-fieldname# [silver]#ID# [gray]#--start-value# [silver]#1# +
