@@ -413,17 +413,72 @@ include::output/layer_addareafield_5_result.txt[]
 ==== Add ID Field
 
 include::commands/layer_addidfield_description.txt[]
+
+include::output/layer_addidfield_3_command.txt[]
+
 include::commands/layer_addidfield.txt[]
+
+include::output/layer_addidfield_0_command.txt[]
+include::output/layer_addidfield_0_result.txt[]
+
+include::output/layer_addidfield_1_command.txt[]
+include::output/layer_addidfield_1_result.txt[]
+
+include::output/layer_addidfield_2_command.txt[]
+include::output/layer_addidfield_2_result.txt[]
+
+include::output/layer_addidfield_3_command.txt[]
+include::output/layer_addidfield_3_result.txt[]
+
+include::output/layer_addidfield_4_command.txt[]
+include::output/layer_addidfield_4_result.txt[]
+
+include::output/layer_addidfield_5_command.txt[]
+include::output/layer_addidfield_5_result.txt[]
 
 ==== Add XY Fields
 
 include::commands/layer_addxyfields_description.txt[]
+
+include::output/layer_addxyfields_3_command.txt[]
+
 include::commands/layer_addxyfields.txt[]
+
+include::output/layer_addxyfields_0_command.txt[]
+include::output/layer_addxyfields_0_result.txt[]
+
+include::output/layer_addxyfields_1_command.txt[]
+include::output/layer_addxyfields_1_result.txt[]
+
+include::output/layer_addxyfields_2_command.txt[]
+include::output/layer_addxyfields_2_result.txt[]
+
+include::output/layer_addxyfields_3_command.txt[]
+include::output/layer_addxyfields_3_result.txt[]
+
+include::output/layer_addxyfields_4_command.txt[]
+include::output/layer_addxyfields_4_result.txt[]
+
+include::output/layer_addxyfields_5_command.txt[]
+include::output/layer_addxyfields_5_result.txt[]
+
 
 ==== Validity
 
 include::commands/layer_validity_description.txt[]
+
+include::output/layer_validity_2_command.txt[]
+
 include::commands/layer_validity.txt[]
+
+include::output/layer_validity_0_command.txt[]
+include::output/layer_validity_0_result.txt[]
+
+include::output/layer_validity_1_command.txt[]
+include::output/layer_validity_1_result.txt[]
+
+include::output/layer_validity_2_command.txt[]
+include::output/layer_validity_2_result.txt[]
 
 === Geoprocessing
 

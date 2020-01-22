@@ -261,7 +261,7 @@ class LayerDocTest extends AbstractDocTest {
     }
 
     @Test
-    void addAreaFields() {
+    void addAreaField() {
         run("layer_addareafield", [
                 'workspace open --name mem --params memory',
                 'workspace open --name naturalearth --params examples/naturalearth.gpkg',
@@ -269,6 +269,39 @@ class LayerDocTest extends AbstractDocTest {
                 'layer addareafield --input-name states --output-workspace mem --output-name states_area --area-fieldname AREA',
                 'layer schema --name states_area',
                 'layer features --name states_area --filter "NAME_1=\'North Dakota\'" --field "NAME_0,AREA"',
+        ])
+    }
+
+    @Test
+    void addIdField() {
+        run("layer_addidfield", [
+                'workspace open --name mem --params memory',
+                'workspace open --name naturalearth --params examples/naturalearth.gpkg',
+                'layer open --workspace naturalearth --layer places --name places',
+                'layer addidfield --input-name places --output-workspace mem --output-name places_id --id-fieldname ID --start-value 1',
+                'layer schema --name places_id',
+                'layer features --name places_id --filter "NAME=\'Seattle\'" --field "NAME,ID"',
+        ])
+    }
+
+    @Test
+    void addXYFields() {
+        run("layer_addxyfields", [
+                'workspace open --name mem --params memory',
+                'workspace open --name naturalearth --params examples/naturalearth.gpkg',
+                'layer open --workspace naturalearth --layer places --name places',
+                'layer addxyfields --input-name places --output-workspace mem --output-name places_xy --x-fieldname X --y-fieldname Y',
+                'layer schema --name places_xy',
+                'layer features --name places_xy --filter "NAME=\'Seattle\'" --field "NAME,X,Y"',
+        ])
+    }
+
+    @Test
+    void validity() {
+        run("layer_validity", [
+                'workspace open --name areas --params src/test/resources/invalid.properties',
+                'layer open --workspace areas --layer invalid --name areas',
+                'layer validity --name areas'
         ])
     }
 
