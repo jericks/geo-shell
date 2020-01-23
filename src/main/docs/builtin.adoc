@@ -80,7 +80,7 @@ include::commands/system_properties.txt[]
 
 include::output/system_properties_0_command.txt[]
 
-include::output/system_properties_0_result.txt[lines=1..10]
+include::output/system_properties_0_result.txt[lines=1..5]
 
 === Version
 
