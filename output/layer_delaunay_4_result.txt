@@ -1,0 +1,1 @@
+[green]#Default Vector Style for delaunay written to /home/travis/build/jericks/geo-shell/examples/delaunay.sld!# +

@@ -1,13 +1,13 @@
 
-[green]#Feature (fid-6c61a13a_16fcb771f89_-78a0)# +
-[green]#----------------------------------------# +
+[green]#Feature (fid--73171017_16fd0b287c3_-78a0)# +
+[green]#-----------------------------------------# +
 [green]#the_geom = POINT (-122.333056 47.609722)# +
 [green]#fid = 1# +
 [green]#name = Seattle# +
 [green]#state = WA# +
 
-[green]#Feature (fid-6c61a13a_16fcb771f89_-789e)# +
-[green]#----------------------------------------# +
+[green]#Feature (fid--73171017_16fd0b287c3_-789e)# +
+[green]#-----------------------------------------# +
 [green]#the_geom = POINT (-122.459444 47.241389)# +
 [green]#fid = 2# +
 [green]#name = Tacoma# +

@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*style vector default* [gray]#--layer# [silver]#voronoi# [gray]#--color# [silver]##1E90FF# [gray]#--opacity# [silver]#0.25# [gray]#--file# [silver]#examples/voronoi.sld# +

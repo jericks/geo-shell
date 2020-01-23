@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer voronoi* [gray]#--input-name# [silver]#places# [gray]#--output-workspace# [silver]#layers# [gray]#--output-name# [silver]#voronoi# +

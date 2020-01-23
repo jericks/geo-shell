@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer style set* [gray]#--name# [silver]#voronoi# [gray]#--style# [silver]#examples/voronoi.sld# +

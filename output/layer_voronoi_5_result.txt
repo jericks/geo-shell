@@ -1,0 +1,1 @@
+[green]#Style /home/travis/build/jericks/geo-shell/examples/voronoi.sld set on voronoi# +

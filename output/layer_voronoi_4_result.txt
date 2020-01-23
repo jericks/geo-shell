@@ -1,0 +1,1 @@
+[green]#Default Vector Style for voronoi written to /home/travis/build/jericks/geo-shell/examples/voronoi.sld!# +
