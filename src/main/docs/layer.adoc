@@ -605,7 +605,60 @@ include::commands/layer_coordinates.txt[]
 ==== Delaunay
 
 include::commands/layer_delaunay_description.txt[]
+
+include::output/layer_delaunay_3_command.txt[]
+
 include::commands/layer_delaunay.txt[]
+
+include::output/layer_delaunay_0_command.txt[]
+include::output/layer_delaunay_0_result.txt[]
+
+include::output/layer_delaunay_1_command.txt[]
+include::output/layer_delaunay_1_result.txt[]
+
+include::output/layer_delaunay_2_command.txt[]
+include::output/layer_delaunay_2_result.txt[]
+
+include::output/layer_delaunay_3_command.txt[]
+include::output/layer_delaunay_3_result.txt[]
+
+include::output/layer_delaunay_4_command.txt[]
+include::output/layer_delaunay_4_result.txt[]
+
+include::output/layer_delaunay_5_command.txt[]
+include::output/layer_delaunay_5_result.txt[]
+
+include::output/layer_delaunay_6_command.txt[]
+include::output/layer_delaunay_6_result.txt[]
+
+include::output/layer_delaunay_7_command.txt[]
+include::output/layer_delaunay_7_result.txt[]
+
+include::output/layer_delaunay_8_command.txt[]
+include::output/layer_delaunay_8_result.txt[]
+
+include::output/layer_delaunay_9_command.txt[]
+include::output/layer_delaunay_9_result.txt[]
+
+include::output/layer_delaunay_10_command.txt[]
+include::output/layer_delaunay_10_result.txt[]
+
+include::output/layer_delaunay_11_command.txt[]
+include::output/layer_delaunay_11_result.txt[]
+
+include::output/layer_delaunay_12_command.txt[]
+include::output/layer_delaunay_12_result.txt[]
+
+include::output/layer_delaunay_13_command.txt[]
+include::output/layer_delaunay_13_result.txt[]
+
+include::output/layer_delaunay_14_result.txt[]
+include::output/layer_delaunay_14_command.txt[]
+
+include::output/layer_delaunay_15_result.txt[]
+include::output/layer_delaunay_15_command.txt[]
+
+image::layer_delaunay.png[]
 
 ==== Densify
 
@@ -1005,7 +1058,60 @@ include::commands/layer_update.txt[]
 ==== Voronoi
 
 include::commands/layer_voronoi_description.txt[]
+
+include::output/layer_voronoi_3_command.txt[]
+
 include::commands/layer_voronoi.txt[]
+
+include::output/layer_voronoi_0_command.txt[]
+include::output/layer_voronoi_0_result.txt[]
+
+include::output/layer_voronoi_1_command.txt[]
+include::output/layer_voronoi_1_result.txt[]
+
+include::output/layer_voronoi_2_command.txt[]
+include::output/layer_voronoi_2_result.txt[]
+
+include::output/layer_voronoi_3_command.txt[]
+include::output/layer_voronoi_3_result.txt[]
+
+include::output/layer_voronoi_4_command.txt[]
+include::output/layer_voronoi_4_result.txt[]
+
+include::output/layer_voronoi_5_command.txt[]
+include::output/layer_voronoi_5_result.txt[]
+
+include::output/layer_voronoi_6_command.txt[]
+include::output/layer_voronoi_6_result.txt[]
+
+include::output/layer_voronoi_7_command.txt[]
+include::output/layer_voronoi_7_result.txt[]
+
+include::output/layer_voronoi_8_command.txt[]
+include::output/layer_voronoi_8_result.txt[]
+
+include::output/layer_voronoi_9_command.txt[]
+include::output/layer_voronoi_9_result.txt[]
+
+include::output/layer_voronoi_10_command.txt[]
+include::output/layer_voronoi_10_result.txt[]
+
+include::output/layer_voronoi_11_command.txt[]
+include::output/layer_voronoi_11_result.txt[]
+
+include::output/layer_voronoi_12_command.txt[]
+include::output/layer_voronoi_12_result.txt[]
+
+include::output/layer_voronoi_13_command.txt[]
+include::output/layer_voronoi_13_result.txt[]
+
+include::output/layer_voronoi_14_result.txt[]
+include::output/layer_voronoi_14_command.txt[]
+
+include::output/layer_voronoi_15_result.txt[]
+include::output/layer_voronoi_15_command.txt[]
+
+image::layer_voronoi.png[]
 
 ==== Random Points
 

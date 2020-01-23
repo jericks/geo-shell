@@ -306,6 +306,52 @@ class LayerDocTest extends AbstractDocTest {
     }
 
     @Test
+    void delaunay() {
+        run("layer_delaunay", [
+                "workspace open --name layers --params memory",
+                "workspace open --name naturalearth --params examples/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer places --name places",
+                "layer delaunay --input-name places --output-workspace layers --output-name delaunay",
+                "style vector default --layer delaunay --color #1E90FF --opacity 0.25 --file examples/delaunay.sld",
+                "layer style set --name delaunay --style examples/delaunay.sld",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer style set --name countries --style examples/countries.sld",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "layer style set --name ocean --style examples/ocean.sld",
+                "map open --name map",
+                "map add layer --name map --layer ocean",
+                "map add layer --name map --layer countries",
+                "map add layer --name map --layer delaunay",
+                "map draw --name map --file examples/layer_delaunay.png",
+                "map close --name map"
+        ])
+        copyFile(new File("examples/layer_delaunay.png"), new File("src/main/docs/images"))
+    }
+
+    @Test
+    void voronoi() {
+        run("layer_voronoi", [
+                "workspace open --name layers --params memory",
+                "workspace open --name naturalearth --params examples/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer places --name places",
+                "layer voronoi --input-name places --output-workspace layers --output-name voronoi",
+                "style vector default --layer voronoi --color #1E90FF --opacity 0.25 --file examples/voronoi.sld",
+                "layer style set --name voronoi --style examples/voronoi.sld",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer style set --name countries --style examples/countries.sld",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "layer style set --name ocean --style examples/ocean.sld",
+                "map open --name map",
+                "map add layer --name map --layer ocean",
+                "map add layer --name map --layer countries",
+                "map add layer --name map --layer voronoi",
+                "map draw --name map --file examples/layer_voronoi.png --bounds -180,-90,180,90",
+                "map close --name map"
+        ])
+        copyFile(new File("examples/layer_voronoi.png"), new File("src/main/docs/images"))
+    }
+
+    @Test
     void createRandomPoints() {
         run("layer_random", [
                 "workspace open --name layers --params memory",
