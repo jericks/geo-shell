@@ -758,4 +758,29 @@ class LayerDocTest extends AbstractDocTest {
         copyFile(new File("examples/layer_convexhulls.png"), new File("src/main/docs/images"))
     }
 
+    @Test
+    void clip() {
+        run("layer_clip", [
+           "workspace open --name layers --params src/test/resources/layeralgebra.gpkg",
+           "workspace open --name results --params memory",
+           "layer open --workspace layers --layer a --name a",
+           "layer open --workspace layers --layer b --name b",
+           "layer clip --input-name a --clip-name b --output-workspace results --output-name results",
+           "style vector default --layer a --color red --opacity 0.75 --file examples/red.sld",
+           "style vector default --layer b --color green --opacity 0.75 --file examples/green.sld",
+           "style vector default --layer results --color blue --opacity 0.75 --file examples/blue.sld",
+           "layer style set --name a --style examples/red.sld",
+           "layer style set --name b --style examples/green.sld",
+           "layer style set --name results --style examples/blue.sld",
+           "map open --name map",
+           "map add layer --name map --layer a",
+           "map add layer --name map --layer b",
+           "map add layer --name map --layer results",
+           "map draw --name map --file examples/layer_clip.png",
+           "map close --name map"
+        ])
+        copyFile(new File("examples/layer_clip.png"), new File("src/main/docs/images"))
+    }
+
+
 }
