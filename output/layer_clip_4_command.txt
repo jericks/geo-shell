@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer clip* [gray]#--input-name# [silver]#a# [gray]#--clip-name# [silver]#b# [gray]#--output-workspace# [silver]#results# [gray]#--output-name# [silver]#results# +
