@@ -729,7 +729,63 @@ include::commands/layer_dissolve.txt[]
 ==== Erase
 
 include::commands/layer_erase_description.txt[]
+
+include::output/layer_erase_4_command.txt[]
+
 include::commands/layer_erase.txt[]
+
+include::output/layer_erase_0_command.txt[]
+include::output/layer_erase_0_result.txt[]
+
+include::output/layer_erase_1_command.txt[]
+include::output/layer_erase_1_result.txt[]
+
+include::output/layer_erase_2_command.txt[]
+include::output/layer_erase_2_result.txt[]
+
+include::output/layer_erase_3_command.txt[]
+include::output/layer_erase_3_result.txt[]
+
+include::output/layer_erase_4_command.txt[]
+include::output/layer_erase_4_result.txt[]
+
+include::output/layer_erase_5_command.txt[]
+include::output/layer_erase_5_result.txt[]
+
+include::output/layer_erase_6_command.txt[]
+include::output/layer_erase_6_result.txt[]
+
+include::output/layer_erase_7_command.txt[]
+include::output/layer_erase_7_result.txt[]
+
+include::output/layer_erase_8_command.txt[]
+include::output/layer_erase_8_result.txt[]
+
+include::output/layer_erase_9_command.txt[]
+include::output/layer_erase_9_result.txt[]
+
+include::output/layer_erase_10_command.txt[]
+include::output/layer_erase_10_result.txt[]
+
+include::output/layer_erase_11_command.txt[]
+include::output/layer_erase_11_result.txt[]
+
+include::output/layer_erase_12_command.txt[]
+include::output/layer_erase_12_result.txt[]
+
+include::output/layer_erase_13_command.txt[]
+include::output/layer_erase_13_result.txt[]
+
+include::output/layer_erase_14_command.txt[]
+include::output/layer_erase_14_result.txt[]
+
+include::output/layer_erase_15_command.txt[]
+include::output/layer_erase_15_result.txt[]
+
+include::output/layer_erase_16_command.txt[]
+include::output/layer_erase_16_result.txt[]
+
+image::layer_erase.png[]
 
 ==== Grid Row / Column
 
