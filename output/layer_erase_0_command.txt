@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*workspace open* [gray]#--name# [silver]#layers# [gray]#--params# [silver]#src/test/resources/layeralgebra.gpkg# +

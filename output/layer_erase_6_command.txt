@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*style vector default* [gray]#--layer# [silver]#b# [gray]#--color# [silver]#green# [gray]#--opacity# [silver]#0.75# [gray]#--file# [silver]#examples/green.sld# +
