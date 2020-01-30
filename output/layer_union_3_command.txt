@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer open* [gray]#--workspace# [silver]#layers# [gray]#--layer# [silver]#b# [gray]#--name# [silver]#b# +

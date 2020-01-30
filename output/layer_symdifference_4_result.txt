@@ -1,0 +1,1 @@
+[green]#Done calculating the symmetric difference between a and b to create results!# +

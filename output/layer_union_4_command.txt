@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer union* [gray]#--input-name# [silver]#a# [gray]#--other-name# [silver]#b# [gray]#--output-workspace# [silver]#results# [gray]#--output-name# [silver]#results# +

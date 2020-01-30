@@ -2045,16 +2045,16 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">points</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;581188e5_16fefa6c3eb_-78a0)</span><br>
-<span class="green">-----------------------------------------</span><br>
+<p><span class="green">Feature (fid&#8212;&#8203;ed99437_16ff413ce9a_-7890)</span><br>
+<span class="green">----------------------------------------</span><br>
 <span class="green">the_geom = POINT (-122.333056 47.609722)</span><br>
 <span class="green">fid = 1</span><br>
 <span class="green">name = Seattle</span><br>
 <span class="green">state = WA</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;581188e5_16fefa6c3eb_-789e)</span><br>
-<span class="green">-----------------------------------------</span><br>
+<p><span class="green">Feature (fid&#8212;&#8203;ed99437_16ff413ce9a_-788e)</span><br>
+<span class="green">----------------------------------------</span><br>
 <span class="green">the_geom = POINT (-122.459444 47.241389)</span><br>
 <span class="green">fid = 2</span><br>
 <span class="green">name = Tacoma</span><br>
@@ -2248,8 +2248,8 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">states_area</span> <span class="gray">--filter</span> <span class="silver">"NAME_1='North</span> <span class="silver">Dakota'"</span> <span class="gray">--field</span> <span class="silver">"NAME_0,AREA"</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;581188e5_16fefa6c3eb_-7899)</span><br>
-<span class="green">-----------------------------------------</span><br>
+<p><span class="green">Feature (fid&#8212;&#8203;ed99437_16ff413ce9a_-7889)</span><br>
+<span class="green">----------------------------------------</span><br>
 <span class="green">NAME_0 = United States</span><br>
 <span class="green">AREA = 21.804544852979944</span><br></p>
 </div>
@@ -2435,8 +2435,8 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">places_id</span> <span class="gray">--filter</span> <span class="silver">"NAME='Seattle'"</span> <span class="gray">--field</span> <span class="silver">"NAME,ID"</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;581188e5_16fefa6c3eb_-79de)</span><br>
-<span class="green">-----------------------------------------</span><br>
+<p><span class="green">Feature (fid&#8212;&#8203;ed99437_16ff413ce9a_-79ce)</span><br>
+<span class="green">----------------------------------------</span><br>
 <span class="green">NAME = Seattle</span><br>
 <span class="green">ID = 10</span><br></p>
 </div>
@@ -2623,8 +2623,8 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">places_xy</span> <span class="gray">--filter</span> <span class="silver">"NAME='Seattle'"</span> <span class="gray">--field</span> <span class="silver">"NAME,X,Y"</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;581188e5_16fefa6c3eb_-6c0e)</span><br>
-<span class="green">-----------------------------------------</span><br>
+<p><span class="green">Feature (fid&#8212;&#8203;ed99437_16ff413ce9a_-6bea)</span><br>
+<span class="green">----------------------------------------</span><br>
 <span class="green">NAME = Seattle</span><br>
 <span class="green">X = -122.34193084586849</span><br>
 <span class="green">Y = 47.57194791253073</span><br></p>
@@ -3771,6 +3771,9 @@ No parameters
 <div class="paragraph">
 <p>Calculate the intersection between a Layer with another Layer</p>
 </div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer intersection</strong> <span class="gray">--input-name</span> <span class="silver">a</span> <span class="gray">--other-name</span> <span class="silver">b</span> <span class="gray">--output-workspace</span> <span class="silver">results</span> <span class="gray">--output-name</span> <span class="silver">results</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -3831,6 +3834,79 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">layers</span> <span class="gray">--params</span> <span class="silver">src/test/resources/layeralgebra.gpkg</span><br>
+<span class="green">Workspace layers opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">results</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace results opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">layers</span> <span class="gray">--layer</span> <span class="silver">a</span> <span class="gray">--name</span> <span class="silver">a</span><br>
+<span class="green">Opened Workspace layers Layer a as a</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">layers</span> <span class="gray">--layer</span> <span class="silver">b</span> <span class="gray">--name</span> <span class="silver">b</span><br>
+<span class="green">Opened Workspace layers Layer b as b</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer intersection</strong> <span class="gray">--input-name</span> <span class="silver">a</span> <span class="gray">--other-name</span> <span class="silver">b</span> <span class="gray">--output-workspace</span> <span class="silver">results</span> <span class="gray">--output-name</span> <span class="silver">results</span><br>
+<span class="green">Done calculating the intersection between a and b to create results!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">a</span> <span class="gray">--color</span> <span class="silver">red</span> <span class="gray">--opacity</span> <span class="silver">0.75</span> <span class="gray">--file</span> <span class="silver">examples/red.sld</span><br>
+<span class="green">Default Vector Style for a written to /home/travis/build/jericks/geo-shell/examples/red.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">b</span> <span class="gray">--color</span> <span class="silver">green</span> <span class="gray">--opacity</span> <span class="silver">0.75</span> <span class="gray">--file</span> <span class="silver">examples/green.sld</span><br>
+<span class="green">Default Vector Style for b written to /home/travis/build/jericks/geo-shell/examples/green.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">results</span> <span class="gray">--color</span> <span class="silver">blue</span> <span class="gray">--opacity</span> <span class="silver">0.75</span> <span class="gray">--file</span> <span class="silver">examples/blue.sld</span><br>
+<span class="green">Default Vector Style for results written to /home/travis/build/jericks/geo-shell/examples/blue.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">a</span> <span class="gray">--style</span> <span class="silver">examples/red.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/red.sld set on a</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">b</span> <span class="gray">--style</span> <span class="silver">examples/green.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/green.sld set on b</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">results</span> <span class="gray">--style</span> <span class="silver">examples/blue.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/blue.sld set on results</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">a</span><br>
+<span class="green">Added a layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">b</span><br>
+<span class="green">Added b layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">results</span><br>
+<span class="green">Added results layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--file</span> <span class="silver">examples/layer_intersection.png</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/layer_intersection.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/layer_intersection.png" alt="layer intersection">
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="minimum-circle"><a class="anchor" href="#minimum-circle"></a>Minimum Circle</h4>
@@ -4647,6 +4723,9 @@ No parameters
 <div class="paragraph">
 <p>Calculate the symmetric difference between a Layer and another Layer.</p>
 </div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer symdifference</strong> <span class="gray">--input-name</span> <span class="silver">a</span> <span class="gray">--other-name</span> <span class="silver">b</span> <span class="gray">--output-workspace</span> <span class="silver">results</span> <span class="gray">--output-name</span> <span class="silver">results</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -4707,6 +4786,79 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">layers</span> <span class="gray">--params</span> <span class="silver">src/test/resources/layeralgebra.gpkg</span><br>
+<span class="green">Workspace layers opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">results</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace results opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">layers</span> <span class="gray">--layer</span> <span class="silver">a</span> <span class="gray">--name</span> <span class="silver">a</span><br>
+<span class="green">Opened Workspace layers Layer a as a</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">layers</span> <span class="gray">--layer</span> <span class="silver">b</span> <span class="gray">--name</span> <span class="silver">b</span><br>
+<span class="green">Opened Workspace layers Layer b as b</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer symdifference</strong> <span class="gray">--input-name</span> <span class="silver">a</span> <span class="gray">--other-name</span> <span class="silver">b</span> <span class="gray">--output-workspace</span> <span class="silver">results</span> <span class="gray">--output-name</span> <span class="silver">results</span><br>
+<span class="green">Done calculating the symmetric difference between a and b to create results!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">a</span> <span class="gray">--color</span> <span class="silver">red</span> <span class="gray">--opacity</span> <span class="silver">0.75</span> <span class="gray">--file</span> <span class="silver">examples/red.sld</span><br>
+<span class="green">Default Vector Style for a written to /home/travis/build/jericks/geo-shell/examples/red.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">b</span> <span class="gray">--color</span> <span class="silver">green</span> <span class="gray">--opacity</span> <span class="silver">0.75</span> <span class="gray">--file</span> <span class="silver">examples/green.sld</span><br>
+<span class="green">Default Vector Style for b written to /home/travis/build/jericks/geo-shell/examples/green.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">results</span> <span class="gray">--color</span> <span class="silver">blue</span> <span class="gray">--opacity</span> <span class="silver">0.75</span> <span class="gray">--file</span> <span class="silver">examples/blue.sld</span><br>
+<span class="green">Default Vector Style for results written to /home/travis/build/jericks/geo-shell/examples/blue.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">a</span> <span class="gray">--style</span> <span class="silver">examples/red.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/red.sld set on a</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">b</span> <span class="gray">--style</span> <span class="silver">examples/green.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/green.sld set on b</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">results</span> <span class="gray">--style</span> <span class="silver">examples/blue.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/blue.sld set on results</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">a</span><br>
+<span class="green">Added a layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">b</span><br>
+<span class="green">Added b layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">results</span><br>
+<span class="green">Added results layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--file</span> <span class="silver">examples/layer_symdifference.png</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/layer_symdifference.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/layer_symdifference.png" alt="layer symdifference">
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="transform"><a class="anchor" href="#transform"></a>Transform</h4>
@@ -4765,6 +4917,9 @@ No parameters
 <div class="paragraph">
 <p>Union a Layer with another Layer</p>
 </div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer union</strong> <span class="gray">--input-name</span> <span class="silver">a</span> <span class="gray">--other-name</span> <span class="silver">b</span> <span class="gray">--output-workspace</span> <span class="silver">results</span> <span class="gray">--output-name</span> <span class="silver">results</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -4825,11 +4980,87 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">layers</span> <span class="gray">--params</span> <span class="silver">src/test/resources/layeralgebra.gpkg</span><br>
+<span class="green">Workspace layers opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">results</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace results opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">layers</span> <span class="gray">--layer</span> <span class="silver">a</span> <span class="gray">--name</span> <span class="silver">a</span><br>
+<span class="green">Opened Workspace layers Layer a as a</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">layers</span> <span class="gray">--layer</span> <span class="silver">b</span> <span class="gray">--name</span> <span class="silver">b</span><br>
+<span class="green">Opened Workspace layers Layer b as b</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer union</strong> <span class="gray">--input-name</span> <span class="silver">a</span> <span class="gray">--other-name</span> <span class="silver">b</span> <span class="gray">--output-workspace</span> <span class="silver">results</span> <span class="gray">--output-name</span> <span class="silver">results</span><br>
+<span class="green">Done unioning a and b to create results!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">a</span> <span class="gray">--color</span> <span class="silver">red</span> <span class="gray">--opacity</span> <span class="silver">0.75</span> <span class="gray">--file</span> <span class="silver">examples/red.sld</span><br>
+<span class="green">Default Vector Style for a written to /home/travis/build/jericks/geo-shell/examples/red.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">b</span> <span class="gray">--color</span> <span class="silver">green</span> <span class="gray">--opacity</span> <span class="silver">0.75</span> <span class="gray">--file</span> <span class="silver">examples/green.sld</span><br>
+<span class="green">Default Vector Style for b written to /home/travis/build/jericks/geo-shell/examples/green.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">results</span> <span class="gray">--color</span> <span class="silver">blue</span> <span class="gray">--opacity</span> <span class="silver">0.75</span> <span class="gray">--file</span> <span class="silver">examples/blue.sld</span><br>
+<span class="green">Default Vector Style for results written to /home/travis/build/jericks/geo-shell/examples/blue.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">a</span> <span class="gray">--style</span> <span class="silver">examples/red.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/red.sld set on a</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">b</span> <span class="gray">--style</span> <span class="silver">examples/green.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/green.sld set on b</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">results</span> <span class="gray">--style</span> <span class="silver">examples/blue.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/blue.sld set on results</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">a</span><br>
+<span class="green">Added a layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">b</span><br>
+<span class="green">Added b layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">results</span><br>
+<span class="green">Added results layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--file</span> <span class="silver">examples/layer_union.png</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/layer_union.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/layer_union.png" alt="layer union">
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="update"><a class="anchor" href="#update"></a>Update</h4>
 <div class="paragraph">
 <p>Calculate the update between a Layer with another Layer</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer update</strong> <span class="gray">--input-name</span> <span class="silver">a</span> <span class="gray">--other-name</span> <span class="silver">b</span> <span class="gray">--output-workspace</span> <span class="silver">results</span> <span class="gray">--output-name</span> <span class="silver">results</span><br></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -4877,6 +5108,79 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">layers</span> <span class="gray">--params</span> <span class="silver">src/test/resources/layeralgebra.gpkg</span><br>
+<span class="green">Workspace layers opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">results</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace results opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">layers</span> <span class="gray">--layer</span> <span class="silver">a</span> <span class="gray">--name</span> <span class="silver">a</span><br>
+<span class="green">Opened Workspace layers Layer a as a</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">layers</span> <span class="gray">--layer</span> <span class="silver">b</span> <span class="gray">--name</span> <span class="silver">b</span><br>
+<span class="green">Opened Workspace layers Layer b as b</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer update</strong> <span class="gray">--input-name</span> <span class="silver">a</span> <span class="gray">--other-name</span> <span class="silver">b</span> <span class="gray">--output-workspace</span> <span class="silver">results</span> <span class="gray">--output-name</span> <span class="silver">results</span><br>
+<span class="green">Done calculating the update between a and b to create results!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">a</span> <span class="gray">--color</span> <span class="silver">red</span> <span class="gray">--opacity</span> <span class="silver">0.75</span> <span class="gray">--file</span> <span class="silver">examples/red.sld</span><br>
+<span class="green">Default Vector Style for a written to /home/travis/build/jericks/geo-shell/examples/red.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">b</span> <span class="gray">--color</span> <span class="silver">green</span> <span class="gray">--opacity</span> <span class="silver">0.75</span> <span class="gray">--file</span> <span class="silver">examples/green.sld</span><br>
+<span class="green">Default Vector Style for b written to /home/travis/build/jericks/geo-shell/examples/green.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">results</span> <span class="gray">--color</span> <span class="silver">blue</span> <span class="gray">--opacity</span> <span class="silver">0.75</span> <span class="gray">--file</span> <span class="silver">examples/blue.sld</span><br>
+<span class="green">Default Vector Style for results written to /home/travis/build/jericks/geo-shell/examples/blue.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">a</span> <span class="gray">--style</span> <span class="silver">examples/red.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/red.sld set on a</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">b</span> <span class="gray">--style</span> <span class="silver">examples/green.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/green.sld set on b</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">results</span> <span class="gray">--style</span> <span class="silver">examples/blue.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/blue.sld set on results</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">a</span><br>
+<span class="green">Added a layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">b</span><br>
+<span class="green">Added b layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">results</span><br>
+<span class="green">Added results layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--file</span> <span class="silver">examples/layer_update.png</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/layer_update.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/layer_update.png" alt="layer update">
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="voronoi"><a class="anchor" href="#voronoi"></a>Voronoi</h4>
@@ -9319,12 +9623,12 @@ No parameters
           <span class="tag">&lt;/ogc:Filter&gt;</span>
           <span class="tag">&lt;sld:PolygonSymbolizer&gt;</span>
             <span class="tag">&lt;sld:Fill&gt;</span>
-              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fill</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#3f5906<span class="tag">&lt;/sld:CssParameter&gt;</span>
+              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fill</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#254b6c<span class="tag">&lt;/sld:CssParameter&gt;</span>
             <span class="tag">&lt;/sld:Fill&gt;</span>
           <span class="tag">&lt;/sld:PolygonSymbolizer&gt;</span>
           <span class="tag">&lt;sld:LineSymbolizer&gt;</span>
             <span class="tag">&lt;sld:Stroke&gt;</span>
-              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#2c3e04<span class="tag">&lt;/sld:CssParameter&gt;</span>
+              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#19344b<span class="tag">&lt;/sld:CssParameter&gt;</span>
               <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke-width</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>0.5<span class="tag">&lt;/sld:CssParameter&gt;</span>
             <span class="tag">&lt;/sld:Stroke&gt;</span>
           <span class="tag">&lt;/sld:LineSymbolizer&gt;</span>
@@ -9338,12 +9642,12 @@ No parameters
           <span class="tag">&lt;/ogc:Filter&gt;</span>
           <span class="tag">&lt;sld:PolygonSymbolizer&gt;</span>
             <span class="tag">&lt;sld:Fill&gt;</span>
-              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fill</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#724a3b<span class="tag">&lt;/sld:CssParameter&gt;</span>
+              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fill</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#420754<span class="tag">&lt;/sld:CssParameter&gt;</span>
             <span class="tag">&lt;/sld:Fill&gt;</span>
           <span class="tag">&lt;/sld:PolygonSymbolizer&gt;</span>
           <span class="tag">&lt;sld:LineSymbolizer&gt;</span>
             <span class="tag">&lt;sld:Stroke&gt;</span>
-              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#4f3329<span class="tag">&lt;/sld:CssParameter&gt;</span>
+              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#2e043a<span class="tag">&lt;/sld:CssParameter&gt;</span>
               <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke-width</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>0.5<span class="tag">&lt;/sld:CssParameter&gt;</span>
             <span class="tag">&lt;/sld:Stroke&gt;</span>
           <span class="tag">&lt;/sld:LineSymbolizer&gt;</span>
@@ -10866,7 +11170,7 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">date</strong> <br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Wednesday, January 29, 2020 4:54:35 AM UTC</span><br></p>
+<p><span class="green">Thursday, January 30, 2020 1:32:09 AM UTC</span><br></p>
 </div>
 </div>
 <div class="sect2">
@@ -11171,7 +11475,7 @@ No parameters
 <div id="footer">
 <div id="footer-text">
 Version 0.7-SNAPSHOT<br>
-Last updated 2020-01-29 04:42:26 UTC
+Last updated 2020-01-30 01:21:02 UTC
 </div>
 </div>
 </body>
