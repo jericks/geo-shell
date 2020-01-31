@@ -306,6 +306,29 @@ class LayerDocTest extends AbstractDocTest {
     }
 
     @Test
+    void coordinates() {
+        run("layer_coordinates", [
+                "workspace open --name layers --params memory",
+                "workspace open --name naturalearth --params examples/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer states --name states",
+                "layer coordinates --input-name states --output-workspace layers --output-name coordinates",
+                "style vector default --layer coordinates --color #1E90FF --opacity 0.75 --file examples/coordinates.sld",
+                "layer style set --name coordinates --style examples/coordinates.sld",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer style set --name countries --style examples/countries.sld",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "layer style set --name ocean --style examples/ocean.sld",
+                "map open --name map",
+                "map add layer --name map --layer ocean",
+                "map add layer --name map --layer countries",
+                "map add layer --name map --layer coordinates",
+                "map draw --name map --file examples/layer_coordinates.png --bounds \"-180,-8.233,-36.738,73.378\"",
+                "map close --name map"
+        ])
+        copyFile(new File("examples/layer_coordinates.png"), new File("src/main/docs/images"))
+    }
+
+    @Test
     void delaunay() {
         run("layer_delaunay", [
                 "workspace open --name layers --params memory",
@@ -925,6 +948,7 @@ class LayerDocTest extends AbstractDocTest {
         ])
         copyFile(new File("examples/layer_union.png"), new File("src/main/docs/images"))
     }
+
 
 
 }

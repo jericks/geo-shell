@@ -656,7 +656,61 @@ image::layer_convexhulls.png[]
 ==== Coordinates
 
 include::commands/layer_coordinates_description.txt[]
+
+include::output/layer_coordinates_3_command.txt[]
+
 include::commands/layer_coordinates.txt[]
+
+include::output/layer_coordinates_0_command.txt[]
+include::output/layer_coordinates_0_result.txt[]
+
+include::output/layer_coordinates_1_command.txt[]
+include::output/layer_coordinates_1_result.txt[]
+
+include::output/layer_coordinates_2_command.txt[]
+include::output/layer_coordinates_2_result.txt[]
+
+include::output/layer_coordinates_3_command.txt[]
+include::output/layer_coordinates_3_result.txt[]
+
+include::output/layer_coordinates_4_command.txt[]
+include::output/layer_coordinates_4_result.txt[]
+
+include::output/layer_coordinates_5_command.txt[]
+include::output/layer_coordinates_5_result.txt[]
+
+include::output/layer_coordinates_6_command.txt[]
+include::output/layer_coordinates_6_result.txt[]
+
+include::output/layer_coordinates_7_command.txt[]
+include::output/layer_coordinates_7_result.txt[]
+
+include::output/layer_coordinates_8_command.txt[]
+include::output/layer_coordinates_8_result.txt[]
+
+include::output/layer_coordinates_9_command.txt[]
+include::output/layer_coordinates_9_result.txt[]
+
+include::output/layer_coordinates_10_command.txt[]
+include::output/layer_coordinates_10_result.txt[]
+
+include::output/layer_coordinates_11_command.txt[]
+include::output/layer_coordinates_11_result.txt[]
+
+include::output/layer_coordinates_12_command.txt[]
+include::output/layer_coordinates_12_result.txt[]
+
+include::output/layer_coordinates_13_command.txt[]
+include::output/layer_coordinates_13_result.txt[]
+
+include::output/layer_coordinates_14_command.txt[]
+include::output/layer_coordinates_14_result.txt[]
+
+include::output/layer_coordinates_15_command.txt[]
+include::output/layer_coordinates_15_result.txt[]
+
+image::layer_coordinates.png[]
+
 
 ==== Delaunay
 
