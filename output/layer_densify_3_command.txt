@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer densify* [gray]#--input-name# [silver]#states# [gray]#--output-workspace# [silver]#layers# [gray]#--output-name# [silver]#states_densified# [gray]#--distance# [silver]#0.1# +

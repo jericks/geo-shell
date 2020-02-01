@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer coordinates* [gray]#--input-name# [silver]#states_densified# [gray]#--output-workspace# [silver]#layers# [gray]#--output-name# [silver]#coordinates# +

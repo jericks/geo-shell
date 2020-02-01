@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer open* [gray]#--workspace# [silver]#naturalearth# [gray]#--layer# [silver]#countries# [gray]#--name# [silver]#countries# +
