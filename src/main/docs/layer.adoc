@@ -835,7 +835,63 @@ image::layer_densify.png[]
 ==== Dissolve
 
 include::commands/layer_dissolve_description.txt[]
+
+include::output/layer_dissolve_3_command.txt[]
+
 include::commands/layer_dissolve.txt[]
+
+include::output/layer_dissolve_0_command.txt[]
+include::output/layer_dissolve_0_result.txt[]
+
+include::output/layer_dissolve_1_command.txt[]
+include::output/layer_dissolve_1_result.txt[]
+
+include::output/layer_dissolve_2_command.txt[]
+include::output/layer_dissolve_2_result.txt[]
+
+include::output/layer_dissolve_3_command.txt[]
+include::output/layer_dissolve_3_result.txt[]
+
+include::output/layer_dissolve_4_command.txt[]
+include::output/layer_dissolve_4_result.txt[]
+
+include::output/layer_dissolve_5_command.txt[]
+include::output/layer_dissolve_5_result.txt[]
+
+include::output/layer_dissolve_6_command.txt[]
+include::output/layer_dissolve_6_result.txt[]
+
+include::output/layer_dissolve_7_command.txt[]
+include::output/layer_dissolve_7_result.txt[]
+
+include::output/layer_dissolve_8_command.txt[]
+include::output/layer_dissolve_8_result.txt[]
+
+include::output/layer_dissolve_9_command.txt[]
+include::output/layer_dissolve_9_result.txt[]
+
+include::output/layer_dissolve_10_command.txt[]
+include::output/layer_dissolve_10_result.txt[]
+
+include::output/layer_dissolve_11_command.txt[]
+include::output/layer_dissolve_11_result.txt[]
+
+include::output/layer_dissolve_12_command.txt[]
+include::output/layer_dissolve_12_result.txt[]
+
+include::output/layer_dissolve_13_command.txt[]
+include::output/layer_dissolve_13_result.txt[]
+
+include::output/layer_dissolve_14_result.txt[]
+include::output/layer_dissolve_14_command.txt[]
+
+include::output/layer_dissolve_15_result.txt[]
+include::output/layer_dissolve_15_command.txt[]
+
+include::output/layer_dissolve_16_result.txt[]
+include::output/layer_dissolve_16_command.txt[]
+
+image::layer_dissolve.png[]
 
 ==== Erase
 
