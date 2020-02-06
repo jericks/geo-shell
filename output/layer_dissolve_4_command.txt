@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*style vector uniquevalues* [gray]#--layer# [silver]#regions# [gray]#--field# [silver]#SUB_REGION# [silver]## [gray]#--colors# [silver]#MutedTerrain# [gray]#--file# [silver]## [silver]#examples/regions.sld# +

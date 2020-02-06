@@ -1717,7 +1717,7 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">points</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;3e5d2d2_170028e269b_-7890)</span><br>
+<p><span class="green">Feature (fid-5fb5555e_17017eb894f_-7890)</span><br>
 <span class="green">----------------------------------------</span><br>
 <span class="green">the_geom = POINT (-122.333056 47.609722)</span><br>
 <span class="green">fid = 1</span><br>
@@ -1725,7 +1725,7 @@ No parameters
 <span class="green">state = WA</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;3e5d2d2_170028e269b_-788e)</span><br>
+<p><span class="green">Feature (fid-5fb5555e_17017eb894f_-788e)</span><br>
 <span class="green">----------------------------------------</span><br>
 <span class="green">the_geom = POINT (-122.459444 47.241389)</span><br>
 <span class="green">fid = 2</span><br>
@@ -1920,7 +1920,7 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">states_area</span> <span class="gray">--filter</span> <span class="silver">"NAME_1='North</span> <span class="silver">Dakota'"</span> <span class="gray">--field</span> <span class="silver">"NAME_0,AREA"</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;3e5d2d2_170028e269b_-7889)</span><br>
+<p><span class="green">Feature (fid-5fb5555e_17017eb894f_-7889)</span><br>
 <span class="green">----------------------------------------</span><br>
 <span class="green">NAME_0 = United States</span><br>
 <span class="green">AREA = 21.804544852979944</span><br></p>
@@ -2107,7 +2107,7 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">places_id</span> <span class="gray">--filter</span> <span class="silver">"NAME='Seattle'"</span> <span class="gray">--field</span> <span class="silver">"NAME,ID"</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;3e5d2d2_170028e269b_-79ce)</span><br>
+<p><span class="green">Feature (fid-5fb5555e_17017eb894f_-79ce)</span><br>
 <span class="green">----------------------------------------</span><br>
 <span class="green">NAME = Seattle</span><br>
 <span class="green">ID = 10</span><br></p>
@@ -2295,7 +2295,7 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">places_xy</span> <span class="gray">--filter</span> <span class="silver">"NAME='Seattle'"</span> <span class="gray">--field</span> <span class="silver">"NAME,X,Y"</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;3e5d2d2_170028e269b_-6bea)</span><br>
+<p><span class="green">Feature (fid-5fb5555e_17017eb894f_-6bd8)</span><br>
 <span class="green">----------------------------------------</span><br>
 <span class="green">NAME = Seattle</span><br>
 <span class="green">X = -122.34193084586849</span><br>
@@ -3095,6 +3095,9 @@ No parameters
 <div class="paragraph">
 <p>Dissolve the Features of a Layer by a Field.</p>
 </div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer dissolve</strong> <span class="gray">--input-name</span> <span class="silver">states</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">regions</span> <span class="gray">--field</span> <span class="silver">SUB_REGION</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -3155,6 +3158,79 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">layers</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace layers opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">shapefiles</span> <span class="gray">--params</span> <span class="silver">examples/states/states.shp</span><br>
+<span class="green">Workspace shapefiles opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">shapefiles</span> <span class="gray">--layer</span> <span class="silver">states</span> <span class="gray">--name</span> <span class="silver">states</span><br>
+<span class="green">Opened Workspace shapefiles Layer states as states</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer dissolve</strong> <span class="gray">--input-name</span> <span class="silver">states</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">regions</span> <span class="gray">--field</span> <span class="silver">SUB_REGION</span><br>
+<span class="green">Done dissolving states to regions by SUB_REGION!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector uniquevalues</strong> <span class="gray">--layer</span> <span class="silver">regions</span> <span class="gray">--field</span> <span class="silver">SUB_REGION</span> <span class="silver"> <span class="gray">--colors</span> <span class="silver">MutedTerrain</span> <span class="gray">--file</span> [silver]</span> <span class="silver">examples/regions.sld</span><br>
+<span class="green">Unique Values Vector Style for regions&#8217;s SUB_REGION Field written to /home/travis/build/jericks/geo-shell/examples/regions.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">regions</span> <span class="gray">--style</span> <span class="silver">examples/regions.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/regions.sld set on regions</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">examples/naturalearth.gpkg</span><br>
+<span class="green">Workspace naturalearth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">countries</span> <span class="gray">--name</span> <span class="silver">countries</span><br>
+<span class="green">Opened Workspace naturalearth Layer countries as countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">countries</span> <span class="gray">--style</span> <span class="silver">examples/countries.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/countries.sld set on countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">ocean</span> <span class="gray">--name</span> <span class="silver">ocean</span><br>
+<span class="green">Opened Workspace naturalearth Layer ocean as ocean</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">ocean</span> <span class="gray">--style</span> <span class="silver">examples/ocean.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/ocean.sld set on ocean</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">ocean</span><br>
+<span class="green">Added ocean layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">countries</span><br>
+<span class="green">Added countries layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="green">Added regions layer to map map</span><br>
+<span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">regions</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/layer_dissolve.png!</span><br>
+<span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--file</span> <span class="silver">examples/layer_dissolve.png</span> <span class="gray">--bounds</span> <span class="silver">"-180,-8.233,-36.738,73.378"</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="green">Map map closed!</span><br>
+<span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">map</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/layer_dissolve.png" alt="layer dissolve">
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="erase"><a class="anchor" href="#erase"></a>Erase</h4>
@@ -6431,7 +6507,7 @@ No parameters
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-02-01 20:47:17 UTC
+Last updated 2020-02-06 00:21:49 UTC
 </div>
 </div>
 </body>

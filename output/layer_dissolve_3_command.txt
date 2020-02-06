@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer dissolve* [gray]#--input-name# [silver]#states# [gray]#--output-workspace# [silver]#layers# [gray]#--output-name# [silver]#regions# [gray]#--field# [silver]#SUB_REGION# +
