@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer grid rowcol* [gray]#--output-workspace# [silver]#layers# [gray]#--output-name# [silver]#rowcol# [gray]#--geometry# [silver]#-180,-90,180,90# [gray]#--rows# [silver]#10# [gray]#--columns# [silver]#8# +

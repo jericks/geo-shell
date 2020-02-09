@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer grid widthheight* [gray]#--output-workspace# [silver]#layers# [gray]#--output-name# [silver]#widthheight# [gray]#--geometry# [silver]#-180,-90,180,90# [gray]#--cell-width# [silver]#8# [gray]#--cell-height# [silver]#7# +

@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer style set* [gray]#--name# [silver]#widthheight# [gray]#--style# [silver]#examples/widthheight.sld# +
