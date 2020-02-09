@@ -566,6 +566,50 @@ class LayerDocTest extends AbstractDocTest {
     }
 
     @Test
+    void gridWidthHeight() {
+        run("layer_grid_widthheight", [
+                "workspace open --name layers --params memory",
+                "layer grid widthheight --output-workspace layers --output-name widthheight --geometry -180,-90,180,90 --cell-width 8 --cell-height 7",
+                "style vector default --layer widthheight --color #1E90FF --opacity 0.30 --file examples/widthheight.sld",
+                "layer style set --name widthheight --style examples/widthheight.sld",
+                "workspace open --name naturalearth --params examples/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer style set --name countries --style examples/countries.sld",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "layer style set --name ocean --style examples/ocean.sld",
+                "map open --name map",
+                "map add layer --name map --layer ocean",
+                "map add layer --name map --layer countries",
+                "map add layer --name map --layer widthheight",
+                "map draw --name map --file examples/layer_grid_widthheight.png",
+                "map close --name map"
+        ])
+        copyFile(new File("examples/layer_grid_widthheight.png"), new File("src/main/docs/images"))
+    }
+
+    @Test
+    void gridRowCol() {
+        run("layer_grid_rowcol", [
+                "workspace open --name layers --params memory",
+                "layer grid rowcol --output-workspace layers --output-name rowcol --geometry -180,-90,180,90 --rows 10 --columns 8",
+                "style vector default --layer rowcol --color #1E90FF --opacity 0.30 --file examples/rowcol.sld",
+                "layer style set --name rowcol --style examples/rowcol.sld",
+                "workspace open --name naturalearth --params examples/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer style set --name countries --style examples/countries.sld",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "layer style set --name ocean --style examples/ocean.sld",
+                "map open --name map",
+                "map add layer --name map --layer ocean",
+                "map add layer --name map --layer countries",
+                "map add layer --name map --layer rowcol",
+                "map draw --name map --file examples/layer_grid_rowcol.png",
+                "map close --name map"
+        ])
+        copyFile(new File("examples/layer_grid_rowcol.png"), new File("src/main/docs/images"))
+    }
+
+    @Test
     void createSquareGraticules() {
         run("layer_graticule_square", [
             "workspace open --name layers --params memory",
