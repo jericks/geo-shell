@@ -1717,7 +1717,7 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">points</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;61e37509_1702c77464d_-7890)</span><br>
+<p><span class="green">Feature (fid&#8212;&#8203;24d98c39_17030ec39f9_-7890)</span><br>
 <span class="green">-----------------------------------------</span><br>
 <span class="green">the_geom = POINT (-122.333056 47.609722)</span><br>
 <span class="green">fid = 1</span><br>
@@ -1725,7 +1725,7 @@ No parameters
 <span class="green">state = WA</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;61e37509_1702c77464d_-788e)</span><br>
+<p><span class="green">Feature (fid&#8212;&#8203;24d98c39_17030ec39f9_-788e)</span><br>
 <span class="green">-----------------------------------------</span><br>
 <span class="green">the_geom = POINT (-122.459444 47.241389)</span><br>
 <span class="green">fid = 2</span><br>
@@ -1920,7 +1920,7 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">states_area</span> <span class="gray">--filter</span> <span class="silver">"NAME_1='North</span> <span class="silver">Dakota'"</span> <span class="gray">--field</span> <span class="silver">"NAME_0,AREA"</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;61e37509_1702c77464d_-7889)</span><br>
+<p><span class="green">Feature (fid&#8212;&#8203;24d98c39_17030ec39f9_-7889)</span><br>
 <span class="green">-----------------------------------------</span><br>
 <span class="green">NAME_0 = United States</span><br>
 <span class="green">AREA = 21.804544852979944</span><br></p>
@@ -2107,7 +2107,7 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">places_id</span> <span class="gray">--filter</span> <span class="silver">"NAME='Seattle'"</span> <span class="gray">--field</span> <span class="silver">"NAME,ID"</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;61e37509_1702c77464d_-79ce)</span><br>
+<p><span class="green">Feature (fid&#8212;&#8203;24d98c39_17030ec39f9_-79ce)</span><br>
 <span class="green">-----------------------------------------</span><br>
 <span class="green">NAME = Seattle</span><br>
 <span class="green">ID = 10</span><br></p>
@@ -2295,7 +2295,7 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">places_xy</span> <span class="gray">--filter</span> <span class="silver">"NAME='Seattle'"</span> <span class="gray">--field</span> <span class="silver">"NAME,X,Y"</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;61e37509_1702c77464d_-61e0)</span><br>
+<p><span class="green">Feature (fid&#8212;&#8203;24d98c39_17030ec39f9_-61b0)</span><br>
 <span class="green">-----------------------------------------</span><br>
 <span class="green">NAME = Seattle</span><br>
 <span class="green">X = -122.34193084586849</span><br>
@@ -4699,35 +4699,35 @@ No parameters
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">rivers</span> <span class="gray">--params</span> <span class="silver">src/test/resources/rivers/ne_110m_rivers_lake_centerlines.shp</span><br>
-<span class="green">null</span><br></p>
+<span class="green">Workspace rivers opened!</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">rivers</span> <span class="gray">--layer</span> <span class="silver">ne_110m_rivers_lake_centerlines</span> <span class="gray">--name</span> <span class="silver">rivers</span><br>
-<span class="green">Unable to find Workspace rivers</span><br></p>
+<span class="green">Opened Workspace rivers Layer ne_110m_rivers_lake_centerlines as rivers</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer copy</strong> <span class="gray">--input-name</span> <span class="silver">rivers</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">mississippi</span> <span class="silver"># [gray]</span>--filter# <span class="silver">"name='Mississippi'"</span><br>
-<span class="green">Unable to find Layer rivers</span><br></p>
+<span class="green">Done!</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">mississippi</span> <span class="gray">--color</span> <span class="silver">blue</span> <span class="gray">--file</span> <span class="silver">examples/river.sld</span><br>
-<span class="green">Unable to find Layer mississippi</span><br></p>
+<span class="green">Default Vector Style for mississippi written to /home/travis/build/jericks/geo-shell/examples/river.sld!</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">mississippi</span> <span class="gray">--style</span> <span class="silver">examples/river.sld</span><br>
-<span class="green">Unable to find Layer mississippi</span><br></p>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/river.sld set on mississippi</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer points along lines</strong> <span class="gray">--input-name</span> <span class="silver">mississippi</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">points</span> <span class="gray">--distance</span> <span class="silver">2.0</span><br>
-<span class="green">Unable to find Layer mississippi</span><br></p>
+<span class="green">Done placing points along mississippi every 2.0 to create points!</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">points</span> <span class="gray">--color</span> <span class="silver">green</span> <span class="gray">--file</span> <span class="silver">examples/points.sld</span><br>
-<span class="green">Unable to find Layer points</span><br></p>
+<span class="green">Default Vector Style for points written to /home/travis/build/jericks/geo-shell/examples/points.sld!</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">points</span> <span class="gray">--style</span> <span class="silver">examples/points.sld</span><br>
-<span class="green">Unable to find Layer points</span><br></p>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/points.sld set on points</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">examples/naturalearth.gpkg</span><br>
@@ -4784,6 +4784,9 @@ No parameters
 <div class="paragraph">
 <p>Simplify the features of the input Layer and save them to the output Layer</p>
 </div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer simplify</strong> <span class="gray">--input-name</span> <span class="silver">mississippi</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">simplified</span> <span class="gray">--distance</span> <span class="silver">1.0</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -4837,6 +4840,99 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">layers</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace layers opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">rivers</span> <span class="gray">--params</span> <span class="silver">src/test/resources/rivers/ne_110m_rivers_lake_centerlines.shp</span><br>
+<span class="green">Workspace rivers opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">rivers</span> <span class="gray">--layer</span> <span class="silver">ne_110m_rivers_lake_centerlines</span> <span class="gray">--name</span> <span class="silver">rivers</span><br>
+<span class="green">Opened Workspace rivers Layer ne_110m_rivers_lake_centerlines as rivers</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer copy</strong> <span class="gray">--input-name</span> <span class="silver">rivers</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">mississippi</span> <span class="silver"># [gray]</span>--filter# <span class="silver">"name='Mississippi'"</span><br>
+<span class="green">Done!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer simplify</strong> <span class="gray">--input-name</span> <span class="silver">mississippi</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">simplified</span> <span class="gray">--distance</span> <span class="silver">1.0</span><br>
+<span class="green">Done!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">simplified</span> <span class="gray">--color</span> <span class="silver">blue</span> <span class="gray">--file</span> <span class="silver">examples/river.sld</span><br>
+<span class="green">Default Vector Style for simplified written to /home/travis/build/jericks/geo-shell/examples/river.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">simplified</span> <span class="gray">--style</span> <span class="silver">examples/river.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/river.sld set on simplified</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer coordinates</strong> <span class="gray">--input-name</span> <span class="silver">simplified</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">points</span><br>
+<span class="green">Done!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">points</span> <span class="gray">--color</span> <span class="silver">green</span> <span class="gray">--file</span> <span class="silver">examples/points.sld</span><br>
+<span class="green">Default Vector Style for points written to /home/travis/build/jericks/geo-shell/examples/points.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">points</span> <span class="gray">--style</span> <span class="silver">examples/points.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/points.sld set on points</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">examples/naturalearth.gpkg</span><br>
+<span class="green">Workspace naturalearth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">countries</span> <span class="gray">--name</span> <span class="silver">countries</span><br>
+<span class="green">Opened Workspace naturalearth Layer countries as countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">countries</span> <span class="gray">--style</span> <span class="silver">examples/countries.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/countries.sld set on countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">ocean</span> <span class="gray">--name</span> <span class="silver">ocean</span><br>
+<span class="green">Opened Workspace naturalearth Layer ocean as ocean</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">ocean</span> <span class="gray">--style</span> <span class="silver">examples/ocean.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/ocean.sld set on ocean</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">ocean</span><br>
+<span class="green">Added ocean layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">countries</span><br>
+<span class="green">Added countries layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">simplified</span><br>
+<span class="green">Added simplified layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">points</span><br>
+<span class="green">Added points layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--file</span> <span class="silver">examples/layer_simplify.png</span> <span class="gray">--bounds</span> <span class="silver">"-180,-8.233,-36.738,73.378"</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/layer_simplify.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/layer_simplify.png" alt="layer simplify">
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="symmetric-difference"><a class="anchor" href="#symmetric-difference"></a>Symmetric Difference</h4>
@@ -6731,7 +6827,7 @@ No parameters
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-02-10 00:08:27 UTC
+Last updated 2020-02-10 20:54:30 UTC
 </div>
 </div>
 </body>

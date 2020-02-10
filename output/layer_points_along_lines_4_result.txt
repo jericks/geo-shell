@@ -1,1 +1,1 @@
-[green]#Unable to find Layer mississippi# +
+[green]#Default Vector Style for mississippi written to /home/travis/build/jericks/geo-shell/examples/river.sld!# +

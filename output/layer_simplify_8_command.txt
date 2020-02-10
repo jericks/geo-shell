@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*style vector default* [gray]#--layer# [silver]#points# [gray]#--color# [silver]#green# [gray]#--file# [silver]#examples/points.sld# +

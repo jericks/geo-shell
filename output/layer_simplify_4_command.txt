@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer simplify* [gray]#--input-name# [silver]#mississippi# [gray]#--output-workspace# [silver]#layers# [gray]#--output-name# [silver]#simplified# [gray]#--distance# [silver]#1.0# +
