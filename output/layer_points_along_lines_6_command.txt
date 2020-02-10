@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer points along lines* [gray]#--input-name# [silver]#mississippi# [gray]#--output-workspace# [silver]#layers# [gray]#--output-name# [silver]#points# [gray]#--distance# [silver]#2.0# +

@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*workspace open* [gray]#--name# [silver]#rivers# [gray]#--params# [silver]#src/test/resources/rivers/ne_110m_rivers_lake_centerlines.shp# +

@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer copy* [gray]#--input-name# [silver]#rivers# [gray]#--output-workspace# [silver]#layers# [gray]#--output-name# [silver]#mississippi# [silver]## [gray]#--filter# [silver]#"name='Mississippi'"# +

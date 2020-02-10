@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer open* [gray]#--workspace# [silver]#rivers# [gray]#--layer# [silver]#ne_110m_rivers_lake_centerlines# [gray]#--name# [silver]#rivers# +
