@@ -566,6 +566,39 @@ class LayerDocTest extends AbstractDocTest {
     }
 
     @Test
+    void pointsAlongLines() {
+        run("layer_points_along_lines", [
+                // Create Workspaces and open rivers Layer
+                "workspace open --name layers --params memory",
+                "workspace open --name rivers --params src/test/resources/rivers/ne_110m_rivers_lake_centerlines.shp",
+                "layer open --workspace rivers --layer ne_110m_rivers_lake_centerlines --name rivers",
+                // Copy Mississippi to another Layer
+                "layer copy --input-name rivers --output-workspace layers --output-name mississippi  --filter \"name='Mississippi'\"",
+                "style vector default --layer mississippi --color blue --file examples/river.sld",
+                "layer style set --name mississippi --style examples/river.sld",
+                // Places points along the Mississippi
+                "layer points along lines --input-name mississippi --output-workspace layers --output-name points --distance 2.0",
+                "style vector default --layer points --color green --file examples/points.sld",
+                "layer style set --name points --style examples/points.sld",
+                // Open base map layers
+                "workspace open --name naturalearth --params examples/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer style set --name countries --style examples/countries.sld",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "layer style set --name ocean --style examples/ocean.sld",
+                // Create a map
+                "map open --name map",
+                "map add layer --name map --layer ocean",
+                "map add layer --name map --layer countries",
+                "map add layer --name map --layer mississippi",
+                "map add layer --name map --layer points",
+                "map draw --name map --file examples/layer_points_along_lines.png --bounds \"-180,-8.233,-36.738,73.378\"",
+                "map close --name map"
+        ])
+        copyFile(new File("examples/layer_points_along_lines.png"), new File("src/main/docs/images"))
+    }
+
+    @Test
     void gridWidthHeight() {
         run("layer_grid_widthheight", [
                 "workspace open --name layers --params memory",
