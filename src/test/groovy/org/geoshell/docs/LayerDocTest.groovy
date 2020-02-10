@@ -634,6 +634,37 @@ class LayerDocTest extends AbstractDocTest {
     }
 
     @Test
+    void transform() {
+        run("layer_transform", [
+                // Create Workspaces
+                "workspace open --name layers --params memory",
+                // Create Random Points
+                "layer random --output-workspace layers --output-name points --geometry -180,-90,180,90 --number 100 --projection EPSG:4326",
+                "style vector default --layer points --color #1E90FF --file examples/points.sld",
+                "layer style set --name points --style examples/points.sld",
+                // Transform points to polygons
+                "layer transform --input-name points --output-workspace layers --output-name polys --transforms \"the_geom=buffer(the_geom, 5)|id=id*10\"",
+                "style vector default --layer polys --color blue --opacity 0.25 --file examples/polys.sld",
+                "layer style set --name polys --style examples/polys.sld",
+                // Open base map layers
+                "workspace open --name naturalearth --params examples/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer style set --name countries --style examples/countries.sld",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "layer style set --name ocean --style examples/ocean.sld",
+                // Create a map
+                "map open --name map",
+                "map add layer --name map --layer ocean",
+                "map add layer --name map --layer countries",
+                "map add layer --name map --layer polys",
+                "map add layer --name map --layer points",
+                "map draw --name map --file examples/layer_transform.png",
+                "map close --name map"
+        ])
+        copyFile(new File("examples/layer_transform.png"), new File("src/main/docs/images"))
+    }
+
+    @Test
     void gridWidthHeight() {
         run("layer_grid_widthheight", [
                 "workspace open --name layers --params memory",
