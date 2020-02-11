@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer transform* [gray]#--input-name# [silver]#points# [gray]#--output-workspace# [silver]#layers# [gray]#--output-name# [silver]#polys# [gray]#--transforms# [silver]#"the_geom=buffer(the_geom,# [silver]#5)|id=id*10"# +

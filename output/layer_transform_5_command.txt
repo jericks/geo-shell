@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*style vector default* [gray]#--layer# [silver]#polys# [gray]#--color# [silver]#blue# [gray]#--opacity# [silver]#0.25# [gray]#--file# [silver]#examples/polys.sld# +
