@@ -100,11 +100,11 @@ class RasterDocTest extends AbstractDocTest {
                 "raster style set --name pc --style examples/style_raster_colormap.sld",
                 "map open --name map",
                 "map add raster --name map --raster pc",
-                "map draw --name map --file examples/raster_style_set.png",
+                "map draw --name map --file examples/raster_style_get.png",
                 "map close --name map",
                 "raster style get --name pc --style examples/pc_style.sld"
         ])
-        copyFile(new File("examples/raster_style_set.png"), new File("src/main/docs/images"))
+        copyFile(new File("examples/raster_style_get.png"), new File("src/main/docs/images"))
     }
 
 }
