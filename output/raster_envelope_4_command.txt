@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*style create* [gray]#--params# [silver]#"stroke=black# [silver]#stroke-width=3"# [gray]#--file# [silver]#examples/outline.sld# +

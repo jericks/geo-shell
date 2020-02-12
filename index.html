@@ -2045,16 +2045,16 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">points</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;11e85fad_170318b7f0b_-7890)</span><br>
-<span class="green">-----------------------------------------</span><br>
+<p><span class="green">Feature (fid-675a71af_1703bce957f_-7890)</span><br>
+<span class="green">----------------------------------------</span><br>
 <span class="green">the_geom = POINT (-122.333056 47.609722)</span><br>
 <span class="green">fid = 1</span><br>
 <span class="green">name = Seattle</span><br>
 <span class="green">state = WA</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;11e85fad_170318b7f0b_-788e)</span><br>
-<span class="green">-----------------------------------------</span><br>
+<p><span class="green">Feature (fid-675a71af_1703bce957f_-788e)</span><br>
+<span class="green">----------------------------------------</span><br>
 <span class="green">the_geom = POINT (-122.459444 47.241389)</span><br>
 <span class="green">fid = 2</span><br>
 <span class="green">name = Tacoma</span><br>
@@ -2248,8 +2248,8 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">states_area</span> <span class="gray">--filter</span> <span class="silver">"NAME_1='North</span> <span class="silver">Dakota'"</span> <span class="gray">--field</span> <span class="silver">"NAME_0,AREA"</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;11e85fad_170318b7f0b_-7889)</span><br>
-<span class="green">-----------------------------------------</span><br>
+<p><span class="green">Feature (fid-675a71af_1703bce957f_-7889)</span><br>
+<span class="green">----------------------------------------</span><br>
 <span class="green">NAME_0 = United States</span><br>
 <span class="green">AREA = 21.804544852979944</span><br></p>
 </div>
@@ -2435,8 +2435,8 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">places_id</span> <span class="gray">--filter</span> <span class="silver">"NAME='Seattle'"</span> <span class="gray">--field</span> <span class="silver">"NAME,ID"</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;11e85fad_170318b7f0b_-79ce)</span><br>
-<span class="green">-----------------------------------------</span><br>
+<p><span class="green">Feature (fid-675a71af_1703bce957f_-79ce)</span><br>
+<span class="green">----------------------------------------</span><br>
 <span class="green">NAME = Seattle</span><br>
 <span class="green">ID = 10</span><br></p>
 </div>
@@ -2623,8 +2623,8 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">places_xy</span> <span class="gray">--filter</span> <span class="silver">"NAME='Seattle'"</span> <span class="gray">--field</span> <span class="silver">"NAME,X,Y"</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;11e85fad_170318b7f0b_-6084)</span><br>
-<span class="green">-----------------------------------------</span><br>
+<p><span class="green">Feature (fid-675a71af_1703bce957f_-6084)</span><br>
+<span class="green">----------------------------------------</span><br>
 <span class="green">NAME = Seattle</span><br>
 <span class="green">X = -122.34193084586849</span><br>
 <span class="green">Y = 47.57194791253073</span><br></p>
@@ -7747,6 +7747,9 @@ No parameters
 <div class="paragraph">
 <p>Create a Vector Layer from the envelope of a Raster.</p>
 </div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster envelope</strong> <span class="gray">--name</span> <span class="silver">earth</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">outline</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -7786,11 +7789,63 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--name</span> <span class="silver">earth</span> <span class="gray">--input</span> <span class="silver">src/test/resources/earth.tif</span><br>
+<span class="green">Format earth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster open</strong> <span class="gray">--format</span> <span class="silver">earth</span> <span class="gray">--raster</span> <span class="silver">earth</span> <span class="gray">--name</span> <span class="silver">earth</span><br>
+<span class="green">Opened Format earth Raster earth as earth</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">layers</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace layers opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster envelope</strong> <span class="gray">--name</span> <span class="silver">earth</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">outline</span><br>
+<span class="green">Done creating envelope in outline from earth!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style create</strong> <span class="gray">--params</span> <span class="silver">"stroke=black</span> <span class="silver">stroke-width=3"</span> <span class="gray">--file</span> <span class="silver">examples/outline.sld</span><br>
+<span class="green">Style stroke=black stroke-width=3 written to /home/travis/build/jericks/geo-shell/examples/outline.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">outline</span> <span class="gray">--style</span> <span class="silver">examples/outline.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/outline.sld set on outline</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add raster</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--raster</span> <span class="silver">earth</span><br>
+<span class="green">Added earth layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">outline</span><br>
+<span class="green">Added outline layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--file</span> <span class="silver">examples/raster_envelope.png</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/raster_envelope.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/raster_envelope.png" alt="raster envelope">
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="get-style-2"><a class="anchor" href="#get-style-2"></a>Get Style</h3>
 <div class="paragraph">
 <p>Get the Raster&#8217;s style.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster style get</strong> <span class="gray">--name</span> <span class="silver">pc</span> <span class="gray">--style</span> <span class="silver">examples/pc_style.sld</span><br></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -7824,11 +7879,55 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--name</span> <span class="silver">pierce_county</span> <span class="gray">--input</span> <span class="silver">src/test/resources/pc.tif</span><br>
+<span class="green">Format pierce_county opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster open</strong> <span class="gray">--format</span> <span class="silver">pierce_county</span> <span class="gray">--raster</span> <span class="silver">pc</span> <span class="gray">--name</span> <span class="silver">pc</span><br>
+<span class="green">Opened Format pierce_county Raster pc as pc</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style raster colormap</strong> <span class="gray">--raster</span> <span class="silver">pc</span> <span class="gray">--values</span> <span class="silver">"25=#9fd182,470=#3e7f3c,920=#133912,1370=#08306b,1820=#fffff5"</span> <span class="gray">--file</span> <span class="silver">examples/style_raster_colormap.sld</span><br>
+<span class="green">Colormap Raster Style for pc written to /home/travis/build/jericks/geo-shell/examples/style_raster_colormap.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster style set</strong> <span class="gray">--name</span> <span class="silver">pc</span> <span class="gray">--style</span> <span class="silver">examples/style_raster_colormap.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/style_raster_colormap.sld set on pc</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add raster</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--raster</span> <span class="silver">pc</span><br>
+<span class="green">Added pc layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--file</span> <span class="silver">examples/raster_style_set.png</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/raster_style_set.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map closed!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster style get</strong> <span class="gray">--name</span> <span class="silver">pc</span> <span class="gray">--style</span> <span class="silver">examples/pc_style.sld</span><br>
+<span class="green">pc style written to /home/travis/build/jericks/geo-shell/examples/pc_style.sld</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/raster_style_get.png" alt="raster style get">
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="set-style-2"><a class="anchor" href="#set-style-2"></a>Set Style</h3>
 <div class="paragraph">
 <p>Set a Raster&#8217;s style</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster style set</strong> <span class="gray">--name</span> <span class="silver">pc</span> <span class="gray">--style</span> <span class="silver">examples/style_raster_colormap.sld</span><br></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -7862,6 +7961,43 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--name</span> <span class="silver">pierce_county</span> <span class="gray">--input</span> <span class="silver">src/test/resources/pc.tif</span><br>
+<span class="green">Format pierce_county opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster open</strong> <span class="gray">--format</span> <span class="silver">pierce_county</span> <span class="gray">--raster</span> <span class="silver">pc</span> <span class="gray">--name</span> <span class="silver">pc</span><br>
+<span class="green">Opened Format pierce_county Raster pc as pc</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style raster colormap</strong> <span class="gray">--raster</span> <span class="silver">pc</span> <span class="gray">--values</span> <span class="silver">"25=#9fd182,470=#3e7f3c,920=#133912,1370=#08306b,1820=#fffff5"</span> <span class="gray">--file</span> <span class="silver">examples/style_raster_colormap.sld</span><br>
+<span class="green">Colormap Raster Style for pc written to /home/travis/build/jericks/geo-shell/examples/style_raster_colormap.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster style set</strong> <span class="gray">--name</span> <span class="silver">pc</span> <span class="gray">--style</span> <span class="silver">examples/style_raster_colormap.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/style_raster_colormap.sld set on pc</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add raster</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--raster</span> <span class="silver">pc</span><br>
+<span class="green">Added pc layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--file</span> <span class="silver">examples/raster_style_set.png</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/raster_style_set.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/raster_style_set.png" alt="raster style set">
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="add-raster"><a class="anchor" href="#add-raster"></a>Add Raster</h3>
@@ -10251,12 +10387,12 @@ No parameters
           <span class="tag">&lt;/ogc:Filter&gt;</span>
           <span class="tag">&lt;sld:PolygonSymbolizer&gt;</span>
             <span class="tag">&lt;sld:Fill&gt;</span>
-              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fill</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#51211f<span class="tag">&lt;/sld:CssParameter&gt;</span>
+              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fill</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#3a5722<span class="tag">&lt;/sld:CssParameter&gt;</span>
             <span class="tag">&lt;/sld:Fill&gt;</span>
           <span class="tag">&lt;/sld:PolygonSymbolizer&gt;</span>
           <span class="tag">&lt;sld:LineSymbolizer&gt;</span>
             <span class="tag">&lt;sld:Stroke&gt;</span>
-              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#381715<span class="tag">&lt;/sld:CssParameter&gt;</span>
+              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#283c17<span class="tag">&lt;/sld:CssParameter&gt;</span>
               <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke-width</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>0.5<span class="tag">&lt;/sld:CssParameter&gt;</span>
             <span class="tag">&lt;/sld:Stroke&gt;</span>
           <span class="tag">&lt;/sld:LineSymbolizer&gt;</span>
@@ -10270,12 +10406,12 @@ No parameters
           <span class="tag">&lt;/ogc:Filter&gt;</span>
           <span class="tag">&lt;sld:PolygonSymbolizer&gt;</span>
             <span class="tag">&lt;sld:Fill&gt;</span>
-              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fill</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#0d4336<span class="tag">&lt;/sld:CssParameter&gt;</span>
+              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fill</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#265556<span class="tag">&lt;/sld:CssParameter&gt;</span>
             <span class="tag">&lt;/sld:Fill&gt;</span>
           <span class="tag">&lt;/sld:PolygonSymbolizer&gt;</span>
           <span class="tag">&lt;sld:LineSymbolizer&gt;</span>
             <span class="tag">&lt;sld:Stroke&gt;</span>
-              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#092e25<span class="tag">&lt;/sld:CssParameter&gt;</span>
+              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#1a3b3c<span class="tag">&lt;/sld:CssParameter&gt;</span>
               <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke-width</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>0.5<span class="tag">&lt;/sld:CssParameter&gt;</span>
             <span class="tag">&lt;/sld:Stroke&gt;</span>
           <span class="tag">&lt;/sld:LineSymbolizer&gt;</span>
@@ -11798,7 +11934,7 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">date</strong> <br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Monday, February 10, 2020 11:59:44 PM UTC</span><br></p>
+<p><span class="green">Wednesday, February 12, 2020 11:49:12 PM UTC</span><br></p>
 </div>
 </div>
 <div class="sect2">
@@ -12103,7 +12239,7 @@ No parameters
 <div id="footer">
 <div id="footer-text">
 Version 0.7-SNAPSHOT<br>
-Last updated 2020-02-10 23:49:07 UTC
+Last updated 2020-02-12 23:37:22 UTC
 </div>
 </div>
 </body>

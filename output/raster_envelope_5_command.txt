@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer style set* [gray]#--name# [silver]#outline# [gray]#--style# [silver]#examples/outline.sld# +
