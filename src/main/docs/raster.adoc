@@ -119,17 +119,117 @@ include::output/raster_value_5_result.txt[]
 === Envelope
 
 include::commands/raster_envelope_description.txt[]
+
+include::output/raster_envelope_3_command.txt[]
+
 include::commands/raster_envelope.txt[]
+
+include::output/raster_envelope_0_command.txt[]
+include::output/raster_envelope_0_result.txt[]
+
+include::output/raster_envelope_1_command.txt[]
+include::output/raster_envelope_1_result.txt[]
+
+include::output/raster_envelope_2_command.txt[]
+include::output/raster_envelope_2_result.txt[]
+
+include::output/raster_envelope_3_command.txt[]
+include::output/raster_envelope_3_result.txt[]
+
+include::output/raster_envelope_4_command.txt[]
+include::output/raster_envelope_4_result.txt[]
+
+include::output/raster_envelope_5_command.txt[]
+include::output/raster_envelope_5_result.txt[]
+
+include::output/raster_envelope_6_command.txt[]
+include::output/raster_envelope_6_result.txt[]
+
+include::output/raster_envelope_7_command.txt[]
+include::output/raster_envelope_7_result.txt[]
+
+include::output/raster_envelope_8_command.txt[]
+include::output/raster_envelope_8_result.txt[]
+
+include::output/raster_envelope_9_command.txt[]
+include::output/raster_envelope_9_result.txt[]
+
+include::output/raster_envelope_10_command.txt[]
+include::output/raster_envelope_10_result.txt[]
+
+image::raster_envelope.png[]
+
 
 === Get Style
 
 include::commands/raster_style_get_description.txt[]
+
+include::output/raster_style_get_8_command.txt[]
+
 include::commands/raster_style_get.txt[]
+
+include::output/raster_style_get_0_command.txt[]
+include::output/raster_style_get_0_result.txt[]
+
+include::output/raster_style_get_1_command.txt[]
+include::output/raster_style_get_1_result.txt[]
+
+include::output/raster_style_get_2_command.txt[]
+include::output/raster_style_get_2_result.txt[]
+
+include::output/raster_style_get_3_command.txt[]
+include::output/raster_style_get_3_result.txt[]
+
+include::output/raster_style_get_4_command.txt[]
+include::output/raster_style_get_4_result.txt[]
+
+include::output/raster_style_get_5_command.txt[]
+include::output/raster_style_get_5_result.txt[]
+
+include::output/raster_style_get_6_command.txt[]
+include::output/raster_style_get_6_result.txt[]
+
+include::output/raster_style_get_7_command.txt[]
+include::output/raster_style_get_7_result.txt[]
+
+include::output/raster_style_get_8_command.txt[]
+include::output/raster_style_get_8_result.txt[]
+
+image::raster_style_get.png[]
 
 === Set Style
 
 include::commands/raster_style_set_description.txt[]
+
+include::output/raster_style_set_3_command.txt[]
+
 include::commands/raster_style_set.txt[]
+
+include::output/raster_style_set_0_command.txt[]
+include::output/raster_style_set_0_result.txt[]
+
+include::output/raster_style_set_1_command.txt[]
+include::output/raster_style_set_1_result.txt[]
+
+include::output/raster_style_set_2_command.txt[]
+include::output/raster_style_set_2_result.txt[]
+
+include::output/raster_style_set_3_command.txt[]
+include::output/raster_style_set_3_result.txt[]
+
+include::output/raster_style_set_4_command.txt[]
+include::output/raster_style_set_4_result.txt[]
+
+include::output/raster_style_set_5_command.txt[]
+include::output/raster_style_set_5_result.txt[]
+
+include::output/raster_style_set_6_command.txt[]
+include::output/raster_style_set_6_result.txt[]
+
+include::output/raster_style_set_7_command.txt[]
+include::output/raster_style_set_7_result.txt[]
+
+image::raster_style_set.png[]
 
 === Add Raster
 
