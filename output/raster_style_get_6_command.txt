@@ -1,1 +1,1 @@
-[blue]#geo-shell># [navy]*map draw* [gray]#--name# [silver]#map# [gray]#--file# [silver]#examples/raster_style_set.png# +
+[blue]#geo-shell># [navy]*map draw* [gray]#--name# [silver]#map# [gray]#--file# [silver]#examples/raster_style_get.png# +
