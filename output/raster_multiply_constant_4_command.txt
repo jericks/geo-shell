@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*raster multiply constant* [gray]#--name# [silver]#pc# [gray]#--output-format# [silver]#pcTimes2# [gray]#--output-name# [silver]#pcTimes2# [gray]#--values# [silver]#2# +

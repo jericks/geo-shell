@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*format open* [gray]#--name# [silver]#pcDividedBy2# [gray]#--input# [silver]#examples/pcDividedBy2.tif# +

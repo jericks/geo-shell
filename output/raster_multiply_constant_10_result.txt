@@ -1,0 +1,1 @@
+[green]#Done drawing /home/travis/build/jericks/geo-shell/examples/raster_multiply_constant.png!# +

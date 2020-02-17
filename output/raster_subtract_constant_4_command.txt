@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*raster subtract constant* [gray]#--name# [silver]#pc# [gray]#--output-format# [silver]#pcMinus100# [gray]#--output-name# [silver]#pcMinus100# [gray]#--values# [silver]#100# +

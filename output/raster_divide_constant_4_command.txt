@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*raster divide constant* [gray]#--name# [silver]#pc# [gray]#--output-format# [silver]#pcDividedBy2# [gray]#--output-name# [silver]#pcDividedBy2# [gray]#--values# [silver]#2# +

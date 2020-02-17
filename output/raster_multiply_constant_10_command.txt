@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*map draw* [gray]#--name# [silver]#map# [gray]#--file# [silver]#examples/raster_multiply_constant.png# +
