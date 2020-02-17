@@ -239,7 +239,48 @@ include::commands/raster_add_raster.txt[]
 === Add Constant
 
 include::commands/raster_add_constant_description.txt[]
+
+include::output/raster_add_constant_4_command.txt[]
+
 include::commands/raster_add_constant.txt[]
+
+include::output/raster_add_constant_0_command.txt[]
+include::output/raster_add_constant_0_result.txt[]
+
+include::output/raster_add_constant_1_command.txt[]
+include::output/raster_add_constant_1_result.txt[]
+
+include::output/raster_add_constant_2_command.txt[]
+include::output/raster_add_constant_2_result.txt[]
+
+include::output/raster_add_constant_3_command.txt[]
+include::output/raster_add_constant_3_result.txt[]
+
+include::output/raster_add_constant_4_command.txt[]
+include::output/raster_add_constant_4_result.txt[]
+
+include::output/raster_add_constant_5_command.txt[]
+include::output/raster_add_constant_5_result.txt[]
+
+include::output/raster_add_constant_6_command.txt[]
+include::output/raster_add_constant_6_result.txt[]
+
+include::output/raster_add_constant_7_command.txt[]
+include::output/raster_add_constant_7_result.txt[]
+
+include::output/raster_add_constant_8_command.txt[]
+include::output/raster_add_constant_8_result.txt[]
+
+include::output/raster_add_constant_9_command.txt[]
+include::output/raster_add_constant_9_result.txt[]
+
+include::output/raster_add_constant_10_command.txt[]
+include::output/raster_add_constant_10_result.txt[]
+
+include::output/raster_add_constant_11_command.txt[]
+include::output/raster_add_constant_11_result.txt[]
+
+image::raster_add_constant.png[]
 
 === Subtract Raster
 
@@ -249,7 +290,48 @@ include::commands/raster_subtract_raster.txt[]
 === Subtract Constant
 
 include::commands/raster_subtract_constant_description.txt[]
+
+include::output/raster_subtract_constant_4_command.txt[]
+
 include::commands/raster_subtract_constant.txt[]
+
+include::output/raster_subtract_constant_0_command.txt[]
+include::output/raster_subtract_constant_0_result.txt[]
+
+include::output/raster_subtract_constant_1_command.txt[]
+include::output/raster_subtract_constant_1_result.txt[]
+
+include::output/raster_subtract_constant_2_command.txt[]
+include::output/raster_subtract_constant_2_result.txt[]
+
+include::output/raster_subtract_constant_3_command.txt[]
+include::output/raster_subtract_constant_3_result.txt[]
+
+include::output/raster_subtract_constant_4_command.txt[]
+include::output/raster_subtract_constant_4_result.txt[]
+
+include::output/raster_subtract_constant_5_command.txt[]
+include::output/raster_subtract_constant_5_result.txt[]
+
+include::output/raster_subtract_constant_6_command.txt[]
+include::output/raster_subtract_constant_6_result.txt[]
+
+include::output/raster_subtract_constant_7_command.txt[]
+include::output/raster_subtract_constant_7_result.txt[]
+
+include::output/raster_subtract_constant_8_command.txt[]
+include::output/raster_subtract_constant_8_result.txt[]
+
+include::output/raster_subtract_constant_9_command.txt[]
+include::output/raster_subtract_constant_9_result.txt[]
+
+include::output/raster_subtract_constant_10_command.txt[]
+include::output/raster_subtract_constant_10_result.txt[]
+
+include::output/raster_subtract_constant_11_command.txt[]
+include::output/raster_subtract_constant_11_result.txt[]
+
+image::raster_subtract_constant.png[]
 
 === Multiply Raster
 
@@ -259,7 +341,49 @@ include::commands/raster_multiply_raster.txt[]
 === Multiply Constant
 
 include::commands/raster_multiply_constant_description.txt[]
+
+include::output/raster_multiply_constant_4_command.txt[]
+
 include::commands/raster_multiply_constant.txt[]
+
+include::output/raster_multiply_constant_0_command.txt[]
+include::output/raster_multiply_constant_0_result.txt[]
+
+include::output/raster_multiply_constant_1_command.txt[]
+include::output/raster_multiply_constant_1_result.txt[]
+
+include::output/raster_multiply_constant_2_command.txt[]
+include::output/raster_multiply_constant_2_result.txt[]
+
+include::output/raster_multiply_constant_3_command.txt[]
+include::output/raster_multiply_constant_3_result.txt[]
+
+include::output/raster_multiply_constant_4_command.txt[]
+include::output/raster_multiply_constant_4_result.txt[]
+
+include::output/raster_multiply_constant_5_command.txt[]
+include::output/raster_multiply_constant_5_result.txt[]
+
+include::output/raster_multiply_constant_6_command.txt[]
+include::output/raster_multiply_constant_6_result.txt[]
+
+include::output/raster_multiply_constant_7_command.txt[]
+include::output/raster_multiply_constant_7_result.txt[]
+
+include::output/raster_multiply_constant_8_command.txt[]
+include::output/raster_multiply_constant_8_result.txt[]
+
+include::output/raster_multiply_constant_9_command.txt[]
+include::output/raster_multiply_constant_9_result.txt[]
+
+include::output/raster_multiply_constant_10_command.txt[]
+include::output/raster_multiply_constant_10_result.txt[]
+
+include::output/raster_multiply_constant_11_command.txt[]
+include::output/raster_multiply_constant_11_result.txt[]
+
+image::raster_multiply_constant.png[]
+
 
 === Divide Raster
 
@@ -269,7 +393,49 @@ include::commands/raster_divide_raster.txt[]
 === Divide Constant
 
 include::commands/raster_divide_constant_description.txt[]
+
+include::output/raster_divide_constant_4_command.txt[]
+
 include::commands/raster_divide_constant.txt[]
+
+include::output/raster_divide_constant_0_command.txt[]
+include::output/raster_divide_constant_0_result.txt[]
+
+include::output/raster_divide_constant_1_command.txt[]
+include::output/raster_divide_constant_1_result.txt[]
+
+include::output/raster_divide_constant_2_command.txt[]
+include::output/raster_divide_constant_2_result.txt[]
+
+include::output/raster_divide_constant_3_command.txt[]
+include::output/raster_divide_constant_3_result.txt[]
+
+include::output/raster_divide_constant_4_command.txt[]
+include::output/raster_divide_constant_4_result.txt[]
+
+include::output/raster_divide_constant_5_command.txt[]
+include::output/raster_divide_constant_5_result.txt[]
+
+include::output/raster_divide_constant_6_command.txt[]
+include::output/raster_divide_constant_6_result.txt[]
+
+include::output/raster_divide_constant_7_command.txt[]
+include::output/raster_divide_constant_7_result.txt[]
+
+include::output/raster_divide_constant_8_command.txt[]
+include::output/raster_divide_constant_8_result.txt[]
+
+include::output/raster_divide_constant_9_command.txt[]
+include::output/raster_divide_constant_9_result.txt[]
+
+include::output/raster_divide_constant_10_command.txt[]
+include::output/raster_divide_constant_10_result.txt[]
+
+include::output/raster_divide_constant_11_command.txt[]
+include::output/raster_divide_constant_11_result.txt[]
+
+image::raster_divide_constant.png[]
+
 
 === Contours
 

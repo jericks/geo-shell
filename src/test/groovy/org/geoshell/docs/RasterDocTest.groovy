@@ -107,4 +107,80 @@ class RasterDocTest extends AbstractDocTest {
         copyFile(new File("examples/raster_style_get.png"), new File("src/main/docs/images"))
     }
 
+    @Test
+    void addConstant() {
+        run("raster_add_constant", [
+                "format open --name pierce_county --input src/test/resources/pc.tif",
+                "raster open --format pierce_county --raster pc --name pc",
+                "raster value --name pc --x -121.799927 --y 46.867703",
+                "format open --name pcAdd100 --input examples/pcAdd100.tif",
+                "raster add constant --name pc --output-format pcAdd100 --output-name pcAdd100 --values 100",
+                "raster value --name pcAdd100 --x -121.799927 --y 46.867703",
+                "style raster colormap --raster pcAdd100 --values \"25=#9fd182,470=#3e7f3c,920=#133912,1370=#08306b,1820=#fffff5\" --file examples/style_raster_colormap.sld",
+                "raster style set --name pcAdd100 --style examples/style_raster_colormap.sld",
+                "map open --name map",
+                "map add raster --name map --raster pcAdd100",
+                "map draw --name map --file examples/raster_add_constant.png",
+                "map close --name map",
+        ])
+        copyFile(new File("examples/raster_add_constant.png"), new File("src/main/docs/images"))
+    }
+
+    @Test
+    void subtractConstant() {
+        run("raster_subtract_constant", [
+                "format open --name pierce_county --input src/test/resources/pc.tif",
+                "raster open --format pierce_county --raster pc --name pc",
+                "raster value --name pc --x -121.799927 --y 46.867703",
+                "format open --name pcMinus100 --input examples/pcMinus100.tif",
+                "raster subtract constant --name pc --output-format pcMinus100 --output-name pcMinus100 --values 100",
+                "raster value --name pcMinus100 --x -121.799927 --y 46.867703",
+                "style raster colormap --raster pcMinus100 --values \"25=#9fd182,470=#3e7f3c,920=#133912,1370=#08306b,1820=#fffff5\" --file examples/style_raster_colormap.sld",
+                "raster style set --name pcMinus100 --style examples/style_raster_colormap.sld",
+                "map open --name map",
+                "map add raster --name map --raster pcMinus100",
+                "map draw --name map --file examples/raster_subtract_constant.png",
+                "map close --name map",
+        ])
+        copyFile(new File("examples/raster_subtract_constant.png"), new File("src/main/docs/images"))
+    }
+
+    @Test
+    void multiplyConstant() {
+        run("raster_multiply_constant", [
+                "format open --name pierce_county --input src/test/resources/pc.tif",
+                "raster open --format pierce_county --raster pc --name pc",
+                "raster value --name pc --x -121.799927 --y 46.867703",
+                "format open --name pcTimes2 --input examples/pcTimes2.tif",
+                "raster multiply constant --name pc --output-format pcTimes2 --output-name pcTimes2 --values 2",
+                "raster value --name pcTimes2 --x -121.799927 --y 46.867703",
+                "style raster colormap --raster pcTimes2 --values \"25=#9fd182,470=#3e7f3c,920=#133912,1370=#08306b,1820=#fffff5\" --file examples/style_raster_colormap.sld",
+                "raster style set --name pcTimes2 --style examples/style_raster_colormap.sld",
+                "map open --name map",
+                "map add raster --name map --raster pcTimes2",
+                "map draw --name map --file examples/raster_multiply_constant.png",
+                "map close --name map",
+        ])
+        copyFile(new File("examples/raster_multiply_constant.png"), new File("src/main/docs/images"))
+    }
+
+    @Test
+    void divideConstant() {
+        run("raster_divide_constant", [
+                "format open --name pierce_county --input src/test/resources/pc.tif",
+                "raster open --format pierce_county --raster pc --name pc",
+                "raster value --name pc --x -121.799927 --y 46.867703",
+                "format open --name pcDividedBy2 --input examples/pcDividedBy2.tif",
+                "raster divide constant --name pc --output-format pcDividedBy2 --output-name pcDividedBy2 --values 2",
+                "raster value --name pcDividedBy2 --x -121.799927 --y 46.867703",
+                "style raster colormap --raster pcDividedBy2 --values \"25=#9fd182,470=#3e7f3c,920=#133912,1370=#08306b,1820=#fffff5\" --file examples/style_raster_colormap.sld",
+                "raster style set --name pcDividedBy2 --style examples/style_raster_colormap.sld",
+                "map open --name map",
+                "map add raster --name map --raster pcDividedBy2",
+                "map draw --name map --file examples/raster_divide_constant.png",
+                "map close --name map",
+        ])
+        copyFile(new File("examples/raster_divide_constant.png"), new File("src/main/docs/images"))
+    }
+
 }
