@@ -126,4 +126,22 @@ Aa2=#94474b"""
                 styleText.contains("<sld:ColorMap>") &&
                 styleText.contains("<sld:ColorMapEntry")
     }
+
+    @Test void createColorMapPaletteRasterStyle() {
+        Catalog catalog = new Catalog()
+        File file = new File(getClass().getClassLoader().getResource("raster.tif").toURI())
+        catalog.formats[new FormatName("raster")] = new GeoTIFF(file)
+        catalog.rasters[new RasterName("raster")] = catalog.formats[new FormatName("raster")].read()
+
+        StyleCommands cmds = new StyleCommands(catalog: catalog)
+        File styleFile = folder.newFile("style.sld")
+        String result = cmds.createColorMapPaletteRasterStyle(1,255, "MutedTerrain", 25, "ramp", false, 1.0, styleFile)
+        assertTrue result.startsWith("Colormap Palette Raster Style written to")
+        assertTrue result.trim().endsWith("style.sld!")
+        String styleText = styleFile.text
+        assertTrue styleText.contains("<sld:UserLayer>") &&
+                styleText.contains("<sld:RasterSymbolizer>") &&
+                styleText.contains("<sld:ColorMap>") &&
+                styleText.contains("<sld:ColorMapEntry")
+    }
 }

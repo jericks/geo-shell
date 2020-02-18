@@ -132,4 +132,20 @@ class StyleDocTest extends AbstractDocTest {
         copyFile(new File("examples/style_raster_colormap.sld"), new File("src/main/docs/output"))
     }
 
+    @Test
+    void polygon() {
+        run("style_raster_palette_colormap", [
+                "format open --name high --input src/test/resources/high.tif",
+                "raster open --format high --raster high --name high",
+                "style raster palette colormap --min 1 --max 50 --palette MutedTerrain --number 20 --file examples/style_raster_palette_colormap.sld",
+                "raster style set --name high --style examples/style_raster_palette_colormap.sld",
+                "map open --name map",
+                "map add raster --name map --raster high",
+                "map draw --name map --file examples/style_raster_palette_colormap.png --bounds \"-180,-90,180,90,EPSG:4326\"",
+                "map close --name map",
+        ])
+        copyFile(new File("examples/style_raster_palette_colormap.png"), new File("src/main/docs/images"))
+        copyFile(new File("examples/style_raster_palette_colormap.sld"), new File("src/main/docs/output"))
+    }
+
 }

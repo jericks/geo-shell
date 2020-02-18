@@ -108,6 +108,26 @@ class RasterDocTest extends AbstractDocTest {
     }
 
     @Test
+    void polygon() {
+        run("raster_polygon", [
+                "format open --name high --input src/test/resources/high.tif",
+                "raster open --format high --raster high --name high",
+                "workspace open --name layers --params memory",
+                "raster polygon --name high --output-workspace layers --output-name grid",
+                "style raster palette colormap --min 1 --max 50 --palette MutedTerrain --number 20 --file examples/high.sld",
+                "raster style set --name high --style examples/high.sld",
+                "style create --params \"stroke=black stroke-width=2 label=value label-size=12\" --file examples/grid.sld",
+                "layer style set --name grid --style examples/grid.sld",
+                "map open --name map",
+                "map add raster --name map --raster high",
+                "map add layer --name map --layer grid",
+                "map draw --name map --file examples/raster_polygon.png --bounds \"-180,-90,180,90,EPSG:4326\"",
+                "map close --name map",
+        ])
+        copyFile(new File("examples/raster_polygon.png"), new File("src/main/docs/images"))
+    }
+
+    @Test
     void addConstant() {
         run("raster_add_constant", [
                 "format open --name pierce_county --input src/test/resources/pc.tif",

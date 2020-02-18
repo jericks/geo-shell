@@ -306,3 +306,35 @@ include::output/style_raster_colormap_7_result.txt[]
 include::output/style_raster_colormap.sld[]
 
 image::style_raster_colormap.png[]
+
+=== Raster Palette Color Map
+
+include::commands/style_raster_palette_colormap_description.txt[]
+
+include::output/style_raster_palette_colormap_2_command.txt[]
+
+include::commands/style_raster_palette_colormap.txt[]
+
+include::output/style_raster_palette_colormap_0_command.txt[]
+include::output/style_raster_palette_colormap_0_result.txt[]
+
+include::output/style_raster_palette_colormap_1_command.txt[]
+include::output/style_raster_palette_colormap_1_result.txt[]
+
+include::output/style_raster_palette_colormap_2_command.txt[]
+include::output/style_raster_palette_colormap_2_result.txt[]
+
+include::output/style_raster_palette_colormap_3_command.txt[]
+include::output/style_raster_palette_colormap_3_result.txt[]
+
+include::output/style_raster_palette_colormap_4_command.txt[]
+include::output/style_raster_palette_colormap_4_result.txt[]
+
+include::output/style_raster_palette_colormap_5_command.txt[]
+include::output/style_raster_palette_colormap_5_result.txt[]
+
+[source,xml]
+include::output/style_raster_palette_colormap.sld[]
+
+image::style_raster_palette_colormap.png[]
+

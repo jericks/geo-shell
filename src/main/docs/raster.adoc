@@ -384,7 +384,6 @@ include::output/raster_multiply_constant_11_result.txt[]
 
 image::raster_multiply_constant.png[]
 
-
 === Divide Raster
 
 include::commands/raster_divide_raster_description.txt[]
@@ -477,5 +476,59 @@ include::commands/raster_shadedrelief.txt[]
 include::commands/raster_stylize_description.txt[]
 include::commands/raster_stylize.txt[]
 
+=== Polygon
+
+include::commands/raster_polygon_description.txt[]
+
+include::output/raster_polygon_3_command.txt[]
+
+include::commands/raster_polygon.txt[]
+
+include::output/raster_polygon_0_command.txt[]
+include::output/raster_polygon_0_result.txt[]
+
+include::output/raster_polygon_1_command.txt[]
+include::output/raster_polygon_1_result.txt[]
+
+include::output/raster_polygon_2_command.txt[]
+include::output/raster_polygon_2_result.txt[]
+
+include::output/raster_polygon_3_command.txt[]
+include::output/raster_polygon_3_result.txt[]
+
+include::output/raster_polygon_4_command.txt[]
+include::output/raster_polygon_4_result.txt[]
+
+include::output/raster_polygon_5_command.txt[]
+include::output/raster_polygon_5_result.txt[]
+
+include::output/raster_polygon_6_command.txt[]
+include::output/raster_polygon_6_result.txt[]
+
+include::output/raster_polygon_7_command.txt[]
+include::output/raster_polygon_7_result.txt[]
+
+include::output/raster_polygon_8_command.txt[]
+include::output/raster_polygon_8_result.txt[]
+
+include::output/raster_polygon_9_command.txt[]
+include::output/raster_polygon_9_result.txt[]
+
+include::output/raster_polygon_10_command.txt[]
+include::output/raster_polygon_10_result.txt[]
+
+include::output/raster_polygon_11_command.txt[]
+include::output/raster_polygon_11_result.txt[]
+
+include::output/raster_polygon_12_command.txt[]
+include::output/raster_polygon_12_result.txt[]
+
+include::output/raster_polygon_13_command.txt[]
+include::output/raster_polygon_13_result.txt[]
+
+include::output/raster_polygon_14_command.txt[]
+include::output/raster_polygon_14_result.txt[]
+
+image::raster_polygon.png[]
 
 

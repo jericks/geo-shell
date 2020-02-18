@@ -198,4 +198,24 @@ class StyleCommands implements CommandMarker {
         }
     }
 
+    @CliCommand(value = "style raster palette colormap", help = "Create a color map raster style from a color palette.")
+    String createColorMapPaletteRasterStyle(
+            @CliOption(key = "min", mandatory = true, help = "The min value") double minValue,
+            @CliOption(key = "max", mandatory = true, help = "The max value") double maxValue,
+            @CliOption(key = "palette", mandatory = true, help = "The color palette name (from Color Brewer)") String palette,
+            @CliOption(key = "number", mandatory = true, help = "The number of categories") int numberOfCategories,
+            @CliOption(key = "type", unspecifiedDefaultValue = "ramp", specifiedDefaultValue = "ramp", mandatory = false, help = "The type of interpolation") String type,
+            @CliOption(key = "extended", unspecifiedDefaultValue = "false", specifiedDefaultValue = "false", mandatory = false, help = "Whether to use extended colors") boolean extended,
+            @CliOption(key = "opacity", mandatory = false, help = "The opacity", unspecifiedDefaultValue = "1.0", specifiedDefaultValue = "1.0") double opacity,
+            @CliOption(key = "file", mandatory = true, help = "The output file") File file
+    ) throws Exception {
+        ColorMap symbol = new ColorMap(minValue, maxValue, palette, numberOfCategories, type, extended)
+        symbol.opacity = opacity
+        String fileType = FilenameUtils.getExtension(file.name)
+        Writer styleWriter = fileType.equalsIgnoreCase("ysld") || type.equalsIgnoreCase("yml") ? new YSLDWriter() :new SLDWriter()
+        String styleStr = styleWriter.write(symbol)
+        file.write(styleStr)
+        "Colormap Palette Raster Style written to ${file}!"
+    }
+
 }

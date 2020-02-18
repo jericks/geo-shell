@@ -659,4 +659,51 @@ class RasterCommands implements CommandMarker {
 
     }
 
+    @CliCommand(value = "raster polygon", help = "Convert a raster in a polygon")
+    String polygon(
+            @CliOption(key = "name", mandatory = true, help = "The Raster name") RasterName name,
+            @CliOption(key = "output-workspace", mandatory = true, help = "The output Layer Workspace") WorkspaceName workspaceName,
+            @CliOption(key = "output-name", mandatory = true, help = "The output Layer name") String outputLayerName,
+            @CliOption(key = "band", mandatory = false, unspecifiedDefaultValue = "0", specifiedDefaultValue = "0", help = "The band") int band,
+            @CliOption(key = "inside-edges", mandatory = false, specifiedDefaultValue = "true", unspecifiedDefaultValue = "true", help = "Whether to include inside edges") boolean insideEdges,
+            @CliOption(key = "roi", mandatory = false, help = "The region of interest") String regionOfInterest,
+            @CliOption(key = "nodata", mandatory = false, unspecifiedDefaultValue = "0", specifiedDefaultValue = "0", help = "The NODATA value") double noData,
+            @CliOption(key = "ranges", mandatory = false, help = "The comma delimited reclassification ranges (min,minIncluded,max,maxIncluded)") String ranges
+    ) throws Exception {
+        Raster raster = catalog.rasters[name]
+        if (raster) {
+           Workspace workspace = catalog.workspaces[workspaceName]
+            if (workspace) {
+                Layer layer = workspace.create(outputLayerName, [
+                    new Field("the_geom", "polygon", raster.proj),
+                    new Field("value", "double")
+                ])
+                Map polyOptions = [
+                        band       : band,
+                        insideEdges: insideEdges,
+                        roi        : Geometry.fromString(regionOfInterest),
+                        noData     : noData,
+                        range      : ranges?.split(";").collect { r ->
+                            def parts = r.split(",")
+                            [min: parts[0], minIncluded: parts[1], max: parts[2], maxIncluded: parts[3]]
+                        }
+                ]
+                Layer polygonLayer = raster.getPolygonLayer(polyOptions)
+                layer.withWriter { geoscript.layer.Writer w ->
+                    polygonLayer.cursor.each { Feature f ->
+                        def newFeature = layer.schema.feature([the_geom: f.geom, value: f.get("value")], f.id)
+                        w.add(newFeature)
+                    }
+                }
+                catalog.layers[new LayerName(outputLayerName)] = workspace.get(outputLayerName)
+                "Done converting Raster ${name} to a Polygon Layer ${outputLayerName}!"
+            } else {
+                "Unable to find Workspace ${workspaceName}"
+            }
+        } else {
+            "Unable to find Raster ${name}"
+        }
+
+    }
+
 }

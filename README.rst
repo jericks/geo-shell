@@ -269,6 +269,8 @@ raster shadedrelief --name raster --output-format shaded --output-name shaded --
 
 raster mosaic --name1 raster1 --name2 raster2 --output-format mosaic --output-name mosaic
 
+raster polygon --name high --output-workspace layers --output-name grid
+
 style
 -----
 style create --params "stroke=navy stroke=width=5" --file earth_outline.sld
@@ -282,6 +284,8 @@ style vector gradient --layer naturalearth:states --field population --number 8 
 style raster default --raster raster --opacity 0.75 --file raster.sld
 
 style raster colormap --raster raster --values "10=red,50=blue,100=wheat,250=white" --type ramp --opacity 0.75 --file raster_colormap.sld
+
+style raster palette colormap --min 1 --max 50 --palette MutedTerrain --number 20 --file terrain.sld
 
 map
 ---

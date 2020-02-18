@@ -537,4 +537,21 @@ class RasterCommandsTest {
         assertNotNull outRaster
     }
 
+    @Test void polygon() {
+        Catalog catalog = new Catalog()
+        File highFile = new File(getClass().getClassLoader().getResource("high.tif").toURI())
+        Format highFormat = Format.getFormat(highFile)
+        catalog.formats[new FormatName("high")] = highFormat
+        catalog.workspaces[new WorkspaceName("layers")] = new Memory()
+
+        RasterCommands cmds = new RasterCommands(catalog: catalog)
+        cmds.open(new FormatName("high"), new RasterName("high"), "high")
+
+        String result = cmds.polygon(new RasterName("high"), new WorkspaceName("layers"), "polygons", 0, true, null, 0, null)
+        assertEquals "Done converting Raster high to a Polygon Layer polygons!", result
+        Layer layer = catalog.layers[new LayerName("polygons")]
+        assertNotNull layer
+        assertEquals 16, layer.count()
+    }
+
 }
