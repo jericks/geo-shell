@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*format open* [gray]#--name# [silver]#add# [gray]#--input# [silver]#examples/add.tif# +

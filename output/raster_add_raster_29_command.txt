@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer style set* [gray]#--name# [silver]#add_polygons# [gray]#--style# [silver]#examples/grid.sld# +

@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*map add layer* [gray]#--name# [silver]#mapAdd# [gray]#--layer# [silver]#add_polygons# +

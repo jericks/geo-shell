@@ -1144,6 +1144,9 @@ No parameters
 <div class="paragraph">
 <p>Add two Rasters together</p>
 </div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster add raster</strong> <span class="gray">--name1</span> <span class="silver">high</span> <span class="gray">--name2</span> <span class="silver">low</span> <span class="gray">--output-format</span> <span class="silver">add</span> <span class="gray">--output-name</span> <span class="silver">add</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -1190,6 +1193,169 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--name</span> <span class="silver">high</span> <span class="gray">--input</span> <span class="silver">src/test/resources/high.tif</span><br>
+<span class="green">Format high opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster open</strong> <span class="gray">--format</span> <span class="silver">high</span> <span class="gray">--raster</span> <span class="silver">high</span> <span class="gray">--name</span> <span class="silver">high</span><br>
+<span class="green">Opened Format high Raster high as high</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">layers</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace layers opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style create</strong> <span class="gray">--params</span> <span class="silver">"stroke=black</span> <span class="silver">stroke-width=2</span> <span class="silver">label=value</span> <span class="silver">label-size=12"</span> <span class="gray">--file</span> <span class="silver">examples/grid.sld</span><br>
+<span class="green">Style stroke=black stroke-width=2 label=value label-size=12 written to /home/travis/build/jericks/geo-shell/examples/grid.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster polygon</strong> <span class="gray">--name</span> <span class="silver">high</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">high_polygons</span><br>
+<span class="green">Done converting Raster high to a Polygon Layer high_polygons!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style raster palette colormap</strong> <span class="gray">--min</span> <span class="silver">1</span> <span class="gray">--max</span> <span class="silver">50</span> <span class="gray">--palette</span> <span class="silver">MutedTerrain</span> <span class="gray">--number</span> <span class="silver">20</span> <span class="gray">--file</span> <span class="silver">examples/high.sld</span><br>
+<span class="green">Colormap Palette Raster Style written to /home/travis/build/jericks/geo-shell/examples/high.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster style set</strong> <span class="gray">--name</span> <span class="silver">high</span> <span class="gray">--style</span> <span class="silver">examples/high.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/high.sld set on high</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">high_polygons</span> <span class="gray">--style</span> <span class="silver">examples/grid.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/grid.sld set on high_polygons</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">mapHigh</span><br>
+<span class="green">Map mapHigh opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add raster</strong> <span class="gray">--name</span> <span class="silver">mapHigh</span> <span class="gray">--raster</span> <span class="silver">high</span><br>
+<span class="green">Added high layer to map mapHigh</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">mapHigh</span> <span class="gray">--layer</span> <span class="silver">high_polygons</span><br>
+<span class="green">Added high_polygons layer to map mapHigh</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">mapHigh</span> <span class="gray">--file</span> <span class="silver">examples/raster_add_raster_high.png</span> <span class="gray">--bounds</span> <span class="silver">"-180,-90,180,90,EPSG:4326"</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/raster_add_raster_high.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">mapHigh</span><br>
+<span class="green">Map mapHigh closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/raster_add_raster_high.png" alt="raster add raster high">
+</div>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--name</span> <span class="silver">low</span> <span class="gray">--input</span> <span class="silver">src/test/resources/low.tif</span><br>
+<span class="green">Format low opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster open</strong> <span class="gray">--format</span> <span class="silver">low</span> <span class="gray">--raster</span> <span class="silver">low</span> <span class="gray">--name</span> <span class="silver">low</span><br>
+<span class="green">Opened Format low Raster low as low</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster polygon</strong> <span class="gray">--name</span> <span class="silver">low</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">low_polygons</span><br>
+<span class="green">Done converting Raster low to a Polygon Layer low_polygons!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style raster palette colormap</strong> <span class="gray">--min</span> <span class="silver">1</span> <span class="gray">--max</span> <span class="silver">50</span> <span class="gray">--palette</span> <span class="silver">MutedTerrain</span> <span class="gray">--number</span> <span class="silver">20</span> <span class="gray">--file</span> <span class="silver">examples/low.sld</span><br>
+<span class="green">Colormap Palette Raster Style written to /home/travis/build/jericks/geo-shell/examples/low.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster style set</strong> <span class="gray">--name</span> <span class="silver">low</span> <span class="gray">--style</span> <span class="silver">examples/low.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/low.sld set on low</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">low_polygons</span> <span class="gray">--style</span> <span class="silver">examples/grid.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/grid.sld set on low_polygons</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">mapLow</span><br>
+<span class="green">Map mapLow opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add raster</strong> <span class="gray">--name</span> <span class="silver">mapLow</span> <span class="gray">--raster</span> <span class="silver">low</span><br>
+<span class="green">Added low layer to map mapLow</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">mapLow</span> <span class="gray">--layer</span> <span class="silver">low_polygons</span><br>
+<span class="green">Added low_polygons layer to map mapLow</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">mapLow</span> <span class="gray">--file</span> <span class="silver">examples/raster_add_raster_low.png</span> <span class="gray">--bounds</span> <span class="silver">"-180,-90,180,90,EPSG:4326"</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/raster_add_raster_low.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">mapLow</span><br>
+<span class="green">Map mapLow closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/raster_add_raster_low.png" alt="raster add raster low">
+</div>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--name</span> <span class="silver">add</span> <span class="gray">--input</span> <span class="silver">examples/add.tif</span><br>
+<span class="green">Format add opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster add raster</strong> <span class="gray">--name1</span> <span class="silver">high</span> <span class="gray">--name2</span> <span class="silver">low</span> <span class="gray">--output-format</span> <span class="silver">add</span> <span class="gray">--output-name</span> <span class="silver">add</span><br>
+<span class="green">Added high to low to create add!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster polygon</strong> <span class="gray">--name</span> <span class="silver">add</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">add_polygons</span><br>
+<span class="green">Done converting Raster add to a Polygon Layer add_polygons!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style raster palette colormap</strong> <span class="gray">--min</span> <span class="silver">1</span> <span class="gray">--max</span> <span class="silver">50</span> <span class="gray">--palette</span> <span class="silver">MutedTerrain</span> <span class="gray">--number</span> <span class="silver">20</span> <span class="gray">--file</span> <span class="silver">examples/add.sld</span><br>
+<span class="green">Colormap Palette Raster Style written to /home/travis/build/jericks/geo-shell/examples/add.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster style set</strong> <span class="gray">--name</span> <span class="silver">add</span> <span class="gray">--style</span> <span class="silver">examples/add.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/add.sld set on add</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">add_polygons</span> <span class="gray">--style</span> <span class="silver">examples/grid.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/grid.sld set on add_polygons</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">mapAdd</span><br>
+<span class="green">Map mapAdd opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add raster</strong> <span class="gray">--name</span> <span class="silver">mapAdd</span> <span class="gray">--raster</span> <span class="silver">add</span><br>
+<span class="green">Added add layer to map mapAdd</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">mapAdd</span> <span class="gray">--layer</span> <span class="silver">add_polygons</span><br>
+<span class="green">Added add_polygons layer to map mapAdd</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">mapAdd</span> <span class="gray">--file</span> <span class="silver">examples/raster_add_raster_add.png</span> <span class="gray">--bounds</span> <span class="silver">"-180,-90,180,90,EPSG:4326"</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/raster_add_raster_add.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">mapAdd</span><br>
+<span class="green">Map mapAdd closed!</span><br></p>
+</div>
+<div class="paragraph">
+<p>Unresolved directive in raster.adoc - include::output/raster_add_raster_35_command.txt[]
+Unresolved directive in raster.adoc - include::output/raster_add_raster_35_result.txt[]</p>
+</div>
+<div class="paragraph">
+<p>Unresolved directive in raster.adoc - include::output/raster_add_raster_36_command.txt[]
+Unresolved directive in raster.adoc - include::output/raster_add_raster_36_result.txt[]</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/raster_add_raster_add.png" alt="raster add raster add">
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="add-constant"><a class="anchor" href="#add-constant"></a>Add Constant</h3>
@@ -2460,7 +2626,7 @@ Unresolved directive in raster.adoc - include::output/raster_polygon_14_result.t
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-02-18 18:34:02 UTC
+Last updated 2020-02-18 23:45:02 UTC
 </div>
 </div>
 </body>
