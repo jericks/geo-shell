@@ -1,0 +1,52 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|min
+|The min value
+|true
+|
+|
+
+|max
+|The max value
+|true
+|
+|
+
+|palette
+|The color palette name (from Color Brewer)
+|true
+|
+|
+
+|number
+|The number of categories
+|true
+|
+|
+
+|type
+|The type of interpolation
+|false
+|ramp
+|ramp
+
+|extended
+|Whether to use extended colors
+|false
+|false
+|false
+
+|opacity
+|The opacity
+|false
+|1.0
+|1.0
+
+|file
+|The output file
+|true
+|
+|
+
+|===

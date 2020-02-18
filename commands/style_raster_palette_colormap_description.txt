@@ -1,0 +1,1 @@
+Create a color map raster style from a color palette.

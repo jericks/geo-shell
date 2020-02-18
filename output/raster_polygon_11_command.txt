@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*map draw* [gray]#--name# [silver]#map# [gray]#--file# [silver]#examples/raster_polygon.png# [gray]#--bounds# [silver]#"-180,-90,180,90,EPSG:4326"# +

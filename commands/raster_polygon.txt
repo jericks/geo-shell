@@ -1,0 +1,52 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|name
+|The Raster name
+|true
+|
+|
+
+|output-workspace
+|The output Layer Workspace
+|true
+|
+|
+
+|output-name
+|The output Layer name
+|true
+|
+|
+
+|band
+|The band
+|false
+|0
+|0
+
+|inside-edges
+|Whether to include inside edges
+|false
+|true
+|true
+
+|roi
+|The region of interest
+|false
+|
+|
+
+|nodata
+|The NODATA value
+|false
+|0
+|0
+
+|ranges
+|The comma delimited reclassification ranges (min,minIncluded,max,maxIncluded)
+|false
+|
+|
+
+|===

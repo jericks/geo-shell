@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*raster style set* [gray]#--name# [silver]#high# [gray]#--style# [silver]#examples/high.sld# +

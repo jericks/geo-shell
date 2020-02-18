@@ -656,6 +656,7 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#scale">Scale</a></li>
 <li><a href="#shaded-relief">Shaded Relief</a></li>
 <li><a href="#stylize">Stylize</a></li>
+<li><a href="#polygon">Polygon</a></li>
 </ul>
 </li>
 <li><a href="#tile">Tile</a>
@@ -680,6 +681,7 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#vector-unique-values-from-text-file">Vector Unique Values From Text File</a></li>
 <li><a href="#raster-default">Raster Default</a></li>
 <li><a href="#raster-color-map">Raster Color Map</a></li>
+<li><a href="#raster-palette-color-map">Raster Palette Color Map</a></li>
 </ul>
 </li>
 <li><a href="#map">Map</a>
@@ -2045,16 +2047,16 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">points</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid-5be32f1b_17054d85315_-7890)</span><br>
-<span class="green">----------------------------------------</span><br>
+<p><span class="green">Feature (fid-cbf5166_17059a3eb39_-7890)</span><br>
+<span class="green">---------------------------------------</span><br>
 <span class="green">the_geom = POINT (-122.333056 47.609722)</span><br>
 <span class="green">fid = 1</span><br>
 <span class="green">name = Seattle</span><br>
 <span class="green">state = WA</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid-5be32f1b_17054d85315_-788e)</span><br>
-<span class="green">----------------------------------------</span><br>
+<p><span class="green">Feature (fid-cbf5166_17059a3eb39_-788e)</span><br>
+<span class="green">---------------------------------------</span><br>
 <span class="green">the_geom = POINT (-122.459444 47.241389)</span><br>
 <span class="green">fid = 2</span><br>
 <span class="green">name = Tacoma</span><br>
@@ -2248,8 +2250,8 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">states_area</span> <span class="gray">--filter</span> <span class="silver">"NAME_1='North</span> <span class="silver">Dakota'"</span> <span class="gray">--field</span> <span class="silver">"NAME_0,AREA"</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid-5be32f1b_17054d85315_-7889)</span><br>
-<span class="green">----------------------------------------</span><br>
+<p><span class="green">Feature (fid-cbf5166_17059a3eb39_-7889)</span><br>
+<span class="green">---------------------------------------</span><br>
 <span class="green">NAME_0 = United States</span><br>
 <span class="green">AREA = 21.804544852979944</span><br></p>
 </div>
@@ -2435,8 +2437,8 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">places_id</span> <span class="gray">--filter</span> <span class="silver">"NAME='Seattle'"</span> <span class="gray">--field</span> <span class="silver">"NAME,ID"</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid-5be32f1b_17054d85315_-79ce)</span><br>
-<span class="green">----------------------------------------</span><br>
+<p><span class="green">Feature (fid-cbf5166_17059a3eb39_-79ce)</span><br>
+<span class="green">---------------------------------------</span><br>
 <span class="green">NAME = Seattle</span><br>
 <span class="green">ID = 10</span><br></p>
 </div>
@@ -2623,8 +2625,8 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">places_xy</span> <span class="gray">--filter</span> <span class="silver">"NAME='Seattle'"</span> <span class="gray">--field</span> <span class="silver">"NAME,X,Y"</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid-5be32f1b_17054d85315_-6084)</span><br>
-<span class="green">----------------------------------------</span><br>
+<p><span class="green">Feature (fid-cbf5166_17059a3eb39_-6084)</span><br>
+<span class="green">---------------------------------------</span><br>
 <span class="green">NAME = Seattle</span><br>
 <span class="green">X = -122.34193084586849</span><br>
 <span class="green">Y = 47.57194791253073</span><br></p>
@@ -9167,6 +9169,154 @@ No parameters
 </tbody>
 </table>
 </div>
+<div class="sect2">
+<h3 id="polygon"><a class="anchor" href="#polygon"></a>Polygon</h3>
+<div class="paragraph">
+<p>Convert a raster in a polygon</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster polygon</strong> <span class="gray">--name</span> <span class="silver">high</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">grid</span><br></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Raster name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">output-workspace</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The output Layer Workspace</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">output-name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The output Layer name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">band</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The band</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">inside-edges</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to include inside edges</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">roi</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The region of interest</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nodata</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The NODATA value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ranges</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The comma delimited reclassification ranges (min,minIncluded,max,maxIncluded)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--name</span> <span class="silver">high</span> <span class="gray">--input</span> <span class="silver">src/test/resources/high.tif</span><br>
+<span class="green">Format high opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster open</strong> <span class="gray">--format</span> <span class="silver">high</span> <span class="gray">--raster</span> <span class="silver">high</span> <span class="gray">--name</span> <span class="silver">high</span><br>
+<span class="green">Opened Format high Raster high as high</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">layers</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace layers opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster polygon</strong> <span class="gray">--name</span> <span class="silver">high</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">grid</span><br>
+<span class="green">Done converting Raster high to a Polygon Layer grid!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style raster palette colormap</strong> <span class="gray">--min</span> <span class="silver">1</span> <span class="gray">--max</span> <span class="silver">50</span> <span class="gray">--palette</span> <span class="silver">MutedTerrain</span> <span class="gray">--number</span> <span class="silver">20</span> <span class="gray">--file</span> <span class="silver">examples/high.sld</span><br>
+<span class="green">Colormap Palette Raster Style written to /home/travis/build/jericks/geo-shell/examples/high.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster style set</strong> <span class="gray">--name</span> <span class="silver">high</span> <span class="gray">--style</span> <span class="silver">examples/high.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/high.sld set on high</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style create</strong> <span class="gray">--params</span> <span class="silver">"stroke=black</span> <span class="silver">stroke-width=2</span> <span class="silver">label=value</span> <span class="silver">label-size=12"</span> <span class="gray">--file</span> <span class="silver">examples/grid.sld</span><br>
+<span class="green">Style stroke=black stroke-width=2 label=value label-size=12 written to /home/travis/build/jericks/geo-shell/examples/grid.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">grid</span> <span class="gray">--style</span> <span class="silver">examples/grid.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/grid.sld set on grid</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add raster</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--raster</span> <span class="silver">high</span><br>
+<span class="green">Added high layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">grid</span><br>
+<span class="green">Added grid layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--file</span> <span class="silver">examples/raster_polygon.png</span> <span class="gray">--bounds</span> <span class="silver">"-180,-90,180,90,EPSG:4326"</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/raster_polygon.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map closed!</span><br></p>
+</div>
+<div class="paragraph">
+<p>Unresolved directive in raster.adoc - include::output/raster_polygon_13_command.txt[]
+Unresolved directive in raster.adoc - include::output/raster_polygon_13_result.txt[]</p>
+</div>
+<div class="paragraph">
+<p>Unresolved directive in raster.adoc - include::output/raster_polygon_14_command.txt[]
+Unresolved directive in raster.adoc - include::output/raster_polygon_14_result.txt[]</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/raster_polygon.png" alt="raster polygon">
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -10611,12 +10761,12 @@ No parameters
           <span class="tag">&lt;/ogc:Filter&gt;</span>
           <span class="tag">&lt;sld:PolygonSymbolizer&gt;</span>
             <span class="tag">&lt;sld:Fill&gt;</span>
-              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fill</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#12786d<span class="tag">&lt;/sld:CssParameter&gt;</span>
+              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fill</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#18310a<span class="tag">&lt;/sld:CssParameter&gt;</span>
             <span class="tag">&lt;/sld:Fill&gt;</span>
           <span class="tag">&lt;/sld:PolygonSymbolizer&gt;</span>
           <span class="tag">&lt;sld:LineSymbolizer&gt;</span>
             <span class="tag">&lt;sld:Stroke&gt;</span>
-              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#0c544c<span class="tag">&lt;/sld:CssParameter&gt;</span>
+              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#102207<span class="tag">&lt;/sld:CssParameter&gt;</span>
               <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke-width</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>0.5<span class="tag">&lt;/sld:CssParameter&gt;</span>
             <span class="tag">&lt;/sld:Stroke&gt;</span>
           <span class="tag">&lt;/sld:LineSymbolizer&gt;</span>
@@ -10630,12 +10780,12 @@ No parameters
           <span class="tag">&lt;/ogc:Filter&gt;</span>
           <span class="tag">&lt;sld:PolygonSymbolizer&gt;</span>
             <span class="tag">&lt;sld:Fill&gt;</span>
-              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fill</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#24287b<span class="tag">&lt;/sld:CssParameter&gt;</span>
+              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fill</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#365e25<span class="tag">&lt;/sld:CssParameter&gt;</span>
             <span class="tag">&lt;/sld:Fill&gt;</span>
           <span class="tag">&lt;/sld:PolygonSymbolizer&gt;</span>
           <span class="tag">&lt;sld:LineSymbolizer&gt;</span>
             <span class="tag">&lt;sld:Stroke&gt;</span>
-              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#191c56<span class="tag">&lt;/sld:CssParameter&gt;</span>
+              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#254119<span class="tag">&lt;/sld:CssParameter&gt;</span>
               <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke-width</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>0.5<span class="tag">&lt;/sld:CssParameter&gt;</span>
             <span class="tag">&lt;/sld:Stroke&gt;</span>
           <span class="tag">&lt;/sld:LineSymbolizer&gt;</span>
@@ -11043,6 +11193,153 @@ No parameters
 <div class="imageblock">
 <div class="content">
 <img src="./images/style_raster_colormap.png" alt="style raster colormap">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="raster-palette-color-map"><a class="anchor" href="#raster-palette-color-map"></a>Raster Palette Color Map</h3>
+<div class="paragraph">
+<p>Create a color map raster style from a color palette.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style raster palette colormap</strong> <span class="gray">--min</span> <span class="silver">1</span> <span class="gray">--max</span> <span class="silver">50</span> <span class="gray">--palette</span> <span class="silver">MutedTerrain</span> <span class="gray">--number</span> <span class="silver">20</span> <span class="gray">--file</span> <span class="silver">examples/style_raster_palette_colormap.sld</span><br></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">min</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The min value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">max</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The max value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">palette</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The color palette name (from Color Brewer)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The number of categories</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The type of interpolation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ramp</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ramp</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">extended</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to use extended colors</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">opacity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The opacity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">file</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The output file</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--name</span> <span class="silver">high</span> <span class="gray">--input</span> <span class="silver">src/test/resources/high.tif</span><br>
+<span class="green">Format high opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster open</strong> <span class="gray">--format</span> <span class="silver">high</span> <span class="gray">--raster</span> <span class="silver">high</span> <span class="gray">--name</span> <span class="silver">high</span><br>
+<span class="green">Opened Format high Raster high as high</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style raster palette colormap</strong> <span class="gray">--min</span> <span class="silver">1</span> <span class="gray">--max</span> <span class="silver">50</span> <span class="gray">--palette</span> <span class="silver">MutedTerrain</span> <span class="gray">--number</span> <span class="silver">20</span> <span class="gray">--file</span> <span class="silver">examples/style_raster_palette_colormap.sld</span><br>
+<span class="green">Colormap Palette Raster Style written to /home/travis/build/jericks/geo-shell/examples/style_raster_palette_colormap.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster style set</strong> <span class="gray">--name</span> <span class="silver">high</span> <span class="gray">--style</span> <span class="silver">examples/style_raster_palette_colormap.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/style_raster_palette_colormap.sld set on high</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add raster</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--raster</span> <span class="silver">high</span><br>
+<span class="green">Added high layer to map map</span><br></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="preprocessor">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><span class="tag">&lt;sld:StyledLayerDescriptor</span> <span class="attribute-name">xmlns</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.opengis.net/sld</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xmlns:sld</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.opengis.net/sld</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xmlns:gml</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.opengis.net/gml</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xmlns:ogc</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.opengis.net/ogc</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">version</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+  <span class="tag">&lt;sld:UserLayer&gt;</span>
+    <span class="tag">&lt;sld:LayerFeatureConstraints&gt;</span>
+      <span class="tag">&lt;sld:FeatureTypeConstraint</span><span class="tag">/&gt;</span>
+    <span class="tag">&lt;/sld:LayerFeatureConstraints&gt;</span>
+    <span class="tag">&lt;sld:UserStyle&gt;</span>
+      <span class="tag">&lt;sld:Name&gt;</span>Default Styler<span class="tag">&lt;/sld:Name&gt;</span>
+      <span class="tag">&lt;sld:FeatureTypeStyle&gt;</span>
+        <span class="tag">&lt;sld:Name&gt;</span>name<span class="tag">&lt;/sld:Name&gt;</span>
+        <span class="tag">&lt;sld:Rule&gt;</span>
+          <span class="tag">&lt;sld:RasterSymbolizer&gt;</span>
+            <span class="tag">&lt;sld:Geometry&gt;</span>
+              <span class="tag">&lt;ogc:Literal&gt;</span>grid<span class="tag">&lt;/ogc:Literal&gt;</span>
+            <span class="tag">&lt;/sld:Geometry&gt;</span>
+            <span class="tag">&lt;sld:ColorMap&gt;</span>
+              <span class="tag">&lt;sld:ColorMapEntry</span> <span class="attribute-name">color</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">#CEE1E8</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">opacity</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">quantity</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+              <span class="tag">&lt;sld:ColorMapEntry</span> <span class="attribute-name">color</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">#7CBCB5</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">opacity</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">quantity</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">8.0</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+              <span class="tag">&lt;sld:ColorMapEntry</span> <span class="attribute-name">color</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">#82B36D</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">opacity</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">quantity</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">15.0</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+              <span class="tag">&lt;sld:ColorMapEntry</span> <span class="attribute-name">color</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">#94C279</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">opacity</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">quantity</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">22.0</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+              <span class="tag">&lt;sld:ColorMapEntry</span> <span class="attribute-name">color</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">#D1DE8D</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">opacity</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">quantity</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">29.0</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+              <span class="tag">&lt;sld:ColorMapEntry</span> <span class="attribute-name">color</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">#EDECC3</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">opacity</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">quantity</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">36.0</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+              <span class="tag">&lt;sld:ColorMapEntry</span> <span class="attribute-name">color</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">#CCAFB4</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">opacity</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">quantity</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">43.0</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+              <span class="tag">&lt;sld:ColorMapEntry</span> <span class="attribute-name">color</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">#C99884</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">opacity</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">1.0</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">quantity</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">50.0</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+            <span class="tag">&lt;/sld:ColorMap&gt;</span>
+            <span class="tag">&lt;sld:ContrastEnhancement</span><span class="tag">/&gt;</span>
+          <span class="tag">&lt;/sld:RasterSymbolizer&gt;</span>
+        <span class="tag">&lt;/sld:Rule&gt;</span>
+      <span class="tag">&lt;/sld:FeatureTypeStyle&gt;</span>
+    <span class="tag">&lt;/sld:UserStyle&gt;</span>
+  <span class="tag">&lt;/sld:UserLayer&gt;</span>
+<span class="tag">&lt;/sld:StyledLayerDescriptor&gt;</span></code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/style_raster_palette_colormap.png" alt="style raster palette colormap">
 </div>
 </div>
 </div>
@@ -12158,7 +12455,7 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">date</strong> <br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Monday, February 17, 2020 8:30:21 PM UTC</span><br></p>
+<p><span class="green">Tuesday, February 18, 2020 6:51:13 PM UTC</span><br></p>
 </div>
 </div>
 <div class="sect2">
@@ -12463,7 +12760,7 @@ No parameters
 <div id="footer">
 <div id="footer-text">
 Version 0.7-SNAPSHOT<br>
-Last updated 2020-02-17 20:17:55 UTC
+Last updated 2020-02-18 18:34:02 UTC
 </div>
 </div>
 </body>

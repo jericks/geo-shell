@@ -95,6 +95,7 @@
 [green]#* raster multiply constant - Multiply constant values to a Raster# +
 [green]#* raster multiply raster - Multiply two Raster together# +
 [green]#* raster open - Open a Raster.# +
+[green]#* raster polygon - Convert a raster in a polygon# +
 [green]#* raster reclassify - Reclassify a Raster.# +
 [green]#* raster reproject - Project a Raster.# +
 [green]#* raster scale - Scale a Raster.# +
@@ -109,6 +110,7 @@
 [green]#* style create - Create a simple style.# +
 [green]#* style raster colormap - Create a color map raster style.# +
 [green]#* style raster default - Create a default raster style.# +
+[green]#* style raster palette colormap - Create a color map raster style from a color palette.# +
 [green]#* style vector default - Create a default vector style.# +
 [green]#* style vector gradient - Create a gradient vector style.# +
 [green]#* style vector uniquevalues - Create a unique values vector style.# +
