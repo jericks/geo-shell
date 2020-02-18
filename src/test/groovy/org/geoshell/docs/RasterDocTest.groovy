@@ -203,4 +203,60 @@ class RasterDocTest extends AbstractDocTest {
         copyFile(new File("examples/raster_divide_constant.png"), new File("src/main/docs/images"))
     }
 
+    @Test
+    void addRaster() {
+        run("raster_add_raster", [
+                // Open high
+                "format open --name high --input src/test/resources/high.tif",
+                "raster open --format high --raster high --name high",
+
+                // Create High Map
+                "workspace open --name layers --params memory",
+                "style create --params \"stroke=black stroke-width=2 label=value label-size=12\" --file examples/grid.sld",
+
+                "raster polygon --name high --output-workspace layers --output-name high_polygons",
+                "style raster palette colormap --min 1 --max 50 --palette MutedTerrain --number 20 --file examples/high.sld",
+                "raster style set --name high --style examples/high.sld",
+                "layer style set --name high_polygons --style examples/grid.sld",
+                "map open --name mapHigh",
+                "map add raster --name mapHigh --raster high",
+                "map add layer --name mapHigh --layer high_polygons",
+                "map draw --name mapHigh --file examples/raster_add_raster_high.png --bounds \"-180,-90,180,90,EPSG:4326\"",
+                "map close --name mapHigh",
+
+                // Open low
+                "format open --name low --input src/test/resources/low.tif",
+                "raster open --format low --raster low --name low",
+
+                // Create Low Map
+                "raster polygon --name low --output-workspace layers --output-name low_polygons",
+                "style raster palette colormap --min 1 --max 50 --palette MutedTerrain --number 20 --file examples/low.sld",
+                "raster style set --name low --style examples/low.sld",
+                "layer style set --name low_polygons --style examples/grid.sld",
+                "map open --name mapLow",
+                "map add raster --name mapLow --raster low",
+                "map add layer --name mapLow --layer low_polygons",
+                "map draw --name mapLow --file examples/raster_add_raster_low.png --bounds \"-180,-90,180,90,EPSG:4326\"",
+                "map close --name mapLow",
+
+                // Add
+                "format open --name add --input examples/add.tif",
+                "raster add raster --name1 high --name2 low --output-format add --output-name add",
+
+                // Create Add Map
+                "raster polygon --name add --output-workspace layers --output-name add_polygons",
+                "style raster palette colormap --min 1 --max 50 --palette MutedTerrain --number 20 --file examples/add.sld",
+                "raster style set --name add --style examples/add.sld",
+                "layer style set --name add_polygons --style examples/grid.sld",
+                "map open --name mapAdd",
+                "map add raster --name mapAdd --raster add",
+                "map add layer --name mapAdd --layer add_polygons",
+                "map draw --name mapAdd --file examples/raster_add_raster_add.png --bounds \"-180,-90,180,90,EPSG:4326\"",
+                "map close --name mapAdd",
+        ])
+        copyFile(new File("examples/raster_add_raster_high.png"), new File("src/main/docs/images"))
+        copyFile(new File("examples/raster_add_raster_low.png"), new File("src/main/docs/images"))
+        copyFile(new File("examples/raster_add_raster_add.png"), new File("src/main/docs/images"))
+    }
+
 }
