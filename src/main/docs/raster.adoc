@@ -349,12 +349,6 @@ include::output/raster_add_raster_33_result.txt[]
 include::output/raster_add_raster_34_command.txt[]
 include::output/raster_add_raster_34_result.txt[]
 
-include::output/raster_add_raster_35_command.txt[]
-include::output/raster_add_raster_35_result.txt[]
-
-include::output/raster_add_raster_36_command.txt[]
-include::output/raster_add_raster_36_result.txt[]
-
 image::raster_add_raster_add.png[]
 
 === Add Constant
@@ -519,9 +513,6 @@ include::output/raster_subtract_raster_33_result.txt[]
 
 include::output/raster_subtract_raster_34_command.txt[]
 include::output/raster_subtract_raster_34_result.txt[]
-
-include::output/raster_subtract_raster_35_command.txt[]
-include::output/raster_subtract_raster_35_result.txt[]
 
 image::raster_subtract_raster_subtract.png[]
 
@@ -688,9 +679,6 @@ include::output/raster_multiply_raster_33_result.txt[]
 include::output/raster_multiply_raster_34_command.txt[]
 include::output/raster_multiply_raster_34_result.txt[]
 
-include::output/raster_multiply_raster_35_command.txt[]
-include::output/raster_multiply_raster_35_result.txt[]
-
 image::raster_multiply_raster_multiply.png[]
 
 === Multiply Constant
@@ -855,9 +843,6 @@ include::output/raster_divide_raster_33_result.txt[]
 
 include::output/raster_divide_raster_34_command.txt[]
 include::output/raster_divide_raster_34_result.txt[]
-
-include::output/raster_divide_raster_35_command.txt[]
-include::output/raster_divide_raster_35_result.txt[]
 
 image::raster_divide_raster_divide.png[]
 
