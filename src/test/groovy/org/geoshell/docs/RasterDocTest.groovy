@@ -259,4 +259,172 @@ class RasterDocTest extends AbstractDocTest {
         copyFile(new File("examples/raster_add_raster_add.png"), new File("src/main/docs/images"))
     }
 
+    @Test
+    void subtractRaster() {
+        run("raster_subtract_raster", [
+                // Open high
+                "format open --name high --input src/test/resources/high.tif",
+                "raster open --format high --raster high --name high",
+
+                // Create High Map
+                "workspace open --name layers --params memory",
+                "style create --params \"stroke=black stroke-width=2 label=value label-size=12\" --file examples/grid.sld",
+
+                "raster polygon --name high --output-workspace layers --output-name high_polygons",
+                "style raster palette colormap --min 1 --max 50 --palette MutedTerrain --number 20 --file examples/high.sld",
+                "raster style set --name high --style examples/high.sld",
+                "layer style set --name high_polygons --style examples/grid.sld",
+                "map open --name mapHigh",
+                "map add raster --name mapHigh --raster high",
+                "map add layer --name mapHigh --layer high_polygons",
+                "map draw --name mapHigh --file examples/raster_subtract_raster_high.png --bounds \"-180,-90,180,90,EPSG:4326\"",
+                "map close --name mapHigh",
+
+                // Open low
+                "format open --name low --input src/test/resources/low.tif",
+                "raster open --format low --raster low --name low",
+
+                // Create Low Map
+                "raster polygon --name low --output-workspace layers --output-name low_polygons",
+                "style raster palette colormap --min 1 --max 50 --palette MutedTerrain --number 20 --file examples/low.sld",
+                "raster style set --name low --style examples/low.sld",
+                "layer style set --name low_polygons --style examples/grid.sld",
+                "map open --name mapLow",
+                "map add raster --name mapLow --raster low",
+                "map add layer --name mapLow --layer low_polygons",
+                "map draw --name mapLow --file examples/raster_subtract_raster_low.png --bounds \"-180,-90,180,90,EPSG:4326\"",
+                "map close --name mapLow",
+
+                // Substract
+                "format open --name subtract --input examples/subtract.tif",
+                "raster subtract raster --name1 high --name2 low --output-format subtract --output-name subtract",
+
+                // Create Subtract Map
+                "raster polygon --name subtract --output-workspace layers --output-name subtract_polygons",
+                "style raster palette colormap --min 1 --max 50 --palette MutedTerrain --number 20 --file examples/subtract.sld",
+                "raster style set --name subtract --style examples/subtract.sld",
+                "layer style set --name subtract_polygons --style examples/grid.sld",
+                "map open --name mapSubtract",
+                "map add raster --name mapSubtract --raster subtract",
+                "map add layer --name mapSubtract --layer subtract_polygons",
+                "map draw --name mapSubtract --file examples/raster_subtract_raster_subtract.png --bounds \"-180,-90,180,90,EPSG:4326\"",
+                "map close --name mapSubtract",
+        ])
+        copyFile(new File("examples/raster_subtract_raster_high.png"), new File("src/main/docs/images"))
+        copyFile(new File("examples/raster_subtract_raster_low.png"), new File("src/main/docs/images"))
+        copyFile(new File("examples/raster_subtract_raster_subtract.png"), new File("src/main/docs/images"))
+    }
+
+    @Test
+    void multiplyRaster() {
+        run("raster_multiply_raster", [
+                // Open high
+                "format open --name high --input src/test/resources/high.tif",
+                "raster open --format high --raster high --name high",
+
+                // Create High Map
+                "workspace open --name layers --params memory",
+                "style create --params \"stroke=black stroke-width=2 label=value label-size=12\" --file examples/grid.sld",
+
+                "raster polygon --name high --output-workspace layers --output-name high_polygons",
+                "style raster palette colormap --min 1 --max 50 --palette MutedTerrain --number 20 --file examples/high.sld",
+                "raster style set --name high --style examples/high.sld",
+                "layer style set --name high_polygons --style examples/grid.sld",
+                "map open --name mapHigh",
+                "map add raster --name mapHigh --raster high",
+                "map add layer --name mapHigh --layer high_polygons",
+                "map draw --name mapHigh --file examples/raster_multiply_raster_high.png --bounds \"-180,-90,180,90,EPSG:4326\"",
+                "map close --name mapHigh",
+
+                // Open low
+                "format open --name low --input src/test/resources/low.tif",
+                "raster open --format low --raster low --name low",
+
+                // Create Low Map
+                "raster polygon --name low --output-workspace layers --output-name low_polygons",
+                "style raster palette colormap --min 1 --max 50 --palette MutedTerrain --number 20 --file examples/low.sld",
+                "raster style set --name low --style examples/low.sld",
+                "layer style set --name low_polygons --style examples/grid.sld",
+                "map open --name mapLow",
+                "map add raster --name mapLow --raster low",
+                "map add layer --name mapLow --layer low_polygons",
+                "map draw --name mapLow --file examples/raster_multiply_raster_low.png --bounds \"-180,-90,180,90,EPSG:4326\"",
+                "map close --name mapLow",
+
+                // Substract
+                "format open --name multiply --input examples/multiply.tif",
+                "raster multiply raster --name1 high --name2 low --output-format multiply --output-name multiply",
+
+                // Create Subtract Map
+                "raster polygon --name multiply --output-workspace layers --output-name multiply_polygons",
+                "style raster palette colormap --min 1 --max 50 --palette MutedTerrain --number 20 --file examples/multiply.sld",
+                "raster style set --name multiply --style examples/multiply.sld",
+                "layer style set --name multiply_polygons --style examples/grid.sld",
+                "map open --name mapSubtract",
+                "map add raster --name mapSubtract --raster multiply",
+                "map add layer --name mapSubtract --layer multiply_polygons",
+                "map draw --name mapSubtract --file examples/raster_multiply_raster_multiply.png --bounds \"-180,-90,180,90,EPSG:4326\"",
+                "map close --name mapSubtract",
+        ])
+        copyFile(new File("examples/raster_multiply_raster_high.png"), new File("src/main/docs/images"))
+        copyFile(new File("examples/raster_multiply_raster_low.png"), new File("src/main/docs/images"))
+        copyFile(new File("examples/raster_multiply_raster_multiply.png"), new File("src/main/docs/images"))
+    }
+
+    @Test
+    void divideRaster() {
+        run("raster_divide_raster", [
+                // Open high
+                "format open --name high --input src/test/resources/high.tif",
+                "raster open --format high --raster high --name high",
+
+                // Create High Map
+                "workspace open --name layers --params memory",
+                "style create --params \"stroke=black stroke-width=2 label=value label-size=12\" --file examples/grid.sld",
+
+                "raster polygon --name high --output-workspace layers --output-name high_polygons",
+                "style raster palette colormap --min 1 --max 50 --palette MutedTerrain --number 20 --file examples/high.sld",
+                "raster style set --name high --style examples/high.sld",
+                "layer style set --name high_polygons --style examples/grid.sld",
+                "map open --name mapHigh",
+                "map add raster --name mapHigh --raster high",
+                "map add layer --name mapHigh --layer high_polygons",
+                "map draw --name mapHigh --file examples/raster_divide_raster_high.png --bounds \"-180,-90,180,90,EPSG:4326\"",
+                "map close --name mapHigh",
+
+                // Open low
+                "format open --name low --input src/test/resources/low.tif",
+                "raster open --format low --raster low --name low",
+
+                // Create Low Map
+                "raster polygon --name low --output-workspace layers --output-name low_polygons",
+                "style raster palette colormap --min 1 --max 50 --palette MutedTerrain --number 20 --file examples/low.sld",
+                "raster style set --name low --style examples/low.sld",
+                "layer style set --name low_polygons --style examples/grid.sld",
+                "map open --name mapLow",
+                "map add raster --name mapLow --raster low",
+                "map add layer --name mapLow --layer low_polygons",
+                "map draw --name mapLow --file examples/raster_divide_raster_low.png --bounds \"-180,-90,180,90,EPSG:4326\"",
+                "map close --name mapLow",
+
+                // Substract
+                "format open --name divide --input examples/divide.tif",
+                "raster divide raster --name1 high --name2 low --output-format divide --output-name divide",
+
+                // Create Subtract Map
+                "raster polygon --name divide --output-workspace layers --output-name divide_polygons",
+                "style raster palette colormap --min 1 --max 50 --palette MutedTerrain --number 20 --file examples/divide.sld",
+                "raster style set --name divide --style examples/divide.sld",
+                "layer style set --name divide_polygons --style examples/grid.sld",
+                "map open --name mapSubtract",
+                "map add raster --name mapSubtract --raster divide",
+                "map add layer --name mapSubtract --layer divide_polygons",
+                "map draw --name mapSubtract --file examples/raster_divide_raster_divide.png --bounds \"-180,-90,180,90,EPSG:4326\"",
+                "map close --name mapSubtract",
+        ])
+        copyFile(new File("examples/raster_divide_raster_high.png"), new File("src/main/docs/images"))
+        copyFile(new File("examples/raster_divide_raster_low.png"), new File("src/main/docs/images"))
+        copyFile(new File("examples/raster_divide_raster_divide.png"), new File("src/main/docs/images"))
+    }
+
 }
