@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*map add layer* [gray]#--name# [silver]#mapHigh# [gray]#--layer# [silver]#high_polygons# +

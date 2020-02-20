@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*raster style set* [gray]#--name# [silver]#divide# [gray]#--style# [silver]#examples/divide.sld# +

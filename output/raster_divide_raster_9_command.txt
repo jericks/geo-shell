@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*map add raster* [gray]#--name# [silver]#mapHigh# [gray]#--raster# [silver]#high# +

@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*map draw* [gray]#--name# [silver]#mapLow# [gray]#--file# [silver]#examples/raster_subtract_raster_low.png# [gray]#--bounds# [silver]#"-180,-90,180,90,EPSG:4326"# +

@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*style create* [gray]#--params# [silver]#"stroke=black# [silver]#stroke-width=2# [silver]#label=value# [silver]#label-size=12"# [gray]#--file# [silver]#examples/grid.sld# +

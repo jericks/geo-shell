@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*raster subtract raster* [gray]#--name1# [silver]#high# [gray]#--name2# [silver]#low# [gray]#--output-format# [silver]#subtract# [gray]#--output-name# [silver]#subtract# +

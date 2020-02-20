@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*raster divide raster* [gray]#--name1# [silver]#high# [gray]#--name2# [silver]#low# [gray]#--output-format# [silver]#divide# [gray]#--output-name# [silver]#divide# +

@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*format open* [gray]#--name# [silver]#subtract# [gray]#--input# [silver]#examples/subtract.tif# +

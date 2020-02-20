@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*style raster palette colormap* [gray]#--min# [silver]#1# [gray]#--max# [silver]#50# [gray]#--palette# [silver]#MutedTerrain# [gray]#--number# [silver]#20# [gray]#--file# [silver]#examples/subtract.sld# +

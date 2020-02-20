@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*map add layer* [gray]#--name# [silver]#mapSubtract# [gray]#--layer# [silver]#divide_polygons# +

@@ -1,0 +1,1 @@
+[green]#Colormap Palette Raster Style written to /home/travis/build/jericks/geo-shell/examples/divide.sld!# +

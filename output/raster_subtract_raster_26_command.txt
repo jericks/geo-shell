@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*raster polygon* [gray]#--name# [silver]#subtract# [gray]#--output-workspace# [silver]#layers# [gray]#--output-name# [silver]#subtract_polygons# +

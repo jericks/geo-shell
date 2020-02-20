@@ -1,0 +1,1 @@
+[green]#Style stroke=black stroke-width=2 label=value label-size=12 written to /home/travis/build/jericks/geo-shell/examples/grid.sld!# +

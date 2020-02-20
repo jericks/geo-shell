@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*raster polygon* [gray]#--name# [silver]#divide# [gray]#--output-workspace# [silver]#layers# [gray]#--output-name# [silver]#divide_polygons# +
