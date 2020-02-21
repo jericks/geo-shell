@@ -427,4 +427,21 @@ class RasterDocTest extends AbstractDocTest {
         copyFile(new File("examples/raster_divide_raster_divide.png"), new File("src/main/docs/images"))
     }
 
+    @Test
+    void reproject() {
+        run("raster_reproject", [
+                "format open --name earth --input src/test/resources/earth.tif",
+                "raster open --format earth --raster earth --name earth",
+                "format open --name earthCropped --input examples/earthCropped.tif",
+                "raster crop --name earth --output-format earthCropped --output-name earthCropped --geometry \"-180.0,-85.06,180.0,85.06\"",
+                "format open --name earth3857 --input examples/earth3857.tif",
+                "raster reproject --name earthCropped --output-format earth3857 --output-name earth3857 --projection \"EPSG:3857\"",
+                "map open --name map",
+                "map add raster --name map --raster earth3857",
+                "map draw --name map --file examples/raster_reproject.png",
+                "map close --name map",
+        ])
+        copyFile(new File("examples/raster_reproject.png"), new File("src/main/docs/images"))
+    }
+
 }

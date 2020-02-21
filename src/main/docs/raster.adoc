@@ -918,6 +918,38 @@ include::commands/raster_reclassify.txt[]
 include::commands/raster_reproject_description.txt[]
 include::commands/raster_reproject.txt[]
 
+include::output/raster_reproject_0_command.txt[]
+include::output/raster_reproject_0_result.txt[]
+
+include::output/raster_reproject_1_command.txt[]
+include::output/raster_reproject_1_result.txt[]
+
+include::output/raster_reproject_2_command.txt[]
+include::output/raster_reproject_2_result.txt[]
+
+include::output/raster_reproject_3_command.txt[]
+include::output/raster_reproject_3_result.txt[]
+
+include::output/raster_reproject_4_command.txt[]
+include::output/raster_reproject_4_result.txt[]
+
+include::output/raster_reproject_5_command.txt[]
+include::output/raster_reproject_5_result.txt[]
+
+include::output/raster_reproject_6_command.txt[]
+include::output/raster_reproject_6_result.txt[]
+
+include::output/raster_reproject_7_command.txt[]
+include::output/raster_reproject_7_result.txt[]
+
+include::output/raster_reproject_8_command.txt[]
+include::output/raster_reproject_8_result.txt[]
+
+include::output/raster_reproject_9_command.txt[]
+include::output/raster_reproject_9_result.txt[]
+
+image::raster_reproject.png[]
+
 === Scale
 
 include::commands/raster_scale_description.txt[]
