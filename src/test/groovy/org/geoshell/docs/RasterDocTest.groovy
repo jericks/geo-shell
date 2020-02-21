@@ -513,4 +513,19 @@ class RasterDocTest extends AbstractDocTest {
         copyFile(new File("examples/raster_reclassify.png"), new File("src/main/docs/images"))
     }
 
+    @Test
+    void shadedRelief() {
+        run("raster_shadedrelief", [
+                "format open --name pc --input src/test/resources/pc.tif",
+                "raster open --format pc --raster pc --name pc",
+                "format open --name pcShaded --input examples/pcShaded.tif",
+                "raster shadedrelief --name pc --output-format pcShaded --output-name pcShaded --scale 1.0 --altitude 25 --azimuth 260",
+                "map open --name map",
+                "map add raster --name map --raster pcShaded",
+                "map draw --name map --file examples/raster_shadedrelief.png",
+                "map close --name map",
+        ])
+        copyFile(new File("examples/raster_shadedrelief.png"), new File("src/main/docs/images"))
+    }
+
 }
