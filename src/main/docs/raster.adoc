@@ -896,7 +896,51 @@ image::raster_divide_constant.png[]
 === Contours
 
 include::commands/raster_contours_description.txt[]
+
+include::output/raster_contours_5_command.txt[]
+
 include::commands/raster_contours.txt[]
+
+include::output/raster_contours_0_command.txt[]
+include::output/raster_contours_0_result.txt[]
+
+include::output/raster_contours_1_command.txt[]
+include::output/raster_contours_1_result.txt[]
+
+include::output/raster_contours_2_command.txt[]
+include::output/raster_contours_2_result.txt[]
+
+include::output/raster_contours_3_command.txt[]
+include::output/raster_contours_3_result.txt[]
+
+include::output/raster_contours_4_command.txt[]
+include::output/raster_contours_4_result.txt[]
+
+include::output/raster_contours_5_command.txt[]
+include::output/raster_contours_5_result.txt[]
+
+include::output/raster_contours_6_command.txt[]
+include::output/raster_contours_6_result.txt[]
+
+include::output/raster_contours_7_command.txt[]
+include::output/raster_contours_7_result.txt[]
+
+include::output/raster_contours_8_command.txt[]
+include::output/raster_contours_8_result.txt[]
+
+include::output/raster_contours_9_command.txt[]
+include::output/raster_contours_9_result.txt[]
+
+include::output/raster_contours_10_command.txt[]
+include::output/raster_contours_10_result.txt[]
+
+include::output/raster_contours_11_command.txt[]
+include::output/raster_contours_11_result.txt[]
+
+include::output/raster_contours_12_command.txt[]
+include::output/raster_contours_12_result.txt[]
+
+image::raster_contours.png[]
 
 === Crop
 

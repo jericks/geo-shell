@@ -459,4 +459,24 @@ class RasterDocTest extends AbstractDocTest {
         copyFile(new File("examples/raster_crop.png"), new File("src/main/docs/images"))
     }
 
+    @Test
+    void contours() {
+        run("raster_contours", [
+                "format open --name pc --input src/test/resources/pc.tif",
+                "raster open --format pc --raster pc --name pc",
+                "style raster colormap --raster pc --values \"25=#9fd182,470=#3e7f3c,920=#133912,1370=#08306b,1820=#fffff5\" --file examples/pc.sld",
+                "raster style set --name pc --style examples/pc.sld",
+                "workspace open --name contours --params examples/contours.shp",
+                "raster contours --name pc --output-workspace contours --output-name contours --levels 0,100,200,300,600,900",
+                "style create --params \"stroke=black stroke-width=0.25\" --file examples/contours.sld",
+                "layer style set --name contours --style examples/contours.sld",
+                "map open --name map",
+                "map add raster --name map --raster pc",
+                "map add layer --name map --layer contours",
+                "map draw --name map --file examples/raster_contours.png",
+                "map close --name map",
+        ])
+        copyFile(new File("examples/raster_contours.png"), new File("src/main/docs/images"))
+    }
+
 }
