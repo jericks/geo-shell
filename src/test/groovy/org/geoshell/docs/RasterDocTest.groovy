@@ -545,4 +545,21 @@ class RasterDocTest extends AbstractDocTest {
         copyFile(new File("examples/raster_scale.png"), new File("src/main/docs/images"))
     }
 
+    @Test
+    void mosaic() {
+        run("raster_mosaic", [
+                "format open --input examples/alki2.tif --name alki2",
+                "raster open --format alki2 --raster alki2 --name alki2",
+                "format open --input examples/alki3.tif --name alki3",
+                "raster open --format alki3 --raster alki3 --name alki3",
+                "format open --input examples/mosaic.tif --name mosaic",
+                "raster mosaic --name1 alki2 --name2 alki3 --output-format mosaic --output-name mosaic",
+                "map open --name map",
+                "map add raster --name map --raster mosaic",
+                "map draw --name map --file examples/raster_mosaic.png",
+                "map close --name map"
+        ])
+        copyFile(new File("examples/raster_mosaic.png"), new File("src/main/docs/images"))
+    }
+
 }

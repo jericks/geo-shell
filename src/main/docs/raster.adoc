@@ -977,7 +977,42 @@ image::raster_crop.png[]
 === Mosaic
 
 include::commands/raster_mosaic_description.txt[]
+
+include::output/raster_mosaic_5_command.txt[]
+
 include::commands/raster_mosaic.txt[]
+
+include::output/raster_mosaic_0_command.txt[]
+include::output/raster_mosaic_0_result.txt[]
+
+include::output/raster_mosaic_1_command.txt[]
+include::output/raster_mosaic_1_result.txt[]
+
+include::output/raster_mosaic_2_command.txt[]
+include::output/raster_mosaic_2_result.txt[]
+
+include::output/raster_mosaic_3_command.txt[]
+include::output/raster_mosaic_3_result.txt[]
+
+include::output/raster_mosaic_4_command.txt[]
+include::output/raster_mosaic_4_result.txt[]
+
+include::output/raster_mosaic_5_command.txt[]
+include::output/raster_mosaic_5_result.txt[]
+
+include::output/raster_mosaic_6_command.txt[]
+include::output/raster_mosaic_6_result.txt[]
+
+include::output/raster_mosaic_7_command.txt[]
+include::output/raster_mosaic_7_result.txt[]
+
+include::output/raster_mosaic_8_command.txt[]
+include::output/raster_mosaic_8_result.txt[]
+
+include::output/raster_mosaic_9_command.txt[]
+include::output/raster_mosaic_9_result.txt[]
+
+image::raster_mosaic.png[]
 
 === Reclassify
 
