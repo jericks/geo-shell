@@ -528,4 +528,21 @@ class RasterDocTest extends AbstractDocTest {
         copyFile(new File("examples/raster_shadedrelief.png"), new File("src/main/docs/images"))
     }
 
+    @Test
+    void scale() {
+        run("raster_scale", [
+                "format open --name pc --input src/test/resources/pc.tif",
+                "raster open --format pc --raster pc --name pc",
+                "format open --name pcScaled --input examples/pcScaled.tif",
+                "raster scale --name pc --output-format pcScaled --output-name pcScaled --x 0.5 --y 0.5",
+                "style raster colormap --raster pc --values \"25=#9fd182,470=#3e7f3c,920=#133912,1370=#08306b,1820=#fffff5\" --file examples/pcScaled.sld",
+                "raster style set --name pcScaled --style examples/pcScaled.sld",
+                "map open --name map",
+                "map add raster --name map --raster pcScaled",
+                "map draw --name map --file examples/raster_scale.png",
+                "map close --name map",
+        ])
+        copyFile(new File("examples/raster_scale.png"), new File("src/main/docs/images"))
+    }
+
 }
