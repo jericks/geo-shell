@@ -496,4 +496,21 @@ class RasterDocTest extends AbstractDocTest {
         copyFile(new File("examples/raster_stylize.png"), new File("src/main/docs/images"))
     }
 
+    @Test
+    void reclassify() {
+        run("raster_reclassify", [
+                "format open --name pc --input src/test/resources/pc.tif",
+                "raster open --format pc --raster pc --name pc",
+                "format open --name pcReclass --input examples/pcReclass.tif",
+                "raster reclassify --name pc --output-format pcReclass --output-name pcReclass --ranges \"0-0=1,0-50=2,50-200=3,200-1000=4,1000-1500=5,1500-4000=6\"",
+                "style raster colormap --raster pcReclass --values \"1=#9fd182,2=#3e7f3c,3=#133912,4=#08306b,5=#FFF8DC,6=#ffffff\" --file examples/pcReclass.sld",
+                "raster style set --name pcReclass --style examples/pcReclass.sld",
+                "map open --name map",
+                "map add raster --name map --raster pcReclass",
+                "map draw --name map --file examples/raster_reclassify.png",
+                "map close --name map",
+        ])
+        copyFile(new File("examples/raster_reclassify.png"), new File("src/main/docs/images"))
+    }
+
 }

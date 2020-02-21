@@ -159,7 +159,6 @@ include::output/raster_envelope_10_result.txt[]
 
 image::raster_envelope.png[]
 
-
 === Get Style
 
 include::commands/raster_style_get_description.txt[]
@@ -892,7 +891,6 @@ include::output/raster_divide_constant_11_result.txt[]
 
 image::raster_divide_constant.png[]
 
-
 === Contours
 
 include::commands/raster_contours_description.txt[]
@@ -984,7 +982,42 @@ include::commands/raster_mosaic.txt[]
 === Reclassify
 
 include::commands/raster_reclassify_description.txt[]
+
+include::output/raster_reclassify_3_command.txt[]
+
 include::commands/raster_reclassify.txt[]
+
+include::output/raster_reclassify_0_command.txt[]
+include::output/raster_reclassify_0_result.txt[]
+
+include::output/raster_reclassify_1_command.txt[]
+include::output/raster_reclassify_1_result.txt[]
+
+include::output/raster_reclassify_2_command.txt[]
+include::output/raster_reclassify_2_result.txt[]
+
+include::output/raster_reclassify_3_command.txt[]
+include::output/raster_reclassify_3_result.txt[]
+
+include::output/raster_reclassify_4_command.txt[]
+include::output/raster_reclassify_4_result.txt[]
+
+include::output/raster_reclassify_5_command.txt[]
+include::output/raster_reclassify_5_result.txt[]
+
+include::output/raster_reclassify_6_command.txt[]
+include::output/raster_reclassify_6_result.txt[]
+
+include::output/raster_reclassify_7_command.txt[]
+include::output/raster_reclassify_7_result.txt[]
+
+include::output/raster_reclassify_8_command.txt[]
+include::output/raster_reclassify_8_result.txt[]
+
+include::output/raster_reclassify_9_command.txt[]
+include::output/raster_reclassify_9_result.txt[]
+
+image::raster_reclassify.png[]
 
 === Reproject
 
