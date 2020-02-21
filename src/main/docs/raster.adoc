@@ -1039,7 +1039,42 @@ include::commands/raster_shadedrelief.txt[]
 === Stylize
 
 include::commands/raster_stylize_description.txt[]
+
+include::output/raster_stylize_5_command.txt[]
+
 include::commands/raster_stylize.txt[]
+
+include::output/raster_stylize_0_command.txt[]
+include::output/raster_stylize_0_result.txt[]
+
+include::output/raster_stylize_1_command.txt[]
+include::output/raster_stylize_1_result.txt[]
+
+include::output/raster_stylize_2_command.txt[]
+include::output/raster_stylize_2_result.txt[]
+
+include::output/raster_stylize_3_command.txt[]
+include::output/raster_stylize_3_result.txt[]
+
+include::output/raster_stylize_4_command.txt[]
+include::output/raster_stylize_4_result.txt[]
+
+include::output/raster_stylize_5_command.txt[]
+include::output/raster_stylize_5_result.txt[]
+
+include::output/raster_stylize_6_command.txt[]
+include::output/raster_stylize_6_result.txt[]
+
+include::output/raster_stylize_7_command.txt[]
+include::output/raster_stylize_7_result.txt[]
+
+include::output/raster_stylize_8_command.txt[]
+include::output/raster_stylize_8_result.txt[]
+
+include::output/raster_stylize_9_command.txt[]
+include::output/raster_stylize_9_result.txt[]
+
+image::raster_stylize.png[]
 
 === Polygon
 

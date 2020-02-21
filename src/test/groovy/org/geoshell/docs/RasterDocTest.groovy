@@ -479,4 +479,21 @@ class RasterDocTest extends AbstractDocTest {
         copyFile(new File("examples/raster_contours.png"), new File("src/main/docs/images"))
     }
 
+    @Test
+    void stylize() {
+        run("raster_stylize", [
+                "format open --name pc --input src/test/resources/pc.tif",
+                "raster open --format pc --raster pc --name pc",
+                "style raster colormap --raster pc --values \"25=#9fd182,470=#3e7f3c,920=#133912,1370=#08306b,1820=#fffff5\" --file examples/pc.sld",
+                "raster style set --name pc --style examples/pc.sld",
+                "format open --name pcStyled --input examples/pcStyled.tif",
+                "raster stylize --name pc --output-format pcStyled --output-name pcStyled",
+                "map open --name map",
+                "map add raster --name map --raster pcStyled",
+                "map draw --name map --file examples/raster_stylize.png",
+                "map close --name map",
+        ])
+        copyFile(new File("examples/raster_stylize.png"), new File("src/main/docs/images"))
+    }
+
 }
