@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*format open* [gray]#--name# [silver]#earthCropped# [gray]#--input# [silver]#examples/earthCropped.tif# +

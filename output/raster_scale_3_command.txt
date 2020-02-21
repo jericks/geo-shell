@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*raster scale* [gray]#--name# [silver]#pc# [gray]#--output-format# [silver]#pcScaled# [gray]#--output-name# [silver]#pcScaled# [gray]#--x# [silver]#0.5# [gray]#--y# [silver]#0.5# +

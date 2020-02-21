@@ -1,0 +1,1 @@
+[green]#Raster earthCropped reprojected to earth3857 as EPSG:3857!# +

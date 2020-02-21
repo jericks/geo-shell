@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*style raster colormap* [gray]#--raster# [silver]#pcReclass# [gray]#--values# [silver]#"1=#9fd182,2=#3e7f3c,3=#133912,4=#08306b,5=#FFF8DC,6=#ffffff"# [gray]#--file# [silver]#examples/pcReclass.sld# +

@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*format open* [gray]#--name# [silver]#pc# [gray]#--input# [silver]#src/test/resources/pc.tif# +

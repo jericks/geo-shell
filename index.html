@@ -2047,7 +2047,7 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">points</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;34f3c37f_17060e5e693_-7890)</span><br>
+<p><span class="green">Feature (fid&#8212;&#8203;221d23e7_17069e1c394_-7890)</span><br>
 <span class="green">-----------------------------------------</span><br>
 <span class="green">the_geom = POINT (-122.333056 47.609722)</span><br>
 <span class="green">fid = 1</span><br>
@@ -2055,7 +2055,7 @@ No parameters
 <span class="green">state = WA</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;34f3c37f_17060e5e693_-788e)</span><br>
+<p><span class="green">Feature (fid&#8212;&#8203;221d23e7_17069e1c394_-788e)</span><br>
 <span class="green">-----------------------------------------</span><br>
 <span class="green">the_geom = POINT (-122.459444 47.241389)</span><br>
 <span class="green">fid = 2</span><br>
@@ -2250,7 +2250,7 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">states_area</span> <span class="gray">--filter</span> <span class="silver">"NAME_1='North</span> <span class="silver">Dakota'"</span> <span class="gray">--field</span> <span class="silver">"NAME_0,AREA"</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;34f3c37f_17060e5e693_-7889)</span><br>
+<p><span class="green">Feature (fid&#8212;&#8203;221d23e7_17069e1c394_-7889)</span><br>
 <span class="green">-----------------------------------------</span><br>
 <span class="green">NAME_0 = United States</span><br>
 <span class="green">AREA = 21.804544852979944</span><br></p>
@@ -2437,7 +2437,7 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">places_id</span> <span class="gray">--filter</span> <span class="silver">"NAME='Seattle'"</span> <span class="gray">--field</span> <span class="silver">"NAME,ID"</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;34f3c37f_17060e5e693_-79ce)</span><br>
+<p><span class="green">Feature (fid&#8212;&#8203;221d23e7_17069e1c394_-79ce)</span><br>
 <span class="green">-----------------------------------------</span><br>
 <span class="green">NAME = Seattle</span><br>
 <span class="green">ID = 10</span><br></p>
@@ -2625,7 +2625,7 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">places_xy</span> <span class="gray">--filter</span> <span class="silver">"NAME='Seattle'"</span> <span class="gray">--field</span> <span class="silver">"NAME,X,Y"</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;34f3c37f_17060e5e693_-6084)</span><br>
+<p><span class="green">Feature (fid&#8212;&#8203;221d23e7_17069e1c394_-6084)</span><br>
 <span class="green">-----------------------------------------</span><br>
 <span class="green">NAME = Seattle</span><br>
 <span class="green">X = -122.34193084586849</span><br>
@@ -9285,6 +9285,9 @@ No parameters
 <div class="paragraph">
 <p>Create contours.</p>
 </div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster contours</strong> <span class="gray">--name</span> <span class="silver">pc</span> <span class="gray">--output-workspace</span> <span class="silver">contours</span> <span class="gray">--output-name</span> <span class="silver">contours</span> <span class="gray">--levels</span> <span class="silver">0,100,200,300,600,900</span><br></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -9359,11 +9362,71 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--name</span> <span class="silver">pc</span> <span class="gray">--input</span> <span class="silver">src/test/resources/pc.tif</span><br>
+<span class="green">Format pc opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster open</strong> <span class="gray">--format</span> <span class="silver">pc</span> <span class="gray">--raster</span> <span class="silver">pc</span> <span class="gray">--name</span> <span class="silver">pc</span><br>
+<span class="green">Opened Format pc Raster pc as pc</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style raster colormap</strong> <span class="gray">--raster</span> <span class="silver">pc</span> <span class="gray">--values</span> <span class="silver">"25=#9fd182,470=#3e7f3c,920=#133912,1370=#08306b,1820=#fffff5"</span> <span class="gray">--file</span> <span class="silver">examples/pc.sld</span><br>
+<span class="green">Colormap Raster Style for pc written to /home/travis/build/jericks/geo-shell/examples/pc.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster style set</strong> <span class="gray">--name</span> <span class="silver">pc</span> <span class="gray">--style</span> <span class="silver">examples/pc.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/pc.sld set on pc</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">contours</span> <span class="gray">--params</span> <span class="silver">examples/contours.shp</span><br>
+<span class="green">Workspace contours opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster contours</strong> <span class="gray">--name</span> <span class="silver">pc</span> <span class="gray">--output-workspace</span> <span class="silver">contours</span> <span class="gray">--output-name</span> <span class="silver">contours</span> <span class="gray">--levels</span> <span class="silver">0,100,200,300,600,900</span><br>
+<span class="green">Done creating contours!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style create</strong> <span class="gray">--params</span> <span class="silver">"stroke=black</span> <span class="silver">stroke-width=0.25"</span> <span class="gray">--file</span> <span class="silver">examples/contours.sld</span><br>
+<span class="green">Style stroke=black stroke-width=0.25 written to /home/travis/build/jericks/geo-shell/examples/contours.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">contours</span> <span class="gray">--style</span> <span class="silver">examples/contours.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/contours.sld set on contours</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add raster</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--raster</span> <span class="silver">pc</span><br>
+<span class="green">Added pc layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--layer</span> <span class="silver">contours</span><br>
+<span class="green">Added contours layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--file</span> <span class="silver">examples/raster_contours.png</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/raster_contours.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/raster_contours.png" alt="raster contours">
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="crop"><a class="anchor" href="#crop"></a>Crop</h3>
 <div class="paragraph">
 <p>Crop a Raster.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster crop</strong> <span class="gray">--name</span> <span class="silver">earth</span> <span class="gray">--output-format</span> <span class="silver">earthCropped</span> <span class="gray">--output-name</span> <span class="silver">earthCropped</span> <span class="gray">--geometry</span> <span class="silver">"-160.927734,6.751896,-34.716797,57.279043"</span><br></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -9411,11 +9474,51 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--name</span> <span class="silver">earth</span> <span class="gray">--input</span> <span class="silver">src/test/resources/earth.tif</span><br>
+<span class="green">Format earth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster open</strong> <span class="gray">--format</span> <span class="silver">earth</span> <span class="gray">--raster</span> <span class="silver">earth</span> <span class="gray">--name</span> <span class="silver">earth</span><br>
+<span class="green">Opened Format earth Raster earth as earth</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--name</span> <span class="silver">earthCropped</span> <span class="gray">--input</span> <span class="silver">examples/earthCropped.tif</span><br>
+<span class="green">Format earthCropped opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster crop</strong> <span class="gray">--name</span> <span class="silver">earth</span> <span class="gray">--output-format</span> <span class="silver">earthCropped</span> <span class="gray">--output-name</span> <span class="silver">earthCropped</span> <span class="gray">--geometry</span> <span class="silver">"-160.927734,6.751896,-34.716797,57.279043"</span><br>
+<span class="green">Raster earth cropped to earthCropped!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add raster</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--raster</span> <span class="silver">earthCropped</span><br>
+<span class="green">Added earthCropped layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--file</span> <span class="silver">examples/raster_crop.png</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/raster_crop.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/raster_crop.png" alt="raster crop">
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="mosaic"><a class="anchor" href="#mosaic"></a>Mosaic</h3>
 <div class="paragraph">
 <p>Mosaic two Rasters together</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster mosaic</strong> <span class="gray">--name1</span> <span class="silver">alki2</span> <span class="gray">--name2</span> <span class="silver">alki3</span> <span class="gray">--output-format</span> <span class="silver">mosaic</span> <span class="gray">--output-name</span> <span class="silver">mosaic</span><br></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -9463,11 +9566,59 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--input</span> <span class="silver">examples/alki2.tif</span> <span class="gray">--name</span> <span class="silver">alki2</span><br>
+<span class="green">Format alki2 opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster open</strong> <span class="gray">--format</span> <span class="silver">alki2</span> <span class="gray">--raster</span> <span class="silver">alki2</span> <span class="gray">--name</span> <span class="silver">alki2</span><br>
+<span class="green">Opened Format alki2 Raster alki2 as alki2</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--input</span> <span class="silver">examples/alki3.tif</span> <span class="gray">--name</span> <span class="silver">alki3</span><br>
+<span class="green">Format alki3 opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster open</strong> <span class="gray">--format</span> <span class="silver">alki3</span> <span class="gray">--raster</span> <span class="silver">alki3</span> <span class="gray">--name</span> <span class="silver">alki3</span><br>
+<span class="green">Opened Format alki3 Raster alki3 as alki3</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--input</span> <span class="silver">examples/mosaic.tif</span> <span class="gray">--name</span> <span class="silver">mosaic</span><br>
+<span class="green">Format mosaic opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster mosaic</strong> <span class="gray">--name1</span> <span class="silver">alki2</span> <span class="gray">--name2</span> <span class="silver">alki3</span> <span class="gray">--output-format</span> <span class="silver">mosaic</span> <span class="gray">--output-name</span> <span class="silver">mosaic</span><br>
+<span class="green">Mosaic alki2 and alki3 to create mosaic!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add raster</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--raster</span> <span class="silver">mosaic</span><br>
+<span class="green">Added mosaic layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--file</span> <span class="silver">examples/raster_mosaic.png</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/raster_mosaic.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/raster_mosaic.png" alt="raster mosaic">
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="reclassify"><a class="anchor" href="#reclassify"></a>Reclassify</h3>
 <div class="paragraph">
 <p>Reclassify a Raster.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster reclassify</strong> <span class="gray">--name</span> <span class="silver">pc</span> <span class="gray">--output-format</span> <span class="silver">pcReclass</span> <span class="gray">--output-name</span> <span class="silver">pcReclass</span> <span class="gray">--ranges</span> <span class="silver">"0-0=1,0-50=2,50-200=3,200-1000=4,1000-1500=5,1500-4000=6"</span><br></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -9529,11 +9680,59 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--name</span> <span class="silver">pc</span> <span class="gray">--input</span> <span class="silver">src/test/resources/pc.tif</span><br>
+<span class="green">Format pc opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster open</strong> <span class="gray">--format</span> <span class="silver">pc</span> <span class="gray">--raster</span> <span class="silver">pc</span> <span class="gray">--name</span> <span class="silver">pc</span><br>
+<span class="green">Opened Format pc Raster pc as pc</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--name</span> <span class="silver">pcReclass</span> <span class="gray">--input</span> <span class="silver">examples/pcReclass.tif</span><br>
+<span class="green">Format pcReclass opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster reclassify</strong> <span class="gray">--name</span> <span class="silver">pc</span> <span class="gray">--output-format</span> <span class="silver">pcReclass</span> <span class="gray">--output-name</span> <span class="silver">pcReclass</span> <span class="gray">--ranges</span> <span class="silver">"0-0=1,0-50=2,50-200=3,200-1000=4,1000-1500=5,1500-4000=6"</span><br>
+<span class="green">Raster pc reclassified to pcReclass!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style raster colormap</strong> <span class="gray">--raster</span> <span class="silver">pcReclass</span> <span class="gray">--values</span> <span class="silver">"1=#9fd182,2=#3e7f3c,3=#133912,4=#08306b,5=#FFF8DC,6=#ffffff"</span> <span class="gray">--file</span> <span class="silver">examples/pcReclass.sld</span><br>
+<span class="green">Colormap Raster Style for pcReclass written to /home/travis/build/jericks/geo-shell/examples/pcReclass.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster style set</strong> <span class="gray">--name</span> <span class="silver">pcReclass</span> <span class="gray">--style</span> <span class="silver">examples/pcReclass.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/pcReclass.sld set on pcReclass</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add raster</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--raster</span> <span class="silver">pcReclass</span><br>
+<span class="green">Added pcReclass layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--file</span> <span class="silver">examples/raster_reclassify.png</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/raster_reclassify.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/raster_reclassify.png" alt="raster reclassify">
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="reproject"><a class="anchor" href="#reproject"></a>Reproject</h3>
 <div class="paragraph">
 <p>Project a Raster.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster reproject</strong> <span class="gray">--name</span> <span class="silver">earthCropped</span> <span class="gray">--output-format</span> <span class="silver">earth3857</span> <span class="gray">--output-name</span> <span class="silver">earth3857</span> <span class="gray">--projection</span> <span class="silver">"EPSG:3857"</span><br></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -9581,11 +9780,59 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--name</span> <span class="silver">earth</span> <span class="gray">--input</span> <span class="silver">src/test/resources/earth.tif</span><br>
+<span class="green">Format earth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster open</strong> <span class="gray">--format</span> <span class="silver">earth</span> <span class="gray">--raster</span> <span class="silver">earth</span> <span class="gray">--name</span> <span class="silver">earth</span><br>
+<span class="green">Opened Format earth Raster earth as earth</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--name</span> <span class="silver">earthCropped</span> <span class="gray">--input</span> <span class="silver">examples/earthCropped.tif</span><br>
+<span class="green">Format earthCropped opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster crop</strong> <span class="gray">--name</span> <span class="silver">earth</span> <span class="gray">--output-format</span> <span class="silver">earthCropped</span> <span class="gray">--output-name</span> <span class="silver">earthCropped</span> <span class="gray">--geometry</span> <span class="silver">"-180.0,-85.06,180.0,85.06"</span><br>
+<span class="green">Raster earth cropped to earthCropped!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--name</span> <span class="silver">earth3857</span> <span class="gray">--input</span> <span class="silver">examples/earth3857.tif</span><br>
+<span class="green">Format earth3857 opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster reproject</strong> <span class="gray">--name</span> <span class="silver">earthCropped</span> <span class="gray">--output-format</span> <span class="silver">earth3857</span> <span class="gray">--output-name</span> <span class="silver">earth3857</span> <span class="gray">--projection</span> <span class="silver">"EPSG:3857"</span><br>
+<span class="green">Raster earthCropped reprojected to earth3857 as EPSG:3857!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add raster</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--raster</span> <span class="silver">earth3857</span><br>
+<span class="green">Added earth3857 layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--file</span> <span class="silver">examples/raster_reproject.png</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/raster_reproject.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/raster_reproject.png" alt="raster reproject">
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="scale"><a class="anchor" href="#scale"></a>Scale</h3>
 <div class="paragraph">
 <p>Scale a Raster.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster scale</strong> <span class="gray">--name</span> <span class="silver">pc</span> <span class="gray">--output-format</span> <span class="silver">pcScaled</span> <span class="gray">--output-name</span> <span class="silver">pcScaled</span> <span class="gray">--x</span> <span class="silver">0.5</span> <span class="gray">--y</span> <span class="silver">0.5</span><br></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -9661,11 +9908,51 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--name</span> <span class="silver">pc</span> <span class="gray">--input</span> <span class="silver">src/test/resources/pc.tif</span><br>
+<span class="green">Format pc opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster open</strong> <span class="gray">--format</span> <span class="silver">pc</span> <span class="gray">--raster</span> <span class="silver">pc</span> <span class="gray">--name</span> <span class="silver">pc</span><br>
+<span class="green">Opened Format pc Raster pc as pc</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--name</span> <span class="silver">pcScaled</span> <span class="gray">--input</span> <span class="silver">examples/pcScaled.tif</span><br>
+<span class="green">Format pcScaled opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster scale</strong> <span class="gray">--name</span> <span class="silver">pc</span> <span class="gray">--output-format</span> <span class="silver">pcScaled</span> <span class="gray">--output-name</span> <span class="silver">pcScaled</span> <span class="gray">--x</span> <span class="silver">0.5</span> <span class="gray">--y</span> <span class="silver">0.5</span><br>
+<span class="green">Raster pc scaled to pcScaled!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style raster colormap</strong> <span class="gray">--raster</span> <span class="silver">pc</span> <span class="gray">--values</span> <span class="silver">"25=#9fd182,470=#3e7f3c,920=#133912,1370=#08306b,1820=#fffff5"</span> <span class="gray">--file</span> <span class="silver">examples/pcScaled.sld</span><br>
+<span class="green">Colormap Raster Style for pc written to /home/travis/build/jericks/geo-shell/examples/pcScaled.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster style set</strong> <span class="gray">--name</span> <span class="silver">pcScaled</span> <span class="gray">--style</span> <span class="silver">examples/pcScaled.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/pcScaled.sld set on pcScaled</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add raster</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--raster</span> <span class="silver">pcScaled</span><br>
+<span class="green">Added pcScaled layer to map map</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/raster_scale.png" alt="raster scale">
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="shaded-relief"><a class="anchor" href="#shaded-relief"></a>Shaded Relief</h3>
 <div class="paragraph">
 <p>Create a shaded relief raster</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster shadedrelief</strong> <span class="gray">--name</span> <span class="silver">pc</span> <span class="gray">--output-format</span> <span class="silver">pcShaded</span> <span class="gray">--output-name</span> <span class="silver">pcShaded</span> <span class="gray">--scale</span> <span class="silver">1.0</span> <span class="gray">--altitude</span> <span class="silver">25</span> <span class="gray">--azimuth</span> <span class="silver">260</span><br></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -9755,11 +10042,51 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--name</span> <span class="silver">pc</span> <span class="gray">--input</span> <span class="silver">src/test/resources/pc.tif</span><br>
+<span class="green">Format pc opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster open</strong> <span class="gray">--format</span> <span class="silver">pc</span> <span class="gray">--raster</span> <span class="silver">pc</span> <span class="gray">--name</span> <span class="silver">pc</span><br>
+<span class="green">Opened Format pc Raster pc as pc</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--name</span> <span class="silver">pcShaded</span> <span class="gray">--input</span> <span class="silver">examples/pcShaded.tif</span><br>
+<span class="green">Format pcShaded opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster shadedrelief</strong> <span class="gray">--name</span> <span class="silver">pc</span> <span class="gray">--output-format</span> <span class="silver">pcShaded</span> <span class="gray">--output-name</span> <span class="silver">pcShaded</span> <span class="gray">--scale</span> <span class="silver">1.0</span> <span class="gray">--altitude</span> <span class="silver">25</span> <span class="gray">--azimuth</span> <span class="silver">260</span><br>
+<span class="green">Create shaded relief pcShaded from pc!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add raster</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--raster</span> <span class="silver">pcShaded</span><br>
+<span class="green">Added pcShaded layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--file</span> <span class="silver">examples/raster_shadedrelief.png</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/raster_shadedrelief.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/raster_shadedrelief.png" alt="raster shadedrelief">
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="stylize"><a class="anchor" href="#stylize"></a>Stylize</h3>
 <div class="paragraph">
 <p>Create a new Raster by baking the style into an existing Raster</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster stylize</strong> <span class="gray">--name</span> <span class="silver">pc</span> <span class="gray">--output-format</span> <span class="silver">pcStyled</span> <span class="gray">--output-name</span> <span class="silver">pcStyled</span><br></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -9800,6 +10127,51 @@ No parameters
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--name</span> <span class="silver">pc</span> <span class="gray">--input</span> <span class="silver">src/test/resources/pc.tif</span><br>
+<span class="green">Format pc opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster open</strong> <span class="gray">--format</span> <span class="silver">pc</span> <span class="gray">--raster</span> <span class="silver">pc</span> <span class="gray">--name</span> <span class="silver">pc</span><br>
+<span class="green">Opened Format pc Raster pc as pc</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style raster colormap</strong> <span class="gray">--raster</span> <span class="silver">pc</span> <span class="gray">--values</span> <span class="silver">"25=#9fd182,470=#3e7f3c,920=#133912,1370=#08306b,1820=#fffff5"</span> <span class="gray">--file</span> <span class="silver">examples/pc.sld</span><br>
+<span class="green">Colormap Raster Style for pc written to /home/travis/build/jericks/geo-shell/examples/pc.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster style set</strong> <span class="gray">--name</span> <span class="silver">pc</span> <span class="gray">--style</span> <span class="silver">examples/pc.sld</span><br>
+<span class="green">Style /home/travis/build/jericks/geo-shell/examples/pc.sld set on pc</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">format open</strong> <span class="gray">--name</span> <span class="silver">pcStyled</span> <span class="gray">--input</span> <span class="silver">examples/pcStyled.tif</span><br>
+<span class="green">Format pcStyled opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">raster stylize</strong> <span class="gray">--name</span> <span class="silver">pc</span> <span class="gray">--output-format</span> <span class="silver">pcStyled</span> <span class="gray">--output-name</span> <span class="silver">pcStyled</span><br>
+<span class="green">Stylized pc to create pcStyled!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add raster</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--raster</span> <span class="silver">pcStyled</span><br>
+<span class="green">Added pcStyled layer to map map</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map draw</strong> <span class="gray">--name</span> <span class="silver">map</span> <span class="gray">--file</span> <span class="silver">examples/raster_stylize.png</span><br>
+<span class="green">Done drawing /home/travis/build/jericks/geo-shell/examples/raster_stylize.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">map</span><br>
+<span class="green">Map map closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/raster_stylize.png" alt="raster stylize">
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="polygon"><a class="anchor" href="#polygon"></a>Polygon</h3>
@@ -11385,12 +11757,12 @@ No parameters
           <span class="tag">&lt;/ogc:Filter&gt;</span>
           <span class="tag">&lt;sld:PolygonSymbolizer&gt;</span>
             <span class="tag">&lt;sld:Fill&gt;</span>
-              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fill</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#45585c<span class="tag">&lt;/sld:CssParameter&gt;</span>
+              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fill</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#1f0d7e<span class="tag">&lt;/sld:CssParameter&gt;</span>
             <span class="tag">&lt;/sld:Fill&gt;</span>
           <span class="tag">&lt;/sld:PolygonSymbolizer&gt;</span>
           <span class="tag">&lt;sld:LineSymbolizer&gt;</span>
             <span class="tag">&lt;sld:Stroke&gt;</span>
-              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#303d40<span class="tag">&lt;/sld:CssParameter&gt;</span>
+              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#150958<span class="tag">&lt;/sld:CssParameter&gt;</span>
               <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke-width</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>0.5<span class="tag">&lt;/sld:CssParameter&gt;</span>
             <span class="tag">&lt;/sld:Stroke&gt;</span>
           <span class="tag">&lt;/sld:LineSymbolizer&gt;</span>
@@ -11404,12 +11776,12 @@ No parameters
           <span class="tag">&lt;/ogc:Filter&gt;</span>
           <span class="tag">&lt;sld:PolygonSymbolizer&gt;</span>
             <span class="tag">&lt;sld:Fill&gt;</span>
-              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fill</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#49321e<span class="tag">&lt;/sld:CssParameter&gt;</span>
+              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fill</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#214937<span class="tag">&lt;/sld:CssParameter&gt;</span>
             <span class="tag">&lt;/sld:Fill&gt;</span>
           <span class="tag">&lt;/sld:PolygonSymbolizer&gt;</span>
           <span class="tag">&lt;sld:LineSymbolizer&gt;</span>
             <span class="tag">&lt;sld:Stroke&gt;</span>
-              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#332315<span class="tag">&lt;/sld:CssParameter&gt;</span>
+              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#173326<span class="tag">&lt;/sld:CssParameter&gt;</span>
               <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke-width</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>0.5<span class="tag">&lt;/sld:CssParameter&gt;</span>
             <span class="tag">&lt;/sld:Stroke&gt;</span>
           <span class="tag">&lt;/sld:LineSymbolizer&gt;</span>
@@ -13079,7 +13451,7 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">date</strong> <br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Thursday, February 20, 2020 4:40:38 AM UTC</span><br></p>
+<p><span class="green">Friday, February 21, 2020 10:32:42 PM UTC</span><br></p>
 </div>
 </div>
 <div class="sect2">
@@ -13384,7 +13756,7 @@ No parameters
 <div id="footer">
 <div id="footer-text">
 Version 0.7-SNAPSHOT<br>
-Last updated 2020-02-20 04:31:29 UTC
+Last updated 2020-02-21 22:20:33 UTC
 </div>
 </div>
 </body>

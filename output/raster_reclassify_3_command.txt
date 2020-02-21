@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*raster reclassify* [gray]#--name# [silver]#pc# [gray]#--output-format# [silver]#pcReclass# [gray]#--output-name# [silver]#pcReclass# [gray]#--ranges# [silver]#"0-0=1,0-50=2,50-200=3,200-1000=4,1000-1500=5,1500-4000=6"# +

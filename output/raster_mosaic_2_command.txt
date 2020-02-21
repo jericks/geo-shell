@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*format open* [gray]#--input# [silver]#examples/alki3.tif# [gray]#--name# [silver]#alki3# +

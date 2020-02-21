@@ -1,0 +1,1 @@
+[green]#Style stroke=black stroke-width=0.25 written to /home/travis/build/jericks/geo-shell/examples/contours.sld!# +

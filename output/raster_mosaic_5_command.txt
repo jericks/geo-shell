@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*raster mosaic* [gray]#--name1# [silver]#alki2# [gray]#--name2# [silver]#alki3# [gray]#--output-format# [silver]#mosaic# [gray]#--output-name# [silver]#mosaic# +

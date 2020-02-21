@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*raster shadedrelief* [gray]#--name# [silver]#pc# [gray]#--output-format# [silver]#pcShaded# [gray]#--output-name# [silver]#pcShaded# [gray]#--scale# [silver]#1.0# [gray]#--altitude# [silver]#25# [gray]#--azimuth# [silver]#260# +

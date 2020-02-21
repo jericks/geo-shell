@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*raster reproject* [gray]#--name# [silver]#earthCropped# [gray]#--output-format# [silver]#earth3857# [gray]#--output-name# [silver]#earth3857# [gray]#--projection# [silver]#"EPSG:3857"# +

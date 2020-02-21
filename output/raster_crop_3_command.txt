@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*raster crop* [gray]#--name# [silver]#earth# [gray]#--output-format# [silver]#earthCropped# [gray]#--output-name# [silver]#earthCropped# [gray]#--geometry# [silver]#"-160.927734,6.751896,-34.716797,57.279043"# +

@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*format open* [gray]#--name# [silver]#pcShaded# [gray]#--input# [silver]#examples/pcShaded.tif# +
