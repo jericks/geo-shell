@@ -444,4 +444,19 @@ class RasterDocTest extends AbstractDocTest {
         copyFile(new File("examples/raster_reproject.png"), new File("src/main/docs/images"))
     }
 
+    @Test
+    void crop() {
+        run("raster_crop", [
+                "format open --name earth --input src/test/resources/earth.tif",
+                "raster open --format earth --raster earth --name earth",
+                "format open --name earthCropped --input examples/earthCropped.tif",
+                "raster crop --name earth --output-format earthCropped --output-name earthCropped --geometry \"-160.927734,6.751896,-34.716797,57.279043\"",
+                "map open --name map",
+                "map add raster --name map --raster earthCropped",
+                "map draw --name map --file examples/raster_crop.png",
+                "map close --name map",
+        ])
+        copyFile(new File("examples/raster_crop.png"), new File("src/main/docs/images"))
+    }
+
 }

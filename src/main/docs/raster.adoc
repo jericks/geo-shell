@@ -901,7 +901,36 @@ include::commands/raster_contours.txt[]
 === Crop
 
 include::commands/raster_crop_description.txt[]
+
+include::output/raster_crop_3_command.txt[]
+
 include::commands/raster_crop.txt[]
+
+include::output/raster_crop_0_command.txt[]
+include::output/raster_crop_0_result.txt[]
+
+include::output/raster_crop_1_command.txt[]
+include::output/raster_crop_1_result.txt[]
+
+include::output/raster_crop_2_command.txt[]
+include::output/raster_crop_2_result.txt[]
+
+include::output/raster_crop_3_command.txt[]
+include::output/raster_crop_3_result.txt[]
+
+include::output/raster_crop_4_command.txt[]
+include::output/raster_crop_4_result.txt[]
+
+include::output/raster_crop_5_command.txt[]
+include::output/raster_crop_5_result.txt[]
+
+include::output/raster_crop_6_command.txt[]
+include::output/raster_crop_6_result.txt[]
+
+include::output/raster_crop_7_command.txt[]
+include::output/raster_crop_7_result.txt[]
+
+image::raster_crop.png[]
 
 === Mosaic
 
@@ -916,6 +945,9 @@ include::commands/raster_reclassify.txt[]
 === Reproject
 
 include::commands/raster_reproject_description.txt[]
+
+include::output/raster_reproject_5_command.txt[]
+
 include::commands/raster_reproject.txt[]
 
 include::output/raster_reproject_0_command.txt[]
