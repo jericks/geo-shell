@@ -1249,12 +1249,6 @@ include::output/raster_polygon_11_result.txt[]
 include::output/raster_polygon_12_command.txt[]
 include::output/raster_polygon_12_result.txt[]
 
-include::output/raster_polygon_13_command.txt[]
-include::output/raster_polygon_13_result.txt[]
-
-include::output/raster_polygon_14_command.txt[]
-include::output/raster_polygon_14_result.txt[]
-
 image::raster_polygon.png[]
 
 
