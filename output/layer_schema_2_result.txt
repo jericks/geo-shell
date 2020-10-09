@@ -1,7 +1,7 @@
 [green]#Name                  Type# +
 [green]#--------------------  --------------------# +
 [green]#the_geom              MultiPolygon# +
-[green]#ScaleRank             Integer# +
+[green]#ScaleRank             Long# +
 [green]#FeatureCla            String# +
 [green]#SOVEREIGNT            String# +
 [green]#SOVISO                String# +
