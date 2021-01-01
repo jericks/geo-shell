@@ -1,1 +1,1 @@
-[green]#Style /home/travis/build/jericks/geo-shell/examples/minrects.sld set on minrects# +
+[green]#Style /home/runner/work/geo-shell/geo-shell/examples/minrects.sld set on minrects# +

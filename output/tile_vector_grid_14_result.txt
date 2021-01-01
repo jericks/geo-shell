@@ -1,1 +1,1 @@
-[green]#Done drawing /home/travis/build/jericks/geo-shell/examples/tile_vector_grid.png!# +
+[green]#Done drawing /home/runner/work/geo-shell/geo-shell/examples/tile_vector_grid.png!# +

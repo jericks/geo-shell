@@ -1,1 +1,1 @@
-[green]#Style /home/travis/build/jericks/geo-shell/examples/ovals.sld set on ovals# +
+[green]#Style /home/runner/work/geo-shell/geo-shell/examples/ovals.sld set on ovals# +

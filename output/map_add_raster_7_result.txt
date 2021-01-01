@@ -1,1 +1,1 @@
-[green]#Style /home/travis/build/jericks/geo-shell/examples/outline.sld set on countries# +
+[green]#Style /home/runner/work/geo-shell/geo-shell/examples/outline.sld set on countries# +
