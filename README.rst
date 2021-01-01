@@ -1,6 +1,3 @@
-.. image:: https://travis-ci.org/jericks/geo-shell.svg?branch=master
-    :target: https://travis-ci.org/jericks/geo-shell
-
 .. image:: https://github.com/jericks/geo-shell/workflows/Maven%20Build/badge.svg
     :target: https://github.com/jericks/geo-shell/actions
 
