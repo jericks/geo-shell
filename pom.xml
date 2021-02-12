@@ -9,10 +9,10 @@
     <url>http://maven.apache.org</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <asciidoctor.maven.plugin.version>1.5.7.1</asciidoctor.maven.plugin.version>
-        <asciidoctorj.version>1.6.1</asciidoctorj.version>
-        <asciidoctorj.pdf.version>1.5.0-alpha.16</asciidoctorj.pdf.version>
-        <jruby.version>9.2.5.0</jruby.version>
+        <asciidoctor.maven.plugin.version>2.1.0</asciidoctor.maven.plugin.version>
+        <asciidoctorj.version>2.4.2</asciidoctorj.version>
+        <asciidoctorj.pdf.version>1.5.4</asciidoctorj.pdf.version>
+        <jruby.version>9.2.13.0</jruby.version>
     </properties>
     <distributionManagement>
         <repository>
@@ -142,7 +142,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>3.2.0</version>
                 <configuration>
                     <archive>
                         <manifest>
@@ -154,7 +154,7 @@
             </plugin>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>3.3.0</version>
                 <configuration>
                     <descriptors>
                         <descriptor>src/main/assembly/dir.xml</descriptor>
@@ -174,7 +174,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.2.0</version>
+                <version>3.2.4</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -219,7 +219,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
-                <version>2.6</version>
+                <version>3.2.0</version>
                 <executions>
                     <execution>
                         <id>copy-asciidoc-resources</id>
@@ -275,13 +275,12 @@
                         </goals>
                         <configuration>
                             <backend>html5</backend>
-                            <sourceHighlighter>coderay</sourceHighlighter>
                             <relativeBaseDir>true</relativeBaseDir>
-                            <imagesDir>./images</imagesDir>
                             <attributes>
                                 <sourcedir>${project.basedir}/src/main/groovy</sourcedir>
                                 <basedir>${project.basedir}/src/main/docs</basedir>
-                                <imagesdir>./images</imagesdir>
+                                <imagesDir>./images</imagesDir>
+                                <source-highlighter>coderay</source-highlighter>
                                 <toc>left</toc>
                                 <toclevels>4</toclevels>
                                 <icons>font</icons>
@@ -300,9 +299,9 @@
                         </goals>
                         <configuration>
                             <backend>pdf</backend>
-                            <sourceHighlighter>rouge</sourceHighlighter>
                             <attributes>
                                 <sourcedir>${project.basedir}/src/main/groovy</sourcedir>
+                                <source-highlighter>coderay</source-highlighter>
                                 <icons>font</icons>
                                 <pagenums/>
                                 <toc/>
