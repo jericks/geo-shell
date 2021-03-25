@@ -16,12 +16,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#4c3511</sld:CssParameter>
+              <sld:CssParameter name="fill">#420549</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#35250b</sld:CssParameter>
+              <sld:CssParameter name="stroke">#2e0333</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -35,12 +35,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#5b2a14</sld:CssParameter>
+              <sld:CssParameter name="fill">#512303</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#3f1d0e</sld:CssParameter>
+              <sld:CssParameter name="stroke">#381802</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -54,12 +54,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#79484c</sld:CssParameter>
+              <sld:CssParameter name="fill">#315024</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#543235</sld:CssParameter>
+              <sld:CssParameter name="stroke">#223819</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -73,12 +73,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#463002</sld:CssParameter>
+              <sld:CssParameter name="fill">#46285c</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#312101</sld:CssParameter>
+              <sld:CssParameter name="stroke">#311c40</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -92,12 +92,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#520e73</sld:CssParameter>
+              <sld:CssParameter name="fill">#506f66</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#390950</sld:CssParameter>
+              <sld:CssParameter name="stroke">#384d47</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -111,12 +111,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#684434</sld:CssParameter>
+              <sld:CssParameter name="fill">#553c03</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#482f24</sld:CssParameter>
+              <sld:CssParameter name="stroke">#3b2a02</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -130,12 +130,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#207c38</sld:CssParameter>
+              <sld:CssParameter name="fill">#1e137c</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#165627</sld:CssParameter>
+              <sld:CssParameter name="stroke">#150d56</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -149,12 +149,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#747c2f</sld:CssParameter>
+              <sld:CssParameter name="fill">#79497b</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#515620</sld:CssParameter>
+              <sld:CssParameter name="stroke">#543356</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -168,12 +168,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#1a1301</sld:CssParameter>
+              <sld:CssParameter name="fill">#116237</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#120d00</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0b4426</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -187,12 +187,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#027803</sld:CssParameter>
+              <sld:CssParameter name="fill">#584c77</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#015402</sld:CssParameter>
+              <sld:CssParameter name="stroke">#3d3553</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -206,12 +206,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#2d7131</sld:CssParameter>
+              <sld:CssParameter name="fill">#410019</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#1f4f22</sld:CssParameter>
+              <sld:CssParameter name="stroke">#2d0011</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -225,12 +225,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#1e737a</sld:CssParameter>
+              <sld:CssParameter name="fill">#0f791d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#155055</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0a5414</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -244,12 +244,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#63347f</sld:CssParameter>
+              <sld:CssParameter name="fill">#526a0c</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#452458</sld:CssParameter>
+              <sld:CssParameter name="stroke">#394a08</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -263,12 +263,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#03421d</sld:CssParameter>
+              <sld:CssParameter name="fill">#486c7d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#022e14</sld:CssParameter>
+              <sld:CssParameter name="stroke">#324b57</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -282,12 +282,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#094448</sld:CssParameter>
+              <sld:CssParameter name="fill">#5a1659</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#062f32</sld:CssParameter>
+              <sld:CssParameter name="stroke">#3e0f3e</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -301,12 +301,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#7e095a</sld:CssParameter>
+              <sld:CssParameter name="fill">#043238</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#58063e</sld:CssParameter>
+              <sld:CssParameter name="stroke">#022327</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -320,12 +320,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#4a100d</sld:CssParameter>
+              <sld:CssParameter name="fill">#68372a</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#330b09</sld:CssParameter>
+              <sld:CssParameter name="stroke">#48261d</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -339,12 +339,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#180a04</sld:CssParameter>
+              <sld:CssParameter name="fill">#3e6907</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#100702</sld:CssParameter>
+              <sld:CssParameter name="stroke">#2b4904</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -358,12 +358,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#6b0b07</sld:CssParameter>
+              <sld:CssParameter name="fill">#560747</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#4a0704</sld:CssParameter>
+              <sld:CssParameter name="stroke">#3c0431</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -377,12 +377,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#713d4d</sld:CssParameter>
+              <sld:CssParameter name="fill">#2a4f01</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#4f2a35</sld:CssParameter>
+              <sld:CssParameter name="stroke">#1d3700</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -396,12 +396,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#4a3157</sld:CssParameter>
+              <sld:CssParameter name="fill">#602140</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#33223c</sld:CssParameter>
+              <sld:CssParameter name="stroke">#43172c</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -415,12 +415,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#395060</sld:CssParameter>
+              <sld:CssParameter name="fill">#78540b</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#273843</sld:CssParameter>
+              <sld:CssParameter name="stroke">#543a07</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -434,12 +434,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#1b7475</sld:CssParameter>
+              <sld:CssParameter name="fill">#380217</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#125151</sld:CssParameter>
+              <sld:CssParameter name="stroke">#270110</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -453,12 +453,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#77175f</sld:CssParameter>
+              <sld:CssParameter name="fill">#49655e</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#531042</sld:CssParameter>
+              <sld:CssParameter name="stroke">#334641</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -472,12 +472,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#351c09</sld:CssParameter>
+              <sld:CssParameter name="fill">#0a4b7f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#251306</sld:CssParameter>
+              <sld:CssParameter name="stroke">#073458</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -491,12 +491,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#4a090f</sld:CssParameter>
+              <sld:CssParameter name="fill">#39154b</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#33060a</sld:CssParameter>
+              <sld:CssParameter name="stroke">#270e34</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -510,12 +510,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#152811</sld:CssParameter>
+              <sld:CssParameter name="fill">#3a0569</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#0e1c0b</sld:CssParameter>
+              <sld:CssParameter name="stroke">#280349</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -529,12 +529,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#135367</sld:CssParameter>
+              <sld:CssParameter name="fill">#2f3a49</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#0d3a48</sld:CssParameter>
+              <sld:CssParameter name="stroke">#202833</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -548,12 +548,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#730014</sld:CssParameter>
+              <sld:CssParameter name="fill">#331c02</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#50000e</sld:CssParameter>
+              <sld:CssParameter name="stroke">#231301</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -567,12 +567,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#4d4b10</sld:CssParameter>
+              <sld:CssParameter name="fill">#6b4a0f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#35340b</sld:CssParameter>
+              <sld:CssParameter name="stroke">#4a330a</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -586,12 +586,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#3f4b48</sld:CssParameter>
+              <sld:CssParameter name="fill">#385911</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#2c3432</sld:CssParameter>
+              <sld:CssParameter name="stroke">#273e0b</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -605,12 +605,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#171f2e</sld:CssParameter>
+              <sld:CssParameter name="fill">#6f3a43</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#101520</sld:CssParameter>
+              <sld:CssParameter name="stroke">#4d282e</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -624,12 +624,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#503c64</sld:CssParameter>
+              <sld:CssParameter name="fill">#334523</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#382a46</sld:CssParameter>
+              <sld:CssParameter name="stroke">#233018</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -643,12 +643,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#342c78</sld:CssParameter>
+              <sld:CssParameter name="fill">#143d51</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#241e54</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0e2a38</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -662,12 +662,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#724f54</sld:CssParameter>
+              <sld:CssParameter name="fill">#7f2f72</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#4f373a</sld:CssParameter>
+              <sld:CssParameter name="stroke">#58204f</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -681,12 +681,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#7b6b04</sld:CssParameter>
+              <sld:CssParameter name="fill">#7a030d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#564a02</sld:CssParameter>
+              <sld:CssParameter name="stroke">#550209</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -700,12 +700,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#17727f</sld:CssParameter>
+              <sld:CssParameter name="fill">#172f4f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#104f58</sld:CssParameter>
+              <sld:CssParameter name="stroke">#102037</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -719,12 +719,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#766055</sld:CssParameter>
+              <sld:CssParameter name="fill">#427d45</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#52433b</sld:CssParameter>
+              <sld:CssParameter name="stroke">#2e5730</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -738,12 +738,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#492540</sld:CssParameter>
+              <sld:CssParameter name="fill">#196b25</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#33192c</sld:CssParameter>
+              <sld:CssParameter name="stroke">#114a19</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -757,12 +757,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#1f7158</sld:CssParameter>
+              <sld:CssParameter name="fill">#020572</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#154f3d</sld:CssParameter>
+              <sld:CssParameter name="stroke">#01034f</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -776,12 +776,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#687365</sld:CssParameter>
+              <sld:CssParameter name="fill">#391b4d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#485046</sld:CssParameter>
+              <sld:CssParameter name="stroke">#271235</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -795,12 +795,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#222e05</sld:CssParameter>
+              <sld:CssParameter name="fill">#3d5b48</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#172003</sld:CssParameter>
+              <sld:CssParameter name="stroke">#2a3f32</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -814,12 +814,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#3f7979</sld:CssParameter>
+              <sld:CssParameter name="fill">#540f55</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#2c5454</sld:CssParameter>
+              <sld:CssParameter name="stroke">#3a0a3b</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -833,12 +833,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#144071</sld:CssParameter>
+              <sld:CssParameter name="fill">#2e7826</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#0e2c4f</sld:CssParameter>
+              <sld:CssParameter name="stroke">#20541a</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -852,12 +852,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#660a48</sld:CssParameter>
+              <sld:CssParameter name="fill">#7b522a</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#470732</sld:CssParameter>
+              <sld:CssParameter name="stroke">#56391d</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -871,12 +871,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#53526d</sld:CssParameter>
+              <sld:CssParameter name="fill">#74324a</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#3a394c</sld:CssParameter>
+              <sld:CssParameter name="stroke">#512333</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -890,12 +890,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#16100c</sld:CssParameter>
+              <sld:CssParameter name="fill">#3a5156</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#0f0b08</sld:CssParameter>
+              <sld:CssParameter name="stroke">#28383c</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -909,12 +909,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#414200</sld:CssParameter>
+              <sld:CssParameter name="fill">#1d0270</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#2d2e00</sld:CssParameter>
+              <sld:CssParameter name="stroke">#14014e</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -928,12 +928,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#5e4437</sld:CssParameter>
+              <sld:CssParameter name="fill">#62796f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#412f26</sld:CssParameter>
+              <sld:CssParameter name="stroke">#44544d</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -947,12 +947,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#607c28</sld:CssParameter>
+              <sld:CssParameter name="fill">#021e57</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#43561c</sld:CssParameter>
+              <sld:CssParameter name="stroke">#01153c</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -966,12 +966,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#241c14</sld:CssParameter>
+              <sld:CssParameter name="fill">#3b6674</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#19130e</sld:CssParameter>
+              <sld:CssParameter name="stroke">#294751</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -985,12 +985,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#511e72</sld:CssParameter>
+              <sld:CssParameter name="fill">#2d355d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#38154f</sld:CssParameter>
+              <sld:CssParameter name="stroke">#1f2541</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1004,12 +1004,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#56577d</sld:CssParameter>
+              <sld:CssParameter name="fill">#075831</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#3c3c57</sld:CssParameter>
+              <sld:CssParameter name="stroke">#043d22</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1023,12 +1023,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#2f2c33</sld:CssParameter>
+              <sld:CssParameter name="fill">#0b4c0f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#201e23</sld:CssParameter>
+              <sld:CssParameter name="stroke">#07350a</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1042,12 +1042,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#2d2f20</sld:CssParameter>
+              <sld:CssParameter name="fill">#055442</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#1f2016</sld:CssParameter>
+              <sld:CssParameter name="stroke">#033a2e</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1061,12 +1061,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#386672</sld:CssParameter>
+              <sld:CssParameter name="fill">#0a0d13</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#27474f</sld:CssParameter>
+              <sld:CssParameter name="stroke">#07090d</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1080,12 +1080,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#566d1f</sld:CssParameter>
+              <sld:CssParameter name="fill">#6a6d62</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#3c4c15</sld:CssParameter>
+              <sld:CssParameter name="stroke">#4a4c44</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1099,12 +1099,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#1b731c</sld:CssParameter>
+              <sld:CssParameter name="fill">#0c7120</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#125013</sld:CssParameter>
+              <sld:CssParameter name="stroke">#084f16</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1118,12 +1118,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#5a6c1f</sld:CssParameter>
+              <sld:CssParameter name="fill">#6b0f4a</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#3e4b15</sld:CssParameter>
+              <sld:CssParameter name="stroke">#4a0a33</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1137,12 +1137,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#570916</sld:CssParameter>
+              <sld:CssParameter name="fill">#590e0f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#3c060f</sld:CssParameter>
+              <sld:CssParameter name="stroke">#3e090a</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1156,12 +1156,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#7f2032</sld:CssParameter>
+              <sld:CssParameter name="fill">#33047d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#581623</sld:CssParameter>
+              <sld:CssParameter name="stroke">#230257</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1175,12 +1175,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#360135</sld:CssParameter>
+              <sld:CssParameter name="fill">#797d5d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#250025</sld:CssParameter>
+              <sld:CssParameter name="stroke">#545741</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1194,12 +1194,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#492a04</sld:CssParameter>
+              <sld:CssParameter name="fill">#437607</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#331d02</sld:CssParameter>
+              <sld:CssParameter name="stroke">#2e5204</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1213,12 +1213,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#566570</sld:CssParameter>
+              <sld:CssParameter name="fill">#485653</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#3c464e</sld:CssParameter>
+              <sld:CssParameter name="stroke">#323c3a</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1232,12 +1232,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#6d567d</sld:CssParameter>
+              <sld:CssParameter name="fill">#7a0b55</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#4c3c57</sld:CssParameter>
+              <sld:CssParameter name="stroke">#55073b</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1251,12 +1251,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#5a0473</sld:CssParameter>
+              <sld:CssParameter name="fill">#5c140e</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#3e0250</sld:CssParameter>
+              <sld:CssParameter name="stroke">#400e09</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1270,12 +1270,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#1b4263</sld:CssParameter>
+              <sld:CssParameter name="fill">#795c3d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#122e45</sld:CssParameter>
+              <sld:CssParameter name="stroke">#54402a</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1289,12 +1289,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#732b4d</sld:CssParameter>
+              <sld:CssParameter name="fill">#607e22</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#501e35</sld:CssParameter>
+              <sld:CssParameter name="stroke">#435817</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1308,12 +1308,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#07452d</sld:CssParameter>
+              <sld:CssParameter name="fill">#4a0d68</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#04301f</sld:CssParameter>
+              <sld:CssParameter name="stroke">#330948</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1327,12 +1327,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#472061</sld:CssParameter>
+              <sld:CssParameter name="fill">#602f5d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#311643</sld:CssParameter>
+              <sld:CssParameter name="stroke">#432041</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1346,12 +1346,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#643e39</sld:CssParameter>
+              <sld:CssParameter name="fill">#0a5844</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#462b27</sld:CssParameter>
+              <sld:CssParameter name="stroke">#073d2f</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1365,12 +1365,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#1c3939</sld:CssParameter>
+              <sld:CssParameter name="fill">#737615</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#132727</sld:CssParameter>
+              <sld:CssParameter name="stroke">#50520e</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1384,12 +1384,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#3c774b</sld:CssParameter>
+              <sld:CssParameter name="fill">#5c6f30</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#2a5334</sld:CssParameter>
+              <sld:CssParameter name="stroke">#404d21</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1403,12 +1403,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#654a48</sld:CssParameter>
+              <sld:CssParameter name="fill">#5c4d1f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#463332</sld:CssParameter>
+              <sld:CssParameter name="stroke">#403515</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1422,12 +1422,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#49022c</sld:CssParameter>
+              <sld:CssParameter name="fill">#663107</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#33011e</sld:CssParameter>
+              <sld:CssParameter name="stroke">#472204</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1441,12 +1441,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#573068</sld:CssParameter>
+              <sld:CssParameter name="fill">#1c4825</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#3c2148</sld:CssParameter>
+              <sld:CssParameter name="stroke">#133219</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1460,12 +1460,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#341e09</sld:CssParameter>
+              <sld:CssParameter name="fill">#13527c</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#241506</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0d3956</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1479,12 +1479,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#003438</sld:CssParameter>
+              <sld:CssParameter name="fill">#6c1114</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#002427</sld:CssParameter>
+              <sld:CssParameter name="stroke">#4b0b0e</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1498,12 +1498,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#345e5f</sld:CssParameter>
+              <sld:CssParameter name="fill">#7e1e79</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#244142</sld:CssParameter>
+              <sld:CssParameter name="stroke">#581554</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1517,12 +1517,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#1e4553</sld:CssParameter>
+              <sld:CssParameter name="fill">#592f2a</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#15303a</sld:CssParameter>
+              <sld:CssParameter name="stroke">#3e201d</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1536,12 +1536,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#5d1c27</sld:CssParameter>
+              <sld:CssParameter name="fill">#562946</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#41131b</sld:CssParameter>
+              <sld:CssParameter name="stroke">#3c1c31</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1555,12 +1555,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#104152</sld:CssParameter>
+              <sld:CssParameter name="fill">#650a4b</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#0b2d39</sld:CssParameter>
+              <sld:CssParameter name="stroke">#460734</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1574,12 +1574,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#494a29</sld:CssParameter>
+              <sld:CssParameter name="fill">#6d5676</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#33331c</sld:CssParameter>
+              <sld:CssParameter name="stroke">#4c3c52</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1593,12 +1593,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#727b52</sld:CssParameter>
+              <sld:CssParameter name="fill">#324d6a</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#4f5639</sld:CssParameter>
+              <sld:CssParameter name="stroke">#23354a</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1612,12 +1612,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#104508</sld:CssParameter>
+              <sld:CssParameter name="fill">#147f67</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#0b3005</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0e5848</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1631,12 +1631,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#573468</sld:CssParameter>
+              <sld:CssParameter name="fill">#226016</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#3c2448</sld:CssParameter>
+              <sld:CssParameter name="stroke">#17430f</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1650,12 +1650,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#1b7e57</sld:CssParameter>
+              <sld:CssParameter name="fill">#365e12</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#12583c</sld:CssParameter>
+              <sld:CssParameter name="stroke">#25410c</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1669,12 +1669,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#630f0f</sld:CssParameter>
+              <sld:CssParameter name="fill">#4b3415</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#450a0a</sld:CssParameter>
+              <sld:CssParameter name="stroke">#34240e</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1688,12 +1688,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#766d3a</sld:CssParameter>
+              <sld:CssParameter name="fill">#0d1a74</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#524c28</sld:CssParameter>
+              <sld:CssParameter name="stroke">#091251</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1707,12 +1707,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#755a6f</sld:CssParameter>
+              <sld:CssParameter name="fill">#7a1e24</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#513e4d</sld:CssParameter>
+              <sld:CssParameter name="stroke">#551519</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1726,12 +1726,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#19684a</sld:CssParameter>
+              <sld:CssParameter name="fill">#3f706e</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#114833</sld:CssParameter>
+              <sld:CssParameter name="stroke">#2c4e4d</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1745,12 +1745,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#3b0273</sld:CssParameter>
+              <sld:CssParameter name="fill">#2a0e12</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#290150</sld:CssParameter>
+              <sld:CssParameter name="stroke">#1d090c</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1764,12 +1764,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#4b042a</sld:CssParameter>
+              <sld:CssParameter name="fill">#2e7815</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#34021d</sld:CssParameter>
+              <sld:CssParameter name="stroke">#20540e</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1783,12 +1783,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#7b1501</sld:CssParameter>
+              <sld:CssParameter name="fill">#2f470d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#560e00</sld:CssParameter>
+              <sld:CssParameter name="stroke">#203109</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1802,12 +1802,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#276650</sld:CssParameter>
+              <sld:CssParameter name="fill">#367d01</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#1b4738</sld:CssParameter>
+              <sld:CssParameter name="stroke">#255700</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1821,12 +1821,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#5c2742</sld:CssParameter>
+              <sld:CssParameter name="fill">#113132</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#401b2e</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0b2223</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1840,12 +1840,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#3a2058</sld:CssParameter>
+              <sld:CssParameter name="fill">#4b4428</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#28163d</sld:CssParameter>
+              <sld:CssParameter name="stroke">#342f1c</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1859,12 +1859,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#015608</sld:CssParameter>
+              <sld:CssParameter name="fill">#6b585b</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#003c05</sld:CssParameter>
+              <sld:CssParameter name="stroke">#4a3d3f</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1878,12 +1878,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#040477</sld:CssParameter>
+              <sld:CssParameter name="fill">#13296c</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#020253</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0d1c4b</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1897,12 +1897,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#420279</sld:CssParameter>
+              <sld:CssParameter name="fill">#2f7551</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#2e0154</sld:CssParameter>
+              <sld:CssParameter name="stroke">#205138</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1916,12 +1916,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#62651e</sld:CssParameter>
+              <sld:CssParameter name="fill">#261c76</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#444615</sld:CssParameter>
+              <sld:CssParameter name="stroke">#1a1352</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1935,12 +1935,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#794c0d</sld:CssParameter>
+              <sld:CssParameter name="fill">#562c3f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#543509</sld:CssParameter>
+              <sld:CssParameter name="stroke">#3c1e2c</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1954,12 +1954,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#163b64</sld:CssParameter>
+              <sld:CssParameter name="fill">#227553</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#0f2946</sld:CssParameter>
+              <sld:CssParameter name="stroke">#17513a</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1973,12 +1973,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#740817</sld:CssParameter>
+              <sld:CssParameter name="fill">#282335</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#510510</sld:CssParameter>
+              <sld:CssParameter name="stroke">#1c1825</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -1992,12 +1992,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#28610c</sld:CssParameter>
+              <sld:CssParameter name="fill">#417650</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#1c4308</sld:CssParameter>
+              <sld:CssParameter name="stroke">#2d5238</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2011,12 +2011,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#776220</sld:CssParameter>
+              <sld:CssParameter name="fill">#0e7925</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#534416</sld:CssParameter>
+              <sld:CssParameter name="stroke">#095419</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2030,12 +2030,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#04486e</sld:CssParameter>
+              <sld:CssParameter name="fill">#0f2922</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#02324d</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0a1c17</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2049,12 +2049,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#064c0e</sld:CssParameter>
+              <sld:CssParameter name="fill">#271863</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#043509</sld:CssParameter>
+              <sld:CssParameter name="stroke">#1b1045</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2068,12 +2068,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#096920</sld:CssParameter>
+              <sld:CssParameter name="fill">#543f11</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#064916</sld:CssParameter>
+              <sld:CssParameter name="stroke">#3a2c0b</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2087,12 +2087,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#033309</sld:CssParameter>
+              <sld:CssParameter name="fill">#562a70</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#022306</sld:CssParameter>
+              <sld:CssParameter name="stroke">#3c1d4e</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2106,12 +2106,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#63701a</sld:CssParameter>
+              <sld:CssParameter name="fill">#587d20</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#454e12</sld:CssParameter>
+              <sld:CssParameter name="stroke">#3d5716</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2125,12 +2125,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#412065</sld:CssParameter>
+              <sld:CssParameter name="fill">#2a0b56</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#2d1646</sld:CssParameter>
+              <sld:CssParameter name="stroke">#1d073c</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2144,12 +2144,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#3b3336</sld:CssParameter>
+              <sld:CssParameter name="fill">#4e4922</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#292325</sld:CssParameter>
+              <sld:CssParameter name="stroke">#363317</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2163,12 +2163,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#783201</sld:CssParameter>
+              <sld:CssParameter name="fill">#035d44</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#542300</sld:CssParameter>
+              <sld:CssParameter name="stroke">#02412f</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2182,12 +2182,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#5e141b</sld:CssParameter>
+              <sld:CssParameter name="fill">#10123f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#410e12</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0b0c2c</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2201,12 +2201,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#084e65</sld:CssParameter>
+              <sld:CssParameter name="fill">#474c4c</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#053646</sld:CssParameter>
+              <sld:CssParameter name="stroke">#313535</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2220,12 +2220,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#243e41</sld:CssParameter>
+              <sld:CssParameter name="fill">#18290f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#192b2d</sld:CssParameter>
+              <sld:CssParameter name="stroke">#101c0a</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2239,12 +2239,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#782673</sld:CssParameter>
+              <sld:CssParameter name="fill">#015a5b</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#541a50</sld:CssParameter>
+              <sld:CssParameter name="stroke">#003e3f</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2258,12 +2258,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#015a23</sld:CssParameter>
+              <sld:CssParameter name="fill">#266d2e</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#003e18</sld:CssParameter>
+              <sld:CssParameter name="stroke">#1a4c20</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2277,12 +2277,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#0e0f7c</sld:CssParameter>
+              <sld:CssParameter name="fill">#417939</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#090a56</sld:CssParameter>
+              <sld:CssParameter name="stroke">#2d5427</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2296,12 +2296,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#0c4847</sld:CssParameter>
+              <sld:CssParameter name="fill">#711754</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#083231</sld:CssParameter>
+              <sld:CssParameter name="stroke">#4f103a</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2315,12 +2315,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#52661e</sld:CssParameter>
+              <sld:CssParameter name="fill">#392e19</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#394715</sld:CssParameter>
+              <sld:CssParameter name="stroke">#272011</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2334,12 +2334,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#18481b</sld:CssParameter>
+              <sld:CssParameter name="fill">#5c2b2f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#103212</sld:CssParameter>
+              <sld:CssParameter name="stroke">#401e20</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2353,12 +2353,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#251f22</sld:CssParameter>
+              <sld:CssParameter name="fill">#5f7828</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#191517</sld:CssParameter>
+              <sld:CssParameter name="stroke">#42541c</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2372,12 +2372,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#133330</sld:CssParameter>
+              <sld:CssParameter name="fill">#607a1a</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#0d2321</sld:CssParameter>
+              <sld:CssParameter name="stroke">#435512</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2391,12 +2391,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#0b0c65</sld:CssParameter>
+              <sld:CssParameter name="fill">#3d7666</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#070846</sld:CssParameter>
+              <sld:CssParameter name="stroke">#2a5247</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2410,12 +2410,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#0d6b77</sld:CssParameter>
+              <sld:CssParameter name="fill">#11556f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#094a53</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0b3b4d</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2429,12 +2429,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#266711</sld:CssParameter>
+              <sld:CssParameter name="fill">#147e4c</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#1a480b</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0e5835</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2448,12 +2448,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#121c73</sld:CssParameter>
+              <sld:CssParameter name="fill">#1e5c46</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#0c1350</sld:CssParameter>
+              <sld:CssParameter name="stroke">#154031</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2467,12 +2467,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#7e0961</sld:CssParameter>
+              <sld:CssParameter name="fill">#7d2c39</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#580643</sld:CssParameter>
+              <sld:CssParameter name="stroke">#571e27</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2486,12 +2486,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#6e621b</sld:CssParameter>
+              <sld:CssParameter name="fill">#147420</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#4d4412</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0e5116</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2505,12 +2505,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#684444</sld:CssParameter>
+              <sld:CssParameter name="fill">#2f4b3d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#482f2f</sld:CssParameter>
+              <sld:CssParameter name="stroke">#20342a</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2524,12 +2524,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#1a6d65</sld:CssParameter>
+              <sld:CssParameter name="fill">#084638</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#124c46</sld:CssParameter>
+              <sld:CssParameter name="stroke">#053127</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2543,12 +2543,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#46386b</sld:CssParameter>
+              <sld:CssParameter name="fill">#4e7a7d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#31274a</sld:CssParameter>
+              <sld:CssParameter name="stroke">#365557</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2562,12 +2562,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#71354f</sld:CssParameter>
+              <sld:CssParameter name="fill">#491644</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#4f2537</sld:CssParameter>
+              <sld:CssParameter name="stroke">#330f2f</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2581,12 +2581,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#4e621a</sld:CssParameter>
+              <sld:CssParameter name="fill">#4e5a62</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#364412</sld:CssParameter>
+              <sld:CssParameter name="stroke">#363e44</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2600,12 +2600,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#5b3529</sld:CssParameter>
+              <sld:CssParameter name="fill">#561037</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#3f251c</sld:CssParameter>
+              <sld:CssParameter name="stroke">#3c0b26</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2619,12 +2619,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#0e722a</sld:CssParameter>
+              <sld:CssParameter name="fill">#210f46</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#094f1d</sld:CssParameter>
+              <sld:CssParameter name="stroke">#170a31</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2638,12 +2638,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#237714</sld:CssParameter>
+              <sld:CssParameter name="fill">#284622</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#18530e</sld:CssParameter>
+              <sld:CssParameter name="stroke">#1c3117</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2657,12 +2657,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#484c41</sld:CssParameter>
+              <sld:CssParameter name="fill">#167710</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#32352d</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0f530b</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2676,12 +2676,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#64266e</sld:CssParameter>
+              <sld:CssParameter name="fill">#4c0a78</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#461a4d</sld:CssParameter>
+              <sld:CssParameter name="stroke">#350754</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2695,12 +2695,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#2b635a</sld:CssParameter>
+              <sld:CssParameter name="fill">#4a2c1b</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#1e453e</sld:CssParameter>
+              <sld:CssParameter name="stroke">#331e12</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2714,12 +2714,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#142442</sld:CssParameter>
+              <sld:CssParameter name="fill">#643540</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#0e192e</sld:CssParameter>
+              <sld:CssParameter name="stroke">#46252c</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2733,12 +2733,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#174172</sld:CssParameter>
+              <sld:CssParameter name="fill">#051c6e</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#102d4f</sld:CssParameter>
+              <sld:CssParameter name="stroke">#03134d</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2752,12 +2752,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#7e2c3b</sld:CssParameter>
+              <sld:CssParameter name="fill">#10382f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#581e29</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0b2720</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2771,12 +2771,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#3b1377</sld:CssParameter>
+              <sld:CssParameter name="fill">#11701d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#290d53</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0b4e14</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2790,12 +2790,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#6e2231</sld:CssParameter>
+              <sld:CssParameter name="fill">#377d6b</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#4d1722</sld:CssParameter>
+              <sld:CssParameter name="stroke">#26574a</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2809,12 +2809,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#6b6a1b</sld:CssParameter>
+              <sld:CssParameter name="fill">#2b7958</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#4a4a12</sld:CssParameter>
+              <sld:CssParameter name="stroke">#1e543d</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2828,12 +2828,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#28110a</sld:CssParameter>
+              <sld:CssParameter name="fill">#7e2a5d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#1c0b07</sld:CssParameter>
+              <sld:CssParameter name="stroke">#581d41</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2847,12 +2847,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#6b5108</sld:CssParameter>
+              <sld:CssParameter name="fill">#0a296e</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#4a3805</sld:CssParameter>
+              <sld:CssParameter name="stroke">#071c4d</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2866,12 +2866,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#381d79</sld:CssParameter>
+              <sld:CssParameter name="fill">#28033b</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#271454</sld:CssParameter>
+              <sld:CssParameter name="stroke">#1c0229</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2885,12 +2885,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#294e24</sld:CssParameter>
+              <sld:CssParameter name="fill">#177a73</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#1c3619</sld:CssParameter>
+              <sld:CssParameter name="stroke">#105550</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2904,12 +2904,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#294954</sld:CssParameter>
+              <sld:CssParameter name="fill">#5d0d60</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#1c333a</sld:CssParameter>
+              <sld:CssParameter name="stroke">#410943</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2923,12 +2923,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#46102b</sld:CssParameter>
+              <sld:CssParameter name="fill">#717b05</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#310b1e</sld:CssParameter>
+              <sld:CssParameter name="stroke">#4f5603</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2942,12 +2942,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#596715</sld:CssParameter>
+              <sld:CssParameter name="fill">#274e0e</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#3e480e</sld:CssParameter>
+              <sld:CssParameter name="stroke">#1b3609</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2961,12 +2961,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#6f142b</sld:CssParameter>
+              <sld:CssParameter name="fill">#656764</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#4d0e1e</sld:CssParameter>
+              <sld:CssParameter name="stroke">#464846</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2980,12 +2980,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#3f2736</sld:CssParameter>
+              <sld:CssParameter name="fill">#230e63</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#2c1b25</sld:CssParameter>
+              <sld:CssParameter name="stroke">#180945</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -2999,12 +2999,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#2f6a37</sld:CssParameter>
+              <sld:CssParameter name="fill">#6b2b19</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#204a26</sld:CssParameter>
+              <sld:CssParameter name="stroke">#4a1e11</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -3018,12 +3018,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#062b5e</sld:CssParameter>
+              <sld:CssParameter name="fill">#6f5662</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#041e41</sld:CssParameter>
+              <sld:CssParameter name="stroke">#4d3c44</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -3037,12 +3037,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#526b0f</sld:CssParameter>
+              <sld:CssParameter name="fill">#3c3f33</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#394a0a</sld:CssParameter>
+              <sld:CssParameter name="stroke">#2a2c23</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -3056,12 +3056,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#010467</sld:CssParameter>
+              <sld:CssParameter name="fill">#577e2a</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#000248</sld:CssParameter>
+              <sld:CssParameter name="stroke">#3c581d</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -3075,12 +3075,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#26453c</sld:CssParameter>
+              <sld:CssParameter name="fill">#317576</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#1a302a</sld:CssParameter>
+              <sld:CssParameter name="stroke">#225152</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -3094,12 +3094,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#677e2f</sld:CssParameter>
+              <sld:CssParameter name="fill">#162722</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#485820</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0f1b17</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -3113,12 +3113,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#476f76</sld:CssParameter>
+              <sld:CssParameter name="fill">#02032a</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#314d52</sld:CssParameter>
+              <sld:CssParameter name="stroke">#01021d</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -3132,12 +3132,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#194402</sld:CssParameter>
+              <sld:CssParameter name="fill">#5f666e</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#112f01</sld:CssParameter>
+              <sld:CssParameter name="stroke">#42474d</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -3151,12 +3151,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#1c475f</sld:CssParameter>
+              <sld:CssParameter name="fill">#5f0c01</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#133142</sld:CssParameter>
+              <sld:CssParameter name="stroke">#420800</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -3170,12 +3170,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#56502b</sld:CssParameter>
+              <sld:CssParameter name="fill">#5b3260</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#3c381e</sld:CssParameter>
+              <sld:CssParameter name="stroke">#3f2343</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -3189,12 +3189,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#437a05</sld:CssParameter>
+              <sld:CssParameter name="fill">#776c5c</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#2e5503</sld:CssParameter>
+              <sld:CssParameter name="stroke">#534b40</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -3208,12 +3208,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#11721d</sld:CssParameter>
+              <sld:CssParameter name="fill">#283622</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#0b4f14</sld:CssParameter>
+              <sld:CssParameter name="stroke">#1c2517</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -3227,12 +3227,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#1d1410</sld:CssParameter>
+              <sld:CssParameter name="fill">#5f0772</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#140e0b</sld:CssParameter>
+              <sld:CssParameter name="stroke">#42044f</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -3246,12 +3246,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#033074</sld:CssParameter>
+              <sld:CssParameter name="fill">#044d15</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#022151</sld:CssParameter>
+              <sld:CssParameter name="stroke">#02350e</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -3265,12 +3265,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#7e0707</sld:CssParameter>
+              <sld:CssParameter name="fill">#480050</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#580404</sld:CssParameter>
+              <sld:CssParameter name="stroke">#320038</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -3284,12 +3284,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#1d5d5d</sld:CssParameter>
+              <sld:CssParameter name="fill">#1b680c</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#144141</sld:CssParameter>
+              <sld:CssParameter name="stroke">#124808</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -3303,12 +3303,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#4e5c42</sld:CssParameter>
+              <sld:CssParameter name="fill">#200a1f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#36402e</sld:CssParameter>
+              <sld:CssParameter name="stroke">#160715</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -3322,12 +3322,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#26053e</sld:CssParameter>
+              <sld:CssParameter name="fill">#313d67</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#1a032b</sld:CssParameter>
+              <sld:CssParameter name="stroke">#222a48</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -3341,12 +3341,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#7f0c3f</sld:CssParameter>
+              <sld:CssParameter name="fill">#157a6c</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#58082c</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0e554b</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
@@ -3360,12 +3360,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#6c1a61</sld:CssParameter>
+              <sld:CssParameter name="fill">#073b46</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#4b1243</sld:CssParameter>
+              <sld:CssParameter name="stroke">#042931</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
