@@ -1351,19 +1351,19 @@ No parameters
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">shapefiles</span> <span class="gray">--params</span> <span class="silver">target/</span><br>
-<span class="green">null</span><br></p>
+<span class="green">Workspace shapefiles opened!</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer copy</strong> <span class="gray">--input-name</span> <span class="silver">states_gpkg</span> <span class="gray">--output-workspace</span> <span class="silver">shapefiles</span> <span class="gray">--output-name</span> <span class="silver">states</span><br>
-<span class="green">Unable to find Workspace shapefiles</span><br></p>
+<span class="green">Done!</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer count</strong> <span class="gray">--name</span> <span class="silver">states</span><br>
-<span class="green">Unable to find Layer states</span><br></p>
+<span class="green">52</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace close</strong> <span class="gray">--name</span> <span class="silver">shapefiles</span><br>
-<span class="green">Unable to find Workspace shapefiles</span><br></p>
+<span class="green">Workspace shapefiles closed!</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace close</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span><br>
@@ -1719,16 +1719,16 @@ No parameters
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">points</span><br>
-<span class="green">Feature (fid-1ac0730b_179c9f7365d_-73a0)</span><br>
-<span class="green">----------------------------------------</span><br>
+<span class="green">Feature (fid&#8212;&#8203;2712d0c2_17bb1e24dae_-6512)</span><br>
+<span class="green">-----------------------------------------</span><br>
 <span class="green">the_geom = POINT (-122.333056 47.609722)</span><br>
 <span class="green">fid = 1</span><br>
 <span class="green">name = Seattle</span><br>
 <span class="green">state = WA</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid-1ac0730b_179c9f7365d_-739e)</span><br>
-<span class="green">----------------------------------------</span><br>
+<p><span class="green">Feature (fid&#8212;&#8203;2712d0c2_17bb1e24dae_-6510)</span><br>
+<span class="green">-----------------------------------------</span><br>
 <span class="green">the_geom = POINT (-122.459444 47.241389)</span><br>
 <span class="green">fid = 2</span><br>
 <span class="green">name = Tacoma</span><br>
@@ -1920,8 +1920,8 @@ No parameters
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">states_area</span> <span class="gray">--filter</span> <span class="silver">"NAME_1='North</span> <span class="silver">Dakota'"</span> <span class="gray">--field</span> <span class="silver">"NAME_0,AREA"</span><br>
-<span class="green">Feature (fid-1ac0730b_179c9f7365d_-7399)</span><br>
-<span class="green">----------------------------------------</span><br>
+<span class="green">Feature (fid&#8212;&#8203;2712d0c2_17bb1e24dae_-650b)</span><br>
+<span class="green">-----------------------------------------</span><br>
 <span class="green">NAME_0 = United States</span><br>
 <span class="green">AREA = 21.804544852979944</span><br></p>
 </div>
@@ -2105,8 +2105,8 @@ No parameters
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">places_id</span> <span class="gray">--filter</span> <span class="silver">"NAME='Seattle'"</span> <span class="gray">--field</span> <span class="silver">"NAME,ID"</span><br>
-<span class="green">Feature (fid-1ac0730b_179c9f7365d_-74de)</span><br>
-<span class="green">----------------------------------------</span><br>
+<span class="green">Feature (fid&#8212;&#8203;2712d0c2_17bb1e24dae_-6650)</span><br>
+<span class="green">-----------------------------------------</span><br>
 <span class="green">NAME = Seattle</span><br>
 <span class="green">ID = 10</span><br></p>
 </div>
@@ -2291,8 +2291,8 @@ No parameters
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">places_xy</span> <span class="gray">--filter</span> <span class="silver">"NAME='Seattle'"</span> <span class="gray">--field</span> <span class="silver">"NAME,X,Y"</span><br>
-<span class="green">Feature (fid-1ac0730b_179c9f7365d_-5bd6)</span><br>
-<span class="green">----------------------------------------</span><br>
+<span class="green">Feature (fid&#8212;&#8203;2712d0c2_17bb1e24dae_-4d06)</span><br>
+<span class="green">-----------------------------------------</span><br>
 <span class="green">NAME = Seattle</span><br>
 <span class="green">X = -122.34193084586849</span><br>
 <span class="green">Y = 47.57194791253073</span><br></p>
@@ -3160,23 +3160,23 @@ No parameters
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">shapefiles</span> <span class="gray">--params</span> <span class="silver">examples/states/states.shp</span><br>
-<span class="green">null</span><br></p>
+<span class="green">Workspace shapefiles opened!</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">shapefiles</span> <span class="gray">--layer</span> <span class="silver">states</span> <span class="gray">--name</span> <span class="silver">states</span><br>
-<span class="green">Unable to find Workspace shapefiles</span><br></p>
+<span class="green">Opened Workspace shapefiles Layer states as states</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer dissolve</strong> <span class="gray">--input-name</span> <span class="silver">states</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">regions</span> <span class="gray">--field</span> <span class="silver">SUB_REGION</span><br>
-<span class="green">null</span><br></p>
+<span class="green">Done dissolving states to regions by SUB_REGION!</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector uniquevalues</strong> <span class="gray">--layer</span> <span class="silver">regions</span> <span class="gray">--field</span> <span class="silver">SUB_REGION</span> <span class="silver"> <span class="gray">--colors</span> <span class="silver">MutedTerrain</span> <span class="gray">--file</span> [silver]</span> <span class="silver">examples/regions.sld</span><br>
-<span class="green">Unable to find Layer regions</span><br></p>
+<span class="green">Unique Values Vector Style for regions&#8217;s SUB_REGION Field written to /home/runner/work/geo-shell/geo-shell/examples/regions.sld!</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">regions</span> <span class="gray">--style</span> <span class="silver">examples/regions.sld</span><br>
-<span class="green">Unable to find Layer regions</span><br></p>
+<span class="green">Style /home/runner/work/geo-shell/geo-shell/examples/regions.sld set on regions</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">examples/naturalearth.gpkg</span><br>
@@ -4695,35 +4695,35 @@ No parameters
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">rivers</span> <span class="gray">--params</span> <span class="silver">src/test/resources/rivers/ne_110m_rivers_lake_centerlines.shp</span><br>
-<span class="green">null</span><br></p>
+<span class="green">Workspace rivers opened!</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">rivers</span> <span class="gray">--layer</span> <span class="silver">ne_110m_rivers_lake_centerlines</span> <span class="gray">--name</span> <span class="silver">rivers</span><br>
-<span class="green">Unable to find Workspace rivers</span><br></p>
+<span class="green">Opened Workspace rivers Layer ne_110m_rivers_lake_centerlines as rivers</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer copy</strong> <span class="gray">--input-name</span> <span class="silver">rivers</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">mississippi</span> <span class="silver"># [gray]</span>--filter# <span class="silver">"name='Mississippi'"</span><br>
-<span class="green">Unable to find Layer rivers</span><br></p>
+<span class="green">Done!</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">mississippi</span> <span class="gray">--color</span> <span class="silver">blue</span> <span class="gray">--file</span> <span class="silver">examples/river.sld</span><br>
-<span class="green">Unable to find Layer mississippi</span><br></p>
+<span class="green">Default Vector Style for mississippi written to /home/runner/work/geo-shell/geo-shell/examples/river.sld!</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">mississippi</span> <span class="gray">--style</span> <span class="silver">examples/river.sld</span><br>
-<span class="green">Unable to find Layer mississippi</span><br></p>
+<span class="green">Style /home/runner/work/geo-shell/geo-shell/examples/river.sld set on mississippi</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer points along lines</strong> <span class="gray">--input-name</span> <span class="silver">mississippi</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">points</span> <span class="gray">--distance</span> <span class="silver">2.0</span><br>
-<span class="green">Unable to find Layer mississippi</span><br></p>
+<span class="green">Done placing points along mississippi every 2.0 to create points!</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">points</span> <span class="gray">--color</span> <span class="silver">green</span> <span class="gray">--file</span> <span class="silver">examples/points.sld</span><br>
-<span class="green">Unable to find Layer points</span><br></p>
+<span class="green">Default Vector Style for points written to /home/runner/work/geo-shell/geo-shell/examples/points.sld!</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">points</span> <span class="gray">--style</span> <span class="silver">examples/points.sld</span><br>
-<span class="green">Unable to find Layer points</span><br></p>
+<span class="green">Style /home/runner/work/geo-shell/geo-shell/examples/points.sld set on points</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">examples/naturalearth.gpkg</span><br>
@@ -4842,39 +4842,39 @@ No parameters
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">rivers</span> <span class="gray">--params</span> <span class="silver">src/test/resources/rivers/ne_110m_rivers_lake_centerlines.shp</span><br>
-<span class="green">null</span><br></p>
+<span class="green">Workspace rivers opened!</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">rivers</span> <span class="gray">--layer</span> <span class="silver">ne_110m_rivers_lake_centerlines</span> <span class="gray">--name</span> <span class="silver">rivers</span><br>
-<span class="green">Unable to find Workspace rivers</span><br></p>
+<span class="green">Opened Workspace rivers Layer ne_110m_rivers_lake_centerlines as rivers</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer copy</strong> <span class="gray">--input-name</span> <span class="silver">rivers</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">mississippi</span> <span class="silver"># [gray]</span>--filter# <span class="silver">"name='Mississippi'"</span><br>
-<span class="green">Unable to find Layer rivers</span><br></p>
+<span class="green">Done!</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer simplify</strong> <span class="gray">--input-name</span> <span class="silver">mississippi</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">simplified</span> <span class="gray">--distance</span> <span class="silver">1.0</span><br>
-<span class="green">Unable to find Layer mississippi</span><br></p>
+<span class="green">Done!</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">simplified</span> <span class="gray">--color</span> <span class="silver">blue</span> <span class="gray">--file</span> <span class="silver">examples/river.sld</span><br>
-<span class="green">Unable to find Layer simplified</span><br></p>
+<span class="green">Default Vector Style for simplified written to /home/runner/work/geo-shell/geo-shell/examples/river.sld!</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">simplified</span> <span class="gray">--style</span> <span class="silver">examples/river.sld</span><br>
-<span class="green">Unable to find Layer simplified</span><br></p>
+<span class="green">Style /home/runner/work/geo-shell/geo-shell/examples/river.sld set on simplified</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer coordinates</strong> <span class="gray">--input-name</span> <span class="silver">simplified</span> <span class="gray">--output-workspace</span> <span class="silver">layers</span> <span class="gray">--output-name</span> <span class="silver">points</span><br>
-<span class="green">Unable to find Layer simplified</span><br></p>
+<span class="green">Done!</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">style vector default</strong> <span class="gray">--layer</span> <span class="silver">points</span> <span class="gray">--color</span> <span class="silver">green</span> <span class="gray">--file</span> <span class="silver">examples/points.sld</span><br>
-<span class="green">Unable to find Layer points</span><br></p>
+<span class="green">Default Vector Style for points written to /home/runner/work/geo-shell/geo-shell/examples/points.sld!</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">points</span> <span class="gray">--style</span> <span class="silver">examples/points.sld</span><br>
-<span class="green">Unable to find Layer points</span><br></p>
+<span class="green">Style /home/runner/work/geo-shell/geo-shell/examples/points.sld set on points</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">examples/naturalearth.gpkg</span><br>
@@ -6907,7 +6907,7 @@ No parameters
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-06-01 23:42:18 UTC
+Last updated 2021-09-04 17:34:43 UTC
 </div>
 </div>
 </body>

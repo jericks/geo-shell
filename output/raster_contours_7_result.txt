@@ -1,1 +1,1 @@
-[green]#Unable to find Layer contours# +
+[green]#Style /home/runner/work/geo-shell/geo-shell/examples/contours.sld set on contours# +

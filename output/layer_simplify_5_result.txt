@@ -1,1 +1,1 @@
-[green]#Unable to find Layer simplified# +
+[green]#Default Vector Style for simplified written to /home/runner/work/geo-shell/geo-shell/examples/river.sld!# +

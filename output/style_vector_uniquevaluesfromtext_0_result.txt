@@ -1,1 +1,1 @@
-[green]#null# +
+[green]#Workspace mars opened!# +

@@ -1,1 +1,1 @@
-[green]#Unable to find Layer mars# +
+[green]#Style /home/runner/work/geo-shell/geo-shell/examples/style_vector_uniquevaluesfromtext.sld set on mars# +

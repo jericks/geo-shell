@@ -1,1 +1,1 @@
-[green]#Unable to find Layer mississippi# +
+[green]#Done placing points along mississippi every 2.0 to create points!# +

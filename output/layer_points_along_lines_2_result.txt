@@ -1,1 +1,1 @@
-[green]#Unable to find Workspace rivers# +
+[green]#Opened Workspace rivers Layer ne_110m_rivers_lake_centerlines as rivers# +

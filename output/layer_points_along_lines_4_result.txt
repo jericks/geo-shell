@@ -1,1 +1,1 @@
-[green]#Unable to find Layer mississippi# +
+[green]#Default Vector Style for mississippi written to /home/runner/work/geo-shell/geo-shell/examples/river.sld!# +
