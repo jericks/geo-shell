@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer fix* [gray]#--input-name# [silver]#lines# [gray]#--output-workspace# [silver]#mem# [gray]#--output-name# [silver]#lines_fixed# +

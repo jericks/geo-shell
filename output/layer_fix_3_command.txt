@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer add* [gray]#--name# [silver]#lines# [gray]#--values# [silver]#"the_geom=LINESTRING# [silver]#(1# [silver]#1,# [silver]#2# [silver]#2,# [silver]#2# [silver]#2,# [silver]#2# [silver]#2,# [silver]#3# [silver]#3)|fid=2|name=Location# [silver]#2"# +

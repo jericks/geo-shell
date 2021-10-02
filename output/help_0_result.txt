@@ -34,6 +34,7 @@
 [green]#* layer extent - Calculate the extent of the input Layer and save it to the output Layer.# +
 [green]#* layer extents - Calculate the extents of each Feature in the input Layer and save them to the output Layer.# +
 [green]#* layer features - Display the Features of a Layer.# +
+[green]#* layer fix - Fix the geometries of the features of the input Layer and save them to the output Layer# +
 [green]#* layer graticule hexagon - Create a hexagon graticule.# +
 [green]#* layer graticule oval - Create a oval graticule.# +
 [green]#* layer graticule rectangle - Create a rectangle graticule.# +

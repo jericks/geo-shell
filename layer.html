@@ -557,6 +557,7 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#add-id-field">Add ID Field</a></li>
 <li><a href="#add-xy-fields">Add XY Fields</a></li>
 <li><a href="#validity">Validity</a></li>
+<li><a href="#fix">Fix</a></li>
 </ul>
 </li>
 <li><a href="#geoprocessing">Geoprocessing</a>
@@ -1719,7 +1720,7 @@ No parameters
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">points</span><br>
-<span class="green">Feature (fid&#8212;&#8203;2712d0c2_17bb1e24dae_-6512)</span><br>
+<span class="green">Feature (fid&#8212;&#8203;3141f5b5_17c420eabe6_-650c)</span><br>
 <span class="green">-----------------------------------------</span><br>
 <span class="green">the_geom = POINT (-122.333056 47.609722)</span><br>
 <span class="green">fid = 1</span><br>
@@ -1727,7 +1728,7 @@ No parameters
 <span class="green">state = WA</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;2712d0c2_17bb1e24dae_-6510)</span><br>
+<p><span class="green">Feature (fid&#8212;&#8203;3141f5b5_17c420eabe6_-650a)</span><br>
 <span class="green">-----------------------------------------</span><br>
 <span class="green">the_geom = POINT (-122.459444 47.241389)</span><br>
 <span class="green">fid = 2</span><br>
@@ -1920,7 +1921,7 @@ No parameters
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">states_area</span> <span class="gray">--filter</span> <span class="silver">"NAME_1='North</span> <span class="silver">Dakota'"</span> <span class="gray">--field</span> <span class="silver">"NAME_0,AREA"</span><br>
-<span class="green">Feature (fid&#8212;&#8203;2712d0c2_17bb1e24dae_-650b)</span><br>
+<span class="green">Feature (fid&#8212;&#8203;3141f5b5_17c420eabe6_-6505)</span><br>
 <span class="green">-----------------------------------------</span><br>
 <span class="green">NAME_0 = United States</span><br>
 <span class="green">AREA = 21.804544852979944</span><br></p>
@@ -2105,7 +2106,7 @@ No parameters
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">places_id</span> <span class="gray">--filter</span> <span class="silver">"NAME='Seattle'"</span> <span class="gray">--field</span> <span class="silver">"NAME,ID"</span><br>
-<span class="green">Feature (fid&#8212;&#8203;2712d0c2_17bb1e24dae_-6650)</span><br>
+<span class="green">Feature (fid&#8212;&#8203;3141f5b5_17c420eabe6_-664a)</span><br>
 <span class="green">-----------------------------------------</span><br>
 <span class="green">NAME = Seattle</span><br>
 <span class="green">ID = 10</span><br></p>
@@ -2291,7 +2292,7 @@ No parameters
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">places_xy</span> <span class="gray">--filter</span> <span class="silver">"NAME='Seattle'"</span> <span class="gray">--field</span> <span class="silver">"NAME,X,Y"</span><br>
-<span class="green">Feature (fid&#8212;&#8203;2712d0c2_17bb1e24dae_-4d06)</span><br>
+<span class="green">Feature (fid&#8212;&#8203;3141f5b5_17c420eabe6_-4cfa)</span><br>
 <span class="green">-----------------------------------------</span><br>
 <span class="green">NAME = Seattle</span><br>
 <span class="green">X = -122.34193084586849</span><br>
@@ -2351,6 +2352,89 @@ No parameters
 <span class="green">Values                 Reason</span><br>
 <span class="green">---------------------  --------------------</span><br>
 <span class="green">invalid.1360815594529  Self-intersection</span><br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="fix"><a class="anchor" href="#fix"></a>Fix</h4>
+<div class="paragraph">
+<p>Fix the geometries of the features of the input Layer and save them to the output Layer</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer fix</strong> <span class="gray">--input-name</span> <span class="silver">lines</span> <span class="gray">--output-workspace</span> <span class="silver">mem</span> <span class="gray">--output-name</span> <span class="silver">lines_fixed</span><br></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">input-name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Layer name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">output-workspace</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The output Layer Workspace</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">output-name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The output Layer name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">mem</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace mem opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer create</strong> <span class="gray">--workspace</span> <span class="silver">mem</span> <span class="gray">--name</span> <span class="silver">lines</span> <span class="gray">--fields</span> <span class="silver">"the_geom=LineString</span> <span class="silver">EPSG:4326|fid=Int|name=String"</span><br>
+<span class="green">Created Layer lines!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer add</strong> <span class="gray">--name</span> <span class="silver">lines</span> <span class="gray">--values</span> <span class="silver">"the_geom=LINESTRING</span> <span class="silver">(0</span> <span class="silver">0,</span> <span class="silver">0</span> <span class="silver">0,</span> <span class="silver">0</span> <span class="silver">0,</span> <span class="silver">1</span> <span class="silver">1)|fid=1|name=Location</span> <span class="silver">1"</span><br>
+<span class="green">Added Feature to lines</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer add</strong> <span class="gray">--name</span> <span class="silver">lines</span> <span class="gray">--values</span> <span class="silver">"the_geom=LINESTRING</span> <span class="silver">(1</span> <span class="silver">1,</span> <span class="silver">2</span> <span class="silver">2,</span> <span class="silver">2</span> <span class="silver">2,</span> <span class="silver">2</span> <span class="silver">2,</span> <span class="silver">3</span> <span class="silver">3)|fid=2|name=Location</span> <span class="silver">2"</span><br>
+<span class="green">Added Feature to lines</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer fix</strong> <span class="gray">--input-name</span> <span class="silver">lines</span> <span class="gray">--output-workspace</span> <span class="silver">mem</span> <span class="gray">--output-name</span> <span class="silver">lines_fixed</span><br>
+<span class="green">Done!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">lines_fixed</span><br>
+<span class="green">Feature (fid&#8212;&#8203;3141f5b5_17c420eabe6_-64c1)</span><br>
+<span class="green">-----------------------------------------</span><br>
+<span class="green">the_geom = LINESTRING (0 0, 1 1)</span><br>
+<span class="green">fid = 1</span><br>
+<span class="green">name = Location 1</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="green">Feature (fid&#8212;&#8203;3141f5b5_17c420eabe6_-64c0)</span><br>
+<span class="green">-----------------------------------------</span><br>
+<span class="green">the_geom = LINESTRING (1 1, 2 2, 3 3)</span><br>
+<span class="green">fid = 2</span><br>
+<span class="green">name = Location 2</span><br></p>
 </div>
 </div>
 </div>
@@ -6907,7 +6991,7 @@ No parameters
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-09-04 17:34:43 UTC
+Last updated 2021-10-02 17:27:11 UTC
 </div>
 </div>
 </body>

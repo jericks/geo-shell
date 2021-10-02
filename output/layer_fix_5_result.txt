@@ -1,0 +1,12 @@
+
+[green]#Feature (fid--3141f5b5_17c420eabe6_-64c1)# +
+[green]#-----------------------------------------# +
+[green]#the_geom = LINESTRING (0 0, 1 1)# +
+[green]#fid = 1# +
+[green]#name = Location 1# +
+
+[green]#Feature (fid--3141f5b5_17c420eabe6_-64c0)# +
+[green]#-----------------------------------------# +
+[green]#the_geom = LINESTRING (1 1, 2 2, 3 3)# +
+[green]#fid = 2# +
+[green]#name = Location 2# +
