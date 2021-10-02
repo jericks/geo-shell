@@ -838,6 +838,23 @@ class LayerCommandsTest {
         }
     }
 
+    @Test void fix() {
+        Layer layer = new Property(new File(getClass().getClassLoader().getResource("fixable.properties").toURI()))
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        catalog.layers[new LayerName("lines")] = layer
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+        String result = cmds.fix(new LayerName("lines"), new WorkspaceName("mem"), "fixed_lines")
+        assertEquals "Done!", result
+        assertNotNull catalog.layers[new LayerName("fixed_lines")]
+        Layer outLayer = catalog.layers[new LayerName("fixed_lines")]
+        assertEquals layer.count, outLayer.count
+        assertEquals "LineString", outLayer.schema.geom.typ
+        (0..<layer.count).each { int i ->
+            assertTrue outLayer.features[i].geom.numPoints < layer.features[i].geom.numPoints
+        }
+    }
+
     @Test void delete() {
         Catalog catalog = new Catalog()
         catalog.workspaces[new WorkspaceName("mem")] = new Memory()

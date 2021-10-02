@@ -1140,6 +1140,17 @@ class LayerDocTest extends AbstractDocTest {
         copyFile(new File("examples/layer_union.png"), new File("src/main/docs/images"))
     }
 
+    @Test
+    void fix() {
+        run("layer_fix", [
+                'workspace open --name mem --params memory',
+                'layer create --workspace mem --name lines --fields "the_geom=LineString EPSG:4326|fid=Int|name=String"',
+                'layer add --name lines --values "the_geom=LINESTRING (0 0, 0 0, 0 0, 1 1)|fid=1|name=Location 1"',
+                'layer add --name lines --values "the_geom=LINESTRING (1 1, 2 2, 2 2, 2 2, 3 3)|fid=2|name=Location 2"',
+                'layer fix --input-name lines --output-workspace mem --output-name lines_fixed',
+                'layer features --name lines_fixed'
+        ])
+    }
 
 
 }

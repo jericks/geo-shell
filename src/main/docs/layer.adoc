@@ -480,6 +480,32 @@ include::output/layer_validity_1_result.txt[]
 include::output/layer_validity_2_command.txt[]
 include::output/layer_validity_2_result.txt[]
 
+==== Fix
+
+include::commands/layer_fix_description.txt[]
+
+include::output/layer_fix_4_command.txt[]
+
+include::commands/layer_fix.txt[]
+
+include::output/layer_fix_0_command.txt[]
+include::output/layer_fix_0_result.txt[]
+
+include::output/layer_fix_1_command.txt[]
+include::output/layer_fix_1_result.txt[]
+
+include::output/layer_fix_2_command.txt[]
+include::output/layer_fix_2_result.txt[]
+
+include::output/layer_fix_3_command.txt[]
+include::output/layer_fix_3_result.txt[]
+
+include::output/layer_fix_4_command.txt[]
+include::output/layer_fix_4_result.txt[]
+
+include::output/layer_fix_5_command.txt[]
+include::output/layer_fix_5_result.txt[]
+
 === Geoprocessing
 
 ==== Clip
