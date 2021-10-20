@@ -7,6 +7,7 @@ import geoscript.style.ColorMap
 import geoscript.style.Gradient
 import geoscript.style.RasterSymbolizer
 import geoscript.style.Style
+import geoscript.style.StyleRepository
 import geoscript.style.Symbolizer
 import geoscript.style.UniqueValues
 import geoscript.style.io.SLDWriter
@@ -216,6 +217,107 @@ class StyleCommands implements CommandMarker {
         String styleStr = styleWriter.write(symbol)
         file.write(styleStr)
         "Colormap Palette Raster Style written to ${file}!"
+    }
+
+    @CliCommand(value = "style repository save", help = "Save a style to a style repository")
+    String saveStyleToStyleRepository(
+        @CliOption(key = "type", mandatory = true, help = "The type of style repository (directory, nested-directory, h2, sqlite, postgres)")
+        String type,
+        @CliOption(key = "options", mandatory = true, help = "The style repository options")
+        String params,
+        @CliOption(key = "layerName", mandatory = true, help = "The layer name")
+        String layerName,
+        @CliOption(key = "styleName", mandatory = true, help = "The style name")
+        String styleName,
+        @CliOption(key = "styleFile", mandatory = true, help = "The style file (sld or css)")
+        File styleFile
+    ) {
+        StyleRepository styleRepository = StyleRepositoryFactory.getStyleRepository(type, StyleRepositoryFactory.getParameters(params))
+        styleRepository.save(layerName, styleName, styleFile.text)
+        "Style ${styleName} for Layer ${layerName} saved to ${type}"
+    }
+
+    @CliCommand(value = "style repository delete", help = "Delete a style from a style repository")
+    String deleteStyleFromStyleRepository(
+            @CliOption(key = "type", mandatory = true, help = "The type of style repository (directory, nested-directory, h2, sqlite, postgres)")
+            String type,
+            @CliOption(key = "options", mandatory = true, help = "The style repository options")
+            String params,
+            @CliOption(key = "layerName", mandatory = true, help = "The layer name")
+            String layerName,
+            @CliOption(key = "styleName", mandatory = true, help = "The style name")
+            String styleName
+    ) {
+        StyleRepository styleRepository = StyleRepositoryFactory.getStyleRepository(type, StyleRepositoryFactory.getParameters(params))
+        styleRepository.delete(layerName, styleName)
+        "Style ${styleName} for Layer ${layerName} deleted from ${type}"
+    }
+
+    @CliCommand(value = "style repository get", help = "Get a style from a style repository")
+    String getStyleFromStyleRepository(
+            @CliOption(key = "type", mandatory = true, help = "The type of style repository (directory, nested-directory, h2, sqlite, postgres)")
+            String type,
+            @CliOption(key = "options", mandatory = true, help = "The style repository options")
+            String params,
+            @CliOption(key = "layerName", mandatory = true, help = "The layer name")
+            String layerName,
+            @CliOption(key = "styleName", mandatory = true, help = "The style name")
+            String styleName,
+            @CliOption(key = "styleFile", mandatory = false, help = "The style file (sld or css)")
+            File styleFile
+    ) {
+        StyleRepository styleRepository = StyleRepositoryFactory.getStyleRepository(type, StyleRepositoryFactory.getParameters(params))
+        String style = styleRepository.getForLayer(layerName, styleName)
+        if (styleFile) {
+            styleFile.text = style
+            "Style ${styleName} for Layer ${layerName} saved to ${styleFile.name}"
+        } else {
+            style
+        }
+    }
+
+    @CliCommand(value = "style repository list", help = "List styles in a style repository")
+    String listStylesInStyleRepository(
+            @CliOption(key = "type", mandatory = true, help = "The type of style repository (directory, nested-directory, h2, sqlite, postgres)")
+            String type,
+            @CliOption(key = "options", mandatory = true, help = "The style repository options")
+            String params,
+            @CliOption(key = "layerName", mandatory = false, help = "The layer name")
+            String layerName
+    ) {
+        StyleRepository styleRepository = StyleRepositoryFactory.getStyleRepository(type, StyleRepositoryFactory.getParameters(params))
+        List<Map<String,String>> styles = []
+        if (layerName) {
+            styles.addAll(styleRepository.getForLayer(layerName))
+        } else {
+            styles.addAll(styleRepository.getAll())
+        }
+        String NEW_LINE = System.getProperty("line.separator")
+        StringBuilder str = new StringBuilder()
+        styles.each { Map<String,String> style ->
+            str.append(style.layerName + " " + style.styleName).append(NEW_LINE)
+        }
+        str.toString()
+    }
+
+    @CliCommand(value = "style repository copy", help = "Copy styles from one repository to another")
+    String copyStylesInStyleRepository(
+            @CliOption(key = "inputType", mandatory = true, help = "The type of style repository (directory, nested-directory, h2, sqlite, postgres)")
+            String inputType,
+            @CliOption(key = "inputOptions", mandatory = true, help = "The style repository options")
+            String inputParams,
+            @CliOption(key = "outputType", mandatory = true, help = "The type of style repository (directory, nested-directory, h2, sqlite, postgres)")
+            String outputType,
+            @CliOption(key = "outputOptions", mandatory = true, help = "The style repository options")
+            String outputParams
+    ) {
+        StyleRepository inputStyleRepository = StyleRepositoryFactory.getStyleRepository(inputType, StyleRepositoryFactory.getParameters(inputParams))
+        StyleRepository outputStyleRepository = StyleRepositoryFactory.getStyleRepository(outputType, StyleRepositoryFactory.getParameters(outputParams))
+        List<Map<String, String>> styles = inputStyleRepository.getAll()
+        styles.each {Map<String,String> style ->
+            outputStyleRepository.save(style.layerName, style.styleName, style.style)
+        }
+        "Copy styles from ${inputType} to ${outputType}"
     }
 
 }

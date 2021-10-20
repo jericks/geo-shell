@@ -287,6 +287,16 @@ style raster colormap --raster raster --values "10=red,50=blue,100=wheat,250=whi
 
 style raster palette colormap --min 1 --max 50 --palette MutedTerrain --number 20 --file terrain.sld
 
+style repository save --type h2 --options file=styles_county.db --layerName roads --styleName roads --styleFile examples/roads.sld
+
+style repository get --type nested-directory --options file=examples/county_styles --layerName roads --styleName roads
+
+style repository list --type directory --options file=examples/styles
+
+style repository delete --type directory --options file=examples/styles --layerName parcels --styleName parcels
+
+style repository copy --inputType sqlite --inputOptions file=examples/my-styles.db --outputType h2 --outputOptions file=examples/h2-styles.db
+
 map
 ---
 map open --name state_map

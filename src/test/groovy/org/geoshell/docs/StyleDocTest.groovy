@@ -133,7 +133,7 @@ class StyleDocTest extends AbstractDocTest {
     }
 
     @Test
-    void polygon() {
+    void rasterPaletteColorMap() {
         run("style_raster_palette_colormap", [
                 "format open --name high --input src/test/resources/high.tif",
                 "raster open --format high --raster high --name high",
@@ -146,6 +146,69 @@ class StyleDocTest extends AbstractDocTest {
         ])
         copyFile(new File("examples/style_raster_palette_colormap.png"), new File("src/main/docs/images"))
         copyFile(new File("examples/style_raster_palette_colormap.sld"), new File("src/main/docs/output"))
+    }
+
+    @Test
+    void saveStyleToStyleRepository() {
+        run("style_repository_save", [
+            "style create --params \"stroke=black stroke-width=0.25 fill=wheat\" --file examples/fields.sld",
+            "style repository save --type sqlite --options file=target/styles.db --layerName fields --styleName fields --styleFile examples/fields.sld"
+        ])
+    }
+
+    @Test
+    void listStylesInStyleRepository() {
+        run("style_repository_list", [
+                "style create --params \"stroke=black stroke-width=1.0\" --file examples/roads.sld",
+                "style create --params \"stroke=red stroke-width=0.50\" --file examples/parcels.sld",
+                "style repository save --type h2 --options file=target/styles_county.db --layerName roads --styleName roads --styleFile examples/roads.sld",
+                "style repository save --type h2 --options file=target/styles_county.db --layerName parcels --styleName parcels --styleFile examples/parcels.sld",
+                "style repository list --type h2 --options file=target/styles_county.db",
+                "style repository list --type h2 --options file=target/styles_county.db --layerName roads"
+        ])
+    }
+
+    @Test
+    void deleteStylesFromStyleRepository() {
+        File styleDirectory = new File("examples/styles")
+        styleDirectory.mkdir()
+        run("style_repository_delete", [
+                "style create --params \"stroke=black stroke-width=1.0\" --file examples/roads.sld",
+                "style create --params \"stroke=red stroke-width=0.50\" --file examples/parcels.sld",
+                "style repository save --type directory --options file=examples/styles --layerName roads --styleName roads --styleFile examples/roads.sld",
+                "style repository save --type directory --options file=examples/styles --layerName parcels --styleName parcels --styleFile examples/parcels.sld",
+                "style repository list --type directory --options file=examples/styles",
+                "style repository delete --type directory --options file=examples/styles --layerName parcels --styleName parcels",
+                "style repository list --type directory --options file=examples/styles"
+        ])
+    }
+
+    @Test
+    void getStyleFromStyleRepository() {
+        File styleDirectory = new File("examples/county_styles")
+        styleDirectory.mkdir()
+        run("style_repository_get", [
+                "style create --params \"stroke=black stroke-width=1.0\" --file examples/roads.sld",
+                "style create --params \"stroke=red stroke-width=0.50\" --file examples/parcels.sld",
+                "style repository save --type nested-directory --options file=examples/county_styles --layerName roads --styleName roads --styleFile examples/roads.sld",
+                "style repository save --type nested-directory --options file=examples/county_styles --layerName parcels --styleName parcels --styleFile examples/parcels.sld",
+                "style repository get --type nested-directory --options file=examples/county_styles --layerName roads --styleName roads",
+                "style repository get --type nested-directory --options file=examples/county_styles --layerName parcels --styleName parcels --styleFile examples/roads_simple.sld",
+        ])
+    }
+
+    @Test
+    void copyStyleRepository() {
+
+        run("style_repository_copy", [
+                "style create --params \"stroke=black stroke-width=1.0\" --file examples/roads.sld",
+                "style create --params \"stroke=red stroke-width=0.50\" --file examples/parcels.sld",
+                "style repository save --type sqlite --options file=target/my-styles.db --layerName roads --styleName roads --styleFile examples/roads.sld",
+                "style repository save --type sqlite --options file=target/my-styles.db --layerName parcels --styleName parcels --styleFile examples/parcels.sld",
+                "style repository list --type sqlite --options file=target/my-styles.db",
+                "style repository copy --inputType sqlite --inputOptions file=target/my-styles.db --outputType h2 --outputOptions file=target/h2-styles.db",
+                "style repository list --type h2 --options file=target/h2-styles.db"
+        ])
     }
 
 }

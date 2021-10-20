@@ -144,4 +144,79 @@ Aa2=#94474b"""
                 styleText.contains("<sld:ColorMap>") &&
                 styleText.contains("<sld:ColorMapEntry")
     }
+
+    @Test void saveToStyleRepository() {
+        Catalog catalog = new Catalog()
+        StyleCommands cmds = new StyleCommands(catalog: catalog)
+        File styleFile = folder.newFile("style.sld")
+        cmds.createColorMapPaletteRasterStyle(1,255, "MutedTerrain", 25, "ramp", false, 1.0, styleFile)
+        File databaseFile = folder.newFile("styles.db")
+        String result = cmds.saveStyleToStyleRepository("sqlite","file=${databaseFile.absolutePath}", "raster", "raster_colormap", styleFile)
+        assertEquals("Style raster_colormap for Layer raster saved to sqlite", result);
+    }
+
+    @Test void getFromStyleRepository() {
+        Catalog catalog = new Catalog()
+        StyleCommands cmds = new StyleCommands(catalog: catalog)
+        File styleFile = folder.newFile("style.sld")
+        cmds.createColorMapPaletteRasterStyle(1,255, "MutedTerrain", 25, "ramp", false, 1.0, styleFile)
+        File databaseFile = folder.newFile("styles.db")
+        cmds.saveStyleToStyleRepository("sqlite","file=${databaseFile.absolutePath}", "raster", "raster_colormap", styleFile)
+        File outputFile = folder.newFile("styles.sld")
+        String result = cmds.getStyleFromStyleRepository("sqlite", "file=${databaseFile.absolutePath}", "raster", "raster_colormap", outputFile)
+        assertEquals("Style raster_colormap for Layer raster saved to styles.sld", result)
+        result = cmds.getStyleFromStyleRepository("sqlite", "file=${databaseFile.absolutePath}", "raster", "raster_colormap", null)
+        assertEquals(styleFile.text, result)
+    }
+
+    @Test void deleteFromStyleRepository() {
+        Catalog catalog = new Catalog()
+        StyleCommands cmds = new StyleCommands(catalog: catalog)
+        File styleFile = folder.newFile("style.sld")
+        cmds.createColorMapPaletteRasterStyle(1,255, "MutedTerrain", 25, "ramp", false, 1.0, styleFile)
+        File databaseFile = folder.newFile("styles.db")
+        cmds.saveStyleToStyleRepository("sqlite","file=${databaseFile.absolutePath}", "raster", "raster_colormap", styleFile)
+        String result = cmds.listStylesInStyleRepository("sqlite", "file=${databaseFile.absolutePath}", null)
+        assertTrue(result.contains("raster raster_colormap"))
+        result = cmds.deleteStyleFromStyleRepository("sqlite", "file=${databaseFile.absolutePath}", "raster", "raster_colormap")
+        assertEquals("Style raster_colormap for Layer raster deleted from sqlite", result)
+        result = cmds.listStylesInStyleRepository("sqlite", "file=${databaseFile.absolutePath}", null)
+        assertFalse(result.contains("raster raster_colormap"))
+    }
+
+    @Test void listStylesInStyleRepository() {
+        Catalog catalog = new Catalog()
+        StyleCommands cmds = new StyleCommands(catalog: catalog)
+        File styleFile = folder.newFile("style.sld")
+        cmds.createColorMapPaletteRasterStyle(1,255, "MutedTerrain", 25, "ramp", false, 1.0, styleFile)
+        File databaseFile = folder.newFile("styles.db")
+        cmds.saveStyleToStyleRepository("sqlite","file=${databaseFile.absolutePath}", "raster", "raster_colormap", styleFile)
+        String result = cmds.listStylesInStyleRepository("sqlite", "file=${databaseFile.absolutePath}", null)
+        assertTrue(result.contains("raster raster_colormap"))
+        result = cmds.listStylesInStyleRepository("sqlite", "file=${databaseFile.absolutePath}", "raster")
+        assertTrue(result.contains("raster raster_colormap"))
+    }
+
+    @Test void copyStylesInStyleRepository() {
+        Catalog catalog = new Catalog()
+        StyleCommands cmds = new StyleCommands(catalog: catalog)
+
+        File styleFile1 = folder.newFile("style1.sld")
+        cmds.createColorMapPaletteRasterStyle(1,255, "MutedTerrain", 25, "ramp", false, 1.0, styleFile1)
+        File styleFile2 = folder.newFile("style2.sld")
+        cmds.createColorMapPaletteRasterStyle(1,255, "Blues", 25, "ramp", false, 1.0, styleFile2)
+
+        File databaseFile = folder.newFile("styles.db")
+        cmds.saveStyleToStyleRepository("sqlite","file=${databaseFile.absolutePath}", "raster", "raster_colormap1", styleFile1)
+        cmds.saveStyleToStyleRepository("sqlite","file=${databaseFile.absolutePath}", "raster", "raster_colormap2", styleFile2)
+
+        File directory = folder.newFolder("my-styles")
+        String result = cmds.copyStylesInStyleRepository("sqlite", "file=${databaseFile.absolutePath}", "nested-directory", "file=${directory.absolutePath}")
+        assertEquals("Copy styles from sqlite to nested-directory", result)
+
+        result = cmds.listStylesInStyleRepository("nested-directory", "file=${directory.absolutePath}", null)
+        assertTrue(result.contains("raster_colormap1"))
+        assertTrue(result.contains("raster_colormap2"))
+    }
+
 }
