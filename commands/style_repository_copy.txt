@@ -1,0 +1,28 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|inputType
+|The type of style repository (directory, nested-directory, h2, sqlite, postgres)
+|true
+|
+|
+
+|inputOptions
+|The style repository options
+|true
+|
+|
+
+|outputType
+|The type of style repository (directory, nested-directory, h2, sqlite, postgres)
+|true
+|
+|
+
+|outputOptions
+|The style repository options
+|true
+|
+|
+
+|===

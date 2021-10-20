@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*style repository save* [gray]#--type# [silver]#h2# [gray]#--options# [silver]#file=target/styles_county.db# [gray]#--layerName# [silver]#parcels# [gray]#--styleName# [silver]#parcels# [gray]#--styleFile# [silver]#examples/parcels.sld# +

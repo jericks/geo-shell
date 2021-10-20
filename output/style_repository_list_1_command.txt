@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*style create* [gray]#--params# [silver]#"stroke=red# [silver]#stroke-width=0.50"# [gray]#--file# [silver]#examples/parcels.sld# +

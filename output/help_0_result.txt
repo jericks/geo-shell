@@ -112,6 +112,11 @@
 [green]#* style raster colormap - Create a color map raster style.# +
 [green]#* style raster default - Create a default raster style.# +
 [green]#* style raster palette colormap - Create a color map raster style from a color palette.# +
+[green]#* style repository copy - Copy styles from one repository to another# +
+[green]#* style repository delete - Delete a style from a style repository# +
+[green]#* style repository get - Get a style from a style repository# +
+[green]#* style repository list - List styles in a style repository# +
+[green]#* style repository save - Save a style to a style repository# +
 [green]#* style vector default - Create a default vector style.# +
 [green]#* style vector gradient - Create a gradient vector style.# +
 [green]#* style vector uniquevalues - Create a unique values vector style.# +

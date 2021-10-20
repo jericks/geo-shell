@@ -1,0 +1,1 @@
+[green]#Style stroke=black stroke-width=1.0 written to /home/runner/work/geo-shell/geo-shell/examples/roads.sld!# +

@@ -1,0 +1,18 @@
+[green]#<?xml version="1.0" encoding="UTF-8"?><sld:StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:sld="http://www.opengis.net/sld" xmlns:gml="http://www.opengis.net/gml" xmlns:ogc="http://www.opengis.net/ogc" version="1.0.0"># +
+[green]#<sld:UserLayer># +
+[green]#<sld:LayerFeatureConstraints># +
+[green]#<sld:FeatureTypeConstraint/># +
+[green]#</sld:LayerFeatureConstraints># +
+[green]#<sld:UserStyle># +
+[green]#<sld:Name>Default Styler</sld:Name># +
+[green]#<sld:FeatureTypeStyle># +
+[green]#<sld:Name>name</sld:Name># +
+[green]#<sld:Rule># +
+[green]#<sld:LineSymbolizer># +
+[green]#<sld:Stroke/># +
+[green]#</sld:LineSymbolizer># +
+[green]#</sld:Rule># +
+[green]#</sld:FeatureTypeStyle># +
+[green]#</sld:UserStyle># +
+[green]#</sld:UserLayer># +
+[green]#</sld:StyledLayerDescriptor># +

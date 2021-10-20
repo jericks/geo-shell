@@ -1,0 +1,1 @@
+Get a style from a style repository

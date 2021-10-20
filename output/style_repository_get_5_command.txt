@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*style repository get* [gray]#--type# [silver]#nested-directory# [gray]#--options# [silver]#file=examples/county_styles# [gray]#--layerName# [silver]#parcels# [gray]#--styleName# [silver]#parcels# [gray]#--styleFile# [silver]#examples/roads_simple.sld# +

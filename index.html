@@ -689,6 +689,11 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#raster-default">Raster Default</a></li>
 <li><a href="#raster-color-map">Raster Color Map</a></li>
 <li><a href="#raster-palette-color-map">Raster Palette Color Map</a></li>
+<li><a href="#style-repository-save">Style Repository Save</a></li>
+<li><a href="#style-repository-list">Style Repository List</a></li>
+<li><a href="#style-repository-delete">Style Repository Delete</a></li>
+<li><a href="#style-repository-get">Style Repository Get</a></li>
+<li><a href="#style-repository-copy">Style Repository Copy</a></li>
 </ul>
 </li>
 <li><a href="#map">Map</a>
@@ -2050,16 +2055,16 @@ No parameters
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">points</span><br>
-<span class="green">Feature (fid&#8212;&#8203;3141f5b5_17c420eabe6_-650c)</span><br>
-<span class="green">-----------------------------------------</span><br>
+<span class="green">Feature (fid-5c007302_17c9fc4b6fc_-6594)</span><br>
+<span class="green">----------------------------------------</span><br>
 <span class="green">the_geom = POINT (-122.333056 47.609722)</span><br>
 <span class="green">fid = 1</span><br>
 <span class="green">name = Seattle</span><br>
 <span class="green">state = WA</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;3141f5b5_17c420eabe6_-650a)</span><br>
-<span class="green">-----------------------------------------</span><br>
+<p><span class="green">Feature (fid-5c007302_17c9fc4b6fc_-6592)</span><br>
+<span class="green">----------------------------------------</span><br>
 <span class="green">the_geom = POINT (-122.459444 47.241389)</span><br>
 <span class="green">fid = 2</span><br>
 <span class="green">name = Tacoma</span><br>
@@ -2251,8 +2256,8 @@ No parameters
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">states_area</span> <span class="gray">--filter</span> <span class="silver">"NAME_1='North</span> <span class="silver">Dakota'"</span> <span class="gray">--field</span> <span class="silver">"NAME_0,AREA"</span><br>
-<span class="green">Feature (fid&#8212;&#8203;3141f5b5_17c420eabe6_-6505)</span><br>
-<span class="green">-----------------------------------------</span><br>
+<span class="green">Feature (fid-5c007302_17c9fc4b6fc_-658d)</span><br>
+<span class="green">----------------------------------------</span><br>
 <span class="green">NAME_0 = United States</span><br>
 <span class="green">AREA = 21.804544852979944</span><br></p>
 </div>
@@ -2436,8 +2441,8 @@ No parameters
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">places_id</span> <span class="gray">--filter</span> <span class="silver">"NAME='Seattle'"</span> <span class="gray">--field</span> <span class="silver">"NAME,ID"</span><br>
-<span class="green">Feature (fid&#8212;&#8203;3141f5b5_17c420eabe6_-664a)</span><br>
-<span class="green">-----------------------------------------</span><br>
+<span class="green">Feature (fid-5c007302_17c9fc4b6fc_-66d2)</span><br>
+<span class="green">----------------------------------------</span><br>
 <span class="green">NAME = Seattle</span><br>
 <span class="green">ID = 10</span><br></p>
 </div>
@@ -2622,8 +2627,8 @@ No parameters
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">places_xy</span> <span class="gray">--filter</span> <span class="silver">"NAME='Seattle'"</span> <span class="gray">--field</span> <span class="silver">"NAME,X,Y"</span><br>
-<span class="green">Feature (fid&#8212;&#8203;3141f5b5_17c420eabe6_-4cfa)</span><br>
-<span class="green">-----------------------------------------</span><br>
+<span class="green">Feature (fid-5c007302_17c9fc4b6fc_-4d82)</span><br>
+<span class="green">----------------------------------------</span><br>
 <span class="green">NAME = Seattle</span><br>
 <span class="green">X = -122.34193084586849</span><br>
 <span class="green">Y = 47.57194791253073</span><br></p>
@@ -2753,15 +2758,15 @@ No parameters
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">lines_fixed</span><br>
-<span class="green">Feature (fid&#8212;&#8203;3141f5b5_17c420eabe6_-64c1)</span><br>
-<span class="green">-----------------------------------------</span><br>
+<span class="green">Feature (fid-5c007302_17c9fc4b6fc_-6549)</span><br>
+<span class="green">----------------------------------------</span><br>
 <span class="green">the_geom = LINESTRING (0 0, 1 1)</span><br>
 <span class="green">fid = 1</span><br>
 <span class="green">name = Location 1</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;3141f5b5_17c420eabe6_-64c0)</span><br>
-<span class="green">-----------------------------------------</span><br>
+<p><span class="green">Feature (fid-5c007302_17c9fc4b6fc_-6548)</span><br>
+<span class="green">----------------------------------------</span><br>
 <span class="green">the_geom = LINESTRING (1 1, 2 2, 3 3)</span><br>
 <span class="green">fid = 2</span><br>
 <span class="green">name = Location 2</span><br></p>
@@ -11845,12 +11850,12 @@ No parameters
           <span class="tag">&lt;/ogc:Filter&gt;</span>
           <span class="tag">&lt;sld:PolygonSymbolizer&gt;</span>
             <span class="tag">&lt;sld:Fill&gt;</span>
-              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fill</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#1a0254<span class="tag">&lt;/sld:CssParameter&gt;</span>
+              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fill</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#32662f<span class="tag">&lt;/sld:CssParameter&gt;</span>
             <span class="tag">&lt;/sld:Fill&gt;</span>
           <span class="tag">&lt;/sld:PolygonSymbolizer&gt;</span>
           <span class="tag">&lt;sld:LineSymbolizer&gt;</span>
             <span class="tag">&lt;sld:Stroke&gt;</span>
-              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#12013a<span class="tag">&lt;/sld:CssParameter&gt;</span>
+              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#234720<span class="tag">&lt;/sld:CssParameter&gt;</span>
               <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke-width</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>0.5<span class="tag">&lt;/sld:CssParameter&gt;</span>
             <span class="tag">&lt;/sld:Stroke&gt;</span>
           <span class="tag">&lt;/sld:LineSymbolizer&gt;</span>
@@ -11864,12 +11869,12 @@ No parameters
           <span class="tag">&lt;/ogc:Filter&gt;</span>
           <span class="tag">&lt;sld:PolygonSymbolizer&gt;</span>
             <span class="tag">&lt;sld:Fill&gt;</span>
-              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fill</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#6f7755<span class="tag">&lt;/sld:CssParameter&gt;</span>
+              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fill</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#044102<span class="tag">&lt;/sld:CssParameter&gt;</span>
             <span class="tag">&lt;/sld:Fill&gt;</span>
           <span class="tag">&lt;/sld:PolygonSymbolizer&gt;</span>
           <span class="tag">&lt;sld:LineSymbolizer&gt;</span>
             <span class="tag">&lt;sld:Stroke&gt;</span>
-              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#4d533b<span class="tag">&lt;/sld:CssParameter&gt;</span>
+              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#022d01<span class="tag">&lt;/sld:CssParameter&gt;</span>
               <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke-width</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>0.5<span class="tag">&lt;/sld:CssParameter&gt;</span>
             <span class="tag">&lt;/sld:Stroke&gt;</span>
           <span class="tag">&lt;/sld:LineSymbolizer&gt;</span>
@@ -12425,6 +12430,421 @@ No parameters
 <div class="content">
 <img src="./images/style_raster_palette_colormap.png" alt="style raster palette colormap">
 </div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="style-repository-save"><a class="anchor" href="#style-repository-save"></a>Style Repository Save</h3>
+<div class="paragraph">
+<p>Save a style to a style repository</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style repository save</strong> <span class="gray">--type</span> <span class="silver">sqlite</span> <span class="gray">--options</span> <span class="silver">file=target/styles.db</span> <span class="gray">--layerName</span> <span class="silver">fields</span> <span class="gray">--styleName</span> <span class="silver">fields</span> <span class="gray">--styleFile</span> <span class="silver">examples/fields.sld</span><br></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The type of style repository (directory, nested-directory, h2, sqlite, postgres)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">options</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The style repository options</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">layerName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The layer name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">styleName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The style name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">styleFile</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The style file (sld or css)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style create</strong> <span class="gray">--params</span> <span class="silver">"stroke=black</span> <span class="silver">stroke-width=0.25</span> <span class="silver">fill=wheat"</span> <span class="gray">--file</span> <span class="silver">examples/fields.sld</span><br>
+<span class="green">Style stroke=black stroke-width=0.25 fill=wheat written to /home/runner/work/geo-shell/geo-shell/examples/fields.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style repository save</strong> <span class="gray">--type</span> <span class="silver">sqlite</span> <span class="gray">--options</span> <span class="silver">file=target/styles.db</span> <span class="gray">--layerName</span> <span class="silver">fields</span> <span class="gray">--styleName</span> <span class="silver">fields</span> <span class="gray">--styleFile</span> <span class="silver">examples/fields.sld</span><br>
+<span class="green">Style fields for Layer fields saved to sqlite</span><br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="style-repository-list"><a class="anchor" href="#style-repository-list"></a>Style Repository List</h3>
+<div class="paragraph">
+<p>List styles in a style repository</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style repository list</strong> <span class="gray">--type</span> <span class="silver">h2</span> <span class="gray">--options</span> <span class="silver">file=target/styles_county.db</span><br></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The type of style repository (directory, nested-directory, h2, sqlite, postgres)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">options</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The style repository options</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">layerName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The layer name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style create</strong> <span class="gray">--params</span> <span class="silver">"stroke=black</span> <span class="silver">stroke-width=1.0"</span> <span class="gray">--file</span> <span class="silver">examples/roads.sld</span><br>
+<span class="green">Style stroke=black stroke-width=1.0 written to /home/runner/work/geo-shell/geo-shell/examples/roads.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style create</strong> <span class="gray">--params</span> <span class="silver">"stroke=red</span> <span class="silver">stroke-width=0.50"</span> <span class="gray">--file</span> <span class="silver">examples/parcels.sld</span><br>
+<span class="green">Style stroke=red stroke-width=0.50 written to /home/runner/work/geo-shell/geo-shell/examples/parcels.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style repository save</strong> <span class="gray">--type</span> <span class="silver">h2</span> <span class="gray">--options</span> <span class="silver">file=target/styles_county.db</span> <span class="gray">--layerName</span> <span class="silver">roads</span> <span class="gray">--styleName</span> <span class="silver">roads</span> <span class="gray">--styleFile</span> <span class="silver">examples/roads.sld</span><br>
+<span class="green">Style roads for Layer roads saved to h2</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style repository save</strong> <span class="gray">--type</span> <span class="silver">h2</span> <span class="gray">--options</span> <span class="silver">file=target/styles_county.db</span> <span class="gray">--layerName</span> <span class="silver">parcels</span> <span class="gray">--styleName</span> <span class="silver">parcels</span> <span class="gray">--styleFile</span> <span class="silver">examples/parcels.sld</span><br>
+<span class="green">Style parcels for Layer parcels saved to h2</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style repository list</strong> <span class="gray">--type</span> <span class="silver">h2</span> <span class="gray">--options</span> <span class="silver">file=target/styles_county.db</span><br>
+<span class="green">roads roads</span><br>
+<span class="green">parcels parcels</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style repository list</strong> <span class="gray">--type</span> <span class="silver">h2</span> <span class="gray">--options</span> <span class="silver">file=target/styles_county.db</span> <span class="gray">--layerName</span> <span class="silver">roads</span><br>
+<span class="green">roads roads</span><br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="style-repository-delete"><a class="anchor" href="#style-repository-delete"></a>Style Repository Delete</h3>
+<div class="paragraph">
+<p>Delete a style from a style repository</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style repository delete</strong> <span class="gray">--type</span> <span class="silver">directory</span> <span class="gray">--options</span> <span class="silver">file=examples/styles</span> <span class="gray">--layerName</span> <span class="silver">parcels</span> <span class="gray">--styleName</span> <span class="silver">parcels</span><br></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The type of style repository (directory, nested-directory, h2, sqlite, postgres)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">options</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The style repository options</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">layerName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The layer name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">styleName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The style name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style create</strong> <span class="gray">--params</span> <span class="silver">"stroke=black</span> <span class="silver">stroke-width=1.0"</span> <span class="gray">--file</span> <span class="silver">examples/roads.sld</span><br>
+<span class="green">Style stroke=black stroke-width=1.0 written to /home/runner/work/geo-shell/geo-shell/examples/roads.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style create</strong> <span class="gray">--params</span> <span class="silver">"stroke=red</span> <span class="silver">stroke-width=0.50"</span> <span class="gray">--file</span> <span class="silver">examples/parcels.sld</span><br>
+<span class="green">Style stroke=red stroke-width=0.50 written to /home/runner/work/geo-shell/geo-shell/examples/parcels.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style repository save</strong> <span class="gray">--type</span> <span class="silver">directory</span> <span class="gray">--options</span> <span class="silver">file=examples/styles</span> <span class="gray">--layerName</span> <span class="silver">roads</span> <span class="gray">--styleName</span> <span class="silver">roads</span> <span class="gray">--styleFile</span> <span class="silver">examples/roads.sld</span><br>
+<span class="green">Style roads for Layer roads saved to directory</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style repository save</strong> <span class="gray">--type</span> <span class="silver">directory</span> <span class="gray">--options</span> <span class="silver">file=examples/styles</span> <span class="gray">--layerName</span> <span class="silver">parcels</span> <span class="gray">--styleName</span> <span class="silver">parcels</span> <span class="gray">--styleFile</span> <span class="silver">examples/parcels.sld</span><br>
+<span class="green">Style parcels for Layer parcels saved to directory</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style repository list</strong> <span class="gray">--type</span> <span class="silver">directory</span> <span class="gray">--options</span> <span class="silver">file=examples/styles</span><br>
+<span class="green">parcels parcels</span><br>
+<span class="green">roads roads</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style repository delete</strong> <span class="gray">--type</span> <span class="silver">directory</span> <span class="gray">--options</span> <span class="silver">file=examples/styles</span> <span class="gray">--layerName</span> <span class="silver">parcels</span> <span class="gray">--styleName</span> <span class="silver">parcels</span><br>
+<span class="green">Style parcels for Layer parcels deleted from directory</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style repository list</strong> <span class="gray">--type</span> <span class="silver">directory</span> <span class="gray">--options</span> <span class="silver">file=examples/styles</span><br>
+<span class="green">roads roads</span><br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="style-repository-get"><a class="anchor" href="#style-repository-get"></a>Style Repository Get</h3>
+<div class="paragraph">
+<p>Get a style from a style repository</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style repository get</strong> <span class="gray">--type</span> <span class="silver">nested-directory</span> <span class="gray">--options</span> <span class="silver">file=examples/county_styles</span> <span class="gray">--layerName</span> <span class="silver">roads</span> <span class="gray">--styleName</span> <span class="silver">roads</span><br></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The type of style repository (directory, nested-directory, h2, sqlite, postgres)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">options</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The style repository options</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">layerName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The layer name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">styleName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The style name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">styleFile</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The style file (sld or css)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style create</strong> <span class="gray">--params</span> <span class="silver">"stroke=black</span> <span class="silver">stroke-width=1.0"</span> <span class="gray">--file</span> <span class="silver">examples/roads.sld</span><br>
+<span class="green">Style stroke=black stroke-width=1.0 written to /home/runner/work/geo-shell/geo-shell/examples/roads.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style create</strong> <span class="gray">--params</span> <span class="silver">"stroke=red</span> <span class="silver">stroke-width=0.50"</span> <span class="gray">--file</span> <span class="silver">examples/parcels.sld</span><br>
+<span class="green">Style stroke=red stroke-width=0.50 written to /home/runner/work/geo-shell/geo-shell/examples/parcels.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style repository save</strong> <span class="gray">--type</span> <span class="silver">nested-directory</span> <span class="gray">--options</span> <span class="silver">file=examples/county_styles</span> <span class="gray">--layerName</span> <span class="silver">roads</span> <span class="gray">--styleName</span> <span class="silver">roads</span> <span class="gray">--styleFile</span> <span class="silver">examples/roads.sld</span><br>
+<span class="green">Style roads for Layer roads saved to nested-directory</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style repository save</strong> <span class="gray">--type</span> <span class="silver">nested-directory</span> <span class="gray">--options</span> <span class="silver">file=examples/county_styles</span> <span class="gray">--layerName</span> <span class="silver">parcels</span> <span class="gray">--styleName</span> <span class="silver">parcels</span> <span class="gray">--styleFile</span> <span class="silver">examples/parcels.sld</span><br>
+<span class="green">Style parcels for Layer parcels saved to nested-directory</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style repository get</strong> <span class="gray">--type</span> <span class="silver">nested-directory</span> <span class="gray">--options</span> <span class="silver">file=examples/county_styles</span> <span class="gray">--layerName</span> <span class="silver">roads</span> <span class="gray">--styleName</span> <span class="silver">roads</span><br>
+<span class="green">&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;sld:StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:sld="http://www.opengis.net/sld" xmlns:gml="http://www.opengis.net/gml" xmlns:ogc="http://www.opengis.net/ogc" version="1.0.0"&gt;</span><br>
+<span class="green">&lt;sld:UserLayer&gt;</span><br>
+<span class="green">&lt;sld:LayerFeatureConstraints&gt;</span><br>
+<span class="green">&lt;sld:FeatureTypeConstraint/&gt;</span><br>
+<span class="green">&lt;/sld:LayerFeatureConstraints&gt;</span><br>
+<span class="green">&lt;sld:UserStyle&gt;</span><br>
+<span class="green">&lt;sld:Name&gt;Default Styler&lt;/sld:Name&gt;</span><br>
+<span class="green">&lt;sld:FeatureTypeStyle&gt;</span><br>
+<span class="green">&lt;sld:Name&gt;name&lt;/sld:Name&gt;</span><br>
+<span class="green">&lt;sld:Rule&gt;</span><br>
+<span class="green">&lt;sld:LineSymbolizer&gt;</span><br>
+<span class="green">&lt;sld:Stroke/&gt;</span><br>
+<span class="green">&lt;/sld:LineSymbolizer&gt;</span><br>
+<span class="green">&lt;/sld:Rule&gt;</span><br>
+<span class="green">&lt;/sld:FeatureTypeStyle&gt;</span><br>
+<span class="green">&lt;/sld:UserStyle&gt;</span><br>
+<span class="green">&lt;/sld:UserLayer&gt;</span><br>
+<span class="green">&lt;/sld:StyledLayerDescriptor&gt;</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style repository get</strong> <span class="gray">--type</span> <span class="silver">nested-directory</span> <span class="gray">--options</span> <span class="silver">file=examples/county_styles</span> <span class="gray">--layerName</span> <span class="silver">parcels</span> <span class="gray">--styleName</span> <span class="silver">parcels</span> <span class="gray">--styleFile</span> <span class="silver">examples/roads_simple.sld</span><br>
+<span class="green">Style parcels for Layer parcels saved to roads_simple.sld</span><br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="style-repository-copy"><a class="anchor" href="#style-repository-copy"></a>Style Repository Copy</h3>
+<div class="paragraph">
+<p>Copy styles from one repository to another</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style repository copy</strong> <span class="gray">--inputType</span> <span class="silver">sqlite</span> <span class="gray">--inputOptions</span> <span class="silver">file=target/my-styles.db</span> <span class="gray">--outputType</span> <span class="silver">h2</span> <span class="gray">--outputOptions</span> <span class="silver">file=target/h2-styles.db</span><br></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">inputType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The type of style repository (directory, nested-directory, h2, sqlite, postgres)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">inputOptions</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The style repository options</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">outputType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The type of style repository (directory, nested-directory, h2, sqlite, postgres)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">outputOptions</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The style repository options</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style create</strong> <span class="gray">--params</span> <span class="silver">"stroke=black</span> <span class="silver">stroke-width=1.0"</span> <span class="gray">--file</span> <span class="silver">examples/roads.sld</span><br>
+<span class="green">Style stroke=black stroke-width=1.0 written to /home/runner/work/geo-shell/geo-shell/examples/roads.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style create</strong> <span class="gray">--params</span> <span class="silver">"stroke=red</span> <span class="silver">stroke-width=0.50"</span> <span class="gray">--file</span> <span class="silver">examples/parcels.sld</span><br>
+<span class="green">Style stroke=red stroke-width=0.50 written to /home/runner/work/geo-shell/geo-shell/examples/parcels.sld!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style repository save</strong> <span class="gray">--type</span> <span class="silver">sqlite</span> <span class="gray">--options</span> <span class="silver">file=target/my-styles.db</span> <span class="gray">--layerName</span> <span class="silver">roads</span> <span class="gray">--styleName</span> <span class="silver">roads</span> <span class="gray">--styleFile</span> <span class="silver">examples/roads.sld</span><br>
+<span class="green">Style roads for Layer roads saved to sqlite</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style repository save</strong> <span class="gray">--type</span> <span class="silver">sqlite</span> <span class="gray">--options</span> <span class="silver">file=target/my-styles.db</span> <span class="gray">--layerName</span> <span class="silver">parcels</span> <span class="gray">--styleName</span> <span class="silver">parcels</span> <span class="gray">--styleFile</span> <span class="silver">examples/parcels.sld</span><br>
+<span class="green">Style parcels for Layer parcels saved to sqlite</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style repository list</strong> <span class="gray">--type</span> <span class="silver">sqlite</span> <span class="gray">--options</span> <span class="silver">file=target/my-styles.db</span><br>
+<span class="green">roads roads</span><br>
+<span class="green">parcels parcels</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style repository copy</strong> <span class="gray">--inputType</span> <span class="silver">sqlite</span> <span class="gray">--inputOptions</span> <span class="silver">file=target/my-styles.db</span> <span class="gray">--outputType</span> <span class="silver">h2</span> <span class="gray">--outputOptions</span> <span class="silver">file=target/h2-styles.db</span><br>
+<span class="green">Copy styles from sqlite to h2</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">style repository list</strong> <span class="gray">--type</span> <span class="silver">h2</span> <span class="gray">--options</span> <span class="silver">file=target/h2-styles.db</span><br>
+<span class="green">roads roads</span><br>
+<span class="green">parcels parcels</span><br></p>
 </div>
 </div>
 </div>
@@ -13539,7 +13959,7 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">date</strong> <br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Saturday, October 2, 2021 5:31:27 PM UTC</span><br></p>
+<p><span class="green">Wednesday, October 20, 2021 10:14:12 PM UTC</span><br></p>
 </div>
 </div>
 <div class="sect2">
@@ -13844,7 +14264,7 @@ No parameters
 <div id="footer">
 <div id="footer-text">
 Version 0.10-SNAPSHOT<br>
-Last updated 2021-10-02 17:27:11 UTC
+Last updated 2021-10-20 22:12:18 UTC
 </div>
 </div>
 </body>

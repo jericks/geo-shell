@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*style repository copy* [gray]#--inputType# [silver]#sqlite# [gray]#--inputOptions# [silver]#file=target/my-styles.db# [gray]#--outputType# [silver]#h2# [gray]#--outputOptions# [silver]#file=target/h2-styles.db# +

@@ -1,0 +1,22 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|type
+|The type of style repository (directory, nested-directory, h2, sqlite, postgres)
+|true
+|
+|
+
+|options
+|The style repository options
+|true
+|
+|
+
+|layerName
+|The layer name
+|false
+|
+|
+
+|===
