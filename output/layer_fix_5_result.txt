@@ -1,12 +1,12 @@
 
-[green]#Feature (fid--54d967cc_17ca8c958dc_-6549)# +
-[green]#-----------------------------------------# +
+[green]#Feature (fid-149508de_17ca8d8e1a1_-6549)# +
+[green]#----------------------------------------# +
 [green]#the_geom = LINESTRING (0 0, 1 1)# +
 [green]#fid = 1# +
 [green]#name = Location 1# +
 
-[green]#Feature (fid--54d967cc_17ca8c958dc_-6548)# +
-[green]#-----------------------------------------# +
+[green]#Feature (fid-149508de_17ca8d8e1a1_-6548)# +
+[green]#----------------------------------------# +
 [green]#the_geom = LINESTRING (1 1, 2 2, 3 3)# +
 [green]#fid = 2# +
 [green]#name = Location 2# +
