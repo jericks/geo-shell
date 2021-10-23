@@ -1,12 +1,12 @@
 
-[green]#Feature (fid-149508de_17ca8d8e1a1_-6594)# +
+[green]#Feature (fid-579d8805_17caf3d54fc_-6594)# +
 [green]#----------------------------------------# +
 [green]#the_geom = POINT (-122.333056 47.609722)# +
 [green]#fid = 1# +
 [green]#name = Seattle# +
 [green]#state = WA# +
 
-[green]#Feature (fid-149508de_17ca8d8e1a1_-6592)# +
+[green]#Feature (fid-579d8805_17caf3d54fc_-6592)# +
 [green]#----------------------------------------# +
 [green]#the_geom = POINT (-122.459444 47.241389)# +
 [green]#fid = 2# +
