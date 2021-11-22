@@ -3,17 +3,16 @@ package org.geoshell.tile
 import geoscript.layer.TileLayer
 import org.geoshell.Catalog
 import org.geoshell.vector.LayerName
-import org.junit.Rule
-import org.junit.Test
-import org.junit.rules.TemporaryFolder
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.io.TempDir
 import org.springframework.shell.core.Completion
 
-import static org.junit.Assert.*
+import static org.junit.jupiter.api.Assertions.*
 
 class TileNameConverterTest {
 
-    @Rule
-    public TemporaryFolder temporaryFolder = new TemporaryFolder()
+    @TempDir
+    File folder
 
     @Test
     void supports() {
@@ -31,8 +30,8 @@ class TileNameConverterTest {
     @Test
     void getAllPossibleValues() {
         Catalog catalog = new Catalog()
-        catalog.tiles[new TileName("states")] = TileLayer.getTileLayer(temporaryFolder.newFile("states.mbtiles").absolutePath)
-        catalog.tiles[new TileName("world")] = TileLayer.getTileLayer(temporaryFolder.newFile("world.gpkg").absolutePath)
+        catalog.tiles[new TileName("states")] = TileLayer.getTileLayer(new File(folder, "states.mbtiles").absolutePath)
+        catalog.tiles[new TileName("world")] = TileLayer.getTileLayer(new File(folder, "world.gpkg").absolutePath)
 
         TileNameConverter converter = new TileNameConverter(catalog: catalog)
 

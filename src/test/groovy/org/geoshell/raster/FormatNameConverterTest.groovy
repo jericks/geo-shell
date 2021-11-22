@@ -3,18 +3,16 @@ package org.geoshell.raster
 import geoscript.layer.Format
 import org.geoshell.Catalog
 import org.geoshell.vector.LayerName
-import org.geoshell.vector.WorkspaceName
-import org.junit.Rule
-import org.junit.Test
-import org.junit.rules.TemporaryFolder
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.io.TempDir
 import org.springframework.shell.core.Completion
 
-import static org.junit.Assert.*
+import static org.junit.jupiter.api.Assertions.*
 
 class FormatNameConverterTest {
 
-    @Rule
-    public TemporaryFolder temporaryFolder = new TemporaryFolder()
+    @TempDir
+    File folder
 
     @Test
     void supports() {
@@ -32,8 +30,8 @@ class FormatNameConverterTest {
     @Test
     void getAllPossibleValues() {
         Catalog catalog = new Catalog()
-        catalog.formats[new FormatName("world")] = Format.getFormat(temporaryFolder.newFile("world.tif"))
-        catalog.formats[new FormatName("terrain")] = Format.getFormat(temporaryFolder.newFile("terrain.tif"))
+        catalog.formats[new FormatName("world")] = Format.getFormat(new File(folder, "world.tif"))
+        catalog.formats[new FormatName("terrain")] = Format.getFormat(new File(folder, "terrain.tif"))
 
         FormatNameConverter converter = new FormatNameConverter(catalog: catalog)
         List<Completion> completions = []

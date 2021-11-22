@@ -1,18 +1,17 @@
 package org.geoshell
 
-import org.junit.Rule
-import org.junit.Test
-import org.junit.rules.TemporaryFolder
-import static org.junit.Assert.*
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.io.TempDir
+import static org.junit.jupiter.api.Assertions.*
 
 class CommandsTest {
 
-    @Rule
-    public TemporaryFolder temporaryFolder = new TemporaryFolder()
+    @TempDir
+    File folder
 
     @Test void download() {
         URL url = getClass().getClassLoader().getResource("points.zip")
-        File file = temporaryFolder.newFile("points.zip")
+        File file = new File(folder, "points.zip")
         Commands cmds = new Commands()
         cmds.download(url.toString(), file, true)
         assertTrue file.exists()
@@ -21,7 +20,7 @@ class CommandsTest {
 
     @Test void unzip() {
         File file = new File(getClass().getClassLoader().getResource("points.zip").toURI())
-        File directory = temporaryFolder.newFolder("pointszip")
+        File directory = new File(folder, "pointszip")
         Commands cmds = new Commands()
         cmds.unzip(file, directory)
         List<File> files = directory.listFiles()

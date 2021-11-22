@@ -3,20 +3,19 @@ package org.geoshell.raster
 import geoscript.layer.Format
 import org.geoshell.Catalog
 import org.geoshell.vector.LayerName
-import org.junit.Rule
-import org.junit.Test
-import org.junit.rules.TemporaryFolder
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.io.TempDir
 import org.springframework.shell.core.Completion
 import org.springframework.shell.core.MethodTarget
 
 import java.lang.reflect.Method
 
-import static org.junit.Assert.*
+import static org.junit.jupiter.api.Assertions.*
 
 class RasterNameConverterTest {
 
-    @Rule
-    public TemporaryFolder temporaryFolder = new TemporaryFolder()
+    @TempDir
+    File folder
 
     @Test
     void supports() {

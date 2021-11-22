@@ -7,8 +7,8 @@ import geoscript.workspace.Workspace
 import org.geoshell.raster.FormatName
 import org.geoshell.vector.LayerName
 import org.geoshell.vector.WorkspaceName
-import org.junit.Test
-import static org.junit.Assert.*
+import org.junit.jupiter.api.Test
+import static org.junit.jupiter.api.Assertions.*
 
 class CatalogTest {
 

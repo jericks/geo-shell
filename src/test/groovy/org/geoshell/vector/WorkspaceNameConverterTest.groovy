@@ -2,9 +2,9 @@ package org.geoshell.vector
 
 import geoscript.workspace.Memory
 import org.geoshell.Catalog
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import org.springframework.shell.core.Completion
-import static org.junit.Assert.*
+import static org.junit.jupiter.api.Assertions.*
 
 class WorkspaceNameConverterTest {
 

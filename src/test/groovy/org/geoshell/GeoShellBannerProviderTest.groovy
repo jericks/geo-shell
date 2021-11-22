@@ -1,10 +1,10 @@
 package org.geoshell
 
-import org.junit.Test
-import static org.junit.Assert.assertEquals
+import org.junit.jupiter.api.Test
+import static org.junit.jupiter.api.Assertions.assertEquals
 import org.springframework.shell.support.util.OsUtils
 
-import static org.junit.Assert.assertNotEquals
+import static org.junit.jupiter.api.Assertions.assertNotEquals
 
 class GeoShellBannerProviderTest {
 

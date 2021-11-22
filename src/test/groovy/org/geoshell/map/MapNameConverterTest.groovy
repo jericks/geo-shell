@@ -6,13 +6,13 @@ import geoscript.workspace.Workspace
 import org.geoshell.Catalog
 import org.geoshell.vector.LayerName
 import org.geoshell.vector.WorkspaceName
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import org.springframework.shell.core.Completion
 import org.springframework.shell.core.MethodTarget
 
 import java.lang.reflect.Method
 
-import static org.junit.Assert.*
+import static org.junit.jupiter.api.Assertions.*
 
 class MapNameConverterTest {
 

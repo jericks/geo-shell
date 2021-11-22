@@ -1,9 +1,9 @@
 package org.geoshell
 
-import org.junit.After
-import org.junit.Before
-import org.junit.Test
-import static org.junit.Assert.assertEquals
+import org.junit.jupiter.api.AfterEach
+import org.junit.jupiter.api.BeforeEach
+import org.junit.jupiter.api.Test
+import static org.junit.jupiter.api.Assertions.assertEquals
 import org.springframework.shell.Bootstrap
 import org.springframework.shell.core.CommandResult
 import org.springframework.shell.core.JLineShellComponent
@@ -12,13 +12,13 @@ class GeoShellTest {
 
     private JLineShellComponent shell;
 
-    @Before
+    @BeforeEach
     void before() throws InterruptedException {
         Bootstrap bootstrap = new Bootstrap()
         shell = bootstrap.getJLineShellComponent()
     }
 
-    @After
+    @AfterEach
     void after() {
         shell.stop()
     }

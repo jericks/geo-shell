@@ -1,7 +1,5 @@
 package org.geoshell.tile
 
-import geoscript.feature.Feature
-import geoscript.layer.Format
 import geoscript.layer.GeoTIFF
 import geoscript.layer.Layer
 import geoscript.layer.Shapefile
@@ -13,22 +11,21 @@ import org.geoshell.map.MapName
 import org.geoshell.raster.FormatName
 import org.geoshell.vector.LayerName
 import org.geoshell.vector.WorkspaceName
-import org.junit.Rule
-import org.junit.Test
-import org.junit.rules.TemporaryFolder
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.io.TempDir
 import org.springframework.shell.support.util.OsUtils
 
-import static org.junit.Assert.*
+import static org.junit.jupiter.api.Assertions.*
 
 class TileCommandsTest {
 
-    @Rule
-    public TemporaryFolder temporaryFolder = new TemporaryFolder()
+    @TempDir
+    File folder
 
     @Test void open() {
         Catalog catalog = new Catalog()
         TileCommands cmds = new TileCommands(catalog: catalog)
-        File file = new File(temporaryFolder.newFolder("world"), "world.mbtiles")
+        File file = createFile("world", "world.mbtiles")
         String result = cmds.open(new TileName("world"), file.absolutePath)
         assertEquals "Tile Layer world opened!", result
     }
@@ -43,7 +40,7 @@ class TileCommandsTest {
     @Test void close() {
         Catalog catalog = new Catalog()
         TileCommands cmds = new TileCommands(catalog: catalog)
-        File file = new File(temporaryFolder.newFolder("world"), "world.mbtiles")
+        File file = createFile("world", "world.mbtiles")
         cmds.open(new TileName("world"), file.absolutePath)
         String result = cmds.close(new TileName("world"))
         assertEquals "Tile Layer world closed!", result
@@ -52,9 +49,9 @@ class TileCommandsTest {
     @Test void list() {
         Catalog catalog = new Catalog()
         TileCommands cmds = new TileCommands(catalog: catalog)
-        File file1 = new File(temporaryFolder.newFolder("world"), "world.mbtiles")
+        File file1 = createFile("world", "world.mbtiles")
         cmds.open(new TileName("world"), file1.absolutePath)
-        File file2 = new File(temporaryFolder.newFolder("states"), "states.gpkg")
+        File file2 = createFile("states", "states.gpkg")
         cmds.open(new TileName("states"), file2.absolutePath)
         String result = cmds.list()
         assertEquals "world = MBTiles" + OsUtils.LINE_SEPARATOR + "states = GeoPackage", result
@@ -63,7 +60,7 @@ class TileCommandsTest {
     @Test void info() {
         Catalog catalog = new Catalog()
         TileCommands cmds = new TileCommands(catalog: catalog)
-        File file = new File(temporaryFolder.newFolder("world"), "world.mbtiles")
+        File file = createFile("world", "world.mbtiles")
         cmds.open(new TileName("world"), file.absolutePath)
         String result = cmds.info(new TileName("world"))
         assertTrue result.contains("world")
@@ -83,7 +80,7 @@ class TileCommandsTest {
         mapCommands.addLayer(new MapName("grid"), new LayerName("grid"), null)
 
         TileCommands cmds = new TileCommands(catalog: catalog)
-        File file = new File(temporaryFolder.newFolder("world"), "world.mbtiles")
+        File file = createFile("world", "world.mbtiles")
         cmds.open(new TileName("world"), file.absolutePath)
         String result = cmds.generate(new TileName("world"), new MapName("grid"),0,1,null,null,false,false)
         assertEquals "Tiles generated!", result
@@ -102,7 +99,7 @@ class TileCommandsTest {
         mapCommands.addLayer(new MapName("grid"), new LayerName("grid"), null)
 
         TileCommands cmds = new TileCommands(catalog: catalog)
-        File file = new File(temporaryFolder.newFolder("world"), "world.mbtiles")
+        File file = createFile("world", "world.mbtiles")
         cmds.open(new TileName("world"), file.absolutePath)
         String result = cmds.generate(new TileName("world"), new MapName("grid"),0,2,null,"4,4",false,false)
         assertEquals "Tiles generated!", result
@@ -121,7 +118,7 @@ class TileCommandsTest {
         mapCommands.addLayer(new MapName("grid"), new LayerName("grid"), null)
 
         TileCommands cmds = new TileCommands(catalog: catalog)
-        File file = new File(temporaryFolder.newFolder("world"), "world.mbtiles")
+        File file = createFile("world", "world.mbtiles")
         cmds.open(new TileName("world"), file.absolutePath)
         String result = cmds.generate(new TileName("world"), new MapName("grid"),0,1,null,null,false,false)
         assertEquals "Tiles generated!", result
@@ -149,14 +146,14 @@ class TileCommandsTest {
         mapCommands.addLayer(new MapName("grid"), new LayerName("grid"), null)
 
         TileCommands cmds = new TileCommands(catalog: catalog)
-        File file = new File(temporaryFolder.newFolder("world"), "world.mbtiles")
+        File file = createFile("world", "world.mbtiles")
         cmds.open(new TileName("world"), file.absolutePath)
         cmds.generate(new TileName("world"), new MapName("grid"),0,2,null,null,false,false)
 
-        catalog.formats[new FormatName("osm1")] = new GeoTIFF(temporaryFolder.newFile("osm1.tif"))
-        catalog.formats[new FormatName("osm2")] = new GeoTIFF(temporaryFolder.newFile("osm2.tif"))
-        catalog.formats[new FormatName("osm3")] = new GeoTIFF(temporaryFolder.newFile("osm3.tif"))
-        catalog.formats[new FormatName("osm4")] = new GeoTIFF(temporaryFolder.newFile("osm4.tif"))
+        catalog.formats[new FormatName("osm1")] = new GeoTIFF(new File(folder, "osm1.tif"))
+        catalog.formats[new FormatName("osm2")] = new GeoTIFF(new File(folder, "osm2.tif"))
+        catalog.formats[new FormatName("osm3")] = new GeoTIFF(new File(folder, "osm3.tif"))
+        catalog.formats[new FormatName("osm4")] = new GeoTIFF(new File(folder, "osm4.tif"))
 
         // Zoom Level
         String result = cmds.stitchRaster(new TileName("world"), new FormatName("osm1"), "osm1", null, 400, 400, 1, -1, -1, -1, -1)
@@ -180,7 +177,7 @@ class TileCommandsTest {
         catalog.workspaces[new WorkspaceName("workspace")] = new Memory()
 
         TileCommands cmds = new TileCommands(catalog: catalog)
-        File file = new File(temporaryFolder.newFolder("world"), "world.mbtiles")
+        File file = createFile("world", "world.mbtiles")
         cmds.open(new TileName("world"), file.absolutePath)
 
         // Generate zoom level 0 and 1
@@ -223,7 +220,7 @@ class TileCommandsTest {
     @Test void tiles() {
         Catalog catalog = new Catalog()
         TileCommands cmds = new TileCommands(catalog: catalog)
-        File file = new File(temporaryFolder.newFolder("world"), "world.mbtiles")
+        File file = createFile("world", "world.mbtiles")
         cmds.open(new TileName("world"), file.absolutePath)
         String result = cmds.tiles(new TileName("world"), "2315277.538707974,4356146.199006655,2534193.2172859586,4470343.227121928", 10)
         assertEquals """10/571/623
@@ -251,5 +248,11 @@ class TileCommandsTest {
 10/575/626
 10/576/626
 """.denormalize(), result
+    }
+
+    private File createFile(String dirName, String fileName) {
+        File dir = new File(folder, dirName)
+        dir.mkdir()
+        return new File(dir, fileName)
     }
 }

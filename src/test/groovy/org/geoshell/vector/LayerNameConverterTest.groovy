@@ -4,12 +4,12 @@ import geoscript.layer.Layer
 import geoscript.workspace.Memory
 import geoscript.workspace.Workspace
 import org.geoshell.Catalog
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import org.springframework.shell.core.MethodTarget
 
 import java.lang.reflect.Method
 
-import static org.junit.Assert.*
+import static org.junit.jupiter.api.Assertions.*
 import org.springframework.shell.core.Completion
 
 class LayerNameConverterTest {

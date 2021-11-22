@@ -2,8 +2,8 @@ package org.geoshell.docs
 
 import org.geotools.data.ogr.OGRDataStoreFactory
 import org.geotools.util.logging.Logging
-import org.junit.Ignore
-import org.junit.Test
+import org.junit.jupiter.api.Disabled
+import org.junit.jupiter.api.Test
 
 import java.util.logging.Level
 import java.util.logging.Logger
@@ -69,7 +69,7 @@ class BuiltinDocTest extends AbstractDocTest {
         copyFile(new File("src/test/resources/layer_count.txt"), new File("src/main/docs/output"))
     }
 
-    @Ignore
+    @Disabled
     @Test
     void download() {
         run("download", [

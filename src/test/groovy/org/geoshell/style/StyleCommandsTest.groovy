@@ -7,21 +7,20 @@ import org.geoshell.raster.FormatName
 import org.geoshell.raster.RasterName
 import org.geoshell.vector.LayerName
 import org.geoshell.vector.WorkspaceName
-import org.junit.Rule
-import org.junit.Test
-import org.junit.rules.TemporaryFolder
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.io.TempDir
 
-import static org.junit.Assert.*
+import static org.junit.jupiter.api.Assertions.*
 
 class StyleCommandsTest {
 
-    @Rule
-    public TemporaryFolder folder = new TemporaryFolder()
+    @TempDir
+    File folder
 
     @Test void create() {
         Catalog catalog = new Catalog()
         StyleCommands cmds = new StyleCommands(catalog: catalog)
-        File file = folder.newFile("style.sld")
+        File file = new File(folder, "style.sld")
         String result = cmds.create("stroke=black", file)
         assertTrue result.startsWith("Style stroke=black written to")
         assertTrue result.trim().endsWith("style.sld!")
@@ -35,7 +34,7 @@ class StyleCommandsTest {
         catalog.layers[new LayerName("points")] = catalog.workspaces[new WorkspaceName("shps")].get("points")
 
         StyleCommands cmds = new StyleCommands(catalog: catalog)
-        File styleFile = folder.newFile("style.sld")
+        File styleFile = new File(folder, "style.sld")
         String result = cmds.createDefaultVectorStyle(new LayerName("points"), "blue", 0.5, styleFile)
         assertTrue result.startsWith("Default Vector Style for points written to")
         assertTrue result.trim().endsWith("style.sld!")
@@ -49,7 +48,7 @@ class StyleCommandsTest {
         catalog.layers[new LayerName("grid")] = catalog.workspaces[new WorkspaceName("shps")].get("grid")
 
         StyleCommands cmds = new StyleCommands(catalog: catalog)
-        File styleFile = folder.newFile("style.sld")
+        File styleFile = new File(folder, "style.sld")
         String result = cmds.createUniqueValuesVectorStyle(new LayerName("grid"), "col", "random", styleFile)
         assertTrue result.startsWith("Unique Values Vector Style for grid's col Field written to")
         assertTrue result.trim().endsWith("style.sld!")
@@ -67,12 +66,12 @@ AHt=#5f025a
 AHt3=#e76161
 Aa1=#fcedcd
 Aa2=#94474b"""
-        File textFile = folder.newFile("unique.txt")
+        File textFile = new File(folder, "unique.txt")
         textFile.text = text
 
         Catalog catalog = new Catalog()
         StyleCommands cmds = new StyleCommands(catalog: catalog)
-        File styleFile = folder.newFile("style.sld")
+        File styleFile = new File(folder, "style.sld")
         String result = cmds.createUniqueValuesStyleFromText("units", "polygon", textFile, styleFile)
         assertTrue result.startsWith("Create a unique values style from")
         assertTrue result.contains("for units and polygon to")
@@ -87,7 +86,7 @@ Aa2=#94474b"""
         catalog.layers[new LayerName("grid")] = catalog.workspaces[new WorkspaceName("shps")].get("grid")
 
         StyleCommands cmds = new StyleCommands(catalog: catalog)
-        File styleFile = folder.newFile("style.sld")
+        File styleFile = new File(folder, "style.sld")
         String result = cmds.createGradientVectorStyle(new LayerName("grid"), "col", 8, "reds", "Quantile", "ignore", styleFile)
         assertTrue result.startsWith("Gradient Vector Style for grid's col Field written to")
         assertTrue result.trim().endsWith("style.sld!")
@@ -101,7 +100,7 @@ Aa2=#94474b"""
         catalog.rasters[new RasterName("raster")] = catalog.formats[new FormatName("raster")].read()
 
         StyleCommands cmds = new StyleCommands(catalog: catalog)
-        File styleFile = folder.newFile("style.sld")
+        File styleFile = new File(folder, "style.sld")
         String result = cmds.createDefaultRasterStyle(new RasterName("raster"), 0.5, styleFile)
         assertTrue result.startsWith("Default Raster Style for raster written to")
         assertTrue result.trim().endsWith("style.sld!")
@@ -116,7 +115,7 @@ Aa2=#94474b"""
         catalog.rasters[new RasterName("raster")] = catalog.formats[new FormatName("raster")].read()
 
         StyleCommands cmds = new StyleCommands(catalog: catalog)
-        File styleFile = folder.newFile("style.sld")
+        File styleFile = new File(folder, "style.sld")
         String result = cmds.createColorMapRasterStyle(new RasterName("raster"), 0.5, "10=red,50=blue,100=wheat,250=white", "ramp", false, styleFile)
         assertTrue result.startsWith("Colormap Raster Style for raster written to")
         assertTrue result.trim().endsWith("style.sld!")
@@ -134,7 +133,7 @@ Aa2=#94474b"""
         catalog.rasters[new RasterName("raster")] = catalog.formats[new FormatName("raster")].read()
 
         StyleCommands cmds = new StyleCommands(catalog: catalog)
-        File styleFile = folder.newFile("style.sld")
+        File styleFile = new File(folder, "style.sld")
         String result = cmds.createColorMapPaletteRasterStyle(1,255, "MutedTerrain", 25, "ramp", false, 1.0, styleFile)
         assertTrue result.startsWith("Colormap Palette Raster Style written to")
         assertTrue result.trim().endsWith("style.sld!")
@@ -148,9 +147,9 @@ Aa2=#94474b"""
     @Test void saveToStyleRepository() {
         Catalog catalog = new Catalog()
         StyleCommands cmds = new StyleCommands(catalog: catalog)
-        File styleFile = folder.newFile("style.sld")
+        File styleFile = new File(folder, "style.sld")
         cmds.createColorMapPaletteRasterStyle(1,255, "MutedTerrain", 25, "ramp", false, 1.0, styleFile)
-        File databaseFile = folder.newFile("styles.db")
+        File databaseFile = new File(folder, "styles.db")
         String result = cmds.saveStyleToStyleRepository("sqlite","file=${databaseFile.absolutePath}", "raster", "raster_colormap", styleFile)
         assertEquals("Style raster_colormap for Layer raster saved to sqlite", result);
     }
@@ -158,11 +157,11 @@ Aa2=#94474b"""
     @Test void getFromStyleRepository() {
         Catalog catalog = new Catalog()
         StyleCommands cmds = new StyleCommands(catalog: catalog)
-        File styleFile = folder.newFile("style.sld")
+        File styleFile = new File(folder, "style.sld")
         cmds.createColorMapPaletteRasterStyle(1,255, "MutedTerrain", 25, "ramp", false, 1.0, styleFile)
-        File databaseFile = folder.newFile("styles.db")
+        File databaseFile = new File(folder, "styles.db")
         cmds.saveStyleToStyleRepository("sqlite","file=${databaseFile.absolutePath}", "raster", "raster_colormap", styleFile)
-        File outputFile = folder.newFile("styles.sld")
+        File outputFile = new File(folder, "styles.sld")
         String result = cmds.getStyleFromStyleRepository("sqlite", "file=${databaseFile.absolutePath}", "raster", "raster_colormap", outputFile)
         assertEquals("Style raster_colormap for Layer raster saved to styles.sld", result)
         result = cmds.getStyleFromStyleRepository("sqlite", "file=${databaseFile.absolutePath}", "raster", "raster_colormap", null)
@@ -172,9 +171,9 @@ Aa2=#94474b"""
     @Test void deleteFromStyleRepository() {
         Catalog catalog = new Catalog()
         StyleCommands cmds = new StyleCommands(catalog: catalog)
-        File styleFile = folder.newFile("style.sld")
+        File styleFile = new File(folder, "style.sld")
         cmds.createColorMapPaletteRasterStyle(1,255, "MutedTerrain", 25, "ramp", false, 1.0, styleFile)
-        File databaseFile = folder.newFile("styles.db")
+        File databaseFile = new File(folder, "styles.db")
         cmds.saveStyleToStyleRepository("sqlite","file=${databaseFile.absolutePath}", "raster", "raster_colormap", styleFile)
         String result = cmds.listStylesInStyleRepository("sqlite", "file=${databaseFile.absolutePath}", null)
         assertTrue(result.contains("raster raster_colormap"))
@@ -187,9 +186,9 @@ Aa2=#94474b"""
     @Test void listStylesInStyleRepository() {
         Catalog catalog = new Catalog()
         StyleCommands cmds = new StyleCommands(catalog: catalog)
-        File styleFile = folder.newFile("style.sld")
+        File styleFile = new File(folder, "style.sld")
         cmds.createColorMapPaletteRasterStyle(1,255, "MutedTerrain", 25, "ramp", false, 1.0, styleFile)
-        File databaseFile = folder.newFile("styles.db")
+        File databaseFile = new File(folder, "styles.db")
         cmds.saveStyleToStyleRepository("sqlite","file=${databaseFile.absolutePath}", "raster", "raster_colormap", styleFile)
         String result = cmds.listStylesInStyleRepository("sqlite", "file=${databaseFile.absolutePath}", null)
         assertTrue(result.contains("raster raster_colormap"))
@@ -201,16 +200,17 @@ Aa2=#94474b"""
         Catalog catalog = new Catalog()
         StyleCommands cmds = new StyleCommands(catalog: catalog)
 
-        File styleFile1 = folder.newFile("style1.sld")
+        File styleFile1 = new File(folder, "style1.sld")
         cmds.createColorMapPaletteRasterStyle(1,255, "MutedTerrain", 25, "ramp", false, 1.0, styleFile1)
-        File styleFile2 = folder.newFile("style2.sld")
+        File styleFile2 = new File(folder, "style2.sld")
         cmds.createColorMapPaletteRasterStyle(1,255, "Blues", 25, "ramp", false, 1.0, styleFile2)
 
-        File databaseFile = folder.newFile("styles.db")
+        File databaseFile = new File(folder, "styles.db")
         cmds.saveStyleToStyleRepository("sqlite","file=${databaseFile.absolutePath}", "raster", "raster_colormap1", styleFile1)
         cmds.saveStyleToStyleRepository("sqlite","file=${databaseFile.absolutePath}", "raster", "raster_colormap2", styleFile2)
 
-        File directory = folder.newFolder("my-styles")
+        File directory = new File(folder, "my-styles")
+        directory.mkdir()
         String result = cmds.copyStylesInStyleRepository("sqlite", "file=${databaseFile.absolutePath}", "nested-directory", "file=${directory.absolutePath}")
         assertEquals("Copy styles from sqlite to nested-directory", result)
 

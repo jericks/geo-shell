@@ -12,16 +12,15 @@ import geoscript.workspace.GeoPackage
 import geoscript.workspace.Memory
 import geoscript.workspace.Workspace
 import org.geoshell.Catalog
-import org.junit.Rule
-import org.junit.Test
-import org.junit.rules.TemporaryFolder
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.io.TempDir
 import org.springframework.shell.support.util.OsUtils
-import static org.junit.Assert.*
+import static org.junit.jupiter.api.Assertions.*
 
 class LayerCommandsTest {
 
-    @Rule
-    public TemporaryFolder folder = new TemporaryFolder()
+    @TempDir
+    File folder
 
     @Test void open() {
         Catalog catalog = new Catalog()
@@ -365,7 +364,7 @@ class LayerCommandsTest {
         LayerCommands cmds = new LayerCommands(catalog: catalog)
         cmds.open(new WorkspaceName("shapes"), new LayerName("points"), "points")
 
-        File sldFile = folder.newFile("points.sld")
+        File sldFile = new File(folder, "points.sld")
 
         String result = cmds.getStyle(new LayerName("points"), sldFile)
         assertTrue result.startsWith("points style written to")
@@ -382,7 +381,7 @@ class LayerCommandsTest {
     @Test void copy() {
         Catalog catalog = new Catalog()
         catalog.workspaces[new WorkspaceName("mem")] = new Memory()
-        catalog.workspaces[new WorkspaceName("gpkg")] = new GeoPackage(folder.newFile("layers.gpkg"))
+        catalog.workspaces[new WorkspaceName("gpkg")] = new GeoPackage(new File(folder, "layers.gpkg"))
         LayerCommands cmds = new LayerCommands(catalog: catalog)
 
         // Create 100 random points

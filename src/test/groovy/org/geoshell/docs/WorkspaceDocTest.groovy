@@ -1,6 +1,6 @@
 package org.geoshell.docs
 
-import org.junit.Test
+import org.junit.jupiter.api.Test
 
 class WorkspaceDocTest extends AbstractDocTest {
 

@@ -8,13 +8,13 @@ import org.geoshell.vector.LayerCommands
 import org.geoshell.vector.LayerName
 import org.geoshell.vector.WorkspaceName
 import org.geoshell.map.Map as GeoShellMap
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import org.springframework.shell.core.Completion
 import org.springframework.shell.core.MethodTarget
 
 import java.lang.reflect.Method
 
-import static org.junit.Assert.*
+import static org.junit.jupiter.api.Assertions.*
 
 class MapLayerNameConverterTest {
 

@@ -1,10 +1,10 @@
 package org.geoshell.raster
 
 import org.geoshell.Catalog
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import org.springframework.shell.support.util.OsUtils
 
-import static org.junit.Assert.*
+import static org.junit.jupiter.api.Assertions.*
 
 class FormatCommandsTest {
 

@@ -1,7 +1,7 @@
 package org.geoshell.docs
 
-import org.junit.After
-import org.junit.Before
+import org.junit.jupiter.api.AfterEach
+import org.junit.jupiter.api.BeforeEach
 import org.springframework.shell.Bootstrap
 import org.springframework.shell.core.CommandResult
 import org.springframework.shell.core.JLineShellComponent
@@ -16,13 +16,13 @@ abstract class AbstractDocTest {
     protected JLineShellComponent shell
 
 
-    @Before
+    @BeforeEach
     void before() throws InterruptedException {
         Bootstrap bootstrap = new Bootstrap()
         shell = bootstrap.getJLineShellComponent()
     }
 
-    @After
+    @AfterEach
     void after() {
         shell.stop()
     }

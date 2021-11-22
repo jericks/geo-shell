@@ -1,6 +1,5 @@
 package org.geoshell.raster
 
-import geoscript.geom.Bounds
 import geoscript.layer.Format
 import geoscript.layer.Layer
 import geoscript.layer.Raster
@@ -9,16 +8,15 @@ import org.geoshell.Catalog
 import org.geoshell.style.StyleCommands
 import org.geoshell.vector.LayerName
 import org.geoshell.vector.WorkspaceName
-import org.junit.Rule
-import org.junit.Test
-import org.junit.rules.TemporaryFolder
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.io.TempDir
 
-import static org.junit.Assert.*
+import static org.junit.jupiter.api.Assertions.*
 
 class RasterCommandsTest {
 
-    @Rule
-    public TemporaryFolder temporaryFolder = new TemporaryFolder()
+    @TempDir
+    File folder
 
     @Test void open() {
         Catalog catalog = new Catalog()
@@ -95,7 +93,7 @@ class RasterCommandsTest {
         Format format = Format.getFormat(file)
         catalog.formats[new FormatName("raster")] = format
 
-        File outFile = new File(temporaryFolder.newFolder("cropped"), "cropped.tif")
+        File outFile = createFile("cropped", "cropped.tif")
         Format outFormat = Format.getFormat(outFile)
         catalog.formats[new FormatName("cropped")] = outFormat
 
@@ -118,11 +116,11 @@ class RasterCommandsTest {
         Format format = Format.getFormat(file)
         catalog.formats[new FormatName("raster")] = format
 
-        File croppedOutFile = new File(temporaryFolder.newFolder("cropped"), "cropped.tif")
+        File croppedOutFile = createFile("cropped", "cropped.tif")
         Format croppedOutFormat = Format.getFormat(croppedOutFile)
         catalog.formats[new FormatName("cropped")] = croppedOutFormat
 
-        File outFile = new File(temporaryFolder.newFolder("reprojected"), "reprojected.tif")
+        File outFile = createFile("reprojected", "reprojected.tif")
         Format outFormat = Format.getFormat(outFile)
         catalog.formats[new FormatName("reprojected")] = outFormat
 
@@ -145,7 +143,7 @@ class RasterCommandsTest {
         RasterCommands cmds = new RasterCommands(catalog: catalog)
         cmds.open(new FormatName("raster"), new RasterName("raster"), "raster")
 
-        File sldFile = temporaryFolder.newFile("raster.sld")
+        File sldFile = new File(folder, "raster.sld")
 
         String result = cmds.getStyle(new RasterName("raster"), sldFile)
         assertTrue result.startsWith("raster style written to")
@@ -196,7 +194,7 @@ class RasterCommandsTest {
         Format format = Format.getFormat(file)
         catalog.formats[new FormatName("raster")] = format
 
-        File outFile = new File(temporaryFolder.newFolder("reclassified"), "reclassified.tif")
+        File outFile = createFile("reclassified", "reclassified.tif")
         Format outFormat = Format.getFormat(outFile)
         catalog.formats[new FormatName("reclassified")] = outFormat
 
@@ -215,7 +213,7 @@ class RasterCommandsTest {
         catalog.formats[new FormatName("raster")] = format
         Raster inRaster = format.read()
 
-        File outFile = new File(temporaryFolder.newFolder("scaled"), "scaled.tif")
+        File outFile = createFile("scaled", "scaled.tif")
         Format outFormat = Format.getFormat(outFile)
         catalog.formats[new FormatName("scaled")] = outFormat
 
@@ -236,7 +234,7 @@ class RasterCommandsTest {
         catalog.formats[new FormatName("raster")] = format
         Raster inRaster = format.read()
 
-        File outFile = new File(temporaryFolder.newFolder("added"), "added.tif")
+        File outFile = createFile("added", "added.tif")
         Format outFormat = Format.getFormat(outFile)
         catalog.formats[new FormatName("added")] = outFormat
 
@@ -265,7 +263,7 @@ class RasterCommandsTest {
         Raster raster2 = format2.read()
 
         // Output
-        File outFile = new File(temporaryFolder.newFolder("added"), "added.tif")
+        File outFile = createFile("added", "added.tif")
         Format outFormat = Format.getFormat(outFile)
         catalog.formats[new FormatName("added")] = outFormat
 
@@ -288,7 +286,7 @@ class RasterCommandsTest {
         catalog.formats[new FormatName("raster")] = format
         Raster inRaster = format.read()
 
-        File outFile = new File(temporaryFolder.newFolder("subtracted"), "subtracted.tif")
+        File outFile = createFile("subtracted", "subtracted.tif")
         Format outFormat = Format.getFormat(outFile)
         catalog.formats[new FormatName("subtracted")] = outFormat
 
@@ -317,7 +315,7 @@ class RasterCommandsTest {
         Raster raster2 = format2.read()
 
         // Output
-        File outFile = new File(temporaryFolder.newFolder("subtracted"), "subtracted.tif")
+        File outFile = createFile("subtracted", "subtracted.tif")
         Format outFormat = Format.getFormat(outFile)
         catalog.formats[new FormatName("subtracted")] = outFormat
 
@@ -340,7 +338,7 @@ class RasterCommandsTest {
         catalog.formats[new FormatName("raster")] = format
         Raster inRaster = format.read()
 
-        File outFile = new File(temporaryFolder.newFolder("subtracted"), "subtracted.tif")
+        File outFile = createFile("subtracted", "subtracted.tif")
         Format outFormat = Format.getFormat(outFile)
         catalog.formats[new FormatName("subtracted")] = outFormat
 
@@ -362,7 +360,7 @@ class RasterCommandsTest {
         catalog.formats[new FormatName("raster")] = format
         Raster inRaster = format.read()
 
-        File outFile = new File(temporaryFolder.newFolder("multiply"), "multiply.tif")
+        File outFile = createFile("multiply", "multiply.tif")
         Format outFormat = Format.getFormat(outFile)
         catalog.formats[new FormatName("multiply")] = outFormat
 
@@ -391,7 +389,7 @@ class RasterCommandsTest {
         Raster raster2 = format2.read()
 
         // Output
-        File outFile = new File(temporaryFolder.newFolder("multiplied"), "multiplied.tif")
+        File outFile = createFile("multiplied", "multiplied.tif")
         Format outFormat = Format.getFormat(outFile)
         catalog.formats[new FormatName("multiplied")] = outFormat
 
@@ -414,7 +412,7 @@ class RasterCommandsTest {
         catalog.formats[new FormatName("raster")] = format
         Raster inRaster = format.read()
 
-        File outFile = new File(temporaryFolder.newFolder("divide"), "divide.tif")
+        File outFile = createFile("divide", "divide.tif")
         Format outFormat = Format.getFormat(outFile)
         catalog.formats[new FormatName("divide")] = outFormat
 
@@ -443,7 +441,7 @@ class RasterCommandsTest {
         Raster raster2 = format2.read()
 
         // Output
-        File outFile = new File(temporaryFolder.newFolder("divided"), "divided.tif")
+        File outFile = createFile("divided", "divided.tif")
         Format outFormat = Format.getFormat(outFile)
         catalog.formats[new FormatName("divided")] = outFormat
 
@@ -466,12 +464,12 @@ class RasterCommandsTest {
         catalog.formats[new FormatName("raster")] = format
         catalog.rasters[new RasterName("raster")] = catalog.formats[new FormatName("raster")].read()
 
-        File outFile = new File(temporaryFolder.newFolder("stylized"), "stylized.tif")
+        File outFile = createFile("stylized", "stylized.tif")
         Format outFormat = Format.getFormat(outFile)
         catalog.formats[new FormatName("stylized")] = outFormat
 
         StyleCommands styleCommands = new StyleCommands(catalog: catalog)
-        File styleFile = temporaryFolder.newFile("style.sld")
+        File styleFile = new File(folder, "style.sld")
         styleCommands.createColorMapRasterStyle(new RasterName("raster"), 0.5, "10=red,50=blue,100=wheat,250=white", "ramp", false, styleFile)
 
         RasterCommands cmds = new RasterCommands(catalog: catalog)
@@ -494,7 +492,7 @@ class RasterCommandsTest {
         catalog.formats[new FormatName("raster")] = format
         catalog.rasters[new RasterName("raster")] = catalog.formats[new FormatName("raster")].read()
 
-        File outFile = new File(temporaryFolder.newFolder("shaded"), "shaded.tif")
+        File outFile = createFile("shaded", "shaded.tif")
         Format outFormat = Format.getFormat(outFile)
         catalog.formats[new FormatName("shaded")] = outFormat
 
@@ -523,7 +521,7 @@ class RasterCommandsTest {
         catalog.formats[new FormatName("raster2")] = format2
         catalog.rasters[new RasterName("raster2")] = catalog.formats[new FormatName("raster2")].read()
 
-        File outFile = new File(temporaryFolder.newFolder("mosaic"), "mosaic.tif")
+        File outFile = createFile("mosaic", "mosaic.tif")
         Format outFormat = Format.getFormat(outFile)
         catalog.formats[new FormatName("mosaic")] = outFormat
 
@@ -552,6 +550,12 @@ class RasterCommandsTest {
         Layer layer = catalog.layers[new LayerName("polygons")]
         assertNotNull layer
         assertEquals 16, layer.count()
+    }
+
+    private File createFile(String dirName, String fileName) {
+        File dir = new File(folder, dirName)
+        dir.mkdir()
+        return new File(dir, fileName)
     }
 
 }
