@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer read* [gray]#--workspace# [silver]#mem# [gray]#--name# [silver]#points# [gray]#--file# [silver]#src/test/resources/points.json# +

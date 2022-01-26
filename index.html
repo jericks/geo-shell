@@ -575,6 +575,8 @@ table.CodeRay td.code{padding:0 0 0 .75em}
 <li><a href="#add">Add</a></li>
 <li><a href="#delete">Delete</a></li>
 <li><a href="#remove">Remove</a></li>
+<li><a href="#write">Write</a></li>
+<li><a href="#read">Read</a></li>
 <li><a href="#update-field">Update Field</a></li>
 <li><a href="#add-fields">Add Fields</a></li>
 <li><a href="#add-area-field">Add Area Field</a></li>
@@ -1973,6 +1975,145 @@ No parameters
 </div>
 </div>
 <div class="sect3">
+<h4 id="write"><a class="anchor" href="#write"></a>Write</h4>
+<div class="paragraph">
+<p>Write a Layer to GeoJSON, CSV, or KML.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer write</strong> <span class="gray">--name</span> <span class="silver">points</span> <span class="gray">--format</span> <span class="silver">geojson</span> <span class="gray">--file</span> <span class="silver">src/main/docs/output/points.json</span><br></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Layer name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">format</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The format</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">file</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The output file</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">mem</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace mem opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer create</strong> <span class="gray">--workspace</span> <span class="silver">mem</span> <span class="gray">--name</span> <span class="silver">points</span> <span class="gray">--fields</span> <span class="silver">"the_geom=Point</span> <span class="silver">EPSG:4326|fid=Int|name=String"</span><br>
+<span class="green">Created Layer points!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer add</strong> <span class="gray">--name</span> <span class="silver">points</span> <span class="gray">--values</span> <span class="silver">"the_geom=POINT</span> <span class="silver">(-122.333056</span> <span class="silver">47.609722)|fid=1|name=Seattle"</span><br>
+<span class="green">Added Feature to points</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer add</strong> <span class="gray">--name</span> <span class="silver">points</span> <span class="gray">--values</span> <span class="silver">"the_geom=POINT</span> <span class="silver">(-122.459444</span> <span class="silver">47.241389)|fid=2|name=Tacoma"</span><br>
+<span class="green">Added Feature to points</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer write</strong> <span class="gray">--name</span> <span class="silver">points</span> <span class="gray">--format</span> <span class="silver">geojson</span> <span class="gray">--file</span> <span class="silver">src/main/docs/output/points.json</span><br>
+<span class="green">Layer points written to /home/runner/work/geo-shell/geo-shell/src/main/docs/output/points.json as geojson</span><br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="read"><a class="anchor" href="#read"></a>Read</h4>
+<div class="paragraph">
+<p>Read a Layer from a GeoJSON, KML, or YAML file.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer read</strong> <span class="gray">--workspace</span> <span class="silver">mem</span> <span class="gray">--name</span> <span class="silver">points</span> <span class="gray">--file</span> <span class="silver">src/test/resources/points.json</span><br></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">workspace</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Workspace name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">file</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The output file</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">mem</span> <span class="gray">--params</span> <span class="silver">memory</span><br>
+<span class="green">Workspace mem opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer read</strong> <span class="gray">--workspace</span> <span class="silver">mem</span> <span class="gray">--name</span> <span class="silver">points</span> <span class="gray">--file</span> <span class="silver">src/test/resources/points.json</span><br>
+<span class="green">Created Layer points in Workspace mem for /home/runner/work/geo-shell/geo-shell/src/test/resources/points.json!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">points</span><br>
+<span class="green">Feature (fid&#8212;&#8203;63d0a0d_17e94f6c0ee_-63d7)</span><br>
+<span class="green">----------------------------------------</span><br>
+<span class="green">geometry = POINT (1 1)</span><br>
+<span class="green">id = 1</span><br>
+<span class="green">name = Home</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="green">Feature (fid&#8212;&#8203;63d0a0d_17e94f6c0ee_-63d6)</span><br>
+<span class="green">----------------------------------------</span><br>
+<span class="green">geometry = POINT (2 2)</span><br>
+<span class="green">id = 2</span><br>
+<span class="green">name = Work</span><br></p>
+</div>
+</div>
+<div class="sect3">
 <h4 id="update-field"><a class="anchor" href="#update-field"></a>Update Field</h4>
 <div class="paragraph">
 <p>Update the values of a field</p>
@@ -2055,16 +2196,16 @@ No parameters
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">points</span><br>
-<span class="green">Feature (fid&#8212;&#8203;5b97d704_17df34330f0_-6480)</span><br>
-<span class="green">-----------------------------------------</span><br>
+<span class="green">Feature (fid&#8212;&#8203;63d0a0d_17e94f6c0ee_-642c)</span><br>
+<span class="green">----------------------------------------</span><br>
 <span class="green">the_geom = POINT (-122.333056 47.609722)</span><br>
 <span class="green">fid = 1</span><br>
 <span class="green">name = Seattle</span><br>
 <span class="green">state = WA</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;5b97d704_17df34330f0_-647e)</span><br>
-<span class="green">-----------------------------------------</span><br>
+<p><span class="green">Feature (fid&#8212;&#8203;63d0a0d_17e94f6c0ee_-642a)</span><br>
+<span class="green">----------------------------------------</span><br>
 <span class="green">the_geom = POINT (-122.459444 47.241389)</span><br>
 <span class="green">fid = 2</span><br>
 <span class="green">name = Tacoma</span><br>
@@ -2256,8 +2397,8 @@ No parameters
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">states_area</span> <span class="gray">--filter</span> <span class="silver">"NAME_1='North</span> <span class="silver">Dakota'"</span> <span class="gray">--field</span> <span class="silver">"NAME_0,AREA"</span><br>
-<span class="green">Feature (fid&#8212;&#8203;5b97d704_17df34330f0_-6479)</span><br>
-<span class="green">-----------------------------------------</span><br>
+<span class="green">Feature (fid&#8212;&#8203;63d0a0d_17e94f6c0ee_-6425)</span><br>
+<span class="green">----------------------------------------</span><br>
 <span class="green">NAME_0 = United States</span><br>
 <span class="green">AREA = 21.804544852979944</span><br></p>
 </div>
@@ -2441,8 +2582,8 @@ No parameters
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">places_id</span> <span class="gray">--filter</span> <span class="silver">"NAME='Seattle'"</span> <span class="gray">--field</span> <span class="silver">"NAME,ID"</span><br>
-<span class="green">Feature (fid&#8212;&#8203;5b97d704_17df34330f0_-65be)</span><br>
-<span class="green">-----------------------------------------</span><br>
+<span class="green">Feature (fid&#8212;&#8203;63d0a0d_17e94f6c0ee_-656a)</span><br>
+<span class="green">----------------------------------------</span><br>
 <span class="green">NAME = Seattle</span><br>
 <span class="green">ID = 10</span><br></p>
 </div>
@@ -2627,8 +2768,8 @@ No parameters
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">places_xy</span> <span class="gray">--filter</span> <span class="silver">"NAME='Seattle'"</span> <span class="gray">--field</span> <span class="silver">"NAME,X,Y"</span><br>
-<span class="green">Feature (fid&#8212;&#8203;5b97d704_17df34330f0_-4c6e)</span><br>
-<span class="green">-----------------------------------------</span><br>
+<span class="green">Feature (fid&#8212;&#8203;63d0a0d_17e94f6c0ee_-4c10)</span><br>
+<span class="green">----------------------------------------</span><br>
 <span class="green">NAME = Seattle</span><br>
 <span class="green">X = -122.34193084586849</span><br>
 <span class="green">Y = 47.57194791253073</span><br></p>
@@ -2758,15 +2899,15 @@ No parameters
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer features</strong> <span class="gray">--name</span> <span class="silver">lines_fixed</span><br>
-<span class="green">Feature (fid&#8212;&#8203;5b97d704_17df34330f0_-6435)</span><br>
-<span class="green">-----------------------------------------</span><br>
+<span class="green">Feature (fid&#8212;&#8203;63d0a0d_17e94f6c0ee_-63e1)</span><br>
+<span class="green">----------------------------------------</span><br>
 <span class="green">the_geom = LINESTRING (0 0, 1 1)</span><br>
 <span class="green">fid = 1</span><br>
 <span class="green">name = Location 1</span><br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Feature (fid&#8212;&#8203;5b97d704_17df34330f0_-6434)</span><br>
-<span class="green">-----------------------------------------</span><br>
+<p><span class="green">Feature (fid&#8212;&#8203;63d0a0d_17e94f6c0ee_-63e0)</span><br>
+<span class="green">----------------------------------------</span><br>
 <span class="green">the_geom = LINESTRING (1 1, 2 2, 3 3)</span><br>
 <span class="green">fid = 2</span><br>
 <span class="green">name = Location 2</span><br></p>
@@ -11850,12 +11991,12 @@ No parameters
           <span class="tag">&lt;/ogc:Filter&gt;</span>
           <span class="tag">&lt;sld:PolygonSymbolizer&gt;</span>
             <span class="tag">&lt;sld:Fill&gt;</span>
-              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fill</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#6a0f1d<span class="tag">&lt;/sld:CssParameter&gt;</span>
+              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fill</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#687135<span class="tag">&lt;/sld:CssParameter&gt;</span>
             <span class="tag">&lt;/sld:Fill&gt;</span>
           <span class="tag">&lt;/sld:PolygonSymbolizer&gt;</span>
           <span class="tag">&lt;sld:LineSymbolizer&gt;</span>
             <span class="tag">&lt;sld:Stroke&gt;</span>
-              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#4a0a14<span class="tag">&lt;/sld:CssParameter&gt;</span>
+              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#484f25<span class="tag">&lt;/sld:CssParameter&gt;</span>
               <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke-width</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>0.5<span class="tag">&lt;/sld:CssParameter&gt;</span>
             <span class="tag">&lt;/sld:Stroke&gt;</span>
           <span class="tag">&lt;/sld:LineSymbolizer&gt;</span>
@@ -11869,12 +12010,12 @@ No parameters
           <span class="tag">&lt;/ogc:Filter&gt;</span>
           <span class="tag">&lt;sld:PolygonSymbolizer&gt;</span>
             <span class="tag">&lt;sld:Fill&gt;</span>
-              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fill</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#137a65<span class="tag">&lt;/sld:CssParameter&gt;</span>
+              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fill</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#5d2852<span class="tag">&lt;/sld:CssParameter&gt;</span>
             <span class="tag">&lt;/sld:Fill&gt;</span>
           <span class="tag">&lt;/sld:PolygonSymbolizer&gt;</span>
           <span class="tag">&lt;sld:LineSymbolizer&gt;</span>
             <span class="tag">&lt;sld:Stroke&gt;</span>
-              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#0d5546<span class="tag">&lt;/sld:CssParameter&gt;</span>
+              <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>#411c39<span class="tag">&lt;/sld:CssParameter&gt;</span>
               <span class="tag">&lt;sld:CssParameter</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">stroke-width</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>0.5<span class="tag">&lt;/sld:CssParameter&gt;</span>
             <span class="tag">&lt;/sld:Stroke&gt;</span>
           <span class="tag">&lt;/sld:LineSymbolizer&gt;</span>
@@ -12647,8 +12788,8 @@ No parameters
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">style repository list</strong> <span class="gray">--type</span> <span class="silver">directory</span> <span class="gray">--options</span> <span class="silver">file=examples/styles</span><br>
-<span class="green">roads roads</span><br>
-<span class="green">parcels parcels</span><br></p>
+<span class="green">parcels parcels</span><br>
+<span class="green">roads roads</span><br></p>
 </div>
 <div class="paragraph">
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">style repository delete</strong> <span class="gray">--type</span> <span class="silver">directory</span> <span class="gray">--options</span> <span class="silver">file=examples/styles</span> <span class="gray">--layerName</span> <span class="silver">parcels</span> <span class="gray">--styleName</span> <span class="silver">parcels</span><br>
@@ -13959,7 +14100,7 @@ No parameters
 <p><span class="blue">geo-shell&gt;</span> <strong class="navy">date</strong> <br></p>
 </div>
 <div class="paragraph">
-<p><span class="green">Saturday, December 25, 2021 at 8:23:44 PM Coordinated Universal Time</span><br></p>
+<p><span class="green">Wednesday, January 26, 2022 at 5:58:33 AM Coordinated Universal Time</span><br></p>
 </div>
 </div>
 <div class="sect2">
@@ -14264,7 +14405,7 @@ No parameters
 <div id="footer">
 <div id="footer-text">
 Version 0.11-SNAPSHOT<br>
-Last updated 2021-12-25 20:19:49 UTC
+Last updated 2022-01-26 05:55:16 UTC
 </div>
 </div>
 </body>

@@ -1,0 +1,22 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|name
+|The Layer name
+|true
+|
+|
+
+|format
+|The format
+|true
+|
+|
+
+|file
+|The output file
+|false
+|
+|
+
+|===

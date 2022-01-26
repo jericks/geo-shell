@@ -1,0 +1,1 @@
+Read a Layer from a GeoJSON, KML, or YAML file.

@@ -55,6 +55,7 @@
 [green]#* layer points along lines - Create points along lines# +
 [green]#* layer projection - Get the Projection of a Layer.# +
 [green]#* layer random - Create a Layer with a number of randomly located points# +
+[green]#* layer read - Read a Layer from a GeoJSON, KML, or YAML file.# +
 [green]#* layer remove - Remove a Layer from a Workspace.# +
 [green]#* layer removefields - Remove Fields to the input Layer and save the result to the output Layer# +
 [green]#* layer reproject - Transform the features of the input Layer and save them to the output Layer# +
@@ -69,6 +70,7 @@
 [green]#* layer updatefield - Update the values of a field# +
 [green]#* layer validity - Check for invalid geometries in the Layer.# +
 [green]#* layer voronoi - Calculate a voronoi diagram of the input Layer and save it to the output Layer.# +
+[green]#* layer write - Write a Layer to GeoJSON, CSV, or KML.# +
 [green]#* map add layer - Add a Vector Layer.# +
 [green]#* map add raster - Add a Raster Layer.# +
 [green]#* map add tile - Add a Tile Layer.# +

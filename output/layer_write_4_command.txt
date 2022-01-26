@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*layer write* [gray]#--name# [silver]#points# [gray]#--format# [silver]#geojson# [gray]#--file# [silver]#src/main/docs/output/points.json# +

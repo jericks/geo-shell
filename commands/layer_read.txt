@@ -1,0 +1,22 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|workspace
+|The Workspace name
+|true
+|
+|
+
+|name
+|The name
+|true
+|
+|
+
+|file
+|The output file
+|true
+|
+|
+
+|===
