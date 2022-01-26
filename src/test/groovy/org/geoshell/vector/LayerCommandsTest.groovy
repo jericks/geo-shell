@@ -1235,4 +1235,35 @@ class LayerCommandsTest {
         Layer layer = catalog.layers[new LayerName("hexagons")]
         assertEquals 219, layer.count
     }
+
+    @Test void write() {
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+
+        cmds.create(new WorkspaceName("mem"), "points", "geom=Point EPSG:4326|id=Int|name=String")
+        cmds.add(new LayerName("points"), "geom=POINT(1 1)|id=1|name=Home")
+        cmds.add(new LayerName("points"), "geom=POINT(2 2)|id=2|name=Work")
+
+        File file = new File(folder, "points.json")
+        String results = cmds.write(new LayerName("points"), "geojson", file)
+        assertTrue(results.startsWith("Layer points written to"))
+        assertTrue(results.endsWith("points.json as geojson"))
+        assertTrue(file.text.startsWith("""{"type":"FeatureCollection"""))
+        println file.text
+    }
+
+    @Test void read() {
+        Catalog catalog = new Catalog()
+        catalog.workspaces[new WorkspaceName("mem")] = new Memory()
+        LayerCommands cmds = new LayerCommands(catalog: catalog)
+
+        File file = new File(getClass().getClassLoader().getResource("points.json").toURI())
+        String result = cmds.read(new WorkspaceName("mem"), "points", file)
+        assertTrue(result.startsWith("Created Layer points in Workspace mem for"))
+        assertTrue(result.endsWith("points.json!"))
+
+        Layer layer = catalog.layers[new LayerName("points")]
+        assertEquals(2, layer.count)
+    }
 }

@@ -13,12 +13,25 @@ import geoscript.geom.Point
 import geoscript.layer.Graticule
 import geoscript.layer.Layer
 import geoscript.layer.Writer as LayerWriter
+import geoscript.layer.io.CsvReader
+import geoscript.layer.io.GeoJSONReader
+import geoscript.layer.io.GeoRSSWriter
+import geoscript.layer.io.GeobufWriter
+import geoscript.layer.io.GmlWriter
+import geoscript.layer.io.GpxWriter
+import geoscript.layer.io.KmlWriter
+import geoscript.layer.io.MvtWriter
+import geoscript.layer.io.Reader
+import geoscript.layer.io.Writer
+import geoscript.layer.io.Writers
+import geoscript.layer.io.YamlReader
 import geoscript.proj.Projection
 import geoscript.style.Style
 import geoscript.style.io.CSSReader
 import geoscript.style.io.SLDReader
 import geoscript.style.io.SLDWriter
 import geoscript.workspace.Workspace
+import org.apache.commons.io.FilenameUtils
 import org.geoshell.Catalog
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.shell.core.CommandMarker
@@ -1691,6 +1704,73 @@ class LayerCommands implements CommandMarker {
         } else {
             "Unable to find Workspace ${workspaceName}"
         }
+    }
+
+    @CliCommand(value = "layer write", help = "Write a Layer to GeoJSON, CSV, or KML.")
+    String write(
+            @CliOption(key = "name", mandatory = true, help = "The Layer name") LayerName name,
+            @CliOption(key = "format", mandatory = true, help = "The format") String format,
+            @CliOption(key = "file", mandatory = false, help = "The output file") File file
+    ) throws Exception {
+        Layer layer = catalog.layers[name]
+        if (layer) {
+            Writer writer = Writers.find(format)
+            if (file) {
+                writer.write(layer, file)
+                "Layer ${name} written to ${file} as ${format}"
+            } else {
+                writer.write(layer)
+            }
+        } else {
+            "Unable to find Layer ${name}"
+        }
+    }
+
+    @CliCommand(value = "layer read", help = "Read a Layer from a GeoJSON, KML, or YAML file.")
+    String read(
+            @CliOption(key = "workspace", mandatory = true, help = "The Workspace name") WorkspaceName workspaceName,
+            @CliOption(key = "name", mandatory = true, help = "The name") String name,
+            @CliOption(key = "file", mandatory = true, help = "The output file") File file
+    ) throws Exception {
+        Workspace workspace = catalog.workspaces[workspaceName]
+        if (workspace) {
+            String fileExtension = FilenameUtils.getExtension(file.name)
+            Reader reader = getReaderForFileExtension(fileExtension)
+            if (reader) {
+                Layer layer = reader.read(file)
+                workspace.add(layer)
+                catalog.layers[new LayerName(name)] = layer
+                "Created Layer ${name} in Workspace ${workspaceName} for ${file}!"
+            } else {
+                "Unable to find reader for ${file}!"
+            }
+        } else {
+            "Unable to find Workspace ${workspaceName}"
+        }
+    }
+
+    private Reader getReaderForFileExtension(String fileExtension) {
+        Reader reader
+        if (fileExtension.equalsIgnoreCase("csv")) {
+            reader = new CsvReader()
+        } else if (fileExtension.equalsIgnoreCase("json")) {
+            reader = new GeoJSONReader()
+        } else if (fileExtension.equalsIgnoreCase("yml") || fileExtension.equalsIgnoreCase("yaml")) {
+            reader = new YamlReader()
+        } else if (fileExtension.equalsIgnoreCase("geobuf") || fileExtension.equalsIgnoreCase("pbf")) {
+            reader = new GeobufWriter()
+        } else if (fileExtension.equalsIgnoreCase("mvt")) {
+            reader = new MvtWriter()
+        } else if (fileExtension.equalsIgnoreCase("gml")) {
+            reader = new GmlWriter()
+        } else if (fileExtension.equalsIgnoreCase("kml")) {
+            reader = new KmlWriter()
+        } else if (fileExtension.equalsIgnoreCase("rss")) {
+            reader = new GeoRSSWriter()
+        } else if (fileExtension.equalsIgnoreCase("gpx")) {
+            reader = new GpxWriter()
+        }
+        reader
     }
 
 }

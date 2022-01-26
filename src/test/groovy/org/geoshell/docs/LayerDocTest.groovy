@@ -239,6 +239,26 @@ class LayerDocTest extends AbstractDocTest {
     }
 
     @Test
+    void write() {
+        run("layer_write", [
+                'workspace open --name mem --params memory',
+                'layer create --workspace mem --name points --fields "the_geom=Point EPSG:4326|fid=Int|name=String"',
+                'layer add --name points --values "the_geom=POINT (-122.333056 47.609722)|fid=1|name=Seattle"',
+                'layer add --name points --values "the_geom=POINT (-122.459444 47.241389)|fid=2|name=Tacoma"',
+                'layer write --name points --format geojson --file src/main/docs/output/points.json'
+        ])
+    }
+
+    @Test
+    void read() {
+        run("layer_read", [
+                'workspace open --name mem --params memory',
+                'layer read --workspace mem --name points --file src/test/resources/points.json',
+                'layer features --name points'
+        ])
+    }
+
+    @Test
     void updateField() {
         run("layer_updatefield", [
                 'workspace open --name mem --params memory',

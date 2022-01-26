@@ -338,6 +338,46 @@ include::output/layer_remove_5_result.txt[]
 include::output/layer_remove_6_command.txt[]
 include::output/layer_remove_6_result.txt[]
 
+==== Write
+
+include::commands/layer_write_description.txt[]
+
+include::output/layer_write_4_command.txt[]
+
+include::commands/layer_write.txt[]
+
+include::output/layer_write_0_command.txt[]
+include::output/layer_write_0_result.txt[]
+
+include::output/layer_write_1_command.txt[]
+include::output/layer_write_1_result.txt[]
+
+include::output/layer_write_2_command.txt[]
+include::output/layer_write_2_result.txt[]
+
+include::output/layer_write_3_command.txt[]
+include::output/layer_write_3_result.txt[]
+
+include::output/layer_write_4_command.txt[]
+include::output/layer_write_4_result.txt[]
+
+==== Read
+
+include::commands/layer_read_description.txt[]
+
+include::output/layer_read_1_command.txt[]
+
+include::commands/layer_read.txt[]
+
+include::output/layer_read_0_command.txt[]
+include::output/layer_read_0_result.txt[]
+
+include::output/layer_read_1_command.txt[]
+include::output/layer_read_1_result.txt[]
+
+include::output/layer_read_2_command.txt[]
+include::output/layer_read_2_result.txt[]
+
 ==== Update Field
 
 include::commands/layer_updatefield_description.txt[]
