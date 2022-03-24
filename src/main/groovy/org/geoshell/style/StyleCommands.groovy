@@ -286,7 +286,7 @@ class StyleCommands implements CommandMarker {
             String layerName
     ) {
         StyleRepository styleRepository = StyleRepositoryFactory.getStyleRepository(type, StyleRepositoryFactory.getParameters(params))
-        List<Map<String,String>> styles = []
+        List<Map<String,Object>> styles = []
         if (layerName) {
             styles.addAll(styleRepository.getForLayer(layerName))
         } else {
@@ -313,9 +313,9 @@ class StyleCommands implements CommandMarker {
     ) {
         StyleRepository inputStyleRepository = StyleRepositoryFactory.getStyleRepository(inputType, StyleRepositoryFactory.getParameters(inputParams))
         StyleRepository outputStyleRepository = StyleRepositoryFactory.getStyleRepository(outputType, StyleRepositoryFactory.getParameters(outputParams))
-        List<Map<String, String>> styles = inputStyleRepository.getAll()
-        styles.each {Map<String,String> style ->
-            outputStyleRepository.save(style.layerName, style.styleName, style.style)
+        List<Map<String, Object>> styles = inputStyleRepository.getAll()
+        styles.each {Map<String,Object> style ->
+            outputStyleRepository.save(style.layerName, style.styleName, style.styleStr, [:])
         }
         "Copy styles from ${inputType} to ${outputType}"
     }
