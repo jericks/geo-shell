@@ -8,6 +8,7 @@
       <sld:FeatureTypeStyle>
         <sld:Name>name</sld:Name>
         <sld:Rule>
+          <sld:Name>Afghanistan</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -16,17 +17,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#052805</sld:CssParameter>
+              <sld:CssParameter name="fill">#390b50</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#031c03</sld:CssParameter>
+              <sld:CssParameter name="stroke">#270738</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Albania</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -35,17 +37,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#391855</sld:CssParameter>
+              <sld:CssParameter name="fill">#7a2f63</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#27103b</sld:CssParameter>
+              <sld:CssParameter name="stroke">#552045</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Algeria</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -54,17 +57,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#0a015c</sld:CssParameter>
+              <sld:CssParameter name="fill">#3f1170</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#070040</sld:CssParameter>
+              <sld:CssParameter name="stroke">#2c0b4e</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Angola</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -73,17 +77,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#4b1f5a</sld:CssParameter>
+              <sld:CssParameter name="fill">#5a6e2f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#34153e</sld:CssParameter>
+              <sld:CssParameter name="stroke">#3e4d20</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Antarctica</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -92,17 +97,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#472626</sld:CssParameter>
+              <sld:CssParameter name="fill">#7a2235</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#311a1a</sld:CssParameter>
+              <sld:CssParameter name="stroke">#551725</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Argentina</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -111,17 +117,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#75110d</sld:CssParameter>
+              <sld:CssParameter name="fill">#7a6510</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#510b09</sld:CssParameter>
+              <sld:CssParameter name="stroke">#55460b</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Armenia</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -130,17 +137,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#6c1676</sld:CssParameter>
+              <sld:CssParameter name="fill">#26774d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#4b0f52</sld:CssParameter>
+              <sld:CssParameter name="stroke">#1a5335</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Australia</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -149,17 +157,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#65612f</sld:CssParameter>
+              <sld:CssParameter name="fill">#2a7e1a</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#464320</sld:CssParameter>
+              <sld:CssParameter name="stroke">#1d5812</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Austria</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -168,17 +177,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#180753</sld:CssParameter>
+              <sld:CssParameter name="fill">#6a6f2d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#10043a</sld:CssParameter>
+              <sld:CssParameter name="stroke">#4a4d1f</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Azerbaijan</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -187,17 +197,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#3f7367</sld:CssParameter>
+              <sld:CssParameter name="fill">#497317</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#2c5048</sld:CssParameter>
+              <sld:CssParameter name="stroke">#335010</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Bahamas</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -206,17 +217,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#25724a</sld:CssParameter>
+              <sld:CssParameter name="fill">#595b3d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#194f33</sld:CssParameter>
+              <sld:CssParameter name="stroke">#3e3f2a</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Bangladesh</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -225,17 +237,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#7e2a65</sld:CssParameter>
+              <sld:CssParameter name="fill">#1c7371</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#581d46</sld:CssParameter>
+              <sld:CssParameter name="stroke">#13504f</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Belarus</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -244,17 +257,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#6b7614</sld:CssParameter>
+              <sld:CssParameter name="fill">#0c4d3f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#4a520e</sld:CssParameter>
+              <sld:CssParameter name="stroke">#08352c</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Belgium</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -263,17 +277,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#4e7440</sld:CssParameter>
+              <sld:CssParameter name="fill">#1e0050</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#36512c</sld:CssParameter>
+              <sld:CssParameter name="stroke">#150038</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Belize</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -282,17 +297,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#730545</sld:CssParameter>
+              <sld:CssParameter name="fill">#543a75</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#500330</sld:CssParameter>
+              <sld:CssParameter name="stroke">#3a2851</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Benin</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -301,17 +317,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#7f242a</sld:CssParameter>
+              <sld:CssParameter name="fill">#10042c</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#58191d</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0b021e</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Bhutan</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -320,17 +337,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#460c61</sld:CssParameter>
+              <sld:CssParameter name="fill">#493d3c</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#310843</sld:CssParameter>
+              <sld:CssParameter name="stroke">#332a2a</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Bolivia</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -339,17 +357,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#3d5a4f</sld:CssParameter>
+              <sld:CssParameter name="fill">#1c122e</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#2a3e37</sld:CssParameter>
+              <sld:CssParameter name="stroke">#130c20</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Bosnia and Herzegovina</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -358,17 +377,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#3c2a27</sld:CssParameter>
+              <sld:CssParameter name="fill">#463f6e</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#2a1d1b</sld:CssParameter>
+              <sld:CssParameter name="stroke">#312c4d</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Botswana</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -377,17 +397,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#4f5a7f</sld:CssParameter>
+              <sld:CssParameter name="fill">#4d1334</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#373e58</sld:CssParameter>
+              <sld:CssParameter name="stroke">#350d24</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Brazil</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -396,17 +417,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#3e1879</sld:CssParameter>
+              <sld:CssParameter name="fill">#100e2a</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#2b1054</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0b091d</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Brunei</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -415,17 +437,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#734726</sld:CssParameter>
+              <sld:CssParameter name="fill">#21184f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#50311a</sld:CssParameter>
+              <sld:CssParameter name="stroke">#171037</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Bulgaria</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -434,17 +457,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#094b25</sld:CssParameter>
+              <sld:CssParameter name="fill">#6a0822</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#063419</sld:CssParameter>
+              <sld:CssParameter name="stroke">#4a0517</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Burkina Faso</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -453,17 +477,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#2c5757</sld:CssParameter>
+              <sld:CssParameter name="fill">#7e3316</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#1e3c3c</sld:CssParameter>
+              <sld:CssParameter name="stroke">#58230f</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Burundi</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -472,17 +497,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#6d044d</sld:CssParameter>
+              <sld:CssParameter name="fill">#1a1a4c</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#4c0235</sld:CssParameter>
+              <sld:CssParameter name="stroke">#121235</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Cambodia</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -491,17 +517,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#746419</sld:CssParameter>
+              <sld:CssParameter name="fill">#50737f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#514611</sld:CssParameter>
+              <sld:CssParameter name="stroke">#385058</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Cameroon</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -510,17 +537,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#2b0479</sld:CssParameter>
+              <sld:CssParameter name="fill">#3d5230</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#1e0254</sld:CssParameter>
+              <sld:CssParameter name="stroke">#2a3921</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Canada</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -529,17 +557,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#3c2a58</sld:CssParameter>
+              <sld:CssParameter name="fill">#612639</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#2a1d3d</sld:CssParameter>
+              <sld:CssParameter name="stroke">#431a27</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Central African Republic</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -548,17 +577,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#27476d</sld:CssParameter>
+              <sld:CssParameter name="fill">#425f79</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#1b314c</sld:CssParameter>
+              <sld:CssParameter name="stroke">#2e4254</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Chad</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -567,17 +597,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#462354</sld:CssParameter>
+              <sld:CssParameter name="fill">#7a3164</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#31183a</sld:CssParameter>
+              <sld:CssParameter name="stroke">#552246</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Chile</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -586,17 +617,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#473c74</sld:CssParameter>
+              <sld:CssParameter name="fill">#3a4050</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#312a51</sld:CssParameter>
+              <sld:CssParameter name="stroke">#282c38</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>China</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -605,17 +637,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#56280d</sld:CssParameter>
+              <sld:CssParameter name="fill">#1d7259</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#3c1c09</sld:CssParameter>
+              <sld:CssParameter name="stroke">#144f3e</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Colombia</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -624,17 +657,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#051a6a</sld:CssParameter>
+              <sld:CssParameter name="fill">#212745</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#03124a</sld:CssParameter>
+              <sld:CssParameter name="stroke">#171b30</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Congo</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -643,17 +677,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#7f6b5c</sld:CssParameter>
+              <sld:CssParameter name="fill">#554e2c</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#584a40</sld:CssParameter>
+              <sld:CssParameter name="stroke">#3b361e</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Costa Rica</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -662,17 +697,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#213f02</sld:CssParameter>
+              <sld:CssParameter name="fill">#0e214d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#172c01</sld:CssParameter>
+              <sld:CssParameter name="stroke">#091735</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Cote D'Ivoire</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -681,17 +717,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#280f1b</sld:CssParameter>
+              <sld:CssParameter name="fill">#330c22</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#1c0a12</sld:CssParameter>
+              <sld:CssParameter name="stroke">#230817</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Croatia</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -700,17 +737,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#00022c</sld:CssParameter>
+              <sld:CssParameter name="fill">#244e2c</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#00011e</sld:CssParameter>
+              <sld:CssParameter name="stroke">#19361e</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Cuba</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -719,17 +757,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#060b47</sld:CssParameter>
+              <sld:CssParameter name="fill">#107641</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#040731</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0b522d</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Cyprus</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -738,17 +777,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#0e041d</sld:CssParameter>
+              <sld:CssParameter name="fill">#4d1e5e</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#090214</sld:CssParameter>
+              <sld:CssParameter name="stroke">#351541</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Czech Republic</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -757,17 +797,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#241711</sld:CssParameter>
+              <sld:CssParameter name="fill">#3c2e46</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#19100b</sld:CssParameter>
+              <sld:CssParameter name="stroke">#2a2031</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Democratic Republic of the Congo</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -776,17 +817,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#675369</sld:CssParameter>
+              <sld:CssParameter name="fill">#7b4023</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#483a49</sld:CssParameter>
+              <sld:CssParameter name="stroke">#562c18</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Denmark</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -795,17 +837,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#1a6c46</sld:CssParameter>
+              <sld:CssParameter name="fill">#0c4030</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#124b31</sld:CssParameter>
+              <sld:CssParameter name="stroke">#082c21</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Djibouti</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -814,17 +857,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#2d486a</sld:CssParameter>
+              <sld:CssParameter name="fill">#49656f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#1f324a</sld:CssParameter>
+              <sld:CssParameter name="stroke">#33464d</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Dominican Republic</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -833,17 +877,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#594f35</sld:CssParameter>
+              <sld:CssParameter name="fill">#2d6739</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#3e3725</sld:CssParameter>
+              <sld:CssParameter name="stroke">#1f4827</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Ecuador</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -852,17 +897,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#4c4c4e</sld:CssParameter>
+              <sld:CssParameter name="fill">#3e534d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#353536</sld:CssParameter>
+              <sld:CssParameter name="stroke">#2b3a35</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Egypt</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -871,17 +917,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#783f4b</sld:CssParameter>
+              <sld:CssParameter name="fill">#262908</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#542c34</sld:CssParameter>
+              <sld:CssParameter name="stroke">#1a1c05</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>El Salvador</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -890,17 +937,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#333c5b</sld:CssParameter>
+              <sld:CssParameter name="fill">#483c36</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#232a3f</sld:CssParameter>
+              <sld:CssParameter name="stroke">#322a25</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Equatorial Guinea</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -909,17 +957,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#551c69</sld:CssParameter>
+              <sld:CssParameter name="fill">#763646</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#3b1349</sld:CssParameter>
+              <sld:CssParameter name="stroke">#522531</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Eritrea</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -928,17 +977,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#573210</sld:CssParameter>
+              <sld:CssParameter name="fill">#1d6a16</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#3c230b</sld:CssParameter>
+              <sld:CssParameter name="stroke">#144a0f</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Estonia</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -947,17 +997,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#490849</sld:CssParameter>
+              <sld:CssParameter name="fill">#600a13</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#330533</sld:CssParameter>
+              <sld:CssParameter name="stroke">#43070d</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Ethiopia</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -966,17 +1017,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#0a2732</sld:CssParameter>
+              <sld:CssParameter name="fill">#4d133a</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#071b23</sld:CssParameter>
+              <sld:CssParameter name="stroke">#350d28</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Falkland Islands</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -985,17 +1037,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#637139</sld:CssParameter>
+              <sld:CssParameter name="fill">#4e2726</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#454f27</sld:CssParameter>
+              <sld:CssParameter name="stroke">#361b1a</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Fiji</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1004,17 +1057,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#46464f</sld:CssParameter>
+              <sld:CssParameter name="fill">#6f6750</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#313137</sld:CssParameter>
+              <sld:CssParameter name="stroke">#4d4838</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Finland</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1023,17 +1077,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#1f4621</sld:CssParameter>
+              <sld:CssParameter name="fill">#60470f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#153117</sld:CssParameter>
+              <sld:CssParameter name="stroke">#43310a</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>France</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1042,17 +1097,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#176d28</sld:CssParameter>
+              <sld:CssParameter name="fill">#3b7a04</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#104c1c</sld:CssParameter>
+              <sld:CssParameter name="stroke">#295502</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>French Southern and Antarctic Lands</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1061,17 +1117,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#151867</sld:CssParameter>
+              <sld:CssParameter name="fill">#2c5713</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#0e1048</sld:CssParameter>
+              <sld:CssParameter name="stroke">#1e3c0d</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Gabon</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1080,17 +1137,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#7e6966</sld:CssParameter>
+              <sld:CssParameter name="fill">#7d223d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#584947</sld:CssParameter>
+              <sld:CssParameter name="stroke">#57172a</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Gambia</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1099,17 +1157,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#290617</sld:CssParameter>
+              <sld:CssParameter name="fill">#78572d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#1c0410</sld:CssParameter>
+              <sld:CssParameter name="stroke">#543c1f</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Georgia</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1118,17 +1177,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#1f2d5d</sld:CssParameter>
+              <sld:CssParameter name="fill">#253c06</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#151f41</sld:CssParameter>
+              <sld:CssParameter name="stroke">#192a04</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Germany</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1137,17 +1197,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#205618</sld:CssParameter>
+              <sld:CssParameter name="fill">#11364c</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#163c10</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0b2535</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Ghana</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1156,17 +1217,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#7a2c7b</sld:CssParameter>
+              <sld:CssParameter name="fill">#707a2a</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#551e56</sld:CssParameter>
+              <sld:CssParameter name="stroke">#4e551d</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Greece</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1175,17 +1237,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#2e0758</sld:CssParameter>
+              <sld:CssParameter name="fill">#4c7a42</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#20043d</sld:CssParameter>
+              <sld:CssParameter name="stroke">#35552e</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Greenland</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1194,17 +1257,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#39397a</sld:CssParameter>
+              <sld:CssParameter name="fill">#611244</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#272755</sld:CssParameter>
+              <sld:CssParameter name="stroke">#430c2f</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Guatemala</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1213,17 +1277,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#296833</sld:CssParameter>
+              <sld:CssParameter name="fill">#051533</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#1c4823</sld:CssParameter>
+              <sld:CssParameter name="stroke">#030e23</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Guinea</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1232,17 +1297,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#5c3548</sld:CssParameter>
+              <sld:CssParameter name="fill">#4f105d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#402532</sld:CssParameter>
+              <sld:CssParameter name="stroke">#370b41</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Guinea-Bissau</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1251,17 +1317,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#295002</sld:CssParameter>
+              <sld:CssParameter name="fill">#230a67</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#1c3801</sld:CssParameter>
+              <sld:CssParameter name="stroke">#180748</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Guyana</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1270,17 +1337,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#226d55</sld:CssParameter>
+              <sld:CssParameter name="fill">#317b62</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#174c3b</sld:CssParameter>
+              <sld:CssParameter name="stroke">#225644</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Haiti</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1289,17 +1357,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#55682e</sld:CssParameter>
+              <sld:CssParameter name="fill">#2a4e0d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#3b4820</sld:CssParameter>
+              <sld:CssParameter name="stroke">#1d3609</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Honduras</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1308,17 +1377,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#60616e</sld:CssParameter>
+              <sld:CssParameter name="fill">#676e07</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#43434d</sld:CssParameter>
+              <sld:CssParameter name="stroke">#484d04</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Hungary</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1327,17 +1397,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#1c627c</sld:CssParameter>
+              <sld:CssParameter name="fill">#1a0041</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#134456</sld:CssParameter>
+              <sld:CssParameter name="stroke">#12002d</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Iceland</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1346,17 +1417,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#024323</sld:CssParameter>
+              <sld:CssParameter name="fill">#62212e</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#012e18</sld:CssParameter>
+              <sld:CssParameter name="stroke">#441720</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>India</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1365,17 +1437,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#3d4008</sld:CssParameter>
+              <sld:CssParameter name="fill">#1d2473</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#2a2c05</sld:CssParameter>
+              <sld:CssParameter name="stroke">#141950</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Indonesia</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1384,17 +1457,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#172326</sld:CssParameter>
+              <sld:CssParameter name="fill">#7d1251</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#10181a</sld:CssParameter>
+              <sld:CssParameter name="stroke">#570c38</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Iran</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1403,17 +1477,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#740727</sld:CssParameter>
+              <sld:CssParameter name="fill">#58404f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#51041b</sld:CssParameter>
+              <sld:CssParameter name="stroke">#3d2c37</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Iraq</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1422,17 +1497,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#77395d</sld:CssParameter>
+              <sld:CssParameter name="fill">#244250</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#532741</sld:CssParameter>
+              <sld:CssParameter name="stroke">#192e38</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Ireland</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1441,17 +1517,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#790f33</sld:CssParameter>
+              <sld:CssParameter name="fill">#483a4f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#540a23</sld:CssParameter>
+              <sld:CssParameter name="stroke">#322837</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Israel</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1460,17 +1537,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#225a24</sld:CssParameter>
+              <sld:CssParameter name="fill">#06280a</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#173e19</sld:CssParameter>
+              <sld:CssParameter name="stroke">#041c07</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Italy</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1479,17 +1557,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#362913</sld:CssParameter>
+              <sld:CssParameter name="fill">#445437</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#251c0d</sld:CssParameter>
+              <sld:CssParameter name="stroke">#2f3a26</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Jamaica</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1498,17 +1577,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#0c281a</sld:CssParameter>
+              <sld:CssParameter name="fill">#377954</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#081c12</sld:CssParameter>
+              <sld:CssParameter name="stroke">#26543a</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Japan</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1517,17 +1597,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#1f5f2d</sld:CssParameter>
+              <sld:CssParameter name="fill">#77664c</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#15421f</sld:CssParameter>
+              <sld:CssParameter name="stroke">#534735</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Jordan</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1536,17 +1617,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#50691c</sld:CssParameter>
+              <sld:CssParameter name="fill">#5a2e54</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#384913</sld:CssParameter>
+              <sld:CssParameter name="stroke">#3e203a</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Kazakhstan</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1555,17 +1637,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#641860</sld:CssParameter>
+              <sld:CssParameter name="fill">#7d060c</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#461043</sld:CssParameter>
+              <sld:CssParameter name="stroke">#570408</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Kenya</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1574,17 +1657,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#111a2a</sld:CssParameter>
+              <sld:CssParameter name="fill">#56117d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#0b121d</sld:CssParameter>
+              <sld:CssParameter name="stroke">#3c0b57</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Kosovo</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1593,17 +1677,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#11365b</sld:CssParameter>
+              <sld:CssParameter name="fill">#527f34</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#0b253f</sld:CssParameter>
+              <sld:CssParameter name="stroke">#395824</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Kuwait</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1612,17 +1697,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#3c1443</sld:CssParameter>
+              <sld:CssParameter name="fill">#06203e</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#2a0e2e</sld:CssParameter>
+              <sld:CssParameter name="stroke">#04162b</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Kyrgyzstan</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1631,17 +1717,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#442b0c</sld:CssParameter>
+              <sld:CssParameter name="fill">#724f7f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#2f1e08</sld:CssParameter>
+              <sld:CssParameter name="stroke">#4f3758</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Laos</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1650,17 +1737,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#403b05</sld:CssParameter>
+              <sld:CssParameter name="fill">#74467a</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#2c2903</sld:CssParameter>
+              <sld:CssParameter name="stroke">#513155</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Latvia</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1669,17 +1757,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#684171</sld:CssParameter>
+              <sld:CssParameter name="fill">#1d7927</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#482d4f</sld:CssParameter>
+              <sld:CssParameter name="stroke">#14541b</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Lebanon</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1688,17 +1777,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#4a5620</sld:CssParameter>
+              <sld:CssParameter name="fill">#09232a</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#333c16</sld:CssParameter>
+              <sld:CssParameter name="stroke">#06181d</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Lesotho</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1707,17 +1797,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#0f4301</sld:CssParameter>
+              <sld:CssParameter name="fill">#0b6317</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#0a2e00</sld:CssParameter>
+              <sld:CssParameter name="stroke">#074510</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Liberia</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1726,17 +1817,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#1b4462</sld:CssParameter>
+              <sld:CssParameter name="fill">#73481b</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#122f44</sld:CssParameter>
+              <sld:CssParameter name="stroke">#503212</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Libya</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1745,17 +1837,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#7b605b</sld:CssParameter>
+              <sld:CssParameter name="fill">#1f124f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#56433f</sld:CssParameter>
+              <sld:CssParameter name="stroke">#150c37</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Lithuania</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1764,17 +1857,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#7e2572</sld:CssParameter>
+              <sld:CssParameter name="fill">#795946</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#58194f</sld:CssParameter>
+              <sld:CssParameter name="stroke">#543e31</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Luxembourg</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1783,17 +1877,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#514f3d</sld:CssParameter>
+              <sld:CssParameter name="fill">#073f6a</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#38372a</sld:CssParameter>
+              <sld:CssParameter name="stroke">#042c4a</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Macedonia</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1802,17 +1897,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#000659</sld:CssParameter>
+              <sld:CssParameter name="fill">#4e0a6b</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#00043e</sld:CssParameter>
+              <sld:CssParameter name="stroke">#36074a</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Madagascar</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1821,17 +1917,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#74543d</sld:CssParameter>
+              <sld:CssParameter name="fill">#0a7c4f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#513a2a</sld:CssParameter>
+              <sld:CssParameter name="stroke">#075637</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Malawi</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1840,17 +1937,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#072d6a</sld:CssParameter>
+              <sld:CssParameter name="fill">#015707</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#041f4a</sld:CssParameter>
+              <sld:CssParameter name="stroke">#003c04</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Malaysia</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1859,17 +1957,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#0a2b66</sld:CssParameter>
+              <sld:CssParameter name="fill">#5f5944</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#071e47</sld:CssParameter>
+              <sld:CssParameter name="stroke">#423e2f</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Mali</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1878,17 +1977,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#341316</sld:CssParameter>
+              <sld:CssParameter name="fill">#39266a</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#240d0f</sld:CssParameter>
+              <sld:CssParameter name="stroke">#271a4a</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Mauritania</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1897,17 +1997,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#030b3e</sld:CssParameter>
+              <sld:CssParameter name="fill">#01476c</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#02072b</sld:CssParameter>
+              <sld:CssParameter name="stroke">#00314b</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Mexico</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1916,17 +2017,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#2d173f</sld:CssParameter>
+              <sld:CssParameter name="fill">#48365e</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#1f102c</sld:CssParameter>
+              <sld:CssParameter name="stroke">#322541</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Moldova</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1935,17 +2037,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#125314</sld:CssParameter>
+              <sld:CssParameter name="fill">#2a3b64</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#0c3a0e</sld:CssParameter>
+              <sld:CssParameter name="stroke">#1d2946</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Mongolia</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1954,17 +2057,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#4c4153</sld:CssParameter>
+              <sld:CssParameter name="fill">#7f7f06</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#352d3a</sld:CssParameter>
+              <sld:CssParameter name="stroke">#585804</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Montenegro</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1973,17 +2077,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#483642</sld:CssParameter>
+              <sld:CssParameter name="fill">#1e5a6d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#32252e</sld:CssParameter>
+              <sld:CssParameter name="stroke">#153e4c</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Morocco</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -1992,17 +2097,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#590e17</sld:CssParameter>
+              <sld:CssParameter name="fill">#7b4166</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#3e0910</sld:CssParameter>
+              <sld:CssParameter name="stroke">#562d47</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Mozambique</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2011,17 +2117,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#3d2528</sld:CssParameter>
+              <sld:CssParameter name="fill">#5e717a</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#2a191c</sld:CssParameter>
+              <sld:CssParameter name="stroke">#414f55</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Myanmar</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2030,17 +2137,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#3d174e</sld:CssParameter>
+              <sld:CssParameter name="fill">#6b286f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#2a1036</sld:CssParameter>
+              <sld:CssParameter name="stroke">#4a1c4d</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Namibia</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2049,17 +2157,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#205d03</sld:CssParameter>
+              <sld:CssParameter name="fill">#151e1b</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#164102</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0e1512</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Nepal</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2068,17 +2177,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#467817</sld:CssParameter>
+              <sld:CssParameter name="fill">#531335</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#315410</sld:CssParameter>
+              <sld:CssParameter name="stroke">#3a0d25</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Netherlands</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2087,17 +2197,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#30171f</sld:CssParameter>
+              <sld:CssParameter name="fill">#19297c</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#211015</sld:CssParameter>
+              <sld:CssParameter name="stroke">#111c56</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>New Caledonia</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2106,17 +2217,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#783f65</sld:CssParameter>
+              <sld:CssParameter name="fill">#6b1911</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#542c46</sld:CssParameter>
+              <sld:CssParameter name="stroke">#4a110b</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>New Zealand</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2125,17 +2237,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#636f18</sld:CssParameter>
+              <sld:CssParameter name="fill">#6b0e3d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#454d10</sld:CssParameter>
+              <sld:CssParameter name="stroke">#4a092a</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Nicaragua</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2144,17 +2257,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#7f130e</sld:CssParameter>
+              <sld:CssParameter name="fill">#44415a</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#580d09</sld:CssParameter>
+              <sld:CssParameter name="stroke">#2f2d3e</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Niger</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2163,17 +2277,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#3e5404</sld:CssParameter>
+              <sld:CssParameter name="fill">#231820</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#2b3a02</sld:CssParameter>
+              <sld:CssParameter name="stroke">#181016</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Nigeria</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2182,17 +2297,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#15782c</sld:CssParameter>
+              <sld:CssParameter name="fill">#204f7c</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#0e541e</sld:CssParameter>
+              <sld:CssParameter name="stroke">#163756</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>North Korea</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2201,17 +2317,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#147955</sld:CssParameter>
+              <sld:CssParameter name="fill">#1b5830</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#0e543b</sld:CssParameter>
+              <sld:CssParameter name="stroke">#123d21</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Northern Cyprus</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2220,17 +2337,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#060c3d</sld:CssParameter>
+              <sld:CssParameter name="fill">#391f64</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#04082a</sld:CssParameter>
+              <sld:CssParameter name="stroke">#271546</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Norway</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2239,17 +2357,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#182f41</sld:CssParameter>
+              <sld:CssParameter name="fill">#350c48</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#10202d</sld:CssParameter>
+              <sld:CssParameter name="stroke">#250832</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Oman</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2258,17 +2377,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#77217e</sld:CssParameter>
+              <sld:CssParameter name="fill">#170a0b</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#531758</sld:CssParameter>
+              <sld:CssParameter name="stroke">#100707</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Pakistan</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2277,17 +2397,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#497d08</sld:CssParameter>
+              <sld:CssParameter name="fill">#03690f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#335705</sld:CssParameter>
+              <sld:CssParameter name="stroke">#02490a</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Palestinian Territories</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2296,17 +2417,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#4c6d38</sld:CssParameter>
+              <sld:CssParameter name="fill">#7a6b0d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#354c27</sld:CssParameter>
+              <sld:CssParameter name="stroke">#554a09</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Panama</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2315,17 +2437,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#592a08</sld:CssParameter>
+              <sld:CssParameter name="fill">#0f1b1d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#3e1d05</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0a1214</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Papua New Guinea</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2334,17 +2457,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#4e561e</sld:CssParameter>
+              <sld:CssParameter name="fill">#012260</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#363c15</sld:CssParameter>
+              <sld:CssParameter name="stroke">#001743</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Paraguay</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2353,17 +2477,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#730f58</sld:CssParameter>
+              <sld:CssParameter name="fill">#44491e</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#500a3d</sld:CssParameter>
+              <sld:CssParameter name="stroke">#2f3315</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Peru</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2372,17 +2497,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#3d226c</sld:CssParameter>
+              <sld:CssParameter name="fill">#415657</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#2a174b</sld:CssParameter>
+              <sld:CssParameter name="stroke">#2d3c3c</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Philippines</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2391,17 +2517,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#7b0f73</sld:CssParameter>
+              <sld:CssParameter name="fill">#1e7c0f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#560a50</sld:CssParameter>
+              <sld:CssParameter name="stroke">#15560a</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Poland</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2410,17 +2537,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#0b3e38</sld:CssParameter>
+              <sld:CssParameter name="fill">#093507</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#072b27</sld:CssParameter>
+              <sld:CssParameter name="stroke">#062504</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Portugal</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2429,17 +2557,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#405531</sld:CssParameter>
+              <sld:CssParameter name="fill">#772445</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#2c3b22</sld:CssParameter>
+              <sld:CssParameter name="stroke">#531930</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Puerto Rico</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2448,17 +2577,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#7e1a5c</sld:CssParameter>
+              <sld:CssParameter name="fill">#0a2909</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#581240</sld:CssParameter>
+              <sld:CssParameter name="stroke">#071c06</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Qatar</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2467,17 +2597,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#3a4a36</sld:CssParameter>
+              <sld:CssParameter name="fill">#102e11</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#283325</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0b200b</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Romania</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2486,17 +2617,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#04210b</sld:CssParameter>
+              <sld:CssParameter name="fill">#764a78</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#021707</sld:CssParameter>
+              <sld:CssParameter name="stroke">#523354</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Russia</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2505,17 +2637,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#253821</sld:CssParameter>
+              <sld:CssParameter name="fill">#0d0d50</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#192717</sld:CssParameter>
+              <sld:CssParameter name="stroke">#090938</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Rwanda</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2524,17 +2657,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#3f4651</sld:CssParameter>
+              <sld:CssParameter name="fill">#243b29</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#2c3138</sld:CssParameter>
+              <sld:CssParameter name="stroke">#19291c</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Saudi Arabia</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2543,17 +2677,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#444d25</sld:CssParameter>
+              <sld:CssParameter name="fill">#525f64</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#2f3519</sld:CssParameter>
+              <sld:CssParameter name="stroke">#394246</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Senegal</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2562,17 +2697,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#763b68</sld:CssParameter>
+              <sld:CssParameter name="fill">#026c7f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#522948</sld:CssParameter>
+              <sld:CssParameter name="stroke">#014b58</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Serbia</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2581,17 +2717,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#677065</sld:CssParameter>
+              <sld:CssParameter name="fill">#57742d</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#484e46</sld:CssParameter>
+              <sld:CssParameter name="stroke">#3c511f</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Sierra Leone</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2600,17 +2737,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#7b6950</sld:CssParameter>
+              <sld:CssParameter name="fill">#023405</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#564938</sld:CssParameter>
+              <sld:CssParameter name="stroke">#012403</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Slovakia</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2619,17 +2757,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#7f3c4a</sld:CssParameter>
+              <sld:CssParameter name="fill">#043327</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#582a33</sld:CssParameter>
+              <sld:CssParameter name="stroke">#02231b</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Slovenia</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2638,17 +2777,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#010128</sld:CssParameter>
+              <sld:CssParameter name="fill">#0f652f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#00001c</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0a4620</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Solomon Islands</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2657,17 +2797,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#54453d</sld:CssParameter>
+              <sld:CssParameter name="fill">#755971</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#3a302a</sld:CssParameter>
+              <sld:CssParameter name="stroke">#513e4f</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Somalia</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2676,17 +2817,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#4d3c2a</sld:CssParameter>
+              <sld:CssParameter name="fill">#2c1c4f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#352a1d</sld:CssParameter>
+              <sld:CssParameter name="stroke">#1e1337</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Somaliland</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2695,17 +2837,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#2c357f</sld:CssParameter>
+              <sld:CssParameter name="fill">#213234</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#1e2558</sld:CssParameter>
+              <sld:CssParameter name="stroke">#172324</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>South Africa</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2714,17 +2857,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#16724c</sld:CssParameter>
+              <sld:CssParameter name="fill">#487e11</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#0f4f35</sld:CssParameter>
+              <sld:CssParameter name="stroke">#32580b</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>South Korea</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2733,17 +2877,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#355a65</sld:CssParameter>
+              <sld:CssParameter name="fill">#75702e</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#253e46</sld:CssParameter>
+              <sld:CssParameter name="stroke">#514e20</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Spain</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2752,17 +2897,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#121e51</sld:CssParameter>
+              <sld:CssParameter name="fill">#28721f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#0c1538</sld:CssParameter>
+              <sld:CssParameter name="stroke">#1c4f15</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Sri Lanka</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2771,17 +2917,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#1c4549</sld:CssParameter>
+              <sld:CssParameter name="fill">#355a3b</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#133033</sld:CssParameter>
+              <sld:CssParameter name="stroke">#253e29</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Sudan</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2790,17 +2937,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#7e2450</sld:CssParameter>
+              <sld:CssParameter name="fill">#645420</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#581938</sld:CssParameter>
+              <sld:CssParameter name="stroke">#463a16</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Suriname</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2809,17 +2957,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#31296a</sld:CssParameter>
+              <sld:CssParameter name="fill">#50021b</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#221c4a</sld:CssParameter>
+              <sld:CssParameter name="stroke">#380112</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Svalbard and Jan Mayen Islands</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2828,17 +2977,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#5b7806</sld:CssParameter>
+              <sld:CssParameter name="fill">#113200</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#3f5404</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0b2300</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Swaziland</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2847,17 +2997,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#0d102f</sld:CssParameter>
+              <sld:CssParameter name="fill">#3e4647</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#090b20</sld:CssParameter>
+              <sld:CssParameter name="stroke">#2b3131</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Sweden</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2866,17 +3017,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#451b37</sld:CssParameter>
+              <sld:CssParameter name="fill">#534a65</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#301226</sld:CssParameter>
+              <sld:CssParameter name="stroke">#3a3346</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Switzerland</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2885,17 +3037,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#591003</sld:CssParameter>
+              <sld:CssParameter name="fill">#2d7b28</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#3e0b02</sld:CssParameter>
+              <sld:CssParameter name="stroke">#1f561c</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Syria</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2904,17 +3057,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#723511</sld:CssParameter>
+              <sld:CssParameter name="fill">#77197b</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#4f250b</sld:CssParameter>
+              <sld:CssParameter name="stroke">#531156</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Taiwan</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2923,17 +3077,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#0b6127</sld:CssParameter>
+              <sld:CssParameter name="fill">#004403</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#07431b</sld:CssParameter>
+              <sld:CssParameter name="stroke">#002f02</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Tajikistan</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2942,17 +3097,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#155b1b</sld:CssParameter>
+              <sld:CssParameter name="fill">#550566</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#0e3f12</sld:CssParameter>
+              <sld:CssParameter name="stroke">#3b0347</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Tanzania</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2961,17 +3117,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#2d2750</sld:CssParameter>
+              <sld:CssParameter name="fill">#5c0436</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#1f1b38</sld:CssParameter>
+              <sld:CssParameter name="stroke">#400225</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Thailand</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2980,17 +3137,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#2f2226</sld:CssParameter>
+              <sld:CssParameter name="fill">#360a7c</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#20171a</sld:CssParameter>
+              <sld:CssParameter name="stroke">#250756</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Timor-Leste</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -2999,17 +3157,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#46463e</sld:CssParameter>
+              <sld:CssParameter name="fill">#031a69</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#31312b</sld:CssParameter>
+              <sld:CssParameter name="stroke">#021249</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Togo</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -3018,17 +3177,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#2a3030</sld:CssParameter>
+              <sld:CssParameter name="fill">#79682c</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#1d2121</sld:CssParameter>
+              <sld:CssParameter name="stroke">#54481e</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Trinidad and Tobago</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -3037,17 +3197,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#066339</sld:CssParameter>
+              <sld:CssParameter name="fill">#425726</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#044527</sld:CssParameter>
+              <sld:CssParameter name="stroke">#2e3c1a</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Tunisia</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -3056,17 +3217,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#50134d</sld:CssParameter>
+              <sld:CssParameter name="fill">#6a7442</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#380d35</sld:CssParameter>
+              <sld:CssParameter name="stroke">#4a512e</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Turkey</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -3075,17 +3237,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#161710</sld:CssParameter>
+              <sld:CssParameter name="fill">#0a4c2f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#0f100b</sld:CssParameter>
+              <sld:CssParameter name="stroke">#073520</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Turkmenistan</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -3094,17 +3257,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#017555</sld:CssParameter>
+              <sld:CssParameter name="fill">#1a2e25</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#00513b</sld:CssParameter>
+              <sld:CssParameter name="stroke">#122019</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Uganda</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -3113,17 +3277,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#442328</sld:CssParameter>
+              <sld:CssParameter name="fill">#385a2e</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#2f181c</sld:CssParameter>
+              <sld:CssParameter name="stroke">#273e20</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Ukraine</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -3132,17 +3297,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#6d2779</sld:CssParameter>
+              <sld:CssParameter name="fill">#117839</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#4c1b54</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0b5427</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>United Arab Emirates</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -3151,17 +3317,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#3a0318</sld:CssParameter>
+              <sld:CssParameter name="fill">#0b7102</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#280210</sld:CssParameter>
+              <sld:CssParameter name="stroke">#074f01</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>United Kingdom</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -3170,17 +3337,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#6f750e</sld:CssParameter>
+              <sld:CssParameter name="fill">#12686f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#4d5109</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0c484d</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>United States of America</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -3189,17 +3357,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#6f6122</sld:CssParameter>
+              <sld:CssParameter name="fill">#20531e</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#4d4317</sld:CssParameter>
+              <sld:CssParameter name="stroke">#163a15</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Uruguay</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -3208,17 +3377,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#134e7a</sld:CssParameter>
+              <sld:CssParameter name="fill">#111912</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#0d3655</sld:CssParameter>
+              <sld:CssParameter name="stroke">#0b110c</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Uzbekistan</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -3227,17 +3397,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#104d54</sld:CssParameter>
+              <sld:CssParameter name="fill">#04251a</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#0b353a</sld:CssParameter>
+              <sld:CssParameter name="stroke">#021912</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Vanuatu</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -3246,17 +3417,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#3e736e</sld:CssParameter>
+              <sld:CssParameter name="fill">#1f0530</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#2b504d</sld:CssParameter>
+              <sld:CssParameter name="stroke">#150321</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Venezuela</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -3265,17 +3437,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#06261f</sld:CssParameter>
+              <sld:CssParameter name="fill">#61281a</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#041a15</sld:CssParameter>
+              <sld:CssParameter name="stroke">#431c12</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Vietnam</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -3284,17 +3457,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#6b2a0f</sld:CssParameter>
+              <sld:CssParameter name="fill">#015139</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#4a1d0a</sld:CssParameter>
+              <sld:CssParameter name="stroke">#003827</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Western Sahara</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -3303,17 +3477,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#174a2f</sld:CssParameter>
+              <sld:CssParameter name="fill">#1b281b</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#103320</sld:CssParameter>
+              <sld:CssParameter name="stroke">#121c12</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Yemen</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -3322,17 +3497,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#7e7464</sld:CssParameter>
+              <sld:CssParameter name="fill">#692945</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#585146</sld:CssParameter>
+              <sld:CssParameter name="stroke">#491c30</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Zambia</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -3341,17 +3517,18 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#0b6f6c</sld:CssParameter>
+              <sld:CssParameter name="fill">#0e6b04</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#074d4b</sld:CssParameter>
+              <sld:CssParameter name="stroke">#094a02</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
         <sld:Rule>
+          <sld:Name>Zimbabwe</sld:Name>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>NAME</ogc:PropertyName>
@@ -3360,12 +3537,12 @@
           </ogc:Filter>
           <sld:PolygonSymbolizer>
             <sld:Fill>
-              <sld:CssParameter name="fill">#502c60</sld:CssParameter>
+              <sld:CssParameter name="fill">#5f736f</sld:CssParameter>
             </sld:Fill>
           </sld:PolygonSymbolizer>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke">#381e43</sld:CssParameter>
+              <sld:CssParameter name="stroke">#42504d</sld:CssParameter>
               <sld:CssParameter name="stroke-width">0.5</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
