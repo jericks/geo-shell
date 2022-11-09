@@ -1,0 +1,35 @@
+download --url https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/cultural/ne_110m_admin_0_countries.zip --file countries.zip --overwrite false
+
+unzip --file countries.zip --directory countries
+
+download --url https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/physical/ne_110m_ocean.zip --file ocean.zip --overwrite false
+
+unzip --file ocean.zip --directory ocean
+
+workspace open --name countries --params countries/ne_110m_admin_0_countries.shp
+
+layer open --workspace countries --layer ne_110m_admin_0_countries
+
+workspace open --name ocean --params ocean/ne_110m_ocean.shp
+
+layer open --workspace ocean --layer ne_110m_ocean
+
+style create --params "fill=#ffffff fill-opacity=1.0 stroke=#b2b2b2 stroke-width=0.5" --file countries.sld
+
+style create --params "fill=#a5bfdd fill-opacity=1.0" --file ocean.sld
+
+layer style set --name countries:ne_110m_admin_0_countries --style countries.sld
+
+layer style set --name ocean:ne_110m_ocean --style ocean.sld
+
+map open --name world
+
+map add layer --name world --layer ocean:ne_110m_ocean
+
+map add layer --name world --layer countries:ne_110m_admin_0_countries
+
+map cube --name world --draw-tabs true --draw-outline true --title World --source "Natural Earth"
+
+map close --name world
+
+open --file image.png

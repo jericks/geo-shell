@@ -140,4 +140,27 @@ class MapCommandsTest {
         assertTrue result.endsWith("map.png!")
     }
 
+    @Test void drawMapCube() {
+        Layer layer = new Shapefile(new File(getClass().getClassLoader().getResource("grid.shp").toURI()))
+        Catalog catalog = new Catalog()
+        catalog.layers[new LayerName("grid")] = layer
+
+        MapCommands cmds = new MapCommands(catalog: catalog)
+        cmds.open(new MapName("grid"))
+        cmds.addLayer(new MapName("grid"), new LayerName("grid"), null)
+        File file = new File(folder, "mapcube.png")
+        String result = cmds.renderMapCube(
+                new MapName("grid"),
+                true,
+                true,
+                30,
+                "World Grid",
+                "Natural Earth",
+                "png",
+                file
+        )
+        assertTrue result.startsWith("Done drawing")
+        assertTrue result.endsWith("mapcube.png!")
+    }
+
 }

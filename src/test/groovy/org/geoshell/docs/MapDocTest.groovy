@@ -158,4 +158,21 @@ class MapDocTest extends AbstractDocTest {
         copyFile(new File("examples/map_draw.png"), new File("src/main/docs/images"))
     }
 
+    @Test
+    void mapCube() {
+        run("map_cube", [
+                "map open --name world",
+                "workspace open --name naturalearth --params examples/naturalearth.gpkg",
+                "layer open --workspace naturalearth --layer countries --name countries",
+                "layer style set --name countries --style examples/countries.sld",
+                "layer open --workspace naturalearth --layer ocean --name ocean",
+                "layer style set --name ocean --style examples/ocean.sld",
+                "map add layer --name world --layer ocean",
+                "map add layer --name world --layer countries",
+                "map cube --name world --file examples/map_cube.png --title World --source NaturalEarth --draw-tabs true --draw-outline true",
+                "map close --name world"
+        ])
+        copyFile(new File("examples/map_cube.png"), new File("src/main/docs/images"))
+    }
+
 }

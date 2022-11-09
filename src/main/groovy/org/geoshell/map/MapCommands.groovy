@@ -2,6 +2,7 @@ package org.geoshell.map
 
 import geoscript.geom.Bounds
 import geoscript.proj.Projection
+import geoscript.render.MapCube
 import geoscript.render.MapWindow
 import geoscript.render.Window
 import org.geoshell.Catalog
@@ -193,6 +194,35 @@ class MapCommands implements CommandMarker {
             MapWindow window = new MapWindow()
             window.display(mapRenderer, close: 'dispose')
             "Displaying..."
+        } else {
+            "Unable to find Map ${name}"
+        }
+    }
+
+    @CliCommand(value = "map cube", help = "Draw a map cube.")
+    String renderMapCube(
+            @CliOption(key = "name", mandatory = true, help = "The map name") MapName name,
+            @CliOption(key = "draw-outline", mandatory = false, specifiedDefaultValue = "false", unspecifiedDefaultValue = "false", help = "Whether to draw outline or now") boolean drawOutline,
+            @CliOption(key = "draw-tabs", mandatory = false, specifiedDefaultValue = "false", unspecifiedDefaultValue = "false", help = "Whether to draw tabs or not") boolean drawTabs,
+            @CliOption(key = "tab-size", mandatory = false, unspecifiedDefaultValue = "30", specifiedDefaultValue = "30", help = "The size of the tabs") int tabSize,
+            @CliOption(key = "title", mandatory = false, unspecifiedDefaultValue = "", specifiedDefaultValue = "", help = "The map title") String title,
+            @CliOption(key = "source", mandatory = false, unspecifiedDefaultValue = "", specifiedDefaultValue = "", help = "The map source") String source,
+            @CliOption(key = "type", mandatory = false, unspecifiedDefaultValue = "png", specifiedDefaultValue = "png", help = "The type") String type,
+            @CliOption(key = "file", mandatory = false, help = "The file") File file
+    ) throws Exception {
+        org.geoshell.map.Map map = catalog.maps[name]
+        if (map) {
+            MapCube mapCube = new MapCube(
+                    drawOutline: drawOutline,
+                    drawTabs: drawTabs,
+                    tabSize: tabSize,
+                    title: title,
+                    source: source,
+                    imageType: type
+            )
+            file = file ? file : new File("image.${type}")
+            mapCube.render(map.getLayers(), file)
+            "Done drawing ${file.absolutePath}!"
         } else {
             "Unable to find Map ${name}"
         }
