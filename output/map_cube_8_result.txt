@@ -1,0 +1,1 @@
+[green]#Done drawing /home/runner/work/geo-shell/geo-shell/examples/map_cube.png!# +

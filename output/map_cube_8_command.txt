@@ -1,0 +1,1 @@
+[blue]#geo-shell># [navy]*map cube* [gray]#--name# [silver]#world# [gray]#--file# [silver]#examples/map_cube.png# [gray]#--title# [silver]#World# [gray]#--source# [silver]#NaturalEarth# [gray]#--draw-tabs# [silver]#true# [gray]#--draw-outline# [silver]#true# +

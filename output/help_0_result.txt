@@ -75,6 +75,7 @@
 [green]#* map add raster - Add a Raster Layer.# +
 [green]#* map add tile - Add a Tile Layer.# +
 [green]#* map close - Close a Map.# +
+[green]#* map cube - Draw a map cube.# +
 [green]#* map display - Display a map in a GUI.# +
 [green]#* map draw - Draw a map.# +
 [green]#* map layers - List the Map's Layers.# +

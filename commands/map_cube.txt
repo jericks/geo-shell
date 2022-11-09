@@ -1,0 +1,52 @@
+
+|===
+|Name |Description |Mandatory |Specified Default |Unspecified Default 
+|name
+|The map name
+|true
+|
+|
+
+|draw-outline
+|Whether to draw outline or now
+|false
+|false
+|false
+
+|draw-tabs
+|Whether to draw tabs or not
+|false
+|false
+|false
+
+|tab-size
+|The size of the tabs
+|false
+|30
+|30
+
+|title
+|The map title
+|false
+|
+|
+
+|source
+|The map source
+|false
+|
+|
+
+|type
+|The type
+|false
+|png
+|png
+
+|file
+|The file
+|false
+|
+|
+
+|===

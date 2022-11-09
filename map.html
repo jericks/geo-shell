@@ -457,6 +457,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#layers">Layers</a></li>
 <li><a href="#draw">Draw</a></li>
 <li><a href="#display">Display</a></li>
+<li><a href="#map-cube">Map Cube</a></li>
 </ul>
 </li>
 </ul>
@@ -1394,12 +1395,140 @@ No parameters
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="map-cube"><a class="anchor" href="#map-cube"></a>Map Cube</h3>
+<div class="paragraph">
+<p>Draw a map cube.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map cube</strong> <span class="gray">--name</span> <span class="silver">world</span> <span class="gray">--file</span> <span class="silver">examples/map_cube.png</span> <span class="gray">--title</span> <span class="silver">World</span> <span class="gray">--source</span> <span class="silver">NaturalEarth</span> <span class="gray">--draw-tabs</span> <span class="silver">true</span> <span class="gray">--draw-outline</span> <span class="silver">true</span><br></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specified Default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unspecified Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The map name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">draw-outline</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to draw outline or now</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">draw-tabs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to draw tabs or not</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tab-size</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The size of the tabs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The map title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">source</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The map source</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">png</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">png</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">file</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The file</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map open</strong> <span class="gray">--name</span> <span class="silver">world</span><br>
+<span class="green">Map world opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">workspace open</strong> <span class="gray">--name</span> <span class="silver">naturalearth</span> <span class="gray">--params</span> <span class="silver">examples/naturalearth.gpkg</span><br>
+<span class="green">Workspace naturalearth opened!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">countries</span> <span class="gray">--name</span> <span class="silver">countries</span><br>
+<span class="green">Opened Workspace naturalearth Layer countries as countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">countries</span> <span class="gray">--style</span> <span class="silver">examples/countries.sld</span><br>
+<span class="green">Style /home/runner/work/geo-shell/geo-shell/examples/countries.sld set on countries</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer open</strong> <span class="gray">--workspace</span> <span class="silver">naturalearth</span> <span class="gray">--layer</span> <span class="silver">ocean</span> <span class="gray">--name</span> <span class="silver">ocean</span><br>
+<span class="green">Opened Workspace naturalearth Layer ocean as ocean</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">layer style set</strong> <span class="gray">--name</span> <span class="silver">ocean</span> <span class="gray">--style</span> <span class="silver">examples/ocean.sld</span><br>
+<span class="green">Style /home/runner/work/geo-shell/geo-shell/examples/ocean.sld set on ocean</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">world</span> <span class="gray">--layer</span> <span class="silver">ocean</span><br>
+<span class="green">Added ocean layer to map world</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map add layer</strong> <span class="gray">--name</span> <span class="silver">world</span> <span class="gray">--layer</span> <span class="silver">countries</span><br>
+<span class="green">Added countries layer to map world</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map cube</strong> <span class="gray">--name</span> <span class="silver">world</span> <span class="gray">--file</span> <span class="silver">examples/map_cube.png</span> <span class="gray">--title</span> <span class="silver">World</span> <span class="gray">--source</span> <span class="silver">NaturalEarth</span> <span class="gray">--draw-tabs</span> <span class="silver">true</span> <span class="gray">--draw-outline</span> <span class="silver">true</span><br>
+<span class="green">Done drawing /home/runner/work/geo-shell/geo-shell/examples/map_cube.png!</span><br></p>
+</div>
+<div class="paragraph">
+<p><span class="blue">geo-shell&gt;</span> <strong class="navy">map close</strong> <span class="gray">--name</span> <span class="silver">world</span><br>
+<span class="green">Map world closed!</span><br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/map_cube.png" alt="map cube">
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-11-09 16:44:25 UTC
+Last updated 2022-11-09 16:45:22 UTC
 </div>
 </div>
 </body>
