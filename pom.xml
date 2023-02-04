@@ -75,6 +75,10 @@
                 <enabled>false</enabled>
             </snapshots>
         </pluginRepository>
+        <pluginRepository>
+            <id>groovy-plugins-release</id>
+            <url>https://groovy.jfrog.io/artifactory/plugins-release</url>
+        </pluginRepository>
     </pluginRepositories>
     <build>
         <resources>
@@ -97,7 +101,7 @@
             <plugin>
                 <groupId>org.codehaus.groovy</groupId>
                 <artifactId>groovy-eclipse-compiler</artifactId>
-                <version>3.7.0</version>
+                <version>3.8.0</version>
                 <extensions>true</extensions>
             </plugin>
             <plugin>
@@ -112,12 +116,12 @@
                     <dependency>
                         <groupId>org.codehaus.groovy</groupId>
                         <artifactId>groovy-eclipse-compiler</artifactId>
-                        <version>3.7.0</version>
+                        <version>3.8.0</version>
                     </dependency>
                     <dependency>
                         <groupId>org.codehaus.groovy</groupId>
                         <artifactId>groovy-eclipse-batch</artifactId>
-                        <version>3.0.8-01</version>
+                        <version>4.0.7-02</version>
                     </dependency>
                 </dependencies>
             </plugin>
