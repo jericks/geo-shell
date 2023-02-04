@@ -1,11 +1,11 @@
 
-[green]#Feature (fid-25876405_1855b844df1_-78b9)# +
+[green]#Feature (fid-344270ba_18619e46042_-6277)# +
 [green]#----------------------------------------# +
 [green]#the_geom = LINESTRING (0 0, 1 1)# +
 [green]#fid = 1# +
 [green]#name = Location 1# +
 
-[green]#Feature (fid-25876405_1855b844df1_-78b8)# +
+[green]#Feature (fid-344270ba_18619e46042_-6276)# +
 [green]#----------------------------------------# +
 [green]#the_geom = LINESTRING (1 1, 2 2, 3 3)# +
 [green]#fid = 2# +
