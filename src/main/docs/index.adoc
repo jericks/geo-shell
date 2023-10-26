@@ -1,6 +1,6 @@
 = Geo Shell
 Jared Erickson
-v0.13.0
+v0.14.0-SNAPSHOT
 :title-page:
 :title-logo-image: image:geoshell.png[pdfwidth=5.5in,align=center]
 ifndef::imagesdir[:imagesdir: images]
